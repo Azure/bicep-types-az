@@ -361,11 +361,7 @@
 
 ## FileServerBaseProperties
 ### Properties
-* **creationTime**: string (ReadOnly): Time when the FileServer was created.
 * **dataDisks**: [DataDisks](#datadisks) (Required): Data disks settings.
-* **mountSettings**: [MountSettings](#mountsettings) (ReadOnly): File Server mount Information.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.
-* **provisioningStateTransitionTime**: string (ReadOnly): Time when the provisioning state was changed.
 * **sshConfiguration**: [SshConfiguration](#sshconfiguration) (Required): SSH configuration.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **vmSize**: string (Required): The size of the virtual machine for the File Server. For information about available VM sizes from the Virtual Machines Marketplace, see Sizes for Virtual Machines (Linux).
@@ -376,12 +372,6 @@
 * **diskCount**: int (Required): Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.
 * **diskSizeInGB**: int (Required): Disk size in GB for the blank data disks.
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required): Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.
-
-## MountSettings
-### Properties
-* **fileServerInternalIP**: string (ReadOnly): Internal IP address of the File Server which can be used to access the File Server from within the subnet.
-* **fileServerPublicIP**: string (ReadOnly): Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.
-* **mountPoint**: string (ReadOnly): Path where the data disks are mounted on the File Server.
 
 ## SshConfiguration
 ### Properties

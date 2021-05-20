@@ -15,32 +15,22 @@
 ## WebTestProperties
 ### Properties
 * **Configuration**: [schemas:4_Configuration](#schemas4configuration): An XML configuration specification for a WebTest.
-* **ContentValidation**: [schemas:4_ContentValidation](#schemas4contentvalidation): The collection of content validation properties
 * **Description**: string: User defined description for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
-* **ExpectedHttpStatusCode**: int: Validate that the WebTest returns the http status code provided.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
-* **IgnoreHttpsStatusCode**: bool: When set, validation will ignore the status code.
 * **Kind**: 'basic' | 'multistep' | 'ping' | 'standard' (Required): The kind of web test this is, valid choices are ping, multistep, basic, and standard.
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required): A list of where to physically run the tests from to give global coverage for accessibility of your application.
 * **Name**: string (Required): User defined name if this WebTest.
 * **provisioningState**: string (ReadOnly): Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
 * **Request**: [schemas:4_Request](#schemas4request): The collection of request properties
 * **RetryEnabled**: bool: Allow for retries should this WebTest fail.
-* **SSLCertRemainingLifetimeCheck**: int: A number of days to check still remain before the the existing SSL cert expires.
-* **SSLCheck**: bool: Checks to see if the SSL cert is still valid.
 * **SyntheticMonitorId**: string (Required): Unique ID of this WebTest. This is typically the same value as the Name field.
 * **Timeout**: int: Seconds until this WebTest will timeout and fail. Default value is 30.
+* **ValidationRules**: [schemas:4_ValidationRules](#schemas4validationrules): The collection of validation rule properties
 
 ## schemas:4_Configuration
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
-
-## schemas:4_ContentValidation
-### Properties
-* **ContentMatch**: string: Content to look for in the return of the WebTest.
-* **IgnoreCase**: bool: When set, this value makes the ContentMatch validation case insensitive.
-* **PassIfTextFound**: bool: When true, validation will pass if there is a match for the ContentMatch string.  If false, validation will fail if there is a match
 
 ## WebTestGeolocation
 ### Properties
@@ -59,6 +49,20 @@
 ### Properties
 * **key**: string: The name of the header.
 * **value**: string: The value of the header.
+
+## schemas:4_ValidationRules
+### Properties
+* **ContentValidation**: [schemas:4_ValidationRules_ContentValidation](#schemas4validationrulescontentvalidation): The collection of content validation properties
+* **ExpectedHttpStatusCode**: int: Validate that the WebTest returns the http status code provided.
+* **IgnoreHttpsStatusCode**: bool: When set, validation will ignore the status code.
+* **SSLCertRemainingLifetimeCheck**: int: A number of days to check still remain before the the existing SSL cert expires.  Value must be positive and the SSLCheck must be set to true.
+* **SSLCheck**: bool: Checks to see if the SSL cert is still valid.
+
+## schemas:4_ValidationRules_ContentValidation
+### Properties
+* **ContentMatch**: string: Content to look for in the return of the WebTest.  Must not be null or empty.
+* **IgnoreCase**: bool: When set, this value makes the ContentMatch validation case insensitive.
+* **PassIfTextFound**: bool: When true, validation will pass if there is a match for the ContentMatch string.  If false, validation will fail if there is a match
 
 ## Dictionary<string,String>
 ### Properties

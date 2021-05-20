@@ -36,6 +36,7 @@
 * **createdByObjectId**: string (ReadOnly): Gets the creators of the entity's object id.
 * **endpoints**: [schemas:3_endpoints](#schemas3endpoints) (ReadOnly): The URIs that are the public endpoints of the account.
 * **friendlyName**: string (ReadOnly): Gets or sets the friendly name.
+* **managedResourceGroupName**: string: Gets or sets the managed resource group name
 * **managedResources**: [schemas:3_managedResources](#schemas3managedresources) (ReadOnly): Gets the resource identifiers of the managed resources.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections information.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly): Gets or sets the state of the provisioning.
@@ -84,12 +85,12 @@ Configured in AWS to allow use of the role arn used for scanning
 
 ## schemas:3_systemData
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of the last modification the resource (UTC).
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
+* **createdBy**: string (ReadOnly): The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedAt**: string (ReadOnly): The timestamp of the last modification the resource (UTC).
+* **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource.
 
 ## AccountSku
 ### Properties

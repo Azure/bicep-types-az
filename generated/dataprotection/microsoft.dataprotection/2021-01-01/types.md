@@ -69,7 +69,7 @@
 * **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly): Specifies the current protection state of the resource.
 * **dataSourceInfo**: [Datasource](#datasource) (Required): Datasource to be backed up
 * **dataSourceSetInfo**: [DatasourceSet](#datasourceset): DatasourceSet details of datasource to be backed up
-* **friendlyName**: string (Required): Gets or sets the Backup Instance friendly name.
+* **friendlyName**: string: Gets or sets the Backup Instance friendly name.
 * **objectType**: string (Required)
 * **policyInfo**: [PolicyInfo](#policyinfo) (Required): Policy Info in backupInstance
 * **protectionErrorDetails**: [UserFacingError](#userfacingerror) (ReadOnly): Error object used by layers that have access to localized content, and propagate that to user

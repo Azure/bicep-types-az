@@ -32,17 +32,6 @@
 * **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Tags assigned to the key vault resource.
 * **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KeyVault/vaults/secrets@2018-02-14
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-02-14' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Azure location of the key vault resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SecretProperties](#secretproperties) (Required): Properties of the secret
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags that will be assigned to the secret.
-* **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
-
 ## VaultProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[]: An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
@@ -120,27 +109,6 @@
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## SecretProperties
-### Properties
-* **attributes**: [SecretAttributes](#secretattributes): The secret management attributes.
-* **contentType**: string: The content type of the secret.
-* **secretUri**: string (ReadOnly): The URI to retrieve the current version of the secret.
-* **secretUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the secret.
-* **value**: string: The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
-
-## SecretAttributes
-### Properties
-* **created**: int (ReadOnly): Creation time in seconds since 1970-01-01T00:00:00Z.
-* **enabled**: bool: Determines whether the object is enabled.
-* **exp**: int: Expiry date in seconds since 1970-01-01T00:00:00Z.
-* **nbf**: int: Not before date in seconds since 1970-01-01T00:00:00Z.
-* **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
 
 ## Dictionary<string,String>
 ### Properties

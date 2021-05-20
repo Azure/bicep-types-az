@@ -32,17 +32,17 @@
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string: Describes the name of the rule.
 * **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-* **rateLimitDurationInMinutes**: int: Time window for resetting the rate limit count. Default is 1 minute.
-* **rateLimitThreshold**: int: Number of allowed requests per client within the time window.
+* **rateLimitDurationInMinutes**: int: Defines rate limit duration. Default is 1 minute.
+* **rateLimitThreshold**: int: Defines rate limit threshold.
 * **ruleType**: 'MatchRule' | 'RateLimitRule' (Required): Describes type of rule.
 
 ## MatchCondition
 ### Properties
 * **matchValue**: string[] (Required): List of possible match values.
-* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' | 'SocketAddr' (Required): Request variable to compare with.
+* **matchVariable**: 'Cookies' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestHeader' | 'RequestMethod' | 'RequestUri' (Required): Match variable to compare against.
 * **negateCondition**: bool: Describes if the result of this condition should be negated.
-* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Comparison type to use for matching with the variable value.
-* **selector**: string: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+* **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched.
+* **selector**: string: Selector can used to match against a specific key from QueryString, PostArgs, RequestHeader or Cookies.
 * **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms.
 
 ## FrontendEndpointLink

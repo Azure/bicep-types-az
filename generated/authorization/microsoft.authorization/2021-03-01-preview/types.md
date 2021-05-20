@@ -79,6 +79,8 @@
 
 ## AccessReviewScope
 ### Properties
+* **assignmentState**: 'active' | 'eligible' (ReadOnly, WriteOnly): The role assignment state eligible/active to review.
+* **inactiveDuration**: string (WriteOnly): Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
 * **principalType**: 'guestUser' | 'servicePrincipal' | 'user' (ReadOnly, WriteOnly): The identity type user/servicePrincipal to review.
 * **resourceId**: string (ReadOnly, WriteOnly): ResourceId in which this review is getting created
 * **roleDefinitionId**: string (ReadOnly, WriteOnly): This is used to indicate the role being reviewed

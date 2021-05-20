@@ -219,7 +219,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:298_properties](#schemas298properties): Association entity contract properties.
+* **properties**: [schemas:300_properties](#schemas300properties): Association entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/certificateAuthorities@2020-12-01
@@ -910,7 +910,7 @@ dictionary key references will be ARM resource ids in the form:
 * **district**: string: The district, state, or province where the resource is located.
 * **name**: string (Required): A canonical name for the geographic or physical location.
 
-## schemas:298_properties
+## schemas:300_properties
 ### Properties
 * **provisioningState**: 'created': Provisioning state.
 

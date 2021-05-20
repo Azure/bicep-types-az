@@ -1375,7 +1375,7 @@
 
 ## ApplicationGatewayRewriteRuleCondition
 ### Properties
-* **ignoreCase**: bool: Setting this paramter to truth value with force the pattern to do a case in-sensitive comparison.
+* **ignoreCase**: bool: Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
 * **negate**: bool: Setting this value as truth will force to check the negation of the condition given by the user.
 * **pattern**: string: The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
 * **variable**: string: The condition parameter of the RewriteRuleCondition.

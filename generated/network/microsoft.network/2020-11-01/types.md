@@ -712,6 +712,7 @@
 ### Properties
 * **apiVersion**: '2020-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -947,6 +948,7 @@
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat): Properties of IP configuration.
+* **type**: string: Resource type.
 
 ## NetworkInterfaceIPConfigurationPropertiesFormat
 ### Properties
@@ -1071,11 +1073,15 @@
 * **ipAddress**: string: The IP address associated with the public IP address resource.
 * **ipConfiguration**: [IPConfiguration](#ipconfiguration) (ReadOnly): IP configuration.
 * **ipTags**: [IpTag](#iptag)[]: The list of tags associated with the public IP address.
+* **linkedPublicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
+* **migrationPhase**: 'Abort' | 'Commit' | 'Committed' | 'None' | 'Prepare': Migration phase of Public IP Address.
+* **natGateway**: [NatGateway](#natgateway): Nat Gateway resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the public IP address resource.
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6': The public IP address version.
 * **publicIPAllocationMethod**: 'Dynamic' | 'Static': The public IP address allocation method.
 * **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the public IP address resource.
+* **servicePublicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 
 ## DdosSettings
 ### Properties
@@ -1110,11 +1116,13 @@
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat): Properties of the subnet.
+* **type**: string: Resource type.
 
 ## SubnetPropertiesFormat
 ### Properties
 * **addressPrefix**: string: The address prefix for the subnet.
 * **addressPrefixes**: string[]: List of address prefixes for the subnet.
+* **applicationGatewayIpConfigurations**: [ApplicationGatewayIPConfiguration](#applicationgatewayipconfiguration)[]: Application gateway IP configurations of virtual network resource.
 * **delegations**: [Delegation](#delegation)[]: An array of references to the delegations on the subnet.
 * **ipAllocations**: [SubResource](#subresource)[]: Array of IpAllocation which reference this subnet.
 * **ipConfigurationProfiles**: [IPConfigurationProfile](#ipconfigurationprofile)[] (ReadOnly): Array of IP configuration profiles which reference this subnet.
@@ -1132,12 +1140,26 @@
 * **serviceEndpointPolicies**: [ServiceEndpointPolicy](#serviceendpointpolicy)[]: An array of service endpoint policies.
 * **serviceEndpoints**: [ServiceEndpointPropertiesFormat](#serviceendpointpropertiesformat)[]: An array of service endpoints.
 
+## ApplicationGatewayIPConfiguration
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **name**: string: Name of the IP configuration that is unique within an Application Gateway.
+* **properties**: [ApplicationGatewayIPConfigurationPropertiesFormat](#applicationgatewayipconfigurationpropertiesformat): Properties of IP configuration of an application gateway.
+* **type**: string (ReadOnly): Type of the resource.
+
+## ApplicationGatewayIPConfigurationPropertiesFormat
+### Properties
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway IP configuration resource.
+* **subnet**: [SubResource](#subresource): Reference to another subresource.
+
 ## Delegation
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a subnet. This name can be used to access the resource.
 * **properties**: [ServiceDelegationPropertiesFormat](#servicedelegationpropertiesformat): Properties of a service delegation.
+* **type**: string: Resource type.
 
 ## ServiceDelegationPropertiesFormat
 ### Properties
@@ -1273,9 +1295,12 @@
 * **hostedWorkloads**: string[] (ReadOnly): A list of references to linked BareMetal resources.
 * **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: A list of IPConfigurations of the network interface.
 * **macAddress**: string (ReadOnly): The MAC address of the network interface.
+* **migrationPhase**: 'Abort' | 'Commit' | 'Committed' | 'None' | 'Prepare': Migration phase of Network Interface resource.
 * **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
+* **nicType**: 'Elastic' | 'Standard': Type of Network Interface resource.
 * **primary**: bool (ReadOnly): Whether this is a primary network interface on a virtual machine.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): Private endpoint resource.
+* **privateLinkService**: [PrivateLinkService](#privatelinkservice): Private link service resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network interface resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the network interface resource.
 * **tapConfigurations**: [NetworkInterfaceTapConfiguration](#networkinterfacetapconfiguration)[] (ReadOnly): A list of TapConfigurations of the network interface.
@@ -1341,6 +1366,98 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## PrivateLinkService
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [PrivateLinkServiceProperties](#privatelinkserviceproperties): Properties of the private link service.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+
+## PrivateLinkServiceProperties
+### Properties
+* **alias**: string (ReadOnly): The alias of the private link service.
+* **autoApproval**: [schemas:480_autoApproval](#schemas480autoapproval): The auto-approval list of the private link service.
+* **enableProxyProtocol**: bool: Whether the private link service is enabled for proxy protocol or not.
+* **fqdns**: string[]: The list of Fqdn.
+* **ipConfigurations**: [PrivateLinkServiceIpConfiguration](#privatelinkserviceipconfiguration)[]: An array of private link service IP configurations.
+* **loadBalancerFrontendIpConfigurations**: [FrontendIPConfiguration](#frontendipconfiguration)[]: An array of references to the load balancer IP configurations.
+* **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private link service.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): An array of list about connections to the private endpoint.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service resource.
+* **visibility**: [schemas:480_visibility](#schemas480visibility): The visibility list of the private link service.
+
+## schemas:480_autoApproval
+### Properties
+* **subscriptions**: string[]: The list of subscriptions.
+
+## PrivateLinkServiceIpConfiguration
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **name**: string: The name of private link service ip configuration.
+* **properties**: [PrivateLinkServiceIpConfigurationProperties](#privatelinkserviceipconfigurationproperties): Properties of private link service IP configuration.
+* **type**: string (ReadOnly): The resource type.
+
+## PrivateLinkServiceIpConfigurationProperties
+### Properties
+* **primary**: bool: Whether the ip configuration is primary or not.
+* **privateIPAddress**: string: The private IP address of the IP configuration.
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service IP configuration resource.
+* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
+
+## FrontendIPConfiguration
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **name**: string: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+* **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat): Properties of Frontend IP Configuration of the load balancer.
+* **type**: string (ReadOnly): Type of the resource.
+* **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
+
+## FrontendIPConfigurationPropertiesFormat
+### Properties
+* **inboundNatPools**: [SubResource](#subresource)[] (ReadOnly): An array of references to inbound pools that use this frontend IP.
+* **inboundNatRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to inbound rules that use this frontend IP.
+* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to load balancing rules that use this frontend IP.
+* **outboundRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to outbound rules that use this frontend IP.
+* **privateIPAddress**: string: The private IP address of the IP configuration.
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The Private IP allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the frontend IP configuration resource.
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
+* **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
+* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
+
+## PrivateEndpointConnection
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): The resource type.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **linkIdentifier**: string (ReadOnly): The consumer link id.
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): Private endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection resource.
+
+## schemas:480_visibility
+### Properties
+* **subscriptions**: string[]: The list of subscriptions.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## NetworkInterfaceTapConfiguration
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -1372,29 +1489,6 @@
 * **networkInterfaceTapConfigurations**: [NetworkInterfaceTapConfiguration](#networkinterfacetapconfiguration)[] (ReadOnly): Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network tap resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network tap resource.
-
-## FrontendIPConfiguration
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
-* **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat): Properties of Frontend IP Configuration of the load balancer.
-* **type**: string (ReadOnly): Type of the resource.
-* **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
-
-## FrontendIPConfigurationPropertiesFormat
-### Properties
-* **inboundNatPools**: [SubResource](#subresource)[] (ReadOnly): An array of references to inbound pools that use this frontend IP.
-* **inboundNatRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to inbound rules that use this frontend IP.
-* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to load balancing rules that use this frontend IP.
-* **outboundRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to outbound rules that use this frontend IP.
-* **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The Private IP allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the frontend IP configuration resource.
-* **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
-* **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## Dictionary<string,String>
 ### Properties
@@ -1528,6 +1622,36 @@
 * **ipTagType**: string: The IP tag type. Example: FirstPartyUsage.
 * **tag**: string: The value of the IP tag associated with the public IP. Example: SQL.
 
+## NatGateway
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
+* **properties**: [NatGatewayPropertiesFormat](#natgatewaypropertiesformat): Nat Gateway properties.
+* **sku**: [NatGatewaySku](#natgatewaysku): SKU of nat gateway.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: string (ReadOnly): Resource type.
+* **zones**: string[]: A list of availability zones denoting the zone in which Nat Gateway should be deployed.
+
+## NatGatewayPropertiesFormat
+### Properties
+* **idleTimeoutInMinutes**: int: The idle timeout of the nat gateway.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the NAT gateway resource.
+* **publicIpAddresses**: [SubResource](#subresource)[]: An array of public ip addresses associated with the nat gateway resource.
+* **publicIpPrefixes**: [SubResource](#subresource)[]: An array of public ip prefixes associated with the nat gateway resource.
+* **resourceGuid**: string (ReadOnly): The resource GUID property of the NAT gateway resource.
+* **subnets**: [SubResource](#subresource)[] (ReadOnly): An array of references to the subnets using this nat gateway resource.
+
+## NatGatewaySku
+### Properties
+* **name**: 'Standard': Name of Nat Gateway SKU.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## PublicIPAddressSku
 ### Properties
 * **name**: 'Basic' | 'Standard': Name of a public IP address SKU.
@@ -1602,19 +1726,6 @@
 ### Properties
 * **port**: int: Frontend port.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the frontend port resource.
-
-## ApplicationGatewayIPConfiguration
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: Name of the IP configuration that is unique within an Application Gateway.
-* **properties**: [ApplicationGatewayIPConfigurationPropertiesFormat](#applicationgatewayipconfigurationpropertiesformat): Properties of IP configuration of an application gateway.
-* **type**: string (ReadOnly): Type of the resource.
-
-## ApplicationGatewayIPConfigurationPropertiesFormat
-### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway IP configuration resource.
-* **subnet**: [SubResource](#subresource): Reference to another subresource.
 
 ## ApplicationGatewayHttpListener
 ### Properties
@@ -2302,6 +2413,7 @@
 ## VirtualNetworkGateway
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **id**: string: Resource ID.
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
@@ -2324,8 +2436,7 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network gateway resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network gateway resource.
 * **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): VirtualNetworkGatewaySku details.
-* **virtualNetworkExtendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
-* **vNetExtendedLocationResourceId**: string: MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+* **vNetExtendedLocationResourceId**: string: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
 * **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): VpnClientConfiguration for P2S client.
 * **vpnGatewayGeneration**: 'Generation1' | 'Generation2' | 'None': The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
 * **vpnType**: 'PolicyBased' | 'RouteBased': The type of this virtual network gateway.
@@ -3139,19 +3250,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## NatGatewayPropertiesFormat
-### Properties
-* **idleTimeoutInMinutes**: int: The idle timeout of the nat gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the NAT gateway resource.
-* **publicIpAddresses**: [SubResource](#subresource)[]: An array of public ip addresses associated with the nat gateway resource.
-* **publicIpPrefixes**: [SubResource](#subresource)[]: An array of public ip prefixes associated with the nat gateway resource.
-* **resourceGuid**: string (ReadOnly): The resource GUID property of the NAT gateway resource.
-* **subnets**: [SubResource](#subresource)[] (ReadOnly): An array of references to the subnets using this nat gateway resource.
-
-## NatGatewaySku
-### Properties
-* **name**: 'Standard': Name of Nat Gateway SKU.
-
 ## Dictionary<string,String>
 ### Properties
 ### Additional Properties
@@ -3503,59 +3601,6 @@
 * **recordType**: string: Resource record type.
 * **ttl**: int: Recordset time to live.
 
-## PrivateLinkServiceProperties
-### Properties
-* **alias**: string (ReadOnly): The alias of the private link service.
-* **autoApproval**: [schemas:480_autoApproval](#schemas480autoapproval): The auto-approval list of the private link service.
-* **enableProxyProtocol**: bool: Whether the private link service is enabled for proxy protocol or not.
-* **fqdns**: string[]: The list of Fqdn.
-* **ipConfigurations**: [PrivateLinkServiceIpConfiguration](#privatelinkserviceipconfiguration)[]: An array of private link service IP configurations.
-* **loadBalancerFrontendIpConfigurations**: [FrontendIPConfiguration](#frontendipconfiguration)[]: An array of references to the load balancer IP configurations.
-* **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private link service.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): An array of list about connections to the private endpoint.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service resource.
-* **visibility**: [schemas:480_visibility](#schemas480visibility): The visibility list of the private link service.
-
-## schemas:480_autoApproval
-### Properties
-* **subscriptions**: string[]: The list of subscriptions.
-
-## PrivateLinkServiceIpConfiguration
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of private link service ip configuration.
-* **properties**: [PrivateLinkServiceIpConfigurationProperties](#privatelinkserviceipconfigurationproperties): Properties of private link service IP configuration.
-* **type**: string (ReadOnly): The resource type.
-
-## PrivateLinkServiceIpConfigurationProperties
-### Properties
-* **primary**: bool: Whether the ip configuration is primary or not.
-* **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service IP configuration resource.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
-
-## PrivateEndpointConnection
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **type**: string (ReadOnly): The resource type.
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **linkIdentifier**: string (ReadOnly): The consumer link id.
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): Private endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection resource.
-
-## schemas:480_visibility
-### Properties
-* **subscriptions**: string[]: The list of subscriptions.
-
 ## Dictionary<string,String>
 ### Properties
 ### Additional Properties
@@ -3572,6 +3617,7 @@
 * **ipPrefix**: string (ReadOnly): The allocated Prefix.
 * **ipTags**: [IpTag](#iptag)[]: The list of tags associated with the public IP prefix.
 * **loadBalancerFrontendIpConfiguration**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
+* **natGateway**: [NatGateway](#natgateway): Nat Gateway resource.
 * **prefixLength**: int: The Length of the Public IP Prefix.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the public IP prefix resource.
 * **publicIPAddresses**: [ReferencedPublicIpAddress](#referencedpublicipaddress)[] (ReadOnly): The list of all referenced PublicIPAddresses.
@@ -3770,17 +3816,20 @@
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat): Properties of the virtual network peering.
+* **type**: string: Resource type.
 
 ## VirtualNetworkPeeringPropertiesFormat
 ### Properties
 * **allowForwardedTraffic**: bool: Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
 * **allowGatewayTransit**: bool: If gateway links can be used in remote virtual networking to link to this virtual network.
 * **allowVirtualNetworkAccess**: bool: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+* **doNotVerifyRemoteGateways**: bool: If we need to verify the provisioning state of the remote gateway.
 * **peeringState**: 'Connected' | 'Disconnected' | 'Initiated': The status of the virtual network peering.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network peering resource.
 * **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **remoteBgpCommunities**: [VirtualNetworkBgpCommunities](#virtualnetworkbgpcommunities): Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
 * **remoteVirtualNetwork**: [SubResource](#subresource): Reference to another subresource.
+* **resourceGuid**: string (ReadOnly): The resourceGuid property of the Virtual Network peering resource.
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
 
 ## Dictionary<string,String>

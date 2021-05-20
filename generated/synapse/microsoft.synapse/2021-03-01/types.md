@@ -342,7 +342,7 @@
 * **managedVirtualNetworkSettings**: [ManagedVirtualNetworkSettings](#managedvirtualnetworksettings): Managed Virtual Network Settings
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: Private endpoint connections to the workspace
 * **provisioningState**: string (ReadOnly): Resource provisioning state
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enable or Disable pubic network access to workspace.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enable or Disable public network access to workspace.
 * **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview Configuration
 * **sqlAdministratorLogin**: string: Login for workspace SQL active directory administrator
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password

@@ -708,6 +708,7 @@
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -1869,7 +1870,7 @@
 
 ## ApplicationGatewayRewriteRuleCondition
 ### Properties
-* **ignoreCase**: bool: Setting this paramter to truth value with force the pattern to do a case in-sensitive comparison.
+* **ignoreCase**: bool: Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
 * **negate**: bool: Setting this value as truth will force to check the negation of the condition given by the user.
 * **pattern**: string: The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
 * **variable**: string: The condition parameter of the RewriteRuleCondition.
@@ -2385,6 +2386,7 @@
 ## VirtualNetworkGateway
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **id**: string: Resource ID.
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
@@ -2400,7 +2402,6 @@
 * **enableBgp**: bool: Whether BGP is enabled for this virtual network gateway or not.
 * **enableDnsForwarding**: bool: Whether dns forwarding is enabled or not.
 * **enablePrivateIpAddress**: bool: Whether private IP needs to be enabled on this gateway for connections or not.
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **gatewayDefaultSite**: [SubResource](#subresource): Reference to another subresource.
 * **gatewayType**: 'ExpressRoute' | 'LocalGateway' | 'Vpn': The type of this virtual network gateway.
 * **inboundDnsForwardingEndpoint**: string (ReadOnly): The IP address allocated by the gateway to which dns requests can be sent.
@@ -2408,7 +2409,7 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network gateway resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network gateway resource.
 * **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): VirtualNetworkGatewaySku details.
-* **virtualNetworkExtendedLocationResourceId**: string: MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+* **vNetExtendedLocationResourceId**: string: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
 * **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): VpnClientConfiguration for P2S client.
 * **vpnGatewayGeneration**: 'Generation1' | 'Generation2' | 'None': The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
 * **vpnType**: 'PolicyBased' | 'RouteBased': The type of this virtual network gateway.

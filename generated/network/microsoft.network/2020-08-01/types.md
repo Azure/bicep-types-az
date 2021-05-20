@@ -711,6 +711,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -858,14 +859,14 @@
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
-* **userAssignedIdentities**: [Dictionary<string,Schemas734UserAssignedIdentitiesValue>](#dictionarystringschemas734userassignedidentitiesvalue): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [Dictionary<string,Schemas295UserAssignedIdentitiesValue>](#dictionarystringschemas295userassignedidentitiesvalue): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas734UserAssignedIdentitiesValue>
+## Dictionary<string,Schemas295UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:734_userAssignedIdentitiesValue](#schemas734userassignedidentitiesvalue)
+* **Additional Properties Type**: [schemas:295_userAssignedIdentitiesValue](#schemas295userassignedidentitiesvalue)
 
-## schemas:734_userAssignedIdentitiesValue
+## schemas:295_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -1377,7 +1378,7 @@
 ## PrivateLinkServiceProperties
 ### Properties
 * **alias**: string (ReadOnly): The alias of the private link service.
-* **autoApproval**: [schemas:460_autoApproval](#schemas460autoapproval): The auto-approval list of the private link service.
+* **autoApproval**: [schemas:477_autoApproval](#schemas477autoapproval): The auto-approval list of the private link service.
 * **enableProxyProtocol**: bool: Whether the private link service is enabled for proxy protocol or not.
 * **fqdns**: string[]: The list of Fqdn.
 * **ipConfigurations**: [PrivateLinkServiceIpConfiguration](#privatelinkserviceipconfiguration)[]: An array of private link service IP configurations.
@@ -1385,9 +1386,9 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private link service.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): An array of list about connections to the private endpoint.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service resource.
-* **visibility**: [schemas:460_visibility](#schemas460visibility): The visibility list of the private link service.
+* **visibility**: [schemas:477_visibility](#schemas477visibility): The visibility list of the private link service.
 
-## schemas:460_autoApproval
+## schemas:477_autoApproval
 ### Properties
 * **subscriptions**: string[]: The list of subscriptions.
 
@@ -1446,7 +1447,7 @@
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection resource.
 
-## schemas:460_visibility
+## schemas:477_visibility
 ### Properties
 * **subscriptions**: string[]: The list of subscriptions.
 
@@ -1893,7 +1894,7 @@
 
 ## ApplicationGatewayRewriteRuleCondition
 ### Properties
-* **ignoreCase**: bool: Setting this paramter to truth value with force the pattern to do a case in-sensitive comparison.
+* **ignoreCase**: bool: Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
 * **negate**: bool: Setting this value as truth will force to check the negation of the condition given by the user.
 * **pattern**: string: The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
 * **variable**: string: The condition parameter of the RewriteRuleCondition.
@@ -2409,6 +2410,7 @@
 ## VirtualNetworkGateway
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
 * **id**: string: Resource ID.
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
@@ -2431,8 +2433,7 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network gateway resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network gateway resource.
 * **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): VirtualNetworkGatewaySku details.
-* **virtualNetworkExtendedLocation**: [ExtendedLocation](#extendedlocation): ExtendedLocation complex type.
-* **vNetExtendedLocationResourceId**: string: MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+* **vNetExtendedLocationResourceId**: string: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
 * **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): VpnClientConfiguration for P2S client.
 * **vpnGatewayGeneration**: 'Generation1' | 'Generation2' | 'None': The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
 * **vpnType**: 'PolicyBased' | 'RouteBased': The type of this virtual network gateway.
@@ -2780,16 +2781,16 @@
 
 ## ExpressRouteGatewayProperties
 ### Properties
-* **autoScaleConfiguration**: [schemas:695_autoScaleConfiguration](#schemas695autoscaleconfiguration): Configuration for auto scaling.
+* **autoScaleConfiguration**: [schemas:712_autoScaleConfiguration](#schemas712autoscaleconfiguration): Configuration for auto scaling.
 * **expressRouteConnections**: [ExpressRouteConnection](#expressrouteconnection)[] (ReadOnly): List of ExpressRoute connections to the ExpressRoute gateway.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route gateway resource.
 * **virtualHub**: [VirtualHubId](#virtualhubid) (Required): Virtual Hub identifier.
 
-## schemas:695_autoScaleConfiguration
+## schemas:712_autoScaleConfiguration
 ### Properties
-* **bounds**: [schemas:695_autoScaleConfiguration_bounds](#schemas695autoscaleconfigurationbounds): Minimum and maximum number of scale units to deploy.
+* **bounds**: [schemas:712_autoScaleConfiguration_bounds](#schemas712autoscaleconfigurationbounds): Minimum and maximum number of scale units to deploy.
 
-## schemas:695_autoScaleConfiguration_bounds
+## schemas:712_autoScaleConfiguration_bounds
 ### Properties
 * **max**: int: Maximum number of scale units deployed for ExpressRoute gateway.
 * **min**: int: Minimum number of scale units deployed for ExpressRoute gateway.
