@@ -158,6 +158,8 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--bicep',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
+    // this is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation
+    `--skip-semantics-validation`,
     readme,
   ];
 
