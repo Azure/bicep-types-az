@@ -9,6 +9,8 @@ import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
 import { groupBy, keys, orderBy, sortBy, Dictionary } from 'lodash';
 import { TypeBaseKind } from '../types';
+import * as markdown from '@ts-common/commonmark-to-markdown'
+import * as yaml from 'js-yaml'
 
 interface ILogger {
   out: (data: string) => void;
@@ -74,6 +76,7 @@ executeSynchronous(async () => {
     const logger = await getLogger(`${outputDir}/log.out`);
 
     try {
+      await buildConfiguration(logger, readmePath);
       await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
 
       await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
@@ -91,10 +94,66 @@ executeSynchronous(async () => {
   await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
+async function buildConfiguration(logger: ILogger, readme: string) {
+  const pathRegex = /(microsoft\.\w+)[\\\/]\S*[\\\/](\d{4}-\d{2}-\d{2}(|-preview))[\\\/]/i;
+  const readmeContents = await readFile(readme, { encoding: 'utf8' });
+  const readmeMarkdown = markdown.parse(readmeContents);
+
+  const inputFiles = new Set<string>();
+  for (const codeBlock of markdown.iterate(readmeMarkdown.markDown)) {
+    if (codeBlock.type === 'code_block' && codeBlock?.info?.startsWith('yaml') && codeBlock.literal !== null) {
+      const yamlBlock = yaml.load(codeBlock.literal) as any;
+      if (yamlBlock) {
+        const inputFile = yamlBlock['input-file'];
+        if (typeof inputFile === 'string') {
+          inputFiles.add(inputFile);
+        } else if (inputFile instanceof Array) {
+          for (const i of inputFile) {
+            inputFiles.add(i);
+          }
+        }
+      }
+    }
+  }
+
+  const filesByTag: Dictionary<string[]> = {};
+  for (const file of inputFiles) {
+    const match = pathRegex.exec(file);
+    if (match) {
+      const tagName = `${match[1].toLowerCase()}-${match[2].toLowerCase()}`;
+      if (!filesByTag[tagName]) {
+        filesByTag[tagName] = [];
+      }
+
+      filesByTag[tagName].push(file);
+    }
+  }
+
+  let generatedContent = `##Bicep
+
+### Bicep multi-api
+\`\`\` yaml $(bicep) && $(multiapi)
+${yaml.dump({ 'batch': Object.keys(filesByTag).map(tag => ({ 'tag': tag })) }, { lineWidth: 1000 })}
+\`\`\`
+`;
+
+  for (const tag of Object.keys(filesByTag)) {
+    generatedContent += `### Tag: ${tag} and bicep
+\`\`\` yaml $(tag) == '${tag}' && $(bicep)
+${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
+\`\`\`
+`;
+
+    await writeFile(
+      `${path.dirname(readme)}/readme.bicep.md`,
+      generatedContent);
+  }
+}
+
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
   let autoRestParams = [
     `--use=${extensionDir}`,
-    '--azureresourceschema',
+    '--bicep',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
     readme,
@@ -109,11 +168,11 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
-      `--azureresourceschema.debugger=true`,
+      `--bicep.debugger=true`,
     ]);
   }
 
-  return await executeCmd(logger, __dirname, autorestBinary, autoRestParams);
+  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
 }
 
 async function findReadmePaths(specsPath: string) {
@@ -164,10 +223,11 @@ async function findRecursive(basePath: string, filter: (name: string) => boolean
   return results;
 }
 
-function executeCmd(logger: ILogger, cwd: string, cmd: string, args: string[]) : Promise<number> {
+function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string, args: string[]) : Promise<number> {
   return new Promise((resolve, reject) => {
-    logOut(logger, '');
-    logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
+    if (verbose) {
+      logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
+    }
 
     const child = spawn(cmd, args, {
       cwd: cwd,
@@ -292,9 +352,9 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
 
   // Use a consistent sort order so that file system differences don't generate changes
   for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
-    const content = await readFile(typeFilePath);
+    const content = await readFile(typeFilePath, { encoding: 'utf8' });
 
-    const types = JSON.parse(content.toString()) as any[];
+    const types = JSON.parse(content) as any[];
     for (const type of types) {
       const resource = type[TypeBaseKind.ResourceType];
       if (!resource) {

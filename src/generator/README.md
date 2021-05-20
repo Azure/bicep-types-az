@@ -13,37 +13,37 @@ pass-thru:
   - tree-shaker
 
 pipeline:
-  azureresourceschema/imodeler2:
+  bicep/imodeler2:
     input: openapi-document/multi-api/identity
-    scope: azureresourceschema
-  azureresourceschema/commonmarker:
+    scope: bicep
+  bicep/commonmarker:
     input: imodeler2
-  azureresourceschema/cm/transform:
+  bicep/cm/transform:
     input: commonmarker
-  azureresourceschema/cm/emitter:
+  bicep/cm/emitter:
     input: transform
     scope: scope-cm/emitter
-  azureresourceschema/generate:
-    plugin: azureresourceschema
+  bicep/generate:
+    plugin: bicep
     input: cm/transform
-    output-artifact: source-file-azureresourceschema
-  azureresourceschema/transform:
+    output-artifact: source-file-bicep
+  bicep/transform:
     input: generate
-    output-artifact: source-file-azureresourceschema
+    output-artifact: source-file-bicep
     scope: scope-transform-string
-  azureresourceschema/emitter:
+  bicep/emitter:
     input: transform
-    scope: scope-azureresourceschema/emitter
+    scope: scope-bicep/emitter
 
-scope-azureresourceschema/emitter:
-  input-artifact: source-file-azureresourceschema
+scope-bicep/emitter:
+  input-artifact: source-file-bicep
   output-uri-expr: $key
 
 scope-transform-string:
   is-object: false
 
 output-artifact:
-- source-file-azureresourceschema
+- source-file-bicep
 
 scope-cm/emitter:
   input-artifact: code-model-v1
