@@ -122,8 +122,8 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
       continue;
     }
     
-    const yamlData = yaml.load(node.literal);
-    if (typeof yamlData === 'object') {
+    const yamlData = yaml.load(node.literal) as any;
+    if (yamlData) {
       // input-file may be a single string or an array of strings
       const inputFile = yamlData['input-file'];
       if (typeof inputFile === 'string') {
