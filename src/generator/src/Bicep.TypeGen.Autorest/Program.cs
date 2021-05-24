@@ -17,7 +17,7 @@ namespace Azure.Bicep.TypeGen.Autorest
 {
     public class Program : NewPlugin
     {
-        private static IEnumerable<string> PluginNames = new []{ "azureresourceschema", "imodeler2" };
+        private static IEnumerable<string> PluginNames = new []{ "bicep", "imodeler2" };
 
         public static async Task<int> Main(string[] args)
         {

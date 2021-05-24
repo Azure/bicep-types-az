@@ -9,6 +9,9 @@ import stripAnsi from 'strip-ansi';
 import yargs from 'yargs';
 import { groupBy, keys, orderBy, sortBy, Dictionary } from 'lodash';
 import { TypeBaseKind } from '../types';
+import { GeneratorConfig, getConfig } from '../config';
+import * as markdown from '@ts-common/commonmark-to-markdown'
+import * as yaml from 'js-yaml'
 
 interface ILogger {
   out: (data: string) => void;
@@ -61,6 +64,7 @@ executeSynchronous(async () => {
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
+    const bicepReadmePath = `${path.dirname(readmePath)}/readme.bicep.md`;
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
     const outputDir = `${tmpOutputPath}/${basePath}`;
 
@@ -72,8 +76,11 @@ executeSynchronous(async () => {
     await rmdir(outputDir, { recursive: true });
     await mkdir(outputDir, { recursive: true });
     const logger = await getLogger(`${outputDir}/log.out`);
+    const config = getConfig(basePath);
 
     try {
+      // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
+      await generateAutorestConfig(readmePath, bicepReadmePath, config);
       await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
 
       await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
@@ -85,18 +92,95 @@ executeSynchronous(async () => {
 
     // clean up temp dir
     await rmdir(outputDir, { recursive: true });
+    // clean up autorest readme.bicep.md files
+    await rm(bicepReadmePath, { force: true });
   }
 
   // build the type index
   await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
+async function generateAutorestConfig(readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
+  // We expect a path format convention of <provider>/(preview|stable)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
+  // This information is used to generate individual tags in the generated autorest configuration
+  const pathRegex = /^([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
+
+  const readmeContents = await readFile(readmePath, { encoding: 'utf8' });
+  const readmeMarkdown = markdown.parse(readmeContents);
+
+  const inputFiles = new Set<string>(config.additionalFiles);
+  // we need to look for all autorest configuration elements containing input files, and collect that list of files. These will look like (e.g.):
+  // ```yaml $(tag) == 'someTag'
+  // input-file:
+  // - path/to/file.json
+  // - path/to/other_file.json
+  // ```
+  for (const node of markdown.iterate(readmeMarkdown.markDown)) {
+    // We're only interested in yaml code blocks
+    if (node.type !== 'code_block' || !node.info || !node.literal ||
+      !node.info.trim().startsWith('yaml')) {
+      continue;
+    }
+    
+    const yamlData = yaml.load(node.literal) as any;
+    if (yamlData) {
+      // input-file may be a single string or an array of strings
+      const inputFile = yamlData['input-file'];
+      if (typeof inputFile === 'string') {
+        inputFiles.add(inputFile.replace(/[\\\/]/g, '/'));
+      } else if (inputFile instanceof Array) {
+        for (const i of inputFile) {
+          inputFiles.add(i.replace(/[\\\/]/g, '/'));
+        }
+      }
+    }
+  }
+
+  const filesByTag: Dictionary<string[]> = {};
+  for (const file of inputFiles) {
+    const match = pathRegex.exec(file);
+    if (match) {
+      // Generate a unique tag. We can't process all of the different API versions in one autorest pass
+      // because there are constraints on naming uniqueness (e.g. naming of definitions), so we want to pass over
+      // each API version separately.
+      const tagName = `${match[1].toLowerCase()}-${match[2].toLowerCase()}`;
+      if (!filesByTag[tagName]) {
+        filesByTag[tagName] = [];
+      }
+
+      filesByTag[tagName].push(file);
+    }
+  }
+
+  let generatedContent = `##Bicep
+
+### Bicep multi-api
+\`\`\`yaml $(bicep) && $(multiapi)
+${yaml.dump({ 'batch': Object.keys(filesByTag).map(tag => ({ 'tag': tag })) }, { lineWidth: 1000 })}
+\`\`\`
+`;
+
+  for (const tag of Object.keys(filesByTag)) {
+    generatedContent += `### Tag: ${tag} and bicep
+\`\`\`yaml $(tag) == '${tag}' && $(bicep)
+${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
+\`\`\`
+`;
+
+    await writeFile(bicepReadmePath, generatedContent);
+  }
+}
+
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
   let autoRestParams = [
     `--use=${extensionDir}`,
-    '--azureresourceschema',
+    '--bicep',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
+    // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
+    // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
+    // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types. 
+    `--skip-semantics-validation`,
     readme,
   ];
 
@@ -109,11 +193,11 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
-      `--azureresourceschema.debugger=true`,
+      `--bicep.debugger=true`,
     ]);
   }
 
-  return await executeCmd(logger, __dirname, autorestBinary, autoRestParams);
+  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
 }
 
 async function findReadmePaths(specsPath: string) {
@@ -164,10 +248,11 @@ async function findRecursive(basePath: string, filter: (name: string) => boolean
   return results;
 }
 
-function executeCmd(logger: ILogger, cwd: string, cmd: string, args: string[]) : Promise<number> {
+function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string, args: string[]) : Promise<number> {
   return new Promise((resolve, reject) => {
-    logOut(logger, '');
-    logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
+    if (verbose) {
+      logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
+    }
 
     const child = spawn(cmd, args, {
       cwd: cwd,
@@ -292,9 +377,9 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
 
   // Use a consistent sort order so that file system differences don't generate changes
   for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
-    const content = await readFile(typeFilePath);
+    const content = await readFile(typeFilePath, { encoding: 'utf8' });
 
-    const types = JSON.parse(content.toString()) as any[];
+    const types = JSON.parse(content) as any[];
     for (const type of types) {
       const resource = type[TypeBaseKind.ResourceType];
       if (!resource) {
