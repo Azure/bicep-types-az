@@ -30,7 +30,7 @@ export async function processRequest(host: Host) {
       host.WriteFile(`${outFolder}/types.md`, writeMarkdown(namespace, apiVersion, types));
     }
 
-    session.log(`Autorest.AzureResourceSchema took ${Date.now() - start}ms`, "");
+    session.log(`autorest.bicep took ${Date.now() - start}ms`, "");
   } catch (err) {
     console.error("An error was encountered while handling a request:", err);
     throw err;
@@ -39,7 +39,7 @@ export async function processRequest(host: Host) {
 
 async function main() {
   const pluginHost = new AutoRestExtension();
-  pluginHost.Add("azureresourceschema", processRequest);
+  pluginHost.Add("bicep", processRequest);
   await pluginHost.Run();
 }
 

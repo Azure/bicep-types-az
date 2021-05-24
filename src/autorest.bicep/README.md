@@ -16,16 +16,16 @@ modelerfour:
   lenient-model-deduplication: true
 
 pipeline:
-  azureresourceschema: # <- name of plugin
+  bicep: # <- name of plugin
     input: modelerfour/identity
-    output-artifact: azureresourceschema-files
+    output-artifact: bicep-files
 
-  azureresourceschema/emitter:
-    input: azureresourceschema
-    scope: azureresourceschema-scope/emitter
+  bicep/emitter:
+    input: bicep
+    scope: bicep-scope/emitter
 
-azureresourceschema-scope/emitter:
-  input-artifact: azureresourceschema-files
+bicep-scope/emitter:
+  input-artifact: bicep-files
 
-output-artifact: azureresourceschema-files
+output-artifact: bicep-files
 ```
