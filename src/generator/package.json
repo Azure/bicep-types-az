@@ -27,7 +27,7 @@
     "@types/async": "^3.2.6",
     "@types/lodash": "^4.14.170",
     "@types/node": "^15.6.0",
-    "@types/yargs": "^16.0.2",
+    "@types/yargs": "^17.0.0",
     "async": "^3.2.0",
     "autorest": "^3.2.1",
     "chalk": "^4.1.1",
