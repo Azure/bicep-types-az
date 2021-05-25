@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionGroup](#actiongroup): An Azure action group.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/metricAlerts@2018-03-01
@@ -19,7 +19,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MetricAlertProperties](#metricalertproperties) (Required): An alert rule.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/metricAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionGroup
@@ -61,7 +61,7 @@
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 
 ## ItsmReceiver
 ### Properties
@@ -82,7 +82,7 @@
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 
 ## VoiceReceiver
 ### Properties
@@ -95,7 +95,7 @@
 * **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
 * **serviceUri**: string (Required): The URI where webhooks should be sent.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -119,41 +119,43 @@
 ## MetricAlertAction
 ### Properties
 * **actionGroupId**: string: the id of the action group to use.
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring): This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+* **webHookProperties**: [MetricAlertActionWebHookProperties](#metricalertactionwebhookproperties): This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
 
-## Dictionary<string,String>
+## MetricAlertActionWebHookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## MetricAlertCriteria
 * **Discriminator**: odata.type
+
 ### Base Properties
-### Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria
+### MetricAlertMultipleResourceMultipleMetricCriteria
 #### Properties
 * **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]: the list of multiple metric criteria for this 'all of' operation.
-* **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required): Specifies the metric alert criteria for multiple resource that has multiple metric criteria.
+* **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required): specifies the type of the alert criteria.
 
-### Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
+### MetricAlertSingleResourceMultipleMetricCriteria
 #### Properties
-* **allOf**: [StaticThresholdCriterion](#staticthresholdcriterion)[]: The list of metric criteria for this 'all of' operation.
-* **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required): Specifies the metric alert criteria for a single resource that has multiple metric criteria.
+* **allOf**: [MetricCriteria](#metriccriteria)[]: The list of metric criteria for this 'all of' operation.
+* **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required): specifies the type of the alert criteria.
 
-### Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria
+### WebtestLocationAvailabilityCriteria
 #### Properties
 * **componentId**: string (Required): The Application Insights resource Id.
 * **failedLocationCount**: int (Required): The number of failed locations.
-* **odata.type**: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria' (Required): Specifies the metric alert rule criteria for a web test resource.
+* **odata.type**: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria' (Required): specifies the type of the alert criteria.
 * **webTestId**: string (Required): The Application Insights web test Id.
 
 
-## Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria
+## MetricAlertMultipleResourceMultipleMetricCriteria
 ### Properties
 * **allOf**: [MultiMetricCriteria](#multimetriccriteria)[]: the list of multiple metric criteria for this 'all of' operation.
-* **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required): Specifies the metric alert criteria for multiple resource that has multiple metric criteria.
+* **odata.type**: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria' (Required): specifies the type of the alert criteria.
 
 ## MultiMetricCriteria
 * **Discriminator**: criterionType
+
 ### Base Properties
 * **dimensions**: [MetricDimension](#metricdimension)[]: List of dimension conditions.
 * **metricName**: string (Required): Name of the metric.
@@ -161,27 +163,19 @@
 * **name**: string (Required): Name of the criteria.
 * **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.
-### DynamicThresholdCriterion
+### DynamicMetricCriteria
 #### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
-* **criterionType**: 'DynamicThresholdCriterion' (Required): Criterion for dynamic threshold.
+* **criterionType**: 'DynamicThresholdCriterion' (Required): Specifies the type of threshold criteria
 * **failingPeriods**: [DynamicThresholdFailingPeriods](#dynamicthresholdfailingperiods) (Required): The minimum number of violations required within the selected lookback time window required to raise an alert.
 * **ignoreDataBefore**: string: Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
 * **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required): The operator used to compare the metric value against the threshold.
 
-### StaticThresholdCriterion
+### MetricCriteria
 #### Properties
-* **criterionType**: 'StaticThresholdCriterion' (Required): Criterion to filter metrics.
-* **dimensions**: [MetricDimension](#metricdimension)[]: List of dimension conditions.
-* **metricName**: string (Required): Name of the metric.
-* **metricNamespace**: string: Namespace of the metric.
-* **name**: string (Required): Name of the criteria.
+* **criterionType**: 'StaticThresholdCriterion' (Required): Specifies the type of threshold criteria
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator.
-* **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.
-#### Additional Properties
-* **Additional Properties Type**: any
 
 
 ## MetricDimension
@@ -190,10 +184,10 @@
 * **operator**: string (Required): the dimension operator. Only 'Include' and 'Exclude' are supported
 * **values**: string[] (Required): list of dimension values.
 
-## DynamicThresholdCriterion
+## DynamicMetricCriteria
 ### Properties
 * **alertSensitivity**: 'High' | 'Low' | 'Medium' (Required): The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
-* **criterionType**: 'DynamicThresholdCriterion' (Required): Criterion for dynamic threshold.
+* **criterionType**: 'DynamicThresholdCriterion' (Required): Specifies the type of threshold criteria
 * **failingPeriods**: [DynamicThresholdFailingPeriods](#dynamicthresholdfailingperiods) (Required): The minimum number of violations required within the selected lookback time window required to raise an alert.
 * **ignoreDataBefore**: string: Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
 * **operator**: 'GreaterOrLessThan' | 'GreaterThan' | 'LessThan' (Required): The operator used to compare the metric value against the threshold.
@@ -203,33 +197,25 @@
 * **minFailingPeriodsToAlert**: int (Required): The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
 * **numberOfEvaluationPeriods**: int (Required): The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
 
-## StaticThresholdCriterion
+## MetricCriteria
 ### Properties
-* **criterionType**: 'StaticThresholdCriterion' (Required): Criterion to filter metrics.
-* **dimensions**: [MetricDimension](#metricdimension)[]: List of dimension conditions.
-* **metricName**: string (Required): Name of the metric.
-* **metricNamespace**: string: Namespace of the metric.
-* **name**: string (Required): Name of the criteria.
+* **criterionType**: 'StaticThresholdCriterion' (Required): Specifies the type of threshold criteria
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator.
-* **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.
-### Additional Properties
-* **Additional Properties Type**: any
 
-## Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria
+## MetricAlertSingleResourceMultipleMetricCriteria
 ### Properties
-* **allOf**: [StaticThresholdCriterion](#staticthresholdcriterion)[]: The list of metric criteria for this 'all of' operation.
-* **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required): Specifies the metric alert criteria for a single resource that has multiple metric criteria.
+* **allOf**: [MetricCriteria](#metriccriteria)[]: The list of metric criteria for this 'all of' operation.
+* **odata.type**: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria' (Required): specifies the type of the alert criteria.
 
-## Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria
+## WebtestLocationAvailabilityCriteria
 ### Properties
 * **componentId**: string (Required): The Application Insights resource Id.
 * **failedLocationCount**: int (Required): The number of failed locations.
-* **odata.type**: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria' (Required): Specifies the metric alert rule criteria for a web test resource.
+* **odata.type**: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria' (Required): specifies the type of the alert criteria.
 * **webTestId**: string (Required): The Application Insights web test Id.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

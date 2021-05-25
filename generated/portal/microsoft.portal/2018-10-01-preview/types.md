@@ -8,64 +8,64 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DashboardProperties](#dashboardproperties): The shared dashboard properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [DashboardTags](#dashboardtags): Resource tags
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DashboardProperties
 ### Properties
-* **lenses**: [Dictionary<string,DashboardLens>](#dictionarystringdashboardlens): The dashboard lenses.
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard metadata.
+* **lenses**: [DashboardPropertiesLenses](#dashboardpropertieslenses): The dashboard lenses.
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
 
-## Dictionary<string,DashboardLens>
+## DashboardPropertiesLenses
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DashboardLens](#dashboardlens)
 
 ## DashboardLens
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard len's metadata.
+* **metadata**: [DashboardLensMetadata](#dashboardlensmetadata): The dashboard len's metadata.
 * **order**: int (Required): The lens order.
-* **parts**: [Dictionary<string,DashboardParts>](#dictionarystringdashboardparts) (Required): The dashboard parts.
+* **parts**: [DashboardLensParts](#dashboardlensparts) (Required): The dashboard parts.
 
-## Dictionary<string,Object>
+## DashboardLensMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,DashboardParts>
+## DashboardLensParts
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DashboardParts](#dashboardparts)
 
 ## DashboardParts
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard part's metadata.
-* **position**: [schemas:1_position](#schemas1position) (Required): The dashboard's part position.
+* **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
 
-## Dictionary<string,Object>
+## DashboardPartMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## schemas:1_position
+## DashboardPartsPosition
 ### Properties
 * **colSpan**: int (Required): The dashboard's part column span.
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard part's metadata.
+* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata): The dashboard part's metadata.
 * **rowSpan**: int (Required): The dashboard's part row span.
 * **x**: int (Required): The dashboard's part x coordinate.
 * **y**: int (Required): The dashboard's part y coordinate.
 
-## Dictionary<string,Object>
+## DashboardPartsPositionMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,Object>
+## DashboardPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,String>
+## DashboardTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

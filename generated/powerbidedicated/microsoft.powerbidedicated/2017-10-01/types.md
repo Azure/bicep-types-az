@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of Dedicated Capacity resource.
 * **sku**: [ResourceSku](#resourcesku) (Required): Represents the SKU name and Azure pricing tier for PowerBI Dedicated resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DedicatedCapacityProperties
@@ -28,7 +28,7 @@
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'PBIE_Azure': The name of the Azure pricing tier to which the SKU applies.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

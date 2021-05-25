@@ -9,7 +9,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectedItem](#protecteditem): The base class for backup items.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupPolicies@2016-06-01
@@ -21,28 +21,18 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionPolicy](#protectionpolicy): The base class for a backup policy. Workload-specific backup policies are derived from this class.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProtectedItem
 * **Discriminator**: protectedItemType
+
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'DPM' | 'Invalid' | 'MAB': The backup management type associated with the backup item.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'DPM' | 'Invalid' | 'MAB': The type of backup management associated with the backup engine.
 * **lastRecoveryPoint**: string: The timestamp when the most recent backup copy was created for this backup item.
 * **policyId**: string: The ID of the backup policy associated with this backup item.
 * **sourceResourceId**: string: The ID of the resource to be backed up.
-* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'Sharepoint' | 'SQLDB' | 'VM': The workload type for this item.
-### AzureIaaSVMProtectedItem
-#### Properties
-* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for the Azure VM (also known as IaaS VM)-specific backup item.
-* **friendlyName**: string: The friendly name of the VM represented by this backup item.
-* **lastBackupStatus**: string: The last backup operation status. The possible values are: Healthy or Unhealthy.
-* **lastBackupTime**: string: The timestamp of the last backup operation for this backup item.
-* **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required): This Azure VM workload-specific (also known as IaaS VM workload-specific) backup item has been backed up.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item.
-* **protectionStatus**: string: The backup status of this backup item.
-* **virtualMachineId**: string: The fully qualified Resource Manager ID of the virtual machine represented by this item.
-
+* **workloadType**: 'AzureSqlDb' | 'DPMUnknown' | 'Exchange' | 'FileFolder' | 'Invalid' | 'SQLDB' | 'Sharepoint' | 'VM': The workload type for this item.
 ### MabFileFolderProtectedItem
 #### Properties
 * **computerName**: string: The name of the computer associated with this backup item.
@@ -50,33 +40,24 @@
 * **friendlyName**: string: The friendly name of this backup item.
 * **isScheduledForDeferredDelete**: bool
 * **lastBackupStatus**: string: The status of last backup operation.
-* **protectedItemType**: 'MabFileFolderProtectedItem' (Required): This is a file or folder workload-specific backup item.
+* **protectedItemType**: 'MabFileFolderProtectedItem' (Required): The backup item type.
 * **protectionState**: string: The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError.
 
-### Microsoft.Sql/servers/databases
+### AzureIaaSClassicComputeVMProtectedItem
+#### Properties
+* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): The backup item type.
+
+### AzureIaaSComputeVMProtectedItem
+#### Properties
+* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required): The backup item type.
+
+### AzureSqlProtectedItem
 #### Properties
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information for the Azure SQL specific backup item.
 * **protectedItemDataId**: string: The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services.
-* **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): This is an Azure SQL workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
+* **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): The backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
-
-## AzureIaaSVMProtectedItem
-### Properties
-* **extendedInfo**: [AzureIaaSVMProtectedItemExtendedInfo](#azureiaasvmprotecteditemextendedinfo): Additional information for the Azure VM (also known as IaaS VM)-specific backup item.
-* **friendlyName**: string: The friendly name of the VM represented by this backup item.
-* **lastBackupStatus**: string: The last backup operation status. The possible values are: Healthy or Unhealthy.
-* **lastBackupTime**: string: The timestamp of the last backup operation for this backup item.
-* **protectedItemType**: 'AzureIaaSVMProtectedItem' (Required): This Azure VM workload-specific (also known as IaaS VM workload-specific) backup item has been backed up.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of this backup item.
-* **protectionStatus**: string: The backup status of this backup item.
-* **virtualMachineId**: string: The fully qualified Resource Manager ID of the virtual machine represented by this item.
-
-## AzureIaaSVMProtectedItemExtendedInfo
-### Properties
-* **oldestRecoveryPoint**: string: The oldest backup copy available for this backup item.
-* **policyInconsistent**: bool: Specifies if the backup policy associated with the backup item is inconsistent.
-* **recoveryPointCount**: int: The number of backup copies available for this backup item.
 
 ## MabFileFolderProtectedItem
 ### Properties
@@ -85,7 +66,7 @@
 * **friendlyName**: string: The friendly name of this backup item.
 * **isScheduledForDeferredDelete**: bool
 * **lastBackupStatus**: string: The status of last backup operation.
-* **protectedItemType**: 'MabFileFolderProtectedItem' (Required): This is a file or folder workload-specific backup item.
+* **protectedItemType**: 'MabFileFolderProtectedItem' (Required): The backup item type.
 * **protectionState**: string: The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError.
 
 ## MabFileFolderProtectedItemExtendedInfo
@@ -94,12 +75,20 @@
 * **oldestRecoveryPoint**: string: The oldest backup copy available.
 * **recoveryPointCount**: int: The number of backup copies associated with the backup item.
 
-## Microsoft.Sql/servers/databases
+## AzureIaaSClassicComputeVMProtectedItem
+### Properties
+* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): The backup item type.
+
+## AzureIaaSComputeVMProtectedItem
+### Properties
+* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required): The backup item type.
+
+## AzureSqlProtectedItem
 ### Properties
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information for the Azure SQL specific backup item.
 * **protectedItemDataId**: string: The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services.
-* **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): This is an Azure SQL workload-specific backup item.
-* **protectionState**: 'Invalid' | 'IRPending' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
+* **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): The backup item type.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -107,61 +96,63 @@
 * **policyState**: string: The state of the backup policy associated with this backup item.
 * **recoveryPointCount**: int: The number of available backup copies for this backup item.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ProtectionPolicy
 * **Discriminator**: backupManagementType
+
 ### Base Properties
 * **protectedItemsCount**: int: The number of items associated with this policy.
-### AzureIaasVM
+### AzureIaaSVMProtectionPolicy
 #### Properties
-* **backupManagementType**: 'AzureIaasVM' (Required): Azure VM (also known as IaaS VM) workload-specific backup policy.
+* **backupManagementType**: 'AzureIaasVM' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
-### AzureSql
+### AzureSqlProtectionPolicy
 #### Properties
-* **backupManagementType**: 'AzureSql' (Required):  The Azure SQL workload-specific backup policy.
+* **backupManagementType**: 'AzureSql' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
 
-### MAB
+### MabProtectionPolicy
 #### Properties
-* **backupManagementType**: 'MAB' (Required): The backup policy for the file or folder container.
+* **backupManagementType**: 'MAB' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
 
-## AzureIaasVM
+## AzureIaaSVMProtectionPolicy
 ### Properties
-* **backupManagementType**: 'AzureIaasVM' (Required): Azure VM (also known as IaaS VM) workload-specific backup policy.
+* **backupManagementType**: 'AzureIaasVM' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
+
 ### Base Properties
 ### LongTermRetentionPolicy
 #### Properties
 * **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule.
 * **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule): The monthly retention schedule.
-* **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): Long-term retention policy.
+* **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule): Weekly retention schedule.
 * **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule): Yearly retention schedule.
 
 ### SimpleRetentionPolicy
 #### Properties
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): Simple policy retention.
+* **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 
 ## LongTermRetentionPolicy
 ### Properties
 * **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule.
 * **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule): The monthly retention schedule.
-* **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): Long-term retention policy.
+* **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule): Weekly retention schedule.
 * **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule): Yearly retention schedule.
 
@@ -172,7 +163,7 @@
 
 ## RetentionDuration
 ### Properties
-* **count**: int: Count of the duration types. Retention duration is determined by the combining the Count times and durationType.
+* **count**: int: Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
    For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.
 * **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': The retention duration type of the retention policy.
 
@@ -209,25 +200,26 @@
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of the months of year for the yearly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format for the yearly retention policy.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times for the retention policy.
 
 ## SimpleRetentionPolicy
 ### Properties
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): Simple policy retention.
+* **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
+
 ### Base Properties
 ### LongTermSchedulePolicy
 #### Properties
-* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): Long-term policy schedule.
+* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 ### SimpleSchedulePolicy
 #### Properties
-* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): Simple policy schedule.
+* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
 * **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
 * **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
@@ -236,28 +228,28 @@
 
 ## LongTermSchedulePolicy
 ### Properties
-* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): Long-term policy schedule.
+* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
 ## SimpleSchedulePolicy
 ### Properties
-* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): Simple policy schedule.
+* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
 * **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
 * **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
 * **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
 
-## AzureSql
+## AzureSqlProtectionPolicy
 ### Properties
-* **backupManagementType**: 'AzureSql' (Required):  The Azure SQL workload-specific backup policy.
+* **backupManagementType**: 'AzureSql' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
 
-## MAB
+## MabProtectionPolicy
 ### Properties
-* **backupManagementType**: 'MAB' (Required): The backup policy for the file or folder container.
+* **backupManagementType**: 'MAB' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -44,24 +44,24 @@
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties) (ReadOnly): describes ServerVulnerabilityAssessment properties.
 * **type**: 'Microsoft.Security/serverVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' | 'VerifiedPartner' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition.
-* **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
+* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' | 'VerifiedPartner' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]: Array of Categories
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
-* **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment.
+* **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment
 * **partnerData**: [SecurityAssessmentMetadataPartnerData](#securityassessmentmetadatapartnerdata): Describes the partner that created the assessment
 * **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
-* **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment.
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]
-* **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment.
+* **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]: Array of Threats
+* **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment
 
 ## SecurityAssessmentMetadataPartnerData
 ### Properties
@@ -71,15 +71,15 @@
 
 ## SecurityAssessmentProperties
 ### Properties
-* **additionalData**: [Dictionary<string,String>](#dictionarystringstring): Additional data regarding the assessment
+* **additionalData**: [SecurityAssessmentPropertiesAdditionalData](#securityassessmentpropertiesadditionaldata): Additional data regarding the assessment
 * **displayName**: string (ReadOnly): User friendly display name of the assessment
-* **links**: [AssessmentLinks](#assessmentlinks): Links relevant to the assessment
+* **links**: [AssessmentLinks](#assessmentlinks) (ReadOnly): Links relevant to the assessment
 * **metadata**: [SecurityAssessmentMetadataProperties](#securityassessmentmetadataproperties): Describes properties of an assessment metadata.
 * **partnersData**: [SecurityAssessmentPartnerData](#securityassessmentpartnerdata): Data regarding 3rd party partner integration
 * **resourceDetails**: [ResourceDetails](#resourcedetails) (Required): Details of the resource that was assessed
 * **status**: [AssessmentStatus](#assessmentstatus) (Required): The result of the assessment
 
-## Dictionary<string,String>
+## SecurityAssessmentPropertiesAdditionalData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -95,67 +95,64 @@
 
 ## ResourceDetails
 * **Discriminator**: source
+
 ### Base Properties
-### Azure
+### AzureResourceDetails
 #### Properties
 * **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): Details of the Azure resource that was assessed
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
 
-### OnPremise
+### OnPremiseSqlResourceDetails
 #### Properties
-* **machineName**: string (Required): The name of the machine
-* **source**: 'OnPremise' (Required): Details of the On Premise resource that was assessed
-* **sourceComputerId**: string (Required): The oms agent Id installed on the machine
-* **vmuuid**: string (Required): The unique Id of the machine
-* **workspaceId**: string (Required): Azure resource Id of the workspace the machine is attached to
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
 
 
-## Azure
+## AzureResourceDetails
 ### Properties
 * **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): Details of the Azure resource that was assessed
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
 
-## OnPremise
+## OnPremiseSqlResourceDetails
 ### Properties
-* **machineName**: string (Required): The name of the machine
-* **source**: 'OnPremise' (Required): Details of the On Premise resource that was assessed
-* **sourceComputerId**: string (Required): The oms agent Id installed on the machine
-* **vmuuid**: string (Required): The unique Id of the machine
-* **workspaceId**: string (Required): Azure resource Id of the workspace the machine is attached to
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
 
 ## AssessmentStatus
 ### Properties
 * **cause**: string: Programmatic code for the cause of the assessment status
-* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required): Programmatic code for the status of the assessment.
+* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required): Programmatic code for the status of the assessment
 * **description**: string: Human readable description of the assessment status
 
 ## AdaptiveApplicationControlGroupData
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly)
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None'
-* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly)
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly): The configuration status of the machines group or machine or rule
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None': The application control policy enforcement/protection mode of the machine group
+* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly): Array of AdaptiveApplicationControlIssueSummary
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]: Array of PathRecommendation
 * **protectionMode**: [ProtectionMode](#protectionmode): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly)
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly)
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
+* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly): The initial recommendation status of the machine group or machine
+* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly): The source type of the machine group
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]: Array of VmRecommendation
 
 ## AdaptiveApplicationControlIssueSummary
 ### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked'
+* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked': An alert that machines within a group can have
 * **numberOfVms**: int: The number of machines in the group that have this alert
 
 ## PathRecommendation
 ### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove'
+* **action**: 'Add' | 'Recommended' | 'Remove': The recommendation action of the machine or rule
 * **common**: bool: Whether the application is commonly run on the machine
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured'
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown'
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured': The configuration status of the machines group or machine or rule
+* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown': The type of the file (for Linux files - Executable is used)
 * **path**: string: The full path of the file, or an identifier of the application
 * **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature'
-* **usernames**: [UserRecommendation](#userrecommendation)[]
-* **userSids**: string[]
+* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature': The type of the rule to be allowed
+* **usernames**: [UserRecommendation](#userrecommendation)[]: Array of UserRecommendation
+* **userSids**: string[]: Array of PathRecommendationUserSidsItem
 
 ## PublisherInfo
 ### Properties
@@ -166,27 +163,27 @@
 
 ## UserRecommendation
 ### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove'
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove': The recommendation action of the machine or rule
 * **username**: string: Represents a user that is recommended to be allowed for a certain rule
 
 ## ProtectionMode
 ### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None'
-* **executable**: 'Audit' | 'Enforce' | 'None'
-* **msi**: 'Audit' | 'Enforce' | 'None'
-* **script**: 'Audit' | 'Enforce' | 'None'
+* **exe**: 'Audit' | 'Enforce' | 'None': The application control policy enforcement/protection mode of the machine group
+* **executable**: 'Audit' | 'Enforce' | 'None': The application control policy enforcement/protection mode of the machine group
+* **msi**: 'Audit' | 'Enforce' | 'None': The application control policy enforcement/protection mode of the machine group
+* **script**: 'Audit' | 'Enforce' | 'None': The application control policy enforcement/protection mode of the machine group
 
 ## VmRecommendation
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured'
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown'
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove'
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured': The configuration status of the machines group or machine or rule
+* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown': The machine supportability of Enforce feature
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove': The recommendation action of the machine or rule
 * **resourceId**: string: The full resource id of the machine
 
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the Just-in-Time policy.
-* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]: Array of JitNetworkAccessRequest
 * **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required): Configurations for Microsoft.Compute/virtualMachines resource type.
 
 ## JitNetworkAccessRequest
@@ -194,7 +191,7 @@
 * **justification**: string: The justification for making the initiate request
 * **requestor**: string (Required): The identity of the person who made the request
 * **startTimeUtc**: string (Required): The start time of the request in UTC
-* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required): Array of JitNetworkAccessRequestVirtualMachine
 
 ## JitNetworkAccessRequestVirtualMachine
 ### Properties
@@ -208,8 +205,8 @@
 * **endTimeUtc**: string (Required): The date & time at which the request ends in UTC
 * **mappedPort**: int: The port which is mapped to this port's `number` in the Azure Firewall, if applicable
 * **number**: int (Required)
-* **status**: 'Initiated' | 'Revoked' (Required): The status of the port.
-* **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value.
+* **status**: 'Initiated' | 'Revoked' (Required): The status of the port
+* **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value
 
 ## JitNetworkAccessPolicyVirtualMachine
 ### Properties
@@ -227,5 +224,5 @@
 
 ## ServerVulnerabilityAssessmentProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Deprovisioning' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioningState of the vulnerability assessment capability on the VM.
+* **provisioningState**: 'Canceled' | 'Deprovisioning' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The provisioningState of the vulnerability assessment capability on the VM
 

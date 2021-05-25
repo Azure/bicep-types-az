@@ -6,15 +6,15 @@
 * **apiVersion**: '2020-03-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:12_identity](#schemas12identity): Setting indicating whether the service has a managed identity associated with it.
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **identity**: [ResourceIdentity](#resourceidentity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required): The kind of the service.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:12_identity
+## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource.
@@ -56,7 +56,7 @@
 ### Properties
 * **storageAccountName**: string: The name of the default export storage account.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Gets or sets Namespace data center location.
+* **location**: string (Required): Gets or sets datacenter location of the Namespace.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties) (Required): Namespace properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets Namespace tags.
+* **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags): Gets or sets tags of the Namespace.
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01
@@ -26,10 +26,10 @@
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Gets or sets NotificationHub data center location.
+* **location**: string (Required): Gets or sets datacenter location of the NotificationHub.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotificationHubProperties](#notificationhubproperties) (Required): NotificationHub properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets NotificationHub tags.
+* **tags**: [NotificationHubCreateOrUpdateParametersTags](#notificationhubcreateorupdateparameterstags): Gets or sets tags of the NotificationHub.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01
@@ -56,7 +56,7 @@
 * **status**: string: Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
 * **subscriptionId**: string: The Id of the Azure subscription associated with the namespace.
 
-## Dictionary<string,String>
+## NamespaceCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -145,7 +145,7 @@
 * **secretKey**: string: Gets or sets the secret key.
 * **windowsLiveEndpoint**: string: Gets or sets the Windows Live endpoint.
 
-## Dictionary<string,String>
+## NotificationHubCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

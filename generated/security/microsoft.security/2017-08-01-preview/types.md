@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [AdvancedThreatProtectionProperties](#advancedthreatprotectionproperties): The Advanced Threat Protection settings.
 * **type**: 'Microsoft.Security/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,7 +44,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IoTSecuritySolutionProperties](#iotsecuritysolutionproperties): Security Solution setting data
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [TagsResourceTags](#tagsresourcetags): Resource tags
 * **type**: 'Microsoft.Security/iotSecuritySolutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/pricings@2017-08-01-preview
@@ -68,6 +68,7 @@
 ## Resource Microsoft.Security/settings@2017-08-01-preview
 * **Valid Scope(s)**: Subscription
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,7 +76,7 @@
 * **type**: 'Microsoft.Security/settings' (ReadOnly, DeployTimeConstant): The resource type
 ### DataExportSetting
 #### Properties
-* **kind**: 'DataExportSetting' (Required): Represents a data export setting
+* **kind**: 'DataExportSetting' (Required): the kind of the settings string (DataExportSetting)
 * **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
 
 
@@ -94,7 +95,7 @@
 
 ## AutoProvisioningSettingProperties
 ### Properties
-* **autoProvision**: 'Off' | 'On' (Required): Describes what kind of security agent provisioning action to take.
+* **autoProvision**: 'Off' | 'On' (Required): Describes what kind of security agent provisioning action to take
 
 ## DeviceSecurityGroupProperties
 ### Properties
@@ -104,12 +105,38 @@
 * **timeWindowRules**: [TimeWindowCustomAlertRule](#timewindowcustomalertrule)[]: The list of custom alert time-window rules.
 
 ## AllowlistCustomAlertRule
-### Properties
+* **Discriminator**: ruleType
+
+### Base Properties
 * **allowlistValues**: string[] (Required): The values to allow. The format of the values depends on the rule type.
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
+### ConnectionToIpNotAllowed
+#### Properties
+* **ruleType**: 'ConnectionToIpNotAllowed' (Required): The type of the custom alert rule.
+
+### LocalUserNotAllowed
+#### Properties
+* **ruleType**: 'LocalUserNotAllowed' (Required): The type of the custom alert rule.
+
+### ProcessNotAllowed
+#### Properties
+* **ruleType**: 'ProcessNotAllowed' (Required): The type of the custom alert rule.
+
+
+## ConnectionToIpNotAllowed
+### Properties
+* **ruleType**: 'ConnectionToIpNotAllowed' (Required): The type of the custom alert rule.
+
+## LocalUserNotAllowed
+### Properties
+* **ruleType**: 'LocalUserNotAllowed' (Required): The type of the custom alert rule.
+
+## ProcessNotAllowed
+### Properties
+* **ruleType**: 'ProcessNotAllowed' (Required): The type of the custom alert rule.
 
 ## DenylistCustomAlertRule
 ### Properties
@@ -117,33 +144,230 @@
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
+* **ruleType**: string (Required): The type of the custom alert rule.
 * **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
 
 ## ThresholdCustomAlertRule
-### Properties
+* **Discriminator**: ruleType
+
+### Base Properties
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **maxThreshold**: int (Required): The maximum threshold.
 * **minThreshold**: int (Required): The minimum threshold.
+### ActiveConnectionsNotInAllowedRange
+#### Properties
+* **ruleType**: 'ActiveConnectionsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### AmqpC2DMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'AmqpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### AmqpC2DRejectedMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'AmqpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### AmqpD2CMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'AmqpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### DirectMethodInvokesNotInAllowedRange
+#### Properties
+* **ruleType**: 'DirectMethodInvokesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### FailedLocalLoginsNotInAllowedRange
+#### Properties
+* **ruleType**: 'FailedLocalLoginsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### FileUploadsNotInAllowedRange
+#### Properties
+* **ruleType**: 'FileUploadsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### HttpC2DMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'HttpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### HttpC2DRejectedMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'HttpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### HttpD2CMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'HttpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### MqttC2DMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'MqttC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### MqttC2DRejectedMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'MqttC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### MqttD2CMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'MqttD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### QueuePurgesNotInAllowedRange
+#### Properties
+* **ruleType**: 'QueuePurgesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### TwinUpdatesNotInAllowedRange
+#### Properties
+* **ruleType**: 'TwinUpdatesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### UnauthorizedOperationsNotInAllowedRange
+#### Properties
+* **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+
+## ActiveConnectionsNotInAllowedRange
+### Properties
+* **ruleType**: 'ActiveConnectionsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## AmqpC2DMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'AmqpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## AmqpC2DRejectedMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'AmqpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## AmqpD2CMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'AmqpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## DirectMethodInvokesNotInAllowedRange
+### Properties
+* **ruleType**: 'DirectMethodInvokesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## FailedLocalLoginsNotInAllowedRange
+### Properties
+* **ruleType**: 'FailedLocalLoginsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## FileUploadsNotInAllowedRange
+### Properties
+* **ruleType**: 'FileUploadsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## HttpC2DMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'HttpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## HttpC2DRejectedMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'HttpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## HttpD2CMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'HttpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## MqttC2DMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'MqttC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## MqttC2DRejectedMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'MqttC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## MqttD2CMessagesNotInAllowedRange
+### Properties
+* **ruleType**: 'MqttD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## QueuePurgesNotInAllowedRange
+### Properties
+* **ruleType**: 'QueuePurgesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## TwinUpdatesNotInAllowedRange
+### Properties
+* **ruleType**: 'TwinUpdatesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+## UnauthorizedOperationsNotInAllowedRange
+### Properties
+* **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
 
 ## TimeWindowCustomAlertRule
-### Properties
+* **Discriminator**: ruleType
+
+### Base Properties
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **maxThreshold**: int (Required): The maximum threshold.
 * **minThreshold**: int (Required): The minimum threshold.
 * **timeWindowSize**: string (Required): The time window size in iso8601 format.
+### ActiveConnectionsNotInAllowedRange
+#### Properties
+* **ruleType**: 'ActiveConnectionsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### AmqpC2DMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'AmqpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### AmqpC2DRejectedMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'AmqpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### AmqpD2CMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'AmqpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### DirectMethodInvokesNotInAllowedRange
+#### Properties
+* **ruleType**: 'DirectMethodInvokesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### FailedLocalLoginsNotInAllowedRange
+#### Properties
+* **ruleType**: 'FailedLocalLoginsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### FileUploadsNotInAllowedRange
+#### Properties
+* **ruleType**: 'FileUploadsNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### HttpC2DMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'HttpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### HttpC2DRejectedMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'HttpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### HttpD2CMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'HttpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### MqttC2DMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'MqttC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### MqttC2DRejectedMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'MqttC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### MqttD2CMessagesNotInAllowedRange
+#### Properties
+* **ruleType**: 'MqttD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### QueuePurgesNotInAllowedRange
+#### Properties
+* **ruleType**: 'QueuePurgesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### TwinUpdatesNotInAllowedRange
+#### Properties
+* **ruleType**: 'TwinUpdatesNotInAllowedRange' (Required): The type of the custom alert rule.
+
+### UnauthorizedOperationsNotInAllowedRange
+#### Properties
+* **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
+
 
 ## InformationProtectionPolicyProperties
 ### Properties
-* **informationTypes**: [Dictionary<string,InformationType>](#dictionarystringinformationtype): The sensitivity information types.
-* **labels**: [Dictionary<string,SensitivityLabel>](#dictionarystringsensitivitylabel): Dictionary of sensitivity labels.
+* **informationTypes**: [InformationProtectionPolicyPropertiesInformationTypes](#informationprotectionpolicypropertiesinformationtypes): The sensitivity information types.
+* **labels**: [InformationProtectionPolicyPropertiesLabels](#informationprotectionpolicypropertieslabels): Dictionary of sensitivity labels.
 * **lastModifiedUtc**: string (ReadOnly): Describes the last UTC time the policy was modified.
 * **version**: string (ReadOnly): Describes the version of the policy.
 
-## Dictionary<string,InformationType>
+## InformationProtectionPolicyPropertiesInformationTypes
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InformationType](#informationtype)
@@ -165,7 +389,7 @@
 * **excluded**: bool: Indicates whether the keyword is excluded or not.
 * **pattern**: string: The keyword pattern.
 
-## Dictionary<string,SensitivityLabel>
+## InformationProtectionPolicyPropertiesLabels
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [SensitivityLabel](#sensitivitylabel)
@@ -186,40 +410,40 @@
 * **export**: 'RawEvents'[]: List of additional export to workspace data options
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
-* **status**: 'Disabled' | 'Enabled': Security solution status.
+* **status**: 'Disabled' | 'Enabled': Security solution status
 * **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the solution's user defined resources.
 * **workspace**: string (Required): Workspace resource ID
 
 ## RecommendationConfigurationProperties
 ### Properties
 * **name**: string (ReadOnly)
-* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The recommendation type.
-* **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. The recommendation is not generated when the status is disabled.
+* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The recommendation type.
+* **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. The recommendation is not generated when the status is disabled
 
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
 * **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
 
-## Dictionary<string,String>
+## TagsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## PricingProperties
 ### Properties
-* **pricingTier**: 'Free' | 'Standard' (Required): Pricing tier type.
+* **pricingTier**: 'Free' | 'Standard' (Required): Pricing tier type
 
 ## SecurityContactProperties
 ### Properties
-* **alertNotifications**: 'Off' | 'On' (Required): Whether to send security alerts notifications to the security contact.
-* **alertsToAdmins**: 'Off' | 'On' (Required): Whether to send security alerts notifications to subscription admins.
+* **alertNotifications**: 'Off' | 'On' (Required): Whether to send security alerts notifications to the security contact
+* **alertsToAdmins**: 'Off' | 'On' (Required): Whether to send security alerts notifications to subscription admins
 * **email**: string (Required): The email of this security contact
 * **phone**: string: The phone number of this security contact
 
 ## DataExportSetting
 ### Properties
-* **kind**: 'DataExportSetting' (Required): Represents a data export setting
+* **kind**: 'DataExportSetting' (Required): the kind of the settings string (DataExportSetting)
 * **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
 
 ## DataExportSettingProperties

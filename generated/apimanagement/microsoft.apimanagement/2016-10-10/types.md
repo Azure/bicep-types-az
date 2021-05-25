@@ -10,21 +10,24 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required): Properties of an API Management service resource description.
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): API Management service resource SKU properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): API Authentication Settings.
-* **description**: string: Description of the API. May include HTML formatting tags.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
+* **content**: any (ReadOnly): Response content bytes.
+* **description**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **path**: string (Required): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-* **protocols**: 'Http' | 'Https'[] (Required): Describes on which protocols the operations in this API can be invoked.
-* **serviceUrl**: string (Required): Absolute URL of the backend service implementing this API.
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract): Subscription key parameter names details.
+* **path**: string (Required, WriteOnly)
+* **protocols**: 'Http' | 'Https'[] (Required, WriteOnly)
+* **requestId**: string (ReadOnly)
+* **serviceUrl**: string (Required, WriteOnly)
+* **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2016-10-10
@@ -70,14 +73,16 @@
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **certificate**: string[]: List of Client Certificate Thumbprint.
 * **description**: string: Backend Description.
-* **header**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): Header Parameter description.
+* **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader): Header Parameter description.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **parameter**: string (Required): Authentication Parameter value.
 * **password**: string: Password to connect to the WebProxy Server
 * **properties**: [BackendProperties](#backendproperties): Properties specific to a Backend.
 * **protocol**: 'http' | 'soap' (Required): Backend communication protocol.
-* **query**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): Query Parameter description.
+* **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery): Query Parameter description.
 * **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+* **scheme**: string (Required): Authentication Scheme name.
 * **title**: string: Backend Title.
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant): The resource type
 * **url**: string (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
@@ -87,11 +92,11 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **data**: string (Required, WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
+* **data**: string (Required, WriteOnly)
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **password**: string (Required, WriteOnly): Password for the Certificate
+* **password**: string (Required, WriteOnly)
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
 * **thumbprint**: string (ReadOnly): Thumbprint of the certificate.
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant): The resource type
@@ -101,8 +106,8 @@
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-* **description**: string: Group description.
-* **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
+* **description**: string: Group description. Can contain HTML formatting tags.
+* **externalId**: string: For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
@@ -130,7 +135,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **credentials**: [Dictionary<string,String>](#dictionarystringstring) (Required): The name and SendRule connection string of the event hub.
+* **credentials**: [LoggerCreateParametersCredentials](#loggercreateparameterscredentials) (Required): The name and SendRule connection string of the event hub.
 * **description**: string: Logger description.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
@@ -200,14 +205,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
-* **productId**: string (Required): Product (product id path) for which subscription is being created in form /products/{productId}
-* **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
+* **primaryKey**: string: Subscription primary key.
+* **productId**: string (Required): The product resource identifier of the subscribed product. The value is a valid relative URL in the format of /products/{productId} where {productId} is a product identifier.
+* **secondaryKey**: string: Subscription secondary key.
 * **startDate**: string (ReadOnly): Subscription activation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+* **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended': Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
-* **userId**: string (Required): User (user id path) for whom subscription is being created in form /users/{uid}
+* **userId**: string (Required): The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{uid} where {uid} is a user identifier.
 
 ## Resource Microsoft.ApiManagement/service/tenant@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
@@ -221,16 +226,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **email**: string (Required): Email address. Must not be empty and must be unique within the service instance.
+* **email**: string (Required): Email address.
 * **firstName**: string (Required): First name.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
 * **lastName**: string (Required): Last name.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **note**: string: Optional note about a user set by the administrator.
-* **password**: string (Required, WriteOnly): User Password.
+* **note**: string: Administrator's note about given user.
+* **password**: string (Required, WriteOnly)
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **state**: 'Active' | 'Blocked': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+* **state**: 'Active' | 'Blocked': User state.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApiManagementServiceProperties
@@ -238,7 +243,7 @@
 * **additionalLocations**: [AdditionalRegion](#additionalregion)[]: Additional datacenter locations of the API Management service.
 * **addresserEmail**: string: Addresser email.
 * **createdAtUtc**: string (ReadOnly): Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **customProperties**: [Dictionary<string,String>](#dictionarystringstring): Custom properties of the API Management service, like disabling TLS 1.0.
+* **customProperties**: [ApiManagementServicePropertiesCustomProperties](#apimanagementservicepropertiescustomproperties): Custom properties of the API Management service, like disabling TLS 1.0.
 * **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]: Custom hostname configuration of the API Management service.
 * **managementApiUrl**: string (ReadOnly): Management API endpoint URL of the API Management service.
 * **portalUrl**: string (ReadOnly): Publisher portal endpoint Url of the API Management service.
@@ -250,7 +255,7 @@
 * **staticIPs**: string[] (ReadOnly): Static IP addresses of the API Management service virtual machines. Available only for Standard and Premium SKU.
 * **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
 * **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Configuration of a virtual network to which API Management service is deployed.
-* **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
+* **vpnType**: 'External' | 'Internal' | 'None': The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that the API Management service deployment is set up inside a Virtual Network having an Intranet Facing Endpoint only. When vpnConfiguration is specified, vpnType must be specified.
 
 ## AdditionalRegion
 ### Properties
@@ -267,7 +272,7 @@
 * **subnetResourceId**: string: The full resource ID of a subnet in a virtual network to deploy the API Management service in.
 * **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
 
-## Dictionary<string,String>
+## ApiManagementServicePropertiesCustomProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -287,26 +292,26 @@
 ## ApiManagementServiceSkuProperties
 ### Properties
 * **capacity**: int: Capacity of the SKU (number of deployed units of the SKU). The default value is 1.
-* **name**: 'Developer' | 'Premium' | 'Standard' (Required): Name of the Sku.
+* **name**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract): API OAuth2 Authentication settings details.
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
-* **authorizationServerId**: string: OAuth authorization server identifier.
-* **scope**: string: operations scope.
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
-* **header**: string: Subscription key header name.
-* **query**: string: Subscription key query string parameter name.
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
 
 ## RequestContract
 ### Properties
@@ -340,7 +345,7 @@
 * **name**: string (Required): body parameter name.
 * **value**: string (Required): body parameter value.
 
-## Dictionary<string,IList<String>>
+## BackendCredentialsContractHeader
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
@@ -350,12 +355,12 @@
 * **skipCertificateChainValidation**: bool: Flag indicating whether SSL certificate chain validation should be skipped when using self-signed certificates for this backend host.
 * **skipCertificateNameValidation**: bool: Flag indicating whether SSL certificate name validation should be skipped when using self-signed certificates for this backend host.
 
-## Dictionary<string,IList<String>>
+## BackendCredentialsContractQuery
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
-## Dictionary<string,String>
+## LoggerCreateParametersCredentials
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

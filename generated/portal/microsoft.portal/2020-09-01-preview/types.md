@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DashboardProperties](#dashboardproperties): The shared dashboard properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [DashboardTags](#dashboardtags): Resource tags
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Portal/tenantConfigurations@2020-09-01-preview
@@ -16,22 +16,22 @@
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): Tenant configuration properties.
 * **type**: 'Microsoft.Portal/tenantConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DashboardProperties
 ### Properties
 * **lenses**: [DashboardLens](#dashboardlens)[]: The dashboard lenses.
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard metadata.
+* **metadata**: [DashboardPropertiesMetadata](#dashboardpropertiesmetadata): The dashboard metadata.
 
 ## DashboardLens
 ### Properties
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard len's metadata.
+* **metadata**: [DashboardLensMetadata](#dashboardlensmetadata): The dashboard len's metadata.
 * **order**: int (Required): The lens order.
 * **parts**: [DashboardParts](#dashboardparts)[] (Required): The dashboard parts.
 
-## Dictionary<string,Object>
+## DashboardLensMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -39,33 +39,34 @@
 ## DashboardParts
 ### Properties
 * **metadata**: [DashboardPartMetadata](#dashboardpartmetadata): A dashboard part metadata.
-* **position**: [schemas:1_position](#schemas1position) (Required): The dashboard's part position.
+* **position**: [DashboardPartsPosition](#dashboardpartsposition) (Required): The dashboard's part position.
 
 ## DashboardPartMetadata
 * **Discriminator**: type
+
 ### Base Properties
-### Extension/HubsExtension/PartType/MarkdownPart
+### MarkdownPartMetadata
 #### Properties
 * **inputs**: any[]: Input to dashboard part.
-* **settings**: [schemas:3_settings](#schemas3settings): Markdown part settings.
-* **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): Markdown part metadata.
+* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings): Markdown part settings.
+* **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): The type of dashboard part.
 
 
-## Extension/HubsExtension/PartType/MarkdownPart
+## MarkdownPartMetadata
 ### Properties
 * **inputs**: any[]: Input to dashboard part.
-* **settings**: [schemas:3_settings](#schemas3settings): Markdown part settings.
-* **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): Markdown part metadata.
+* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings): Markdown part settings.
+* **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): The type of dashboard part.
 
-## schemas:3_settings
+## MarkdownPartMetadataSettings
 ### Properties
-* **content**: [schemas:3_settings_content](#schemas3settingscontent): The content of markdown part.
+* **content**: [MarkdownPartMetadataSettingsContent](#markdownpartmetadatasettingscontent): The content of markdown part.
 
-## schemas:3_settings_content
+## MarkdownPartMetadataSettingsContent
 ### Properties
-* **settings**: [schemas:3_settings_content_settings](#schemas3settingscontentsettings): The setting of the content of markdown part.
+* **settings**: [MarkdownPartMetadataSettingsContentSettings](#markdownpartmetadatasettingscontentsettings): The setting of the content of markdown part.
 
-## schemas:3_settings_content_settings
+## MarkdownPartMetadataSettingsContentSettings
 ### Properties
 * **content**: string: The content of the markdown part.
 * **markdownSource**: int: The source of the content of the markdown part.
@@ -73,25 +74,25 @@
 * **subtitle**: string: The subtitle of the markdown part.
 * **title**: string: The title of the markdown part.
 
-## schemas:1_position
+## DashboardPartsPosition
 ### Properties
 * **colSpan**: int (Required): The dashboard's part column span.
-* **metadata**: [Dictionary<string,Object>](#dictionarystringobject): The dashboard part's metadata.
+* **metadata**: [DashboardPartsPositionMetadata](#dashboardpartspositionmetadata): The dashboard part's metadata.
 * **rowSpan**: int (Required): The dashboard's part row span.
 * **x**: int (Required): The dashboard's part x coordinate.
 * **y**: int (Required): The dashboard's part y coordinate.
 
-## Dictionary<string,Object>
+## DashboardPartsPositionMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,Object>
+## DashboardPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## Dictionary<string,String>
+## DashboardTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

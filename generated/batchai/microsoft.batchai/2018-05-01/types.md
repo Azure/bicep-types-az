@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The region in which to create the Workspace.
+* **location**: string (Required): The location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties) (ReadOnly): Workspace specific properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The user specified tags associated with the Workspace.
+* **tags**: [WorkspaceCreateParametersTags](#workspacecreateparameterstags): The tags of the resource
 * **type**: 'Microsoft.BatchAI/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BatchAI/workspaces/clusters@2018-05-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterBaseProperties](#clusterbaseproperties): The properties of a Cluster.
+* **properties**: [ClusterBaseProperties](#clusterbaseproperties): Cluster properties.
 * **type**: 'Microsoft.BatchAI/workspaces/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BatchAI/workspaces/experiments@2018-05-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2018-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobBaseProperties](#jobbaseproperties): The properties of a Batch AI Job.
+* **properties**: [JobBaseProperties](#jobbaseproperties): Job properties.
 * **type**: 'Microsoft.BatchAI/workspaces/experiments/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BatchAI/workspaces/fileServers@2018-05-01
@@ -50,10 +50,10 @@
 ## WorkspaceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Time when the Workspace was created.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Workspace.
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the workspace entered its current provisioning state.
 
-## Dictionary<string,String>
+## WorkspaceCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -74,7 +74,7 @@
 * **userAccountSettings**: [UserAccountSettings](#useraccountsettings) (Required): Settings for user account that gets created on each on the nodes of a cluster.
 * **virtualMachineConfiguration**: [VirtualMachineConfiguration](#virtualmachineconfiguration): VM configuration.
 * **vmPriority**: 'dedicated' | 'lowpriority': VM priority. Allowed values are: dedicated (default) and lowpriority.
-* **vmSize**: string (Required): The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size. For information about available VM sizes for clusters using images from the Virtual Machines Marketplace see Sizes for Virtual Machines (Linux). Batch AI service supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+* **vmSize**: string (Required): The size of the virtual machines in the cluster. All nodes in a cluster have the same VM size.
 
 ## BatchAIError
 ### Properties
@@ -193,7 +193,7 @@
 
 ## ManualScaleSettings
 ### Properties
-* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'waitforjobcompletion': An action to be performed when the cluster size is decreasing. The default value is requeue.
+* **nodeDeallocationOption**: 'requeue' | 'terminate' | 'waitforjobcompletion': Actions which should be performed when compute nodes are removed from the cluster. Possible values are: requeue (default) - Terminate running jobs and requeue them so the jobs will run again. Remove compute nodes as soon as jobs have been terminated; terminate - Terminate running jobs. The jobs will not run again. Remove compute nodes as soon as jobs have been terminated. waitforjobcompletion - Allow currently running jobs to complete. Schedule no new jobs while waiting. Remove compute nodes when all jobs have completed.
 * **targetNodeCount**: int (Required): The desired number of compute nodes in the Cluster. Default is 0.
 
 ## UserAccountSettings
@@ -217,7 +217,7 @@
 ## ExperimentProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Time when the Experiment was created.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the experiment.
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the experiment entered its current provisioning state.
 
 ## JobBaseProperties
@@ -227,13 +227,13 @@
 * **chainerSettings**: [ChainerSettings](#chainersettings): Chainer job settings.
 * **cluster**: [ResourceId](#resourceid) (Required): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **cntkSettings**: [CNTKsettings](#cntksettings): CNTK (aka Microsoft Cognitive Toolkit) job settings.
-* **constraints**: [schemas:31_constraints](#schemas31constraints): Constraints associated with the Job.
+* **constraints**: [JobBasePropertiesConstraints](#jobbasepropertiesconstraints): Constraints associated with the Job.
 * **containerSettings**: [ContainerSettings](#containersettings): Docker container settings.
 * **creationTime**: string (ReadOnly): The creation time of the job.
 * **customMpiSettings**: [CustomMpiSettings](#custommpisettings): Custom MPI job settings.
 * **customToolkitSettings**: [CustomToolkitSettings](#customtoolkitsettings): Custom tool kit job settings.
-* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: A list of user defined environment variables which will be setup for the job.
-* **executionInfo**: [schemas:33_executionInfo](#schemas33executioninfo) (ReadOnly): Information about the execution of a job.
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: A collection of user defined environment variables to be setup for the job.
+* **executionInfo**: [JobPropertiesExecutionInfo](#jobpropertiesexecutioninfo) (ReadOnly): Information about the execution of a job.
 * **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly): The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.
 * **executionStateTransitionTime**: string (ReadOnly): The time at which the job entered its current execution state.
 * **horovodSettings**: [HorovodSettings](#horovodsettings): Specifies the settings for Horovod job.
@@ -241,16 +241,16 @@
 * **jobOutputDirectoryPathSegment**: string (ReadOnly): A segment of job's output directories path created by Batch AI. Batch AI creates job's output directories under an unique path to avoid conflicts between jobs. This value contains a path segment generated by Batch AI to make the path unique and can be used to find the output directory on the node or mounted filesystem.
 * **jobPreparation**: [JobPreparation](#jobpreparation): Job preparation settings.
 * **mountVolumes**: [MountVolumes](#mountvolumes): Details of volumes to mount on the cluster.
-* **nodeCount**: int (Required): Number of compute nodes to run the job on. The job will be gang scheduled on that many compute nodes.
+* **nodeCount**: int (Required): The job will be gang scheduled on that many compute nodes
 * **outputDirectories**: [OutputDirectory](#outputdirectory)[]: A list of output directories for the job.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Batch AI job.
+* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Provisioning state of the cluster. Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the job entered its current provisioning state.
 * **pyTorchSettings**: [PyTorchSettings](#pytorchsettings): pyTorch job settings.
 * **schedulingPriority**: 'high' | 'low' | 'normal': Scheduling priority associated with the job. Possible values: low, normal, high.
-* **secrets**: [EnvironmentVariableWithSecretValue](#environmentvariablewithsecretvalue)[]: A list of user defined environment variables with secret values which will be setup for the job. Server will never report values of these variables back.
-* **stdOutErrPathPrefix**: string (Required): The path where the Batch AI service will store stdout, stderror and execution log of the job.
+* **secrets**: [EnvironmentVariableWithSecretValue](#environmentvariablewithsecretvalue)[]: A collection of user defined environment variables with secret values to be setup for the job. Server will never report values of these variables back.
+* **stdOutErrPathPrefix**: string (Required): The path where the Batch AI service stores stdout, stderror and execution log of the job.
 * **tensorFlowSettings**: [TensorFlowSettings](#tensorflowsettings): TensorFlow job settings.
-* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'custommpi' | 'horovod' | 'tensorflow' (ReadOnly): Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod.
+* **toolType**: 'caffe' | 'caffe2' | 'chainer' | 'cntk' | 'custom' | 'custommpi' | 'horovod' | 'tensorflow' (ReadOnly): The toolkit type of the job.
 
 ## Caffe2Settings
 ### Properties
@@ -282,7 +282,7 @@
 * **pythonInterpreterPath**: string: The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.
 * **pythonScriptFilePath**: string: Python script to execute. This property can be specified only if the languageType is 'Python'.
 
-## schemas:31_constraints
+## JobBasePropertiesConstraints
 ### Properties
 * **maxWallClockTime**: string: Max time the job can run. Default value: 1 week.
 
@@ -312,7 +312,7 @@
 ### Properties
 * **commandLine**: string: The command line to execute on the master node.
 
-## schemas:33_executionInfo
+## JobPropertiesExecutionInfo
 ### Properties
 * **endTime**: string (ReadOnly): The time at which the job completed. This property is only returned if the job is in completed state.
 * **errors**: [BatchAIError](#batchaierror)[] (ReadOnly): A collection of errors encountered by the service during job execution.
@@ -361,11 +361,7 @@
 
 ## FileServerBaseProperties
 ### Properties
-* **creationTime**: string (ReadOnly): Time when the FileServer was created.
 * **dataDisks**: [DataDisks](#datadisks) (Required): Data disks settings.
-* **mountSettings**: [MountSettings](#mountsettings) (ReadOnly): File Server mount Information.
-* **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.
-* **provisioningStateTransitionTime**: string (ReadOnly): Time when the provisioning state was changed.
 * **sshConfiguration**: [SshConfiguration](#sshconfiguration) (Required): SSH configuration.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **vmSize**: string (Required): The size of the virtual machine for the File Server. For information about available VM sizes from the Virtual Machines Marketplace, see Sizes for Virtual Machines (Linux).
@@ -376,12 +372,6 @@
 * **diskCount**: int (Required): Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.
 * **diskSizeInGB**: int (Required): Disk size in GB for the blank data disks.
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required): Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.
-
-## MountSettings
-### Properties
-* **fileServerInternalIP**: string (ReadOnly): Internal IP address of the File Server which can be used to access the File Server from within the subnet.
-* **fileServerPublicIP**: string (ReadOnly): Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.
-* **mountPoint**: string (ReadOnly): Path where the data disks are mounted on the File Server.
 
 ## SshConfiguration
 ### Properties

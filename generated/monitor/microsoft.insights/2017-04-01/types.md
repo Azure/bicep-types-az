@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionGroup](#actiongroup): An Azure action group.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/activityLogAlerts@2017-04-01
@@ -19,7 +19,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActivityLogAlert](#activitylogalert): An Azure activity log alert.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionGroup
@@ -51,7 +51,7 @@
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 
 ## ItsmReceiver
 ### Properties
@@ -66,14 +66,14 @@
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 
 ## WebhookReceiver
 ### Properties
 * **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
 * **serviceUri**: string (Required): The URI where webhooks should be sent.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -93,9 +93,9 @@
 ## ActivityLogAlertActionGroup
 ### Properties
 * **actionGroupId**: string (Required): The resourceId of the action group. This cannot be null or empty.
-* **webhookProperties**: [Dictionary<string,String>](#dictionarystringstring): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+* **webhookProperties**: [ActivityLogAlertActionGroupWebhookProperties](#activitylogalertactiongroupwebhookproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
 
-## Dictionary<string,String>
+## ActivityLogAlertActionGroupWebhookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -109,7 +109,7 @@
 * **equals**: string (Required): The field value will be compared to this value (case-insensitive) to determine if the condition is met.
 * **field**: string (Required): The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -1,27 +1,238 @@
-
-Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/tmp/_bcp_1617976408269/notificationhubs --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/notificationhubs/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.1.4; node: v14.16.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.2.4)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-notificationhubs-2017-04-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-notificationhubs-2016-03-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-notificationhubs-2014-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-notificationhubs-2017-04-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-notificationhubs-2016-03-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-notificationhubs-2014-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[24.12 s] Generation Complete
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+Processing batch task - {"tag":"microsoft.notificationhubs-2017-04-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespacePatchParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceListKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PolicykeyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GcmCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GcmCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MpnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MpnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AdmCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AdmCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'BaiduCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'BaiduCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubPatchParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DebugSendResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PnsCredentialsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PnsCredentialsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DebugSendResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 9ms
+Processing batch task - {"tag":"microsoft.notificationhubs-2016-03-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespacePatchParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceListKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PolicykeyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GcmCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GcmCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MpnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MpnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AdmCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AdmCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'BaiduCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'BaiduCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PnsCredentialsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PnsCredentialsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 3ms
+Processing batch task - {"tag":"microsoft.notificationhubs-2014-09-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CheckAvailabilityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedAccessAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceListKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GcmCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GcmCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MpnsCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MpnsCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AdmCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AdmCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'BaiduCredentialProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'BaiduCredential' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NotificationHubListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 2ms
+[11.78 s] Generation Complete

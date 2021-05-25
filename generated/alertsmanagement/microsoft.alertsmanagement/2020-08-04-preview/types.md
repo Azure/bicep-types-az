@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HealthAlertProperties](#healthalertproperties) (Required): An alert rule.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AlertsManagement/resourceHealthAlertRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HealthAlertProperties
@@ -23,9 +23,9 @@
 ## HealthAlertAction
 ### Properties
 * **actionGroupId**: string: the id of the action group to use.
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring): The properties of a webhook object.
+* **webHookProperties**: [HealthAlertActionWebHookProperties](#healthalertactionwebhookproperties): The properties of a webhook object.
 
-## Dictionary<string,String>
+## HealthAlertActionWebHookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -36,28 +36,29 @@
 
 ## HealthAlertCriterion
 * **Discriminator**: namespace
+
 ### Base Properties
-### GuestVmHealth
+### VmGuestHealthAlertCriterion
 #### Properties
 * **healthStates**: [HealthState](#healthstate)[] (Required): Health states to alert on
 * **monitorNames**: string[]: Names of health monitor on which to define alert
 * **monitorTypes**: string[]: Names of health monitor type on which to define alert
-* **namespace**: 'GuestVmHealth' (Required): Specifies the health alert criteria to alert on.
+* **namespace**: 'GuestVmHealth' (Required): specifies the type of the alert criterion.
 
 
-## GuestVmHealth
+## VmGuestHealthAlertCriterion
 ### Properties
 * **healthStates**: [HealthState](#healthstate)[] (Required): Health states to alert on
 * **monitorNames**: string[]: Names of health monitor on which to define alert
 * **monitorTypes**: string[]: Names of health monitor type on which to define alert
-* **namespace**: 'GuestVmHealth' (Required): Specifies the health alert criteria to alert on.
+* **namespace**: 'GuestVmHealth' (Required): specifies the type of the alert criterion.
 
 ## HealthState
 ### Properties
-* **healthStateName**: 'Critical' | 'Warning' (Required): Health state name.
+* **healthStateName**: 'Critical' | 'Warning' (Required): Health state name
 * **severity**: int (Required): Severity of alert fired
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

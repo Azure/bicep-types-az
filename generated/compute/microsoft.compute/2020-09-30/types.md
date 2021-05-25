@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskAccessProperties](#diskaccessproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/diskAccesses/privateEndpointConnections@2020-09-30
@@ -29,7 +29,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionSetProperties](#encryptionsetproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/disks@2020-09-30
@@ -44,7 +44,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskProperties](#diskproperties): Disk resource properties.
 * **sku**: [DiskSku](#disksku): The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
 
@@ -56,7 +56,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryProperties](#galleryproperties): Describes the properties of a Shared Image Gallery.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/applications@2020-09-30
@@ -67,7 +67,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryApplicationProperties](#galleryapplicationproperties): Describes the properties of a gallery Application Definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/applications/versions@2020-09-30
@@ -78,7 +78,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryApplicationVersionProperties](#galleryapplicationversionproperties): Describes the properties of a gallery image version.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/images@2020-09-30
@@ -89,7 +89,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryImageProperties](#galleryimageproperties): Describes the properties of a gallery image definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/images' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/images/versions@2020-09-30
@@ -100,7 +100,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryImageVersionProperties](#galleryimageversionproperties): Describes the properties of a gallery image version.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/snapshots@2020-09-30
@@ -114,7 +114,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SnapshotProperties](#snapshotproperties): Snapshot resource properties.
 * **sku**: [SnapshotSku](#snapshotsku): The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DiskAccessProperties
@@ -134,7 +134,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -144,9 +144,9 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -160,7 +160,7 @@
 ## EncryptionSetProperties
 ### Properties
 * **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
-* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys'
+* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys': The type of key used to encrypt the data of the disk.
 * **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
 * **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
 
@@ -173,7 +173,7 @@
 ### Properties
 * **id**: string: Resource Id
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -181,7 +181,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of the extended location.
+* **type**: 'EdgeZone': The type of extendedLocation.
 
 ## DiskProperties
 ### Properties
@@ -194,13 +194,13 @@
 * **diskMBpsReadWrite**: int: The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the disk.
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly): This enumerates the possible state of the disk.
 * **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
 * **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **maxShares**: int: The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
-* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
-* **osType**: 'Linux' | 'Windows': The Operating System type.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll': Policy for accessing the disk via network.
+* **osType**: 'Linux' | 'Windows': This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly): Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
@@ -228,7 +228,7 @@
 ## Encryption
 ### Properties
 * **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
-* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey'
+* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey': The type of key used to encrypt the data of the disk.
 
 ## EncryptionSettingsCollection
 ### Properties
@@ -264,10 +264,10 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS': The sku name.
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -286,14 +286,14 @@
 ## SharingProfile
 ### Properties
 * **groups**: [SharingProfileGroup](#sharingprofilegroup)[] (ReadOnly): A list of sharing profile groups.
-* **permissions**: 'Groups' | 'Private': This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**.
+* **permissions**: 'Groups' | 'Private': This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
 
 ## SharingProfileGroup
 ### Properties
 * **ids**: string[]: A list of subscription/tenant ids the gallery is aimed to be shared to.
-* **type**: 'AADTenants' | 'Subscriptions': This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**.
+* **type**: 'AADTenants' | 'Subscriptions': This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -305,9 +305,9 @@
 * **eula**: string: The Eula agreement for the gallery Application Definition.
 * **privacyStatementUri**: string: The privacy statement uri.
 * **releaseNoteUri**: string: The release note uri.
-* **supportedOSType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**.
+* **supportedOSType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -374,7 +374,7 @@
 * **region**: string (ReadOnly): The region to which the gallery image version is being replicated to.
 * **state**: 'Completed' | 'Failed' | 'Replicating' | 'Unknown' (ReadOnly): This is the regional replication state.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -389,7 +389,7 @@
 * **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier) (Required): This is the gallery image definition identifier.
 * **osState**: 'Generalized' | 'Specialized' (Required): This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
-* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**.
+* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **privacyStatementUri**: string: The privacy statement uri.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
 * **purchasePlan**: [ImagePurchasePlan](#imagepurchaseplan): Describes the gallery image definition purchase plan. This is used by marketplace images.
@@ -427,7 +427,7 @@
 * **max**: int: The maximum number of the resource.
 * **min**: int: The minimum number of the resource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -456,7 +456,7 @@
 
 ## GalleryDataDiskImage
 ### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'.
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
 * **lun**: int (Required): This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
 * **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
 * **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
@@ -468,11 +468,11 @@
 
 ## GalleryOSDiskImage
 ### Properties
-* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'.
+* **hostCaching**: 'None' | 'ReadOnly' | 'ReadWrite': The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
 * **sizeInGB**: int (ReadOnly): This property indicates the size of the VHD to be created.
 * **source**: [GalleryArtifactVersionSource](#galleryartifactversionsource): The gallery artifact version source.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -483,13 +483,13 @@
 * **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
 * **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
 * **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the snapshot.
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached' (ReadOnly): This enumerates the possible state of the disk.
 * **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
 * **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
 * **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **incremental**: bool: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
-* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
-* **osType**: 'Linux' | 'Windows': The Operating System type.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll': Policy for accessing the disk via network.
+* **osType**: 'Linux' | 'Windows': This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **timeCreated**: string (ReadOnly): The time when the snapshot was created.
@@ -500,7 +500,7 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
