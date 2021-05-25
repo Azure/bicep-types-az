@@ -92,8 +92,19 @@ executeSynchronous(async () => {
       await copyRecursive(tmpOutputDir, outputDir);
     } catch (e) {
       logErr(logger, e);
+      
+      const logData = await readFile(`${tmpOutputDir}/log.out`, { encoding: 'utf8' });
 
-      logErr(summaryLogger, `Failed to generate types for path '${basePath}'`);
+      // Use markdown formatting as this summary will be included in the PR description
+      logOut(summaryLogger, 
+`<details>
+  <summary>Failed to generate types for path '${basePath}'</summary>
+
+\`\`\`
+${logData}
+\`\`\`
+</details>
+`);
     }
 
     // clean up temp dir

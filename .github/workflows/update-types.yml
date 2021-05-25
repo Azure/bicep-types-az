@@ -82,17 +82,10 @@ jobs:
             Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
 
             Summary
-            ```
             ${{ steps.generate.outputs.summary }}
-            ```
           commit-message: |
             Update Generated Types ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
 
             Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
-
-            Summary
-            ```
-            ${{ steps.generate.outputs.summary }}
-            ```
           labels: autogenerate
           draft: false
