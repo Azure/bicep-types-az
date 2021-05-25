@@ -171,7 +171,7 @@
 * **isRestoring**: bool: Restoring
 * **kerberosEnabled**: bool: Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
 * **mountTargets**: [mountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
-* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS fro SMB protocol
+* **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **securityStyle**: 'ntfs' | 'unix': The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol.
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system.
@@ -180,7 +180,7 @@
 * **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
 * **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
-* **throughputMibps**: int:
+* **throughputMibps**: int
 * **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
 * **volumeType**: string: What type of volume is this
 
@@ -245,7 +245,7 @@
 ## backupProperties
 ### Properties
 * **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
-* **backupType**: string (ReadOnly): Type of backup adhoc or scheduled
+* **backupType**: 'Manual' | 'Scheduled' (ReadOnly): Type of backup Manual or Scheduled.
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **failureReason**: string (ReadOnly): Failure reason
 * **label**: string: Label for backup

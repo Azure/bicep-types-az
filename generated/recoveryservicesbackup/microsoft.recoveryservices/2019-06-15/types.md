@@ -206,7 +206,7 @@
 
 ## ExtendedProperties
 ### Properties
-* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties):
+* **diskExclusionProperties**: [DiskExclusionProperties](#diskexclusionproperties)
 
 ## DiskExclusionProperties
 ### Properties
@@ -346,7 +346,7 @@
 ### AzureIaasVM
 #### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required): IaaS VM workload-specific backup policy.
-* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails):
+* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
@@ -390,7 +390,7 @@
 ## AzureIaasVM
 ### Properties
 * **backupManagementType**: 'AzureIaasVM' (Required): IaaS VM workload-specific backup policy.
-* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails):
+* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
@@ -398,8 +398,8 @@
 
 ## InstantRPAdditionalDetails
 ### Properties
-* **azureBackupRGNamePrefix**: string:
-* **azureBackupRGNameSuffix**: string:
+* **azureBackupRGNamePrefix**: string
+* **azureBackupRGNameSuffix**: string
 
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType

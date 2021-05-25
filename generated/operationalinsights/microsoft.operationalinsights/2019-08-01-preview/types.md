@@ -9,7 +9,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **sku**: [sku](#sku):
+* **sku**: [sku](#sku)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -49,7 +49,7 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties):
+* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties)
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly): The provisioning state of the cluster.
 

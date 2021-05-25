@@ -29,7 +29,7 @@
 * **capacityAssigned**: int (ReadOnly): Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
 * **clusterId**: string (ReadOnly): Unique identifier for the cluster.
 * **createdDate**: string (ReadOnly): The date this cluster was created.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded':
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded'
 
 ## ClusterSku
 ### Properties

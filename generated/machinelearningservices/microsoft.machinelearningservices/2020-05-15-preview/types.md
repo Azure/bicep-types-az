@@ -70,7 +70,7 @@
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required):
+* **computeType**: 'ACI' (Required)
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
 * **dataCollection**: [schemas:89_dataCollection](#schemas89datacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
@@ -114,7 +114,7 @@
 * **creationTime**: string (ReadOnly): The creation time of the machine learning workspace in ISO8601 format.
 * **description**: string: The description of this workspace.
 * **discoveryUrl**: string: Url for the discovery service to identify regional endpoints for machine learning experimentation services
-* **encryption**: [EncryptionProperty](#encryptionproperty):
+* **encryption**: [EncryptionProperty](#encryptionproperty)
 * **friendlyName**: string: The friendly name for this workspace. This name in mutable
 * **hbiWorkspace**: bool: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
 * **imageBuildCompute**: string: The compute name for image build
@@ -129,7 +129,7 @@
 
 ## EncryptionProperty
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties) (Required)
 * **status**: 'Disabled' | 'Enabled' (Required): Indicates whether or not the encryption is enabled for the workspace.
 
 ## KeyVaultProperties
@@ -216,7 +216,7 @@
 ### Databricks
 #### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ### DataFactory
 #### Properties
@@ -225,17 +225,17 @@
 ### DataLakeAnalytics
 #### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ### HDInsight
 #### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ### VirtualMachine
 #### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 
 ## MachineLearningServiceError
@@ -343,7 +343,7 @@
 ## Databricks
 ### Properties
 * **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ## schemas:36_properties
 ### Properties
@@ -366,17 +366,17 @@
 ## DataLakeAnalytics
 ### Properties
 * **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ## HDInsight
 ### Properties
 * **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ## VirtualMachine
 ### Properties
 * **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:36_properties](#schemas36properties):
+* **properties**: [schemas:36_properties](#schemas36properties)
 
 ## Dictionary<string,String>
 ### Properties
@@ -428,9 +428,9 @@
 
 ## schemas:104_baseImageRegistry
 ### Properties
-* **address**: string (WriteOnly):
-* **password**: string (WriteOnly):
-* **username**: string (WriteOnly):
+* **address**: string (WriteOnly)
+* **password**: string (WriteOnly)
+* **username**: string (WriteOnly)
 
 ## Dictionary<string,String>
 ### Properties
@@ -439,7 +439,7 @@
 
 ## schemas:98_python
 ### Properties
-* **baseCondaEnvironment**: string (WriteOnly):
+* **baseCondaEnvironment**: string (WriteOnly)
 * **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
 * **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
 * **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
@@ -474,9 +474,9 @@ The path specified gets used to call the user script.
 
 ## SparkMavenPackage
 ### Properties
-* **artifact**: string (WriteOnly):
-* **group**: string (WriteOnly):
-* **version**: string (WriteOnly):
+* **artifact**: string (WriteOnly)
+* **group**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
 ## schemas:95_environmentReference
 ### Properties
@@ -554,7 +554,7 @@ The path specified gets used to call the user script.
 * **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
 * **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
 * **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required):
+* **computeType**: 'ACI' (Required)
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
 * **dataCollection**: [schemas:89_dataCollection](#schemas89datacollection) (WriteOnly): Details of the data collection options specified.
 * **dnsNameLabel**: string (WriteOnly): The Dns label for the service.

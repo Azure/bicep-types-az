@@ -12,6 +12,54 @@
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/diskAccesses@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DiskAccessProperties](#diskaccessproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/diskAccesses/privateEndpointConnections@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: 'Microsoft.Compute/diskAccesses/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/diskEncryptionSets@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [EncryptionSetIdentity](#encryptionsetidentity): The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [EncryptionSetProperties](#encryptionsetproperties)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/disks@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **managedBy**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
+* **managedByExtended**: string[] (ReadOnly): List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DiskProperties](#diskproperties): Disk resource properties.
+* **sku**: [DiskSku](#disksku): The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[]: The Logical zone list for Disk.
+
 ## Resource Microsoft.Compute/hostGroups@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -58,6 +106,20 @@
 * **properties**: [ProximityPlacementGroupProperties](#proximityplacementgroupproperties): Describes the properties of a Proximity Placement Group.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Compute/proximityPlacementGroups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/snapshots@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **managedBy**: string (ReadOnly): Unused. Always Null.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot resource properties.
+* **sku**: [SnapshotSku](#snapshotsku): The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/sshPublicKeys@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -173,7 +235,7 @@
 ### Properties
 * **platformFaultDomainCount**: int: Fault Domain count.
 * **platformUpdateDomainCount**: int: Update Domain count.
-* **proximityPlacementGroup**: [SubResource](#subresource):
+* **proximityPlacementGroup**: [SubResource](#subresource)
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[] (ReadOnly): The resource status information.
 * **virtualMachines**: [SubResource](#subresource)[]: A list of references to all virtual machines in the availability set.
 
@@ -200,10 +262,178 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DiskAccessProperties
+### Properties
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
+* **provisioningState**: string (ReadOnly): The disk access resource provisioning state.
+* **timeCreated**: string (ReadOnly): The time when the disk access was created.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): private endpoint connection Id
+* **name**: string (ReadOnly): private endpoint connection name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): private endpoint connection type
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EncryptionSetIdentity
+### Properties
+* **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
+* **type**: 'None' | 'SystemAssigned': The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
+
+## EncryptionSetProperties
+### Properties
+* **activeKey**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset): Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
+* **encryptionType**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys'
+* **lastKeyRotationTimestamp**: string (ReadOnly): The time when the active key of this disk encryption set was updated.
+* **previousKeys**: [KeyForDiskEncryptionSet](#keyfordiskencryptionset)[] (ReadOnly): A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
+* **provisioningState**: string (ReadOnly): The disk encryption set provisioning state.
+* **rotationToLatestKeyVersionEnabled**: bool: Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
+
+## KeyForDiskEncryptionSet
+### Properties
+* **keyUrl**: string (Required): Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+* **sourceVault**: [SourceVault](#sourcevault): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## SourceVault
+### Properties
+* **id**: string: Resource Id
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ExtendedLocation
+### Properties
+* **name**: string: The name of the extended location.
+* **type**: 'EdgeZone': The type of the extended location.
+
+## DiskProperties
+### Properties
+* **burstingEnabled**: bool: Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
+* **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
+* **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
+* **diskIOPSReadOnly**: int: The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
+* **diskIOPSReadWrite**: int: The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
+* **diskMBpsReadOnly**: int: The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+* **diskMBpsReadWrite**: int: The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+* **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
+* **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the disk.
+* **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **maxShares**: int: The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
+* **osType**: 'Linux' | 'Windows': The Operating System type.
+* **propertyUpdatesInProgress**: [PropertyUpdatesInProgress](#propertyupdatesinprogress) (ReadOnly): Properties of the disk for which update is pending.
+* **provisioningState**: string (ReadOnly): The disk provisioning state.
+* **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+* **securityProfile**: [DiskSecurityProfile](#disksecurityprofile): Contains the security related information for the resource.
+* **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly): Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+* **supportsHibernation**: bool: Indicates the OS on a disk supports hibernation.
+* **tier**: string: Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
+* **timeCreated**: string (ReadOnly): The time when the disk was created.
+* **uniqueId**: string (ReadOnly): Unique Guid identifying the resource.
+
+## CreationData
+### Properties
+* **createOption**: 'Attach' | 'Copy' | 'Empty' | 'FromImage' | 'Import' | 'Restore' | 'Upload' (Required): This enumerates the possible sources of a disk's creation.
+* **galleryImageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **imageReference**: [ImageDiskReference](#imagediskreference): The source image used for creating the disk.
+* **logicalSectorSize**: int: Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+* **sourceResourceId**: string: If createOption is Copy, this is the ARM id of the source snapshot or disk.
+* **sourceUniqueId**: string (ReadOnly): If this field is set, this is the unique id identifying the source of this resource.
+* **sourceUri**: string: If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+* **storageAccountId**: string: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+* **uploadSizeBytes**: int: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+
+## ImageDiskReference
+### Properties
+* **id**: string (Required): A relative uri containing either a Platform Image Repository or user image reference.
+* **lun**: int: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
+
+## Encryption
+### Properties
+* **diskEncryptionSetId**: string: ResourceId of the disk encryption set to use for enabling encryption at rest.
+* **type**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey'
+
+## EncryptionSettingsCollection
+### Properties
+* **enabled**: bool (Required): Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+* **encryptionSettings**: [EncryptionSettingsElement](#encryptionsettingselement)[]: A collection of encryption settings, one for each disk volume.
+* **encryptionSettingsVersion**: string: Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+
+## EncryptionSettingsElement
+### Properties
+* **diskEncryptionKey**: [KeyVaultAndSecretReference](#keyvaultandsecretreference): Key Vault Secret Url and vault id of the encryption key
+* **keyEncryptionKey**: [KeyVaultAndKeyReference](#keyvaultandkeyreference): Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+
+## KeyVaultAndSecretReference
+### Properties
+* **secretUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## KeyVaultAndKeyReference
+### Properties
+* **keyUrl**: string (Required): Url pointing to a key or secret in KeyVault
+* **sourceVault**: [SourceVault](#sourcevault) (Required): The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+
+## PropertyUpdatesInProgress
+### Properties
+* **targetTier**: string: The target performance tier of the disk if a tier change operation is in progress.
+
+## PurchasePlan
+### Properties
+* **name**: string (Required): The plan ID.
+* **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+* **promotionCode**: string: The Offer Promotion Code.
+* **publisher**: string (Required): The publisher ID.
+
+## DiskSecurityProfile
+### Properties
+* **securityType**: 'TrustedLaunch'
+
+## ShareInfoElement
+### Properties
+* **vmUri**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
+
+## DiskSku
+### Properties
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS': The sku name.
+* **tier**: string (ReadOnly): The sku tier.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DedicatedHostGroupProperties
 ### Properties
 * **hosts**: [SubResourceReadOnly](#subresourcereadonly)[] (ReadOnly): A list of references to all dedicated hosts in the dedicated host group.
-* **instanceView**: [DedicatedHostGroupInstanceView](#dedicatedhostgroupinstanceview) (ReadOnly):
+* **instanceView**: [DedicatedHostGroupInstanceView](#dedicatedhostgroupinstanceview) (ReadOnly)
 * **platformFaultDomainCount**: int (Required): Number of fault domains that the host group can span.
 * **supportAutomaticPlacement**: bool: Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
 
@@ -258,16 +488,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ExtendedLocation
-### Properties
-* **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of the extended location.
-
 ## ImageProperties
 ### Properties
 * **hyperVGeneration**: 'V1' | 'V2': Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
 * **provisioningState**: string (ReadOnly): The provisioning state.
-* **sourceVirtualMachine**: [SubResource](#subresource):
+* **sourceVirtualMachine**: [SubResource](#subresource)
 * **storageProfile**: [ImageStorageProfile](#imagestorageprofile): Describes a storage profile.
 
 ## ImageStorageProfile
@@ -283,8 +508,8 @@
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. <br><br> NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
 * **diskSizeGB**: int: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-* **managedDisk**: [SubResource](#subresource):
-* **snapshot**: [SubResource](#subresource):
+* **managedDisk**: [SubResource](#subresource)
+* **snapshot**: [SubResource](#subresource)
 * **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
 
 ## DiskEncryptionSetParameters
@@ -297,10 +522,10 @@
 * **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**.
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. <br><br> NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
 * **diskSizeGB**: int: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-* **managedDisk**: [SubResource](#subresource):
+* **managedDisk**: [SubResource](#subresource)
 * **osState**: 'Generalized' | 'Specialized' (Required): The OS State.
 * **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**.
-* **snapshot**: [SubResource](#subresource):
+* **snapshot**: [SubResource](#subresource)
 * **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
 
 ## Dictionary<string,String>
@@ -320,6 +545,35 @@
 ### Properties
 * **colocationStatus**: [InstanceViewStatus](#instanceviewstatus): Instance view status.
 * **id**: string: Resource Id
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SnapshotProperties
+### Properties
+* **creationData**: [CreationData](#creationdata) (Required): Data used when creating a disk.
+* **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
+* **diskSizeBytes**: int (ReadOnly): The size of the disk in bytes. This field is read only.
+* **diskSizeGB**: int: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
+* **diskState**: 'ActiveSAS' | 'ActiveUpload' | 'Attached' | 'ReadyToUpload' | 'Reserved' | 'Unattached': The state of the snapshot.
+* **encryption**: [Encryption](#encryption): Encryption at rest settings for disk or snapshot
+* **encryptionSettingsCollection**: [EncryptionSettingsCollection](#encryptionsettingscollection): Encryption settings for disk or snapshot
+* **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **incremental**: bool: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll'
+* **osType**: 'Linux' | 'Windows': The Operating System type.
+* **provisioningState**: string (ReadOnly): The disk provisioning state.
+* **purchasePlan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+* **supportsHibernation**: bool: Indicates the OS on a snapshot supports hibernation.
+* **timeCreated**: string (ReadOnly): The time when the snapshot was created.
+* **uniqueId**: string (ReadOnly): Unique Guid identifying the resource.
+
+## SnapshotSku
+### Properties
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
+* **tier**: string (ReadOnly): The sku tier.
 
 ## Dictionary<string,String>
 ### Properties
@@ -362,14 +616,14 @@
 ## VirtualMachineProperties
 ### Properties
 * **additionalCapabilities**: [AdditionalCapabilities](#additionalcapabilities): Enables or disables a capability on the virtual machine or virtual machine scale set.
-* **availabilitySet**: [SubResource](#subresource):
+* **availabilitySet**: [SubResource](#subresource)
 * **billingProfile**: [BillingProfile](#billingprofile): Specifies the billing related details of a Azure Spot VM or VMSS. <br><br>Minimum api-version: 2019-03-01.
 * **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
 * **evictionPolicy**: 'Deallocate' | 'Delete': Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
 * **extensionsTimeBudget**: string: Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). <br><br> Minimum api-version: 2020-06-01
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the virtual machine.
-* **host**: [SubResource](#subresource):
-* **hostGroup**: [SubResource](#subresource):
+* **host**: [SubResource](#subresource)
+* **hostGroup**: [SubResource](#subresource)
 * **instanceView**: [VirtualMachineInstanceView](#virtualmachineinstanceview) (ReadOnly): The instance view of a virtual machine.
 * **licenseType**: string: Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
 * **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network interfaces of the virtual machine.
@@ -377,10 +631,10 @@
 * **platformFaultDomain**: int: Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01
 * **priority**: 'Low' | 'Regular' | 'Spot': Specifies the priority for the virtual machine. <br><br>Minimum api-version: 2019-03-01.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **proximityPlacementGroup**: [SubResource](#subresource):
+* **proximityPlacementGroup**: [SubResource](#subresource)
 * **securityProfile**: [SecurityProfile](#securityprofile): Specifies the Security profile settings for the virtual machine or virtual machine scale set.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
-* **virtualMachineScaleSet**: [SubResource](#subresource):
+* **virtualMachineScaleSet**: [SubResource](#subresource)
 * **vmId**: string (ReadOnly): Specifies the VM unique ID which is a 128-bits identifier that is encoded and stored in all Azure IaaS VMs SMBIOS and can be read using platform BIOS commands.
 
 ## AdditionalCapabilities
@@ -444,12 +698,12 @@
 ## KeyVaultSecretReference
 ### Properties
 * **secretUrl**: string (Required): The URL referencing a secret in a Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required):
+* **sourceVault**: [SubResource](#subresource) (Required)
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required): The URL referencing a key encryption key in Key Vault.
-* **sourceVault**: [SubResource](#subresource) (Required):
+* **sourceVault**: [SubResource](#subresource) (Required)
 
 ## VirtualMachineExtensionInstanceView
 ### Properties
@@ -582,7 +836,7 @@
 
 ## VaultSecretGroup
 ### Properties
-* **sourceVault**: [SubResource](#subresource):
+* **sourceVault**: [SubResource](#subresource)
 * **vaultCertificates**: [VaultCertificate](#vaultcertificate)[]: The list of key vault references in SourceVault which contain certificates.
 
 ## VaultCertificate
@@ -786,12 +1040,12 @@
 * **additionalCapabilities**: [AdditionalCapabilities](#additionalcapabilities): Enables or disables a capability on the virtual machine or virtual machine scale set.
 * **automaticRepairsPolicy**: [AutomaticRepairsPolicy](#automaticrepairspolicy): Specifies the configuration parameters for automatic repairs on the virtual machine scale set.
 * **doNotRunExtensionsOnOverprovisionedVMs**: bool: When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
-* **hostGroup**: [SubResource](#subresource):
+* **hostGroup**: [SubResource](#subresource)
 * **orchestrationMode**: 'Flexible' | 'Uniform': Specifies the orchestration mode for the virtual machine scale set.
 * **overprovision**: bool: Specifies whether the Virtual Machine Scale Set should be overprovisioned.
 * **platformFaultDomainCount**: int: Fault Domain count for each placement group.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **proximityPlacementGroup**: [SubResource](#subresource):
+* **proximityPlacementGroup**: [SubResource](#subresource)
 * **scaleInPolicy**: [ScaleInPolicy](#scaleinpolicy): Describes a scale-in policy for a virtual machine scale set.
 * **singlePlacementGroup**: bool: When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
 * **uniqueId**: string (ReadOnly): Specifies the ID which uniquely identifies a Virtual Machine Scale Set.
@@ -838,7 +1092,7 @@
 * **networkProfile**: [VirtualMachineScaleSetNetworkProfile](#virtualmachinescalesetnetworkprofile): Describes a virtual machine scale set network profile.
 * **osProfile**: [VirtualMachineScaleSetOSProfile](#virtualmachinescalesetosprofile): Describes a virtual machine scale set OS profile.
 * **priority**: 'Low' | 'Regular' | 'Spot': Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview.
-* **scheduledEventsProfile**: [ScheduledEventsProfile](#scheduledeventsprofile):
+* **scheduledEventsProfile**: [ScheduledEventsProfile](#scheduledeventsprofile)
 * **securityProfile**: [SecurityProfile](#securityprofile): Specifies the Security profile settings for the virtual machine or virtual machine scale set.
 * **storageProfile**: [VirtualMachineScaleSetStorageProfile](#virtualmachinescalesetstorageprofile): Describes a virtual machine scale set storage profile.
 
@@ -889,7 +1143,7 @@
 * **enableFpga**: bool: Specifies whether the network interface is FPGA networking-enabled.
 * **enableIPForwarding**: bool: Whether IP forwarding enabled on this NIC.
 * **ipConfigurations**: [VirtualMachineScaleSetIPConfiguration](#virtualmachinescalesetipconfiguration)[] (Required): Specifies the IP configurations of the network interface.
-* **networkSecurityGroup**: [SubResource](#subresource):
+* **networkSecurityGroup**: [SubResource](#subresource)
 * **primary**: bool: Specifies the primary network interface in case the virtual machine has more than 1 network interface.
 
 ## VirtualMachineScaleSetNetworkConfigurationDnsSettings
@@ -924,7 +1178,7 @@
 * **idleTimeoutInMinutes**: int: The idle timeout of the public IP address.
 * **ipTags**: [VirtualMachineScaleSetIpTag](#virtualmachinescalesetiptag)[]: The list of IP tags associated with the public IP address.
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6': Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
-* **publicIPPrefix**: [SubResource](#subresource):
+* **publicIPPrefix**: [SubResource](#subresource)
 
 ## VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
 ### Properties
@@ -947,7 +1201,7 @@
 
 ## ScheduledEventsProfile
 ### Properties
-* **terminateNotificationProfile**: [TerminateNotificationProfile](#terminatenotificationprofile):
+* **terminateNotificationProfile**: [TerminateNotificationProfile](#terminatenotificationprofile)
 
 ## TerminateNotificationProfile
 ### Properties
@@ -998,7 +1252,7 @@
 ## VirtualMachineScaleSetVMProperties
 ### Properties
 * **additionalCapabilities**: [AdditionalCapabilities](#additionalcapabilities): Enables or disables a capability on the virtual machine or virtual machine scale set.
-* **availabilitySet**: [SubResource](#subresource):
+* **availabilitySet**: [SubResource](#subresource)
 * **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the virtual machine.
 * **instanceView**: [VirtualMachineScaleSetVMInstanceView](#virtualmachinescalesetvminstanceview) (ReadOnly): The instance view of a virtual machine scale set VM.

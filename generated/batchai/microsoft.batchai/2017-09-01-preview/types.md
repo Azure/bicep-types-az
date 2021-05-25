@@ -36,14 +36,14 @@
 ## ClusterBaseProperties
 ### Properties
 * **allocationState**: 'resizing' | 'steady' (ReadOnly): Possible values are: steady and resizing. steady state indicates that the cluster is not resizing. There are no changes to the number of compute nodes in the cluster in progress. A cluster enters this state when it is created and when no operations are being performed on the cluster to change the number of compute nodes. resizing state indicates that the cluster is resizing; that is, compute nodes are being added to or removed from the cluster.
-* **allocationStateTransitionTime**: string (ReadOnly):
-* **creationTime**: string (ReadOnly):
-* **currentNodeCount**: int (ReadOnly):
+* **allocationStateTransitionTime**: string (ReadOnly)
+* **creationTime**: string (ReadOnly)
+* **currentNodeCount**: int (ReadOnly)
 * **errors**: [BatchAIError](#batchaierror)[] (ReadOnly): This element contains all the errors encountered by various compute nodes during node setup.
 * **nodeSetup**: [NodeSetup](#nodesetup): Use this to prepare the VM. NOTE: The volumes specified in mountVolumes are mounted first and then the setupTask is run. Therefore the setup task can use local mountPaths in its execution.
 * **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the cluster.
 * **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): Possible value are: creating - Specifies that the cluster is being created. succeeded - Specifies that the cluster has been created successfully. failed - Specifies that the cluster creation has failed. deleting - Specifies that the cluster is being deleted.
-* **provisioningStateTransitionTime**: string (ReadOnly):
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **scaleSettings**: [ScaleSettings](#scalesettings): At least one of manual or autoScale settings must be specified. Only one of manual or autoScale settings can be specified. If autoScale settings are specified, the system automatically scales the cluster up and down (within the supplied limits) based on the pending jobs on the cluster.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **userAccountSettings**: [UserAccountSettings](#useraccountsettings) (Required): Settings for user account that gets created on each on the nodes of a cluster.
@@ -59,8 +59,8 @@
 
 ## NameValuePair
 ### Properties
-* **name**: string (ReadOnly):
-* **value**: string (ReadOnly):
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
 
 ## NodeSetup
 ### Properties
@@ -71,15 +71,15 @@
 ### Properties
 * **azureBlobFileSystems**: [AzureBlobFileSystemReference](#azureblobfilesystemreference)[]: References to Azure Blob FUSE that are to be mounted to the cluster nodes.
 * **azureFileShares**: [AzureFileShareReference](#azurefilesharereference)[]: References to Azure File Shares that are to be mounted to the cluster nodes.
-* **fileServers**: [FileServerReference](#fileserverreference)[]:
-* **unmanagedFileSystems**: [UnmanagedFileSystemReference](#unmanagedfilesystemreference)[]:
+* **fileServers**: [FileServerReference](#fileserverreference)[]
+* **unmanagedFileSystems**: [UnmanagedFileSystemReference](#unmanagedfilesystemreference)[]
 
 ## AzureBlobFileSystemReference
 ### Properties
-* **accountName**: string (Required):
-* **containerName**: string (Required):
+* **accountName**: string (Required)
+* **containerName**: string (Required)
 * **credentials**: [AzureStorageCredentialsInfo](#azurestoragecredentialsinfo) (Required): Credentials to access Azure File Share.
-* **mountOptions**: string:
+* **mountOptions**: string
 * **relativeMountPath**: string (Required): Note that all blob file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location.
 
 ## AzureStorageCredentialsInfo
@@ -89,7 +89,7 @@
 
 ## KeyVaultSecretReference
 ### Properties
-* **secretUrl**: string (Required):
+* **secretUrl**: string (Required)
 * **sourceVault**: [ResourceId](#resourceid) (Required): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 
 ## ResourceId
@@ -98,8 +98,8 @@
 
 ## AzureFileShareReference
 ### Properties
-* **accountName**: string (Required):
-* **azureFileUrl**: string (Required):
+* **accountName**: string (Required)
+* **azureFileUrl**: string (Required)
 * **credentials**: [AzureStorageCredentialsInfo](#azurestoragecredentialsinfo) (Required): Credentials to access Azure File Share.
 * **directoryMode**: string: Default value is 0777. Valid only if OS is linux.
 * **fileMode**: string: Default value is 0777. Valid only if OS is linux.
@@ -108,34 +108,34 @@
 ## FileServerReference
 ### Properties
 * **fileServer**: [ResourceId](#resourceid) (Required): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
-* **mountOptions**: string:
+* **mountOptions**: string
 * **relativeMountPath**: string (Required): Note that all file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location.
 * **sourceDirectory**: string: If this property is not specified, the entire File Server will be mounted.
 
 ## UnmanagedFileSystemReference
 ### Properties
-* **mountCommand**: string (Required):
+* **mountCommand**: string (Required)
 * **relativeMountPath**: string (Required): Note that all file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location.
 
 ## SetupTask
 ### Properties
-* **commandLine**: string (Required):
-* **environmentVariables**: [EnvironmentSetting](#environmentsetting)[]:
-* **runElevated**: bool:
+* **commandLine**: string (Required)
+* **environmentVariables**: [EnvironmentSetting](#environmentsetting)[]
+* **runElevated**: bool
 * **stdOutErrPathPrefix**: string (Required): The path where the Batch AI service will upload the stdout and stderror of setup task.
 
 ## EnvironmentSetting
 ### Properties
-* **name**: string (Required):
-* **value**: string:
+* **name**: string (Required)
+* **value**: string
 
 ## NodeStateCounts
 ### Properties
-* **idleNodeCount**: int (ReadOnly):
-* **leavingNodeCount**: int (ReadOnly):
-* **preparingNodeCount**: int (ReadOnly):
-* **runningNodeCount**: int (ReadOnly):
-* **unusableNodeCount**: int (ReadOnly):
+* **idleNodeCount**: int (ReadOnly)
+* **leavingNodeCount**: int (ReadOnly)
+* **preparingNodeCount**: int (ReadOnly)
+* **runningNodeCount**: int (ReadOnly)
+* **unusableNodeCount**: int (ReadOnly)
 
 ## ScaleSettings
 ### Properties
@@ -144,9 +144,9 @@
 
 ## AutoScaleSettings
 ### Properties
-* **initialNodeCount**: int:
-* **maximumNodeCount**: int (Required):
-* **minimumNodeCount**: int (Required):
+* **initialNodeCount**: int
+* **maximumNodeCount**: int (Required)
+* **minimumNodeCount**: int (Required)
 
 ## ManualScaleSettings
 ### Properties
@@ -155,9 +155,9 @@
 
 ## UserAccountSettings
 ### Properties
-* **adminUserName**: string (Required):
-* **adminUserPassword**: string:
-* **adminUserSshPublicKey**: string:
+* **adminUserName**: string (Required)
+* **adminUserPassword**: string
+* **adminUserSshPublicKey**: string
 
 ## VirtualMachineConfiguration
 ### Properties
@@ -165,10 +165,10 @@
 
 ## ImageReference
 ### Properties
-* **offer**: string (Required):
-* **publisher**: string (Required):
-* **sku**: string (Required):
-* **version**: string:
+* **offer**: string (Required)
+* **publisher**: string (Required)
+* **sku**: string (Required)
+* **version**: string
 
 ## Dictionary<string,String>
 ### Properties
@@ -177,28 +177,28 @@
 
 ## FileServerBaseProperties
 ### Properties
-* **creationTime**: string (ReadOnly):
+* **creationTime**: string (ReadOnly)
 * **dataDisks**: [DataDisks](#datadisks) (Required): Settings for the data disk which would be created for the File Server.
 * **mountSettings**: [MountSettings](#mountsettings) (ReadOnly): Details of the File Server.
 * **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' | 'updating' (ReadOnly): Possible values: creating - The File Server is getting created. updating - The File Server creation has been accepted and it is getting updated. deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted. failed - The File Server creation has failed with the specified errorCode. Details about the error code are specified in the message field. succeeded - The File Server creation has succeeded.
-* **provisioningStateTransitionTime**: string (ReadOnly):
+* **provisioningStateTransitionTime**: string (ReadOnly)
 * **sshConfiguration**: [SshConfiguration](#sshconfiguration) (Required): SSH configuration settings for the VM
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **vmSize**: string (Required): For information about available VM sizes for fileservers from the Virtual Machines Marketplace, see Sizes for Virtual Machines (Linux).
 
 ## DataDisks
 ### Properties
-* **cachingType**: 'none' | 'readonly' | 'readwrite' (ReadOnly):
-* **diskCount**: int (Required):
-* **diskSizeInGB**: int (Required):
-* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required):
+* **cachingType**: 'none' | 'readonly' | 'readwrite' (ReadOnly)
+* **diskCount**: int (Required)
+* **diskSizeInGB**: int (Required)
+* **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' (Required)
 
 ## MountSettings
 ### Properties
-* **fileServerInternalIP**: string (ReadOnly):
-* **fileServerPublicIP**: string (ReadOnly):
-* **fileServerType**: 'glusterfs' | 'nfs' (ReadOnly):
-* **mountPoint**: string (ReadOnly):
+* **fileServerInternalIP**: string (ReadOnly)
+* **fileServerPublicIP**: string (ReadOnly)
+* **fileServerType**: 'glusterfs' | 'nfs' (ReadOnly)
+* **mountPoint**: string (ReadOnly)
 
 ## SshConfiguration
 ### Properties
@@ -226,10 +226,10 @@
 * **executionState**: 'failed' | 'queued' | 'running' | 'succeeded' | 'terminating' (ReadOnly): The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.
 * **executionStateTransitionTime**: string (ReadOnly): The time at which the job entered its current execution state.
 * **experimentName**: string: Describe the experiment information of the job
-* **inputDirectories**: [InputDirectory](#inputdirectory)[]:
+* **inputDirectories**: [InputDirectory](#inputdirectory)[]
 * **jobPreparation**: [JobPreparation](#jobpreparation): Specifies the settings for job preparation.
 * **nodeCount**: int (Required): The job will be gang scheduled on that many compute nodes
-* **outputDirectories**: [OutputDirectory](#outputdirectory)[]:
+* **outputDirectories**: [OutputDirectory](#outputdirectory)[]
 * **priority**: int: Priority associated with the job. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. The default value is 0.
 * **provisioningState**: 'creating' | 'deleting' | 'failed' | 'succeeded' (ReadOnly): The provisioned state of the Batch AI job.
 * **provisioningStateTransitionTime**: string (ReadOnly): The time at which the job entered its current provisioning state.
@@ -239,13 +239,13 @@
 
 ## Caffe2Settings
 ### Properties
-* **commandLineArgs**: string (WriteOnly):
-* **pythonInterpreterPath**: string (WriteOnly):
-* **pythonScriptFilePath**: string (Required, WriteOnly):
+* **commandLineArgs**: string (WriteOnly)
+* **pythonInterpreterPath**: string (WriteOnly)
+* **pythonScriptFilePath**: string (Required, WriteOnly)
 
 ## CaffeSettings
 ### Properties
-* **commandLineArgs**: string:
+* **commandLineArgs**: string
 * **configFilePath**: string: This property cannot be specified if pythonScriptFilePath is specified.
 * **processCount**: int: The default value for this property is equal to nodeCount property
 * **pythonInterpreterPath**: string: This property can be specified only if the pythonScriptFilePath is specified.
@@ -253,14 +253,14 @@
 
 ## ChainerSettings
 ### Properties
-* **commandLineArgs**: string:
+* **commandLineArgs**: string
 * **processCount**: int: The default value for this property is equal to nodeCount property
-* **pythonInterpreterPath**: string:
-* **pythonScriptFilePath**: string (Required):
+* **pythonInterpreterPath**: string
+* **pythonScriptFilePath**: string (Required)
 
 ## CNTKsettings
 ### Properties
-* **commandLineArgs**: string:
+* **commandLineArgs**: string
 * **configFilePath**: string: This property can be specified only if the languageType is 'BrainScript'.
 * **languageType**: string: Valid values are 'BrainScript' or 'Python'.
 * **processCount**: int: The default value for this property is equal to nodeCount property
@@ -278,30 +278,30 @@
 ## ImageSourceRegistry
 ### Properties
 * **credentials**: [PrivateRegistryCredentials](#privateregistrycredentials): Credentials to access a container image in a private repository.
-* **image**: string (Required):
-* **serverUrl**: string:
+* **image**: string (Required)
+* **serverUrl**: string
 
 ## PrivateRegistryCredentials
 ### Properties
 * **password**: string: One of password or passwordSecretReference must be specified.
 * **passwordSecretReference**: [KeyVaultSecretReference](#keyvaultsecretreference): Describes a reference to Key Vault Secret.
-* **username**: string (Required):
+* **username**: string (Required)
 
 ## CustomToolkitSettings
 ### Properties
-* **commandLine**: string:
+* **commandLine**: string
 
 ## schemas:29_executionInfo
 ### Properties
 * **endTime**: string (ReadOnly): This property is only returned if the job is in completed state.
-* **errors**: [BatchAIError](#batchaierror)[] (ReadOnly):
+* **errors**: [BatchAIError](#batchaierror)[] (ReadOnly)
 * **exitCode**: int (ReadOnly): This property is only returned if the job is in completed state.
 * **startTime**: string (ReadOnly): 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.
 
 ## InputDirectory
 ### Properties
 * **id**: string (Required): It will be available for the job as an environment variable under AZ_BATCHAI_INPUT_id. The service will also provide the following  environment variable: AZ_BATCHAI_PREV_OUTPUT_Name. The value of the variable will be populated if the job is being retried after a previous failure, otherwise it will be set to nothing.
-* **path**: string (Required):
+* **path**: string (Required)
 
 ## JobPreparation
 ### Properties
@@ -317,11 +317,11 @@
 
 ## TensorFlowSettings
 ### Properties
-* **masterCommandLineArgs**: string (Required):
+* **masterCommandLineArgs**: string (Required)
 * **parameterServerCommandLineArgs**: string: This property is optional for single machine training.
 * **parameterServerCount**: int: If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training (This property is not applicable for single machine training). This property can be specified only for distributed TensorFlow training.
-* **pythonInterpreterPath**: string:
-* **pythonScriptFilePath**: string (Required):
+* **pythonInterpreterPath**: string
+* **pythonScriptFilePath**: string (Required)
 * **workerCommandLineArgs**: string: This property is optional for single machine training.
 * **workerCount**: int: If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training
 

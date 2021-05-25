@@ -26,12 +26,12 @@
 ### Properties
 * **principalId**: string: Gets or sets the principal id.
 * **tenantId**: string: Gets or sets the tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned':
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
 
 ## MoveCollectionProperties
 ### Properties
 * **errors**: [schemas:18_errors](#schemas18errors) (ReadOnly): Defines the move collection errors.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating':
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
 * **sourceRegion**: string (Required): Gets or sets the source region.
 * **targetRegion**: string (Required): Gets or sets the target region.
 
@@ -59,7 +59,7 @@
 * **existingTargetId**: string: Gets or sets the existing target ARM Id of the resource.
 * **isResolveRequired**: bool (ReadOnly): Gets a value indicating whether the resolve action is required over the move collection.
 * **moveStatus**: [schemas:14_moveStatus](#schemas14movestatus) (ReadOnly): Defines the move resource status.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating':
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
 * **resourceSettings**: [ResourceSettings](#resourcesettings): Gets or sets the resource settings.
 * **sourceId**: string (Required): Gets or sets the Source ARM Id of the resource.
 * **sourceResourceSettings**: [ResourceSettings](#resourcesettings) (ReadOnly): Gets or sets the resource settings.
@@ -68,12 +68,12 @@
 ## MoveResourceDependency
 ### Properties
 * **automaticResolution**: [AutomaticResolutionProperties](#automaticresolutionproperties): Defines the properties for automatic resolution.
-* **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare':
+* **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare'
 * **id**: string: Gets the source ARM ID of the dependent resource.
 * **isOptional**: string: Gets or sets a value indicating whether the dependency is optional.
 * **manualResolution**: [ManualResolutionProperties](#manualresolutionproperties): Defines the properties for manual resolution.
 * **resolutionStatus**: string: Gets the dependency resolution status.
-* **resolutionType**: 'Automatic' | 'Manual':
+* **resolutionType**: 'Automatic' | 'Manual'
 
 ## AutomaticResolutionProperties
 ### Properties
@@ -98,7 +98,7 @@ the dependent resource.
 ### Properties
 * **errors**: [MoveResourceError](#moveresourceerror): An error response from the azure resource mover service.
 * **jobStatus**: [JobStatus](#jobstatus): Defines the job status.
-* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted':
+* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted'
 
 ## MoveResourceError
 ### Properties
@@ -106,7 +106,7 @@ the dependent resource.
 
 ## JobStatus
 ### Properties
-* **jobName**: 'InitialSync':
+* **jobName**: 'InitialSync'
 * **jobProgress**: string (ReadOnly): Gets or sets the monitoring job percentage.
 
 ## ResourceSettings
@@ -180,12 +180,12 @@ DDOS protection should be switched on.
 ### Microsoft.Sql/servers/databases
 #### Properties
 * **resourceType**: 'Microsoft.Sql/servers/databases' (Required): Defines the Sql Database resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable':
+* **zoneRedundant**: 'Disable' | 'Enable'
 
 ### Microsoft.Sql/servers/elasticPools
 #### Properties
 * **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): Defines the Sql ElasticPool resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable':
+* **zoneRedundant**: 'Disable' | 'Enable'
 
 ### resourceGroups
 #### Properties
@@ -336,12 +336,12 @@ DDOS protection should be switched on.
 ## Microsoft.Sql/servers/databases
 ### Properties
 * **resourceType**: 'Microsoft.Sql/servers/databases' (Required): Defines the Sql Database resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable':
+* **zoneRedundant**: 'Disable' | 'Enable'
 
 ## Microsoft.Sql/servers/elasticPools
 ### Properties
 * **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): Defines the Sql ElasticPool resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable':
+* **zoneRedundant**: 'Disable' | 'Enable'
 
 ## resourceGroups
 ### Properties

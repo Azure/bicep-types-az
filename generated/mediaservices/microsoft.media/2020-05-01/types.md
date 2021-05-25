@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [MediaServiceIdentity](#mediaserviceidentity):
+* **identity**: [MediaServiceIdentity](#mediaserviceidentity)
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MediaServiceProperties](#mediaserviceproperties): Properties of the Media Services account.
@@ -143,14 +143,14 @@
 
 ## MediaServiceProperties
 ### Properties
-* **encryption**: [AccountEncryption](#accountencryption):
+* **encryption**: [AccountEncryption](#accountencryption)
 * **mediaServiceId**: string (ReadOnly): The Media Services account ID.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
-* **storageAuthentication**: 'ManagedIdentity' | 'System':
+* **storageAuthentication**: 'ManagedIdentity' | 'System'
 
 ## AccountEncryption
 ### Properties
-* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **type**: 'CustomerKey' | 'SystemKey' (Required): The type of key used to encrypt the Account Key.
 
 ## KeyVaultProperties
@@ -245,7 +245,7 @@
 * **ask**: array (Required): The key that must be used as FairPlay Application Secret key.
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration):
+* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
 * **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
 * **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
 
@@ -275,7 +275,7 @@
 * **ask**: array (Required): The key that must be used as FairPlay Application Secret key.
 * **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 * **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration):
+* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
 * **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
 * **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
 

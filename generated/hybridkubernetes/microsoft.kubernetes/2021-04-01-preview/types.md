@@ -31,6 +31,7 @@
 * **managedIdentityCertificateExpirationTime**: string (ReadOnly): Expiration time of the managed identity certificate
 * **offering**: string (ReadOnly): Connected cluster offering
 * **privateLinkScopeResourceId**: string: The resource id of the private link scope this connected cluster is assigned to, if any.
+* **privateLinkState**: 'Disabled' | 'Enabled': Property which describes the state of private link on a connected cluster resource.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating': Provisioning state of the connected cluster resource.
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource

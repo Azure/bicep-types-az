@@ -15,7 +15,7 @@
 * **amount**: int (Required): The total amount of cost to track with the budget
 * **category**: 'Cost' | 'Usage' (Required): The category of the budget, whether the budget tracks cost or usage.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
-* **filters**: [Filters](#filters): May be used to filter budgets by resource group, resource, or meter.
+* **filter**: [Filter](#filter): May be used to filter budgets by user-specified dimensions and/or tags.
 * **notifications**: [Dictionary<string,Notification>](#dictionarystringnotification): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
 * **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain.
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
@@ -25,7 +25,7 @@
 * **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
 * **unit**: string (ReadOnly): The unit of measure for the budget amount.
 
-## Filters
+## Filter
 ### Properties
 * **meters**: string[]: The list of filters on meters (GUID), mandatory for budgets of usage category.
 * **resourceGroups**: string[]: The list of filters on resource groups, allowed at subscription level only.
@@ -44,12 +44,13 @@
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded.
-* **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded.
+* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+* **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator.
 * **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+* **thresholdType**: 'Actual': The type of threshold.
 
 ## BudgetTimePeriod
 ### Properties

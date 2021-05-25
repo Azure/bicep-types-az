@@ -1325,7 +1325,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
 * **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
-* **name**: string:
+* **name**: string
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -1536,13 +1536,13 @@ Setting is <code>false</code> by default.
 
 ## schemas:214_properties
 ### Properties
-* **biztalkUri**: string:
-* **entityConnectionString**: string:
-* **entityName**: string:
-* **hostname**: string:
-* **port**: int:
-* **resourceConnectionString**: string:
-* **resourceType**: string:
+* **biztalkUri**: string
+* **entityConnectionString**: string
+* **entityName**: string
+* **hostname**: string
+* **port**: int
+* **resourceConnectionString**: string
+* **resourceType**: string
 
 ## schemas:28_properties
 ### Properties
@@ -1617,7 +1617,7 @@ normally, use the POST /listKeys API instead.
 * **provisioningState**: string (ReadOnly): Provisioning state.
 * **published_date_time**: string (ReadOnly): Published timestamp.
 * **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly):
+* **title**: string (ReadOnly)
 * **version**: string (ReadOnly): Version information.
 
 ## Dictionary<string,String>

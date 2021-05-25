@@ -26,14 +26,14 @@
 
 ## AADBasedSecurityPrincipal
 ### Properties
-* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader':
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader'
 * **principalId**: string: UUID/GUID based Principal Id of the Security Principal
 * **tenantId**: string: UUID/GUID based Tenant Id of the Security Principal
 
 ## CertBasedSecurityPrincipal
 ### Properties
 * **cert**: string: Base64 encoded public key of the user cert (.pem or .cer)
-* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader':
+* **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader'
 
 ## systemData
 ### Properties

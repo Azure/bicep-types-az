@@ -23,12 +23,12 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: true
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1.7.2
+        uses: actions/setup-dotnet@v1.8.0
       
       - name: Build
         run: dotnet build --configuration release
@@ -47,7 +47,7 @@ jobs:
         run: dotnet test --configuration release --collect:"XPlat Code Coverage" --settings ./.github/workflows/codecov.runsettings
 
       - name: Upload Code Coverage
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           flags: dotnet
 

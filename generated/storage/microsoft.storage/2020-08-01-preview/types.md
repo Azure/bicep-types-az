@@ -126,7 +126,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [QueueProperties](#queueproperties):
+* **properties**: [QueueProperties](#queueproperties)
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices/queues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/tableServices@2020-08-01-preview
@@ -144,7 +144,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TableProperties](#tableproperties) (ReadOnly):
+* **properties**: [TableProperties](#tableproperties) (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ExtendedLocation
@@ -261,7 +261,7 @@
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None': Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
 * **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules
-* **resourceAccessRules**: [ResourceAccessRule](#resourceaccessrule)[]:
+* **resourceAccessRules**: [ResourceAccessRule](#resourceaccessrule)[]
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: Sets the virtual network rules
 
 ## IPRule
@@ -338,8 +338,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' (Required):
-* **tier**: 'Premium' | 'Standard':
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' (Required)
+* **tier**: 'Premium' | 'Standard'
 
 ## Dictionary<string,String>
 ### Properties

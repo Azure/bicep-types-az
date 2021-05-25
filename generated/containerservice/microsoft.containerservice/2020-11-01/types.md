@@ -9,7 +9,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of the managed cluster.
-* **sku**: [ManagedClusterSKU](#managedclustersku):
+* **sku**: [ManagedClusterSKU](#managedclustersku)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -77,7 +77,7 @@
 * **maxAgentPools**: int (ReadOnly): The max number of agent pools for the managed cluster.
 * **networkProfile**: [ContainerServiceNetworkProfile](#containerservicenetworkprofile): Profile of network configuration.
 * **nodeResourceGroup**: string: Name of the resource group containing agent pool nodes.
-* **podIdentityProfile**: [ManagedClusterPodIdentityProfile](#managedclusterpodidentityprofile):
+* **podIdentityProfile**: [ManagedClusterPodIdentityProfile](#managedclusterpodidentityprofile)
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
 * **privateFQDN**: string (ReadOnly): FQDN of private cluster.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
@@ -134,7 +134,7 @@
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.
+* **osDiskType**: 'Ephemeral' | 'Managed': OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
 * **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
@@ -224,22 +224,22 @@
 
 ## schemas:30_autoScalerProfile
 ### Properties
-* **balance-similar-node-groups**: string:
-* **expander**: 'least-waste' | 'most-pods' | 'random':
-* **max-empty-bulk-delete**: string:
-* **max-graceful-termination-sec**: string:
-* **max-total-unready-percentage**: string:
-* **new-pod-scale-up-delay**: string:
-* **ok-total-unready-count**: string:
-* **scale-down-delay-after-add**: string:
-* **scale-down-delay-after-delete**: string:
-* **scale-down-delay-after-failure**: string:
-* **scale-down-unneeded-time**: string:
-* **scale-down-unready-time**: string:
-* **scale-down-utilization-threshold**: string:
-* **scan-interval**: string:
-* **skip-nodes-with-local-storage**: string:
-* **skip-nodes-with-system-pods**: string:
+* **balance-similar-node-groups**: string
+* **expander**: 'least-waste' | 'most-pods' | 'random'
+* **max-empty-bulk-delete**: string
+* **max-graceful-termination-sec**: string
+* **max-total-unready-percentage**: string
+* **new-pod-scale-up-delay**: string
+* **ok-total-unready-count**: string
+* **scale-down-delay-after-add**: string
+* **scale-down-delay-after-delete**: string
+* **scale-down-delay-after-failure**: string
+* **scale-down-unneeded-time**: string
+* **scale-down-unready-time**: string
+* **scale-down-utilization-threshold**: string
+* **scan-interval**: string
+* **skip-nodes-with-local-storage**: string
+* **skip-nodes-with-system-pods**: string
 
 ## ManagedClusterAutoUpgradeProfile
 ### Properties
@@ -309,10 +309,10 @@
 
 ## ManagedClusterPodIdentity
 ### Properties
-* **identity**: [UserAssignedIdentity](#userassignedidentity) (Required):
+* **identity**: [UserAssignedIdentity](#userassignedidentity) (Required)
 * **name**: string (Required): Name of the pod identity.
 * **namespace**: string (Required): Namespace of the pod identity.
-* **provisioningInfo**: [schemas:42_provisioningInfo](#schemas42provisioninginfo) (ReadOnly):
+* **provisioningInfo**: [schemas:42_provisioningInfo](#schemas42provisioninginfo) (ReadOnly)
 * **provisioningState**: 'Assigned' | 'Deleting' | 'Failed' | 'Updating' (ReadOnly): The current provisioning state of the pod identity.
 
 ## UserAssignedIdentity
@@ -370,7 +370,7 @@
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.
+* **osDiskType**: 'Ephemeral' | 'Managed': OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
 * **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster

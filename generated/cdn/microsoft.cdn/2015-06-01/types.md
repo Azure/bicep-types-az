@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Profile location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ProfilePropertiesCreateParameters](#profilepropertiescreateparameters):
+* **properties**: [ProfilePropertiesCreateParameters](#profilepropertiescreateparameters)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Profile tags
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Endpoint location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EndpointPropertiesCreateParameters](#endpointpropertiescreateparameters):
+* **properties**: [EndpointPropertiesCreateParameters](#endpointpropertiescreateparameters)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Endpoint tags
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters):
+* **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cdn/profiles/endpoints/origins@2015-06-01
@@ -37,7 +37,7 @@
 * **apiVersion**: '2015-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OriginPropertiesParameters](#originpropertiesparameters):
+* **properties**: [OriginPropertiesParameters](#originpropertiesparameters)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProfilePropertiesCreateParameters

@@ -192,7 +192,7 @@
 
 ## RecommendationConfigurationProperties
 ### Properties
-* **name**: string (ReadOnly):
+* **name**: string (ReadOnly)
 * **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The recommendation type.
 * **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. The recommendation is not generated when the status is disabled.
 

@@ -818,7 +818,7 @@ the app's object when it is being restored, but that might fail due to conflicts
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
 * **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
-* **name**: string:
+* **name**: string
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -1142,13 +1142,13 @@ Setting is <code>false</code> by default.
 
 ## schemas:48_properties
 ### Properties
-* **biztalkUri**: string:
-* **entityConnectionString**: string:
-* **entityName**: string:
-* **hostname**: string:
-* **port**: int:
-* **resourceConnectionString**: string:
-* **resourceType**: string:
+* **biztalkUri**: string
+* **entityConnectionString**: string
+* **entityName**: string
+* **hostname**: string
+* **port**: int
+* **resourceConnectionString**: string
+* **resourceType**: string
 
 ## schemas:107_properties
 ### Properties

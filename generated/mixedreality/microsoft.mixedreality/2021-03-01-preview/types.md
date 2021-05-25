@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:15_identity](#schemas15identity):
+* **identity**: [schemas:15_identity](#schemas15identity)
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties): Common Properties shared by Mixed Reality Accounts

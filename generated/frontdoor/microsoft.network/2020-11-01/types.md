@@ -20,7 +20,7 @@
 * **managedRules**: [ManagedRuleSetList](#managedrulesetlist): Defines the list of managed rule sets for the policy.
 * **policySettings**: [PolicySettings](#policysettings): Defines top-level WebApplicationFirewallPolicy configuration settings.
 * **provisioningState**: string (ReadOnly): Provisioning state of the policy.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly):
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 * **routingRuleLinks**: [RoutingRuleLink](#routingrulelink)[] (ReadOnly): Describes Routing Rules associated with this Web Application Firewall policy.
 * **securityPolicyLinks**: [SecurityPolicyLink](#securitypolicylink)[] (ReadOnly): Describes Security Policy associated with this Web Application Firewall policy.
 
@@ -60,7 +60,7 @@
 ### Properties
 * **exclusions**: [ManagedRuleExclusion](#managedruleexclusion)[]: Describes the exclusions that are applied to all rules in the set.
 * **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule group overrides to apply to the rule set.
-* **ruleSetAction**: 'Block' | 'Log' | 'Redirect':
+* **ruleSetAction**: 'Block' | 'Log' | 'Redirect'
 * **ruleSetType**: string (Required): Defines the rule set type to use.
 * **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
 

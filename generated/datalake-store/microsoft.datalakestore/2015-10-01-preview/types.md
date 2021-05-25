@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2015-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [EncryptionIdentity](#encryptionidentity):
+* **identity**: [EncryptionIdentity](#encryptionidentity)
 * **location**: string: the account regional location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataLakeStoreAccountProperties](#datalakestoreaccountproperties): Data Lake Store account properties information
@@ -32,7 +32,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly): the account creation time.
 * **defaultGroup**: string: the default owner group for all new folders and files created in the Data Lake Store account.
-* **encryptionConfig**: [EncryptionConfig](#encryptionconfig):
+* **encryptionConfig**: [EncryptionConfig](#encryptionconfig)
 * **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake store account.
 * **encryptionState**: 'Disabled' | 'Enabled': The current state of encryption for this Data Lake store account.
 * **endpoint**: string: the gateway host.
@@ -42,7 +42,7 @@
 
 ## EncryptionConfig
 ### Properties
-* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo):
+* **keyVaultMetaInfo**: [KeyVaultMetaInfo](#keyvaultmetainfo)
 * **type**: 'ServiceManaged' | 'UserManaged': The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
 
 ## KeyVaultMetaInfo

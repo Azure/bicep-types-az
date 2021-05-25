@@ -8,7 +8,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -20,7 +20,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/csrs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -32,7 +32,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,7 +44,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **sku**: [SkuDescription](#skudescription): Describes a sku for a scalable resource
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/hostingEnvironments/multiRolePools' (ReadOnly, DeployTimeConstant): The resource type
@@ -57,7 +57,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **sku**: [SkuDescription](#skudescription): Describes a sku for a scalable resource
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/hostingEnvironments/workerPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -70,7 +70,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/managedHostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -82,7 +82,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,7 +94,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **sku**: [SkuDescription](#skudescription): Describes a sku for a scalable resource
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
@@ -107,7 +107,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -119,7 +119,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -131,7 +131,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -143,7 +143,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'discover' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/backups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -164,7 +164,7 @@
 
 ### Microsoft.Web/sites/config
 #### Properties
-* **aadClientId**: string:
+* **aadClientId**: string
 * **additionalLoginParams**: string[]: Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
             a user logs in. Each parameter must be in the form "key=value".
 * **allowedAudiences**: string[]: Gets or sets a list of allowed audience values to consider when validating JWTs issued by
@@ -222,7 +222,7 @@
             This setting is optional. If not specified, "wl.basic" is used as the default scope.
             Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **openIdIssuer**: string:
+* **openIdIssuer**: string
 * **tokenRefreshExtensionHours**: int: Gets or sets the number of hours after session token expiration that a session token can be used to
             call the token refresh API. The default is 72 hours.
 * **tokenStoreEnabled**: bool: Gets or sets a value indicating whether to durably store platform-specific security tokens
@@ -243,7 +243,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -265,7 +265,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -287,7 +287,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -298,7 +298,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -311,7 +311,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -323,7 +323,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/hostNameBindings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -335,7 +335,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/hybridconnection' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -347,7 +347,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/instances/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -359,7 +359,7 @@
 * **location**: string: Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ArmPlan](#armplan): The plan object in an ARM, represents a marketplace plan
-* **properties**: any:
+* **properties**: any
 * **sku**: [SkuDescription](#skudescription): Describes a sku for a scalable resource
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags associated with resource
 * **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
@@ -372,7 +372,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -384,7 +384,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'discover' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/backups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -405,7 +405,7 @@
 
 ### Microsoft.Web/sites/slots/config
 #### Properties
-* **aadClientId**: string:
+* **aadClientId**: string
 * **additionalLoginParams**: string[]: Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
             a user logs in. Each parameter must be in the form "key=value".
 * **allowedAudiences**: string[]: Gets or sets a list of allowed audience values to consider when validating JWTs issued by
@@ -463,7 +463,7 @@
             This setting is optional. If not specified, "wl.basic" is used as the default scope.
             Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **openIdIssuer**: string:
+* **openIdIssuer**: string
 * **tokenRefreshExtensionHours**: int: Gets or sets the number of hours after session token expiration that a session token can be used to
             call the token refresh API. The default is 72 hours.
 * **tokenStoreEnabled**: bool: Gets or sets a value indicating whether to durably store platform-specific security tokens
@@ -484,7 +484,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -506,7 +506,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -528,7 +528,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -541,7 +541,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -553,7 +553,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/hostNameBindings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -565,7 +565,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/hybridconnection' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -577,7 +577,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/instances/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -589,7 +589,7 @@
 * **location**: string: Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ArmPlan](#armplan): The plan object in an ARM, represents a marketplace plan
-* **properties**: any:
+* **properties**: any
 * **sku**: [SkuDescription](#skudescription): Describes a sku for a scalable resource
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags associated with resource
 * **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
@@ -602,7 +602,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -614,7 +614,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -626,7 +626,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -638,7 +638,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -650,7 +650,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -662,7 +662,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -674,7 +674,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -775,7 +775,7 @@
 
 ## Microsoft.Web/sites/config
 ### Properties
-* **aadClientId**: string:
+* **aadClientId**: string
 * **additionalLoginParams**: string[]: Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
             a user logs in. Each parameter must be in the form "key=value".
 * **allowedAudiences**: string[]: Gets or sets a list of allowed audience values to consider when validating JWTs issued by
@@ -833,7 +833,7 @@
             This setting is optional. If not specified, "wl.basic" is used as the default scope.
             Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **openIdIssuer**: string:
+* **openIdIssuer**: string
 * **tokenRefreshExtensionHours**: int: Gets or sets the number of hours after session token expiration that a session token can be used to
             call the token refresh API. The default is 72 hours.
 * **tokenStoreEnabled**: bool: Gets or sets a value indicating whether to durably store platform-specific security tokens
@@ -854,7 +854,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -896,7 +896,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -933,7 +933,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -949,7 +949,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1024,7 +1024,7 @@
 
 ## Microsoft.Web/sites/slots/config
 ### Properties
-* **aadClientId**: string:
+* **aadClientId**: string
 * **additionalLoginParams**: string[]: Gets or sets a list of login parameters to send to the OpenID Connect authorization endpoint when
             a user logs in. Each parameter must be in the form "key=value".
 * **allowedAudiences**: string[]: Gets or sets a list of allowed audience values to consider when validating JWTs issued by
@@ -1082,7 +1082,7 @@
             This setting is optional. If not specified, "wl.basic" is used as the default scope.
             Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **openIdIssuer**: string:
+* **openIdIssuer**: string
 * **tokenRefreshExtensionHours**: int: Gets or sets the number of hours after session token expiration that a session token can be used to
             call the token refresh API. The default is 72 hours.
 * **tokenStoreEnabled**: bool: Gets or sets a value indicating whether to durably store platform-specific security tokens
@@ -1103,7 +1103,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1140,7 +1140,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1177,7 +1177,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 

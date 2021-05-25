@@ -91,7 +91,7 @@
 
 ## CacheExpirationActionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' (Required): Caching behavior for the requests that include query strings.
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
 * **cacheType**: string (Required): The level at which the content needs to be cached.
@@ -117,7 +117,7 @@
 
 ## UrlFileExtensionConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **extensions**: string[] (Required): A list of extensions for the condition of the delivery rule.
 
 ## UrlPath
@@ -127,7 +127,7 @@
 
 ## UrlPathConditionParameters
 ### Properties
-* **@odata.type**: string (Required):
+* **@odata.type**: string (Required)
 * **matchType**: 'Literal' | 'Wildcard' (Required): The match type for the condition of the delivery rule.
 * **path**: string (Required): A URL path for the condition of the delivery rule
 

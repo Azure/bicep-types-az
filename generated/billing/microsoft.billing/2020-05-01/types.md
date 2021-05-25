@@ -62,6 +62,7 @@
 * **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
 * **systemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of billing profiles.
 * **targetClouds**: 'USGov' | 'USNat' | 'USSec'[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## AddressDetails
@@ -76,6 +77,7 @@
 * **email**: string: Email address.
 * **firstName**: string: First name.
 * **lastName**: string: Last name.
+* **middleName**: string: Middle name.
 * **phoneNumber**: string: Phone number.
 * **postalCode**: string: Postal code.
 * **region**: string: Address region.
@@ -110,6 +112,11 @@
 * **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
 * **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Dictionary<string,String>
 ### Properties

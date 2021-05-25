@@ -1026,7 +1026,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## schemas:22_error
 ### Properties
 * **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **details**: [schemas:22_error_detailsItem](#schemas22errordetailsitem)[] (ReadOnly):
+* **details**: [schemas:22_error_detailsItem](#schemas22errordetailsitem)[] (ReadOnly)
 * **innererror**: string (ReadOnly): More information to debug error.
 * **message**: string (ReadOnly): Detailed error description and debugging information.
 * **target**: string (ReadOnly): Detailed error description and debugging information.
@@ -1543,11 +1543,11 @@ application used for sign-in.
 
 ## schemas:252_properties
 ### Properties
-* **globalValidation**: [GlobalValidation](#globalvalidation):
-* **httpSettings**: [HttpSettings](#httpsettings):
-* **identityProviders**: [IdentityProviders](#identityproviders):
-* **login**: [Login](#login):
-* **platform**: [AuthPlatform](#authplatform):
+* **globalValidation**: [GlobalValidation](#globalvalidation)
+* **httpSettings**: [HttpSettings](#httpsettings)
+* **identityProviders**: [IdentityProviders](#identityproviders)
+* **login**: [Login](#login)
+* **platform**: [AuthPlatform](#authplatform)
 
 ## GlobalValidation
 ### Properties
@@ -1560,10 +1560,10 @@ application used for sign-in.
 
 ## schemas:196_properties
 ### Properties
-* **excludedPaths**: string[]:
-* **redirectToProvider**: string:
-* **requireAuthentication**: bool:
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403':
+* **excludedPaths**: string[]
+* **redirectToProvider**: string
+* **requireAuthentication**: bool
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403'
 
 ## HttpSettings
 ### Properties
@@ -1576,9 +1576,9 @@ application used for sign-in.
 
 ## schemas:202_properties
 ### Properties
-* **forwardProxy**: [ForwardProxy](#forwardproxy):
-* **requireHttps**: bool:
-* **routes**: [HttpSettingsRoutes](#httpsettingsroutes):
+* **forwardProxy**: [ForwardProxy](#forwardproxy)
+* **requireHttps**: bool
+* **routes**: [HttpSettingsRoutes](#httpsettingsroutes)
 
 ## ForwardProxy
 ### Properties
@@ -1591,9 +1591,9 @@ application used for sign-in.
 
 ## schemas:191_properties
 ### Properties
-* **convention**: 'Custom' | 'NoProxy' | 'Standard':
-* **customHostHeaderName**: string:
-* **customProtoHeaderName**: string:
+* **convention**: 'Custom' | 'NoProxy' | 'Standard'
+* **customHostHeaderName**: string
+* **customProtoHeaderName**: string
 
 ## HttpSettingsRoutes
 ### Properties
@@ -1606,7 +1606,7 @@ application used for sign-in.
 
 ## schemas:203_properties
 ### Properties
-* **apiPrefix**: string:
+* **apiPrefix**: string
 
 ## IdentityProviders
 ### Properties
@@ -1619,12 +1619,12 @@ application used for sign-in.
 
 ## schemas:204_properties
 ### Properties
-* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory):
-* **customOpenIdConnectProviders**: [Dictionary<string,CustomOpenIdConnectProvider>](#dictionarystringcustomopenidconnectprovider):
-* **facebook**: [Facebook](#facebook):
-* **gitHub**: [GitHub](#github):
-* **google**: [Google](#google):
-* **twitter**: [Twitter](#twitter):
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
+* **customOpenIdConnectProviders**: [Dictionary<string,CustomOpenIdConnectProvider>](#dictionarystringcustomopenidconnectprovider)
+* **facebook**: [Facebook](#facebook)
+* **gitHub**: [GitHub](#github)
+* **google**: [Google](#google)
+* **twitter**: [Twitter](#twitter)
 
 ## AzureActiveDirectory
 ### Properties
@@ -1637,11 +1637,11 @@ application used for sign-in.
 
 ## schemas:148_properties
 ### Properties
-* **enabled**: bool:
-* **isAutoProvisioned**: bool:
-* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin):
-* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration):
-* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation):
+* **enabled**: bool
+* **isAutoProvisioned**: bool
+* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin)
+* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration)
+* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation)
 
 ## AzureActiveDirectoryLogin
 ### Properties
@@ -1654,8 +1654,8 @@ application used for sign-in.
 
 ## schemas:149_properties
 ### Properties
-* **disableWWWAuthenticate**: bool:
-* **loginParameters**: string[]:
+* **disableWWWAuthenticate**: bool
+* **loginParameters**: string[]
 
 ## AzureActiveDirectoryRegistration
 ### Properties
@@ -1668,10 +1668,10 @@ application used for sign-in.
 
 ## schemas:150_properties
 ### Properties
-* **clientId**: string:
-* **clientSecretCertificateThumbprint**: string:
-* **clientSecretSettingName**: string:
-* **openIdIssuer**: string:
+* **clientId**: string
+* **clientSecretCertificateThumbprint**: string
+* **clientSecretSettingName**: string
+* **openIdIssuer**: string
 
 ## AzureActiveDirectoryValidation
 ### Properties
@@ -1684,8 +1684,8 @@ application used for sign-in.
 
 ## schemas:151_properties
 ### Properties
-* **allowedAudiences**: string[]:
-* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks):
+* **allowedAudiences**: string[]
+* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks)
 
 ## JwtClaimChecks
 ### Properties
@@ -1698,8 +1698,8 @@ application used for sign-in.
 
 ## schemas:205_properties
 ### Properties
-* **allowedClientApplications**: string[]:
-* **allowedGroups**: string[]:
+* **allowedClientApplications**: string[]
+* **allowedGroups**: string[]
 
 ## Dictionary<string,CustomOpenIdConnectProvider>
 ### Properties
@@ -1717,9 +1717,9 @@ application used for sign-in.
 
 ## schemas:181_properties
 ### Properties
-* **enabled**: bool:
-* **login**: [OpenIdConnectLogin](#openidconnectlogin):
-* **registration**: [OpenIdConnectRegistration](#openidconnectregistration):
+* **enabled**: bool
+* **login**: [OpenIdConnectLogin](#openidconnectlogin)
+* **registration**: [OpenIdConnectRegistration](#openidconnectregistration)
 
 ## OpenIdConnectLogin
 ### Properties
@@ -1732,8 +1732,8 @@ application used for sign-in.
 
 ## schemas:222_properties
 ### Properties
-* **nameClaimType**: string:
-* **scopes**: string[]:
+* **nameClaimType**: string
+* **scopes**: string[]
 
 ## OpenIdConnectRegistration
 ### Properties
@@ -1746,9 +1746,9 @@ application used for sign-in.
 
 ## schemas:223_properties
 ### Properties
-* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential):
-* **clientId**: string:
-* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig):
+* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential)
+* **clientId**: string
+* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig)
 
 ## OpenIdConnectClientCredential
 ### Properties
@@ -1761,8 +1761,8 @@ application used for sign-in.
 
 ## schemas:220_properties
 ### Properties
-* **clientSecretSettingName**: string:
-* **method**: 'ClientSecretPost':
+* **clientSecretSettingName**: string
+* **method**: 'ClientSecretPost'
 
 ## OpenIdConnectConfig
 ### Properties
@@ -1775,11 +1775,11 @@ application used for sign-in.
 
 ## schemas:221_properties
 ### Properties
-* **authorizationEndpoint**: string:
-* **certificationUri**: string:
-* **issuer**: string:
-* **tokenEndpoint**: string:
-* **wellKnownOpenIdConfiguration**: string:
+* **authorizationEndpoint**: string
+* **certificationUri**: string
+* **issuer**: string
+* **tokenEndpoint**: string
+* **wellKnownOpenIdConfiguration**: string
 
 ## Facebook
 ### Properties
@@ -1792,10 +1792,10 @@ application used for sign-in.
 
 ## schemas:187_properties
 ### Properties
-* **enabled**: bool:
-* **graphApiVersion**: string:
-* **login**: [LoginScopes](#loginscopes):
-* **registration**: [AppRegistration](#appregistration):
+* **enabled**: bool
+* **graphApiVersion**: string
+* **login**: [LoginScopes](#loginscopes)
+* **registration**: [AppRegistration](#appregistration)
 
 ## LoginScopes
 ### Properties
@@ -1808,7 +1808,7 @@ application used for sign-in.
 
 ## schemas:209_properties
 ### Properties
-* **scopes**: string[]:
+* **scopes**: string[]
 
 ## AppRegistration
 ### Properties
@@ -1821,8 +1821,8 @@ application used for sign-in.
 
 ## schemas:145_properties
 ### Properties
-* **appId**: string:
-* **appSecretSettingName**: string:
+* **appId**: string
+* **appSecretSettingName**: string
 
 ## GitHub
 ### Properties
@@ -1835,9 +1835,9 @@ application used for sign-in.
 
 ## schemas:195_properties
 ### Properties
-* **enabled**: bool:
-* **login**: [LoginScopes](#loginscopes):
-* **registration**: [ClientRegistration](#clientregistration):
+* **enabled**: bool
+* **login**: [LoginScopes](#loginscopes)
+* **registration**: [ClientRegistration](#clientregistration)
 
 ## ClientRegistration
 ### Properties
@@ -1850,8 +1850,8 @@ application used for sign-in.
 
 ## schemas:163_properties
 ### Properties
-* **clientId**: string:
-* **clientSecretSettingName**: string:
+* **clientId**: string
+* **clientSecretSettingName**: string
 
 ## Google
 ### Properties
@@ -1864,10 +1864,10 @@ application used for sign-in.
 
 ## schemas:197_properties
 ### Properties
-* **enabled**: bool:
-* **login**: [LoginScopes](#loginscopes):
-* **registration**: [ClientRegistration](#clientregistration):
-* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation):
+* **enabled**: bool
+* **login**: [LoginScopes](#loginscopes)
+* **registration**: [ClientRegistration](#clientregistration)
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
 
 ## AllowedAudiencesValidation
 ### Properties
@@ -1880,7 +1880,7 @@ application used for sign-in.
 
 ## schemas:144_properties
 ### Properties
-* **allowedAudiences**: string[]:
+* **allowedAudiences**: string[]
 
 ## Twitter
 ### Properties
@@ -1893,8 +1893,8 @@ application used for sign-in.
 
 ## schemas:281_properties
 ### Properties
-* **enabled**: bool:
-* **registration**: [TwitterRegistration](#twitterregistration):
+* **enabled**: bool
+* **registration**: [TwitterRegistration](#twitterregistration)
 
 ## TwitterRegistration
 ### Properties
@@ -1907,8 +1907,8 @@ application used for sign-in.
 
 ## schemas:282_properties
 ### Properties
-* **consumerKey**: string:
-* **consumerSecretSettingName**: string:
+* **consumerKey**: string
+* **consumerSecretSettingName**: string
 
 ## Login
 ### Properties
@@ -1921,12 +1921,12 @@ application used for sign-in.
 
 ## schemas:207_properties
 ### Properties
-* **allowedExternalRedirectUrls**: string[]:
-* **cookieExpiration**: [CookieExpiration](#cookieexpiration):
-* **nonce**: [Nonce](#nonce):
-* **preserveUrlFragmentsForLogins**: bool:
-* **routes**: [LoginRoutes](#loginroutes):
-* **tokenStore**: [TokenStore](#tokenstore):
+* **allowedExternalRedirectUrls**: string[]
+* **cookieExpiration**: [CookieExpiration](#cookieexpiration)
+* **nonce**: [Nonce](#nonce)
+* **preserveUrlFragmentsForLogins**: bool
+* **routes**: [LoginRoutes](#loginroutes)
+* **tokenStore**: [TokenStore](#tokenstore)
 
 ## CookieExpiration
 ### Properties
@@ -1939,8 +1939,8 @@ application used for sign-in.
 
 ## schemas:174_properties
 ### Properties
-* **convention**: 'FixedTime' | 'IdentityProviderDerived':
-* **timeToExpiration**: string:
+* **convention**: 'FixedTime' | 'IdentityProviderDerived'
+* **timeToExpiration**: string
 
 ## Nonce
 ### Properties
@@ -1953,8 +1953,8 @@ application used for sign-in.
 
 ## schemas:219_properties
 ### Properties
-* **nonceExpirationInterval**: string:
-* **validateNonce**: bool:
+* **nonceExpirationInterval**: string
+* **validateNonce**: bool
 
 ## LoginRoutes
 ### Properties
@@ -1967,7 +1967,7 @@ application used for sign-in.
 
 ## schemas:208_properties
 ### Properties
-* **logoutEndpoint**: string:
+* **logoutEndpoint**: string
 
 ## TokenStore
 ### Properties
@@ -1980,10 +1980,10 @@ application used for sign-in.
 
 ## schemas:275_properties
 ### Properties
-* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore):
-* **enabled**: bool:
-* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore):
-* **tokenRefreshExtensionHours**: int:
+* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore)
+* **enabled**: bool
+* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore)
+* **tokenRefreshExtensionHours**: int
 
 ## BlobStorageTokenStore
 ### Properties
@@ -1996,7 +1996,7 @@ application used for sign-in.
 
 ## schemas:162_properties
 ### Properties
-* **sasUrlSettingName**: string:
+* **sasUrlSettingName**: string
 
 ## FileSystemTokenStore
 ### Properties
@@ -2009,7 +2009,7 @@ application used for sign-in.
 
 ## schemas:190_properties
 ### Properties
-* **directory**: string:
+* **directory**: string
 
 ## AuthPlatform
 ### Properties
@@ -2022,9 +2022,9 @@ application used for sign-in.
 
 ## schemas:147_properties
 ### Properties
-* **configFilePath**: string:
-* **enabled**: bool:
-* **runtimeVersion**: string:
+* **configFilePath**: string
+* **enabled**: bool
+* **runtimeVersion**: string
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -2083,7 +2083,7 @@ application used for sign-in.
 * **connectionStringName**: string: Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.
 * **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
-* **name**: string:
+* **name**: string
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -2300,13 +2300,13 @@ Setting is <code>false</code> by default.
 
 ## schemas:248_properties
 ### Properties
-* **biztalkUri**: string:
-* **entityConnectionString**: string:
-* **entityName**: string:
-* **hostname**: string:
-* **port**: int:
-* **resourceConnectionString**: string:
-* **resourceType**: string:
+* **biztalkUri**: string
+* **entityConnectionString**: string
+* **entityName**: string
+* **hostname**: string
+* **port**: int
+* **resourceConnectionString**: string
+* **resourceType**: string
 
 ## schemas:30_properties
 ### Properties
@@ -2359,11 +2359,11 @@ normally, use the POST /listKeys API instead.
 ### Properties
 * **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): A wrapper for an ARM resource id
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
-* **provisioningState**: string (ReadOnly):
+* **provisioningState**: string (ReadOnly)
 
 ## ArmIdWrapper
 ### Properties
-* **id**: string (ReadOnly):
+* **id**: string (ReadOnly)
 
 ## PrivateLinkConnectionState
 ### Properties
@@ -2397,7 +2397,7 @@ normally, use the POST /listKeys API instead.
 * **provisioningState**: string (ReadOnly): Provisioning state.
 * **published_date_time**: string (ReadOnly): Published timestamp.
 * **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly):
+* **title**: string (ReadOnly)
 * **version**: string (ReadOnly): Version information.
 
 ## Dictionary<string,String>

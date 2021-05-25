@@ -170,7 +170,7 @@
 * **managedRules**: [ManagedRuleSets](#managedrulesets): Defines ManagedRuleSets - array of managedRuleSet
 * **policySettings**: [policySettings](#policysettings): Defines contents of a web application firewall global configuration
 * **provisioningState**: string (ReadOnly): Provisioning state of the WebApplicationFirewallPolicy.
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly):
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly)
 
 ## CustomRules
 ### Properties

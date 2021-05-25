@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2019-12-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:7_identity](#schemas7identity):
+* **identity**: [schemas:7_identity](#schemas7identity)
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [schemas:7_properties](#schemas7properties): Hybrid Compute Machine properties

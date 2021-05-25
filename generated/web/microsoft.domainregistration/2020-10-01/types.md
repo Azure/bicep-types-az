@@ -26,7 +26,7 @@
 
 ## schemas:2_properties
 ### Properties
-* **authCode**: string:
+* **authCode**: string
 * **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
 * **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required): Domain purchase consent object, representing acceptance of applicable legal agreements.
 * **contactAdmin**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois

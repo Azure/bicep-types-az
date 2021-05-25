@@ -60,26 +60,26 @@
 
 ## AndroidMAMPolicyProperties
 ### Properties
-* **accessRecheckOfflineTimeout**: string:
-* **accessRecheckOnlineTimeout**: string:
-* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps':
-* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps':
-* **authentication**: 'notRequired' | 'required':
-* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn':
-* **dataBackup**: 'allow' | 'block':
-* **description**: string:
-* **deviceCompliance**: 'disable' | 'enable':
-* **fileEncryption**: 'notRequired' | 'required':
-* **fileSharingSaveAs**: 'allow' | 'block':
-* **friendlyName**: string (Required):
-* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly):
-* **lastModifiedTime**: string (ReadOnly):
-* **managedBrowser**: 'notRequired' | 'required':
-* **numOfApps**: int (ReadOnly):
-* **offlineWipeTimeout**: string:
-* **pin**: 'notRequired' | 'required':
-* **pinNumRetry**: int:
-* **screenCapture**: 'allow' | 'block':
+* **accessRecheckOfflineTimeout**: string
+* **accessRecheckOnlineTimeout**: string
+* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps'
+* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps'
+* **authentication**: 'notRequired' | 'required'
+* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn'
+* **dataBackup**: 'allow' | 'block'
+* **description**: string
+* **deviceCompliance**: 'disable' | 'enable'
+* **fileEncryption**: 'notRequired' | 'required'
+* **fileSharingSaveAs**: 'allow' | 'block'
+* **friendlyName**: string (Required)
+* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **managedBrowser**: 'notRequired' | 'required'
+* **numOfApps**: int (ReadOnly)
+* **offlineWipeTimeout**: string
+* **pin**: 'notRequired' | 'required'
+* **pinNumRetry**: int
+* **screenCapture**: 'allow' | 'block'
 
 ## Dictionary<string,String>
 ### Properties
@@ -88,30 +88,30 @@
 
 ## MAMPolicyAppOrGroupIdProperties
 ### Properties
-* **url**: string (Required):
+* **url**: string (Required)
 
 ## iOSMAMPolicyProperties
 ### Properties
-* **accessRecheckOfflineTimeout**: string:
-* **accessRecheckOnlineTimeout**: string:
-* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps':
-* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps':
-* **authentication**: 'notRequired' | 'required':
-* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn':
-* **dataBackup**: 'allow' | 'block':
-* **description**: string:
-* **deviceCompliance**: 'disable' | 'enable':
-* **fileEncryptionLevel**: 'afterDeviceRestart' | 'deviceLocked' | 'deviceLockedExceptFilesOpen' | 'useDeviceSettings':
-* **fileSharingSaveAs**: 'allow' | 'block':
-* **friendlyName**: string (Required):
-* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly):
-* **lastModifiedTime**: string (ReadOnly):
-* **managedBrowser**: 'notRequired' | 'required':
-* **numOfApps**: int (ReadOnly):
-* **offlineWipeTimeout**: string:
-* **pin**: 'notRequired' | 'required':
-* **pinNumRetry**: int:
-* **touchId**: 'disable' | 'enable':
+* **accessRecheckOfflineTimeout**: string
+* **accessRecheckOnlineTimeout**: string
+* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps'
+* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps'
+* **authentication**: 'notRequired' | 'required'
+* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn'
+* **dataBackup**: 'allow' | 'block'
+* **description**: string
+* **deviceCompliance**: 'disable' | 'enable'
+* **fileEncryptionLevel**: 'afterDeviceRestart' | 'deviceLocked' | 'deviceLockedExceptFilesOpen' | 'useDeviceSettings'
+* **fileSharingSaveAs**: 'allow' | 'block'
+* **friendlyName**: string (Required)
+* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly)
+* **lastModifiedTime**: string (ReadOnly)
+* **managedBrowser**: 'notRequired' | 'required'
+* **numOfApps**: int (ReadOnly)
+* **offlineWipeTimeout**: string
+* **pin**: 'notRequired' | 'required'
+* **pinNumRetry**: int
+* **touchId**: 'disable' | 'enable'
 
 ## Dictionary<string,String>
 ### Properties

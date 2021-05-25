@@ -28,7 +28,7 @@
 * **apiVersion**: '2018-08-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccessPolicyResourceProperties](#accesspolicyresourceproperties) (Required):
+* **properties**: [AccessPolicyResourceProperties](#accesspolicyresourceproperties) (Required)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TimeSeriesInsights/environments/eventSources@2018-08-15-preview

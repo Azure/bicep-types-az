@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:11_properties](#schemas11properties) (Required):
+* **properties**: [schemas:11_properties](#schemas11properties) (Required)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 

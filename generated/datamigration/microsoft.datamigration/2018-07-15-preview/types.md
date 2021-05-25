@@ -330,7 +330,7 @@
 ### Migrate.MongoDb
 #### Properties
 * **input**: [MongoDbMigrationSettings](#mongodbmigrationsettings): Describes how a MongoDB data migration should be performed
-* **output**: [MongoDbProgress](#mongodbprogress)[] (ReadOnly):
+* **output**: [MongoDbProgress](#mongodbprogress)[] (ReadOnly)
 * **taskType**: 'Migrate.MongoDb' (Required): Properties for the task that migrates data between MongoDB data sources
 
 ### Migrate.MySql.AzureDbForMySql.Sync
@@ -683,7 +683,7 @@
 * **lastExecutedOn**: string (ReadOnly): UTC Date and time when the Agent Job was last executed.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Agent Job name
-* **resultType**: 'AgentJobLevelOutput' (Required):
+* **resultType**: 'AgentJobLevelOutput' (Required)
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
 ### DatabaseLevelOutput
@@ -694,7 +694,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -707,7 +707,7 @@
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required):
+* **resultType**: 'LoginLevelOutput' (Required)
 
 ### TaskLevelOutput
 #### Properties
@@ -729,7 +729,7 @@
 * **lastExecutedOn**: string (ReadOnly): UTC Date and time when the Agent Job was last executed.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Agent Job name
-* **resultType**: 'AgentJobLevelOutput' (Required):
+* **resultType**: 'AgentJobLevelOutput' (Required)
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
 ## MigrationEligibilityInfo
@@ -745,7 +745,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -758,7 +758,7 @@
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required):
+* **resultType**: 'LoginLevelOutput' (Required)
 
 ## TaskLevelOutput
 ### Properties
@@ -900,8 +900,8 @@
 
 ## schemas:160_databaseSchemaMapItem
 ### Properties
-* **database**: string:
-* **schemas**: string[]:
+* **database**: string
+* **schemas**: string[]
 
 ## ConnectToTarget.SqlDb
 ### Properties
@@ -1068,7 +1068,7 @@
 ## Migrate.MongoDb
 ### Properties
 * **input**: [MongoDbMigrationSettings](#mongodbmigrationsettings): Describes how a MongoDB data migration should be performed
-* **output**: [MongoDbProgress](#mongodbprogress)[] (ReadOnly):
+* **output**: [MongoDbProgress](#mongodbprogress)[] (ReadOnly)
 * **taskType**: 'Migrate.MongoDb' (Required): Properties for the task that migrates data between MongoDB data sources
 
 ## MongoDbMigrationSettings
@@ -1125,7 +1125,7 @@
 * **lastReplayTime**: string: The timestamp of the last oplog event replayed, or null if no oplog event has been replayed yet
 * **name**: string: The name of the progress object. For a collection, this is the unqualified collection name. For a database, this is the database name. For the overall migration, this is null.
 * **qualifiedName**: string: The qualified name of the progress object. For a collection, this is the database-qualified name. For a database, this is the database name. For the overall migration, this is null.
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'Initializing' | 'InitialReplay' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required):
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'Initializing' | 'InitialReplay' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
 ### Collection
@@ -1228,7 +1228,7 @@
 #### Properties
 * **errorMessage**: string: Error message
 * **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required):
+* **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### DatabaseLevelOutput
 #### Properties
@@ -1238,7 +1238,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1247,12 +1247,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1268,7 +1268,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -1278,7 +1278,7 @@
 ### Properties
 * **errorMessage**: string: Error message
 * **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required):
+* **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ## SyncMigrationDatabaseErrorEvent
 ### Properties
@@ -1289,12 +1289,12 @@
 ## ErrorOutput
 ### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ## MigrationLevelOutput
 ### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1310,7 +1310,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -1366,7 +1366,7 @@
 #### Properties
 * **errorMessage**: string: Error message
 * **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required):
+* **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### DatabaseLevelOutput
 #### Properties
@@ -1376,7 +1376,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1385,12 +1385,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1406,7 +1406,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -1460,7 +1460,7 @@
 #### Properties
 * **errorMessage**: string: Error message
 * **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required):
+* **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### DatabaseLevelOutput
 #### Properties
@@ -1470,7 +1470,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1479,12 +1479,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1500,7 +1500,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -1564,7 +1564,7 @@
 #### Properties
 * **errorMessage**: string: Error message
 * **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required):
+* **resultType**: 'DatabaseLevelErrorOutput' (Required)
 
 ### DatabaseLevelOutput
 #### Properties
@@ -1574,7 +1574,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1583,12 +1583,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1604,7 +1604,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -1651,7 +1651,7 @@
 * **lastExecutedOn**: string (ReadOnly): UTC Date and time when the Agent Job was last executed.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Agent Job name
-* **resultType**: 'AgentJobLevelOutput' (Required):
+* **resultType**: 'AgentJobLevelOutput' (Required)
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
 ### DatabaseLevelOutput
@@ -1662,7 +1662,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1671,7 +1671,7 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### LoginLevelOutput
 #### Properties
@@ -1680,12 +1680,12 @@
 * **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): The type of login.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required):
+* **resultType**: 'LoginLevelOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1721,7 +1721,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1730,12 +1730,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1781,7 +1781,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1790,12 +1790,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1811,7 +1811,7 @@
 * **itemsCount**: int (ReadOnly): Number of items
 * **objectName**: string (ReadOnly): Name of the item
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required):
+* **resultType**: 'TableLevelOutput' (Required)
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
 * **statusMessage**: string (ReadOnly): Status message
@@ -1842,7 +1842,7 @@
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1857,7 +1857,7 @@
 * **folderName**: string (ReadOnly): Name of the folder
 * **message**: string (ReadOnly): Migration progress message
 * **projectName**: string (ReadOnly): Name of the project
-* **resultType**: 'SsisProjectLevelOutput' (Required):
+* **resultType**: 'SsisProjectLevelOutput' (Required)
 * **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly): Stage of SSIS migration.
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
@@ -1870,7 +1870,7 @@
 * **folderName**: string (ReadOnly): Name of the folder
 * **message**: string (ReadOnly): Migration progress message
 * **projectName**: string (ReadOnly): Name of the project
-* **resultType**: 'SsisProjectLevelOutput' (Required):
+* **resultType**: 'SsisProjectLevelOutput' (Required)
 * **stage**: 'Completed' | 'Initialize' | 'InProgress' | 'None' (ReadOnly): Stage of SSIS migration.
 * **startedOn**: string (ReadOnly): Migration start time
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration.
@@ -1910,7 +1910,7 @@
 * **fileId**: string (ReadOnly): Identifier for the file resource containing the schema of this database
 * **numberOfFailedOperations**: int (ReadOnly): Number of failed operations for this database
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
-* **resultType**: 'DatabaseLevelOutput' (Required):
+* **resultType**: 'DatabaseLevelOutput' (Required)
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
 * **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Schema migration stage for this database.
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1919,12 +1919,12 @@
 ### ErrorOutput
 #### Properties
 * **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required):
+* **resultType**: 'ErrorOutput' (Required)
 
 ### MigrationLevelOutput
 #### Properties
 * **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required):
+* **resultType**: 'MigrationLevelOutput' (Required)
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
@@ -1936,14 +1936,14 @@
 #### Properties
 * **commandText**: string (ReadOnly): Schema command which failed
 * **errorText**: string (ReadOnly): Reason of failure
-* **resultType**: 'SchemaErrorOutput' (Required):
+* **resultType**: 'SchemaErrorOutput' (Required)
 
 
 ## SchemaErrorOutput
 ### Properties
 * **commandText**: string (ReadOnly): Schema command which failed
 * **errorText**: string (ReadOnly): Reason of failure
-* **resultType**: 'SchemaErrorOutput' (Required):
+* **resultType**: 'SchemaErrorOutput' (Required)
 
 ## Service.Check.OCI
 ### Properties

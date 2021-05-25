@@ -8,7 +8,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -21,7 +21,7 @@
 * **connectionParameters**: [Dictionary<string,ConnectionParameter>](#dictionarystringconnectionparameter): Connection parameters
 * **createdTime**: string: Timestamp of the connection creation
 * **generalInformation**: [GeneralApiInformation](#generalapiinformation): General API information
-* **metadata**: any:
+* **metadata**: any
 * **name**: string: Name of the API
             the URL path of this API when exposed via APIM
 * **path**: string: the URL path of this API when exposed via APIM
@@ -35,7 +35,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string: Resource Name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: string: Resource type
 
@@ -51,10 +51,10 @@
 
 ## ConnectionParameter
 ### Properties
-* **defaultValue**: any:
+* **defaultValue**: any
 * **oAuthSettings**: [ApiOAuthSettings](#apioauthsettings): OAuth settings for the connection provider
 * **type**: 'array' | 'bool' | 'connection' | 'int' | 'oauthSetting' | 'object' | 'secureobject' | 'securestring' | 'string': Type of the parameter.
-* **uiDefinition**: any:
+* **uiDefinition**: any
 
 ## ApiOAuthSettings
 ### Properties
@@ -62,7 +62,7 @@
 * **clientSecret**: string: Client Secret needed for OAuth
 * **customParameters**: [Dictionary<string,ApiOAuthSettingsParameter>](#dictionarystringapioauthsettingsparameter): OAuth parameters key is the name of parameter
 * **identityProvider**: string: Identity provider
-* **properties**: any:
+* **properties**: any
 * **redirectUrl**: string: Url
 * **scopes**: string[]: OAuth scopes
 
@@ -73,8 +73,8 @@
 
 ## ApiOAuthSettingsParameter
 ### Properties
-* **options**: any:
-* **uiDefinition**: any:
+* **options**: any
+* **uiDefinition**: any
 * **value**: string: Value
 
 ## GeneralApiInformation
@@ -83,7 +83,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string: Resource Name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: string: Resource type
 
@@ -98,7 +98,7 @@
 * **kind**: string: Kind of resource
 * **location**: string (Required): Resource Location
 * **name**: string: Resource Name
-* **properties**: [schemas:1_properties](#schemas1properties):
+* **properties**: [schemas:1_properties](#schemas1properties)
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: string: Resource type
 

@@ -48,7 +48,7 @@
 * **lastModifiedUtc**: string (ReadOnly): The last time this rule was modified
 * **reason**: string (Required): The reason for dismissing the alert
 * **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule.
-* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope):
+* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope)
 
 ## SuppressionAlertsScope
 ### Properties
@@ -63,7 +63,7 @@
 ## SecurityAssessmentMetadataProperties
 ### Properties
 * **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition.
-* **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]:
+* **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
 * **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment.
@@ -71,7 +71,7 @@
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
 * **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment.
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]:
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]
 * **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment.
 
 ## SecurityAssessmentProperties
@@ -187,7 +187,7 @@
 
 ## AutomationRuleSet
 ### Properties
-* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]:
+* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]
 
 ## AutomationTriggeringRule
 ### Properties

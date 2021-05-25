@@ -45,6 +45,16 @@
 * **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityInsights/automationRules@2019-01-01-preview
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Etag of the azure resource
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AutomationRuleProperties](#automationruleproperties): Describes automation rule properties
+* **type**: 'Microsoft.SecurityInsights/automationRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityInsights/bookmarks@2019-01-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -334,7 +344,7 @@
 
 ## EventGroupingSettings
 ### Properties
-* **aggregationKind**: 'AlertPerResult' | 'SingleAlert':
+* **aggregationKind**: 'AlertPerResult' | 'SingleAlert'
 
 ## IncidentConfiguration
 ### Properties
@@ -369,6 +379,104 @@
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
 * **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
+
+## AutomationRuleProperties
+### Properties
+* **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered
+* **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **createdTimeUtc**: string (ReadOnly): The time the automation rule was created
+* **displayName**: string (Required): The display name of the automation  rule
+* **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
+* **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated
+* **order**: int (Required): The order of execution of the automation rule
+* **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic
+
+## AutomationRuleAction
+* **Discriminator**: actionType
+### Base Properties
+* **order**: int (Required): The order of execution of the automation rule action
+### ModifyProperties
+#### Properties
+* **actionConfiguration**: [schemas:50_actionConfiguration](#schemas50actionconfiguration) (Required): The configuration of the modify properties automation rule action
+* **actionType**: 'ModifyProperties' (Required): Describes an automation rule action to modify an object's properties
+
+### RunPlaybook
+#### Properties
+* **actionConfiguration**: [schemas:49_actionConfiguration](#schemas49actionconfiguration) (Required): The configuration of the run playbook automation rule action
+* **actionType**: 'RunPlaybook' (Required): Describes an automation rule action to run a playbook
+
+
+## ModifyProperties
+### Properties
+* **actionConfiguration**: [schemas:50_actionConfiguration](#schemas50actionconfiguration) (Required): The configuration of the modify properties automation rule action
+* **actionType**: 'ModifyProperties' (Required): Describes an automation rule action to modify an object's properties
+
+## schemas:50_actionConfiguration
+### Properties
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed.
+* **classificationComment**: string: Describes the reason the incident was closed
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason to close the incident with.
+* **labels**: [IncidentLabel](#incidentlabel)[]: List of labels to add to the incident
+* **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident.
+* **status**: 'Active' | 'Closed' | 'New': The status of the incident.
+
+## IncidentLabel
+### Properties
+* **labelName**: string (Required): The name of the label
+* **labelType**: 'System' | 'User' (ReadOnly): The type of the label.
+
+## IncidentOwnerInfo
+### Properties
+* **assignedTo**: string: The name of the user the incident is assigned to.
+* **email**: string: The email of the user the incident is assigned to.
+* **objectId**: string: The object id of the user the incident is assigned to.
+* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+
+## RunPlaybook
+### Properties
+* **actionConfiguration**: [schemas:49_actionConfiguration](#schemas49actionconfiguration) (Required): The configuration of the run playbook automation rule action
+* **actionType**: 'RunPlaybook' (Required): Describes an automation rule action to run a playbook
+
+## schemas:49_actionConfiguration
+### Properties
+* **logicAppResourceId**: string: The resource id of the playbook resource
+* **tenantId**: string: The tenant id of the playbook resource
+
+## ClientInfo
+### Properties
+* **email**: string: The email of the client.
+* **name**: string: The name of the client.
+* **objectId**: string: The object id of the client.
+* **userPrincipalName**: string: The user principal name of the client.
+
+## AutomationRuleTriggeringLogic
+### Properties
+* **conditions**: [AutomationRuleCondition](#automationrulecondition)[]: The conditions to evaluate to determine if the automation rule should be triggered on a given object
+* **expirationTimeUtc**: string: Determines when the automation rule should automatically expire and be disabled.
+* **isEnabled**: bool (Required): Determines whether the automation rule is enabled or disabled.
+* **triggersOn**: string (Required): The type of object the automation rule triggers on
+* **triggersWhen**: string (Required): The type of event the automation rule triggers on
+
+## AutomationRuleCondition
+* **Discriminator**: conditionType
+### Base Properties
+### Property
+#### Properties
+* **conditionProperties**: [schemas:52_conditionProperties](#schemas52conditionproperties) (Required): The configuration of the automation rule condition
+* **conditionType**: 'Property' (Required): Describes an automation rule condition that evaluates a property's value
+
+
+## Property
+### Properties
+* **conditionProperties**: [schemas:52_conditionProperties](#schemas52conditionproperties) (Required): The configuration of the automation rule condition
+* **conditionType**: 'Property' (Required): Describes an automation rule condition that evaluates a property's value
+
+## schemas:52_conditionProperties
+### Properties
+* **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'NotContains' | 'NotEndsWith' | 'NotEquals' | 'NotStartsWith' | 'StartsWith': The operator to use for evaluation the condition.
+* **propertyName**: 'AccountAadTenantId' | 'AccountAadUserId' | 'AccountName' | 'AccountNTDomain' | 'AccountObjectGuid' | 'AccountPUID' | 'AccountSid' | 'AccountUPNSuffix' | 'AzureResourceResourceId' | 'AzureResourceSubscriptionId' | 'CloudApplicationAppId' | 'CloudApplicationAppName' | 'DNSDomainName' | 'FileDirectory' | 'FileHashValue' | 'FileName' | 'HostAzureID' | 'HostName' | 'HostNetBiosName' | 'HostNTDomain' | 'HostOSVersion' | 'IncidentDescription' | 'IncidentProviderName' | 'IncidentRelatedAnalyticRuleIds' | 'IncidentSeverity' | 'IncidentStatus' | 'IncidentTactics' | 'IncidentTitle' | 'IoTDeviceId' | 'IoTDeviceModel' | 'IoTDeviceName' | 'IoTDeviceOperatingSystem' | 'IoTDeviceType' | 'IoTDeviceVendor' | 'IPAddress' | 'MailboxDisplayName' | 'MailboxPrimaryAddress' | 'MailboxUPN' | 'MailMessageDeliveryAction' | 'MailMessageDeliveryLocation' | 'MailMessageP1Sender' | 'MailMessageP2Sender' | 'MailMessageRecipient' | 'MailMessageSenderIP' | 'MailMessageSubject' | 'MalwareCategory' | 'MalwareName' | 'ProcessCommandLine' | 'ProcessId' | 'RegistryKey' | 'RegistryValueData' | 'Url': The property to evaluate.
+* **propertyValues**: string[]: The values to use for evaluating the condition
 
 ## BookmarkProperties
 ### Properties
@@ -468,15 +576,15 @@
 ## AwsCloudTrailDataConnectorProperties
 ### Properties
 * **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for Amazon Web Services CloudTrail data connector.
+* **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes) (Required): The available data types for Amazon Web Services CloudTrail data connector.
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: [schemas:47_logs](#schemas47logs): Logs data type.
+* **logs**: [schemas:57_logs](#schemas57logs) (Required): Logs data type.
 
-## schemas:47_logs
+## schemas:57_logs
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## AzureActiveDirectory
 ### Properties
@@ -486,15 +594,15 @@
 ## AADDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## AlertsDataTypeOfDataConnector
 ### Properties
-* **alerts**: [schemas:44_alerts](#schemas44alerts): Alerts data type connection.
+* **alerts**: [schemas:44_alerts](#schemas44alerts) (Required): Alerts data type connection.
 
 ## schemas:44_alerts
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## AzureAdvancedThreatProtection
 ### Properties
@@ -504,7 +612,7 @@
 ## AATPDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## AzureSecurityCenter
 ### Properties
@@ -523,16 +631,16 @@
 
 ## Dynamics365DataConnectorProperties
 ### Properties
-* **dataTypes**: [Dynamics365DataConnectorDataTypes](#dynamics365dataconnectordatatypes): The available data types for Dynamics365 data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [Dynamics365DataConnectorDataTypes](#dynamics365dataconnectordatatypes) (Required): The available data types for Dynamics365 data connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## Dynamics365DataConnectorDataTypes
 ### Properties
-* **dynamics365CdsActivities**: [schemas:92_dynamics365CdsActivities](#schemas92dynamics365cdsactivities): Common Data Service data type connection.
+* **dynamics365CdsActivities**: [schemas:102_dynamics365CdsActivities](#schemas102dynamics365cdsactivities) (Required): Common Data Service data type connection.
 
-## schemas:92_dynamics365CdsActivities
+## schemas:102_dynamics365CdsActivities
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## MicrosoftCloudAppSecurity
 ### Properties
@@ -541,17 +649,17 @@
 
 ## MCASDataConnectorProperties
 ### Properties
-* **dataTypes**: [MCASDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [MCASDataConnectorDataTypes](#mcasdataconnectordatatypes) (Required): The available data types for MCAS (Microsoft Cloud App Security) data connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MCASDataConnectorDataTypes
 ### Properties
-* **alerts**: [schemas:44_alerts](#schemas44alerts): Alerts data type connection.
-* **discoveryLogs**: [schemas:166_discoveryLogs](#schemas166discoverylogs): Discovery log data type connection.
+* **alerts**: [schemas:44_alerts](#schemas44alerts) (Required): Alerts data type connection.
+* **discoveryLogs**: [schemas:180_discoveryLogs](#schemas180discoverylogs): Discovery log data type connection.
 
-## schemas:166_discoveryLogs
+## schemas:180_discoveryLogs
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## MicrosoftDefenderAdvancedThreatProtection
 ### Properties
@@ -561,7 +669,7 @@
 ## MDATPDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MicrosoftThreatIntelligence
 ### Properties
@@ -570,18 +678,18 @@
 
 ## MSTIDataConnectorProperties
 ### Properties
-* **dataTypes**: [MSTIDataConnectorDataTypes](#mstidataconnectordatatypes): The available data types for Microsoft Threat Intelligence Platforms data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [MSTIDataConnectorDataTypes](#mstidataconnectordatatypes) (Required): The available data types for Microsoft Threat Intelligence Platforms data connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MSTIDataConnectorDataTypes
 ### Properties
-* **bingSafetyPhishingURL**: [schemas:12_bingSafetyPhishingURL](#schemas12bingsafetyphishingurl): Data type for Microsoft Threat Intelligence Platforms data connector.
-* **microsoftEmergingThreatFeed**: [schemas:12_bingSafetyPhishingURL](#schemas12bingsafetyphishingurl): Data type for Microsoft Threat Intelligence Platforms data connector.
+* **bingSafetyPhishingURL**: [schemas:12_bingSafetyPhishingURL](#schemas12bingsafetyphishingurl) (Required): Data type for Microsoft Threat Intelligence Platforms data connector.
+* **microsoftEmergingThreatFeed**: [schemas:12_bingSafetyPhishingURL](#schemas12bingsafetyphishingurl) (Required): Data type for Microsoft Threat Intelligence Platforms data connector.
 
 ## schemas:12_bingSafetyPhishingURL
 ### Properties
-* **lookbackPeriod**: string: lookback period
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **lookbackPeriod**: string (Required): lookback period
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## MicrosoftThreatProtection
 ### Properties
@@ -590,16 +698,16 @@
 
 ## MTPDataConnectorProperties
 ### Properties
-* **dataTypes**: [MTPDataConnectorDataTypes](#mtpdataconnectordatatypes): The available data types for Microsoft Threat Protection Platforms data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [MTPDataConnectorDataTypes](#mtpdataconnectordatatypes) (Required): The available data types for Microsoft Threat Protection Platforms data connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## MTPDataConnectorDataTypes
 ### Properties
-* **incidents**: [schemas:17_incidents](#schemas17incidents): Data type for Microsoft Threat Protection Platforms data connector.
+* **incidents**: [schemas:17_incidents](#schemas17incidents) (Required): Data type for Microsoft Threat Protection Platforms data connector.
 
 ## schemas:17_incidents
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## Office365
 ### Properties
@@ -608,26 +716,26 @@
 
 ## OfficeDataConnectorProperties
 ### Properties
-* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes): The available data types for office data connector.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **dataTypes**: [OfficeDataConnectorDataTypes](#officedataconnectordatatypes) (Required): The available data types for office data connector.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: [schemas:188_exchange](#schemas188exchange): Exchange data type connection.
-* **sharePoint**: [schemas:188_sharePoint](#schemas188sharepoint): SharePoint data type connection.
-* **teams**: [schemas:188_teams](#schemas188teams): Teams data type connection.
+* **exchange**: [schemas:202_exchange](#schemas202exchange) (Required): Exchange data type connection.
+* **sharePoint**: [schemas:202_sharePoint](#schemas202sharepoint) (Required): SharePoint data type connection.
+* **teams**: [schemas:202_teams](#schemas202teams) (Required): Teams data type connection.
 
-## schemas:188_exchange
+## schemas:202_exchange
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## schemas:188_sharePoint
+## schemas:202_sharePoint
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## schemas:188_teams
+## schemas:202_teams
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## OfficeATP
 ### Properties
@@ -637,7 +745,7 @@
 ## OfficeATPDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
 ## ThreatIntelligenceTaxii
 ### Properties
@@ -647,23 +755,23 @@
 ## TiTaxiiDataConnectorProperties
 ### Properties
 * **collectionId**: string: The collection id of the TAXII server.
-* **dataTypes**: [TiTaxiiDataConnectorDataTypes](#titaxiidataconnectordatatypes): The available data types for Threat Intelligence TAXII data connector.
+* **dataTypes**: [TiTaxiiDataConnectorDataTypes](#titaxiidataconnectordatatypes) (Required): The available data types for Threat Intelligence TAXII data connector.
 * **friendlyName**: string: The friendly name for the TAXII server.
 * **password**: string: The password for the TAXII server.
-* **pollingFrequency**: 'OnceADay' | 'OnceAMinute' | 'OnceAnHour': The polling frequency for the TAXII server.
+* **pollingFrequency**: 'OnceADay' | 'OnceAMinute' | 'OnceAnHour' (Required): The polling frequency for the TAXII server.
 * **taxiiLookbackPeriod**: string: The lookback period for the TAXII server.
 * **taxiiServer**: string: The API root for the TAXII server.
-* **tenantId**: string: The tenant id to connect to, and get the data from.
+* **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 * **userName**: string: The userName for the TAXII server.
 * **workspaceId**: string: The workspace id.
 
 ## TiTaxiiDataConnectorDataTypes
 ### Properties
-* **taxiiClient**: [schemas:224_taxiiClient](#schemas224taxiiclient): Data type for TAXII connector.
+* **taxiiClient**: [schemas:238_taxiiClient](#schemas238taxiiclient) (Required): Data type for TAXII connector.
 
-## schemas:224_taxiiClient
+## schemas:238_taxiiClient
 ### Properties
-* **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
+* **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
 ## IncidentProperties
 ### Properties
@@ -695,31 +803,12 @@
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics associated with incident
 
-## IncidentLabel
-### Properties
-* **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' (ReadOnly): The type of the label.
-
-## IncidentOwnerInfo
-### Properties
-* **assignedTo**: string: The name of the user the incident is assigned to.
-* **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
-* **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
-
 ## IncidentCommentProperties
 ### Properties
 * **author**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **createdTimeUtc**: string (ReadOnly): The time the comment was created
 * **lastModifiedTimeUtc**: string (ReadOnly): The time the comment was updated
 * **message**: string (Required): The comment message
-
-## ClientInfo
-### Properties
-* **email**: string: The email of the client.
-* **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
-* **userPrincipalName**: string: The user principal name of the client.
 
 ## EntityAnalytics
 ### Properties

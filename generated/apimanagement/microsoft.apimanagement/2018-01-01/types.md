@@ -725,7 +725,6 @@
 ### Properties
 * **data**: string (Required, WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **password**: string (Required, WriteOnly): Password for the Certificate
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
 * **thumbprint**: string (ReadOnly): Thumbprint of the certificate.
@@ -855,19 +854,14 @@ Instrumentation key for applicationInsights logger.
 ## SubscriptionCreateParameterProperties
 ### Properties
 * **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **displayName**: string (Required): Subscription name.
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
 * **productId**: string (Required): Product (product id path) for which subscription is being created in form /products/{productId}
 * **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **userId**: string (Required): User (user id path) for whom subscription is being created in form /users/{uid}
@@ -898,7 +892,6 @@ Instrumentation key for applicationInsights logger.
 * **note**: string: Optional note about a user set by the administrator.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 
 ## GroupContractProperties
