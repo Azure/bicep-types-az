@@ -2,7 +2,7 @@
 
 ```yaml
 use-extension:
-  "@autorest/modelerfour": "4.16.2"
+  "@autorest/modelerfour": "4.19.2"
 
 modelerfour:
   # this runs a pre-namer step to clean up names

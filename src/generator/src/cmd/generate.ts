@@ -90,18 +90,16 @@ executeSynchronous(async () => {
       await rmdir(outputDir, { recursive: true });
       await mkdir(outputDir, { recursive: true });
       await copyRecursive(tmpOutputDir, outputDir);
-    } catch (e) {
-      logErr(logger, e);
+    } catch (err) {
+      logErr(logger, err);
       
-      const logData = await readFile(`${tmpOutputDir}/log.out`, { encoding: 'utf8' });
-
       // Use markdown formatting as this summary will be included in the PR description
       logOut(summaryLogger, 
 `<details>
   <summary>Failed to generate types for path '${basePath}'</summary>
 
 \`\`\`
-${logData}
+${err}
 \`\`\`
 </details>
 `);

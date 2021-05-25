@@ -13,13 +13,12 @@
   "readme": "https://github.com/Azure/bicep-types-az/readme.md",
   "keywords": [
     "autorest",
-    "classic-generators",
     "bicep"
   ],
   "author": "Microsoft Corporation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Azure/autorest/issues"
+    "url": "https://github.com/Azure/bicep-types-az/issues"
   },
   "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
