@@ -8,7 +8,7 @@
 * **identity**: [AccountIdentity](#accountidentity): Identity for the Automanage account.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview
@@ -28,7 +28,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProfilePreferenceProperties](#configurationprofilepreferenceproperties): Automanage configuration profile preference properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/configurationProfilePreferences' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccountIdentity
@@ -37,7 +37,7 @@
 * **tenantId**: string (ReadOnly): The tenant id associated with the Automanage account.
 * **type**: 'None' | 'SystemAssigned': The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -62,12 +62,12 @@
 
 ## ConfigurationProfilePreferenceAntiMalware
 ### Properties
-* **enableRealTimeProtection**: 'False' | 'True': Enables or disables Real Time Protection.
-* **exclusions**: any: Extensions, Paths and Processes that must be excluded from scan
-* **runScheduledScan**: 'False' | 'True': Enables or disables a periodic scan for antimalware.
+* **enableRealTimeProtection**: 'False' | 'True': Enables or disables Real Time Protection
+* **exclusions**: any: Any object
+* **runScheduledScan**: 'False' | 'True': Enables or disables a periodic scan for antimalware
 * **scanDay**: string: Schedule scan settings day
 * **scanTimeInMinutes**: string: Schedule scan settings time
-* **scanType**: 'Full' | 'Quick': Type of scheduled scan.
+* **scanType**: 'Full' | 'Quick': Type of scheduled scan
 
 ## ConfigurationProfilePreferenceVmBackup
 ### Properties
@@ -76,7 +76,7 @@
 * **schedulePolicy**: string: Backup schedule specified as part of backup policy.
 * **timeZone**: string: TimeZone optional input as string. For example: Pacific Standard Time
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required): This type describes properties of an application resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-07-01-preview
@@ -19,7 +19,7 @@
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required): Describes properties of a network resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/volumes@2018-07-01-preview
@@ -30,7 +30,7 @@
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required): Describes properties of a volume resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationResourceProperties
@@ -38,7 +38,7 @@
 * **debugParams**: string: Internal use.
 * **description**: string: User readable description of the application.
 * **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): Describes the health state of an application resource.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): The health state of a resource such as Application, Service, or Network.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: describes the services in the application.
@@ -54,25 +54,26 @@
 
 ## DiagnosticsSinkProperties
 * **Discriminator**: kind
+
 ### Base Properties
 * **description**: string: A description of the sink.
 * **name**: string: Name of the sink. This value is referenced by DiagnosticsReferenceDescription
-### AzureInternalMonitoringPipeline
+### AzureInternalMonitoringPipelineSinkDescription
 #### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
 * **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
-* **kind**: 'AzureInternalMonitoringPipeline' (Required): Diagnostics settings for Geneva.
+* **fluentdConfigUrl**: any: Any object
+* **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
 * **maConfigUrl**: string: Azure Internal monitoring agent configuration.
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
 
-## AzureInternalMonitoringPipeline
+## AzureInternalMonitoringPipelineSinkDescription
 ### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
 * **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
-* **kind**: 'AzureInternalMonitoringPipeline' (Required): Diagnostics settings for Geneva.
+* **fluentdConfigUrl**: any: Any object
+* **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
 * **maConfigUrl**: string: Azure Internal monitoring agent configuration.
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
@@ -86,13 +87,11 @@
 ## ServiceResourceProperties
 ### Properties
 * **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required): Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
-
 * **description**: string: User readable description of the service.
 * **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
 * **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning': The health state of a resource such as Application, Service, or Network.
 * **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
 * **osType**: 'Linux' | 'Windows' (Required): The Operating system type required by the code in service.
-.
 * **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly): Represents the status of the service.
 
@@ -167,7 +166,6 @@
 * **limits**: [ResourceLimits](#resourcelimits): This type describes the resource limits for a given container. It describes the most amount of resources a container is allowed to use before being restarted.
 * **requests**: [ResourceRequests](#resourcerequests) (Required): This type describes the requested resources for a given container. It describes the least amount of resources required for the container. A container can consume more than requested resources up to the specified limits before being restarted. Currently, the requested resources are treated as limits.
 
-
 ## ResourceLimits
 ### Properties
 * **cpu**: int: CPU limits in cores. At present, only full cores are supported.
@@ -193,7 +191,7 @@
 ### Properties
 * **name**: string: Name of the network.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -219,7 +217,7 @@
 * **publicPort**: int: Specifies the public port at which the service endpoint below needs to be exposed.
 * **serviceName**: string: The service whose endpoint needs to be exposed at the public port.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -228,7 +226,7 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile): This type describes a volume provided by an Azure Files file share.
 * **description**: string: User readable description of the volume.
-* **provider**: string (Required): Provider of the volume.
+* **provider**: 'SFAzureFile' (Required): Provider of the volume.
 * **provisioningState**: string (ReadOnly): State of the resource.
 
 ## VolumeProviderParametersAzureFile
@@ -237,7 +235,7 @@
 * **accountName**: string (Required): Name of the Azure storage account for the File Share.
 * **shareName**: string (Required): Name of the Azure Files file share that provides storage for the volume.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

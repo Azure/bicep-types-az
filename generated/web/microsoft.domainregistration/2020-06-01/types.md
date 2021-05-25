@@ -8,8 +8,8 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:2_properties](#schemas2properties): Domain resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [DomainProperties](#domainproperties): Domain resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2020-06-01
@@ -19,24 +19,24 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:6_properties](#schemas6properties): DomainOwnershipIdentifier resource specific properties
+* **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties): DomainOwnershipIdentifier resource specific properties
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:2_properties
+## DomainProperties
 ### Properties
-* **authCode**: string:
+* **authCode**: string
 * **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
 * **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required): Domain purchase consent object, representing acceptance of applicable legal agreements.
-* **contactAdmin**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+* **contactAdmin**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
-* **contactBilling**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+* **contactBilling**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
-* **contactRegistrant**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+* **contactRegistrant**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
-* **contactTech**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois
+* **contactTech**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
 * **createdTime**: string (ReadOnly): Domain creation timestamp.
-* **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type.
+* **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type
 * **dnsZoneId**: string: Azure DNS Zone to use
 * **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive'[] (ReadOnly): Reasons why domain is not renewable.
 * **expirationTime**: string (ReadOnly): Domain expiration timestamp.
@@ -45,10 +45,10 @@ directories as per ICANN requirements.
 * **nameServers**: string[] (ReadOnly): Name servers.
 * **privacy**: bool: <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Domain provisioning state.
-* **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and
+* **readyForDnsRecordManagement**: bool (ReadOnly): <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
  it is hosted on name servers Azure has programmatic access to.
 * **registrationStatus**: 'Active' | 'Awaiting' | 'Cancelled' | 'Confiscated' | 'Disabled' | 'Excluded' | 'Expired' | 'Failed' | 'Held' | 'JsonConverterFailed' | 'Locked' | 'Parked' | 'Pending' | 'Reserved' | 'Reverted' | 'Suspended' | 'Transferred' | 'Unknown' | 'Unlocked' | 'Unparked' | 'Updated' (ReadOnly): Domain registration status.
-* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Target DNS type (would be used for migration).
+* **targetDnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type
 
 ## DomainPurchaseConsent
 ### Properties
@@ -86,12 +86,12 @@ directories as per ICANN requirements.
 * **name**: string: Name of the hostname.
 * **siteNames**: string[]: List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:6_properties
+## DomainOwnershipIdentifierProperties
 ### Properties
 * **ownershipId**: string: Ownership Id.
 

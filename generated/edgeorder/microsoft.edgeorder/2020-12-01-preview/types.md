@@ -8,33 +8,21 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AddressProperties](#addressproperties) (Required): Address Properties
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EdgeOrder/orderCollections@2020-12-01-preview
+## Resource Microsoft.EdgeOrder/orderItems@2020-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OrderCollectionProperties](#ordercollectionproperties) (Required): Represents order collection details.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.EdgeOrder/orderCollections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.EdgeOrder/orders@2020-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [OrderProperties](#orderproperties) (Required): Represents order details.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.EdgeOrder/orders' (ReadOnly, DeployTimeConstant): The resource type
+* **properties**: [OrderItemProperties](#orderitemproperties) (Required): Represents order item details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.EdgeOrder/orderItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AddressProperties
 ### Properties
@@ -44,6 +32,7 @@
 ## ContactDetails
 ### Properties
 * **contactName**: string (Required): Contact name of the person.
+* **emailList**: string[] (Required): List of Email-ids to be notified about job progress.
 * **mobile**: string: Mobile number of the contact person.
 * **phone**: string (Required): Phone number of the contact person.
 * **phoneExtension**: string: Phone extension number of the contact person.
@@ -61,76 +50,70 @@
 * **streetAddress3**: string: Street Address line 3.
 * **zipExtendedCode**: string: Extended Zip Code.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## OrderCollectionProperties
-### Properties
-* **orderIds**: string[] (Required): List of order ARM Ids which are part of an order collection.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## OrderProperties
+## OrderItemProperties
 ### Properties
 * **addressDetails**: [AddressDetails](#addressdetails) (Required): Address details for an order.
-* **orderCollectionId**: string (ReadOnly): Id of the order collection to which order belongs to
-* **orderDetails**: [OrderDetails](#orderdetails) (Required): Order details
-* **startTime**: string (ReadOnly): Start time of order
+* **orderId**: string (Required): Id of the order to which order items belongs to
+* **orderItemDetails**: [OrderItemDetails](#orderitemdetails) (Required): Order item details
+* **startTime**: string (ReadOnly): Start time of order item
 
 ## AddressDetails
 ### Properties
+* **forwardAddress**: [AddressProperties](#addressproperties) (Required): Address Properties
 * **returnAddress**: [AddressProperties](#addressproperties) (ReadOnly): Address Properties
-* **shippingAddress**: [AddressProperties](#addressproperties) (Required): Address Properties
 
-## OrderDetails
+## OrderItemDetails
 ### Properties
 * **cancellationReason**: string (ReadOnly): Cancellation reason.
 * **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the order is cancellable or not.
-* **currentStatus**: [OrderStatusDetails](#orderstatusdetails) (ReadOnly): Order status CurrentStatus
-* **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order is deletable or not.
-* **error**: [CloudError](#clouderror) (ReadOnly):
+* **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Resource stage details
+* **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order item is deletable or not.
+* **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
 * **forwardShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
-* **managementRpDetails**: any (ReadOnly): Management RP details
-* **notificationEmailList**: string[]: Package Shipping details
-* **orderStatusHistory**: [OrderStatusDetails](#orderstatusdetails)[] (ReadOnly): Order history
-* **orderType**: 'Purchase' | 'Rental' (Required): Order type.
+* **managementResourceDetails**: [ManagementResourceDetails](#managementresourcedetails): Management resource details to link device
+* **managementRpDetails**: any (ReadOnly): Any object
+* **notificationEmailList**: string[]: Additional notification email list
+* **orderItemStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order item status history
+* **orderItemType**: 'Purchase' | 'Rental' (Required): Order item type.
 * **preferences**: [Preferences](#preferences): Preferences related to the order
 * **productDetails**: [ProductDetails](#productdetails) (Required): Represents product details
 * **returnReason**: string (ReadOnly): Return reason.
-* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order is returnable or not.
+* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order item is returnable or not.
 * **reverseShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
 
-## OrderStatusDetails
+## StageDetails
 ### Properties
-* **lastUpdatedTime**: string: last time order was updated
-* **orderStatus**: string (ReadOnly): Order status
+* **displayName**: string (ReadOnly): Display name of the resource stage.
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Confirmed' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'InReview' | 'InUse' | 'PickedUp' | 'Placed' | 'ReadyForDispatch' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'Shipped' (ReadOnly): Stage name
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' (ReadOnly): Stage status
+* **startTime**: string (ReadOnly): Stage start time
 
-## CloudError
+## ErrorDetail
 ### Properties
-* **additionalInfo**: [AdditionalErrorInfo](#additionalerrorinfo)[] (ReadOnly):
-* **code**: string:
-* **details**: [CloudError](#clouderror)[] (ReadOnly):
-* **message**: string:
-* **target**: string:
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorDetail](#errordetail)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
 
-## AdditionalErrorInfo
+## ErrorAdditionalInfo
 ### Properties
-* **info**: any:
-* **type**: string:
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
 
 ## ShippingDetails
 ### Properties
@@ -139,15 +122,24 @@
 * **trackingId**: string (ReadOnly): TrackingId of the package
 * **trackingUrl**: string (ReadOnly): TrackingUrl of the package.
 
+## ManagementResourceDetails
+### Properties
+* **managementResourceArmId**: string (Required): Management resource ARM ID
+
 ## Preferences
 ### Properties
+* **encryptionPreferences**: [EncryptionPreferences](#encryptionpreferences): Preferences related to the double encryption
 * **notificationPreferences**: [NotificationPreference](#notificationpreference)[]: Notification preferences.
 * **transportPreferences**: [TransportPreferences](#transportpreferences): Preferences related to the shipment logistics of the sku
+
+## EncryptionPreferences
+### Properties
+* **doubleEncryptionStatus**: 'Disabled' | 'Enabled': Defines secondary layer of software-based encryption enablement.
 
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required): Notification is required or not.
-* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' (Required): Name of the stage.
+* **stageName**: 'AtAzureDC' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'PickedUp' | 'Shipped' (Required): Name of the stage.
 
 ## TransportPreferences
 ### Properties
@@ -161,7 +153,7 @@
 
 ## DeviceDetails
 ### Properties
-* **deviceHistory**: string[] (ReadOnly): Package Shipping details
+* **deviceHistory**: string[] (ReadOnly): Device history
 * **serialNumber**: string (ReadOnly): device serial number
 
 ## HierarchyInformation
@@ -171,7 +163,7 @@
 * **productLineName**: string: Represents product line name that uniquely identifies product line
 * **productName**: string: Represents product name that uniquely identifies product
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

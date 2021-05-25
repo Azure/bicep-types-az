@@ -8,14 +8,14 @@
 * **location**: string: Location of the Guest Usages resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GuestUsagesResourceProperties](#guestusagesresourceproperties): Guest Usages Resource Properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **tags**: [GuestUsagesResourceTags](#guestusagesresourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AzureActiveDirectory/guestUsages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## GuestUsagesResourceProperties
 ### Properties
 * **tenantId**: string: An identifier for the tenant for which the resource is being created
 
-## Dictionary<string,String>
+## GuestUsagesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -10,7 +10,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionGroup](#actiongroup): An Azure action group.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [AzureResourceTags](#azureresourcetags): Resource tags
 * **type**: 'microsoft.insights/actionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActionGroup
@@ -32,7 +32,7 @@
 ### Properties
 * **name**: string (Required): The name of the arm role receiver. Names must be unique across all receivers within an action group.
 * **roleId**: string (Required): The arm role id.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## AutomationRunbookReceiver
 ### Properties
@@ -41,7 +41,7 @@
 * **name**: string: Indicates name of the webhook.
 * **runbookName**: string (Required): The name for this runbook.
 * **serviceUri**: string: The URI where webhooks should be sent.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 * **webhookResourceId**: string (Required): The resource id for webhook linked to this runbook.
 
 ## AzureAppPushReceiver
@@ -55,14 +55,14 @@
 * **functionName**: string (Required): The function name in the function app.
 * **httpTriggerUrl**: string (Required): The http trigger url where http request sent to.
 * **name**: string (Required): The name of the azure function receiver. Names must be unique across all receivers within an action group.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## EmailReceiver
 ### Properties
 * **emailAddress**: string (Required): The email address of this receiver.
 * **name**: string (Required): The name of the email receiver. Names must be unique across all receivers within an action group.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The receiver status of the e-mail.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## ItsmReceiver
 ### Properties
@@ -77,14 +77,14 @@
 * **callbackUrl**: string (Required): The callback url where http request sent to.
 * **name**: string (Required): The name of the logic app receiver. Names must be unique across all receivers within an action group.
 * **resourceId**: string (Required): The azure resource id of the logic app receiver.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
 ## SmsReceiver
 ### Properties
 * **countryCode**: string (Required): The country code of the SMS receiver.
 * **name**: string (Required): The name of the SMS receiver. Names must be unique across all receivers within an action group.
 * **phoneNumber**: string (Required): The phone number of the SMS receiver.
-* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): The status of the receiver.
+* **status**: 'Disabled' | 'Enabled' | 'NotSpecified' (ReadOnly): Indicates the status of the receiver. Receivers that are not Enabled will not receive any communications.
 
 ## VoiceReceiver
 ### Properties
@@ -96,9 +96,9 @@
 ### Properties
 * **name**: string (Required): The name of the webhook receiver. Names must be unique across all receivers within an action group.
 * **serviceUri**: string (Required): The URI where webhooks should be sent.
-* **useCommonAlertSchema**: bool (Required): Indicates whether to use common alert schema.
+* **useCommonAlertSchema**: bool: Indicates whether to use common alert schema.
 
-## Dictionary<string,String>
+## AzureResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

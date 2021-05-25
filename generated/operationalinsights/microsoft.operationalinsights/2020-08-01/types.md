@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
 * **sku**: [ClusterSku](#clustersku): The cluster sku definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces@2020-08-01
@@ -22,7 +22,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2020-08-01
@@ -40,10 +40,10 @@
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag of the data source.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' (Required):
+* **kind**: 'ApplicationInsights' | 'AzureActivityLog' | 'AzureAuditLog' | 'ChangeTrackingContentLocation' | 'ChangeTrackingCustomPath' | 'ChangeTrackingDataTypeConfiguration' | 'ChangeTrackingDefaultRegistry' | 'ChangeTrackingLinuxPath' | 'ChangeTrackingPath' | 'ChangeTrackingRegistry' | 'ChangeTrackingServices' | 'CustomLog' | 'CustomLogCollection' | 'DnsAnalytics' | 'GenericDataSource' | 'IISLogs' | 'ImportComputerGroup' | 'Itsm' | 'LinuxChangeTrackingPath' | 'LinuxPerformanceCollection' | 'LinuxPerformanceObject' | 'LinuxSyslog' | 'LinuxSyslogCollection' | 'NetworkMonitoring' | 'Office365' | 'SecurityCenterSecurityWindowsBaselineConfiguration' | 'SecurityEventCollectionConfiguration' | 'SecurityInsightsSecurityEventCollectionConfiguration' | 'SecurityWindowsBaselineConfiguration' | 'SqlDataClassification' | 'WindowsEvent' | 'WindowsPerformanceCounter' | 'WindowsTelemetry' (Required): The kind of the DataSource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (Required): JSON object
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: any (Required): Any object
+* **tags**: [DataSourceTags](#datasourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2020-08-01
@@ -53,7 +53,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedServiceProperties](#linkedserviceproperties) (Required): Linked service properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [LinkedServiceTags](#linkedservicetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/linkedServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/linkedStorageAccounts@2020-08-01
@@ -83,7 +83,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageInsightProperties](#storageinsightproperties): Storage insight properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [StorageInsightTags](#storageinsighttags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -95,11 +95,11 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties): The key vault properties.
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The key vault properties.
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster.
 
-## keyVaultProperties
+## KeyVaultProperties
 ### Properties
 * **keyName**: string: The name of the key associated with the Log Analytics cluster.
 * **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
@@ -110,7 +110,7 @@
 * **capacity**: int: The capacity value
 * **name**: 'CapacityReservation': The name of the SKU.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -119,18 +119,18 @@
 ### Properties
 * **createdDate**: string (ReadOnly): Workspace creation date.
 * **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
-* **features**: [Dictionary<string,Object>](#dictionarystringobject): Workspace features.
+* **features**: [WorkspaceFeatures](#workspacefeatures): Workspace features.
 * **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
 * **modifiedDate**: string (ReadOnly): Workspace modification date.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics ingestion.
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for accessing Log Analytics query.
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for operating on the Log Analytics Workspace. By default it is Enabled
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 
-## Dictionary<string,Object>
+## WorkspaceFeatures
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -153,7 +153,7 @@
 * **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace.
 * **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,13 +171,13 @@
 ### Properties
 * **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource.
+* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource
 
 ## DestinationMetaData
 ### Properties
 * **eventHubName**: string: Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
 
-## Dictionary<string,String>
+## DataSourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -188,7 +188,7 @@
 * **resourceId**: string: The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
 * **writeAccessResourceId**: string: The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
 
-## Dictionary<string,String>
+## LinkedServiceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -223,14 +223,14 @@
 ## StorageInsightStatus
 ### Properties
 * **description**: string: Description of the state of the storage insight.
-* **state**: 'ERROR' | 'OK' (Required): The state of the storage insight connection to the workspace.
+* **state**: 'ERROR' | 'OK' (Required): The state of the storage insight connection to the workspace
 
 ## StorageAccount
 ### Properties
 * **id**: string (Required): The Azure Resource Manager ID of the storage account resource.
 * **key**: string (Required): The storage account key.
 
-## Dictionary<string,String>
+## StorageInsightTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

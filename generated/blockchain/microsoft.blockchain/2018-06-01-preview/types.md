@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BlockchainMemberProperties](#blockchainmemberproperties): Payload of the blockchain member properties for a blockchain member.
 * **sku**: [Sku](#sku): Blockchain member Sku in payload
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describes the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describes the resource.
 * **type**: 'Microsoft.Blockchain/blockchainMembers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview
@@ -54,7 +54,7 @@
 * **name**: string: Gets or sets Sku name
 * **tier**: string: Gets or sets Sku tier
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

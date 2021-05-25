@@ -37,7 +37,7 @@
 * **location**: string: Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutomationProperties](#automationproperties): A set of properties that defines the behavior of the automation configuration. To learn more about the supported security events data models schemas - please visit https://aka.ms/ASCAutomationSchemas.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): A list of key value pairs that describe the resource.
+* **tags**: [Tags](#tags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Security/automations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertsSuppressionRuleProperties
@@ -47,8 +47,8 @@
 * **expirationDateUtc**: string: Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
 * **lastModifiedUtc**: string (ReadOnly): The last time this rule was modified
 * **reason**: string (Required): The reason for dismissing the alert
-* **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule.
-* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope):
+* **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule
+* **suppressionAlertsScope**: [SuppressionAlertsScope](#suppressionalertsscope)
 
 ## SuppressionAlertsScope
 ### Properties
@@ -57,32 +57,30 @@
 ## ScopeElement
 ### Properties
 * **field**: string: The alert entity type to suppress by.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
-* **assessmentType**: 'BuiltIn' | 'CustomerManaged' | 'CustomPolicy' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition.
-* **category**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]:
+* **assessmentType**: 'BuiltIn' | 'CustomPolicy' | 'CustomerManaged' (Required): BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+* **categories**: 'Compute' | 'Data' | 'IdentityAndAccess' | 'IoT' | 'Networking'[]: Array of Categories
 * **description**: string: Human readable description of the assessment
 * **displayName**: string (Required): User friendly display name of the assessment
-* **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment.
+* **implementationEffort**: 'High' | 'Low' | 'Moderate': The implementation effort required to remediate this assessment
 * **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
 * **preview**: bool: True if this assessment is in preview release status
 * **remediationDescription**: string: Human readable description of what you should do to mitigate this security issue
-* **severity**: 'High' | 'Low' | 'Medium' (Required): The severity level of the assessment.
-* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]:
-* **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment.
+* **severity**: 'High' | 'Low' | 'Medium' (Required): The sub-assessment severity level
+* **threats**: 'accountBreach' | 'dataExfiltration' | 'dataSpillage' | 'denialOfService' | 'elevationOfPrivilege' | 'maliciousInsider' | 'missingCoverage' | 'threatResistance'[]: Array of Threats
+* **userImpact**: 'High' | 'Low' | 'Moderate': The user impact of the assessment
 
 ## SecurityAssessmentProperties
 ### Properties
-* **additionalData**: [Dictionary<string,String>](#dictionarystringstring): Additional data regarding the assessment
+* **additionalData**: [SecurityAssessmentPropertiesAdditionalData](#securityassessmentpropertiesadditionaldata): Additional data regarding the assessment
 * **displayName**: string (ReadOnly): User friendly display name of the assessment
-* **links**: [AssessmentLinks](#assessmentlinks): Links relevant to the assessment
+* **links**: [AssessmentLinks](#assessmentlinks) (ReadOnly): Links relevant to the assessment
 * **resourceDetails**: [ResourceDetails](#resourcedetails) (Required): Details of the resource that was assessed
 * **status**: [AssessmentStatus](#assessmentstatus) (Required): The result of the assessment
 
-## Dictionary<string,String>
+## SecurityAssessmentPropertiesAdditionalData
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -93,38 +91,35 @@
 
 ## ResourceDetails
 * **Discriminator**: source
+
 ### Base Properties
-### Azure
+### AzureResourceDetails
 #### Properties
 * **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): Details of the Azure resource that was assessed
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
 
-### OnPremise
+### OnPremiseSqlResourceDetails
 #### Properties
-* **machineName**: string (Required): The name of the machine
-* **source**: 'OnPremise' (Required): Details of the On Premise resource that was assessed
-* **sourceComputerId**: string (Required): The oms agent Id installed on the machine
-* **vmuuid**: string (Required): The unique Id of the machine
-* **workspaceId**: string (Required): Azure resource Id of the workspace the machine is attached to
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
 
 
-## Azure
+## AzureResourceDetails
 ### Properties
 * **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): Details of the Azure resource that was assessed
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
 
-## OnPremise
+## OnPremiseSqlResourceDetails
 ### Properties
-* **machineName**: string (Required): The name of the machine
-* **source**: 'OnPremise' (Required): Details of the On Premise resource that was assessed
-* **sourceComputerId**: string (Required): The oms agent Id installed on the machine
-* **vmuuid**: string (Required): The unique Id of the machine
-* **workspaceId**: string (Required): Azure resource Id of the workspace the machine is attached to
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
 
 ## AssessmentStatus
 ### Properties
 * **cause**: string: Programmatic code for the cause of the assessment status
-* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required): Programmatic code for the status of the assessment.
+* **code**: 'Healthy' | 'NotApplicable' | 'Unhealthy' (Required): Programmatic code for the status of the assessment
 * **description**: string: Human readable description of the assessment status
 
 ## AutomationProperties
@@ -137,42 +132,43 @@
 
 ## AutomationAction
 * **Discriminator**: actionType
+
 ### Base Properties
-### EventHub
+### AutomationActionEventHub
 #### Properties
-* **actionType**: 'EventHub' (Required): The target Event Hub to which event data will be exported. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
+* **actionType**: 'EventHub' (Required): The type of the action that will be triggered by the Automation
 * **connectionString**: string: The target Event Hub connection string (it will not be included in any response).
 * **eventHubResourceId**: string: The target Event Hub Azure Resource ID.
 * **sasPolicyName**: string (ReadOnly): The target Event Hub SAS policy name.
 
-### LogicApp
+### AutomationActionLogicApp
 #### Properties
-* **actionType**: 'LogicApp' (Required): The logic app action that should be triggered. To learn more about Security Center's Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
+* **actionType**: 'LogicApp' (Required): The type of the action that will be triggered by the Automation
 * **logicAppResourceId**: string: The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
 * **uri**: string: The Logic App trigger URI endpoint (it will not be included in any response).
 
-### Workspace
+### AutomationActionWorkspace
 #### Properties
-* **actionType**: 'Workspace' (Required): The Log Analytics Workspace to which event data will be exported. Security alerts data will reside in the 'SecurityAlert' table and the assessments data will reside in the 'SecurityRecommendation' table (under the 'Security'/'SecurityCenterFree' solutions). Note that in order to view the data in the workspace, the Security Center Log Analytics free/standard solution needs to be enabled on that workspace. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
+* **actionType**: 'Workspace' (Required): The type of the action that will be triggered by the Automation
 * **workspaceResourceId**: string: The fully qualified Log Analytics Workspace Azure Resource ID.
 
 
-## EventHub
+## AutomationActionEventHub
 ### Properties
-* **actionType**: 'EventHub' (Required): The target Event Hub to which event data will be exported. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
+* **actionType**: 'EventHub' (Required): The type of the action that will be triggered by the Automation
 * **connectionString**: string: The target Event Hub connection string (it will not be included in any response).
 * **eventHubResourceId**: string: The target Event Hub Azure Resource ID.
 * **sasPolicyName**: string (ReadOnly): The target Event Hub SAS policy name.
 
-## LogicApp
+## AutomationActionLogicApp
 ### Properties
-* **actionType**: 'LogicApp' (Required): The logic app action that should be triggered. To learn more about Security Center's Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
+* **actionType**: 'LogicApp' (Required): The type of the action that will be triggered by the Automation
 * **logicAppResourceId**: string: The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
 * **uri**: string: The Logic App trigger URI endpoint (it will not be included in any response).
 
-## Workspace
+## AutomationActionWorkspace
 ### Properties
-* **actionType**: 'Workspace' (Required): The Log Analytics Workspace to which event data will be exported. Security alerts data will reside in the 'SecurityAlert' table and the assessments data will reside in the 'SecurityRecommendation' table (under the 'Security'/'SecurityCenterFree' solutions). Note that in order to view the data in the workspace, the Security Center Log Analytics free/standard solution needs to be enabled on that workspace. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
+* **actionType**: 'Workspace' (Required): The type of the action that will be triggered by the Automation
 * **workspaceResourceId**: string: The fully qualified Log Analytics Workspace Azure Resource ID.
 
 ## AutomationScope
@@ -187,16 +183,16 @@
 
 ## AutomationRuleSet
 ### Properties
-* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]:
+* **rules**: [AutomationTriggeringRule](#automationtriggeringrule)[]: Array of AutomationTriggeringRule
 
 ## AutomationTriggeringRule
 ### Properties
 * **expectedValue**: string: The expected value.
 * **operator**: 'Contains' | 'EndsWith' | 'Equals' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LesserThan' | 'LesserThanOrEqualTo' | 'NotEquals' | 'StartsWith': A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
 * **propertyJPath**: string: The JPath of the entity model property that should be checked.
-* **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String': The data type of the compared operands (string, integer, floating point number or a boolean [true/false]].
+* **propertyType**: 'Boolean' | 'Integer' | 'Number' | 'String': The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
 
-## Dictionary<string,String>
+## Tags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

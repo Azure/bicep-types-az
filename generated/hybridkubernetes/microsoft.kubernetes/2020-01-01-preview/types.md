@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectedClusterProperties](#connectedclusterproperties) (Required): Properties of the connected cluster.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConnectedClusterIdentity
@@ -30,7 +30,7 @@
 * **lastConnectivityTime**: string (ReadOnly): Time representing the last instance when heart beat was received from the cluster
 * **managedIdentityCertificateExpirationTime**: string (ReadOnly): Expiration time of the managed identity certificate
 * **offering**: string (ReadOnly): Connected cluster offering
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating': Provisioning state of the connected cluster resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating': The current deployment state of connectedClusters.
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 
@@ -40,7 +40,7 @@
 * **serverAppId**: string (Required): The server app id to access AD server
 * **tenantId**: string (Required): The aad tenant id which is configured on target K8s cluster
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

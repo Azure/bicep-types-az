@@ -22,7 +22,7 @@
 
 ## AdminRequestApprovalProperties
 ### Properties
-* **adminAction**: 'Approved' | 'Rejected': Gets or sets admin action.
+* **adminAction**: 'Approved' | 'Rejected': Gets or sets admin action
 * **administrator**: string: Gets or sets admin details
 * **approvedPlans**: string[]: Gets or sets Approved plans ids, empty in case of rejected
 * **comment**: string: Gets or sets admin comment
@@ -47,10 +47,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
 
 ## RequestApprovalProperties
 ### Properties
@@ -58,13 +58,13 @@
 * **messageCode**: int: Gets or sets the request approval message code
 * **offerDisplayName**: string (ReadOnly): Gets offer display name
 * **offerId**: string: Gets or sets unique offer id.
-* **plansDetails**: [planDetails](#plandetails)[]: Gets or sets the plans details
+* **plansDetails**: [PlanDetails](#plandetails)[]: Gets or sets the plans details
 * **publisherId**: string: The offer's publisher id
 
-## planDetails
+## PlanDetails
 ### Properties
 * **justification**: string: Gets or sets user's justification for the plan's request
 * **planId**: string: Gets or sets Plan Id
-* **requestDate**: any (ReadOnly): Gets request date
-* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' (ReadOnly): Gets the plan status.
+* **requestDate**: any (ReadOnly): Any object
+* **status**: 'Approved' | 'None' | 'Pending' | 'Rejected' (ReadOnly): Gets the plan status
 

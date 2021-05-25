@@ -10,7 +10,7 @@
 * **properties**: [AutoScaleVCoreProperties](#autoscalevcoreproperties): Properties of an auto scale v-core resource.
 * **sku**: [AutoScaleVCoreSku](#autoscalevcoresku) (Required): Represents the SKU name and Azure pricing tier for auto scale v-core resource.
 * **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/autoScaleVCores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.PowerBIDedicated/capacities@2021-01-01
@@ -23,7 +23,7 @@
 * **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of Dedicated Capacity resource.
 * **sku**: [CapacitySku](#capacitysku) (Required): Represents the SKU name and Azure pricing tier for PowerBI Dedicated capacity resource.
 * **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
+* **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/capacities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoScaleVCoreProperties
@@ -42,12 +42,12 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created/modified the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created/modified the resource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -68,7 +68,7 @@
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'AutoPremiumHost' | 'PBIE_Azure' | 'Premium': The name of the Azure pricing tier to which the SKU applies.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

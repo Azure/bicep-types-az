@@ -9,20 +9,20 @@
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityProperties
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity
-dictionary key references will be ARM resource ids in the form:
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity 
+dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,UserIdentityProperties>
+## IdentityPropertiesUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
@@ -38,7 +38,7 @@ dictionary key references will be ARM resource ids in the form:
 * **creationDate**: string (ReadOnly): The creation date of task.
 * **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a run.
 * **status**: 'Disabled' | 'Enabled': The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
 * **timeout**: int: Run timeout in seconds.
@@ -50,12 +50,12 @@ dictionary key references will be ARM resource ids in the form:
 
 ## Credentials
 ### Properties
-* **customRegistries**: [Dictionary<string,CustomRegistryCredentials>](#dictionarystringcustomregistrycredentials): Describes the credential parameters for accessing other custom registries. The key
+* **customRegistries**: [CredentialsCustomRegistries](#credentialscustomregistries): Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
 the value of the item will be the registry credentials for accessing the registry.
 * **sourceRegistry**: [SourceRegistryCredentials](#sourceregistrycredentials): Describes the credential parameters for accessing the source registry.
 
-## Dictionary<string,CustomRegistryCredentials>
+## CredentialsCustomRegistries
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomRegistryCredentials](#customregistrycredentials)
@@ -65,7 +65,7 @@ the value of the item will be the registry credentials for accessing the registr
 * **identity**: string: Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
-identity may be used to authenticate to key vault to retrieve credentials or it may be the only
+identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
 source of authentication used for accessing the registry.
 * **password**: [SecretObject](#secretobject): Describes the properties of a secret object value.
 * **userName**: [SecretObject](#secretobject): Describes the properties of a secret object value.
@@ -92,11 +92,12 @@ the source registry during the run.
 
 ## TaskStepProperties
 * **Discriminator**: type
+
 ### Base Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
 * **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
-### Docker
+### DockerBuildStep
 #### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
@@ -104,19 +105,19 @@ the source registry during the run.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The Docker build step.
+* **type**: 'Docker' (Required): The type of the step.
 
-### EncodedTask
+### EncodedTaskStep
 #### Properties
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The properties of a encoded task step.
+* **type**: 'EncodedTask' (Required): The type of the step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
-### FileTask
+### FileTaskStep
 #### Properties
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The properties of a task step.
+* **type**: 'FileTask' (Required): The type of the step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -129,7 +130,7 @@ the source registry during the run.
 * **tag**: string: The tag name.
 * **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
-## Docker
+## DockerBuildStep
 ### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
@@ -137,7 +138,7 @@ the source registry during the run.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The Docker build step.
+* **type**: 'Docker' (Required): The type of the step.
 
 ## Argument
 ### Properties
@@ -145,11 +146,11 @@ the source registry during the run.
 * **name**: string (Required): The name of the argument.
 * **value**: string (Required): The value of the argument.
 
-## EncodedTask
+## EncodedTaskStep
 ### Properties
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The properties of a encoded task step.
+* **type**: 'EncodedTask' (Required): The type of the step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
 ## SetValue
@@ -158,10 +159,10 @@ the source registry during the run.
 * **name**: string (Required): The name of the overridable value.
 * **value**: string (Required): The overridable value.
 
-## FileTask
+## FileTaskStep
 ### Properties
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The properties of a task step.
+* **type**: 'FileTask' (Required): The type of the step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -205,7 +206,7 @@ the source registry during the run.
 * **schedule**: string (Required): The CRON expression for the task schedule
 * **status**: 'Disabled' | 'Enabled': The current status of trigger.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

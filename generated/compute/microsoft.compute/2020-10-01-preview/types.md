@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CloudServiceProperties](#cloudserviceproperties): Cloud service properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [CloudServiceTags](#cloudservicetags): Resource tags.
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/cloudServices/updateDomains@2020-10-01-preview
@@ -34,7 +34,9 @@ This is a write-only property and is not returned in GET calls.
 * **startCloudService**: bool: (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
 * **uniqueId**: string (ReadOnly): The unique identifier for the cloud service.
-* **upgradeMode**: 'Auto' | 'Manual' | 'Simultaneous':
+* **upgradeMode**: 'Auto' | 'Manual' | 'Simultaneous': Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
+Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
+If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
 
 ## CloudServiceExtensionProfile
 ### Properties
@@ -54,7 +56,7 @@ If forceUpdateTag is not changed, updates to public or protected settings would 
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not
 * **protectedSettings**: string: Protected settings for the extension which are encrypted before sent to the role instance.
-* **protectedSettingsFromKeyVault**: [CloudServiceVaultAndSecretReference](#cloudservicevaultandsecretreference):
+* **protectedSettingsFromKeyVault**: [CloudServiceVaultAndSecretReference](#cloudservicevaultandsecretreference)
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
 * **rolesAppliedTo**: string[]: Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
@@ -64,8 +66,8 @@ it is up to handler implementation whether to re-run it or not
 
 ## CloudServiceVaultAndSecretReference
 ### Properties
-* **secretUrl**: string:
-* **sourceVault**: [SubResource](#subresource):
+* **secretUrl**: string
+* **sourceVault**: [SubResource](#subresource)
 
 ## SubResource
 ### Properties
@@ -74,12 +76,12 @@ it is up to handler implementation whether to re-run it or not
 ## CloudServiceNetworkProfile
 ### Properties
 * **loadBalancerConfigurations**: [LoadBalancerConfiguration](#loadbalancerconfiguration)[]: The list of load balancer configurations for the cloud service.
-* **swappableCloudService**: [SubResource](#subresource):
+* **swappableCloudService**: [SubResource](#subresource)
 
 ## LoadBalancerConfiguration
 ### Properties
 * **name**: string: Resource Name
-* **properties**: [LoadBalancerConfigurationProperties](#loadbalancerconfigurationproperties):
+* **properties**: [LoadBalancerConfigurationProperties](#loadbalancerconfigurationproperties)
 
 ## LoadBalancerConfigurationProperties
 ### Properties
@@ -87,14 +89,14 @@ it is up to handler implementation whether to re-run it or not
 
 ## LoadBalancerFrontendIPConfiguration
 ### Properties
-* **name**: string:
+* **name**: string
 * **properties**: [LoadBalancerFrontendIPConfigurationProperties](#loadbalancerfrontendipconfigurationproperties): Describes a cloud service IP Configuration
 
 ## LoadBalancerFrontendIPConfigurationProperties
 ### Properties
 * **privateIPAddress**: string: The private IP address referenced by the cloud service.
-* **publicIPAddress**: [SubResource](#subresource):
-* **subnet**: [SubResource](#subresource):
+* **publicIPAddress**: [SubResource](#subresource)
+* **subnet**: [SubResource](#subresource)
 
 ## CloudServiceOsProfile
 ### Properties
@@ -102,7 +104,7 @@ it is up to handler implementation whether to re-run it or not
 
 ## CloudServiceVaultSecretGroup
 ### Properties
-* **sourceVault**: [SubResource](#subresource):
+* **sourceVault**: [SubResource](#subresource)
 * **vaultCertificates**: [CloudServiceVaultCertificate](#cloudservicevaultcertificate)[]: The list of key vault references in SourceVault which contain certificates.
 
 ## CloudServiceVaultCertificate
@@ -124,7 +126,7 @@ it is up to handler implementation whether to re-run it or not
 * **name**: string: The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
 * **tier**: string: Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
 
-## Dictionary<string,String>
+## CloudServiceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

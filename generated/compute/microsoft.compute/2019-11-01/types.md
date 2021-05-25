@@ -8,8 +8,8 @@
 * **identity**: [EncryptionSetIdentity](#encryptionsetidentity): The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EncryptionSetProperties](#encryptionsetproperties):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **properties**: [EncryptionSetProperties](#encryptionsetproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/disks@2019-11-01
@@ -23,7 +23,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskProperties](#diskproperties): Disk resource properties.
 * **sku**: [DiskSku](#disksku): The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or UltraSSD_LRS.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
 
@@ -37,7 +37,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SnapshotProperties](#snapshotproperties): Snapshot resource properties.
 * **sku**: [SnapshotSku](#snapshotsku): The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## EncryptionSetIdentity
@@ -61,7 +61,7 @@
 ### Properties
 * **id**: string: Resource Id
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -129,10 +129,10 @@
 
 ## DiskSku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' | 'UltraSSD_LRS': The sku name.
+* **name**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -156,7 +156,7 @@
 * **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
 * **tier**: string (ReadOnly): The sku tier.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

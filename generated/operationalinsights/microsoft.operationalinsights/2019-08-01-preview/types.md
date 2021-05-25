@@ -9,8 +9,8 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **sku**: [sku](#sku):
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **sku**: [Sku](#sku)
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview
@@ -49,22 +49,22 @@
 ## ClusterProperties
 ### Properties
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
-* **keyVaultProperties**: [keyVaultProperties](#keyvaultproperties):
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly): The provisioning state of the cluster.
 
-## keyVaultProperties
+## KeyVaultProperties
 ### Properties
 * **keyName**: string: The name of the key associated with the Log Analytics cluster.
 * **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
 * **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
 
-## sku
+## Sku
 ### Properties
 * **capacity**: int: The capacity value
 * **name**: 'CapacityReservation': The name of the SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -82,7 +82,7 @@
 ### Properties
 * **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource.
+* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource
 
 ## DestinationMetaData
 ### Properties

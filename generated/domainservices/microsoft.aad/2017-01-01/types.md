@@ -9,7 +9,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainServiceProperties](#domainserviceproperties): Properties of the Domain Service.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DomainServiceProperties
@@ -18,7 +18,7 @@
 * **domainControllerIpAddress**: string[] (ReadOnly): List of Domain Controller IP Address
 * **domainName**: string: The name of the Azure domain that the user would like to deploy Domain Services to.
 * **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): Domain Security Settings
-* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync.
+* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync
 * **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly): List of Domain Health Alerts
 * **healthLastEvaluated**: string (ReadOnly): Last domain evaluation run DateTime
 * **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly): List of Domain Health Monitors
@@ -66,10 +66,10 @@
 ## NotificationSettings
 ### Properties
 * **additionalRecipients**: string[]: The list of additional recipients
-* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified.
-* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified.
+* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified
+* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

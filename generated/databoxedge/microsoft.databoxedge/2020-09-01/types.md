@@ -12,8 +12,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataBoxEdgeDeviceProperties](#databoxedgedeviceproperties) (ReadOnly): The properties of the Data Box Edge/Gateway device.
 * **sku**: [Sku](#sku): The SKU type.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-09-01
@@ -23,7 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BandwidthScheduleProperties](#bandwidthscheduleproperties) (Required): The properties of the bandwidth schedule.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-09-01
@@ -38,50 +38,52 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant): The resource type
-### CloudEdgeManagement
+### CloudEdgeManagementRole
 #### Properties
-* **kind**: 'CloudEdgeManagement' (Required): CloudEdgeManagementRole role.
+* **kind**: 'CloudEdgeManagement' (Required): Role type.
 * **properties**: [CloudEdgeManagementRoleProperties](#cloudedgemanagementroleproperties): CloudEdgeManagement Role properties.
 
-### IOT
+### IoTRole
 #### Properties
-* **kind**: 'IOT' (Required): Compute role.
+* **kind**: 'IOT' (Required): Role type.
 * **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
 
-### Kubernetes
+### KubernetesRole
 #### Properties
-* **kind**: 'Kubernetes' (Required): Kubernetes role.
+* **kind**: 'Kubernetes' (Required): Role type.
 * **properties**: [KubernetesRoleProperties](#kubernetesroleproperties): Kubernetes role properties.
 
-### MEC
+### MECRole
 #### Properties
-* **kind**: 'MEC' (Required): MEC role.
+* **kind**: 'MEC' (Required): Role type.
 * **properties**: [MECRoleProperties](#mecroleproperties): MEC role properties.
 
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons' (ReadOnly, DeployTimeConstant): The resource type
-### ArcForKubernetes
+### ArcAddon
 #### Properties
-* **kind**: 'ArcForKubernetes' (Required): Arc Addon.
+* **kind**: 'ArcForKubernetes' (Required): Addon type.
 * **properties**: [ArcAddonProperties](#arcaddonproperties) (Required): Arc addon properties.
 
-### IotEdge
+### IoTAddon
 #### Properties
-* **kind**: 'IotEdge' (Required): IoT Addon.
+* **kind**: 'IotEdge' (Required): Addon type.
 * **properties**: [IoTAddonProperties](#iotaddonproperties) (Required): IoT addon properties.
 
 
@@ -101,7 +103,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ShareProperties](#shareproperties) (Required): The share properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2020-09-01
@@ -111,7 +113,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required): The storage account credential properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2020-09-01
@@ -121,7 +123,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountProperties](#storageaccountproperties) (Required): The storage account properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2020-09-01
@@ -131,26 +133,27 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerProperties](#containerproperties) (Required): The container properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant): The resource type
-### FileEvent
+### FileEventTrigger
 #### Properties
-* **kind**: 'FileEvent' (Required): Trigger details.
+* **kind**: 'FileEvent' (Required): Trigger Kind.
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required): File trigger properties.
 
-### PeriodicTimerEvent
+### PeriodicTimerEventTrigger
 #### Properties
-* **kind**: 'PeriodicTimerEvent' (Required): Trigger details.
+* **kind**: 'PeriodicTimerEvent' (Required): Trigger Kind.
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 
@@ -161,14 +164,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties) (Required): The user properties.
-* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Service Principal Id backing the Msi
 * **tenantId**: string (ReadOnly): Home Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Identity type.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Identity type
 
 ## DataBoxEdgeDeviceProperties
 ### Properties
@@ -196,34 +199,34 @@
 ## EdgeProfileSubscription
 ### Properties
 * **id**: string: ARM ID of the subscription
-* **properties**: [SubscriptionProperties](#subscriptionproperties):
-* **registrationDate**: string:
+* **properties**: [SubscriptionProperties](#subscriptionproperties)
+* **registrationDate**: string
 * **registrationId**: string: Edge Subscription Registration ID
-* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'Unregistered' | 'Warned':
-* **subscriptionId**: string:
+* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'Unregistered' | 'Warned'
+* **subscriptionId**: string
 
 ## SubscriptionProperties
 ### Properties
-* **locationPlacementId**: string:
-* **quotaId**: string:
-* **registeredFeatures**: [SubscriptionRegisteredFeatures](#subscriptionregisteredfeatures)[]:
-* **serializedDetails**: string:
-* **tenantId**: string:
+* **locationPlacementId**: string
+* **quotaId**: string
+* **registeredFeatures**: [SubscriptionRegisteredFeatures](#subscriptionregisteredfeatures)[]: Array of SubscriptionRegisteredFeatures
+* **serializedDetails**: string
+* **tenantId**: string
 
 ## SubscriptionRegisteredFeatures
 ### Properties
-* **name**: string:
-* **state**: string:
+* **name**: string
+* **state**: string
 
 ## ResourceMoveDetails
 ### Properties
-* **operationInProgress**: 'None' | 'ResourceMoveFailed' | 'ResourceMoveInProgress': Denotes whether move operation is in progress.
+* **operationInProgress**: 'None' | 'ResourceMoveFailed' | 'ResourceMoveInProgress': Denotes whether move operation is in progress
 * **operationInProgressLockTimeoutInUTC**: string: Denotes the timeout of the operation to finish
 
 ## Sku
 ### Properties
-* **name**: 'Edge' | 'EdgeMR_Mini' | 'EdgeP_Base' | 'EdgeP_High' | 'EdgePR_Base_UPS' | 'EdgePR_Base' | 'Gateway' | 'GPU' | 'RCA_Large' | 'RCA_Small' | 'RDC' | 'TCA_Large' | 'TCA_Small' | 'TDC' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA': SKU name.
-* **tier**: 'Standard': The SKU tier. This is based on the SKU name.
+* **name**: 'Edge' | 'EdgeMR_Mini' | 'EdgePR_Base' | 'EdgePR_Base_UPS' | 'EdgeP_Base' | 'EdgeP_High' | 'GPU' | 'Gateway' | 'RCA_Large' | 'RCA_Small' | 'RDC' | 'TCA_Large' | 'TCA_Small' | 'TDC' | 'TEA_1Node' | 'TEA_1Node_Heater' | 'TEA_1Node_UPS' | 'TEA_1Node_UPS_Heater' | 'TEA_4Node_Heater' | 'TEA_4Node_UPS_Heater' | 'TMA': The Sku name.
+* **tier**: 'Standard': The Sku tier.
 
 ## SystemData
 ### Properties
@@ -232,9 +235,9 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## DataBoxEdgeDeviceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -254,7 +257,7 @@
 * **orderHistory**: [OrderStatus](#orderstatus)[] (ReadOnly): List of status changes in the order.
 * **returnTrackingInfo**: [TrackingInfo](#trackinginfo)[] (ReadOnly): Tracking information for the package returned from the customer whether it has an original or a replacement device.
 * **serialNumber**: string (ReadOnly): Serial number of the device.
-* **shipmentType**: 'NotApplicable' | 'SelfPickup' | 'ShippedToCustomer': ShipmentType of the order.
+* **shipmentType**: 'NotApplicable' | 'SelfPickup' | 'ShippedToCustomer'
 * **shippingAddress**: [Address](#address): The shipping address of the customer.
 
 ## ContactDetails
@@ -266,14 +269,14 @@
 
 ## OrderStatus
 ### Properties
-* **additionalOrderDetails**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Dictionary to hold generic information which is not stored
+* **additionalOrderDetails**: [OrderStatusAdditionalOrderDetails](#orderstatusadditionalorderdetails) (ReadOnly): Dictionary to hold generic information which is not stored
 by the already existing properties
 * **comments**: string: Comments related to this status change.
 * **status**: 'Arriving' | 'AwaitingDrop' | 'AwaitingFulfilment' | 'AwaitingPickup' | 'AwaitingPreparation' | 'AwaitingReturnShipment' | 'AwaitingShipment' | 'CollectedAtMicrosoft' | 'Declined' | 'Delivered' | 'LostDevice' | 'PickupCompleted' | 'ReplacementRequested' | 'ReturnInitiated' | 'Shipped' | 'ShippedBack' | 'Untracked' (Required): Status of the order as per the allowed status types.
 * **trackingInformation**: [TrackingInfo](#trackinginfo) (ReadOnly): Tracking courier information.
 * **updateDateTime**: string (ReadOnly): Time of status update.
 
-## Dictionary<string,String>
+## OrderStatusAdditionalOrderDetails
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -295,31 +298,31 @@ by the already existing properties
 * **postalCode**: string: The postal code.
 * **state**: string: The state name.
 
-## CloudEdgeManagement
+## CloudEdgeManagementRole
 ### Properties
-* **kind**: 'CloudEdgeManagement' (Required): CloudEdgeManagementRole role.
+* **kind**: 'CloudEdgeManagement' (Required): Role type.
 * **properties**: [CloudEdgeManagementRoleProperties](#cloudedgemanagementroleproperties): CloudEdgeManagement Role properties.
 
 ## CloudEdgeManagementRoleProperties
 ### Properties
 * **edgeProfile**: [EdgeProfile](#edgeprofile) (ReadOnly): Details about Edge Profile for the resource
-* **localManagementStatus**: 'Disabled' | 'Enabled' (ReadOnly): Local Edge Management Status.
-* **roleStatus**: 'Disabled' | 'Enabled' (Required): Role status.
+* **localManagementStatus**: 'Disabled' | 'Enabled' (ReadOnly): Local Edge Management Status
+* **roleStatus**: 'Disabled' | 'Enabled' (Required): Local Edge Management Status
 
-## IOT
+## IoTRole
 ### Properties
-* **kind**: 'IOT' (Required): Compute role.
+* **kind**: 'IOT' (Required): Role type.
 * **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
 
 ## IoTRoleProperties
 ### Properties
 * **computeResource**: [ComputeResource](#computeresource): Compute infrastructure Resource
-* **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the IoT role.
-* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' (ReadOnly): Platform where the Iot runtime is hosted.
+* **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the Arc addon.
+* **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' (ReadOnly): Platform where the runtime is hosted.
 * **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
 * **ioTEdgeAgentInfo**: [IoTEdgeAgentInfo](#iotedgeagentinfo): IoT edge agent details is optional, this will be used for download system Agent module while bootstrapping IoT Role if specified.
 * **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **roleStatus**: 'Disabled' | 'Enabled' (Required): Role status.
+* **roleStatus**: 'Disabled' | 'Enabled' (Required): Local Edge Management Status
 * **shareMappings**: [MountPointMap](#mountpointmap)[]: Mount points of shares in role(s).
 
 ## ComputeResource
@@ -365,22 +368,22 @@ by the already existing properties
 * **mountPoint**: string (ReadOnly): Mount point for the share.
 * **mountType**: 'HostPath' | 'Volume' (ReadOnly): Mounting type.
 * **roleId**: string (ReadOnly): ID of the role to which share is mounted.
-* **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' (ReadOnly): Role type.
+* **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' (ReadOnly)
 * **shareId**: string (Required): ID of the share mounted to the role VM.
 
-## Kubernetes
+## KubernetesRole
 ### Properties
-* **kind**: 'Kubernetes' (Required): Kubernetes role.
+* **kind**: 'Kubernetes' (Required): Role type.
 * **properties**: [KubernetesRoleProperties](#kubernetesroleproperties): Kubernetes role properties.
 
 ## KubernetesRoleProperties
 ### Properties
-* **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the Kubernetes role.
+* **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the Arc addon.
 * **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' (ReadOnly): Platform where the runtime is hosted.
 * **kubernetesClusterInfo**: [KubernetesClusterInfo](#kubernetesclusterinfo) (Required): Kubernetes cluster configuration
 * **kubernetesRoleResources**: [KubernetesRoleResources](#kubernetesroleresources) (Required): Kubernetes role resources
-* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' (ReadOnly): State of Kubernetes deployment.
-* **roleStatus**: 'Disabled' | 'Enabled' (Required): Role status.
+* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' (ReadOnly): State of Kubernetes deployment
+* **roleStatus**: 'Disabled' | 'Enabled' (Required): Local Edge Management Status
 
 ## KubernetesClusterInfo
 ### Properties
@@ -397,7 +400,7 @@ by the already existing properties
 ### Properties
 * **ipConfiguration**: [KubernetesIPConfiguration](#kubernetesipconfiguration)[]: IP Configuration of the Kubernetes node.
 * **name**: string (ReadOnly): Node name.
-* **type**: 'Invalid' | 'Master' | 'Worker' (ReadOnly): Node type - Master/Worker.
+* **type**: 'Invalid' | 'Master' | 'Worker' (ReadOnly): Node type - Master/Worker
 
 ## KubernetesIPConfiguration
 ### Properties
@@ -444,44 +447,44 @@ by the already existing properties
 * **posixCompliant**: 'Disabled' | 'Enabled' | 'Invalid' (ReadOnly): If provisioned storage is posix compliant.
 * **type**: string (ReadOnly): Storage class type.
 
-## MEC
+## MECRole
 ### Properties
-* **kind**: 'MEC' (Required): MEC role.
+* **kind**: 'MEC' (Required): Role type.
 * **properties**: [MECRoleProperties](#mecroleproperties): MEC role properties.
 
 ## MECRoleProperties
 ### Properties
 * **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **roleStatus**: 'Disabled' | 'Enabled' (Required): Role status.
+* **roleStatus**: 'Disabled' | 'Enabled' (Required): Local Edge Management Status
 
-## ArcForKubernetes
+## ArcAddon
 ### Properties
-* **kind**: 'ArcForKubernetes' (Required): Arc Addon.
+* **kind**: 'ArcForKubernetes' (Required): Addon type.
 * **properties**: [ArcAddonProperties](#arcaddonproperties) (Required): Arc addon properties.
 
 ## ArcAddonProperties
 ### Properties
 * **hostPlatform**: 'Linux' | 'Windows' (ReadOnly): Host OS supported by the Arc addon.
 * **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' (ReadOnly): Platform where the runtime is hosted.
-* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' (ReadOnly): Addon Provisioning State.
+* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' (ReadOnly): Addon Provisioning State
 * **resourceGroupName**: string (Required): Arc resource group name
 * **resourceLocation**: string (Required): Arc resource location
 * **resourceName**: string (Required): Arc resource Name
 * **subscriptionId**: string (Required): Arc resource subscription Id
 * **version**: string (ReadOnly): Arc resource version
 
-## IotEdge
+## IoTAddon
 ### Properties
-* **kind**: 'IotEdge' (Required): IoT Addon.
+* **kind**: 'IotEdge' (Required): Addon type.
 * **properties**: [IoTAddonProperties](#iotaddonproperties) (Required): IoT addon properties.
 
 ## IoTAddonProperties
 ### Properties
-* **hostPlatform**: 'Linux' | 'Windows' (ReadOnly): Host OS supported by the IoT addon.
+* **hostPlatform**: 'Linux' | 'Windows' (ReadOnly): Host OS supported by the Arc addon.
 * **hostPlatformType**: 'KubernetesCluster' | 'LinuxVM' (ReadOnly): Platform where the runtime is hosted.
 * **ioTDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
 * **ioTEdgeDeviceDetails**: [IoTDeviceInfo](#iotdeviceinfo) (Required): Metadata of IoT device/IoT Edge device to be configured.
-* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' (ReadOnly): Addon Provisioning State.
+* **provisioningState**: 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Reconfiguring' | 'Updating' (ReadOnly): Addon Provisioning State
 * **version**: string (ReadOnly): Version of IoT running on the appliance.
 
 ## MonitoringMetricConfigurationProperties
@@ -521,7 +524,7 @@ by the already existing properties
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required): Current monitoring status of the share.
 * **refreshDetails**: [RefreshDetails](#refreshdetails): Fields for tracking refresh job on the share or container.
 * **shareMappings**: [MountPointMap](#mountpointmap)[] (ReadOnly): Share mount point to the role.
-* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required): Current status of the share.
+* **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (Required): Current status of the share.
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]: Mapping of users and corresponding access rights on the share (required for SMB protocol).
 
 ## AzureContainerInfo
@@ -544,7 +547,7 @@ by the already existing properties
 
 ## UserAccessRight
 ### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed for the user.
+* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed on the share for this user.
 * **userId**: string (Required): User ID (already existing in the device).
 
 ## StorageAccountCredentialProperties
@@ -562,21 +565,21 @@ by the already existing properties
 ### Properties
 * **blobEndpoint**: string (ReadOnly): BlobEndpoint of Storage Account
 * **containerCount**: int (ReadOnly): The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
-* **dataPolicy**: 'Cloud' | 'Local' (Required): Data policy of the storage Account.
+* **dataPolicy**: 'Cloud' | 'Local' (Required): Data policy of the share.
 * **description**: string: Description for the storage Account.
 * **storageAccountCredentialId**: string: Storage Account Credential Id
-* **storageAccountStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating': Current status of the storage account.
+* **storageAccountStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating': Current status of the storage account
 
 ## ContainerProperties
 ### Properties
-* **containerStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (ReadOnly): Current status of the container.
+* **containerStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (ReadOnly): Current status of the container.
 * **createdDateTime**: string (ReadOnly): The UTC time when container got created.
-* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required): DataFormat for Container.
+* **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required): Storage format used for the file represented by the share.
 * **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
 
-## FileEvent
+## FileEventTrigger
 ### Properties
-* **kind**: 'FileEvent' (Required): Trigger details.
+* **kind**: 'FileEvent' (Required): Trigger Kind.
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required): File trigger properties.
 
 ## FileTriggerProperties
@@ -593,9 +596,9 @@ by the already existing properties
 ### Properties
 * **shareId**: string (Required): File share ID.
 
-## PeriodicTimerEvent
+## PeriodicTimerEventTrigger
 ### Properties
-* **kind**: 'PeriodicTimerEvent' (Required): Trigger details.
+* **kind**: 'PeriodicTimerEvent' (Required): Trigger Kind.
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 ## PeriodicTimerProperties
