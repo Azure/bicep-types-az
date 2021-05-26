@@ -4,13 +4,13 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The enforcement mode of the group. Can also be defined per collection type by using ProtectionMode.
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly)
 * **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly): Represents a VM/server group and set of rules that are Recommended by Azure Security Center to be allowed
-* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly)
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant): The resource type
 * **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly)
 
@@ -28,41 +28,41 @@
 ## PathRecommendation
 ### Properties
 * **action**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
-* **common**: bool (WriteOnly): Whether the path is commonly run on the machine
+* **common**: bool (WriteOnly)
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly)
 * **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' (WriteOnly)
-* **path**: string (WriteOnly): The full path to whitelist
-* **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly): Represents the publisher information of a process/rule
+* **path**: string (WriteOnly)
+* **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly)
 * **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly)
 * **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly)
 * **userSids**: string[] (WriteOnly)
 
 ## PublisherInfo
 ### Properties
-* **binaryName**: string (WriteOnly): The "OriginalName" field taken from the file's version resource
-* **productName**: string (WriteOnly): The product name taken from the file's version resource
-* **publisherName**: string (WriteOnly): The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
-* **version**: string (WriteOnly): The binary file version taken from the file's version resource
+* **binaryName**: string (WriteOnly)
+* **productName**: string (WriteOnly)
+* **publisherName**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
 ## UserRecommendation
 ### Properties
 * **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
-* **username**: string (WriteOnly): Represents a user that is recommended to be allowed for a certain rule
+* **username**: string (WriteOnly)
 
 ## AppWhitelistingGroupData
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly)
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (ReadOnly)
-* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly)
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly)
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (ReadOnly): The configuration status of the VM/server group or machine or rule on the machine
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (ReadOnly): The application control policy enforcement/protection mode of the VM/server group
+* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[] (ReadOnly): Array of AppWhitelistingIssueSummary
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (ReadOnly): Array of PathRecommendation
 * **protectionMode**: [ProtectionMode](#protectionmode) (ReadOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly)
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly)
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly)
+* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' (ReadOnly): The recommendation status of the VM/server group or VM/server
+* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' (ReadOnly): The source type of the VM/server group
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (ReadOnly): Array of VmRecommendation
 
 ## AppWhitelistingIssueSummary
 ### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' (ReadOnly)
+* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' (ReadOnly): An alert that VMs/servers within a group can have
 * **numberOfVms**: int (ReadOnly): The number of machines in the VM/server group that have this alert
 
 ## ProtectionMode
@@ -77,12 +77,12 @@
 * **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly)
 * **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' (WriteOnly)
 * **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
-* **resourceId**: string (WriteOnly): The full azure resource id of the machine
+* **resourceId**: string (WriteOnly)
 
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the Just-in-Time policy.
-* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]
+* **requests**: [JitNetworkAccessRequest](#jitnetworkaccessrequest)[]: Array of JitNetworkAccessRequest
 * **virtualMachines**: [JitNetworkAccessPolicyVirtualMachine](#jitnetworkaccesspolicyvirtualmachine)[] (Required): Configurations for Microsoft.Compute/virtualMachines resource type.
 
 ## JitNetworkAccessRequest
@@ -90,7 +90,7 @@
 * **justification**: string: The justification for making the initiate request
 * **requestor**: string (Required): The identity of the person who made the request
 * **startTimeUtc**: string (Required): The start time of the request in UTC
-* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required)
+* **virtualMachines**: [JitNetworkAccessRequestVirtualMachine](#jitnetworkaccessrequestvirtualmachine)[] (Required): Array of JitNetworkAccessRequestVirtualMachine
 
 ## JitNetworkAccessRequestVirtualMachine
 ### Properties
@@ -104,8 +104,8 @@
 * **endTimeUtc**: string (Required): The date & time at which the request ends in UTC
 * **mappedPort**: int: The port which is mapped to this port's `number` in the Azure Firewall, if applicable
 * **number**: int (Required)
-* **status**: 'Initiated' | 'Revoked' (Required): The status of the port.
-* **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value.
+* **status**: 'Initiated' | 'Revoked' (Required): The status of the port
+* **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' (Required): A description of why the `status` has its value
 
 ## JitNetworkAccessPolicyVirtualMachine
 ### Properties

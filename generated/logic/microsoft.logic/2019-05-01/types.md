@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountProperties](#integrationaccountproperties): The integration account properties.
 * **sku**: [IntegrationAccountSku](#integrationaccountsku): The integration account sku.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/agreements@2019-05-01
@@ -20,7 +20,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountAgreementProperties](#integrationaccountagreementproperties) (Required): The integration account agreement properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/assemblies@2019-05-01
@@ -31,7 +31,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AssemblyProperties](#assemblyproperties) (Required): The assembly properties definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/batchConfigurations@2019-05-01
@@ -42,7 +42,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchConfigurationProperties](#batchconfigurationproperties) (Required): The batch configuration properties definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/certificates@2019-05-01
@@ -53,7 +53,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountCertificateProperties](#integrationaccountcertificateproperties) (Required): The integration account certificate properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/maps@2019-05-01
@@ -64,7 +64,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountMapProperties](#integrationaccountmapproperties) (Required): The integration account map.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/partners@2019-05-01
@@ -75,7 +75,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountPartnerProperties](#integrationaccountpartnerproperties) (Required): The integration account partner properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/schemas@2019-05-01
@@ -86,7 +86,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountSchemaProperties](#integrationaccountschemaproperties) (Required): The integration account schema properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/sessions@2019-05-01
@@ -97,7 +97,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationAccountSessionProperties](#integrationaccountsessionproperties) (Required): The integration account session properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationServiceEnvironments@2019-05-01
@@ -109,7 +109,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationServiceEnvironmentProperties](#integrationserviceenvironmentproperties): The integration service environment properties.
 * **sku**: [IntegrationServiceEnvironmentSku](#integrationserviceenvironmentsku): The integration service environment sku.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationServiceEnvironments/managedApis@2019-05-01
@@ -120,7 +120,7 @@
 * **location**: string (ReadOnly): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiResourceProperties](#apiresourceproperties) (ReadOnly): The API resource properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): The resource tags.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments/managedApis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/workflows@2019-05-01
@@ -131,7 +131,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkflowProperties](#workflowproperties): The workflow properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IntegrationAccountProperties
@@ -146,7 +146,7 @@
 * **name**: string (ReadOnly): Gets the resource name.
 * **properties**: [IntegrationServiceEnvironmentProperties](#integrationserviceenvironmentproperties): The integration service environment properties.
 * **sku**: [IntegrationServiceEnvironmentSku](#integrationserviceenvironmentsku): The integration service environment sku.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: string (ReadOnly): Gets the resource type.
 
 ## IntegrationServiceEnvironmentProperties
@@ -155,8 +155,8 @@
 * **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration): The endpoints configuration.
 * **integrationServiceEnvironmentId**: string: Gets the tracking id.
 * **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): The network configuration.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The provisioning state.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The integration service environment state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The workflow provisioning state.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
 
 ## IntegrationServiceEnvironmenEncryptionConfiguration
 ### Properties
@@ -196,23 +196,23 @@
 
 ## IntegrationServiceEnvironmentAccessEndpoint
 ### Properties
-* **type**: 'External' | 'Internal' | 'NotSpecified': The access endpoint type.
+* **type**: 'External' | 'Internal' | 'NotSpecified': The integration service environment access endpoint type.
 
 ## IntegrationServiceEnvironmentSku
 ### Properties
 * **capacity**: int: The sku capacity.
-* **name**: 'Developer' | 'NotSpecified' | 'Premium': The sku name.
+* **name**: 'Developer' | 'NotSpecified' | 'Premium': The integration service environment sku name.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## IntegrationAccountSku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required): The sku name.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required): The integration account sku name.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -227,7 +227,7 @@
 * **guestPartner**: string (Required): The integration account partner that is set as guest partner for this agreement.
 * **hostIdentity**: [BusinessIdentity](#businessidentity) (Required): The integration account partner's business identity.
 * **hostPartner**: string (Required): The integration account partner that is set as host partner for this agreement.
-* **metadata**: any: The metadata.
+* **metadata**: any: Any object
 
 ## AgreementContent
 ### Properties
@@ -318,7 +318,7 @@
 * **encryptMessage**: bool (Required): The value indicating whether the message has to be encrypted.
 * **interchangeDuplicatesValidityDays**: int (Required): The number of days to look back for duplicate interchange.
 * **overrideMessageProperties**: bool (Required): The value indicating whether to override incoming message properties with those in agreement.
-* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512': The signing algorithm.
+* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512': The signing or hashing algorithm.
 * **signMessage**: bool (Required): The value indicating whether the message has to be signed.
 
 ## BusinessIdentity
@@ -369,7 +369,7 @@
 ### Properties
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The decimal point indicator.
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The edifact decimal indicator.
 * **messageAssociationAssignedCode**: string: The message association assigned code.
 * **messageId**: string: The message id.
 * **messageRelease**: string: The message release.
@@ -445,15 +445,15 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string: The character encoding.
-* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required): The EDIFACT frame setting characterSet.
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required): The edifact character set.
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
-* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The EDIFACT frame setting decimal indicator.
+* **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required): The edifact decimal indicator.
 * **protocolVersion**: int (Required): The protocol version.
 * **releaseIndicator**: int (Required): The release indicator.
 * **repetitionSeparator**: int (Required): The repetition separator.
 * **segmentTerminator**: int (Required): The segment terminator.
-* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The EDIFACT frame setting segment terminator suffix.
+* **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The segment terminator suffix.
 * **serviceCodeListDirectoryVersion**: string: The service code list directory version.
 
 ## EdifactMessageFilter
@@ -551,7 +551,7 @@
 
 ## X12EnvelopeOverride
 ### Properties
-* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The date format.
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The x12 date format.
 * **functionalIdentifierCode**: string: The functional identifier code.
 * **headerVersion**: string (Required): The header version.
 * **messageId**: string (Required): The message id on which this envelope settings has to be applied.
@@ -560,7 +560,7 @@
 * **responsibleAgencyCode**: string (Required): The responsible agency code.
 * **senderApplicationId**: string (Required): The sender application id.
 * **targetNamespace**: string (Required): The target namespace on which this envelope settings has to be applied.
-* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The time format.
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The x12 time format.
 
 ## X12EnvelopeSettings
 ### Properties
@@ -571,8 +571,8 @@
 * **groupControlNumberLowerBound**: int (Required): The group control number lower bound.
 * **groupControlNumberUpperBound**: int (Required): The group control number upper bound.
 * **groupHeaderAgencyCode**: string (Required): The group header agency code.
-* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The group header date format.
-* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The group header time format.
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required): The x12 date format.
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required): The x12 time format.
 * **groupHeaderVersion**: string (Required): The group header version.
 * **interchangeControlNumberLowerBound**: int (Required): The interchange  control number lower bound.
 * **interchangeControlNumberUpperBound**: int (Required): The interchange  control number upper bound.
@@ -665,7 +665,7 @@
 * **segmentTerminatorSuffix**: 'CR' | 'CRLF' | 'LF' | 'None' | 'NotSpecified' (Required): The segment terminator suffix.
 * **targetNamespace**: string: The target namespace on which this delimiter settings has to be applied.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -677,18 +677,18 @@
 * **assemblyPublicKeyToken**: string: The assembly public key token.
 * **assemblyVersion**: string: The assembly version.
 * **changedTime**: string: The artifact changed time.
-* **content**: any
+* **content**: any: Anything
 * **contentLink**: [ContentLink](#contentlink): The content link.
 * **contentType**: string: The content type.
 * **createdTime**: string: The artifact creation time.
-* **metadata**: any
+* **metadata**: any: Anything
 
 ## ContentLink
 ### Properties
 * **contentHash**: [ContentHash](#contenthash): The content hash.
 * **contentSize**: int: The content size.
 * **contentVersion**: string: The content version.
-* **metadata**: any
+* **metadata**: any: Any object
 * **uri**: string: The content link URI.
 
 ## ContentHash
@@ -696,7 +696,7 @@
 * **algorithm**: string: The algorithm of the content hash.
 * **value**: string: The value of the content hash.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -706,7 +706,7 @@
 * **batchGroupName**: string (Required): The name of the batch group.
 * **changedTime**: string: The artifact changed time.
 * **createdTime**: string: The artifact creation time.
-* **metadata**: any
+* **metadata**: any: Anything
 * **releaseCriteria**: [BatchReleaseCriteria](#batchreleasecriteria) (Required): The batch release criteria.
 
 ## BatchReleaseCriteria
@@ -718,7 +718,7 @@
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year': The frequency.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year': The recurrence frequency.
 * **interval**: int: The interval.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
@@ -737,7 +737,7 @@
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The day of the week.
 * **occurrence**: int: The occurrence.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -747,22 +747,22 @@
 * **changedTime**: string (ReadOnly): The changed time.
 * **createdTime**: string (ReadOnly): The created time.
 * **key**: [KeyVaultKeyReference](#keyvaultkeyreference): The reference to the key vault key.
-* **metadata**: any: The metadata.
+* **metadata**: any: Any object
 * **publicCertificate**: string: The public certificate.
 
 ## KeyVaultKeyReference
 ### Properties
 * **keyName**: string (Required): The private key name in key vault.
-* **keyVault**: [schemas:205_keyVault](#schemas205keyvault) (Required): The key vault reference.
+* **keyVault**: [KeyVaultKeyReferenceKeyVault](#keyvaultkeyreferencekeyvault) (Required): The key vault reference.
 * **keyVersion**: string: The private key version in key vault.
 
-## schemas:205_keyVault
+## KeyVaultKeyReferenceKeyVault
 ### Properties
 * **id**: string: The resource id.
 * **name**: string (ReadOnly): The resource name.
 * **type**: string (ReadOnly): The resource type.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -775,14 +775,14 @@
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
 * **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' (Required): The map type.
-* **metadata**: any: The metadata.
-* **parametersSchema**: [schemas:132_parametersSchema](#schemas132parametersschema): The parameters schema of integration account map.
+* **metadata**: any: Any object
+* **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema): The parameters schema of integration account map.
 
-## schemas:132_parametersSchema
+## IntegrationAccountMapPropertiesParametersSchema
 ### Properties
 * **ref**: string: The reference name.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -792,7 +792,7 @@
 * **changedTime**: string (ReadOnly): The changed time.
 * **content**: [PartnerContent](#partnercontent) (Required): The integration account partner content.
 * **createdTime**: string (ReadOnly): The created time.
-* **metadata**: any: The metadata.
+* **metadata**: any: Any object
 * **partnerType**: 'B2B' | 'NotSpecified' (Required): The partner type.
 
 ## PartnerContent
@@ -803,7 +803,7 @@
 ### Properties
 * **businessIdentities**: [BusinessIdentity](#businessidentity)[]: The list of partner business identities.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -817,11 +817,11 @@
 * **createdTime**: string (ReadOnly): The created time.
 * **documentName**: string: The document name.
 * **fileName**: string: The file name.
-* **metadata**: any: The metadata.
+* **metadata**: any: Any object
 * **schemaType**: 'NotSpecified' | 'Xml' (Required): The schema type.
 * **targetNamespace**: string: The target namespace of the schema.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -829,15 +829,15 @@
 ## IntegrationAccountSessionProperties
 ### Properties
 * **changedTime**: string (ReadOnly): The changed time.
-* **content**: any
+* **content**: any: Any object
 * **createdTime**: string (ReadOnly): The created time.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -848,14 +848,14 @@
 * **apiDefinitionUrl**: string (ReadOnly): The API definition.
 * **backendService**: [ApiResourceBackendService](#apiresourcebackendservice) (ReadOnly): The API backend service.
 * **capabilities**: string[] (ReadOnly): The capabilities.
-* **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The category.
-* **connectionParameters**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly): The connection parameters.
+* **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
+* **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters) (ReadOnly): The connection parameters.
 * **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation) (ReadOnly): The API general information.
 * **integrationServiceEnvironment**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
 * **metadata**: [ApiResourceMetadata](#apiresourcemetadata) (ReadOnly): The api resource metadata.
 * **name**: string (ReadOnly): The name
 * **policies**: [ApiResourcePolicies](#apiresourcepolicies) (ReadOnly): The API resource policies.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
 * **runtimeUrls**: string[] (ReadOnly): The runtime urls.
 
 ## ApiResourceDefinitions
@@ -867,7 +867,7 @@
 ### Properties
 * **serviceUrl**: string (ReadOnly): The service URL.
 
-## Dictionary<string,Object>
+## ApiResourcePropertiesConnectionParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -879,18 +879,18 @@
 * **iconUrl**: string (ReadOnly): The icon url.
 * **releaseTag**: string (ReadOnly): The release tag.
 * **termsOfUseUrl**: string (ReadOnly): The terms of use url.
-* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The tier.
+* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
 
 ## ApiResourceMetadata
 ### Properties
-* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' (ReadOnly): The api type.
+* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' (ReadOnly)
 * **brandColor**: string (ReadOnly): The brand color.
 * **connectionType**: string (ReadOnly): The connection type.
 * **deploymentParameters**: [ApiDeploymentParameterMetadataSet](#apideploymentparametermetadataset) (ReadOnly): The API deployment parameters metadata.
 * **hideKey**: string (ReadOnly): The hide key.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
 * **source**: string (ReadOnly): The source.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): The tags.
+* **tags**: [ApiResourceMetadataTags](#apiresourcemetadatatags) (ReadOnly): The tags.
 * **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' (ReadOnly): The WSDL import method.
 * **wsdlService**: [WsdlService](#wsdlservice) (ReadOnly): The WSDL service.
 
@@ -905,9 +905,9 @@
 * **displayName**: string (ReadOnly): The display name.
 * **isRequired**: bool (ReadOnly): Indicates whether its required.
 * **type**: string (ReadOnly): The type.
-* **visibility**: 'Default' | 'Internal' | 'NotSpecified' (ReadOnly): The visibility.
+* **visibility**: 'Default' | 'Internal' | 'NotSpecified' (ReadOnly): The Api deployment parameter visibility.
 
-## Dictionary<string,String>
+## ApiResourceMetadataTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -922,7 +922,7 @@
 * **content**: string (ReadOnly): The API level only policies XML as embedded content.
 * **contentLink**: string (ReadOnly): The content link to the policies.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -933,14 +933,14 @@
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
 * **changedTime**: string (ReadOnly): Gets the changed time.
 * **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any
+* **definition**: any: Any object
 * **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration): The endpoints configuration.
 * **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
 * **integrationServiceEnvironment**: [ResourceReference](#resourcereference): The resource reference.
-* **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter): The parameters.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): Gets the provisioning state.
+* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): The parameters.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
 * **sku**: [Sku](#sku) (ReadOnly): The sku type.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The state.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
 * **version**: string (ReadOnly): Gets the version.
 
 ## FlowAccessControlConfiguration
@@ -961,9 +961,9 @@
 
 ## OpenAuthenticationAccessPolicies
 ### Properties
-* **policies**: [Dictionary<string,OpenAuthenticationAccessPolicy>](#dictionarystringopenauthenticationaccesspolicy): Open authentication policies.
+* **policies**: [OpenAuthenticationAccessPolicies](#openauthenticationaccesspolicies): Open authentication policies.
 
-## Dictionary<string,OpenAuthenticationAccessPolicy>
+## OpenAuthenticationAccessPolicies
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [OpenAuthenticationAccessPolicy](#openauthenticationaccesspolicy)
@@ -971,14 +971,14 @@
 ## OpenAuthenticationAccessPolicy
 ### Properties
 * **claims**: [OpenAuthenticationPolicyClaim](#openauthenticationpolicyclaim)[]: The access policy claims.
-* **type**: 'AAD' (ReadOnly): Type of provider for OAuth.
+* **type**: 'AAD' (ReadOnly): Open authentication policy provider type.
 
 ## OpenAuthenticationPolicyClaim
 ### Properties
 * **name**: string: The name of the claim.
 * **value**: string: The value of the claim.
 
-## Dictionary<string,WorkflowParameter>
+## WorkflowPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
@@ -986,16 +986,16 @@
 ## WorkflowParameter
 ### Properties
 * **description**: string: The description.
-* **metadata**: any
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': The type.
-* **value**: any
+* **metadata**: any: Any object
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': The parameter type.
+* **value**: any: Any object
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The name.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The sku name.
 * **plan**: [ResourceReference](#resourcereference): The resource reference.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview
@@ -21,7 +21,7 @@
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Compute](#compute): Machine Learning compute object.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -44,44 +44,45 @@
 * **storageAccount**: string: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
 * **workspaceId**: string (ReadOnly): The immutable id associated with this workspace.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string: Location for the underlying compute
 * **createdOn**: string (ReadOnly): The date and time when the compute was created.
 * **description**: string: The description of the Machine Learning compute.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **resourceId**: string: ARM resource id of the compute
 ### AKS
 #### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:15_properties](#schemas15properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
 ### BatchAI
 #### Properties
-* **computeType**: 'BatchAI' (Required): A Machine Learning compute based on Azure BatchAI.
-* **properties**: [schemas:16_properties](#schemas16properties): BatchAI properties
+* **computeType**: 'BatchAI' (Required): The type of compute
+* **properties**: [BatchAIProperties](#batchaiproperties): BatchAI properties
 
 ### DataFactory
 #### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
+* **computeType**: 'DataFactory' (Required): The type of compute
 
 ### HDInsight
 #### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -101,10 +102,10 @@
 
 ## AKS
 ### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:15_properties](#schemas15properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
-## schemas:15_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
@@ -117,7 +118,7 @@
 * **cert**: string: Cert data
 * **cname**: string: CNAME of the cert
 * **key**: string: Key data
-* **status**: 'Disabled' | 'Enabled': Enable or disable SSL for scoring.
+* **status**: 'Disabled' | 'Enabled': Enable or disable SSL for scoring
 
 ## SystemService
 ### Properties
@@ -127,10 +128,10 @@
 
 ## BatchAI
 ### Properties
-* **computeType**: 'BatchAI' (Required): A Machine Learning compute based on Azure BatchAI.
-* **properties**: [schemas:16_properties](#schemas16properties): BatchAI properties
+* **computeType**: 'BatchAI' (Required): The type of compute
+* **properties**: [BatchAIProperties](#batchaiproperties): BatchAI properties
 
-## schemas:16_properties
+## BatchAIProperties
 ### Properties
 * **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for BatchAI Compute
 * **vmPriority**: string: Virtual Machine priority
@@ -144,19 +145,18 @@
 
 ## DataFactory
 ### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
+* **computeType**: 'DataFactory' (Required): The type of compute
 
 ## HDInsight
 ### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
-## schemas:17_properties
+## HDInsightProperties
 ### Properties
-* **address**: string: Public IP address of the virtual machine.
+* **address**: string: Public IP address of the master node of the cluster.
 * **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections.
-* **virtualMachineSize**: string: Virtual Machine size
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## VirtualMachineSshCredentials
 ### Properties
@@ -167,10 +167,17 @@
 
 ## VirtualMachine
 ### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:17_properties](#schemas17properties)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

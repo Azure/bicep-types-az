@@ -8,8 +8,8 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:0_properties](#schemas0properties): Certificate resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [CertificateProperties](#certificateproperties): Certificate resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments@2020-12-01
@@ -21,7 +21,7 @@
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AppServiceEnvironment](#appserviceenvironment): Description of an App Service Environment.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/hostingEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/configurations@2020-12-01
@@ -31,7 +31,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'networking' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:331_properties](#schemas331properties): AseV3NetworkingConfiguration resource specific properties
+* **properties**: [AseV3NetworkingConfigurationProperties](#asev3networkingconfigurationproperties): AseV3NetworkingConfiguration resource specific properties
 * **type**: 'Microsoft.Web/hostingEnvironments/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/multiRolePools@2020-12-01
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
 * **type**: 'Microsoft.Web/hostingEnvironments/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/workerPools@2020-12-01
@@ -73,7 +73,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:85_properties](#schemas85properties): User resource specific properties
+* **properties**: [UserProperties](#userproperties): User resource specific properties
 * **type**: 'Microsoft.Web/publishingUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms@2020-12-01
@@ -84,9 +84,9 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:6_properties](#schemas6properties): AppServicePlan resource specific properties
+* **properties**: [AppServicePlanProperties](#appserviceplanproperties): AppServicePlan resource specific properties
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/serverfarms' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2020-12-01
@@ -96,18 +96,17 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:89_properties](#schemas89properties): VnetGateway resource specific properties
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **error**: [schemas:27_error](#schemas27error) (ReadOnly): Error model.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly): Kind of resource.
+* **kind**: string (WriteOnly)
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:91_properties](#schemas91properties) (WriteOnly): VnetRoute resource specific properties
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2020-12-01
@@ -119,13 +118,14 @@
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:71_properties](#schemas71properties): Site resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [SiteProperties](#siteproperties): Site resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/basicPublishingCredentialsPolicies@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
+
 ### Base Properties
 ### Microsoft.Web/sites/basicPublishingCredentialsPolicies
 #### Properties
@@ -133,7 +133,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'ftp' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/basicPublishingCredentialsPolicies
@@ -142,13 +142,14 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'scm' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 
 ## Resource Microsoft.Web/sites/config@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
+
 ### Base Properties
 ### Microsoft.Web/sites/config
 #### Properties
@@ -156,7 +157,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -165,7 +166,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:265_properties](#schemas265properties): SiteAuthSettings resource specific properties
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -174,7 +175,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettingsV2' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:266_properties](#schemas266properties): SiteAuthSettingsV2 resource specific properties
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties): SiteAuthSettingsV2 resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -183,7 +184,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,AzureStorageInfoValue>](#dictionarystringazurestorageinfovalue): Azure storage accounts.
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -192,7 +193,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:179_properties](#schemas179properties): BackupRequest resource specific properties
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -201,7 +202,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,ConnStringValueTypePair>](#dictionarystringconnstringvaluetypepair): Connection strings.
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -210,7 +211,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:275_properties](#schemas275properties): SiteLogsConfig resource specific properties
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -219,7 +220,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -228,7 +229,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:61_properties](#schemas61properties): PushSettings resource specific properties
+* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/config
@@ -259,7 +260,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:202_properties](#schemas202properties): Deployment resource specific properties
+* **properties**: [DeploymentProperties](#deploymentproperties): Deployment resource specific properties
 * **type**: 'Microsoft.Web/sites/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/domainOwnershipIdentifiers@2020-12-01
@@ -269,7 +270,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:40_properties](#schemas40properties): Identifier resource specific properties
+* **properties**: [IdentifierProperties](#identifierproperties): Identifier resource specific properties
 * **type**: 'Microsoft.Web/sites/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/extensions@2020-12-01
@@ -279,7 +280,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2020-12-01
@@ -289,7 +290,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:210_properties](#schemas210properties): FunctionEnvelope resource specific properties
+* **properties**: [FunctionEnvelopeProperties](#functionenvelopeproperties): FunctionEnvelope resource specific properties
 * **type**: 'Microsoft.Web/sites/functions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions/keys@2020-12-01
@@ -308,7 +309,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:220_properties](#schemas220properties): HostNameBinding resource specific properties
+* **properties**: [HostNameBindingProperties](#hostnamebindingproperties): HostNameBinding resource specific properties
 * **type**: 'Microsoft.Web/sites/hostNameBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/hybridconnection@2020-12-01
@@ -318,7 +319,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:263_properties](#schemas263properties): RelayServiceConnectionEntity resource specific properties
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties): RelayServiceConnectionEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/hybridconnection' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/hybridConnectionNamespaces/relays@2020-12-01
@@ -328,7 +329,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:39_properties](#schemas39properties): HybridConnection resource specific properties
+* **properties**: [HybridConnectionProperties](#hybridconnectionproperties): HybridConnection resource specific properties
 * **type**: 'Microsoft.Web/sites/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/instances/extensions@2020-12-01
@@ -338,8 +339,18 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Web/sites/networkConfig@2020-12-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Kind of resource.
+* **name**: 'virtualNetwork' (Required, DeployTimeConstant): The resource name
+* **properties**: [SwiftVirtualNetworkProperties](#swiftvirtualnetworkproperties): SwiftVirtualNetwork resource specific properties
+* **type**: 'Microsoft.Web/sites/networkConfig' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/premieraddons@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
@@ -349,8 +360,8 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:250_properties](#schemas250properties): PremierAddOn resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [PremierAddOnProperties](#premieraddonproperties): PremierAddOn resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/privateAccess@2020-12-01
@@ -360,7 +371,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'virtualNetworks' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:252_properties](#schemas252properties): PrivateAccess resource specific properties
+* **properties**: [PrivateAccessProperties](#privateaccessproperties): PrivateAccess resource specific properties
 * **type**: 'Microsoft.Web/sites/privateAccess' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/privateEndpointConnections@2020-12-01
@@ -370,7 +381,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/publicCertificates@2020-12-01
@@ -380,7 +391,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:261_properties](#schemas261properties): PublicCertificate resource specific properties
+* **properties**: [PublicCertificateProperties](#publiccertificateproperties): PublicCertificate resource specific properties
 * **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/siteextensions@2020-12-01
@@ -390,7 +401,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:273_properties](#schemas273properties) (ReadOnly): SiteExtensionInfo resource specific properties
+* **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
 * **type**: 'Microsoft.Web/sites/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots@2020-12-01
@@ -402,13 +413,14 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:71_properties](#schemas71properties): Site resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [SiteProperties](#siteproperties): Site resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/slots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
+
 ### Base Properties
 ### Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies
 #### Properties
@@ -416,7 +428,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'ftp' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies
@@ -425,13 +437,14 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'scm' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 
 ## Resource Microsoft.Web/sites/slots/config@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
+
 ### Base Properties
 ### Microsoft.Web/sites/slots/config
 #### Properties
@@ -439,7 +452,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -448,7 +461,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:265_properties](#schemas265properties): SiteAuthSettings resource specific properties
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -457,7 +470,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettingsV2' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:266_properties](#schemas266properties): SiteAuthSettingsV2 resource specific properties
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties): SiteAuthSettingsV2 resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -466,7 +479,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,AzureStorageInfoValue>](#dictionarystringazurestorageinfovalue): Azure storage accounts.
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -475,7 +488,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:179_properties](#schemas179properties): BackupRequest resource specific properties
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -484,7 +497,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,ConnStringValueTypePair>](#dictionarystringconnstringvaluetypepair): Connection strings.
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -493,7 +506,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:275_properties](#schemas275properties): SiteLogsConfig resource specific properties
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -502,7 +515,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -511,7 +524,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:61_properties](#schemas61properties): PushSettings resource specific properties
+* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/sites/slots/config
@@ -531,7 +544,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:202_properties](#schemas202properties): Deployment resource specific properties
+* **properties**: [DeploymentProperties](#deploymentproperties): Deployment resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/domainOwnershipIdentifiers@2020-12-01
@@ -541,7 +554,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:40_properties](#schemas40properties): Identifier resource specific properties
+* **properties**: [IdentifierProperties](#identifierproperties): Identifier resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/extensions@2020-12-01
@@ -551,7 +564,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2020-12-01
@@ -561,7 +574,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:210_properties](#schemas210properties): FunctionEnvelope resource specific properties
+* **properties**: [FunctionEnvelopeProperties](#functionenvelopeproperties): FunctionEnvelope resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/functions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions/keys@2020-12-01
@@ -580,7 +593,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:220_properties](#schemas220properties): HostNameBinding resource specific properties
+* **properties**: [HostNameBindingProperties](#hostnamebindingproperties): HostNameBinding resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/hostNameBindings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/hybridconnection@2020-12-01
@@ -590,7 +603,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:263_properties](#schemas263properties): RelayServiceConnectionEntity resource specific properties
+* **properties**: [RelayServiceConnectionEntityProperties](#relayserviceconnectionentityproperties): RelayServiceConnectionEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/hybridconnection' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays@2020-12-01
@@ -600,7 +613,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:39_properties](#schemas39properties): HybridConnection resource specific properties
+* **properties**: [HybridConnectionProperties](#hybridconnectionproperties): HybridConnection resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/instances/extensions@2020-12-01
@@ -610,7 +623,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
+* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2020-12-01
@@ -621,8 +634,8 @@ This is valid for all deployment slots in an app.
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:250_properties](#schemas250properties): PremierAddOn resource specific properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **properties**: [PremierAddOnProperties](#premieraddonproperties): PremierAddOn resource specific properties
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/privateAccess@2020-12-01
@@ -632,7 +645,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'virtualNetworks' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:252_properties](#schemas252properties): PrivateAccess resource specific properties
+* **properties**: [PrivateAccessProperties](#privateaccessproperties): PrivateAccess resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/privateAccess' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/privateEndpointConnections@2020-12-01
@@ -642,7 +655,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/publicCertificates@2020-12-01
@@ -652,7 +665,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:261_properties](#schemas261properties): PublicCertificate resource specific properties
+* **properties**: [PublicCertificateProperties](#publiccertificateproperties): PublicCertificate resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/siteextensions@2020-12-01
@@ -662,7 +675,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:273_properties](#schemas273properties) (ReadOnly): SiteExtensionInfo resource specific properties
+* **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2020-12-01
@@ -672,7 +685,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:278_properties](#schemas278properties): SiteSourceControl resource specific properties
+* **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties): SiteSourceControl resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections@2020-12-01
@@ -682,7 +695,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:90_properties](#schemas90properties): VnetInfo resource specific properties
+* **properties**: [VnetInfoProperties](#vnetinfoproperties): VnetInfo resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/virtualNetworkConnections/gateways@2020-12-01
@@ -692,7 +705,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:89_properties](#schemas89properties): VnetGateway resource specific properties
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/sourcecontrols@2020-12-01
@@ -702,7 +715,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:278_properties](#schemas278properties): SiteSourceControl resource specific properties
+* **properties**: [SiteSourceControlProperties](#sitesourcecontrolproperties): SiteSourceControl resource specific properties
 * **type**: 'Microsoft.Web/sites/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections@2020-12-01
@@ -712,7 +725,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:90_properties](#schemas90properties): VnetInfo resource specific properties
+* **properties**: [VnetInfoProperties](#vnetinfoproperties): VnetInfo resource specific properties
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/virtualNetworkConnections/gateways@2020-12-01
@@ -722,7 +735,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:89_properties](#schemas89properties): VnetGateway resource specific properties
+* **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sourcecontrols@2020-12-01
@@ -732,7 +745,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:150_properties](#schemas150properties): SourceControl resource specific properties
+* **properties**: [SourceControlProperties](#sourcecontrolproperties): SourceControl resource specific properties
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites@2020-12-01
@@ -746,12 +759,13 @@ This is valid for all deployment slots in an app.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StaticSite](#staticsite): A static site.
 * **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/staticSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/builds/config@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
+
 ### Base Properties
 ### Microsoft.Web/staticSites/builds/config
 #### Properties
@@ -759,7 +773,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/builds/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/staticSites/builds/config
@@ -768,7 +782,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'functionappsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/builds/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -779,12 +793,13 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:320_properties](#schemas320properties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
+* **properties**: [StaticSiteUserProvidedFunctionAppARMResourceProperties](#staticsiteuserprovidedfunctionapparmresourceproperties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/builds/userProvidedFunctionApps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/config@2020-12-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
+
 ### Base Properties
 ### Microsoft.Web/staticSites/config
 #### Properties
@@ -792,7 +807,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ### Microsoft.Web/staticSites/config
@@ -801,7 +816,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'functionappsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 
@@ -812,7 +827,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:309_properties](#schemas309properties): StaticSiteCustomDomainRequestPropertiesARMResource resource specific properties
+* **properties**: [StaticSiteCustomDomainRequestPropertiesARMResourceProperties](#staticsitecustomdomainrequestpropertiesarmresourceproperties): StaticSiteCustomDomainOverviewARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/privateEndpointConnections@2020-12-01
@@ -822,7 +837,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/userProvidedFunctionApps@2020-12-01
@@ -832,13 +847,13 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:320_properties](#schemas320properties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
+* **properties**: [StaticSiteUserProvidedFunctionAppARMResourceProperties](#staticsiteuserprovidedfunctionapparmresourceproperties): StaticSiteUserProvidedFunctionAppARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/userProvidedFunctionApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:0_properties
+## CertificateProperties
 ### Properties
 * **canonicalName**: string: CNAME of the certificate to be issued via free certificate
-* **cerBlob**: array (ReadOnly): Raw bytes of .cer file
+* **cerBlob**: any (ReadOnly): Raw bytes of .cer file
 * **domainValidationMethod**: string: Method of domain validation for free cert
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **friendlyName**: string (ReadOnly): Friendly name of the certificate.
@@ -850,7 +865,7 @@ This is valid for all deployment slots in an app.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
 * **password**: string: Certificate password.
-* **pfxBlob**: array: Pfx blob.
+* **pfxBlob**: any: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
 * **serverFarmId**: string: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
@@ -865,7 +880,7 @@ This is valid for all deployment slots in an app.
 * **name**: string (ReadOnly): Name of the App Service Environment.
 * **type**: string (ReadOnly): Resource type of the App Service Environment.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -877,7 +892,7 @@ This is valid for all deployment slots in an app.
 * **dnsSuffix**: string: DNS suffix of the App Service Environment.
 * **frontEndScaleFactor**: int: Scale factor for front-ends.
 * **hasLinuxWorkers**: bool (ReadOnly): Flag that displays whether an ASE has linux workers or not
-* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web, Publishing' | 'Web': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+* **internalLoadBalancingMode**: 'None' | 'Publishing' | 'Web' | 'Web, Publishing': Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
 * **ipsslAddressCount**: int: Number of IP SSL addresses reserved for the App Service Environment.
 * **maximumNumberOfMachines**: int (ReadOnly): Maximum number of VMs in the App Service Environment.
 * **multiRoleCount**: int (ReadOnly): Number of front-end instances.
@@ -901,20 +916,20 @@ This is valid for all deployment slots in an app.
 * **subnet**: string: Subnet within the Virtual Network.
 * **type**: string (ReadOnly): Resource type of the Virtual Network (read-only).
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:331_properties
+## AseV3NetworkingConfigurationProperties
 ### Properties
 * **allowNewPrivateEndpointConnections**: bool: Property to enable and disable new private endpoint connection creation on ASE
-* **linuxOutboundIpAddresses**: string[] (ReadOnly)
-* **windowsOutboundIpAddresses**: string[] (ReadOnly)
+* **linuxOutboundIpAddresses**: string[] (ReadOnly): Array of AseV3NetworkingConfigurationPropertiesLinuxOutboundIpAddressesItem
+* **windowsOutboundIpAddresses**: string[] (ReadOnly): Array of AseV3NetworkingConfigurationPropertiesWindowsOutboundIpAddressesItem
 
 ## WorkerPool
 ### Properties
-* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared or dedicated app hosting.
+* **computeMode**: 'Dedicated' | 'Dynamic' | 'Shared': Shared/dedicated workers.
 * **instanceNames**: string[] (ReadOnly): Names of all instances in the worker pool (read only).
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.
@@ -962,7 +977,7 @@ This is valid for all deployment slots in an app.
 * **description**: string: Description of a private link connection
 * **status**: string: Status of a private link connection
 
-## schemas:85_properties
+## UserProperties
 ### Properties
 * **publishingPassword**: string: Password used for publishing.
 * **publishingPasswordHash**: string: Password hash used for publishing.
@@ -970,7 +985,7 @@ This is valid for all deployment slots in an app.
 * **publishingUserName**: string (Required): Username used for publishing.
 * **scmUri**: string: Url of SCM site.
 
-## schemas:6_properties
+## AppServicePlanProperties
 ### Properties
 * **freeOfferExpirationTime**: string: The time when the server farm free offer expires.
 * **geoRegion**: string (ReadOnly): Geographical location for the App Service plan.
@@ -984,7 +999,7 @@ This is valid for all deployment slots in an app.
 * **numberOfSites**: int (ReadOnly): Number of apps assigned to this App Service plan.
 * **perSiteScaling**: bool: If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
 If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Plan.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the App Service Environment.
 * **reserved**: bool: If Linux app service plan <code>true</code>, <code>false</code> otherwise.
 * **resourceGroup**: string (ReadOnly): Resource group of the App Service plan.
 * **spotExpirationTime**: string: The time when the server farm expires. Valid only if it is a spot server farm.
@@ -1000,31 +1015,17 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 * **name**: string (ReadOnly): Name of the Kubernetes Environment.
 * **type**: string (ReadOnly): Resource type of the Kubernetes Environment.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:89_properties
+## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
 * **vpnPackageUri**: string (Required): The URI where the VPN package can be downloaded.
 
-## schemas:27_error
-### Properties
-* **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **details**: [schemas:27_error_detailsItem](#schemas27errordetailsitem)[] (ReadOnly)
-* **innererror**: string (ReadOnly): More information to debug error.
-* **message**: string (ReadOnly): Detailed error description and debugging information.
-* **target**: string (ReadOnly): Detailed error description and debugging information.
-
-## schemas:27_error_detailsItem
-### Properties
-* **code**: string (ReadOnly): Standardized string to programmatically identify the error.
-* **message**: string (ReadOnly): Detailed error description and debugging information.
-* **target**: string (ReadOnly): Detailed error description and debugging information.
-
-## schemas:91_properties
+## VnetRouteProperties
 ### Properties
 * **endAddress**: string: The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
 * **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC': The type of route this is:
@@ -1039,20 +1040,20 @@ These values will be used for syncing an app's routes with those from a Virtual 
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
 * **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity.
-* **userAssignedIdentities**: [Dictionary<string,Schemas47UserAssignedIdentitiesValue>](#dictionarystringschemas47userassignedidentitiesvalue): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': Type of managed service identity.
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 
-## Dictionary<string,Schemas47UserAssignedIdentitiesValue>
+## ManagedServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:47_userAssignedIdentitiesValue](#schemas47userassignedidentitiesvalue)
+* **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:47_userAssignedIdentitiesValue
+## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): Client Id of user assigned identity
 * **principalId**: string (ReadOnly): Principal Id of user assigned identity
 
-## schemas:71_properties
+## SiteProperties
 ### Properties
 * **availabilityState**: 'DisasterRecoveryMode' | 'Limited' | 'Normal' (ReadOnly): Management information availability state for the app.
 * **clientAffinityEnabled**: bool: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
@@ -1087,7 +1088,7 @@ http requests
 This only applies to Functions container.
 * **outboundIpAddresses**: string (ReadOnly): List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
 * **possibleOutboundIpAddresses**: string (ReadOnly): List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
-* **redundancyMode**: 'ActiveActive' | 'Failover' | 'GeoRedundant' | 'Manual' | 'None': Site redundancy mode.
+* **redundancyMode**: 'ActiveActive' | 'Failover' | 'GeoRedundant' | 'Manual' | 'None': Site redundancy mode
 * **repositorySiteName**: string (ReadOnly): Name of the repository site.
 * **reserved**: bool: <code>true</code> if reserved; otherwise, <code>false</code>.
 * **resourceGroup**: string (ReadOnly): Name of the resource group the app belongs to. Read-only.
@@ -1101,10 +1102,12 @@ This only applies to Functions container.
 * **targetSwapSlot**: string (ReadOnly): Specifies which deployment slot this app will swap into. Read-only.
 * **trafficManagerHostNames**: string[] (ReadOnly): Azure Traffic Manager hostnames associated with the app. Read-only.
 * **usageState**: 'Exceeded' | 'Normal' (ReadOnly): State indicating whether the app has exceeded its quota usage. Read-only.
+* **virtualNetworkSubnetId**: string: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
+This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
 
 ## CloningInfo
 ### Properties
-* **appSettingsOverrides**: [Dictionary<string,String>](#dictionarystringstring): Application setting overrides for cloned app. If specified, these settings override the settings cloned
+* **appSettingsOverrides**: [CloningInfoAppSettingsOverrides](#cloninginfoappsettingsoverrides): Application setting overrides for cloned app. If specified, these settings override the settings cloned 
 from source app. Otherwise, application settings from source app are retained.
 * **cloneCustomHostNames**: bool: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
 * **cloneSourceControl**: bool: <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
@@ -1113,15 +1116,15 @@ from source app. Otherwise, application settings from source app are retained.
 together to use the same snapshot.
 * **hostingEnvironment**: string: App Service Environment.
 * **overwrite**: bool: <code>true</code> to overwrite destination app; otherwise, <code>false</code>.
-* **sourceWebAppId**: string (Required): ARM resource ID of the source app. App resource ID is of the form
-/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and
+* **sourceWebAppId**: string (Required): ARM resource ID of the source app. App resource ID is of the form 
+/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
 /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.
 * **sourceWebAppLocation**: string: Location of source app ex: West US or North Europe
-* **trafficManagerProfileId**: string: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form
+* **trafficManagerProfileId**: string: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
 /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.
 * **trafficManagerProfileName**: string: Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.
 
-## Dictionary<string,String>
+## CloningInfoAppSettingsOverrides
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1137,6 +1140,8 @@ together to use the same snapshot.
 
 ## SiteConfig
 ### Properties
+* **acrUseManagedIdentityCreds**: bool: Flag to use Managed Identity Creds for ACR pull
+* **acrUserManagedIdentityID**: string: If using user managed identity, the user managed identity ClientId
 * **alwaysOn**: bool: <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
 * **apiDefinition**: [ApiDefinitionInfo](#apidefinitioninfo): Information about the formal API definition for the app.
 * **apiManagementConfig**: [ApiManagementConfig](#apimanagementconfig): Azure API management (APIM) configuration linked to the app.
@@ -1145,14 +1150,14 @@ together to use the same snapshot.
 * **autoHealEnabled**: bool: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
 * **autoHealRules**: [AutoHealRules](#autohealrules): Rules that can be defined for auto-heal.
 * **autoSwapSlotName**: string: Auto-swap slot name.
-* **azureStorageAccounts**: [Dictionary<string,AzureStorageInfoValue>](#dictionarystringazurestorageinfovalue): List of Azure Storage Accounts.
+* **azureStorageAccounts**: [SiteConfigAzureStorageAccounts](#siteconfigazurestorageaccounts): List of Azure Storage Accounts.
 * **connectionStrings**: [ConnStringInfo](#connstringinfo)[]: Connection strings.
 * **cors**: [CorsSettings](#corssettings): Cross-Origin Resource Sharing (CORS) settings for the app.
 * **defaultDocuments**: string[]: Default documents.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
 * **experiments**: [Experiments](#experiments): Routing rules in production experiments.
-* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service.
+* **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly': State of FTP / FTPS service
 * **functionAppScaleLimit**: int: Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans
 * **functionsRuntimeScaleMonitoringEnabled**: bool: Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
@@ -1177,7 +1182,7 @@ runtime to get scale status.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
 * **minimumElasticInstanceCount**: int: Number of minimum instance count for a site
 This setting only applies to the Elastic Plans
-* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests.
+* **minTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **netFrameworkVersion**: string: .NET Framework version.
 * **nodeVersion**: string: Version of Node.js.
 * **numberOfWorkers**: int: Number of workers.
@@ -1185,6 +1190,7 @@ This setting only applies to the Elastic Plans
 * **powerShellVersion**: string: Version of PowerShell.
 * **preWarmedInstanceCount**: int: Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans
+* **publicNetworkAccess**: string: Property to allow or block all public traffic.
 * **publishingUsername**: string: Publishing user name.
 * **push**: [PushSettings](#pushsettings): Push settings for the App.
 * **pythonVersion**: string: Version of Python.
@@ -1194,7 +1200,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **requestTracingExpirationTime**: string: Request tracing expiration time.
 * **scmIpSecurityRestrictions**: [IpSecurityRestriction](#ipsecurityrestriction)[]: IP security restrictions for scm.
 * **scmIpSecurityRestrictionsUseMain**: bool: IP security restrictions for scm to use main.
-* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2': ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site.
+* **scmMinTlsVersion**: '1.0' | '1.1' | '1.2': MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **scmType**: 'BitbucketGit' | 'BitbucketHg' | 'CodePlexGit' | 'CodePlexHg' | 'Dropbox' | 'ExternalGit' | 'ExternalHg' | 'GitHub' | 'LocalGit' | 'None' | 'OneDrive' | 'Tfs' | 'VSO' | 'VSTSRM': SCM type.
 * **tracingOptions**: string: Tracing options.
 * **use32BitWorkerProcess**: bool: <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
@@ -1270,7 +1276,7 @@ before taking the action
 * **statusCodes**: string: HTTP status code.
 * **timeInterval**: string: Time interval.
 
-## Dictionary<string,AzureStorageInfoValue>
+## SiteConfigAzureStorageAccounts
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
@@ -1288,13 +1294,13 @@ before taking the action
 ### Properties
 * **connectionString**: string: Connection string value.
 * **name**: string: Name of connection string.
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer': Type of database.
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'SQLAzure' | 'SQLServer' | 'ServiceBus': Type of database.
 
 ## CorsSettings
 ### Properties
 * **allowedOrigins**: string[]: Gets or sets the list of origins that should be allowed to make cross-origin
 calls (for example: http://example.com:12345). Use "*" to allow all.
-* **supportCredentials**: bool: Gets or sets whether CORS requests with credentials are allowed. See
+* **supportCredentials**: bool: Gets or sets whether CORS requests with credentials are allowed. See 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
 for more details.
 
@@ -1308,8 +1314,8 @@ for more details.
 * **changeDecisionCallbackUrl**: string: Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
 https://www.siteextensions.net/packages/TiPCallback/
 * **changeIntervalInMinutes**: int: Specifies interval in minutes to reevaluate ReroutePercentage.
-* **changeStep**: int: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or
-<code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm
+* **changeStep**: int: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
+<code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
 can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
 * **maxReroutePercentage**: int: Specifies upper boundary below which ReroutePercentage will stay.
 * **minReroutePercentage**: int: Specifies lower boundary above which ReroutePercentage will stay.
@@ -1326,8 +1332,8 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 ### Properties
 * **action**: string: Allow or Deny access for this IP range.
 * **description**: string: IP restriction rule description.
-* **headers**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): IP restriction rule headers.
-X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+* **headers**: [IpSecurityRestrictionHeaders](#ipsecurityrestrictionheaders): IP restriction rule headers.
+X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
 The matching logic is ..
 - If the property is null or empty (default), all hosts(or lack of) are allowed.
 - A value is compared using ordinal-ignore-case (excluding port number).
@@ -1354,7 +1360,7 @@ SubnetMask property must not be specified.
 * **vnetSubnetResourceId**: string: Virtual network resource id
 * **vnetTrafficTag**: int: (internal) Vnet traffic tag
 
-## Dictionary<string,IList<String>>
+## IpSecurityRestrictionHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
@@ -1377,16 +1383,16 @@ SubnetMask property must not be specified.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:61_properties](#schemas61properties): PushSettings resource specific properties
+* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:61_properties
+## PushSettingsProperties
 ### Properties
 * **dynamicTagsJson**: string: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
 * **isPushEnabled**: bool (Required): Gets or sets a flag indicating whether the Push endpoint is enabled.
 * **tagsRequiringAuth**: string: Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
 Tags can consist of alphanumeric characters and the following:
-'_', '@', '#', '.', ':', '-'.
+'_', '@', '#', '.', ':', '-'. 
 Validation should be performed at the PushRequestHandler.
 * **tagWhitelistJson**: string: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
 
@@ -1408,7 +1414,7 @@ Validation should be performed at the PushRequestHandler.
 * **sourceSlotName**: string (ReadOnly): The source slot of the last swap operation.
 * **timestampUtc**: string (ReadOnly): The time the last successful slot swap completed.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1419,10 +1425,10 @@ Validation should be performed at the PushRequestHandler.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'ftp' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:195_properties
+## CsmPublishingCredentialsPoliciesEntityProperties
 ### Properties
 * **allow**: bool (Required): <code>true</code> to allow access to a publishing method; otherwise, <code>false</code>.
 
@@ -1432,7 +1438,7 @@ Validation should be performed at the PushRequestHandler.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'scm' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/config
@@ -1441,10 +1447,10 @@ Validation should be performed at the PushRequestHandler.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1455,15 +1461,15 @@ Validation should be performed at the PushRequestHandler.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:265_properties](#schemas265properties): SiteAuthSettings resource specific properties
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:265_properties
+## SiteAuthSettingsProperties
 ### Properties
 * **aadClaimsAuthorization**: string: Gets a JSON string containing the Azure AD Acl settings.
 * **additionalLoginParams**: string[]: Login parameters to send to the OpenID Connect authorization endpoint when
 a user logs in. Each parameter must be in the form "key=value".
-* **allowedAudiences**: string[]: Allowed audience values to consider when validating JWTs issued by
+* **allowedAudiences**: string[]: Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
 allowed audience, regardless of this setting.
 * **allowedExternalRedirectUrls**: string[]: External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
@@ -1472,7 +1478,7 @@ Note that URLs within the current domain are always implicitly allowed.
 * **authFilePath**: string: The path of the config file containing auth settings.
 If the path is relative, base will the site's root directory.
 * **clientId**: string: The Client ID of this relying party application, known as the client_id.
-This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
 * **clientSecret**: string: The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
@@ -1512,7 +1518,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 * **googleClientSecret**: string: The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
 Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
-* **googleClientSecretSettingName**: string: The app setting name that contains the client secret associated with
+* **googleClientSecretSettingName**: string: The app setting name that contains the client secret associated with 
 the Google web application.
 * **googleOAuthScopes**: string[]: The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
@@ -1557,227 +1563,240 @@ application used for sign-in.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettingsV2' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:266_properties](#schemas266properties): SiteAuthSettingsV2 resource specific properties
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties): SiteAuthSettingsV2 resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:266_properties
+## SiteAuthSettingsV2Properties
 ### Properties
-* **globalValidation**: [GlobalValidation](#globalvalidation)
-* **httpSettings**: [HttpSettings](#httpsettings)
-* **identityProviders**: [IdentityProviders](#identityproviders)
-* **login**: [Login](#login)
-* **platform**: [AuthPlatform](#authplatform)
+* **globalValidation**: [GlobalValidation](#globalvalidation): The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
+* **httpSettings**: [HttpSettings](#httpsettings): The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
+* **identityProviders**: [IdentityProviders](#identityproviders): The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
+* **login**: [Login](#login): The configuration settings of the login flow of users using App Service Authentication/Authorization.
+* **platform**: [AuthPlatform](#authplatform): The configuration settings of the platform of App Service Authentication/Authorization.
 
 ## GlobalValidation
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:217_properties](#schemas217properties): GlobalValidation resource specific properties
+* **properties**: [GlobalValidationProperties](#globalvalidationproperties): GlobalValidation resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:217_properties
+## GlobalValidationProperties
 ### Properties
-* **excludedPaths**: string[]
-* **redirectToProvider**: string
-* **requireAuthentication**: bool
-* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403'
+* **excludedPaths**: string[]: The paths for which unauthenticated flow would not be redirected to the login page.
+* **redirectToProvider**: string: The default authentication provider to use when multiple providers are configured.
+This setting is only needed if multiple providers are configured and the unauthenticated client
+action is set to "RedirectToLoginPage".
+* **requireAuthentication**: bool: <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
+* **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage' | 'Return401' | 'Return403': The action to take when an unauthenticated client attempts to access the app.
 
 ## HttpSettings
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:223_properties](#schemas223properties): HttpSettings resource specific properties
+* **properties**: [HttpSettingsProperties](#httpsettingsproperties): HttpSettings resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:223_properties
+## HttpSettingsProperties
 ### Properties
-* **forwardProxy**: [ForwardProxy](#forwardproxy)
-* **requireHttps**: bool
-* **routes**: [HttpSettingsRoutes](#httpsettingsroutes)
+* **forwardProxy**: [ForwardProxy](#forwardproxy): The configuration settings of a forward proxy used to make the requests.
+* **requireHttps**: bool: <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+* **routes**: [HttpSettingsRoutes](#httpsettingsroutes): The configuration settings of the paths HTTP requests.
 
 ## ForwardProxy
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:209_properties](#schemas209properties): ForwardProxy resource specific properties
+* **properties**: [ForwardProxyProperties](#forwardproxyproperties): ForwardProxy resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:209_properties
+## ForwardProxyProperties
 ### Properties
-* **convention**: 'Custom' | 'NoProxy' | 'Standard'
-* **customHostHeaderName**: string
-* **customProtoHeaderName**: string
+* **convention**: 'Custom' | 'NoProxy' | 'Standard': The convention used to determine the url of the request made.
+* **customHostHeaderName**: string: The name of the header containing the host of the request.
+* **customProtoHeaderName**: string: The name of the header containing the scheme of the request.
 
 ## HttpSettingsRoutes
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:224_properties](#schemas224properties): HttpSettingsRoutes resource specific properties
+* **properties**: [HttpSettingsRoutesProperties](#httpsettingsroutesproperties): HttpSettingsRoutes resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:224_properties
+## HttpSettingsRoutesProperties
 ### Properties
-* **apiPrefix**: string
+* **apiPrefix**: string: The prefix that should precede all the authentication/authorization paths.
 
 ## IdentityProviders
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:225_properties](#schemas225properties): IdentityProviders resource specific properties
+* **properties**: [IdentityProvidersProperties](#identityprovidersproperties): IdentityProviders resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:225_properties
+## IdentityProvidersProperties
 ### Properties
-* **apple**: [Apple](#apple)
-* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory)
-* **azureStaticWebApps**: [AzureStaticWebApps](#azurestaticwebapps)
-* **customOpenIdConnectProviders**: [Dictionary<string,CustomOpenIdConnectProvider>](#dictionarystringcustomopenidconnectprovider)
-* **facebook**: [Facebook](#facebook)
-* **gitHub**: [GitHub](#github)
-* **google**: [Google](#google)
-* **legacyMicrosoftAccount**: [LegacyMicrosoftAccount](#legacymicrosoftaccount)
-* **twitter**: [Twitter](#twitter)
+* **apple**: [Apple](#apple): The configuration settings of the Apple provider.
+* **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The configuration settings of the Azure Active directory provider.
+* **azureStaticWebApps**: [AzureStaticWebApps](#azurestaticwebapps): The configuration settings of the Azure Static Web Apps provider.
+* **customOpenIdConnectProviders**: [IdentityProvidersPropertiesCustomOpenIdConnectProviders](#identityproviderspropertiescustomopenidconnectproviders): The map of the name of the alias of each custom Open ID Connect provider to the
+configuration settings of the custom Open ID Connect provider.
+* **facebook**: [Facebook](#facebook): The configuration settings of the Facebook provider.
+* **gitHub**: [GitHub](#github): The configuration settings of the GitHub provider.
+* **google**: [Google](#google): The configuration settings of the Google provider.
+* **legacyMicrosoftAccount**: [LegacyMicrosoftAccount](#legacymicrosoftaccount): The configuration settings of the legacy Microsoft Account provider.
+* **twitter**: [Twitter](#twitter): The configuration settings of the Twitter provider.
 
 ## Apple
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:163_properties](#schemas163properties): Apple resource specific properties
+* **properties**: [AppleProperties](#appleproperties): Apple resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:163_properties
+## AppleProperties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [AppleRegistration](#appleregistration)
+* **enabled**: bool: <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [AppleRegistration](#appleregistration): The configuration settings of the registration for the Apple provider
 
 ## LoginScopes
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:231_properties](#schemas231properties): LoginScopes resource specific properties
+* **properties**: [LoginScopesProperties](#loginscopesproperties): LoginScopes resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:231_properties
+## LoginScopesProperties
 ### Properties
-* **scopes**: string[]
+* **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
 ## AppleRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:164_properties](#schemas164properties): AppleRegistration resource specific properties
+* **properties**: [AppleRegistrationProperties](#appleregistrationproperties): AppleRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:164_properties
+## AppleRegistrationProperties
 ### Properties
-* **clientId**: string
-* **clientSecretSettingName**: string
+* **clientId**: string: The Client ID of the app used for login.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## AzureActiveDirectory
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:167_properties](#schemas167properties): AzureActiveDirectory resource specific properties
+* **properties**: [AzureActiveDirectoryProperties](#azureactivedirectoryproperties): AzureActiveDirectory resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:167_properties
+## AzureActiveDirectoryProperties
 ### Properties
-* **enabled**: bool
-* **isAutoProvisioned**: bool
-* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin)
-* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration)
-* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation)
+* **enabled**: bool: <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **isAutoProvisioned**: bool: Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+read or write to this property.
+* **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin): The configuration settings of the Azure Active Directory login flow.
+* **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration): The configuration settings of the Azure Active Directory app registration.
+* **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation): The configuration settings of the Azure Active Directory token validation flow.
 
 ## AzureActiveDirectoryLogin
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:168_properties](#schemas168properties): AzureActiveDirectoryLogin resource specific properties
+* **properties**: [AzureActiveDirectoryLoginProperties](#azureactivedirectoryloginproperties): AzureActiveDirectoryLogin resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:168_properties
+## AzureActiveDirectoryLoginProperties
 ### Properties
 * **disableWWWAuthenticate**: bool
-* **loginParameters**: string[]
+* **loginParameters**: string[]: Login parameters to send to the OpenID Connect authorization endpoint when
+a user logs in. Each parameter must be in the form "key=value".
 
 ## AzureActiveDirectoryRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:169_properties](#schemas169properties): AzureActiveDirectoryRegistration resource specific properties
+* **properties**: [AzureActiveDirectoryRegistrationProperties](#azureactivedirectoryregistrationproperties): AzureActiveDirectoryRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:169_properties
+## AzureActiveDirectoryRegistrationProperties
 ### Properties
-* **clientId**: string
-* **clientSecretCertificateThumbprint**: string
-* **clientSecretSettingName**: string
-* **openIdIssuer**: string
+* **clientId**: string: The Client ID of this relying party application, known as the client_id.
+This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
+other 3rd party OpenID Connect providers.
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
+* **clientSecretCertificateThumbprint**: string: An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret. It is also optional.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret of the relying party application.
+* **openIdIssuer**: string: The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
+When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
+This URI is a case-sensitive identifier for the token issuer.
+More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
 
 ## AzureActiveDirectoryValidation
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:170_properties](#schemas170properties): AzureActiveDirectoryValidation resource specific properties
+* **properties**: [AzureActiveDirectoryValidationProperties](#azureactivedirectoryvalidationproperties): AzureActiveDirectoryValidation resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:170_properties
+## AzureActiveDirectoryValidationProperties
 ### Properties
-* **allowedAudiences**: string[]
-* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks)
+* **allowedAudiences**: string[]: The list of audiences that can make successful authentication/authorization requests.
+* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks): The configuration settings of the checks that should be made while validating the JWT Claims.
 
 ## JwtClaimChecks
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:226_properties](#schemas226properties): JwtClaimChecks resource specific properties
+* **properties**: [JwtClaimChecksProperties](#jwtclaimchecksproperties): JwtClaimChecks resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:226_properties
+## JwtClaimChecksProperties
 ### Properties
-* **allowedClientApplications**: string[]
-* **allowedGroups**: string[]
+* **allowedClientApplications**: string[]: The list of the allowed client applications.
+* **allowedGroups**: string[]: The list of the allowed groups.
 
 ## AzureStaticWebApps
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:173_properties](#schemas173properties): AzureStaticWebApps resource specific properties
+* **properties**: [AzureStaticWebAppsProperties](#azurestaticwebappsproperties): AzureStaticWebApps resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:173_properties
+## AzureStaticWebAppsProperties
 ### Properties
-* **enabled**: bool
-* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration)
+* **enabled**: bool: <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the registration for the Azure Static Web Apps provider
 
 ## AzureStaticWebAppsRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:174_properties](#schemas174properties): AzureStaticWebAppsRegistration resource specific properties
+* **properties**: [AzureStaticWebAppsRegistrationProperties](#azurestaticwebappsregistrationproperties): AzureStaticWebAppsRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:174_properties
+## AzureStaticWebAppsRegistrationProperties
 ### Properties
-* **clientId**: string
+* **clientId**: string: The Client ID of the app used for login.
 
-## Dictionary<string,CustomOpenIdConnectProvider>
+## IdentityProvidersPropertiesCustomOpenIdConnectProviders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomOpenIdConnectProvider](#customopenidconnectprovider)
@@ -1787,139 +1806,139 @@ application used for sign-in.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:199_properties](#schemas199properties): CustomOpenIdConnectProvider resource specific properties
+* **properties**: [CustomOpenIdConnectProviderProperties](#customopenidconnectproviderproperties): CustomOpenIdConnectProvider resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:199_properties
+## CustomOpenIdConnectProviderProperties
 ### Properties
-* **enabled**: bool
-* **login**: [OpenIdConnectLogin](#openidconnectlogin)
-* **registration**: [OpenIdConnectRegistration](#openidconnectregistration)
+* **enabled**: bool: <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
+* **login**: [OpenIdConnectLogin](#openidconnectlogin): The configuration settings of the login flow of the custom Open ID Connect provider.
+* **registration**: [OpenIdConnectRegistration](#openidconnectregistration): The configuration settings of the app registration for the custom Open ID Connect provider.
 
 ## OpenIdConnectLogin
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:244_properties](#schemas244properties): OpenIdConnectLogin resource specific properties
+* **properties**: [OpenIdConnectLoginProperties](#openidconnectloginproperties): OpenIdConnectLogin resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:244_properties
+## OpenIdConnectLoginProperties
 ### Properties
-* **nameClaimType**: string
-* **scopes**: string[]
+* **nameClaimType**: string: The name of the claim that contains the users name.
+* **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
 ## OpenIdConnectRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:245_properties](#schemas245properties): OpenIdConnectRegistration resource specific properties
+* **properties**: [OpenIdConnectRegistrationProperties](#openidconnectregistrationproperties): OpenIdConnectRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:245_properties
+## OpenIdConnectRegistrationProperties
 ### Properties
-* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential)
-* **clientId**: string
-* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig)
+* **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication client credentials of the custom Open ID Connect provider.
+* **clientId**: string: The client id of the custom Open ID Connect provider.
+* **openIdConnectConfiguration**: [OpenIdConnectConfig](#openidconnectconfig): The configuration settings of the endpoints used for the custom Open ID Connect provider.
 
 ## OpenIdConnectClientCredential
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:242_properties](#schemas242properties): OpenIdConnectClientCredential resource specific properties
+* **properties**: [OpenIdConnectClientCredentialProperties](#openidconnectclientcredentialproperties): OpenIdConnectClientCredential resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:242_properties
+## OpenIdConnectClientCredentialProperties
 ### Properties
-* **clientSecretSettingName**: string
-* **method**: 'ClientSecretPost'
+* **clientSecretSettingName**: string: The app setting that contains the client secret for the custom Open ID Connect provider.
+* **method**: 'ClientSecretPost': The method that should be used to authenticate the user.
 
 ## OpenIdConnectConfig
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:243_properties](#schemas243properties): OpenIdConnectConfig resource specific properties
+* **properties**: [OpenIdConnectConfigProperties](#openidconnectconfigproperties): OpenIdConnectConfig resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:243_properties
+## OpenIdConnectConfigProperties
 ### Properties
-* **authorizationEndpoint**: string
-* **certificationUri**: string
-* **issuer**: string
-* **tokenEndpoint**: string
-* **wellKnownOpenIdConfiguration**: string
+* **authorizationEndpoint**: string: The endpoint to be used to make an authorization request.
+* **certificationUri**: string: The endpoint that provides the keys necessary to validate the token.
+* **issuer**: string: The endpoint that issues the token.
+* **tokenEndpoint**: string: The endpoint to be used to request a token.
+* **wellKnownOpenIdConfiguration**: string: The endpoint that contains all the configuration endpoints for the provider.
 
 ## Facebook
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:205_properties](#schemas205properties): Facebook resource specific properties
+* **properties**: [FacebookProperties](#facebookproperties): Facebook resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:205_properties
+## FacebookProperties
 ### Properties
-* **enabled**: bool
-* **graphApiVersion**: string
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [AppRegistration](#appregistration)
+* **enabled**: bool: <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **graphApiVersion**: string: The version of the Facebook api to be used while logging in.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for providers that have app ids and app secrets
 
 ## AppRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:162_properties](#schemas162properties): AppRegistration resource specific properties
+* **properties**: [AppRegistrationProperties](#appregistrationproperties): AppRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:162_properties
+## AppRegistrationProperties
 ### Properties
-* **appId**: string
-* **appSecretSettingName**: string
+* **appId**: string: The App ID of the app used for login.
+* **appSecretSettingName**: string: The app setting name that contains the app secret.
 
 ## GitHub
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:213_properties](#schemas213properties): GitHub resource specific properties
+* **properties**: [GitHubProperties](#githubproperties): GitHub resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:213_properties
+## GitHubProperties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [ClientRegistration](#clientregistration)
+* **enabled**: bool: <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
 
 ## ClientRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:182_properties](#schemas182properties): ClientRegistration resource specific properties
+* **properties**: [ClientRegistrationProperties](#clientregistrationproperties): ClientRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:182_properties
+## ClientRegistrationProperties
 ### Properties
-* **clientId**: string
-* **clientSecretSettingName**: string
+* **clientId**: string: The Client ID of the app used for login.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## Google
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:218_properties](#schemas218properties): Google resource specific properties
+* **properties**: [GoogleProperties](#googleproperties): Google resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:218_properties
+## GoogleProperties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [ClientRegistration](#clientregistration)
+* **enabled**: bool: <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
 * **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
 
 ## AllowedAudiencesValidation
@@ -1927,26 +1946,26 @@ application used for sign-in.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:159_properties](#schemas159properties): AllowedAudiencesValidation resource specific properties
+* **properties**: [AllowedAudiencesValidationProperties](#allowedaudiencesvalidationproperties): AllowedAudiencesValidation resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:159_properties
+## AllowedAudiencesValidationProperties
 ### Properties
-* **allowedAudiences**: string[]
+* **allowedAudiences**: string[]: Array of AllowedAudiencesValidationPropertiesAllowedAudiencesItem
 
 ## LegacyMicrosoftAccount
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:228_properties](#schemas228properties): LegacyMicrosoftAccount resource specific properties
+* **properties**: [LegacyMicrosoftAccountProperties](#legacymicrosoftaccountproperties): LegacyMicrosoftAccount resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:228_properties
+## LegacyMicrosoftAccountProperties
 ### Properties
-* **enabled**: bool
-* **login**: [LoginScopes](#loginscopes)
-* **registration**: [ClientRegistration](#clientregistration)
+* **enabled**: bool: <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
+* **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
 * **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
 
 ## Twitter
@@ -1954,134 +1973,143 @@ application used for sign-in.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:295_properties](#schemas295properties): Twitter resource specific properties
+* **properties**: [TwitterProperties](#twitterproperties): Twitter resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:295_properties
+## TwitterProperties
 ### Properties
-* **enabled**: bool
-* **registration**: [TwitterRegistration](#twitterregistration)
+* **enabled**: bool: <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **registration**: [TwitterRegistration](#twitterregistration): The configuration settings of the app registration for the Twitter provider.
 
 ## TwitterRegistration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:296_properties](#schemas296properties): TwitterRegistration resource specific properties
+* **properties**: [TwitterRegistrationProperties](#twitterregistrationproperties): TwitterRegistration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:296_properties
+## TwitterRegistrationProperties
 ### Properties
-* **consumerKey**: string
-* **consumerSecretSettingName**: string
+* **consumerKey**: string: The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+This setting is required for enabling Twitter Sign-In.
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
+* **consumerSecretSettingName**: string: The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+application used for sign-in.
 
 ## Login
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:229_properties](#schemas229properties): Login resource specific properties
+* **properties**: [LoginProperties](#loginproperties): Login resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:229_properties
+## LoginProperties
 ### Properties
-* **allowedExternalRedirectUrls**: string[]
-* **cookieExpiration**: [CookieExpiration](#cookieexpiration)
-* **nonce**: [Nonce](#nonce)
-* **preserveUrlFragmentsForLogins**: bool
-* **routes**: [LoginRoutes](#loginroutes)
-* **tokenStore**: [TokenStore](#tokenstore)
+* **allowedExternalRedirectUrls**: string[]: External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+This is an advanced setting typically only needed by Windows Store application backends.
+Note that URLs within the current domain are always implicitly allowed.
+* **cookieExpiration**: [CookieExpiration](#cookieexpiration): The configuration settings of the session cookie's expiration.
+* **nonce**: [Nonce](#nonce): The configuration settings of the nonce used in the login flow.
+* **preserveUrlFragmentsForLogins**: bool: <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
+* **routes**: [LoginRoutes](#loginroutes): The routes that specify the endpoints used for login and logout requests.
+* **tokenStore**: [TokenStore](#tokenstore): The configuration settings of the token store.
 
 ## CookieExpiration
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:193_properties](#schemas193properties): CookieExpiration resource specific properties
+* **properties**: [CookieExpirationProperties](#cookieexpirationproperties): CookieExpiration resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:193_properties
+## CookieExpirationProperties
 ### Properties
-* **convention**: 'FixedTime' | 'IdentityProviderDerived'
-* **timeToExpiration**: string
+* **convention**: 'FixedTime' | 'IdentityProviderDerived': The convention used when determining the session cookie's expiration.
+* **timeToExpiration**: string: The time after the request is made when the session cookie should expire.
 
 ## Nonce
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:241_properties](#schemas241properties): Nonce resource specific properties
+* **properties**: [NonceProperties](#nonceproperties): Nonce resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:241_properties
+## NonceProperties
 ### Properties
-* **nonceExpirationInterval**: string
-* **validateNonce**: bool
+* **nonceExpirationInterval**: string: The time after the request is made when the nonce should expire.
+* **validateNonce**: bool: <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
 
 ## LoginRoutes
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:230_properties](#schemas230properties): LoginRoutes resource specific properties
+* **properties**: [LoginRoutesProperties](#loginroutesproperties): LoginRoutes resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:230_properties
+## LoginRoutesProperties
 ### Properties
-* **logoutEndpoint**: string
+* **logoutEndpoint**: string: The endpoint at which a logout request should be made.
 
 ## TokenStore
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:289_properties](#schemas289properties): TokenStore resource specific properties
+* **properties**: [TokenStoreProperties](#tokenstoreproperties): TokenStore resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:289_properties
+## TokenStoreProperties
 ### Properties
-* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore)
-* **enabled**: bool
-* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore)
-* **tokenRefreshExtensionHours**: int
+* **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore): The configuration settings of the storage of the tokens if blob storage is used.
+* **enabled**: bool: <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
+ The default is <code>false</code>.
+* **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore): The configuration settings of the storage of the tokens if a file system is used.
+* **tokenRefreshExtensionHours**: int: The number of hours after session token expiration that a session token can be used to
+call the token refresh API. The default is 72 hours.
 
 ## BlobStorageTokenStore
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:181_properties](#schemas181properties): BlobStorageTokenStore resource specific properties
+* **properties**: [BlobStorageTokenStoreProperties](#blobstoragetokenstoreproperties): BlobStorageTokenStore resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:181_properties
+## BlobStorageTokenStoreProperties
 ### Properties
-* **sasUrlSettingName**: string
+* **sasUrlSettingName**: string: The name of the app setting containing the SAS URL of the blob storage containing the tokens.
 
 ## FileSystemTokenStore
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:208_properties](#schemas208properties): FileSystemTokenStore resource specific properties
+* **properties**: [FileSystemTokenStoreProperties](#filesystemtokenstoreproperties): FileSystemTokenStore resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:208_properties
+## FileSystemTokenStoreProperties
 ### Properties
-* **directory**: string
+* **directory**: string: The directory in which the tokens will be stored.
 
 ## AuthPlatform
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:166_properties](#schemas166properties): AuthPlatform resource specific properties
+* **properties**: [AuthPlatformProperties](#authplatformproperties): AuthPlatform resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:166_properties
+## AuthPlatformProperties
 ### Properties
-* **configFilePath**: string
-* **enabled**: bool
-* **runtimeVersion**: string
+* **configFilePath**: string: The path of the config file containing auth settings if they come from a file.
+If the path is relative, base will the site's root directory.
+* **enabled**: bool: <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+* **runtimeVersion**: string: The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
 
 ## Microsoft.Web/sites/config
 ### Properties
@@ -2089,10 +2117,10 @@ application used for sign-in.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,AzureStorageInfoValue>](#dictionarystringazurestorageinfovalue): Azure storage accounts.
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,AzureStorageInfoValue>
+## AzureStoragePropertyDictionaryResourceProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
@@ -2103,10 +2131,10 @@ application used for sign-in.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:179_properties](#schemas179properties): BackupRequest resource specific properties
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:179_properties
+## BackupRequestProperties
 ### Properties
 * **backupName**: string: Name of the backup.
 * **backupSchedule**: [BackupSchedule](#backupschedule): Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
@@ -2117,7 +2145,7 @@ application used for sign-in.
 ## BackupSchedule
 ### Properties
 * **frequencyInterval**: int (Required): How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
-* **frequencyUnit**: 'Day' | 'Hour' (Required): The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7).
+* **frequencyUnit**: 'Day' | 'Hour' (Required): The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
 * **keepAtLeastOneBackup**: bool (Required): True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
 * **lastExecutionTime**: string (ReadOnly): Last time when this schedule was triggered.
 * **retentionPeriodInDays**: int (Required): After how many days backups should be deleted.
@@ -2137,17 +2165,17 @@ This is used during restore with overwrite connection strings options.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,ConnStringValueTypePair>](#dictionarystringconnstringvaluetypepair): Connection strings.
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,ConnStringValueTypePair>
+## ConnectionStringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
 
 ## ConnStringValueTypePair
 ### Properties
-* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'ServiceBus' | 'SQLAzure' | 'SQLServer' (Required): Type of database.
+* **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'SQLAzure' | 'SQLServer' | 'ServiceBus' (Required): Type of database.
 * **value**: string (Required): Value of pair.
 
 ## Microsoft.Web/sites/config
@@ -2156,10 +2184,10 @@ This is used during restore with overwrite connection strings options.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:275_properties](#schemas275properties): SiteLogsConfig resource specific properties
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:275_properties
+## SiteLogsConfigProperties
 ### Properties
 * **applicationLogs**: [ApplicationLogsConfig](#applicationlogsconfig): Application logs configuration.
 * **detailedErrorMessages**: [EnabledConfig](#enabledconfig): Enabled configuration.
@@ -2222,10 +2250,10 @@ Value can range between 25 and 100.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2236,7 +2264,7 @@ Value can range between 25 and 100.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:61_properties](#schemas61properties): PushSettings resource specific properties
+* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/config
@@ -2265,7 +2293,7 @@ This is valid for all deployment slots in an app.
 * **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
 * **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:202_properties
+## DeploymentProperties
 ### Properties
 * **active**: bool: True if deployment is currently active, false if completed and null if not started.
 * **author**: string: Who authored the deployment.
@@ -2277,39 +2305,35 @@ This is valid for all deployment slots in an app.
 * **start_time**: string: Start time.
 * **status**: int: Deployment status.
 
-## schemas:40_properties
+## IdentifierProperties
 ### Properties
 * **id**: string: String representation of the identity.
 
 ## MSDeployCore
 ### Properties
-* **appOffline**: bool (WriteOnly): Sets the AppOffline rule while the MSDeploy operation executes.
-Setting is <code>false</code> by default.
+* **appOffline**: bool (WriteOnly)
 * **complete**: bool (ReadOnly): Whether the deployment operation has completed
-* **connectionString**: string (WriteOnly): SQL Connection String
-* **dbType**: string (WriteOnly): Database Type
+* **connectionString**: string (WriteOnly)
+* **dbType**: string (WriteOnly)
 * **deployer**: string (ReadOnly): Username of deployer
 * **endTime**: string (ReadOnly): End time of deploy operation
-* **packageUri**: string (WriteOnly): Package URI
-* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state.
-* **setParameters**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): MSDeploy Parameters. Must not be set if SetParametersXmlFileUri is used.
-* **setParametersXmlFileUri**: string (WriteOnly): URI of MSDeploy Parameters file. Must not be set if SetParameters is used.
-* **skipAppData**: bool (WriteOnly): Controls whether the MSDeploy operation skips the App_Data directory.
-If set to <code>true</code>, the existing App_Data directory on the destination
-will not be deleted, and any App_Data directory in the source will be ignored.
-Setting is <code>false</code> by default.
+* **packageUri**: string (WriteOnly)
+* **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state
+* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly)
+* **setParametersXmlFileUri**: string (WriteOnly)
+* **skipAppData**: bool (WriteOnly)
 * **startTime**: string (ReadOnly): Start time of deploy operation
 
-## Dictionary<string,String>
+## MSDeployCoreSetParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:210_properties
+## FunctionEnvelopeProperties
 ### Properties
-* **config**: any: Config information.
+* **config**: any: Any object
 * **config_href**: string: Config URI.
-* **files**: [Dictionary<string,String>](#dictionarystringstring): File list.
+* **files**: [FunctionEnvelopePropertiesFiles](#functionenvelopepropertiesfiles): File list.
 * **function_app_id**: string: Function App ID.
 * **href**: string: Function URI.
 * **invoke_url_template**: string: The invocation URL
@@ -2321,12 +2345,12 @@ Setting is <code>false</code> by default.
 * **test_data**: string: Test data used when testing via the Azure Portal.
 * **test_data_href**: string: Test data URI.
 
-## Dictionary<string,String>
+## FunctionEnvelopePropertiesFiles
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:220_properties
+## HostNameBindingProperties
 ### Properties
 * **azureResourceName**: string: Azure resource name.
 * **azureResourceType**: 'TrafficManager' | 'Website': Azure resource type.
@@ -2338,7 +2362,7 @@ Setting is <code>false</code> by default.
 * **thumbprint**: string: SSL certificate thumbprint
 * **virtualIP**: string (ReadOnly): Virtual IP address assigned to the hostname if IP based SSL is enabled.
 
-## schemas:263_properties
+## RelayServiceConnectionEntityProperties
 ### Properties
 * **biztalkUri**: string
 * **entityConnectionString**: string
@@ -2348,7 +2372,7 @@ Setting is <code>false</code> by default.
 * **resourceConnectionString**: string
 * **resourceType**: string
 
-## schemas:39_properties
+## HybridConnectionProperties
 ### Properties
 * **hostname**: string: The hostname of the endpoint.
 * **port**: int: The port of the endpoint.
@@ -2360,7 +2384,12 @@ normally, use the POST /listKeys API instead.
 * **serviceBusNamespace**: string: The name of the Service Bus namespace.
 * **serviceBusSuffix**: string: The suffix for the service bus endpoint. By default this is .servicebus.windows.net
 
-## schemas:250_properties
+## SwiftVirtualNetworkProperties
+### Properties
+* **subnetResourceId**: string: The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+* **swiftSupported**: bool: A flag that specifies if the scale unit this Web App is on supports Swift integration.
+
+## PremierAddOnProperties
 ### Properties
 * **marketplaceOffer**: string: Premier add on Marketplace offer.
 * **marketplacePublisher**: string: Premier add on Marketplace publisher.
@@ -2368,12 +2397,12 @@ normally, use the POST /listKeys API instead.
 * **sku**: string: Premier add on SKU.
 * **vendor**: string: Premier add on Vendor.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:252_properties
+## PrivateAccessProperties
 ### Properties
 * **enabled**: bool: Whether private access is enabled or not.
 * **virtualNetworks**: [PrivateAccessVirtualNetwork](#privateaccessvirtualnetwork)[]: The Virtual Networks (and subnets) allowed to access the site privately.
@@ -2390,13 +2419,13 @@ normally, use the POST /listKeys API instead.
 * **key**: int: The key (ID) of the subnet.
 * **name**: string: The name of the subnet.
 
-## schemas:261_properties
+## PublicCertificateProperties
 ### Properties
-* **blob**: array: Public Certificate byte array
-* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location.
+* **blob**: any: Public Certificate byte array
+* **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
 
-## schemas:273_properties
+## SiteExtensionInfoProperties
 ### Properties
 * **authors**: string[] (ReadOnly): List of authors.
 * **comment**: string (ReadOnly): Site Extension comment.
@@ -2419,7 +2448,7 @@ normally, use the POST /listKeys API instead.
 * **title**: string (ReadOnly)
 * **version**: string (ReadOnly): Version information.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2430,7 +2459,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'ftp' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies
@@ -2439,7 +2468,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'scm' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:195_properties](#schemas195properties): CsmPublishingCredentialsPoliciesEntity resource specific properties
+* **properties**: [CsmPublishingCredentialsPoliciesEntityProperties](#csmpublishingcredentialspoliciesentityproperties): CsmPublishingCredentialsPoliciesEntity resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/config
@@ -2448,10 +2477,10 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2462,7 +2491,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:265_properties](#schemas265properties): SiteAuthSettings resource specific properties
+* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/config
@@ -2471,7 +2500,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'authsettingsV2' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:266_properties](#schemas266properties): SiteAuthSettingsV2 resource specific properties
+* **properties**: [SiteAuthSettingsV2Properties](#siteauthsettingsv2properties): SiteAuthSettingsV2 resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/config
@@ -2480,10 +2509,10 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,AzureStorageInfoValue>](#dictionarystringazurestorageinfovalue): Azure storage accounts.
+* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,AzureStorageInfoValue>
+## AzureStoragePropertyDictionaryResourceProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
@@ -2494,7 +2523,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:179_properties](#schemas179properties): BackupRequest resource specific properties
+* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/config
@@ -2503,10 +2532,10 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,ConnStringValueTypePair>](#dictionarystringconnstringvaluetypepair): Connection strings.
+* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,ConnStringValueTypePair>
+## ConnectionStringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
@@ -2517,7 +2546,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:275_properties](#schemas275properties): SiteLogsConfig resource specific properties
+* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/config
@@ -2526,10 +2555,10 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2540,7 +2569,7 @@ normally, use the POST /listKeys API instead.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:61_properties](#schemas61properties): PushSettings resource specific properties
+* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Microsoft.Web/sites/slots/config
@@ -2552,12 +2581,12 @@ normally, use the POST /listKeys API instead.
 * **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
 * **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:278_properties
+## SiteSourceControlProperties
 ### Properties
 * **branch**: string: Name of branch to use for deployment.
 * **deploymentRollbackEnabled**: bool: <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
@@ -2586,9 +2615,9 @@ normally, use the POST /listKeys API instead.
 * **serverUrl**: string: The server URL for the container registry where the build will be hosted.
 * **username**: string: The username used to upload the image to the container registry.
 
-## schemas:90_properties
+## VnetInfoProperties
 ### Properties
-* **certBlob**: string: A certificate file (.cer) blob containing the public key of the private key used to authenticate a
+* **certBlob**: string: A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
 Point-To-Site VPN connection.
 * **certThumbprint**: string (ReadOnly): The client certificate thumbprint.
 * **dnsServers**: string: DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
@@ -2602,10 +2631,10 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:91_properties](#schemas91properties): VnetRoute resource specific properties
+* **properties**: [VnetRouteProperties](#vnetrouteproperties): VnetRoute resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:150_properties
+## SourceControlProperties
 ### Properties
 * **expirationTime**: string: OAuth token expiration.
 * **refreshToken**: string: OAuth refresh token.
@@ -2614,15 +2643,18 @@ Point-To-Site VPN connection.
 
 ## StaticSite
 ### Properties
+* **allowConfigFileUpdates**: bool: <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
 * **branch**: string: The target branch in the repository.
 * **buildProperties**: [StaticSiteBuildProperties](#staticsitebuildproperties): Build properties for the static site.
 * **contentDistributionEndpoint**: string (ReadOnly): The content distribution endpoint for the static site.
 * **customDomains**: string[] (ReadOnly): The custom domains associated with this static site.
 * **defaultHostname**: string (ReadOnly): The default autogenerated hostname for the static site.
 * **keyVaultReferenceIdentity**: string (ReadOnly): Identity to use for Key Vault Reference authentication.
+* **privateEndpointConnections**: [ResponseMessageEnvelopeRemotePrivateEndpointConnection](#responsemessageenveloperemoteprivateendpointconnection)[] (ReadOnly): Private endpoint connections
 * **provider**: string (ReadOnly): The provider that submitted the last deployment to the primary environment of the static site.
 * **repositoryToken**: string: A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
 * **repositoryUrl**: string: URL for the repository of the static site.
+* **stagingEnvironmentPolicy**: 'Disabled' | 'Enabled': State indicating whether staging environments are allowed or not allowed for a static web app.
 * **templateProperties**: [StaticSiteTemplateOptions](#staticsitetemplateoptions): Template Options for the static site.
 * **userProvidedFunctionApps**: [StaticSiteUserProvidedFunctionApp](#staticsiteuserprovidedfunctionapp)[] (ReadOnly): User provided function apps registered with the static site
 
@@ -2637,6 +2669,60 @@ Point-To-Site VPN connection.
 * **outputLocation**: string: The output path of the app after building.
 * **skipGithubActionWorkflowGeneration**: bool: Skip Github Action workflow generation.
 
+## ResponseMessageEnvelopeRemotePrivateEndpointConnection
+### Properties
+* **error**: [ErrorEntity](#errorentity): Body of the error response returned from the API.
+* **id**: string: Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+value for GET requests only.
+For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity.
+* **location**: string: Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+* **name**: string: Name of resource.
+* **plan**: [ArmPlan](#armplan): The plan object in Azure Resource Manager, represents a marketplace plan.
+* **properties**: [RemotePrivateEndpointConnection](#remoteprivateendpointconnection): A remote private endpoint connection
+* **sku**: [SkuDescription](#skudescription): Description of a SKU for a scalable resource.
+* **status**: string: Azure-AsyncOperation Status info.
+* **tags**: [ResponseMessageEnvelopeRemotePrivateEndpointConnectionTags](#responsemessageenveloperemoteprivateendpointconnectiontags): Tags associated with resource.
+* **type**: string: Type of resource e.g "Microsoft.Web/sites".
+* **zones**: string[]: Logical Availability Zones the service is hosted in
+
+## ErrorEntity
+### Properties
+* **code**: string: Basic error code.
+* **extendedCode**: string: Type of error.
+* **innerErrors**: [ErrorEntity](#errorentity)[]: Inner errors.
+* **message**: string: Any details of the error.
+* **messageTemplate**: string: Message template.
+* **parameters**: string[]: Parameters for the template.
+
+## ArmPlan
+### Properties
+* **name**: string: The name.
+* **product**: string: The product.
+* **promotionCode**: string: The promotion code.
+* **publisher**: string: The publisher.
+* **version**: string: Version of product.
+
+## RemotePrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string: Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [RemotePrivateEndpointConnectionProperties](#remoteprivateendpointconnectionproperties): RemotePrivateEndpointConnection resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## RemotePrivateEndpointConnectionProperties
+### Properties
+* **ipAddresses**: string[]: Private IPAddresses mapped to the remote private endpoint
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper): A wrapper for an ARM resource id
+* **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
+* **provisioningState**: string (ReadOnly)
+
+## ResponseMessageEnvelopeRemotePrivateEndpointConnectionTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## StaticSiteTemplateOptions
 ### Properties
 * **description**: string: Description of the newly generated repository.
@@ -2650,16 +2736,16 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly): Resource Id.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
-* **properties**: [schemas:319_properties](#schemas319properties): StaticSiteUserProvidedFunctionApp resource specific properties
+* **properties**: [StaticSiteUserProvidedFunctionAppProperties](#staticsiteuserprovidedfunctionappproperties): StaticSiteUserProvidedFunctionApp resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## schemas:319_properties
+## StaticSiteUserProvidedFunctionAppProperties
 ### Properties
 * **createdOn**: string (ReadOnly): The date and time on which the function app was registered with the static site.
 * **functionAppRegion**: string: The region of the function app registered with the static site
 * **functionAppResourceId**: string: The resource id of the function app registered with the static site
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2670,10 +2756,10 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/builds/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2684,15 +2770,15 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'functionappsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/builds/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:320_properties
+## StaticSiteUserProvidedFunctionAppARMResourceProperties
 ### Properties
 * **createdOn**: string (ReadOnly): The date and time on which the function app was registered with the static site.
 * **functionAppRegion**: string: The region of the function app registered with the static site
@@ -2704,10 +2790,10 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2718,20 +2804,20 @@ Point-To-Site VPN connection.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'functionappsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): Settings.
+* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:309_properties
+## StaticSiteCustomDomainRequestPropertiesARMResourceProperties
 ### Properties
 * **createdOn**: string (ReadOnly): The date and time on which the custom domain was created for the static site.
 * **domainName**: string (ReadOnly): The domain name for the static site custom domain.
 * **errorMessage**: string (ReadOnly)
-* **status**: 'Adding' | 'Deleting' | 'Failed' | 'Ready' | 'RetrievingValidationToken' | 'Validating' (ReadOnly): The status of the custom domain.
-* **validationMethod**: string (WriteOnly): Validation method for adding a custom domain
+* **status**: 'Adding' | 'Deleting' | 'Failed' | 'Ready' | 'RetrievingValidationToken' | 'Validating' (ReadOnly): The status of the custom domain
+* **validationMethod**: string (WriteOnly)
 * **validationToken**: string (ReadOnly): The TXT record validation token
 

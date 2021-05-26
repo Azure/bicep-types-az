@@ -1,4 +1,4 @@
-# microsoft.insights @ 2015-05-01
+# Microsoft.Insights @ 2015-05-01
 
 ## Resource Microsoft.Insights/components@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -9,7 +9,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties): Properties that define an Application Insights component resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ComponentsResourceTags](#componentsresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/components/analyticsItems@2015-05-01
@@ -18,12 +18,15 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **Content**: string: The content of this item
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **Id**: string: Internally assigned unique id of the item definition.
 * **name**: 'item' (Required, DeployTimeConstant): The resource name
+* **Name**: string: The user-defined name of the item.
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties): A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
 * **Scope**: 'shared' | 'user': Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **TimeCreated**: string (ReadOnly): Date and time in UTC when this item was created.
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this item.
 * **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant): The resource type
+* **Type**: 'folder' | 'function' | 'query' | 'recent': Enum indicating the type of the Analytics item.
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
 
 ## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
@@ -32,25 +35,25 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **ApplicationName**: string (ReadOnly): The name of the Application Insights component.
 * **ContainerName**: string (ReadOnly): The name of the destination storage container.
-* **DestinationAccountId**: string: The name of destination storage account.
-* **DestinationAddress**: string (WriteOnly): The SAS URL for the destination storage container. It must grant write permission.
-* **DestinationStorageLocationId**: string: The location ID of the destination storage container.
-* **DestinationStorageSubscriptionId**: string: The subscription ID of the destination storage container.
-* **DestinationType**: string: The Continuous Export destination type. This has to be 'Blob'.
+* **DestinationAccountId**: string: The name of destination account.
+* **DestinationAddress**: string (WriteOnly)
+* **DestinationStorageLocationId**: string: The destination account location ID.
+* **DestinationStorageSubscriptionId**: string: The destination storage account subscription ID.
+* **DestinationType**: string: The destination type.
 * **ExportId**: string (ReadOnly): The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
 * **ExportStatus**: string (ReadOnly): This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **InstrumentationKey**: string (ReadOnly): The instrumentation key of the Application Insights component.
-* **IsEnabled**: string (WriteOnly): Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.
+* **IsEnabled**: string (WriteOnly)
 * **IsUserEnabled**: string (ReadOnly): This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
 * **LastGapTime**: string (ReadOnly): The last time the Continuous Export configuration started failing.
 * **LastSuccessTime**: string (ReadOnly): The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
 * **LastUserUpdate**: string (ReadOnly): Last time the Continuous Export configuration was updated.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **NotificationQueueEnabled**: string: Deprecated
-* **NotificationQueueUri**: string (WriteOnly): Deprecated
+* **NotificationQueueUri**: string (WriteOnly)
 * **PermanentErrorReason**: string (ReadOnly): This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
-* **RecordTypes**: string: The document types to be exported, as comma separated values. Allowed values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
+* **RecordTypes**: string: This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
 * **ResourceGroup**: string (ReadOnly): The resource group of the Application Insights component.
 * **StorageName**: string (ReadOnly): The name of the destination storage account.
 * **SubscriptionId**: string (ReadOnly): The subscription of the Application Insights component.
@@ -67,6 +70,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **IsGeneratedFromTemplate**: bool: Flag denoting wether or not this favorite was generated from a template.
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **Name**: string: The user-defined name of the favorite.
 * **SourceType**: string: The source of the favorite definition.
 * **Tags**: string[]: A list of 0 or more tags that are associated with this favorite definition
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this favorite definition.
@@ -80,26 +84,16 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **Content**: string: The content of this item
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **Id**: string: Internally assigned unique id of the item definition.
 * **name**: 'item' (Required, DeployTimeConstant): The resource name
+* **Name**: string: The user-defined name of the item.
 * **Properties**: [ApplicationInsightsComponentAnalyticsItemProperties](#applicationinsightscomponentanalyticsitemproperties): A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
 * **Scope**: 'shared' | 'user': Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
 * **TimeCreated**: string (ReadOnly): Date and time in UTC when this item was created.
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this item.
 * **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant): The resource type
+* **Type**: 'folder' | 'function' | 'query' | 'recent': Enum indicating the type of the Analytics item.
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
-
-## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2015-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **CustomEmails**: string[]: Custom email addresses for this rule notifications
-* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **LastUpdatedTime**: string: The last time this rule was updated
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **RuleDefinitions**: [schemas:20_RuleDefinitions](#schemas20ruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
-* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
-* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -110,7 +104,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [MyWorkbookResourceTags](#myworkbookresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/webtests@2015-05-01
@@ -122,7 +116,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebTestProperties](#webtestproperties): Metadata describing a web test for an Azure resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [WebtestsResourceTags](#webtestsresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/webtests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/workbooks@2015-05-01
@@ -134,7 +128,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [WorkbookResourceTags](#workbookresourcetags): Resource tags
 * **type**: 'microsoft.insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationInsightsComponentProperties
@@ -163,7 +157,7 @@
 * **ResourceId**: string: The full resource Id of the private link scope resource.
 * **ScopeId**: string: The private link scope unique Identifier.
 
-## Dictionary<string,String>
+## ComponentsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,17 +165,6 @@
 ## ApplicationInsightsComponentAnalyticsItemProperties
 ### Properties
 * **functionAlias**: string: A function alias, used when the type of the item is Function
-
-## schemas:20_RuleDefinitions
-### Properties
-* **Description**: string: The rule description
-* **DisplayName**: string: The rule name as it is displayed in UI
-* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
-* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
-* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
-* **IsInPreview**: bool: A flag indicating whether the rule is in preview
-* **Name**: string: The rule name
-* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
 
 ## MyWorkbookProperties
 ### Properties
@@ -194,18 +177,18 @@
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this private workbook.
 * **version**: string: This instance's version of the data model. This can change as new features are added that can be marked private workbook.
 
-## Dictionary<string,String>
+## MyWorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## WebTestProperties
 ### Properties
-* **Configuration**: [schemas:43_Configuration](#schemas43configuration): An XML configuration specification for a WebTest.
+* **Configuration**: [WebTestPropertiesConfiguration](#webtestpropertiesconfiguration): An XML configuration specification for a WebTest.
 * **Description**: string: Purpose/user defined descriptive test for this WebTest.
 * **Enabled**: bool: Is the test actively being monitored.
 * **Frequency**: int: Interval in seconds between test runs for this WebTest. Default value is 300.
-* **Kind**: 'multistep' | 'ping' (Required): The kind of web test this is, valid choices are ping and multistep.
+* **Kind**: 'multistep' | 'ping' (Required): The kind of web test that this web test watches. Choices are ping and multistep.
 * **Locations**: [WebTestGeolocation](#webtestgeolocation)[] (Required): A list of where to physically run the tests from to give global coverage for accessibility of your application.
 * **Name**: string (Required): User defined name if this WebTest.
 * **provisioningState**: string (ReadOnly): Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
@@ -213,7 +196,7 @@
 * **SyntheticMonitorId**: string (Required): Unique ID of this WebTest. This is typically the same value as the Name field.
 * **Timeout**: int: Seconds until this WebTest will timeout and fail. Default value is 30.
 
-## schemas:43_Configuration
+## WebTestPropertiesConfiguration
 ### Properties
 * **WebTest**: string: The XML specification of a WebTest to run against an application.
 
@@ -221,7 +204,7 @@
 ### Properties
 * **Id**: string: Location ID for the webtest to run from.
 
-## Dictionary<string,String>
+## WebtestsResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -229,7 +212,7 @@
 ## WorkbookProperties
 ### Properties
 * **category**: string (Required): Workbook category, as defined by the user at creation time.
-* **kind**: 'shared' | 'user' (Required): Enum indicating if this workbook definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+* **kind**: 'shared' | 'user' (Required): The kind of workbook. Choices are user and shared.
 * **name**: string (Required): The user-defined name of the workbook.
 * **serializedData**: string (Required): Configuration of this particular workbook. Configuration data is a string containing valid JSON
 * **sourceResourceId**: string: Optional resourceId for a source resource.
@@ -239,7 +222,7 @@
 * **version**: string: This instance's version of the data model. This can change as new features are added that can be marked workbook.
 * **workbookId**: string (Required): Internally assigned unique id of the workbook definition.
 
-## Dictionary<string,String>
+## WorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

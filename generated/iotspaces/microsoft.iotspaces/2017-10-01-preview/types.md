@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IoTSpacesProperties](#iotspacesproperties): The properties of an IoTSpaces instance.
 * **sku**: [IoTSpacesSkuInfo](#iotspacesskuinfo) (Required): Information about the SKU of the IoTSpaces instance.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.IoTSpaces/Graph' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IoTSpacesProperties
@@ -30,7 +30,7 @@
 ### Properties
 * **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

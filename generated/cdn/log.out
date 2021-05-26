@@ -1,77 +1,1403 @@
-
-Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/tmp/_bcp_1617976408269/cdn --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.1.4; node: v14.16.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.2.4)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2020-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-INFORMATION: Resource type Microsoft.Cdn/profiles/ruleSets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}' has no body defined.
-Processing batch task - {"tag":"schema-cdn-2020-04-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-12-31"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-06-15-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-06-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-04-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2017-10-12"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2017-04-02"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2016-10-02"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2016-04-02"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2015-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2020-09-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-INFORMATION: Resource type Microsoft.Cdn/profiles/ruleSets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}' has no body defined.
-Processing batch task - {"tag":"schema-cdn-2020-04-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-12-31"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-06-15-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-06-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2019-04-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2017-10-12"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2017-04-02"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2016-10-02"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2016-04-02"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-Processing batch task - {"tag":"schema-cdn-2015-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.98)
-[154.35 s] Generation Complete
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+Processing batch task - {"tag":"microsoft.cdn-2020-09-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningParamIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupOverrideAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupOverrideActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultSigningKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Certificate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomerCertificate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDDomainUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DomainValidationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SecurityPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SecurityPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDEndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SecretListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SecretProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDOriginProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDOriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SharedPrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDOriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDOriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AFDOriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RouteListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RouteProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RouteUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuleUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AfdErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MetricsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RankingsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ContinentsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourcesResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WafMetricsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WafRankingsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UsageName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' (6 differences):
+  - discriminator: {"propertyName":"name"} => <none>
+  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
+  - required: ["name"] => <none>
+  - type: "object" => "string"
+  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning","OriginGroupOverride"]
+  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: Resource type microsoft.cdn/profiles/rulesets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}' has no body defined.
+INFORMATION: autorest.bicep took 30ms
+Processing batch task - {"tag":"microsoft.cdn-2020-04-15"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningParamIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlSigningKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultSigningKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' (6 differences):
+  - discriminator: {"propertyName":"name"} => <none>
+  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
+  - required: ["name"] => <none>
+  - type: "object" => "string"
+  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning"]
+  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 13ms
+Processing batch task - {"tag":"microsoft.cdn-2019-12-31"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupOverrideAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupOverrideActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' (6 differences):
+  - discriminator: {"propertyName":"name"} => <none>
+  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
+  - required: ["name"] => <none>
+  - type: "object" => "string"
+  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","OriginGroupOverride"]
+  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 12ms
+Processing batch task - {"tag":"microsoft.cdn-2019-06-15"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' (6 differences):
+  - discriminator: {"propertyName":"name"} => <none>
+  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
+  - required: ["name"] => <none>
+  - type: "object" => "string"
+  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite"]
+  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 11ms
+Processing batch task - {"tag":"microsoft.cdn-2019-06-15-preview"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' (6 differences):
+  - discriminator: {"propertyName":"name"} => <none>
+  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
+  - required: ["name"] => <none>
+  - type: "object" => "string"
+  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite"]
+  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 10ms
+Processing batch task - {"tag":"microsoft.cdn-2019-04-15"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' (6 differences):
+  - discriminator: {"propertyName":"name"} => <none>
+  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
+  - required: ["name"] => <none>
+  - type: "object" => "string"
+  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite"]
+  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 8ms
+Processing batch task - {"tag":"microsoft.cdn-2017-10-12"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlPathConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UrlFileExtensionConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 3ms
+Processing batch task - {"tag":"microsoft.cdn-2017-04-02"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 2ms
+Processing batch task - {"tag":"microsoft.cdn-2016-10-02"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 3ms
+Processing batch task - {"tag":"microsoft.cdn-2016-04-02"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 3ms
+Processing batch task - {"tag":"microsoft.cdn-2015-06-01"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProfilePropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 2ms
+[70.66 s] Generation Complete

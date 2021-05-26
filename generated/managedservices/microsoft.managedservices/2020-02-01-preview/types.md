@@ -21,16 +21,16 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment.
-* **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly): Registration definition inside registration assignment.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
+* **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): Registration definition inside registration assignment.
 * **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
 
-## schemas:4_registrationDefinition
+## RegistrationAssignmentPropertiesRegistrationDefinition
 ### Properties
 * **id**: string (ReadOnly): Fully qualified path of the registration definition.
 * **name**: string (ReadOnly): Name of the registration definition.
 * **plan**: [Plan](#plan): Plan details for the managed services.
-* **properties**: [schemas:4_registrationDefinition_properties](#schemas4registrationdefinitionproperties): Properties of registration definition inside registration assignment.
+* **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties): Properties of registration definition inside registration assignment.
 * **type**: string (ReadOnly): Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
 
 ## Plan
@@ -40,7 +40,7 @@
 * **publisher**: string (Required): The publisher ID.
 * **version**: string (Required): The plan's version.
 
-## schemas:4_registrationDefinition_properties
+## RegistrationAssignmentPropertiesRegistrationDefinitionProperties
 ### Properties
 * **authorizations**: [Authorization](#authorization)[]: Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
 * **description**: string: Description of the registration definition.
@@ -68,8 +68,14 @@
 
 ## JustInTimeAccessPolicy
 ### Properties
-* **maximumActivationDuration**: string: Maximum access duration in ISO 8601 format.  The default value is "PT8H".
+* **managedByTenantApprovers**: [EligibleApprover](#eligibleapprover)[]: The list of managedByTenant approvers for the eligible authorization.
+* **maximumActivationDuration**: string: Maximum access duration in ISO 8601 format.
 * **multiFactorAuthProvider**: 'Azure' | 'None' (Required): MFA provider.
+
+## EligibleApprover
+### Properties
+* **principalId**: string (Required): Principal Id of the user or security group that will approve JIT activation requests for the eligible authorization.
+* **principalIdDisplayName**: string: Display name of the principal Id.
 
 ## RegistrationDefinitionProperties
 ### Properties

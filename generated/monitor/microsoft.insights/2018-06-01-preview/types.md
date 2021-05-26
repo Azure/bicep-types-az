@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GuestDiagnosticSettings](#guestdiagnosticsettings) (Required): Virtual machine diagnostic settings
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/guestDiagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.insights/guestDiagnosticSettingsAssociation@2018-06-01-preview
@@ -19,20 +19,20 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GuestDiagnosticSettingsAssociation](#guestdiagnosticsettingsassociation) (Required): A guest diagnostic settings association.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/guestDiagnosticSettingsAssociation' (ReadOnly, DeployTimeConstant): The resource type
 
 ## GuestDiagnosticSettings
 ### Properties
 * **dataSources**: [DataSource](#datasource)[]: the array of data source object which are configured to collect and send data
-* **osType**: 'Linux' | 'Windows': Operating system type for the configuration.
+* **osType**: 'Linux' | 'Windows': Operating system type for the configuration
 * **proxySetting**: string
 
 ## DataSource
 ### Properties
 * **configuration**: [DataSourceConfiguration](#datasourceconfiguration) (Required)
-* **kind**: 'ETWProviders' | 'PerformanceCounter' | 'WindowsEventLogs' (Required): Datasource kind.
-* **sinks**: [SinkConfiguration](#sinkconfiguration)[] (Required)
+* **kind**: 'ETWProviders' | 'PerformanceCounter' | 'WindowsEventLogs' (Required): Datasource kind
+* **sinks**: [SinkConfiguration](#sinkconfiguration)[] (Required): Array of SinkConfiguration
 
 ## DataSourceConfiguration
 ### Properties
@@ -53,7 +53,7 @@
 
 ## EtwProviderConfiguration
 ### Properties
-* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required)
+* **events**: [EtwEventConfiguration](#etweventconfiguration)[] (Required): Array of EtwEventConfiguration
 * **id**: string (Required)
 
 ## EtwEventConfiguration
@@ -66,7 +66,7 @@
 ### Properties
 * **kind**: 'ApplicationInsights' | 'EventHub' | 'LogAnalytics' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -75,7 +75,7 @@
 ### Properties
 * **guestDiagnosticSettingsName**: string (Required): The guest diagnostic settings name.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

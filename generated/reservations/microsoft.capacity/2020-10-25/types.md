@@ -14,10 +14,10 @@
 * **currentValue**: int (ReadOnly): Current usage value for the resource.
 * **limit**: int: Quota properties.
 * **name**: [ResourceName](#resourcename): Resource name provided by the resource provider. Use this property for quotaRequest parameter.
-* **properties**: any: Additional properties for the specified resource provider.
+* **properties**: any: Any object
 * **quotaPeriod**: string (ReadOnly): The time period over which the quota usage values are summarized. For example, P1D (per one day), PT1M (per one minute), and PT1S (per one second). This parameter is optional because, for some resources such as compute, the time period is irrelevant.
-* **resourceType**: any: The name of the resource type.
-* **unit**: string:  The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation.
+* **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard': The resource types.
+* **unit**: string: The limit units, such as **count** and **bytes**. Use the unit field provided in the response of the GET quota operation.
 
 ## ResourceName
 ### Properties

@@ -16,38 +16,40 @@
 * **lastModified**: string (ReadOnly): Date the Media Graph was last modified
 * **sinks**: [MediaGraphSink](#mediagraphsink)[] (Required): Media Graph sinks
 * **sources**: [MediaGraphSource](#mediagraphsource)[] (Required): Media Graph sources
-* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state.
+* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **inputs**: string[] (Required): Sink inputs
 * **name**: string (Required): Sink name
-### #Microsoft.Media.MediaGraphAssetSink
+### MediaGraphAssetSink
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): Asset sink
+* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
 * **assetName**: string (Required): Asset name
 
 
-## #Microsoft.Media.MediaGraphAssetSink
+## MediaGraphAssetSink
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): Asset sink
+* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
 * **assetName**: string (Required): Asset name
 
 ## MediaGraphSource
 * **Discriminator**: @odata.type
+
 ### Base Properties
 * **name**: string (Required): Source name
-### #Microsoft.Media.MediaGraphRtspSource
+### MediaGraphRtspSource
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): RTSP source
+* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
 * **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials): Credentials to authenticate to Media Graph sources
 * **rtspUrl**: string (Required): RTSP URL
 
 
-## #Microsoft.Media.MediaGraphRtspSource
+## MediaGraphRtspSource
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): RTSP source
+* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
 * **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials): Credentials to authenticate to Media Graph sources
 * **rtspUrl**: string (Required): RTSP URL
 

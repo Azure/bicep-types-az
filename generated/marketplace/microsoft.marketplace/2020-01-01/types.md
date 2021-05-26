@@ -20,7 +20,7 @@
 
 ## PrivateStoreProperties
 ### Properties
-* **availability**: 'disabled' | 'enabled': Indicates private store availability.
+* **availability**: 'disabled' | 'enabled': Indicates private store availability
 * **customerTag**: string: Customer tag
 * **eTag**: string: Identifier for purposes of race condition
 * **hasCommercialAssociation**: bool: Indicating whether private store has association with Commercial's Billing Account (through billing account's customer tag retrieved from GSM for a subscription
@@ -35,7 +35,7 @@
 ### Properties
 * **createdAt**: string (ReadOnly): Private store offer creation date
 * **eTag**: string: Identifier for purposes of race condition
-* **iconFileUris**: [Dictionary<string,String>](#dictionarystringstring): Icon File Uris
+* **iconFileUris**: [OfferPropertiesIconFileUris](#offerpropertiesiconfileuris): Icon File Uris
 * **modifiedAt**: string (ReadOnly): Private store offer modification date
 * **offerDisplayName**: string (ReadOnly): It will be displayed prominently in the marketplace
 * **plans**: [Plan](#plan)[]: Offer plans
@@ -45,14 +45,14 @@
 * **uniqueOfferId**: string (ReadOnly): Offers unique id
 * **updateSuppressedDueIdempotence**: bool: Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
 
-## Dictionary<string,String>
+## OfferPropertiesIconFileUris
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Plan
 ### Properties
-* **accessibility**: 'PrivateSubscriptionOnLevel' | 'PrivateTenantOnLevel' | 'Public' | 'Unknown': Plan accessibility.
+* **accessibility**: 'PrivateSubscriptionOnLevel' | 'PrivateTenantOnLevel' | 'Public' | 'Unknown': Plan accessibility
 * **altStackReference**: string (ReadOnly): Alternative stack type
 * **planDisplayName**: string (ReadOnly): Friendly name for the plan for display in the marketplace
 * **planId**: string (ReadOnly): Text identifier for this plan

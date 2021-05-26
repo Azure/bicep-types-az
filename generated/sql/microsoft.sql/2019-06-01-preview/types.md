@@ -1,16 +1,5 @@
 # Microsoft.Sql @ 2019-06-01-preview
 
-## Resource Microsoft.Sql/managedInstances/databases@2019-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties): The managed database's properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Sql/servers@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -21,7 +10,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): The properties of a server.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview
@@ -29,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant): The resource name
 * **properties**: [AdministratorProperties](#administratorproperties): Properties of a active directory administrator.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,7 +33,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The database's properties.
 * **sku**: [Sku](#sku): An ARM Resource SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview
@@ -83,29 +72,6 @@
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Workload classifier definition. For more information look at sys.workload_management_workload_classifiers (DMV).
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagedDatabaseProperties
-### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
-* **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
-* **creationDate**: string (ReadOnly): Creation date of the database.
-* **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
-* **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
-* **failoverGroupId**: string (ReadOnly): Instance Failover Group resource identifier that this managed database belongs to.
-* **longTermRetentionBackupResourceId**: string: The name of the Long Term Retention backup to be used for restore of this managed database.
-* **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
-* **restorableDroppedDatabaseId**: string: The restorable dropped database resource id to restore when creating this database.
-* **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
-* **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
-* **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Azure Active Directory principal id.
@@ -119,7 +85,7 @@
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **state**: string (ReadOnly): The state of the server.
 * **version**: string: The version of the server.
 
@@ -144,14 +110,14 @@
 * **description**: string (Required): The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The private link service connection status.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AdministratorProperties
 ### Properties
-* **administratorType**: string (Required): Type of the sever administrator.
+* **administratorType**: 'ActiveDirectory' (Required): Type of the sever administrator.
 * **azureADOnlyAuthentication**: bool (ReadOnly): Azure Active Directory only Authentication enabled.
 * **login**: string (Required): Login name of the server administrator.
 * **sid**: string (Required): SID (object ID) of the server administrator.
@@ -216,7 +182,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **size**: string: Size of the particular SKU
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -261,7 +227,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **syncAgentId**: string: ARM resource id of the sync agent in the sync member.
 * **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub': Sync direction of the sync member.
 * **syncMemberAzureDatabaseResourceId**: string: ARM resource id of the sync member logical database, for sync members in Azure.
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member.
+* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member.
 * **usePrivateLinkConnection**: bool: Whether to use private link connection.
 * **userName**: string: User name of the member database in the sync member.
 

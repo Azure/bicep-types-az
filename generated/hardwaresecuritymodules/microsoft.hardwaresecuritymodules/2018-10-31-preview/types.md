@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required): Properties of the dedicated hsm
 * **sku**: [Sku](#sku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
 
@@ -36,9 +36,9 @@
 
 ## Sku
 ### Properties
-* **name**: 'SafeNet Luna Network HSM A790': SKU of the dedicated HSM.
+* **name**: 'SafeNet Luna Network HSM A790': SKU of the dedicated HSM
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

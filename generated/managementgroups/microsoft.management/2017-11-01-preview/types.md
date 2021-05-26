@@ -4,10 +4,10 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **displayName**: string (WriteOnly): The friendly name of the management group.
+* **displayName**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **parentId**: string (WriteOnly): (Optional) The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+* **parentId**: string (WriteOnly)
 * **properties**: [ManagementGroupProperties](#managementgroupproperties) (ReadOnly): The generic properties of a management group.
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 ### Properties
 * **childId**: string (ReadOnly): The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
 * **children**: [ManagementGroupChildInfo](#managementgroupchildinfo)[] (ReadOnly): The list of children.
-* **childType**: 'ManagementGroup' | 'Subscription' (ReadOnly)
+* **childType**: 'ManagementGroup' | 'Subscription' (ReadOnly): The type of child resource.
 * **displayName**: string (ReadOnly): The friendly name of the child resource.
 
 ## ManagementGroupDetails

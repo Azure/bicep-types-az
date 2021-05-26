@@ -29,7 +29,7 @@
 
 ## ConnectorProperties
 ### Properties
-* **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial': Connector billing model.
+* **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial': Connector billing model
 * **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
 * **createdOn**: string (ReadOnly): Connector definition creation datetime
 * **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
@@ -42,7 +42,7 @@
 * **providerBillingAccountDisplayName**: string (ReadOnly): The display name of the providerBillingAccountId as defined on the external provider
 * **providerBillingAccountId**: string (ReadOnly): Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-* **status**: 'active' | 'error' | 'expired' | 'warning' (ReadOnly): Connector status.
+* **status**: 'active' | 'error' | 'expired' | 'warning' (ReadOnly): Connector status
 * **subscriptionId**: string: Billing SubscriptionId
 
 ## ConnectorCollectionInfo
@@ -61,6 +61,7 @@
 
 ## ShowbackRuleProperties
 * **Discriminator**: ruleType
+
 ### Base Properties
 * **creationTime**: string (ReadOnly): The time when the showback rule was created.
 * **deprecationTime**: string (ReadOnly): The current time when showback rule was deprecate.
@@ -69,15 +70,15 @@
 * **scopes**: [Scope](#scope)[]: List of authorized assigned scopes.
 * **status**: 'Active' | 'NotActive': The current status of the showback rule.
 * **version**: int (ReadOnly): The current version of showback rule.
-### CostAllocation
+### CostAllocationDetailsKind
 #### Properties
 * **details**: [CostAllocationDetails](#costallocationdetails): Represents CostAllocation showback rule model
-* **ruleType**: 'CostAllocation' (Required): Represents CostAllocation showback rule model
+* **ruleType**: 'CostAllocation' (Required): The rule type of the showback rule solution.
 
-### CustomPrice
+### CustomPriceDetailsKind
 #### Properties
 * **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
-* **ruleType**: 'CustomPrice' (Required): Represents Custom price showback rule model
+* **ruleType**: 'CustomPrice' (Required): The rule type of the showback rule solution.
 
 
 ## Scope
@@ -87,23 +88,23 @@
 * **name**: string: Scope name
 * **type**: string: Scope type
 
-## CostAllocation
+## CostAllocationDetailsKind
 ### Properties
 * **details**: [CostAllocationDetails](#costallocationdetails): Represents CostAllocation showback rule model
-* **ruleType**: 'CostAllocation' (Required): Represents CostAllocation showback rule model
+* **ruleType**: 'CostAllocation' (Required): The rule type of the showback rule solution.
 
 ## CostAllocationDetails
 ### Properties
 * **policy**: 'Evenly' | 'Fixed' | 'Proportional': Cost allocation policy.
 
-## CustomPrice
+## CustomPriceDetailsKind
 ### Properties
 * **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
-* **ruleType**: 'CustomPrice' (Required): Represents Custom price showback rule model
+* **ruleType**: 'CustomPrice' (Required): The rule type of the showback rule solution.
 
 ## CustomPriceDetails
 ### Properties
-* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations'[]: Array of benefits.
+* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum'[]: Array of benefits.
 * **markups**: [Markup](#markup)[]: List of markups.
 * **pricesheet**: string
 
