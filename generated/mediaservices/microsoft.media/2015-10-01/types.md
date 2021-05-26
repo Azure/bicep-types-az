@@ -8,7 +8,7 @@
 * **location**: string: The geographic location of the resource. This must be one of the supported and registered Azure Geo Regions (for example, West US, East US, Southeast Asia, and so forth).
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MediaServiceProperties](#mediaserviceproperties): The additional properties of a Media Service resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags to help categorize the resource in the Azure portal.
+* **tags**: [ResourceTags](#resourcetags): Tags to help categorize the resource in the Azure portal.
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## MediaServiceProperties
@@ -26,7 +26,7 @@
 * **id**: string (Required): The id of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts (isPrimary false).
 * **isPrimary**: bool (Required): Is this storage account resource the primary storage account for the Media Service resource. Blob only storage must set this to false.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

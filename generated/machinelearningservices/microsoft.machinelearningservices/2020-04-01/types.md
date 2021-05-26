@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-04-01
@@ -23,7 +23,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Compute](#compute): Machine Learning compute object.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-04-01
@@ -36,22 +36,22 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned' (Required): The identity type.
-* **userAssignedIdentities**: [Dictionary<string,Schemas24UserAssignedIdentitiesValue>](#dictionarystringschemas24userassignedidentitiesvalue): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas24UserAssignedIdentitiesValue>
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:24_userAssignedIdentitiesValue
+## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -108,14 +108,14 @@
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -125,14 +125,14 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': The private endpoint connection status.
 
 ## Sku
 ### Properties
 * **name**: string: Name of the sku
 * **tier**: string: Tier of the sku like Basic or Enterprise
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -147,15 +147,16 @@
 * **groupId**: string: The private link resource group id.
 * **privateLinkResourceId**: string: The resource id that private link links to.
 * **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': The private endpoint connection status.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string: Location for the underlying compute
 * **createdOn**: string (ReadOnly): The date and time when the compute was created.
@@ -163,41 +164,41 @@
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:33_properties](#schemas33properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
 ### AmlCompute
 #### Properties
-* **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:34_properties](#schemas34properties): AML Compute properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
 ### Databricks
 #### Properties
-* **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
 
 ### DataFactory
 #### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
+* **computeType**: 'DataFactory' (Required): The type of compute
 
 ### DataLakeAnalytics
 #### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
 
 ### HDInsight
 #### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -217,10 +218,10 @@
 
 ## AKS
 ### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:33_properties](#schemas33properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
-## schemas:33_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
@@ -244,7 +245,7 @@
 * **key**: string: Key data
 * **leafDomainLabel**: string: The leaf domain label name
 * **overwriteExistingDomain**: bool: Boolean value for overwriting the domain
-* **status**: 'Auto' | 'Disabled' | 'Enabled': Enable or disable ssl for scoring.
+* **status**: 'Auto' | 'Disabled' | 'Enabled': Enable or disable ssl for scoring
 
 ## SystemService
 ### Properties
@@ -254,10 +255,10 @@
 
 ## AmlCompute
 ### Properties
-* **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:34_properties](#schemas34properties): AML Compute properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
-## schemas:34_properties
+## AmlComputeProperties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
@@ -269,7 +270,7 @@
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
 * **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
-* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority.
+* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
 ## NodeStateCounts
@@ -299,34 +300,62 @@
 
 ## Databricks
 ### Properties
-* **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
+
+## DatabricksProperties
+### Properties
+* **databricksAccessToken**: string: Databricks access token
 
 ## DataFactory
 ### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
+* **computeType**: 'DataFactory' (Required): The type of compute
 
 ## DataLakeAnalytics
 ### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
+
+## DataLakeAnalyticsProperties
+### Properties
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
 
 ## HDInsight
 ### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
+
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
+
+## VirtualMachineSshCredentials
+### Properties
+* **password**: string: Password of admin account
+* **privateKeyData**: string: Private key data
+* **publicKeyData**: string: Public key data
+* **username**: string: Username of admin account
 
 ## VirtualMachine
 ### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:24_userAssignedIdentitiesValue](#schemas24userassignedidentitiesvalue)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

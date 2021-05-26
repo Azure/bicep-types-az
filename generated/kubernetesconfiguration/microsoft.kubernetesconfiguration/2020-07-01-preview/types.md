@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:31_properties](#schemas31properties): Properties of an Extension Instance resource
+* **properties**: [ExtensionInstanceProperties](#extensioninstanceproperties): Properties of an Extension Instance resource
 * **systemData**: [SystemData](#systemdata): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
 * **type**: 'Microsoft.KubernetesConfiguration/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -16,20 +16,20 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:13_properties](#schemas13properties): Properties to create a Source Control Configuration resource
+* **properties**: [SourceControlConfigurationProperties](#sourcecontrolconfigurationproperties): Properties to create a Source Control Configuration resource
 * **systemData**: [SystemData](#systemdata): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:31_properties
+## ExtensionInstanceProperties
 ### Properties
 * **autoUpgradeMinorVersion**: bool: Flag to note if this instance participates in auto upgrade of minor version, or not.
-* **configurationProtectedSettings**: [Dictionary<string,String>](#dictionarystringstring): Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-* **configurationSettings**: [Dictionary<string,String>](#dictionarystringstring): Name-value pairs for configuring the extensionInstance
+* **configurationProtectedSettings**: [ExtensionProtectedSettings](#extensionprotectedsettings): Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
+* **configurationSettings**: [ConfigurationSettings](#configurationsettings): Name-value pairs for configuring the extensionInstance
 * **creationTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
 * **errorInfo**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
 * **extensionType**: string: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
 * **identity**: [ConfigurationIdentity](#configurationidentity): Identity for the managed cluster.
-* **installState**: 'Failed' | 'Installed' | 'Pending': Status of installation of this instance of the extension.
+* **installState**: 'Failed' | 'Installed' | 'Pending' (ReadOnly): Status of installation of this instance of the extension.
 * **lastModifiedTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
 * **lastStatusTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time of last status from the agent.
 * **releaseTrain**: string: ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
@@ -37,12 +37,12 @@
 * **statuses**: [ExtensionStatus](#extensionstatus)[]: Status from this instance of the extension.
 * **version**: string: Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
 
-## Dictionary<string,String>
+## ExtensionProtectedSettings
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ConfigurationSettings
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -88,17 +88,17 @@
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource
 * **lastModifiedByType**: string (ReadOnly): The type of identity that last modified the resource: user, application, managedIdentity, key
 
-## schemas:13_properties
+## SourceControlConfigurationProperties
 ### Properties
 * **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
-* **configurationProtectedSettings**: [Dictionary<string,String>](#dictionarystringstring): Name-value pairs of protected configuration settings for the configuration
+* **configurationProtectedSettings**: [ConfigurationProtectedSettings](#configurationprotectedsettings): Name-value pairs of protected configuration settings for the configuration
 * **enableHelmOperator**: bool: Option to enable Helm Operator for this git configuration.
 * **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties): Properties for Helm operator.
 * **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
 * **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
 * **operatorParams**: string: Any Parameters for the Operator instance in string format.
 * **operatorScope**: 'cluster' | 'namespace': Scope at which the operator will be installed.
-* **operatorType**: 'Flux': Type of the operator.
+* **operatorType**: 'Flux': Type of the operator
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.
@@ -111,7 +111,7 @@
 * **message**: string: Message from when the configuration was applied.
 * **messageLevel**: 'Error' | 'Information' | 'Warning': Level of the message.
 
-## Dictionary<string,String>
+## ConfigurationProtectedSettings
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterResourceProperties](#clusterresourceproperties): Service properties payload
 * **sku**: [Sku](#sku): Sku of Azure Spring Cloud
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describe the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/apps@2019-05-01-preview
@@ -64,7 +64,7 @@
 ### Properties
 * **configServerProperties**: [ConfigServerProperties](#configserverproperties): Config server git properties payload
 * **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moved' | 'MoveFailed' | 'Moving' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Service.
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Service
 * **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
 * **trace**: [TraceProperties](#traceproperties): Trace properties payload
 * **version**: int (ReadOnly): Version of the Service
@@ -115,19 +115,19 @@
 ### Properties
 * **appNetworkResourceGroup**: string: Name of the resource group containing network resources of Azure Spring Cloud Apps
 * **appSubnetId**: string: Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
-* **outboundIPs**: [schemas:8_outboundIPs](#schemas8outboundips) (ReadOnly): Desired outbound IP resources for Azure Spring Cloud instance.
+* **outboundIPs**: [NetworkProfileOutboundIPs](#networkprofileoutboundips) (ReadOnly): Desired outbound IP resources for Azure Spring Cloud instance.
 * **requiredTraffics**: [RequiredTraffic](#requiredtraffic)[] (ReadOnly): Required inbound or outbound traffics for Azure Spring Cloud instance.
 * **serviceCidr**: string: Azure Spring Cloud service reserved CIDR
 * **serviceRuntimeNetworkResourceGroup**: string: Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
 * **serviceRuntimeSubnetId**: string: Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
 
-## schemas:8_outboundIPs
+## NetworkProfileOutboundIPs
 ### Properties
 * **publicIPs**: string[] (ReadOnly): A list of public IP addresses.
 
 ## RequiredTraffic
 ### Properties
-* **direction**: 'Inbound' | 'Outbound' (ReadOnly): The direction of required traffic.
+* **direction**: 'Inbound' | 'Outbound' (ReadOnly): The direction of required traffic
 * **fqdns**: string[] (ReadOnly): The FQDN list of required traffic
 * **ips**: string[] (ReadOnly): The ip list of required traffic
 * **port**: int (ReadOnly): The port of required traffic
@@ -146,7 +146,7 @@
 * **name**: string: Name of the Sku
 * **tier**: string: Tier of the Sku
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -155,7 +155,7 @@
 ### Properties
 * **principalId**: string
 * **tenantId**: string
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned'
 
 ## AppResourceProperties
 ### Properties
@@ -164,7 +164,7 @@
 * **fqdn**: string: Fully qualified dns Name.
 * **httpsOnly**: bool: Indicate if only https is allowed.
 * **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk payload
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the App.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the App
 * **public**: bool: Indicates whether the App exposes public endpoint
 * **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk payload
 * **url**: string (ReadOnly): URL of the App
@@ -182,7 +182,7 @@
 
 ## BindingResourceProperties
 ### Properties
-* **bindingParameters**: [Dictionary<string,Object>](#dictionarystringobject): Binding parameters of the Binding resource
+* **bindingParameters**: [BindingResourcePropertiesBindingParameters](#bindingresourcepropertiesbindingparameters): Binding parameters of the Binding resource
 * **createdAt**: string (ReadOnly): Creation time of the Binding resource
 * **generatedProperties**: string (ReadOnly): The generated Spring Boot property file for this binding. The secret will be deducted.
 * **key**: string: The key of the bound resource
@@ -191,7 +191,7 @@
 * **resourceType**: string (ReadOnly): The standard Azure resource type of the bound resource
 * **updatedAt**: string (ReadOnly): Update time of the Binding resource
 
-## Dictionary<string,Object>
+## BindingResourcePropertiesBindingParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -203,21 +203,21 @@
 * **createdTime**: string (ReadOnly): Date time when the resource is created
 * **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings payload
 * **instances**: [DeploymentInstance](#deploymentinstance)[] (ReadOnly): Collection of instances belong to the Deployment
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Deployment.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Deployment
 * **source**: [UserSourceInfo](#usersourceinfo): Source information for a deployment
-* **status**: 'Allocating' | 'Compiling' | 'Failed' | 'Running' | 'Stopped' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the Deployment.
+* **status**: 'Allocating' | 'Compiling' | 'Failed' | 'Running' | 'Stopped' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the Deployment
 
 ## DeploymentSettings
 ### Properties
 * **cpu**: int: Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
-* **environmentVariables**: [Dictionary<string,String>](#dictionarystringstring): Collection of environment variables
+* **environmentVariables**: [DeploymentSettingsEnvironmentVariables](#deploymentsettingsenvironmentvariables): Collection of environment variables
 * **instanceCount**: int: Instance count, basic tier should be in range (1, 25), standard tier should be in range (1, 500)
 * **jvmOptions**: string: JVM parameter
 * **memoryInGB**: int: Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
 * **netCoreMainEntryPath**: string: The path to the .NET executable relative to zip root
-* **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31': Runtime version.
+* **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31': Runtime version
 
-## Dictionary<string,String>
+## DeploymentSettingsEnvironmentVariables
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -235,7 +235,7 @@
 * **artifactSelector**: string: Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.
 * **relativePath**: string: Relative path of the storage which stores the source
-* **type**: 'Jar' | 'NetCoreZip' | 'Source': Type of the source uploaded.
+* **type**: 'Jar' | 'NetCoreZip' | 'Source': Type of the source uploaded
 * **version**: string: Version of the source
 
 ## CustomDomainProperties

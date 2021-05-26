@@ -3,14 +3,14 @@
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **address**: [AddressDetails](#addressdetails) (WriteOnly): Address details.
+* **address**: [AddressDetails](#addressdetails) (WriteOnly)
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **displayName**: string (WriteOnly): The name of the billing profile.
-* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (WriteOnly): Enabled azure plans for the billing profile.
+* **displayName**: string (WriteOnly)
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **invoiceEmailOptIn**: bool (WriteOnly): Flag controlling whether the invoices for the billing profile are sent through email.
+* **invoiceEmailOptIn**: bool (WriteOnly)
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **poNumber**: string (WriteOnly): The purchase order name that will appear on the invoices generated for the billing profile.
+* **poNumber**: string (WriteOnly)
 * **properties**: [BillingProfileProperties](#billingprofileproperties) (ReadOnly): The properties of the billing profile.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,7 +27,7 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **displayName**: string (WriteOnly): The name of the invoice section.
+* **displayName**: string (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly): The properties of an invoice section.
@@ -80,21 +80,21 @@
 
 ## AddressDetails
 ### Properties
-* **addressLine1**: string (WriteOnly): Address line 1.
-* **addressLine2**: string (WriteOnly): Address line 2.
-* **addressLine3**: string (WriteOnly): Address line 3.
-* **city**: string (WriteOnly): Address city.
-* **companyName**: string (WriteOnly): Company name.
-* **country**: string (WriteOnly): Country code uses ISO2, 2-digit format.
-* **firstName**: string (WriteOnly): First name.
-* **lastName**: string (WriteOnly): Last name.
-* **postalCode**: string (WriteOnly): Postal code.
-* **region**: string (WriteOnly): Address region.
+* **addressLine1**: string (WriteOnly)
+* **addressLine2**: string (WriteOnly)
+* **addressLine3**: string (WriteOnly)
+* **city**: string (WriteOnly)
+* **companyName**: string (WriteOnly)
+* **country**: string (WriteOnly)
+* **firstName**: string (WriteOnly)
+* **lastName**: string (WriteOnly)
+* **postalCode**: string (WriteOnly)
+* **region**: string (WriteOnly)
 
 ## AzurePlan
 ### Properties
-* **skuDescription**: string (ReadOnly, WriteOnly): The sku description.
-* **skuId**: string (WriteOnly): The sku id.
+* **skuDescription**: string (ReadOnly, WriteOnly)
+* **skuId**: string (WriteOnly)
 
 ## BillingProfileProperties
 ### Properties
@@ -109,7 +109,7 @@
 * **invoiceSections**: [InvoiceSection](#invoicesection)[] (ReadOnly): The invoice sections associated to the billing profile.
 * **poNumber**: string (ReadOnly): The purchase order name that will appear on the invoices generated for the billing profile.
 * **spendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit.
-* **status**: any (ReadOnly): The status of the billing profile.
+* **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
 * **targetClouds**: 'USGov' | 'USNat' | 'USSec'[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
@@ -130,7 +130,7 @@
 ### Properties
 * **displayName**: string (ReadOnly): The name of the invoice section.
 * **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Possible cloud environments.
 
 ## InstructionProperties
 ### Properties

@@ -11,7 +11,7 @@
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
 * **sku**: [Sku](#sku): Sku of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2021-01-01
@@ -25,7 +25,7 @@
 * **properties**: [Compute](#compute): Machine Learning compute object.
 * **sku**: [Sku](#sku): Sku of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/connections@2021-01-01
@@ -48,58 +48,69 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **sku**: [Sku](#sku): Sku of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/services@2021-01-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: computeType
+
 ### Base Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **description**: string (WriteOnly): The description of the service.
-* **environmentImageRequest**: [schemas:122_environmentImageRequest](#schemas122environmentimagerequest) (WriteOnly): The Environment, models and assets needed for inferencing.
+* **description**: string (WriteOnly)
+* **environmentImageRequest**: [CreateServiceRequestEnvironmentImageRequest](#createservicerequestenvironmentimagerequest) (WriteOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **keys**: [schemas:122_keys](#schemas122keys) (WriteOnly): The authentication keys.
-* **kvTags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): The service tag dictionary. Tags are mutable.
-* **location**: string: The name of the Azure location/region.
+* **keys**: [CreateServiceRequestKeys](#createservicerequestkeys) (WriteOnly)
+* **kvTags**: [CreateServiceRequestKvTags](#createservicerequestkvtags) (WriteOnly)
+* **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): The service properties dictionary. Properties are immutable.
+* **properties**: [CreateServiceRequestProperties](#createservicerequestproperties): The base service response. The correct inherited response based on computeType will be returned (ex. ACIServiceResponse)
 * **sku**: [Sku](#sku) (ReadOnly): Sku of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant): The resource type
-### ACI
+### ACIServiceCreateRequest
 #### Properties
-* **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
-* **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
-* **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required)
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
-* **dataCollection**: [schemas:91_dataCollection](#schemas91datacollection) (WriteOnly): Details of the data collection options specified.
-* **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
-* **encryptionProperties**: [schemas:91_encryptionProperties](#schemas91encryptionproperties) (WriteOnly): The encryption properties.
-* **sslCertificate**: string (WriteOnly): The public SSL certificate in PEM format to use if SSL is enabled.
-* **sslEnabled**: bool (WriteOnly): Whether or not SSL is enabled.
-* **sslKey**: string (WriteOnly): The public SSL key in PEM format for the certificate.
-* **vnetConfiguration**: [schemas:91_vnetConfiguration](#schemas91vnetconfiguration) (WriteOnly): The virtual network configuration.
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **cname**: string (WriteOnly)
+* **computeType**: 'ACI' (Required): The compute environment type for the service.
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
+* **dataCollection**: [ACIServiceCreateRequestDataCollection](#aciservicecreaterequestdatacollection) (WriteOnly)
+* **dnsNameLabel**: string (WriteOnly)
+* **encryptionProperties**: [ACIServiceCreateRequestEncryptionProperties](#aciservicecreaterequestencryptionproperties) (WriteOnly)
+* **sslCertificate**: string (WriteOnly)
+* **sslEnabled**: bool (WriteOnly)
+* **sslKey**: string (WriteOnly)
+* **vnetConfiguration**: [ACIServiceCreateRequestVnetConfiguration](#aciservicecreaterequestvnetconfiguration) (WriteOnly)
 
-### Custom
+### AKSServiceCreateRequest
 #### Properties
-* **computeType**: 'Custom' (Required): The Variant properties.
-* **isDefault**: bool (WriteOnly): Is this the default variant.
-* **trafficPercentile**: int (WriteOnly): The amount of traffic variant receives.
-* **type**: 'Control' | 'Treatment' (WriteOnly): The type of the variant.
+* **aadAuthEnabled**: bool (WriteOnly)
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **autoScaler**: [AKSServiceCreateRequestAutoScaler](#aksservicecreaterequestautoscaler) (WriteOnly)
+* **computeName**: string (WriteOnly)
+* **computeType**: 'AKS' (Required): The compute environment type for the service.
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
+* **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly)
+* **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly)
+* **maxConcurrentRequestsPerContainer**: int (WriteOnly)
+* **maxQueueWaitMs**: int (WriteOnly)
+* **namespace**: string (WriteOnly)
+* **numReplicas**: int (WriteOnly)
+* **scoringTimeoutMs**: int (WriteOnly)
 
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): dictionary containing all the user assigned identities, with resourceId of the UAI as key.
 
-## Dictionary<string,UserAssignedIdentity>
+## UserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -169,14 +180,14 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **sku**: [Sku](#sku): Sku of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -187,7 +198,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': The private endpoint connection status.
 
 ## Sku
 ### Properties
@@ -198,12 +209,12 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that created the resource.
+* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that creates/modifies resources
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that creates/modifies resources
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -226,60 +237,61 @@
 * **groupId**: string: The private link resource group id.
 * **privateLinkResourceId**: string: The resource id that private link links to.
 * **requestMessage**: string: Request message.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': The private endpoint connection status.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string: Location for the underlying compute
 * **description**: string: The description of the Machine Learning compute.
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:35_properties](#schemas35properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
 ### AmlCompute
 #### Properties
-* **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:36_properties](#schemas36properties): AML Compute properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
 ### ComputeInstance
 #### Properties
-* **computeType**: 'ComputeInstance' (Required): An Azure Machine Learning compute instance.
-* **properties**: [schemas:37_properties](#schemas37properties): Compute Instance properties
+* **computeType**: 'ComputeInstance' (Required): The type of compute
+* **properties**: [ComputeInstanceProperties](#computeinstanceproperties): Compute Instance properties
 
 ### Databricks
 #### Properties
-* **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:38_properties](#schemas38properties)
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
 
 ### DataFactory
 #### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
+* **computeType**: 'DataFactory' (Required): The type of compute
 
 ### DataLakeAnalytics
 #### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:38_properties](#schemas38properties)
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
 
 ### HDInsight
 #### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:38_properties](#schemas38properties)
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:38_properties](#schemas38properties)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -299,16 +311,16 @@
 
 ## AKS
 ### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:35_properties](#schemas35properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
-## schemas:35_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVmSize**: string: Agent virtual machine size
 * **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): Advance configuration for AKS networking
 * **clusterFqdn**: string: Cluster full qualified domain name
-* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd': Intended usage of the cluster.
+* **clusterPurpose**: 'DenseProd' | 'DevTest' | 'FastProd': Intended usage of the cluster
 * **sslConfiguration**: [SslConfiguration](#sslconfiguration): The ssl configuration for scoring
 * **systemServices**: [SystemService](#systemservice)[] (ReadOnly): System services
 
@@ -324,7 +336,7 @@
 * **cert**: string: Cert data
 * **cname**: string: CNAME of the cert
 * **key**: string: Key data
-* **status**: 'Auto' | 'Disabled' | 'Enabled': Enable or disable ssl for scoring.
+* **status**: 'Auto' | 'Disabled' | 'Enabled': Enable or disable ssl for scoring
 
 ## SystemService
 ### Properties
@@ -334,10 +346,10 @@
 
 ## AmlCompute
 ### Properties
-* **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:36_properties](#schemas36properties): AML Compute properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
-## schemas:36_properties
+## AmlComputeProperties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
@@ -346,14 +358,14 @@
 * **errors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Collection of errors encountered by various compute nodes during node setup.
 * **isolatedNetwork**: bool: Network is isolated or not
 * **nodeStateCounts**: [NodeStateCounts](#nodestatecounts) (ReadOnly): Counts of various compute node states on the amlCompute.
-* **osType**: 'Linux' | 'Windows': Compute OS Type.
+* **osType**: 'Linux' | 'Windows': Compute OS Type
 * **remoteLoginPortPublicAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
 * **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for AML Compute
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
 * **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
 * **virtualMachineImage**: [VirtualMachineImage](#virtualmachineimage): Virtual Machine image for Windows AML Compute
-* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority.
+* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
 ## NodeStateCounts
@@ -387,10 +399,10 @@
 
 ## ComputeInstance
 ### Properties
-* **computeType**: 'ComputeInstance' (Required): An Azure Machine Learning compute instance.
-* **properties**: [schemas:37_properties](#schemas37properties): Compute Instance properties
+* **computeType**: 'ComputeInstance' (Required): The type of compute
+* **properties**: [ComputeInstanceProperties](#computeinstanceproperties): Compute Instance properties
 
-## schemas:37_properties
+## ComputeInstanceProperties
 ### Properties
 * **applications**: [ComputeInstanceApplication](#computeinstanceapplication)[] (ReadOnly): Describes available applications and their endpoints on this ComputeInstance.
 * **applicationSharingPolicy**: 'Personal' | 'Shared': Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
@@ -402,7 +414,7 @@
 * **personalComputeInstanceSettings**: [PersonalComputeInstanceSettings](#personalcomputeinstancesettings): Settings for a personal compute instance.
 * **setupScripts**: [SetupScripts](#setupscripts): Details of customized scripts to execute for setting up the cluster.
 * **sshSettings**: [ComputeInstanceSshSettings](#computeinstancesshsettings): Specifies policy and settings for SSH access.
-* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' (ReadOnly): The current state of this ComputeInstance.
+* **state**: 'CreateFailed' | 'Creating' | 'Deleting' | 'JobRunning' | 'Restarting' | 'Running' | 'SettingUp' | 'SetupFailed' | 'Starting' | 'Stopped' | 'Stopping' | 'Unknown' | 'Unusable' | 'UserSettingUp' | 'UserSetupFailed' (ReadOnly): Current state of an ComputeInstance.
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **vmSize**: string: Virtual Machine Size
 
@@ -462,15 +474,37 @@
 
 ## Databricks
 ### Properties
-* **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:38_properties](#schemas38properties)
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
 
-## schemas:38_properties
+## DatabricksProperties
 ### Properties
-* **address**: string: Public IP address of the virtual machine.
+* **databricksAccessToken**: string: Databricks access token
+* **workspaceUrl**: string: Workspace Url
+
+## DataFactory
+### Properties
+* **computeType**: 'DataFactory' (Required): The type of compute
+
+## DataLakeAnalytics
+### Properties
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
+
+## DataLakeAnalyticsProperties
+### Properties
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
+
+## HDInsight
+### Properties
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
+
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
 * **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections.
-* **virtualMachineSize**: string: Virtual Machine size
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## VirtualMachineSshCredentials
 ### Properties
@@ -479,26 +513,19 @@
 * **publicKeyData**: string: Public key data
 * **username**: string: Username of admin account
 
-## DataFactory
-### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:38_properties](#schemas38properties)
-
-## HDInsight
-### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:38_properties](#schemas38properties)
-
 ## VirtualMachine
 ### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:38_properties](#schemas38properties)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -509,91 +536,90 @@
 * **category**: string: Category of the workspace connection.
 * **target**: string: Target of the workspace connection.
 * **value**: string: Value details of the workspace connection.
-* **valueFormat**: 'JSON': format for the workspace connection value.
+* **valueFormat**: 'JSON': format for the workspace connection value
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:122_environmentImageRequest
+## CreateServiceRequestEnvironmentImageRequest
 ### Properties
-* **assets**: [ImageAsset](#imageasset)[] (WriteOnly): The list of assets.
-* **driverProgram**: string (WriteOnly): The name of the driver file.
-* **environment**: [schemas:97_environment](#schemas97environment) (WriteOnly): The details of the AZURE ML environment.
-* **environmentReference**: [schemas:97_environmentReference](#schemas97environmentreference) (WriteOnly): The unique identifying details of the AZURE ML environment.
-* **modelIds**: string[] (WriteOnly): The list of model Ids.
-* **models**: [Model](#model)[] (WriteOnly): The list of models.
+* **assets**: [ImageAsset](#imageasset)[] (WriteOnly)
+* **driverProgram**: string (WriteOnly)
+* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment) (WriteOnly)
+* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference) (WriteOnly)
+* **modelIds**: string[] (WriteOnly)
+* **models**: [Model](#model)[] (WriteOnly)
 
 ## ImageAsset
 ### Properties
-* **id**: string (WriteOnly): The Asset Id.
-* **mimeType**: string (WriteOnly): The mime type.
-* **unpack**: bool (WriteOnly): Whether the Asset is unpacked.
-* **url**: string (WriteOnly): The Url of the Asset.
+* **id**: string (WriteOnly)
+* **mimeType**: string (WriteOnly)
+* **unpack**: bool (WriteOnly)
+* **url**: string (WriteOnly)
 
-## schemas:97_environment
+## EnvironmentImageRequestEnvironment
 ### Properties
-* **docker**: [schemas:100_docker](#schemas100docker) (WriteOnly): The definition of a Docker container.
-* **environmentVariables**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Definition of environment variables to be defined in the environment.
-* **inferencingStackVersion**: string (WriteOnly): The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-* **name**: string (WriteOnly): The name of the environment.
-* **python**: [schemas:100_python](#schemas100python) (WriteOnly): Settings for a Python environment.
-* **r**: [schemas:100_r](#schemas100r) (WriteOnly): Settings for a R environment.
-* **spark**: [schemas:100_spark](#schemas100spark) (WriteOnly): The configuration for a Spark environment.
-* **version**: string (WriteOnly): The environment version.
+* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker) (WriteOnly)
+* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables) (WriteOnly)
+* **inferencingStackVersion**: string (WriteOnly)
+* **name**: string (WriteOnly)
+* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython) (WriteOnly)
+* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr) (WriteOnly)
+* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark) (WriteOnly)
+* **version**: string (WriteOnly)
 
-## schemas:100_docker
+## ModelEnvironmentDefinitionDocker
 ### Properties
-* **baseDockerfile**: string (WriteOnly): Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
-* **baseImage**: string (WriteOnly): Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
-* **baseImageRegistry**: [schemas:106_baseImageRegistry](#schemas106baseimageregistry) (WriteOnly): Image registry that contains the base image.
+* **baseDockerfile**: string (WriteOnly)
+* **baseImage**: string (WriteOnly)
+* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly)
 
-## schemas:106_baseImageRegistry
+## ModelDockerSectionBaseImageRegistry
 ### Properties
 * **address**: string (WriteOnly)
 * **password**: string (WriteOnly)
 * **username**: string (WriteOnly)
 
-## Dictionary<string,String>
+## ModelEnvironmentDefinitionEnvironmentVariables
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:100_python
+## ModelEnvironmentDefinitionPython
 ### Properties
 * **baseCondaEnvironment**: string (WriteOnly)
-* **condaDependencies**: any (WriteOnly): A JObject containing Conda dependencies.
-* **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
-* **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+* **condaDependencies**: any (WriteOnly)
+* **interpreterPath**: string (WriteOnly)
+* **userManagedDependencies**: bool (WriteOnly)
 
-## schemas:100_r
+## ModelEnvironmentDefinitionR
 ### Properties
-* **bioConductorPackages**: string[] (WriteOnly): The packages from Bioconductor.
-* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly): The CRAN packages to use.
-* **customUrlPackages**: string[] (WriteOnly): The packages from custom urls.
-* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly): The packages directly from GitHub.
-* **rscriptPath**: string (WriteOnly): The Rscript path to use if an environment build is not required.
-The path specified gets used to call the user script.
-* **rVersion**: string (WriteOnly): The version of R to be installed
-* **snapshotDate**: string (WriteOnly): Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-* **userManaged**: bool (WriteOnly): Indicates whether the environment is managed by user or by AzureML.
+* **bioConductorPackages**: string[] (WriteOnly)
+* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly)
+* **customUrlPackages**: string[] (WriteOnly)
+* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly)
+* **rscriptPath**: string (WriteOnly)
+* **rVersion**: string (WriteOnly)
+* **snapshotDate**: string (WriteOnly)
+* **userManaged**: bool (WriteOnly)
 
 ## RCranPackage
 ### Properties
-* **name**: string (WriteOnly): The package name.
-* **repository**: string (WriteOnly): The repository name.
+* **name**: string (WriteOnly)
+* **repository**: string (WriteOnly)
 
 ## RGitHubPackage
 ### Properties
-* **authToken**: string (WriteOnly): Personal access token to install from a private repo
-* **repository**: string (WriteOnly): Repository address in the format username/repo[/subdir][@ref|#pull].
+* **authToken**: string (WriteOnly)
+* **repository**: string (WriteOnly)
 
-## schemas:100_spark
+## ModelEnvironmentDefinitionSpark
 ### Properties
-* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly): The Spark packages to use.
-* **precachePackages**: bool (WriteOnly): Whether to precache the packages.
-* **repositories**: string[] (WriteOnly): The list of spark repositories.
+* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly)
+* **precachePackages**: bool (WriteOnly)
+* **repositories**: string[] (WriteOnly)
 
 ## SparkMavenPackage
 ### Properties
@@ -601,118 +627,145 @@ The path specified gets used to call the user script.
 * **group**: string (WriteOnly)
 * **version**: string (WriteOnly)
 
-## schemas:97_environmentReference
+## EnvironmentImageRequestEnvironmentReference
 ### Properties
-* **name**: string (WriteOnly): Name of the environment.
-* **version**: string (WriteOnly): Version of the environment.
+* **name**: string (WriteOnly)
+* **version**: string (WriteOnly)
 
 ## Model
 ### Properties
-* **createdTime**: string (WriteOnly): The Model creation time (UTC).
-* **datasets**: [DatasetReference](#datasetreference)[] (WriteOnly): The list of datasets associated with the model.
-* **derivedModelIds**: string[] (WriteOnly): Models derived from this model
-* **description**: string (WriteOnly): The Model description text.
-* **experimentName**: string (WriteOnly): The name of the experiment where this model was created.
-* **framework**: string (WriteOnly): The Model framework.
-* **frameworkVersion**: string (WriteOnly): The Model framework version.
-* **id**: string (WriteOnly): The Model Id.
-* **kvTags**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): The Model tag dictionary. Items are mutable.
-* **mimeType**: string (Required, WriteOnly): The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
-* **modifiedTime**: string (WriteOnly): The Model last modified time (UTC).
-* **name**: string (Required, WriteOnly): The Model name.
-* **parentModelId**: string (WriteOnly): The Parent Model Id.
-* **properties**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): The Model property dictionary. Properties are immutable.
-* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
-* **runId**: string (WriteOnly): The RunId that created this model.
-* **sampleInputData**: string (WriteOnly): Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-* **sampleOutputData**: string (WriteOnly): Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-* **unpack**: bool (WriteOnly): Indicates whether we need to unpack the Model during docker Image creation.
-* **url**: string (Required, WriteOnly): The URL of the Model. Usually a SAS URL.
-* **version**: int (WriteOnly): The Model version assigned by Model Management Service.
+* **createdTime**: string (WriteOnly)
+* **datasets**: [DatasetReference](#datasetreference)[] (WriteOnly)
+* **derivedModelIds**: string[] (WriteOnly)
+* **description**: string (WriteOnly)
+* **experimentName**: string (WriteOnly)
+* **framework**: string (WriteOnly)
+* **frameworkVersion**: string (WriteOnly)
+* **id**: string (WriteOnly)
+* **kvTags**: [ModelKvTags](#modelkvtags) (WriteOnly)
+* **mimeType**: string (Required, WriteOnly)
+* **modifiedTime**: string (WriteOnly)
+* **name**: string (Required, WriteOnly)
+* **parentModelId**: string (WriteOnly)
+* **properties**: [ModelProperties](#modelproperties) (WriteOnly)
+* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
+* **runId**: string (WriteOnly)
+* **sampleInputData**: string (WriteOnly)
+* **sampleOutputData**: string (WriteOnly)
+* **unpack**: bool (WriteOnly)
+* **url**: string (Required, WriteOnly)
+* **version**: int (WriteOnly)
 
 ## DatasetReference
 ### Properties
-* **id**: string (WriteOnly): The id of the dataset reference.
-* **name**: string (WriteOnly): The name of the dataset reference.
+* **id**: string (WriteOnly)
+* **name**: string (WriteOnly)
 
-## Dictionary<string,String>
+## ModelKvTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ModelProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ContainerResourceRequirements
 ### Properties
-* **cpu**: int (WriteOnly): The minimum amount of CPU cores to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-* **cpuLimit**: int (WriteOnly): The maximum amount of CPU cores allowed to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-* **fpga**: int (WriteOnly): The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-* **gpu**: int (WriteOnly): The number of GPU cores in the container.
-* **memoryInGB**: int (WriteOnly): The minimum amount of memory (in GB) to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-* **memoryInGBLimit**: int (WriteOnly): The maximum amount of memory (in GB) allowed to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+* **cpu**: int (WriteOnly)
+* **cpuLimit**: int (WriteOnly)
+* **fpga**: int (WriteOnly)
+* **gpu**: int (WriteOnly)
+* **memoryInGB**: int (WriteOnly)
+* **memoryInGBLimit**: int (WriteOnly)
 
-## schemas:122_keys
+## CreateServiceRequestKeys
 ### Properties
-* **primaryKey**: string (WriteOnly): The primary key.
-* **secondaryKey**: string (WriteOnly): The secondary key.
+* **primaryKey**: string (WriteOnly)
+* **secondaryKey**: string (WriteOnly)
 
-## Dictionary<string,String>
+## CreateServiceRequestKvTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## CreateServiceRequestProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ACI
+## ACIServiceCreateRequest
 ### Properties
-* **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
-* **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
-* **cname**: string (WriteOnly): The CName for the service.
-* **computeType**: 'ACI' (Required)
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
-* **dataCollection**: [schemas:91_dataCollection](#schemas91datacollection) (WriteOnly): Details of the data collection options specified.
-* **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
-* **encryptionProperties**: [schemas:91_encryptionProperties](#schemas91encryptionproperties) (WriteOnly): The encryption properties.
-* **sslCertificate**: string (WriteOnly): The public SSL certificate in PEM format to use if SSL is enabled.
-* **sslEnabled**: bool (WriteOnly): Whether or not SSL is enabled.
-* **sslKey**: string (WriteOnly): The public SSL key in PEM format for the certificate.
-* **vnetConfiguration**: [schemas:91_vnetConfiguration](#schemas91vnetconfiguration) (WriteOnly): The virtual network configuration.
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **cname**: string (WriteOnly)
+* **computeType**: 'ACI' (Required): The compute environment type for the service.
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
+* **dataCollection**: [ACIServiceCreateRequestDataCollection](#aciservicecreaterequestdatacollection) (WriteOnly)
+* **dnsNameLabel**: string (WriteOnly)
+* **encryptionProperties**: [ACIServiceCreateRequestEncryptionProperties](#aciservicecreaterequestencryptionproperties) (WriteOnly)
+* **sslCertificate**: string (WriteOnly)
+* **sslEnabled**: bool (WriteOnly)
+* **sslKey**: string (WriteOnly)
+* **vnetConfiguration**: [ACIServiceCreateRequestVnetConfiguration](#aciservicecreaterequestvnetconfiguration) (WriteOnly)
 
-## schemas:91_dataCollection
+## ACIServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
-* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
+* **eventHubEnabled**: bool (WriteOnly)
+* **storageEnabled**: bool (WriteOnly)
 
-## schemas:91_encryptionProperties
+## ACIServiceCreateRequestEncryptionProperties
 ### Properties
-* **keyName**: string (Required, WriteOnly): Encryption Key name
-* **keyVersion**: string (Required, WriteOnly): Encryption Key Version
-* **vaultBaseUrl**: string (Required, WriteOnly): vault base Url
+* **keyName**: string (Required, WriteOnly)
+* **keyVersion**: string (Required, WriteOnly)
+* **vaultBaseUrl**: string (Required, WriteOnly)
 
-## schemas:91_vnetConfiguration
+## ACIServiceCreateRequestVnetConfiguration
 ### Properties
-* **subnetName**: string (WriteOnly): The name of the virtual network subnet.
-* **vnetName**: string (WriteOnly): The name of the virtual network.
+* **subnetName**: string (WriteOnly)
+* **vnetName**: string (WriteOnly)
 
-## Custom
+## AKSServiceCreateRequest
 ### Properties
-* **computeType**: 'Custom' (Required): The Variant properties.
-* **isDefault**: bool (WriteOnly): Is this the default variant.
-* **trafficPercentile**: int (WriteOnly): The amount of traffic variant receives.
-* **type**: 'Control' | 'Treatment' (WriteOnly): The type of the variant.
+* **aadAuthEnabled**: bool (WriteOnly)
+* **appInsightsEnabled**: bool (WriteOnly)
+* **authEnabled**: bool (WriteOnly)
+* **autoScaler**: [AKSServiceCreateRequestAutoScaler](#aksservicecreaterequestautoscaler) (WriteOnly)
+* **computeName**: string (WriteOnly)
+* **computeType**: 'AKS' (Required): The compute environment type for the service.
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
+* **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly)
+* **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly)
+* **maxConcurrentRequestsPerContainer**: int (WriteOnly)
+* **maxQueueWaitMs**: int (WriteOnly)
+* **namespace**: string (WriteOnly)
+* **numReplicas**: int (WriteOnly)
+* **scoringTimeoutMs**: int (WriteOnly)
+
+## AKSServiceCreateRequestAutoScaler
+### Properties
+* **autoscaleEnabled**: bool (WriteOnly)
+* **maxReplicas**: int (WriteOnly)
+* **minReplicas**: int (WriteOnly)
+* **refreshPeriodInSeconds**: int (WriteOnly)
+* **targetUtilization**: int (WriteOnly)
+
+## AKSServiceCreateRequestDataCollection
+### Properties
+* **eventHubEnabled**: bool (WriteOnly)
+* **storageEnabled**: bool (WriteOnly)
+
+## AKSServiceCreateRequestLivenessProbeRequirements
+### Properties
+* **failureThreshold**: int (WriteOnly)
+* **initialDelaySeconds**: int (WriteOnly)
+* **periodSeconds**: int (WriteOnly)
+* **successThreshold**: int (WriteOnly)
+* **timeoutSeconds**: int (WriteOnly)
 

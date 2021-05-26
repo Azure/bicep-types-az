@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location the resource resides in.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties used to create a new server.
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties of a server.
 * **sku**: [Sku](#sku): Billing information related properties of a server.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Application-specific metadata in the form of key-value pairs.
+* **tags**: [ServerForCreateTags](#serverforcreatetags): Resource tags.
 * **type**: 'Microsoft.DBForMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForMariaDB/servers/configurations@2018-06-01
@@ -53,7 +53,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,40 +68,42 @@
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
+
 ### Base Properties
 * **administratorLogin**: string (ReadOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **masterServerId**: string (ReadOnly): The master server id of a replica server.
+* **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled': Enforce a minimal Tls version for the server.
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
 * **userVisibleState**: 'Disabled' | 'Dropping' | 'Ready' (ReadOnly): A state of a server that is visible to user.
-* **version**: '10.2' | '10.3': Server version.
-### Default
+* **version**: '10.2' | '10.3': The version of a server.
+### ServerPropertiesForDefaultCreate
 #### Properties
-* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
-* **createMode**: 'Default' (Required): The properties used to create a new server.
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
+* **createMode**: 'Default' (Required): The mode to create a new server.
 
-### GeoRestore
+### ServerPropertiesForGeoRestore
 #### Properties
-* **createMode**: 'GeoRestore' (Required): The properties used to create a new server by restoring to a different region from a geo replicated backup.
-* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
+* **createMode**: 'GeoRestore' (Required): The mode to create a new server.
+* **sourceServerId**: string (Required, WriteOnly)
 
-### PointInTimeRestore
+### ServerPropertiesForRestore
 #### Properties
-* **createMode**: 'PointInTimeRestore' (Required): The properties used to create a new server by restoring from a backup.
-* **restorePointInTime**: string (Required, WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
-* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
+* **createMode**: 'PointInTimeRestore' (Required): The mode to create a new server.
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
-### Replica
+### ServerPropertiesForReplica
 #### Properties
-* **createMode**: 'Replica' (Required): The properties to create a new replica.
-* **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
+* **createMode**: 'Replica' (Required): The mode to create a new server.
+* **sourceServerId**: string (Required, WriteOnly)
 
 
 ## ServerPrivateEndpointConnection
@@ -132,27 +134,27 @@
 * **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
 * **storageMB**: int: Max storage allowed for a server.
 
-## Default
+## ServerPropertiesForDefaultCreate
 ### Properties
-* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
-* **createMode**: 'Default' (Required): The properties used to create a new server.
+* **administratorLogin**: string (Required, WriteOnly)
+* **administratorLoginPassword**: string (Required, WriteOnly)
+* **createMode**: 'Default' (Required): The mode to create a new server.
 
-## GeoRestore
+## ServerPropertiesForGeoRestore
 ### Properties
-* **createMode**: 'GeoRestore' (Required): The properties used to create a new server by restoring to a different region from a geo replicated backup.
-* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
+* **createMode**: 'GeoRestore' (Required): The mode to create a new server.
+* **sourceServerId**: string (Required, WriteOnly)
 
-## PointInTimeRestore
+## ServerPropertiesForRestore
 ### Properties
-* **createMode**: 'PointInTimeRestore' (Required): The properties used to create a new server by restoring from a backup.
-* **restorePointInTime**: string (Required, WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
-* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
+* **createMode**: 'PointInTimeRestore' (Required): The mode to create a new server.
+* **restorePointInTime**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly)
 
-## Replica
+## ServerPropertiesForReplica
 ### Properties
-* **createMode**: 'Replica' (Required): The properties to create a new replica.
-* **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
+* **createMode**: 'Replica' (Required): The mode to create a new server.
+* **sourceServerId**: string (Required, WriteOnly)
 
 ## Sku
 ### Properties
@@ -162,7 +164,7 @@
 * **size**: string: The size code, to be interpreted by resource as appropriate.
 * **tier**: 'Basic' | 'GeneralPurpose' | 'MemoryOptimized': The tier of the particular SKU, e.g. Basic.
 
-## Dictionary<string,String>
+## ServerForCreateTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -211,6 +213,6 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-* **state**: 'Deleting' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State.
+* **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 

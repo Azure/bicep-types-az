@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LogAnalyticsQueryPackProperties](#loganalyticsquerypackproperties) (Required): Properties that define a Log Analytics QueryPack resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [QueryPacksResourceTags](#querypacksresourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/queryPacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/queryPacks/queries@2019-09-01-preview
@@ -28,7 +28,7 @@
 * **timeCreated**: string (ReadOnly): Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
 * **timeModified**: string (ReadOnly): Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
 
-## Dictionary<string,String>
+## QueryPacksResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -40,19 +40,19 @@
 * **description**: string: Description of the query.
 * **displayName**: string (Required): Unique display name for your query within the Query Pack.
 * **id**: string (ReadOnly): The unique ID of your application. This field cannot be changed.
-* **properties**: any: Additional properties that can be set for the query.
-* **related**: [schemas:16_related](#schemas16related): The related metadata items for the function.
-* **tags**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): Tags associated with the query.
+* **properties**: any: Any object
+* **related**: [LogAnalyticsQueryPackQueryPropertiesRelated](#loganalyticsquerypackquerypropertiesrelated): The related metadata items for the function.
+* **tags**: [LogAnalyticsQueryPackQueryPropertiesTags](#loganalyticsquerypackquerypropertiestags): Tags associated with the query.
 * **timeCreated**: string (ReadOnly): Creation Date for the Log Analytics Query, in ISO 8601 format.
 * **timeModified**: string (ReadOnly): Last modified date of the Log Analytics Query, in ISO 8601 format.
 
-## schemas:16_related
+## LogAnalyticsQueryPackQueryPropertiesRelated
 ### Properties
 * **categories**: string[]: The related categories for the function.
 * **resourceTypes**: string[]: The related resource types for the function.
 * **solutions**: string[]: The related Log Analytics solutions for the function.
 
-## Dictionary<string,IList<String>>
+## LogAnalyticsQueryPackQueryPropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
@@ -61,8 +61,8 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that created the resource.
+* **createdByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that creates/modifies resources
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'application' | 'key' | 'managedIdentity' | 'user': The type of identity that creates/modifies resources
 

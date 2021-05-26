@@ -8,7 +8,7 @@
 * **location**: string: The geographic location of the Search service.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SearchServiceProperties](#searchserviceproperties): Defines properties of an Azure Search service that can be modified.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags to help categorize the Search service in the Azure Portal.
+* **tags**: [SearchServiceCreateOrUpdateParametersTags](#searchservicecreateorupdateparameterstags): Tags to help categorize the Search service in the Azure Portal.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SearchServiceProperties
@@ -21,7 +21,7 @@
 ### Properties
 * **name**: 'free' | 'standard' | 'standard2': The SKU of the Search service.
 
-## Dictionary<string,String>
+## SearchServiceCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

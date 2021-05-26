@@ -28,6 +28,6 @@
 ### Properties
 * **description**: string: The policy definition description.
 * **displayName**: string: The display name of the policy definition.
-* **policyRule**: any: The policy rule.
+* **policyRule**: any: Any object
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 

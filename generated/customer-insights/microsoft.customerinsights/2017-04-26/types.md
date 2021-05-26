@@ -8,7 +8,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HubPropertiesFormat](#hubpropertiesformat): Properties of hub.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CustomerInsights/hubs/authorizationPolicies@2017-04-26
@@ -133,7 +133,7 @@
 * **minUnits**: int: The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
 * **skuName**: string: The sku name.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -149,7 +149,7 @@
 ### Properties
 * **connectorId**: int (ReadOnly): ID of the connector.
 * **connectorName**: string: Name of the connector.
-* **connectorProperties**: [Dictionary<string,Object>](#dictionarystringobject) (Required): The connector properties.
+* **connectorProperties**: [ConnectorProperties](#connectorproperties) (Required): The connector properties.
 * **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required): Type of connector.
 * **created**: string (ReadOnly): The created time.
 * **description**: string: Description of the connector.
@@ -159,7 +159,7 @@
 * **state**: 'Created' | 'Creating' | 'Deleting' | 'Expiring' | 'Failed' | 'Ready' (ReadOnly): State of connector.
 * **tenantId**: string (ReadOnly): The hub name.
 
-## Dictionary<string,Object>
+## ConnectorProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -173,7 +173,7 @@
 * **dataFormatId**: string (ReadOnly): The DataFormat ID.
 * **description**: string: The description of the connector mapping.
 * **displayName**: string: Display name for the connector mapping.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Defines which entity type the file should map to.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of entity.
 * **entityTypeName**: string (Required): The mapping entity name.
 * **lastModified**: string (ReadOnly): The last modified time.
 * **mappingProperties**: [ConnectorMappingProperties](#connectormappingproperties) (Required): The connector mapping properties.
@@ -213,7 +213,7 @@
 * **acceptLanguage**: string: The oData language.
 * **arraySeparator**: string: Character separating array elements.
 * **columnDelimiter**: string: The character that signifies a break between columns.
-* **formatType**: string (Required): The type mapping format.
+* **formatType**: 'TextFormat' (Required): The type mapping format.
 * **quoteCharacter**: string: Quote character, used to indicate enquoted fields.
 * **quoteEscapeCharacter**: string: Escape character for quotes, can be the same as the quoteCharacter.
 
@@ -227,11 +227,11 @@
 ## InteractionTypeDefinition
 ### Properties
 * **apiEntitySetName**: string: The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The attributes for the Type.
+* **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes): The attributes for the Type.
 * **dataSourcePrecedenceRules**: [DataSourcePrecedence](#datasourceprecedence)[] (ReadOnly): This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
 * **defaultDataSource**: [DataSource](#datasource): Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules.
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the property.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the property.
+* **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription): Localized descriptions for the property.
+* **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname): Localized display names for the property.
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity.
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Profile.
 * **idPropertyNames**: string[]: The id property names. Properties which uniquely identify an interaction instance.
@@ -239,7 +239,7 @@
 * **isActivity**: bool: An interaction can be tagged as an activity only during create. This enables the interaction to be editable and can enable merging of properties from multiple data sources based on precedence, which is defined at a link level.
 * **largeImage**: string: Large Image associated with the Property or EntityType.
 * **lastChangedUtc**: string (ReadOnly): The last changed time for the type definition.
-* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring): Any custom localized attributes for the Type.
+* **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes): Any custom localized attributes for the Type.
 * **mediumImage**: string: Medium Image associated with the Property or EntityType.
 * **participantProfiles**: [Participant](#participant)[]: Profiles that participated in the interaction.
 * **primaryParticipantProfilePropertyName**: string: The primary participant property name for an interaction ,This is used to logically represent the agent of the interaction, Specify the participant name here from ParticipantName.
@@ -250,7 +250,7 @@
 * **timestampFieldName**: string: The timestamp property name. Represents the time when the interaction or profile update happened.
 * **typeName**: string: The name of the entity.
 
-## Dictionary<string,IList<String>>
+## MetadataDefinitionBaseAttributes
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
@@ -268,12 +268,12 @@
 * **name**: string (ReadOnly): The data source name
 * **status**: 'Active' | 'Deleted' | 'None' (ReadOnly): The data source status.
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -299,39 +299,39 @@
 
 ## ProfileEnumValidValuesFormat
 ### Properties
-* **localizedValueNames**: [Dictionary<string,String>](#dictionarystringstring): Localized names of the enum member.
+* **localizedValueNames**: [ProfileEnumValidValuesFormatLocalizedValueNames](#profileenumvalidvaluesformatlocalizedvaluenames): Localized names of the enum member.
 * **value**: int: The integer value of the enum member.
 
-## Dictionary<string,String>
+## ProfileEnumValidValuesFormatLocalizedValueNames
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,Dictionary<string,String>>
+## MetadataDefinitionBaseLocalizedAttributes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Dictionary<string,String>](#dictionarystringstring)
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
 
-## Dictionary<string,String>
+## DictionaryOfString
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Participant
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name.
+* **description**: [ParticipantDescription](#participantdescription): Localized descriptions.
+* **displayName**: [ParticipantDisplayName](#participantdisplayname): Localized display name.
 * **participantName**: string (Required): Participant name.
 * **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references.
 * **profileTypeName**: string (Required): Profile type name.
 * **role**: string: The role that the participant is playing in the interaction.
 
-## Dictionary<string,String>
+## ParticipantDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ParticipantDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -346,9 +346,9 @@
 * **aliases**: [KpiAlias](#kpialias)[]: The aliases.
 * **calculationWindow**: 'Day' | 'Hour' | 'Lifetime' | 'Month' | 'Week' (Required): The calculation window.
 * **calculationWindowFieldName**: string: Name of calculation window field.
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized description for the KPI.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the KPI.
-* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): The mapping entity type.
+* **description**: [KpiDefinitionDescription](#kpidefinitiondescription): Localized description for the KPI.
+* **displayName**: [KpiDefinitionDisplayName](#kpidefinitiondisplayname): Localized display name for the KPI.
+* **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of entity.
 * **entityTypeName**: string (Required): The mapping entity name.
 * **expression**: string (Required): The computation expression for the KPI.
 * **extracts**: [KpiExtract](#kpiextract)[]: The KPI extracts.
@@ -368,12 +368,12 @@
 * **aliasName**: string (Required): KPI alias name.
 * **expression**: string (Required): The expression.
 
-## Dictionary<string,String>
+## KpiDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## KpiDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -385,11 +385,11 @@
 
 ## KpiGroupByMetadata
 ### Properties
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): The display name.
+* **displayName**: [KpiGroupByMetadataDisplayName](#kpigroupbymetadatadisplayname): The display name.
 * **fieldName**: string: The name of the field.
 * **fieldType**: string: The type of the field.
 
-## Dictionary<string,String>
+## KpiGroupByMetadataDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -406,8 +406,8 @@
 
 ## LinkDefinition
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Link.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Link.
+* **description**: [LinkDefinitionDescription](#linkdefinitiondescription): Localized descriptions for the Link.
+* **displayName**: [LinkDefinitionDisplayName](#linkdefinitiondisplayname): Localized display name for the Link.
 * **linkName**: string (ReadOnly): The link name.
 * **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]: The set of properties mappings between the source and target Types.
 * **operationType**: 'Delete' | 'Upsert': Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
@@ -416,16 +416,16 @@
 * **referenceOnly**: bool: Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
 * **sourceEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of source entity.
 * **sourceEntityTypeName**: string (Required): Name of the source Entity Type.
-* **targetEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of target entity.
+* **targetEntityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship' (Required): Type of source entity.
 * **targetEntityTypeName**: string (Required): Name of the target Entity Type.
 * **tenantId**: string (ReadOnly): The hub name.
 
-## Dictionary<string,String>
+## LinkDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## LinkDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -433,19 +433,19 @@
 ## TypePropertiesMapping
 ### Properties
 * **linkType**: 'CopyIfNull' | 'UpdateAlways': Link type.
-* **sourcePropertyName**: string (Required):  Property name on the source Entity Type.
+* **sourcePropertyName**: string (Required): Property name on the source Entity Type.
 * **targetPropertyName**: string (Required): Property name on the target Entity Type.
 
 ## Prediction
 ### Properties
 * **autoAnalyze**: bool (Required): Whether do auto analyze.
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Description of the prediction.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Display name of the prediction.
-* **grades**: [schemas:86_gradesItem](#schemas86gradesitem)[]: The prediction grades.
+* **description**: [PredictionDescription](#predictiondescription): Description of the prediction.
+* **displayName**: [PredictionDisplayName](#predictiondisplayname): Display name of the prediction.
+* **grades**: [PredictionGradesItem](#predictiongradesitem)[]: The prediction grades.
 * **involvedInteractionTypes**: string[]: Interaction types involved in the prediction.
 * **involvedKpiTypes**: string[]: KPI types involved in the prediction.
 * **involvedRelationships**: string[]: Relationships involved in the prediction.
-* **mappings**: [schemas:86_mappings](#schemas86mappings) (Required): Definition of the link mapping of prediction.
+* **mappings**: [PredictionMappings](#predictionmappings) (Required): Definition of the link mapping of prediction.
 * **negativeOutcomeExpression**: string (Required): Negative outcome expression.
 * **positiveOutcomeExpression**: string (Required): Positive outcome expression.
 * **predictionName**: string: Name of the prediction.
@@ -453,38 +453,38 @@
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **scopeExpression**: string (Required): Scope expression.
 * **scoreLabel**: string (Required): Score label.
-* **systemGeneratedEntities**: [schemas:86_systemGeneratedEntities](#schemas86systemgeneratedentities) (ReadOnly): System generated entities.
+* **systemGeneratedEntities**: [PredictionSystemGeneratedEntities](#predictionsystemgeneratedentities) (ReadOnly): System generated entities.
 * **tenantId**: string (ReadOnly): The hub name.
 
-## Dictionary<string,String>
+## PredictionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## PredictionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:86_gradesItem
+## PredictionGradesItem
 ### Properties
 * **gradeName**: string: Name of the grade.
 * **maxScoreThreshold**: int: Maximum score threshold.
 * **minScoreThreshold**: int: Minimum score threshold.
 
-## schemas:86_mappings
+## PredictionMappings
 ### Properties
 * **grade**: string (Required): The grade of the link mapping.
 * **reason**: string (Required): The reason of the link mapping.
 * **score**: string (Required): The score of the link mapping.
 
-## schemas:86_systemGeneratedEntities
+## PredictionSystemGeneratedEntities
 ### Properties
 * **generatedInteractionTypes**: string[]: Generated interaction types.
-* **generatedKpis**: [Dictionary<string,String>](#dictionarystringstring): Generated KPIs.
+* **generatedKpis**: [PredictionSystemGeneratedEntitiesGeneratedKpis](#predictionsystemgeneratedentitiesgeneratedkpis): Generated KPIs.
 * **generatedLinks**: string[]: Generated links.
 
-## Dictionary<string,String>
+## PredictionSystemGeneratedEntitiesGeneratedKpis
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -492,15 +492,15 @@
 ## ProfileTypeDefinition
 ### Properties
 * **apiEntitySetName**: string: The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-* **attributes**: [Dictionary<string,IList<String>>](#dictionarystringiliststring): The attributes for the Type.
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the property.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the property.
+* **attributes**: [MetadataDefinitionBaseAttributes](#metadatadefinitionbaseattributes): The attributes for the Type.
+* **description**: [MetadataDefinitionBaseDescription](#metadatadefinitionbasedescription): Localized descriptions for the property.
+* **displayName**: [MetadataDefinitionBaseDisplayName](#metadatadefinitionbasedisplayname): Localized display names for the property.
 * **entityType**: 'Interaction' | 'None' | 'Profile' | 'Relationship': Type of entity.
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Profile.
 * **instancesCount**: int: The instance count.
 * **largeImage**: string: Large Image associated with the Property or EntityType.
 * **lastChangedUtc**: string (ReadOnly): The last changed time for the type definition.
-* **localizedAttributes**: [Dictionary<string,Dictionary<string,String>>](#dictionarystringdictionarystringstring): Any custom localized attributes for the Type.
+* **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes): Any custom localized attributes for the Type.
 * **mediumImage**: string: Medium Image associated with the Property or EntityType.
 * **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
 * **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
@@ -510,52 +510,52 @@
 * **timestampFieldName**: string: The timestamp property name. Represents the time when the interaction or profile update happened.
 * **typeName**: string: The name of the entity.
 
-## Dictionary<string,IList<String>>
+## MetadataDefinitionBaseAttributes
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string[]
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## MetadataDefinitionBaseDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,Dictionary<string,String>>
+## MetadataDefinitionBaseLocalizedAttributes
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Dictionary<string,String>](#dictionarystringstring)
+* **Additional Properties Type**: [DictionaryOfString](#dictionaryofstring)
 
-## Dictionary<string,String>
+## DictionaryOfString
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## StrongId
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name.
+* **description**: [StrongIdDescription](#strongiddescription): Localized descriptions.
+* **displayName**: [StrongIdDisplayName](#strongiddisplayname): Localized display name.
 * **keyPropertyNames**: string[] (Required): The properties which make up the unique ID.
 * **strongIdName**: string (Required): The Name identifying the strong ID.
 
-## Dictionary<string,String>
+## StrongIdDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## StrongIdDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## RelationshipLinkDefinition
 ### Properties
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Relationship Link.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Relationship Link.
+* **description**: [RelationshipLinkDefinitionDescription](#relationshiplinkdefinitiondescription): Localized descriptions for the Relationship Link.
+* **displayName**: [RelationshipLinkDefinitionDisplayName](#relationshiplinkdefinitiondisplayname): Localized display name for the Relationship Link.
 * **interactionType**: string (Required): The InteractionType associated with the Relationship Link.
 * **linkName**: string (ReadOnly): The name of the Relationship Link.
 * **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]: The mappings between Interaction and Relationship fields.
@@ -566,12 +566,12 @@
 * **relationshipName**: string (Required): The Relationship associated with the Link.
 * **tenantId**: string (ReadOnly): The hub name.
 
-## Dictionary<string,String>
+## RelationshipLinkDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RelationshipLinkDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -590,8 +590,8 @@
 ## RelationshipDefinition
 ### Properties
 * **cardinality**: 'ManyToMany' | 'OneToMany' | 'OneToOne': The Relationship Cardinality.
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized descriptions for the Relationship.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the Relationship.
+* **description**: [RelationshipDefinitionDescription](#relationshipdefinitiondescription): Localized descriptions for the Relationship.
+* **displayName**: [RelationshipDefinitionDisplayName](#relationshipdefinitiondisplayname): Localized display name for the Relationship.
 * **expiryDateTimeUtc**: string: The expiry date time in UTC.
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Relationship.
 * **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]: Optional property to be used to map fields in profile to their strong ids in related profile.
@@ -602,12 +602,12 @@
 * **relationshipName**: string (ReadOnly): The Relationship name.
 * **tenantId**: string (ReadOnly): The hub name.
 
-## Dictionary<string,String>
+## RelationshipDefinitionDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RelationshipDefinitionDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -626,8 +626,8 @@
 * **assignmentName**: string (ReadOnly): The name of the metadata object.
 * **conflationPolicies**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **connectors**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **description**: [Dictionary<string,String>](#dictionarystringstring): Localized description for the metadata.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display names for the metadata.
+* **description**: [RoleAssignmentDescription](#roleassignmentdescription): Localized description for the metadata.
+* **displayName**: [RoleAssignmentDisplayName](#roleassignmentdisplayname): Localized display names for the metadata.
 * **interactions**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **kpis**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **links**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
@@ -649,12 +649,12 @@
 * **elements**: string[]: The elements included in the set.
 * **exceptions**: string[]: The elements that are not included in the set, in case elements contains '*' indicating 'all'.
 
-## Dictionary<string,String>
+## RoleAssignmentDescription
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## RoleAssignmentDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -662,10 +662,10 @@
 ## AssignmentPrincipal
 ### Properties
 * **principalId**: string (Required): The principal id being assigned to.
-* **principalMetadata**: [Dictionary<string,String>](#dictionarystringstring): Other metadata for the principal.
+* **principalMetadata**: [AssignmentPrincipalMetadata](#assignmentprincipalmetadata): Other metadata for the principal.
 * **principalType**: string (Required): The Type of the principal ID.
 
-## Dictionary<string,String>
+## AssignmentPrincipalMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -675,12 +675,12 @@
 * **changed**: string (ReadOnly): Date time when view was last modified.
 * **created**: string (ReadOnly): Date time when view was created.
 * **definition**: string (Required): View definition.
-* **displayName**: [Dictionary<string,String>](#dictionarystringstring): Localized display name for the view.
+* **displayName**: [ViewDisplayName](#viewdisplayname): Localized display name for the view.
 * **tenantId**: string (ReadOnly): the hub name.
 * **userId**: string: the user ID.
 * **viewName**: string (ReadOnly): Name of the view.
 
-## Dictionary<string,String>
+## ViewDisplayName
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

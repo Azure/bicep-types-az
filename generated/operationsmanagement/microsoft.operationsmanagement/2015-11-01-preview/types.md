@@ -29,7 +29,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [SolutionPlan](#solutionplan): Plan for solution object supported by the OperationsManagement resource provider.
 * **properties**: [SolutionProperties](#solutionproperties): Solution properties supported by the OperationsManagement resource provider.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [SolutionTags](#solutiontags): Resource tags
 * **type**: 'Microsoft.OperationsManagement/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagementAssociationProperties
@@ -42,7 +42,7 @@
 * **parameters**: [ArmTemplateParameter](#armtemplateparameter)[] (Required): Parameters to run the ARM template
 * **parentResourceType**: string (Required): The type of the parent resource.
 * **provisioningState**: string (ReadOnly): The provisioning state for the ManagementConfiguration.
-* **template**: any (Required): The Json object containing the ARM template to deploy
+* **template**: any (Required): Any object
 
 ## ArmTemplateParameter
 ### Properties
@@ -63,7 +63,7 @@
 * **referencedResources**: string[]: The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
 * **workspaceResourceId**: string (Required): The azure resourceId for the workspace where the solution will be deployed/enabled.
 
-## Dictionary<string,String>
+## SolutionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

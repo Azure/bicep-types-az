@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearningServices/workspaces/computes@2019-11-01
@@ -23,7 +23,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Compute](#compute): Machine Learning compute object.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
+* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -50,13 +50,14 @@
 * **name**: string: Name of the sku
 * **tier**: string: Tier of the sku like Basic or Enterprise
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Compute
 * **Discriminator**: computeType
+
 ### Base Properties
 * **computeLocation**: string: Location for the underlying compute
 * **createdOn**: string (ReadOnly): The date and time when the compute was created.
@@ -64,41 +65,41 @@
 * **isAttachedCompute**: bool (ReadOnly): Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
 * **modifiedOn**: string (ReadOnly): The date and time when the compute was last modified.
 * **provisioningErrors**: [MachineLearningServiceError](#machinelearningserviceerror)[] (ReadOnly): Errors during provisioning
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
 * **resourceId**: string: ARM resource id of the underlying compute
 ### AKS
 #### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:30_properties](#schemas30properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
 ### AmlCompute
 #### Properties
-* **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:31_properties](#schemas31properties): AML Compute properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
 ### Databricks
 #### Properties
-* **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:32_properties](#schemas32properties)
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
 
 ### DataFactory
 #### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
+* **computeType**: 'DataFactory' (Required): The type of compute
 
 ### DataLakeAnalytics
 #### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:32_properties](#schemas32properties)
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
 
 ### HDInsight
 #### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:32_properties](#schemas32properties)
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ### VirtualMachine
 #### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:32_properties](#schemas32properties)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 
 ## MachineLearningServiceError
@@ -118,10 +119,10 @@
 
 ## AKS
 ### Properties
-* **computeType**: 'AKS' (Required): A Machine Learning compute based on AKS.
-* **properties**: [schemas:30_properties](#schemas30properties): AKS properties
+* **computeType**: 'AKS' (Required): The type of compute
+* **properties**: [AKSProperties](#aksproperties): AKS properties
 
-## schemas:30_properties
+## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
@@ -142,7 +143,7 @@
 * **cert**: string: Cert data
 * **cname**: string: CNAME of the cert
 * **key**: string: Key data
-* **status**: 'Disabled' | 'Enabled': Enable or disable ssl for scoring.
+* **status**: 'Disabled' | 'Enabled': Enable or disable ssl for scoring
 
 ## SystemService
 ### Properties
@@ -152,10 +153,10 @@
 
 ## AmlCompute
 ### Properties
-* **computeType**: 'AmlCompute' (Required): An Azure Machine Learning compute.
-* **properties**: [schemas:31_properties](#schemas31properties): AML Compute properties
+* **computeType**: 'AmlCompute' (Required): The type of compute
+* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
-## schemas:31_properties
+## AmlComputeProperties
 ### Properties
 * **allocationState**: 'Resizing' | 'Steady' (ReadOnly): Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
 * **allocationStateTransitionTime**: string (ReadOnly): The time at which the compute entered its current allocation state.
@@ -167,7 +168,7 @@
 * **subnet**: [ResourceId](#resourceid): Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
 * **targetNodeCount**: int (ReadOnly): The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
 * **userAccountCredentials**: [UserAccountCredentials](#useraccountcredentials): Settings for user account that gets created on each on the nodes of a compute.
-* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority.
+* **vmPriority**: 'Dedicated' | 'LowPriority': Virtual Machine priority
 * **vmSize**: string: Virtual Machine Size
 
 ## NodeStateCounts
@@ -197,15 +198,36 @@
 
 ## Databricks
 ### Properties
-* **computeType**: 'Databricks' (Required): A DataFactory compute.
-* **properties**: [schemas:32_properties](#schemas32properties)
+* **computeType**: 'Databricks' (Required): The type of compute
+* **properties**: [DatabricksProperties](#databricksproperties)
 
-## schemas:32_properties
+## DatabricksProperties
 ### Properties
-* **address**: string: Public IP address of the virtual machine.
+* **databricksAccessToken**: string: Databricks access token
+
+## DataFactory
+### Properties
+* **computeType**: 'DataFactory' (Required): The type of compute
+
+## DataLakeAnalytics
+### Properties
+* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
+* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
+
+## DataLakeAnalyticsProperties
+### Properties
+* **dataLakeStoreAccountName**: string: DataLake Store Account Name
+
+## HDInsight
+### Properties
+* **computeType**: 'HDInsight' (Required): The type of compute
+* **properties**: [HDInsightProperties](#hdinsightproperties)
+
+## HDInsightProperties
+### Properties
+* **address**: string: Public IP address of the master node of the cluster.
 * **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
-* **sshPort**: int: Port open for ssh connections.
-* **virtualMachineSize**: string: Virtual Machine size
+* **sshPort**: int: Port open for ssh connections on the master node of the cluster.
 
 ## VirtualMachineSshCredentials
 ### Properties
@@ -214,26 +236,19 @@
 * **publicKeyData**: string: Public key data
 * **username**: string: Username of admin account
 
-## DataFactory
-### Properties
-* **computeType**: 'DataFactory' (Required): A DataFactory compute.
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): A DataLakeAnalytics compute.
-* **properties**: [schemas:32_properties](#schemas32properties)
-
-## HDInsight
-### Properties
-* **computeType**: 'HDInsight' (Required): A HDInsight compute.
-* **properties**: [schemas:32_properties](#schemas32properties)
-
 ## VirtualMachine
 ### Properties
-* **computeType**: 'VirtualMachine' (Required): A Machine Learning compute based on Azure Virtual Machines.
-* **properties**: [schemas:32_properties](#schemas32properties)
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
-## Dictionary<string,String>
+## VirtualMachineProperties
+### Properties
+* **address**: string: Public IP address of the virtual machine.
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials): Admin credentials for virtual machine
+* **sshPort**: int: Port open for ssh connections.
+* **virtualMachineSize**: string: Virtual Machine size
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

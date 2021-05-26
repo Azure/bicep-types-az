@@ -9,37 +9,40 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProtectionIntent](#protectionintent): Base class for backup ProtectionIntent.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProtectionIntent
 * **Discriminator**: protectionIntentItemType
+
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DefaultBackup' | 'DPM' | 'Invalid' | 'MAB': Type of backup management for the backed up item.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB': Backup management type to execute the current job.
 * **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
 * **policyId**: string: ID of the backup policy with which this item is backed up.
-* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed': Backup state of this backup item.
+* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed': Specifies whether the container is registered or not
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
-### AzureResourceItem
+### AzureResourceProtectionIntent
 #### Properties
 * **friendlyName**: string: Friendly name of the VM represented by this backup item.
-* **protectionIntentItemType**: 'AzureResourceItem' (Required): IaaS VM specific backup protection intent item.
+* **protectionIntentItemType**: 'AzureResourceItem' (Required): backup protectionIntent type.
 
-### RecoveryServiceVaultItem
+### AzureWorkloadSQLAutoProtectionIntent
 #### Properties
-* **protectionIntentItemType**: 'RecoveryServiceVaultItem' (Required): Azure Recovery Services Vault specific protection intent item.
+* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance': Workload item type of the item for which intent is to be set
 
 
-## AzureResourceItem
+## AzureResourceProtectionIntent
 ### Properties
 * **friendlyName**: string: Friendly name of the VM represented by this backup item.
-* **protectionIntentItemType**: 'AzureResourceItem' (Required): IaaS VM specific backup protection intent item.
+* **protectionIntentItemType**: 'AzureResourceItem' (Required): backup protectionIntent type.
 
-## RecoveryServiceVaultItem
+## AzureWorkloadSQLAutoProtectionIntent
 ### Properties
-* **protectionIntentItemType**: 'RecoveryServiceVaultItem' (Required): Azure Recovery Services Vault specific protection intent item.
+* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance': Workload item type of the item for which intent is to be set
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

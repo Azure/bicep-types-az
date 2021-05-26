@@ -11,7 +11,7 @@
 * **properties**: [RegistryProperties](#registryproperties): The properties of a container registry.
 * **sku**: [Sku](#sku) (Required): The SKU of a container registry.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/connectedRegistries@2020-11-01-preview
@@ -77,7 +77,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicationProperties](#replicationproperties): The properties of a replication.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2020-11-01-preview
@@ -105,24 +105,24 @@
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the webhook. This cannot be changed after the resource is created.
+* **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The parameters for creating the properties of a webhook.
+* **properties**: [WebhookPropertiesCreateParameters](#webhookpropertiescreateparameters): The properties of a webhook.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags for the webhook.
+* **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityProperties
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity
-dictionary key references will be ARM resource ids in the form:
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity 
+dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,UserIdentityProperties>
+## IdentityPropertiesUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
@@ -145,10 +145,10 @@ dictionary key references will be ARM resource ids in the form:
 * **networkRuleSet**: [NetworkRuleSet](#networkruleset): The network rule set for a container registry.
 * **policies**: [Policies](#policies): The policies for a container registry.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections for a container registry.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the container registry.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry.
+* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry
 
 ## EncryptionProperty
 ### Properties
@@ -171,7 +171,7 @@ dictionary key references will be ARM resource ids in the form:
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule.
+* **action**: 'Allow': The action of virtual network rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## VirtualNetworkRule
@@ -212,7 +212,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of private endpoint connection resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -244,7 +244,7 @@ dictionary key references will be ARM resource ids in the form:
 * **name**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (Required): The SKU name of the container registry. Required for registry creation.
 * **tier**: 'Basic' | 'Classic' | 'Premium' | 'Standard' (ReadOnly): The SKU tier based on the SKU name.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -312,7 +312,7 @@ dictionary key references will be ARM resource ids in the form:
 ## ExportPipelineProperties
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]: The list of all options configured for the pipeline.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **target**: [ExportPipelineTargetProperties](#exportpipelinetargetproperties) (Required): The properties of the export pipeline target.
 
 ## ExportPipelineTargetProperties
@@ -326,7 +326,7 @@ When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/co
 ## ImportPipelineProperties
 ### Properties
 * **options**: 'ContinueOnErrors' | 'DeleteSourceBlobOnSuccess' | 'OverwriteBlobs' | 'OverwriteTags'[]: The list of all options configured for the pipeline.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the pipeline at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **source**: [ImportPipelineSourceProperties](#importpipelinesourceproperties) (Required): The properties of the import pipeline source.
 * **trigger**: [PipelineTriggerProperties](#pipelinetriggerproperties)
 
@@ -349,13 +349,13 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 ## PipelineRunProperties
 ### Properties
 * **forceUpdateTag**: string: How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a pipeline run.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **request**: [PipelineRunRequest](#pipelinerunrequest): The request properties provided for a pipeline run.
 * **response**: [PipelineRunResponse](#pipelinerunresponse) (ReadOnly): The response properties returned for a pipeline run.
 
 ## PipelineRunRequest
 ### Properties
-* **artifacts**: string[]: List of source artifacts to be transferred by the pipeline.
+* **artifacts**: string[]: List of source artifacts to be transferred by the pipeline. 
 Specify an image by repository ('hello-world'). This will use the 'latest' tag.
 Specify an image by tag ('hello-world:latest').
 Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
@@ -401,12 +401,12 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the replication at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **regionEndpointEnabled**: bool: Specifies whether the replication's regional endpoint is enabled. Requests will not be routed to a replication whose regional endpoint is disabled, however its data will continue to be synced with other replications.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
-* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry replication.
+* **zoneRedundancy**: 'Disabled' | 'Enabled': Whether or not zone redundancy is enabled for this container registry
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -431,8 +431,8 @@ repositories/repository-name/metadata/write
 
 ## TokenCredentialsProperties
 ### Properties
-* **certificates**: [TokenCertificate](#tokencertificate)[]
-* **passwords**: [TokenPassword](#tokenpassword)[]
+* **certificates**: [TokenCertificate](#tokencertificate)[]: Array of TokenCertificate
+* **passwords**: [TokenPassword](#tokenpassword)[]: Array of TokenPassword
 
 ## TokenCertificate
 ### Properties
@@ -445,24 +445,24 @@ repositories/repository-name/metadata/write
 ### Properties
 * **creationTime**: string: The creation datetime of the password.
 * **expiry**: string: The expiry datetime of the password.
-* **name**: 'password1' | 'password2': The password name "password1" or "password2".
+* **name**: 'password1' | 'password2': The password name "password1" or "password2"
 * **value**: string (ReadOnly): The password value.
 
 ## WebhookPropertiesCreateParameters
 ### Properties
 * **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine'[] (Required): The list of actions that trigger the webhook to post notifications.
-* **customHeaders**: [Dictionary<string,String>](#dictionarystringstring) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the webhook at the time the operation was called.
+* **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly)
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
-* **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
+* **serviceUri**: string (Required, WriteOnly)
 * **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called.
 
-## Dictionary<string,String>
+## WebhookPropertiesCreateParametersCustomHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## WebhookCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

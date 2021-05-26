@@ -1,47 +1,13 @@
 # Microsoft.Sql @ 2014-04-01
 
-## Resource Microsoft.Sql/servers@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of sql server.  This is metadata used for the Azure portal experience.
-* **location**: string (Required): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): Represents the properties of a server.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Sql/servers/administrators@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'activeDirectory' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties): The properties of an server Administrator.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/advisors@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind.
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdvisorProperties](#advisorproperties): Properties for a Database, Server or Elastic Pool Advisor.
-* **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/auditingPolicies@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind.
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerTableAuditingPolicyProperties](#servertableauditingpolicyproperties): Properties of a server table auditing policy.
-* **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/communicationLinks@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
@@ -61,7 +27,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerConnectionPolicyProperties](#serverconnectionpolicyproperties): The properties of a server secure connection policy.
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -74,41 +40,8 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): Represents the properties of a database.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/databases/advisors@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind.
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdvisorProperties](#advisorproperties): Properties for a Database, Server or Elastic Pool Advisor.
-* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/databases/auditingPolicies@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind.
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseTableAuditingPolicyProperties](#databasetableauditingpolicyproperties): Properties of a database table auditing policy.
-* **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/databases/connectionPolicies@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind.
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseConnectionPolicyProperties](#databaseconnectionpolicyproperties): Properties of a database connection policy.
-* **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
@@ -117,7 +50,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): The kind of data masking policy. Metadata, used for Azure portal.
 * **location**: string (ReadOnly): The location of the data masking policy.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DataMaskingPolicyProperties](#datamaskingpolicyproperties): The properties of a database data masking policy.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -137,7 +70,7 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'import' (Required, DeployTimeConstant): The resource name
 * **properties**: [ImportExtensionProperties](#importextensionproperties): Represents the properties for an import operation
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -148,7 +81,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of geo backup policy.  This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Backup policy location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -159,7 +92,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
 * **location**: string: The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseSecurityAlertPolicyProperties](#databasesecurityalertpolicyproperties): Properties for a database Threat Detection policy.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -169,19 +102,9 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Location of the server that contains this disaster recovery configuration.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DisasterRecoveryConfigurationProperties](#disasterrecoveryconfigurationproperties) (ReadOnly): Represents the properties of a disaster recovery configuration.
-* **type**: 'Microsoft.Sql/servers/disasterRecoveryConfiguration' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/elasticPools@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
@@ -192,7 +115,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ElasticPoolProperties](#elasticpoolproperties): Represents the properties of an elastic pool.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/firewallRules@2014-04-01
@@ -206,48 +129,12 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties): Represents the properties of a server firewall rule.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## ServerProperties
-### Properties
-* **administratorLogin**: string: Administrator username for the server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string: The administrator login password (required for server creation).
-* **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
-* **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
-* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
-* **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
-* **version**: '12.0' | '2.0': The version of the server.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ServerAdministratorProperties
 ### Properties
-* **administratorType**: string (Required): The type of administrator.
+* **administratorType**: 'ActiveDirectory' (Required): The type of administrator.
 * **login**: string (Required): The server administrator login value.
 * **sid**: string (Required): The server administrator Sid (Secure ID).
 * **tenantId**: string (Required): The server Active Directory Administrator tenant id.
-
-## AdvisorProperties
-### Properties
-* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
-* **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'.
-* **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
-* **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available), LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
-
-## ServerTableAuditingPolicyProperties
-### Properties
-* **auditingState**: string: The state of the policy.
-* **auditLogsTableName**: string: The audit logs table name.
-* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
-* **fullAuditLogsTableName**: string: The full audit logs table name.
-* **retentionDays**: string: The number of days to keep in the audit logs.
-* **storageAccountKey**: string: The key of the auditing storage account.
-* **storageAccountName**: string: The table storage account name
-* **storageAccountResourceGroupName**: string: The table storage account resource group name
-* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
-* **storageAccountSubscriptionId**: string: The table storage subscription Id.
-* **storageTableEndpoint**: string: The storage table endpoint.
 
 ## ServerCommunicationLinkProperties
 ### Properties
@@ -295,7 +182,6 @@ az sql db list-editions -l <location> -o table
 ```powershell
 Get-AzSqlServerServiceObjective -Location <location>
 ````
-.
 * **elasticPoolName**: string: The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.
 * **failoverGroupId**: string (ReadOnly): The resource identifier of the failover group containing this database.
 * **maxSizeBytes**: string: The max size of the database expressed in bytes. If createMode is not Default, this value is ignored. To see possible values, query the capabilities API (/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationID}/capabilities) referred to by operationId: "Capabilities_ListByLocation."
@@ -305,21 +191,10 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **requestedServiceObjectiveId**: string: The configured service level objective ID of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of currentServiceObjectiveId property. If requestedServiceObjectiveId and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveId overrides the value of requestedServiceObjectiveName.
 
 The list of SKUs may vary by region and support offer. To determine the service objective ids that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API.
-* **requestedServiceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L': The name of the configured service level objective of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of serviceLevelObjective property.
-
-The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
-
-```azurecli
-az sql db list-editions -l <location> -o table
-````
-
-```powershell
-Get-AzSqlServerServiceObjective -Location <location>
-````
-.
+* **requestedServiceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L': The serviceLevelObjective for SLO usage metric.
 * **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. If createMode is Restore, this value is optional. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value.
 * **sampleName**: 'AdventureWorksLT': Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.
-* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The current service level objective of the database.
+* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceTierAdvisors**: [ServiceTierAdvisor](#servicetieradvisor)[] (ReadOnly): The list of service tier advisors for this database. Expanded property
 * **sourceDatabaseDeletionDate**: string: Conditional. If createMode is Restore and sourceDatabaseId is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database id), then this value is required. Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string: Conditional. If createMode is Copy, NonReadableSecondary, OnlineSecondary, PointInTimeRestore, Recovery, or Restore, then this value is required. Specifies the resource ID of the source database. If createMode is NonReadableSecondary or OnlineSecondary, the name of the source database must be the same as the new database being created.
@@ -342,7 +217,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **estimatedImpact**: [OperationImpact](#operationimpact)[] (ReadOnly): The estimated impact of doing recommended index action.
 * **includedColumns**: string[] (ReadOnly): The list of column names to be included in the index
 * **indexScript**: string (ReadOnly): The full build index script
-* **indexType**: 'CLUSTERED COLUMNSTORE' | 'CLUSTERED' | 'COLUMNSTORE' | 'NONCLUSTERED' (ReadOnly): The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE).
+* **indexType**: 'CLUSTERED COLUMNSTORE' | 'CLUSTERED' | 'COLUMNSTORE' | 'NONCLUSTERED' (ReadOnly): The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE)
 * **lastModified**: string (ReadOnly): The UTC datetime of when was this resource last changed (ISO8601 format).
 * **reportedImpact**: [OperationImpact](#operationimpact)[] (ReadOnly): The values reported after index action is complete.
 * **schema**: string (ReadOnly): The schema where table to build index over resides
@@ -403,35 +278,10 @@ Get-AzSqlServerServiceObjective -Location <location>
 ### Properties
 * **status**: 'Disabled' | 'Enabled': The status of the database transparent data encryption.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## DatabaseTableAuditingPolicyProperties
-### Properties
-* **auditingState**: string: The state of the policy.
-* **auditLogsTableName**: string: The audit logs table name.
-* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
-* **fullAuditLogsTableName**: string: The full audit logs table name.
-* **retentionDays**: string: The number of days to keep in the audit logs.
-* **storageAccountKey**: string: The key of the auditing storage account.
-* **storageAccountName**: string: The table storage account name
-* **storageAccountResourceGroupName**: string: The table storage account resource group name
-* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
-* **storageAccountSubscriptionId**: string: The table storage subscription Id.
-* **storageTableEndpoint**: string: The storage table endpoint.
-* **useServerDefault**: string: Whether server default is enabled or disabled.
-
-## DatabaseConnectionPolicyProperties
-### Properties
-* **proxyDnsName**: string: The fully qualified host name of the auditing proxy.
-* **proxyPort**: string: The port number of the auditing proxy.
-* **redirectionState**: string: The state of proxy redirection.
-* **securityEnabledAccess**: string: The state of security access.
-* **state**: string: The connection policy state.
-* **useServerDefault**: string: Whether server default is enabled or disabled.
-* **visibility**: string: The visibility of the auditing proxy.
 
 ## DataMaskingPolicyProperties
 ### Properties
@@ -460,7 +310,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **administratorLogin**: string (Required): The name of the SQL administrator.
 * **administratorLoginPassword**: string (Required): The password of the SQL administrator.
 * **authenticationType**: 'ADPassword' | 'SQL': The authentication type.
-* **operationMode**: string (Required): The type of import operation being performed. This is always Import.
+* **operationMode**: 'Import' (Required): The type of import operation being performed. This is always Import.
 * **storageKey**: string (Required): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): The type of the storage key to use.
 * **storageUri**: string (Required): The storage uri to use.
@@ -481,28 +331,18 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
 * **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
 
-## DisasterRecoveryConfigurationProperties
-### Properties
-* **autoFailover**: 'Off' | 'On' (ReadOnly): Whether or not failover can be done automatically.
-* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly): How aggressive the automatic failover should be.
-* **logicalServerName**: string (ReadOnly): Logical name of the server.
-* **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
-* **partnerServerId**: string (ReadOnly): Id of the partner server.
-* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly): The role of the current server in the disaster recovery configuration.
-* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly): The status of the disaster recovery configuration.
-
 ## ElasticPoolProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
 * **databaseDtuMax**: int: The maximum DTU any one database can consume.
 * **databaseDtuMin**: int: The minimum DTU all databases are guaranteed.
 * **dtu**: int: The total shared DTU for the database elastic pool.
-* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard': The edition of the elastic pool.
+* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard': The edition of the recommended elastic pool. The ElasticPoolEdition enumeration contains all the valid editions.
 * **state**: 'Creating' | 'Disabled' | 'Ready' (ReadOnly): The state of the elastic pool.
 * **storageMB**: int: Gets storage limit for the database elastic pool in MB.
 * **zoneRedundant**: bool: Whether or not this database elastic pool is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
