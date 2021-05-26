@@ -23,29 +23,30 @@ const defaultLogger: ILogger = {
   err: data => process.stderr.write(data),
 }
 
-const extensionDir = path.resolve(`${__dirname}/../`);
-const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
-const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const defaultOutDir = path.resolve(`${extensionDir}/../../generated`);
+const rootDir = `${__dirname}/../../../../`;
 
-const args = yargs
+const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
+const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
+const defaultOutDir = path.resolve(`${rootDir}/generated`);
+
+const argsConfig = yargs
   .strict()
   .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the azure-rest-api-specs dir' })
   .option('out-dir', { type: 'string', default: defaultOutDir, desc: 'Output path for generated files' })
   .option('single-path', { type: 'string', default: undefined, desc: 'Only regenerate under a specific file path - e.g. "compute"' })
   .option('verbose', { type: 'boolean', default: false, desc: 'Enable autorest verbose logging' })
-  .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' })
-  .argv;
+  .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' });
 
 executeSynchronous(async () => {
+  const args = await argsConfig.parseAsync();  
   const inputBaseDir = path.resolve(args['specs-dir']);
   const outputBaseDir = path.resolve(args['out-dir']);
   const verbose = args['verbose'];
   const waitForDebugger = args['wait-for-debugger'];
   const singlePath = args['single-path'];
 
-  if (!existsSync(autorestDll)) {
-    throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
+  if (!existsSync(`${extensionDir}/dist`)) {
+    throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
   }
 
   // find all readme paths in the azure-rest-api-specs repo
@@ -60,38 +61,52 @@ executeSynchronous(async () => {
 
   // this file is deliberately gitignored as it'll be overwritten when using --single-path
   // it's used to generate the git commit message
+  await mkdir(outputBaseDir, { recursive: true });
   const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
     const bicepReadmePath = `${path.dirname(readmePath)}/readme.bicep.md`;
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
-    const outputDir = `${tmpOutputPath}/${basePath}`;
+    const tmpOutputDir = `${tmpOutputPath}/${basePath}`;
+    const outputDir = `${outputBaseDir}/${basePath}`;
 
     if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
       continue;
     }
 
-    // remove all previously-generated files
-    await rmdir(outputDir, { recursive: true });
-    await mkdir(outputDir, { recursive: true });
-    const logger = await getLogger(`${outputDir}/log.out`);
+    // prepare temp dir for output
+    await rmdir(tmpOutputDir, { recursive: true });
+    await mkdir(tmpOutputDir, { recursive: true });
+    const logger = await getLogger(`${tmpOutputDir}/log.out`);
     const config = getConfig(basePath);
 
     try {
       // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
       await generateAutorestConfig(readmePath, bicepReadmePath, config);
-      await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
+      await generateSchema(logger, readmePath, tmpOutputDir, verbose, waitForDebugger);
 
-      await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
-    } catch (e) {
-      logErr(logger, e);
+      // remove all previously-generated files and copy over results
+      await rmdir(outputDir, { recursive: true });
+      await mkdir(outputDir, { recursive: true });
+      await copyRecursive(tmpOutputDir, outputDir);
+    } catch (err) {
+      logErr(logger, err);
+      
+      // Use markdown formatting as this summary will be included in the PR description
+      logOut(summaryLogger, 
+`<details>
+  <summary>Failed to generate types for path '${basePath}'</summary>
 
-      logErr(summaryLogger, `Failed to generate types for path '${basePath}'`);
+\`\`\`
+${err}
+\`\`\`
+</details>
+`);
     }
 
     // clean up temp dir
-    await rmdir(outputDir, { recursive: true });
+    await rmdir(tmpOutputDir, { recursive: true });
     // clean up autorest readme.bicep.md files
     await rm(bicepReadmePath, { force: true });
   }
@@ -177,6 +192,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--bicep',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
+    '--title=none',
     // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
     // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
     // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types. 
@@ -193,7 +209,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
-      `--bicep.debugger=true`,
+      `--bicep.debugger`,
     ]);
   }
 
