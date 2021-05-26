@@ -21,19 +21,24 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
 
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
     const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definition;
-    const { success, failureReason, name } = parseNameSchema(
+    const nameSchemaResult = parseNameSchema(
       descriptor,
       putRequest,
       putParameters,
       schema => parseType(schema, schema),
       (name) => factory.addType(new StringLiteralType(name)));
 
-    if (!success || !name) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': ${failureReason}`);
+    if (!nameSchemaResult.success) {
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': ${nameSchemaResult.error}`);
       return
     }
 
-    const resourceProperties = getStandardizedResourceProperties(descriptor, name);
+    if (!nameSchemaResult.value) {
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': failed to obtain a name value`);
+      return
+    }
+
+    const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
 
     let resourceDefinition: TypeReference;
     if (putSchema) {

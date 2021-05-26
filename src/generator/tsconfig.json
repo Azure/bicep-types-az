@@ -1,13 +1,9 @@
 {
   "compilerOptions": {
     "skipLibCheck": true,
-    "alwaysStrict": true,
-    "forceConsistentCasingInFileNames": false,
     "module": "commonjs",
     "noEmitOnError": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "sourceMap": true,
     "declarationMap": true,
     "strict": true,

@@ -4,6 +4,7 @@
 import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { keys, Dictionary, values } from 'lodash';
+import { success, failure, Result } from './utils';
 
 export enum ScopeType {
   Unknown = 0,
@@ -85,12 +86,12 @@ function getNormalizedMethodPath(path: string) {
   return path;
 }
 
-export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T) {
+export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
   const path = getNormalizedMethodPath(request.path);
 
   const finalProvidersMatch = path.match(parentScopePrefix)?.last;
   if (!finalProvidersMatch) {
-    return { success: false, failureReason: `Unable to locate "/providers/" segment` };
+    return failure(`Unable to locate "/providers/" segment`);
   }
 
   const routingScope = trimScope(path.substr(finalProvidersMatch.length));
@@ -105,19 +106,17 @@ export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: Http
     // look up the type
     var param = parameters.filter(p => p.language.default.name === resNameParam)[0];
     if (!param) {
-      return { success: false, failureReason: `Unable to locate parameter with name '${resNameParam}'` };
+      return failure(`Unable to locate parameter with name '${resNameParam}'`);
     }
 
-    var nameType = parseType(param.schema);
-
-    return { success: true, failureReason: '', name: nameType };
+    return success(parseType(param.schema));
   }
 
   if (!/^[a-zA-Z0-9]*$/.test(resNameParam)) {
-    return { success: false, failureReason: `Unable to process non-alphanumeric name '${resNameParam}'` };
+    return failure(`Unable to process non-alphanumeric name '${resNameParam}'`);
   }
 
-  return { success: true, failureReason: '', name: createConstantName(resNameParam), };
+  return success(createConstantName(resNameParam));
 }
 
 export function getProviderDefinitions(codeModel: CodeModel, host: Host): ProviderDefinition[] {
@@ -166,13 +165,13 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
         continue;
       }
 
-      const { success, failureReason, descriptors } = parseMethod(putData.request.path, putData.parameters, apiVersion);
-      if (!success) {
-        logWarning(`Skipping path '${putData.request.path}': ${failureReason}`);
+      const parseResult = parseMethod(putData.request.path, putData.parameters, apiVersion);
+      if (!parseResult.success) {
+        logWarning(`Skipping path '${putData.request.path}': ${parseResult.error}`);
         continue;
       }
 
-      for (const descriptor of descriptors) {
+      for (const descriptor of parseResult.value) {
         const namespace = descriptor.namespace.toLowerCase();
 
         if (!providerDefinitions[namespace]) {
@@ -262,12 +261,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     };
   }
 
-  function parseMethod(path: string, parameters: Parameter[], apiVersion: string) {
+  function parseMethod(path: string, parameters: Parameter[], apiVersion: string): Result<ResourceDescriptor[], string> {
     path = getNormalizedMethodPath(path);
 
     const finalProvidersMatch = path.match(parentScopePrefix)?.last;
     if (!finalProvidersMatch) {
-      return { success: false, failureReason: `Unable to locate "/providers/" segment`, descriptors: [] };
+      return failure(`Unable to locate "/providers/" segment`);
     }
 
     const parentScope = path.substr(0, finalProvidersMatch.length - "providers/".length);
@@ -275,12 +274,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
 
     const namespace = routingScope.substr(0, routingScope.indexOf('/'));
     if (isPathVariable(namespace)) {
-      return { success: false, failureReason: `Unable to process parameterized provider namespace "${namespace}"`, descriptors: [] };
+      return failure(`Unable to process parameterized provider namespace "${namespace}"`);
     }
 
-    const { success, failureReason, resourceTypes } = parseResourceTypes(parameters, routingScope);
-    if (!success) {
-      return { success: false, failureReason, descriptors: [] };
+    const parseResult = parseResourceTypes(parameters, routingScope);
+    if (!parseResult.success) {
+      return parseResult;
     }
 
     const resNameParam = routingScope.substr(routingScope.lastIndexOf('/') + 1);
@@ -288,7 +287,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
 
     const scopeType = getScopeTypeFromParentScope(parentScope);
 
-    const descriptors: ResourceDescriptor[] = resourceTypes.map(type => ({
+    const descriptors: ResourceDescriptor[] = parseResult.value.map(type => ({
       scopeType,
       namespace,
       typeSegments: type,
@@ -296,19 +295,19 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
       constantName,
     }));
 
-    return { success: true, failureReason: '', descriptors };
+    return success(descriptors);
   }
 
-  function parseResourceTypes(parameters: Parameter[], routingScope: string) {
+  function parseResourceTypes(parameters: Parameter[], routingScope: string): Result<string[][], string> {
     const typeSegments = routingScope.split('/').slice(1).filter((_, i) => i % 2 === 0);
     const nameSegments = routingScope.split('/').slice(1).filter((_, i) => i % 2 === 1);
 
     if (typeSegments.length === 0) {
-      return { success: false, failureReason: `Unable to find type segments`, resourceTypes: [] };
+      return failure(`Unable to find type segments`);
     }
 
     if (typeSegments.length !== nameSegments.length) {
-      return { success: false, failureReason: `Found mismatch between type segments (${typeSegments.length}) and name segments (${nameSegments.length})`, resourceTypes: [] };
+      return failure(`Found mismatch between type segments (${typeSegments.length}) and name segments (${nameSegments.length})`);
     }
 
     let resourceTypes: string[][] = [[]];
@@ -320,16 +319,16 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
           p.language.default.name === parameterName)[0];
 
         if (!parameter) {
-          return { success: false, failureReason: `Found undefined parameter reference ${typeSegment}`, resourceTypes: [] };
+          return failure(`Found undefined parameter reference ${typeSegment}`);
         }
 
         const choiceSchema = parameter.schema;
         if (!(choiceSchema instanceof ChoiceSchema || choiceSchema instanceof SealedChoiceSchema)) {
-          return { success: false, failureReason: `Parameter reference ${typeSegment} is not defined as an enum`, resourceTypes: [] };
+          return failure(`Parameter reference ${typeSegment} is not defined as an enum`);
         }        
 
         if (choiceSchema.choices.length === 0) {
-          return { success: false, failureReason: `Parameter reference ${typeSegment} is defined as an enum, but doesn't have any specified values`, resourceTypes: [] };
+          return failure(`Parameter reference ${typeSegment} is defined as an enum, but doesn't have any specified values`);
         }
 
         resourceTypes = resourceTypes.flatMap(type => choiceSchema.choices.map(v => [...type, v.value.toString()]));
@@ -338,7 +337,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
       }
     }
 
-    return { success: true, failureReason: '', resourceTypes };
+    return success(resourceTypes);
   }
 
   function getScopeTypeFromParentScope(parentScope: string) {
