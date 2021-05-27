@@ -11,11 +11,10 @@
                 "generate",
                 "--",
                 "--specs-dir",
-                "../../../azure-rest-api-specs",
-                "--wait-for-debugger"
+                "../../../azure-rest-api-specs"
             ],
             "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build autorest.bicep"
+            "preLaunchTask": "build"
         },
         {
             "name": "Generate Single",
@@ -29,25 +28,24 @@
                 "--specs-dir",
                 "../../../azure-rest-api-specs",
                 "--single-path",
-                "${input:pickSinglePath}",
-                "--wait-for-debugger"
+                "${input:pickSinglePath}"
             ],
             "cwd": "${workspaceFolder}/src/generator",
-            "preLaunchTask": "build autorest.bicep"
+            "preLaunchTask": "build"
         },
         {
-            "type": "node",
-            "request": "attach",
             "name": "Attach",
-            "port": 9229
-        },
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
     ],
     "inputs": [
-        {
-            "id": "pickSinglePath",
-            "default": "compute",
-            "type": "promptString",
-            "description": "Pick a specific base path to generate types for"
-        }
+      {
+        "id": "pickSinglePath",
+        "default": "compute",
+        "type": "promptString",
+        "description": "Pick a specific base path to generate types for"
+      }
     ]
 }

@@ -10,6 +10,11 @@ namespace Azure.Bicep.Types
 {
     public static class TypeSerializer
     {
+        private static readonly JsonSerializerOptions SerializerOptions = new JsonSerializerOptions
+        {
+            IgnoreNullValues = true,
+        };
+
         public static string Serialize(TypeBase[] types)
         {
             var factory = new TypeFactory(types);
