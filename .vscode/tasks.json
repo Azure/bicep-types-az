@@ -2,13 +2,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "npm",
-            "script": "build",
-            "path": "src/autorest.bicep/",
-            "group": "build",
-            "problemMatcher": [],
-            "label": "build autorest.bicep",
-            "detail": "tsc -p ."
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/bicep-types-az.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
