@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateCloudProperties](#privatecloudproperties): The properties of a private cloud resource
 * **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AVS/privateClouds/addons@2020-07-17-preview
@@ -117,14 +117,14 @@
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
 * **endpoints**: [Endpoints](#endpoints) (ReadOnly): Endpoint addresses
 * **identitySources**: [IdentitySource](#identitysource)[]: vCenter Single Sign On Identity Sources
-* **internet**: 'Disabled' | 'Enabled': Connectivity to internet is enabled or disabled
+* **internet**: 'Disabled' | 'Enabled': Connectivity to internet is enabled or disabled.
 * **managementCluster**: [ManagementCluster](#managementcluster): The properties of a management cluster
 * **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
 * **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
 * **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
 * **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
 * **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
-* **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
 * **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
 * **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
@@ -152,7 +152,7 @@
 * **password**: string: The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
 * **primaryServer**: string: Primary server URL
 * **secondaryServer**: string: Secondary server URL
-* **ssl**: 'Disabled' | 'Enabled': Protect LDAP communication using SSL certificate (LDAPS)
+* **ssl**: 'Disabled' | 'Enabled': Protect LDAP communication using SSL certificate (LDAPS).
 * **username**: string: The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
 
 ## ManagementCluster
@@ -160,77 +160,76 @@
 * **clusterId**: int (ReadOnly): The identity
 * **clusterSize**: int: The cluster size
 * **hosts**: string[] (ReadOnly): The hosts
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the cluster provisioning
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the cluster provisioning.
 
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the SKU.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AddonProperties
 ### Properties
-* **addonType**: 'SRM' | 'VR': The type of private cloud addon
+* **addonType**: 'SRM' | 'VR': The type of private cloud addon.
 * **licenseKey**: string: The SRM license
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the addon provisioning
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the addon provisioning.
 
 ## ExpressRouteAuthorizationProperties
 ### Properties
 * **expressRouteAuthorizationId**: string (ReadOnly): The ID of the ExpressRoute Circuit Authorization
 * **expressRouteAuthorizationKey**: string (ReadOnly): The key of the ExpressRoute Circuit Authorization
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning.
 
 ## ClusterProperties
 ### Properties
 * **clusterId**: int (ReadOnly): The identity
 * **clusterSize**: int: The cluster size
 * **hosts**: string[] (ReadOnly): The hosts
-* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the cluster provisioning
+* **provisioningState**: 'Cancelled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the cluster provisioning.
 
 ## GlobalReachConnectionProperties
 ### Properties
 * **addressPrefix**: string (ReadOnly): The network used for global reach carved out from the original network block provided for the private cloud
 * **authorizationKey**: string: Authorization key from the peer express route used for the global reach connection
-* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' (ReadOnly): The connection status of the global reach connection
+* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' (ReadOnly): The connection status of the global reach connection.
 * **peerExpressRouteCircuit**: string: Identifier of the ExpressRoute Circuit to peer with in the global reach connection
-* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning
+* **provisioningState**: 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The state of the  ExpressRoute Circuit Authorization provisioning.
 
 ## HcxEnterpriseSiteProperties
 ### Properties
 * **activationKey**: string (ReadOnly): The activation key
-* **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' (ReadOnly): The status of the HCX Enterprise Site
+* **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' (ReadOnly): The status of the HCX Enterprise Site.
 
 ## WorkloadNetworkDhcpEntity
 * **Discriminator**: dhcpType
-
 ### Base Properties
 * **displayName**: string: Display name of the DHCP entity.
-* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **revision**: int: NSX revision number.
 * **segments**: string[] (ReadOnly): NSX Segments consuming DHCP.
-### WorkloadNetworkDhcpRelay
+### RELAY
 #### Properties
-* **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
+* **dhcpType**: 'RELAY' (Required): NSX DHCP Relay
 * **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
 
-### WorkloadNetworkDhcpServer
+### SERVER
 #### Properties
-* **dhcpType**: 'SERVER' (Required): Type of DHCP: SERVER or RELAY.
+* **dhcpType**: 'SERVER' (Required): NSX DHCP Server
 * **leaseTime**: int: DHCP Server Lease Time.
 * **serverAddress**: string: DHCP Server Address.
 
 
-## WorkloadNetworkDhcpRelay
+## RELAY
 ### Properties
-* **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
+* **dhcpType**: 'RELAY' (Required): NSX DHCP Relay
 * **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
 
-## WorkloadNetworkDhcpServer
+## SERVER
 ### Properties
-* **dhcpType**: 'SERVER' (Required): Type of DHCP: SERVER or RELAY.
+* **dhcpType**: 'SERVER' (Required): NSX DHCP Server
 * **leaseTime**: int: DHCP Server Lease Time.
 * **serverAddress**: string: DHCP Server Address.
 
@@ -241,7 +240,7 @@
 * **dnsServiceIp**: string: DNS service IP of the DNS Service.
 * **fqdnZones**: string[]: FQDN zones of the DNS Service.
 * **logLevel**: 'DEBUG' | 'ERROR' | 'FATAL' | 'INFO' | 'WARNING': DNS Service log level.
-* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **revision**: int: NSX revision number.
 * **status**: 'FAILURE' | 'SUCCESS' (ReadOnly): DNS Service status.
 
@@ -251,7 +250,7 @@
 * **dnsServerIps**: string[]: DNS Server IP array of the DNS Zone.
 * **dnsServices**: int: Number of DNS Services using the DNS zone.
 * **domain**: string[]: Domain names of the DNS Zone.
-* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **revision**: int: NSX revision number.
 * **sourceIp**: string: Source IP of the DNS Zone.
 
@@ -260,7 +259,7 @@
 * **destination**: string: Destination VM Group.
 * **direction**: 'INGRESS, EGRESS, BIDIRECTIONAL': Direction of port mirroring profile.
 * **displayName**: string: Display name of the port mirroring profile.
-* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **revision**: int: NSX revision number.
 * **source**: string: Source VM Group.
 * **status**: 'SUCCESS, FAILURE' (ReadOnly): Port Mirroring Status.
@@ -270,7 +269,7 @@
 * **connectedGateway**: string: Gateway which to connect segment to.
 * **displayName**: string: Display name of the segment.
 * **portVif**: [WorkloadNetworkSegmentPortVif](#workloadnetworksegmentportvif)[] (ReadOnly): Port Vif which segment is associated with.
-* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' (ReadOnly): Segment status.
 * **subnet**: [WorkloadNetworkSegmentSubnet](#workloadnetworksegmentsubnet): Subnet configuration for segment
@@ -288,7 +287,7 @@
 ### Properties
 * **displayName**: string: Display name of the VM group.
 * **members**: string[]: Virtual machine members of this group.
-* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state.
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' (ReadOnly): VM Group status.
 

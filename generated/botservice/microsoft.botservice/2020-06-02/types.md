@@ -6,12 +6,12 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BotProperties](#botproperties): The parameters to provide for the Bot.
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/botServices/channels@2020-06-02
@@ -20,12 +20,12 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): Channel definition
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/botServices/connections@2020-06-02
@@ -34,12 +34,12 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): Properties for a Connection Setting Item
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## BotProperties
@@ -62,87 +62,86 @@
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' (Required): The name of SKU.
+* **name**: 'F0' | 'S1' (Required): The sku name.
 * **tier**: 'Free' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Channel
 * **Discriminator**: channelName
-
 ### Base Properties
 ### AlexaChannel
 #### Properties
-* **channelName**: 'AlexaChannel' (Required): The channel name
+* **channelName**: 'AlexaChannel' (Required): Alexa channel definition
 * **properties**: [AlexaChannelProperties](#alexachannelproperties): The parameters to provide for the Alexa channel.
 
 ### DirectLineChannel
 #### Properties
-* **channelName**: 'DirectLineChannel' (Required): The channel name
+* **channelName**: 'DirectLineChannel' (Required): Direct Line channel definition
 * **properties**: [DirectLineChannelProperties](#directlinechannelproperties): The parameters to provide for the Direct Line channel.
 
 ### DirectLineSpeechChannel
 #### Properties
-* **channelName**: 'DirectLineSpeechChannel' (Required): The channel name
+* **channelName**: 'DirectLineSpeechChannel' (Required): DirectLine Speech channel definition
 * **properties**: [DirectLineSpeechChannelProperties](#directlinespeechchannelproperties): The parameters to provide for the DirectLine Speech channel.
 
 ### EmailChannel
 #### Properties
-* **channelName**: 'EmailChannel' (Required): The channel name
+* **channelName**: 'EmailChannel' (Required): Email channel definition
 * **properties**: [EmailChannelProperties](#emailchannelproperties): The parameters to provide for the Email channel.
 
 ### FacebookChannel
 #### Properties
-* **channelName**: 'FacebookChannel' (Required): The channel name
+* **channelName**: 'FacebookChannel' (Required): Facebook channel definition
 * **properties**: [FacebookChannelProperties](#facebookchannelproperties): The parameters to provide for the Facebook channel.
 
 ### KikChannel
 #### Properties
-* **channelName**: 'KikChannel' (Required): The channel name
+* **channelName**: 'KikChannel' (Required): Kik channel definition
 * **properties**: [KikChannelProperties](#kikchannelproperties): The parameters to provide for the Kik channel.
 
 ### LineChannel
 #### Properties
-* **channelName**: 'LineChannel' (Required): The channel name
+* **channelName**: 'LineChannel' (Required): Line channel definition
 * **properties**: [LineChannelProperties](#linechannelproperties): The parameters to provide for the Line channel.
 
 ### MsTeamsChannel
 #### Properties
-* **channelName**: 'MsTeamsChannel' (Required): The channel name
+* **channelName**: 'MsTeamsChannel' (Required): Microsoft Teams channel definition
 * **properties**: [MsTeamsChannelProperties](#msteamschannelproperties): The parameters to provide for the Microsoft Teams channel.
 
 ### SkypeChannel
 #### Properties
-* **channelName**: 'SkypeChannel' (Required): The channel name
+* **channelName**: 'SkypeChannel' (Required): Skype channel definition
 * **properties**: [SkypeChannelProperties](#skypechannelproperties): The parameters to provide for the Microsoft Teams channel.
 
 ### SlackChannel
 #### Properties
-* **channelName**: 'SlackChannel' (Required): The channel name
+* **channelName**: 'SlackChannel' (Required): Slack channel definition
 * **properties**: [SlackChannelProperties](#slackchannelproperties): The parameters to provide for the Slack channel.
 
 ### SmsChannel
 #### Properties
-* **channelName**: 'SmsChannel' (Required): The channel name
+* **channelName**: 'SmsChannel' (Required): Sms channel definition
 * **properties**: [SmsChannelProperties](#smschannelproperties): The parameters to provide for the Sms channel.
 
 ### TelegramChannel
 #### Properties
-* **channelName**: 'TelegramChannel' (Required): The channel name
+* **channelName**: 'TelegramChannel' (Required): Telegram channel definition
 * **properties**: [TelegramChannelProperties](#telegramchannelproperties): The parameters to provide for the Telegram channel.
 
 ### WebChatChannel
 #### Properties
-* **channelName**: 'WebChatChannel' (Required): The channel name
+* **channelName**: 'WebChatChannel' (Required): Web Chat channel definition
 * **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
 
 
 ## AlexaChannel
 ### Properties
-* **channelName**: 'AlexaChannel' (Required): The channel name
+* **channelName**: 'AlexaChannel' (Required): Alexa channel definition
 * **properties**: [AlexaChannelProperties](#alexachannelproperties): The parameters to provide for the Alexa channel.
 
 ## AlexaChannelProperties
@@ -154,7 +153,7 @@
 
 ## DirectLineChannel
 ### Properties
-* **channelName**: 'DirectLineChannel' (Required): The channel name
+* **channelName**: 'DirectLineChannel' (Required): Direct Line channel definition
 * **properties**: [DirectLineChannelProperties](#directlinechannelproperties): The parameters to provide for the Direct Line channel.
 
 ## DirectLineChannelProperties
@@ -175,7 +174,7 @@
 
 ## DirectLineSpeechChannel
 ### Properties
-* **channelName**: 'DirectLineSpeechChannel' (Required): The channel name
+* **channelName**: 'DirectLineSpeechChannel' (Required): DirectLine Speech channel definition
 * **properties**: [DirectLineSpeechChannelProperties](#directlinespeechchannelproperties): The parameters to provide for the DirectLine Speech channel.
 
 ## DirectLineSpeechChannelProperties
@@ -188,7 +187,7 @@
 
 ## EmailChannel
 ### Properties
-* **channelName**: 'EmailChannel' (Required): The channel name
+* **channelName**: 'EmailChannel' (Required): Email channel definition
 * **properties**: [EmailChannelProperties](#emailchannelproperties): The parameters to provide for the Email channel.
 
 ## EmailChannelProperties
@@ -199,7 +198,7 @@
 
 ## FacebookChannel
 ### Properties
-* **channelName**: 'FacebookChannel' (Required): The channel name
+* **channelName**: 'FacebookChannel' (Required): Facebook channel definition
 * **properties**: [FacebookChannelProperties](#facebookchannelproperties): The parameters to provide for the Facebook channel.
 
 ## FacebookChannelProperties
@@ -218,7 +217,7 @@
 
 ## KikChannel
 ### Properties
-* **channelName**: 'KikChannel' (Required): The channel name
+* **channelName**: 'KikChannel' (Required): Kik channel definition
 * **properties**: [KikChannelProperties](#kikchannelproperties): The parameters to provide for the Kik channel.
 
 ## KikChannelProperties
@@ -230,7 +229,7 @@
 
 ## LineChannel
 ### Properties
-* **channelName**: 'LineChannel' (Required): The channel name
+* **channelName**: 'LineChannel' (Required): Line channel definition
 * **properties**: [LineChannelProperties](#linechannelproperties): The parameters to provide for the Line channel.
 
 ## LineChannelProperties
@@ -247,7 +246,7 @@
 
 ## MsTeamsChannel
 ### Properties
-* **channelName**: 'MsTeamsChannel' (Required): The channel name
+* **channelName**: 'MsTeamsChannel' (Required): Microsoft Teams channel definition
 * **properties**: [MsTeamsChannelProperties](#msteamschannelproperties): The parameters to provide for the Microsoft Teams channel.
 
 ## MsTeamsChannelProperties
@@ -258,7 +257,7 @@
 
 ## SkypeChannel
 ### Properties
-* **channelName**: 'SkypeChannel' (Required): The channel name
+* **channelName**: 'SkypeChannel' (Required): Skype channel definition
 * **properties**: [SkypeChannelProperties](#skypechannelproperties): The parameters to provide for the Microsoft Teams channel.
 
 ## SkypeChannelProperties
@@ -275,7 +274,7 @@
 
 ## SlackChannel
 ### Properties
-* **channelName**: 'SlackChannel' (Required): The channel name
+* **channelName**: 'SlackChannel' (Required): Slack channel definition
 * **properties**: [SlackChannelProperties](#slackchannelproperties): The parameters to provide for the Slack channel.
 
 ## SlackChannelProperties
@@ -293,7 +292,7 @@
 
 ## SmsChannel
 ### Properties
-* **channelName**: 'SmsChannel' (Required): The channel name
+* **channelName**: 'SmsChannel' (Required): Sms channel definition
 * **properties**: [SmsChannelProperties](#smschannelproperties): The parameters to provide for the Sms channel.
 
 ## SmsChannelProperties
@@ -306,7 +305,7 @@
 
 ## TelegramChannel
 ### Properties
-* **channelName**: 'TelegramChannel' (Required): The channel name
+* **channelName**: 'TelegramChannel' (Required): Telegram channel definition
 * **properties**: [TelegramChannelProperties](#telegramchannelproperties): The parameters to provide for the Telegram channel.
 
 ## TelegramChannelProperties
@@ -317,7 +316,7 @@
 
 ## WebChatChannel
 ### Properties
-* **channelName**: 'WebChatChannel' (Required): The channel name
+* **channelName**: 'WebChatChannel' (Required): Web Chat channel definition
 * **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
 
 ## WebChatChannelProperties
@@ -334,7 +333,7 @@
 * **siteId**: string (ReadOnly): Site Id
 * **siteName**: string (Required): Site name
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -354,7 +353,7 @@
 * **key**: string: Key for the Connection Setting Parameter.
 * **value**: string: Value associated with the Connection Setting Parameter.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

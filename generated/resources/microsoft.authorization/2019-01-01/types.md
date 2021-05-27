@@ -40,9 +40,9 @@
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **metadata**: any: Any object
+* **metadata**: any: The policy assignment metadata.
 * **notScopes**: string[]: The policy's excluded scopes.
-* **parameters**: any: Any object
+* **parameters**: any: Required if a parameter is used in policy rule.
 * **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
 * **scope**: string: The scope for the policy assignment.
 
@@ -55,23 +55,23 @@
 ### Properties
 * **description**: string: The policy definition description.
 * **displayName**: string: The display name of the policy definition.
-* **metadata**: any: Any object
+* **metadata**: any: The policy definition metadata.
 * **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-* **parameters**: any: Any object
-* **policyRule**: any: Any object
+* **parameters**: any: Required if a parameter is used in policy rule.
+* **policyRule**: any: The policy rule.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string: The policy set definition description.
 * **displayName**: string: The display name of the policy set definition.
-* **metadata**: any: Any object
-* **parameters**: any: Any object
+* **metadata**: any: The policy set definition metadata.
+* **parameters**: any: The policy set definition parameters that can be used in policy definition references.
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicyDefinitionReference
 ### Properties
-* **parameters**: any: Any object
+* **parameters**: any: Required if a parameter is used in policy rule.
 * **policyDefinitionId**: string: The ID of the policy definition or policy set definition.
 

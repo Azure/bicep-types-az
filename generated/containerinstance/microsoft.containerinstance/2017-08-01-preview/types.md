@@ -7,11 +7,11 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **properties**: [schemas:10_properties](#schemas10properties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## ContainerGroupProperties
+## schemas:10_properties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
@@ -32,7 +32,7 @@
 * **command**: string[]: The commands to execute within the container instance in exec form.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the container instance.
 * **image**: string (Required): The name of the image used to create the container instance.
-* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
+* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
@@ -42,7 +42,7 @@
 * **name**: string (Required): The name of the environment variable.
 * **value**: string (Required): The value of the environment variable.
 
-## ContainerPropertiesInstanceView
+## schemas:1_instanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate): The container instance state.
 * **events**: [ContainerEvent](#containerevent)[]: The events of the container instance.
@@ -100,7 +100,7 @@
 ### Properties
 * **ip**: string: The IP exposed to the public internet.
 * **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
-* **type**: 'Public' (Required): Specifies if the IP is exposed to the public internet.
+* **type**: string (Required): Specifies if the IP is exposed to the public internet.
 
 ## Port
 ### Properties
@@ -119,7 +119,7 @@
 * **storageAccountKey**: string: The storage account access key used to access the Azure File share.
 * **storageAccountName**: string (Required): The name of the storage account that contains the Azure File share.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

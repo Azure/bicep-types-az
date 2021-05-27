@@ -8,7 +8,7 @@
 * **location**: string: Region where the VM is located.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GuestConfigurationAssignmentProperties](#guestconfigurationassignmentproperties): Guest configuration assignment properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.GuestConfiguration/guestConfigurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## GuestConfigurationAssignmentProperties
@@ -23,7 +23,7 @@
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
 * **resourceType**: string (ReadOnly): Type of the resource - VMSS / VM
 * **targetResourceId**: string (ReadOnly): VM resource Id.
-* **vmssVMList**: [VmssvmInfo](#vmssvminfo)[]: The list of VM Compliance data for VMSS
+* **vmssVMList**: [VMSSVMInfo](#vmssvminfo)[]: The list of VM Compliance data for VMSS
 
 ## GuestConfigurationNavigation
 ### Properties
@@ -31,7 +31,7 @@
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
 * **contentHash**: string (ReadOnly): Combined hash of the guest configuration package and configuration parameters.
 * **contentUri**: string (ReadOnly): Uri of the storage where guest configuration package is uploaded.
-* **kind**: 'DSC': Kind of the guest configuration. For example:DSC
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC.
 * **name**: string: Name of the guest configuration.
 * **version**: string: Version of the guest configuration.
 
@@ -42,7 +42,7 @@
 
 ## ConfigurationSetting
 ### Properties
-* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration.
 * **allowModuleOverwrite**: bool: If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
 * **configurationMode**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'ApplyOnly': Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
 * **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
@@ -55,7 +55,7 @@
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **endTime**: string (ReadOnly): End date and time of the guest configuration assignment compliance status check.
 * **id**: string (ReadOnly): ARM resource id of the report for the guest configuration assignment.
-* **operationType**: 'Consistency' | 'Initial' (ReadOnly): Type of report, Consistency or Initial
+* **operationType**: 'Consistency' | 'Initial' (ReadOnly): Type of report, Consistency or Initial.
 * **reportId**: string (ReadOnly): GUID that identifies the guest configuration assignment report under a subscription, resource group.
 * **resources**: [AssignmentReportResource](#assignmentreportresource)[]: The list of resources for which guest configuration assignment compliance is checked.
 * **startTime**: string (ReadOnly): Start date and time of the guest configuration assignment compliance status check.
@@ -74,7 +74,7 @@
 ## AssignmentReportResource
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
-* **properties**: any (ReadOnly): Any object
+* **properties**: any (ReadOnly): Properties of a guest configuration assignment resource.
 * **reasons**: [AssignmentReportResourceComplianceReason](#assignmentreportresourcecompliancereason)[]: Compliance reason and reason code for a resource.
 * **resourceId**: string (ReadOnly): Name of the guest configuration assignment resource setting.
 
@@ -88,7 +88,7 @@
 * **id**: string (ReadOnly): Azure resource Id of the VM.
 * **uuid**: string (ReadOnly): UUID(Universally Unique Identifier) of the VM.
 
-## VmssvmInfo
+## VMSSVMInfo
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **lastComplianceChecked**: string (ReadOnly): Date and time when last compliance status was checked.
@@ -96,12 +96,12 @@
 * **vmId**: string (ReadOnly): UUID of the VM.
 * **vmResourceId**: string (ReadOnly): Azure resource Id of the VM.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 

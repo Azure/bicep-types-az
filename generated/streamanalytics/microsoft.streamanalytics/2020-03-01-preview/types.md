@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): The properties associated with a Stream Analytics cluster.
 * **sku**: [ClusterSku](#clustersku): The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.StreamAnalytics/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StreamAnalytics/clusters/privateEndpoints@2020-03-01-preview
@@ -29,14 +29,14 @@
 * **capacityAssigned**: int (ReadOnly): Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
 * **clusterId**: string (ReadOnly): Unique identifier for the cluster.
 * **createdDate**: string (ReadOnly): The date this cluster was created.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded'
 
 ## ClusterSku
 ### Properties
 * **capacity**: int: Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
 * **name**: 'Default': Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

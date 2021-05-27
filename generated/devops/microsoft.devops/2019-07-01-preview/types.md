@@ -8,7 +8,7 @@
 * **location**: string: Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PipelineProperties](#pipelineproperties) (Required): Custom properties of a Pipeline.
-* **tags**: [ResourceTags](#resourcetags): Resource Tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource Tags
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PipelineProperties
@@ -28,20 +28,20 @@
 * **authorization**: [Authorization](#authorization): Authorization info used to access a resource (like code repository).
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
-* **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): Repository-specific properties.
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required): Type of code repository.
 
 ## Authorization
 ### Properties
-* **authorizationType**: 'personalAccessToken' (Required): Type of authorization.
-* **parameters**: [AuthorizationParameters](#authorizationparameters): Authorization parameters corresponding to the authorization type.
+* **authorizationType**: string (Required): Type of authorization.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Authorization parameters corresponding to the authorization type.
 
-## AuthorizationParameters
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CodeRepositoryProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -49,9 +49,9 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required): Unique identifier of the pipeline template.
-* **parameters**: [PipelineTemplateParameters](#pipelinetemplateparameters): Dictionary of input parameters used in the pipeline template.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Dictionary of input parameters used in the pipeline template.
 
-## PipelineTemplateParameters
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -66,7 +66,7 @@
 * **id**: string (ReadOnly): Unique immutable identifier of the Azure DevOps Project.
 * **name**: string (Required): Name of the Azure DevOps Project.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

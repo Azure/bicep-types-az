@@ -8,8 +8,8 @@
 * **location**: string (Required): Location of the DFP resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DFPInstanceProperties](#dfpinstanceproperties): Properties of DFP resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DFPInstanceTags](#dfpinstancetags): Key-value pairs of additional resource provisioning properties.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.Dynamics365FraudProtection/instances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DFPInstanceProperties
@@ -21,16 +21,16 @@
 ### Properties
 * **members**: string[]: An array of administrator user identities.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## DFPInstanceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

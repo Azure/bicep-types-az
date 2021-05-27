@@ -9,7 +9,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): Defines the properties of an experiment
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01
@@ -20,15 +20,15 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExperimentProperties](#experimentproperties): Defines the properties of an experiment
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProfileProperties
 ### Properties
-* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Defines the server side resource status
+* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment.
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -36,10 +36,10 @@
 ## ExperimentProperties
 ### Properties
 * **description**: string: The description of the details or intents of the Experiment
-* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment
+* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment.
 * **endpointA**: [Endpoint](#endpoint): Defines the endpoint properties
 * **endpointB**: [Endpoint](#endpoint): Defines the endpoint properties
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Defines the server side resource status
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling': Resource status.
 * **scriptFileUri**: string (ReadOnly): The uri to the Script used in the Experiment
 * **status**: string (ReadOnly): The description of Experiment status from the server side
 
@@ -48,7 +48,7 @@
 * **endpoint**: string: The endpoint URL
 * **name**: string: The name of the endpoint
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

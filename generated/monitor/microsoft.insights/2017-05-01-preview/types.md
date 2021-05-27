@@ -1,7 +1,7 @@
 # microsoft.insights @ 2017-05-01-preview
 
 ## Resource microsoft.insights/diagnosticSettings@2017-05-01-preview
-* **Valid Scope(s)**: Subscription
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

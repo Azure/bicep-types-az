@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigureAlertRequestProperties](#configurealertrequestproperties): The properties of an alert.
+* **properties**: [ConfigureAlertRequestProperties](#configurealertrequestproperties): Properties of a configure alert request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationAlertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2018-07-10
@@ -17,7 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FabricCreationInputProperties](#fabriccreationinputproperties): Fabric properties.
+* **properties**: [FabricCreationInputProperties](#fabriccreationinputproperties): Properties of site details provided during the time of site creation
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2018-07-10
@@ -27,7 +27,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateNetworkMappingInputProperties](#createnetworkmappinginputproperties): Network Mapping Properties.
+* **properties**: [CreateNetworkMappingInputProperties](#createnetworkmappinginputproperties): Common input details for network mapping operation.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2018-07-10
@@ -37,7 +37,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateProtectionContainerInputProperties](#createprotectioncontainerinputproperties): Protection profile custom data details.
+* **properties**: [CreateProtectionContainerInputProperties](#createprotectioncontainerinputproperties): Create protection container input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems@2018-07-10
@@ -47,7 +47,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnableMigrationInputProperties](#enablemigrationinputproperties) (Required): Migration item properties.
+* **properties**: [EnableMigrationInputProperties](#enablemigrationinputproperties) (Required): Enable migration input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2018-07-10
@@ -57,7 +57,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnableProtectionInputProperties](#enableprotectioninputproperties): Replication protected item custom data details.
+* **properties**: [EnableProtectionInputProperties](#enableprotectioninputproperties): Enable protection input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2018-07-10
@@ -67,7 +67,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateProtectionContainerMappingInputProperties](#createprotectioncontainermappinginputproperties): Protection container mapping properties.
+* **properties**: [CreateProtectionContainerMappingInputProperties](#createprotectioncontainermappinginputproperties): Configure pairing input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2018-07-10
@@ -77,7 +77,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AddRecoveryServicesProviderInputProperties](#addrecoveryservicesproviderinputproperties) (Required): Recovery services provider properties.
+* **properties**: [AddRecoveryServicesProviderInputProperties](#addrecoveryservicesproviderinputproperties) (Required): The properties of an add provider request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings@2018-07-10
@@ -87,7 +87,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageMappingInputProperties](#storagemappinginputproperties): Storage mapping properties.
+* **properties**: [StorageMappingInputProperties](#storagemappinginputproperties): Storage mapping input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters@2018-07-10
@@ -97,7 +97,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AddVCenterRequestProperties](#addvcenterrequestproperties): vCenter properties.
+* **properties**: [AddVCenterRequestProperties](#addvcenterrequestproperties): The properties of an add vCenter request.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationPolicies@2018-07-10
@@ -107,7 +107,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreatePolicyInputProperties](#createpolicyinputproperties): Protection profile custom data details.
+* **properties**: [CreatePolicyInputProperties](#createpolicyinputproperties): Policy creation properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationProtectionIntents@2018-07-10
@@ -117,7 +117,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateProtectionIntentProperties](#createprotectionintentproperties): Replication protection intent custom data details.
+* **properties**: [CreateProtectionIntentProperties](#createprotectionintentproperties): Create protection intent input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationProtectionIntents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationRecoveryPlans@2018-07-10
@@ -127,7 +127,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateRecoveryPlanInputProperties](#createrecoveryplaninputproperties) (Required): Recovery plan custom details.
+* **properties**: [CreateRecoveryPlanInputProperties](#createrecoveryplaninputproperties) (Required): Recovery plan creation properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationRecoveryPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/replicationVaultSettings@2018-07-10
@@ -137,7 +137,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VaultSettingCreationInputProperties](#vaultsettingcreationinputproperties) (Required): Vault setting properties.
+* **properties**: [VaultSettingCreationInputProperties](#vaultsettingcreationinputproperties) (Required): Input to create vault setting.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationVaultSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigureAlertRequestProperties
@@ -149,7 +149,7 @@
 ## FabricCreationInputProperties
 ### Properties
 * **bcdrState**: string (ReadOnly): BCDR state of the fabric.
-* **customDetails**: [FabricSpecificCreationInput](#fabricspecificcreationinput): Fabric specific details.
+* **customDetails**: [FabricSpecificCreationInput](#fabricspecificcreationinput): Fabric provider specific settings.
 * **encryptionDetails**: [EncryptionDetails](#encryptiondetails) (ReadOnly): Encryption details for the fabric.
 * **friendlyName**: string (ReadOnly): Friendly name of the fabric.
 * **health**: string (ReadOnly): Health of fabric.
@@ -159,26 +159,25 @@
 
 ## FabricSpecificCreationInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### AzureFabricCreationInput
+### Azure
 #### Properties
 * **containerIds**: string[] (ReadOnly): The container Ids for the Azure fabric.
-* **instanceType**: 'Azure' (Required): Gets the class type.
-* **location**: string: The Location for the Azure fabric.
+* **instanceType**: 'Azure' (Required): Fabric provider specific settings.
+* **location**: string: The Location.
 
-### HyperVSiteDetails
+### HyperVSite
 #### Properties
-* **instanceType**: 'HyperVSite' (Required): Gets the class type.
+* **instanceType**: 'HyperVSite' (Required): HyperVSite fabric specific details.
 
-### InMageRcmFabricCreationInput
+### InMageRcm
 #### Properties
 * **agentDetails**: [AgentDetails](#agentdetails)[] (ReadOnly): The list of agent details.
-* **authCertificate**: string (WriteOnly)
+* **authCertificate**: string (WriteOnly): The certificate to be used for AAD authentication.
 * **controlPlaneUri**: string (ReadOnly): The control plane Uri.
 * **dataPlaneUri**: string (ReadOnly): The data plane Uri.
 * **dras**: [DraDetails](#dradetails)[] (ReadOnly): The list of DRAs.
-* **instanceType**: 'InMageRcm' (Required): Gets the class type.
+* **instanceType**: 'InMageRcm' (Required): InMageRcm specific policy details.
 * **physicalSiteId**: string: The ARM Id of the physical site.
 * **processServers**: [ProcessServerDetails](#processserverdetails)[] (ReadOnly): The list of process servers.
 * **pushInstallers**: [PushInstallerDetails](#pushinstallerdetails)[] (ReadOnly): The list of push installers.
@@ -188,14 +187,14 @@
 * **serviceContainerId**: string (ReadOnly): The service container Id.
 * **serviceEndpoint**: string (ReadOnly): The service endpoint.
 * **serviceResourceId**: string (ReadOnly): The service resource Id.
-* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly)
+* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly): Identity provider input.
 * **vmwareSiteId**: string: The ARM Id of the VMware site.
 
-### VmmDetails
+### VMM
 #### Properties
-* **instanceType**: 'VMM' (Required): Gets the class type.
+* **instanceType**: 'VMM' (Required): VMM fabric specific details.
 
-### VMwareDetails
+### VMware
 #### Properties
 * **agentCount**: string (ReadOnly): The number of source and target servers configured to talk to this CS.
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
@@ -209,7 +208,7 @@
 * **databaseServerLoad**: string (ReadOnly): The database server load.
 * **databaseServerLoadStatus**: string (ReadOnly): The database server load status.
 * **hostName**: string (ReadOnly): The host name.
-* **instanceType**: 'VMware' (Required): Gets the class type.
+* **instanceType**: 'VMware' (Required): Store the fabric details specific to the VMware fabric.
 * **ipAddress**: string (ReadOnly): The IP address.
 * **lastHeartbeat**: string (ReadOnly): The last heartbeat received from CS server.
 * **masterTargetServers**: [MasterTargetServer](#mastertargetserver)[] (ReadOnly): The list of Master Target servers associated with the fabric.
@@ -231,33 +230,33 @@
 * **webLoad**: string (ReadOnly): The web load.
 * **webLoadStatus**: string (ReadOnly): The web load status.
 
-### VMwareV2FabricCreationInput
+### VMwareV2
 #### Properties
-* **instanceType**: 'VMwareV2' (Required): Gets the class type.
-* **migrationSolutionId**: string (Required): The Migration solution ARM Id.
+* **instanceType**: 'VMwareV2' (Required): VMwareV2 fabric provider specific settings.
+* **migrationSolutionId**: string (Required): The ARM Id of the migration solution.
 * **serviceEndpoint**: string (ReadOnly): The service endpoint.
 * **serviceResourceId**: string (ReadOnly): The service resource Id.
 * **vmwareSiteId**: string (Required): The ARM Id of the VMware site.
 
 
-## AzureFabricCreationInput
+## Azure
 ### Properties
 * **containerIds**: string[] (ReadOnly): The container Ids for the Azure fabric.
-* **instanceType**: 'Azure' (Required): Gets the class type.
-* **location**: string: The Location for the Azure fabric.
+* **instanceType**: 'Azure' (Required): Fabric provider specific settings.
+* **location**: string: The Location.
 
-## HyperVSiteDetails
+## HyperVSite
 ### Properties
-* **instanceType**: 'HyperVSite' (Required): Gets the class type.
+* **instanceType**: 'HyperVSite' (Required): HyperVSite fabric specific details.
 
-## InMageRcmFabricCreationInput
+## InMageRcm
 ### Properties
 * **agentDetails**: [AgentDetails](#agentdetails)[] (ReadOnly): The list of agent details.
-* **authCertificate**: string (WriteOnly)
+* **authCertificate**: string (WriteOnly): The certificate to be used for AAD authentication.
 * **controlPlaneUri**: string (ReadOnly): The control plane Uri.
 * **dataPlaneUri**: string (ReadOnly): The data plane Uri.
 * **dras**: [DraDetails](#dradetails)[] (ReadOnly): The list of DRAs.
-* **instanceType**: 'InMageRcm' (Required): Gets the class type.
+* **instanceType**: 'InMageRcm' (Required): InMageRcm specific policy details.
 * **physicalSiteId**: string: The ARM Id of the physical site.
 * **processServers**: [ProcessServerDetails](#processserverdetails)[] (ReadOnly): The list of process servers.
 * **pushInstallers**: [PushInstallerDetails](#pushinstallerdetails)[] (ReadOnly): The list of push installers.
@@ -267,7 +266,7 @@
 * **serviceContainerId**: string (ReadOnly): The service container Id.
 * **serviceEndpoint**: string (ReadOnly): The service endpoint.
 * **serviceResourceId**: string (ReadOnly): The service resource Id.
-* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly)
+* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly): Identity provider input.
 * **vmwareSiteId**: string: The ARM Id of the VMware site.
 
 ## AgentDetails
@@ -333,9 +332,9 @@
 * **availableMemoryInBytes**: int (ReadOnly): The available memory.
 * **availableSpaceInBytes**: int (ReadOnly): The available disk space.
 * **freeSpacePercentage**: int (ReadOnly): The free disk space percentage.
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the process server.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
-* **historicHealth**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **historicHealth**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The historic health of the process server based on the health in last 24 hours.
 * **id**: string (ReadOnly): The process server Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the process server.
 * **memoryUsagePercentage**: int (ReadOnly): The memory usage percentage.
@@ -351,7 +350,7 @@
 
 ## PushInstallerDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the push installer.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The push installer Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the push installer.
@@ -360,7 +359,7 @@
 
 ## RcmProxyDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the RCM proxy.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The RCM proxy Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the RCM proxy.
@@ -369,7 +368,7 @@
 
 ## ReplicationAgentDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the replication agent.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The replication agent Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the replication agent.
@@ -378,7 +377,7 @@
 
 ## ReprotectAgentDetails
 ### Properties
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the reprotect agent.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors.
 * **id**: string (ReadOnly): The reprotect agent Id.
 * **lastHeartbeatUtc**: string (ReadOnly): The last heartbeat received from the reprotect agent.
@@ -387,17 +386,17 @@
 
 ## IdentityProviderInput
 ### Properties
-* **aadAuthority**: string (Required, WriteOnly)
-* **applicationId**: string (Required, WriteOnly)
-* **audience**: string (Required, WriteOnly)
-* **objectId**: string (Required, WriteOnly)
-* **tenantId**: string (Required, WriteOnly)
+* **aadAuthority**: string (Required, WriteOnly): The base authority for Azure Active Directory authentication.
+* **applicationId**: string (Required, WriteOnly): The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **audience**: string (Required, WriteOnly): The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **objectId**: string (Required, WriteOnly): The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+* **tenantId**: string (Required, WriteOnly): The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 
-## VmmDetails
+## VMM
 ### Properties
-* **instanceType**: 'VMM' (Required): Gets the class type.
+* **instanceType**: 'VMM' (Required): VMM fabric specific details.
 
-## VMwareDetails
+## VMware
 ### Properties
 * **agentCount**: string (ReadOnly): The number of source and target servers configured to talk to this CS.
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
@@ -411,7 +410,7 @@
 * **databaseServerLoad**: string (ReadOnly): The database server load.
 * **databaseServerLoadStatus**: string (ReadOnly): The database server load status.
 * **hostName**: string (ReadOnly): The host name.
-* **instanceType**: 'VMware' (Required): Gets the class type.
+* **instanceType**: 'VMware' (Required): Store the fabric details specific to the VMware fabric.
 * **ipAddress**: string (ReadOnly): The IP address.
 * **lastHeartbeat**: string (ReadOnly): The last heartbeat received from CS server.
 * **masterTargetServers**: [MasterTargetServer](#mastertargetserver)[] (ReadOnly): The list of Master Target servers associated with the fabric.
@@ -485,7 +484,7 @@
 * **cpuLoad**: string (ReadOnly): The percentage of the CPU load.
 * **cpuLoadStatus**: string (ReadOnly): The CPU load status.
 * **friendlyName**: string (ReadOnly): The Process Server's friendly name.
-* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of the DRA.
+* **health**: 'Critical' | 'None' | 'Normal' | 'Warning' (ReadOnly): The health of Process Server.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): Health errors.
 * **hostId**: string (ReadOnly): The agent generated Id.
 * **id**: string (ReadOnly): The Process Server Id.
@@ -525,10 +524,10 @@
 * **accountId**: string (ReadOnly): The CS RunAs account Id.
 * **accountName**: string (ReadOnly): The CS RunAs account name.
 
-## VMwareV2FabricCreationInput
+## VMwareV2
 ### Properties
-* **instanceType**: 'VMwareV2' (Required): Gets the class type.
-* **migrationSolutionId**: string (Required): The Migration solution ARM Id.
+* **instanceType**: 'VMwareV2' (Required): VMwareV2 fabric provider specific settings.
+* **migrationSolutionId**: string (Required): The ARM Id of the migration solution.
 * **serviceEndpoint**: string (ReadOnly): The service endpoint.
 * **serviceResourceId**: string (ReadOnly): The service resource Id.
 * **vmwareSiteId**: string (Required): The ARM Id of the VMware site.
@@ -541,81 +540,64 @@
 
 ## CreateNetworkMappingInputProperties
 ### Properties
-* **fabricSpecificDetails**: [FabricSpecificCreateNetworkMappingInput](#fabricspecificcreatenetworkmappinginput) (WriteOnly)
+* **fabricSpecificDetails**: [FabricSpecificCreateNetworkMappingInput](#fabricspecificcreatenetworkmappinginput) (WriteOnly): Input details specific to fabrics during Network Mapping.
 * **fabricSpecificSettings**: [NetworkMappingFabricSpecificSettings](#networkmappingfabricspecificsettings) (ReadOnly): Network Mapping fabric specific settings.
 * **primaryFabricFriendlyName**: string (ReadOnly): The primary fabric friendly name.
 * **primaryNetworkFriendlyName**: string (ReadOnly): The primary network friendly name.
 * **primaryNetworkId**: string (ReadOnly): The primary network id for network mapping.
 * **recoveryFabricArmId**: string (ReadOnly): The recovery fabric ARM id.
 * **recoveryFabricFriendlyName**: string (ReadOnly): The recovery fabric friendly name.
-* **recoveryFabricName**: string (WriteOnly)
+* **recoveryFabricName**: string (WriteOnly): Recovery fabric Name.
 * **recoveryNetworkFriendlyName**: string (ReadOnly): The recovery network friendly name.
-* **recoveryNetworkId**: string: The recovery network id for network mapping.
+* **recoveryNetworkId**: string: Recovery network Id.
 * **state**: string (ReadOnly): The pairing state for network mapping.
 
 ## FabricSpecificCreateNetworkMappingInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### AzureToAzureCreateNetworkMappingInput
+### AzureToAzure
 #### Properties
-* **instanceType**: 'AzureToAzure' (Required): The instance type.
-* **primaryNetworkId**: string (WriteOnly)
+* **instanceType**: 'AzureToAzure' (Required): A2A Network Mapping fabric specific settings.
+* **primaryNetworkId**: string (WriteOnly): The primary azure vnet Id.
 
-### VmmToAzureCreateNetworkMappingInput
+### VmmToAzure
 #### Properties
-* **instanceType**: 'VmmToAzure' (Required): The instance type.
+* **instanceType**: 'VmmToAzure' (Required): E2A Network Mapping fabric specific settings.
 
-### VmmToVmmCreateNetworkMappingInput
+### VmmToVmm
 #### Properties
-* **instanceType**: 'VmmToVmm' (Required): The instance type.
+* **instanceType**: 'VmmToVmm' (Required): E2E Network Mapping fabric specific settings.
 
 
-## AzureToAzureCreateNetworkMappingInput
+## AzureToAzure
 ### Properties
-* **instanceType**: 'AzureToAzure' (Required): The instance type.
-* **primaryNetworkId**: string (WriteOnly)
+* **instanceType**: 'AzureToAzure' (Required): A2A Network Mapping fabric specific settings.
+* **primaryNetworkId**: string (WriteOnly): The primary azure vnet Id.
 
-## VmmToAzureCreateNetworkMappingInput
+## VmmToAzure
 ### Properties
-* **instanceType**: 'VmmToAzure' (Required): The instance type.
+* **instanceType**: 'VmmToAzure' (Required): E2A Network Mapping fabric specific settings.
 
-## VmmToVmmCreateNetworkMappingInput
+## VmmToVmm
 ### Properties
-* **instanceType**: 'VmmToVmm' (Required): The instance type.
+* **instanceType**: 'VmmToVmm' (Required): E2E Network Mapping fabric specific settings.
 
 ## NetworkMappingFabricSpecificSettings
 * **Discriminator**: instanceType
-
 ### Base Properties
-### AzureToAzureNetworkMappingSettings
+### AzureToAzure
 #### Properties
-* **instanceType**: 'AzureToAzure' (Required): Gets the Instance type.
-* **primaryFabricLocation**: string (ReadOnly): The primary fabric location.
-* **recoveryFabricLocation**: string (ReadOnly): The recovery fabric location.
+* **instanceType**: 'AzureToAzure' (Required): A2A Network Mapping fabric specific settings.
+* **primaryNetworkId**: string (WriteOnly): The primary azure vnet Id.
 
-### VmmToAzureNetworkMappingSettings
+### VmmToAzure
 #### Properties
-* **instanceType**: 'VmmToAzure' (Required): Gets the Instance type.
+* **instanceType**: 'VmmToAzure' (Required): E2A Network Mapping fabric specific settings.
 
-### VmmToVmmNetworkMappingSettings
+### VmmToVmm
 #### Properties
-* **instanceType**: 'VmmToVmm' (Required): Gets the Instance type.
+* **instanceType**: 'VmmToVmm' (Required): E2E Network Mapping fabric specific settings.
 
-
-## AzureToAzureNetworkMappingSettings
-### Properties
-* **instanceType**: 'AzureToAzure' (Required): Gets the Instance type.
-* **primaryFabricLocation**: string (ReadOnly): The primary fabric location.
-* **recoveryFabricLocation**: string (ReadOnly): The recovery fabric location.
-
-## VmmToAzureNetworkMappingSettings
-### Properties
-* **instanceType**: 'VmmToAzure' (Required): Gets the Instance type.
-
-## VmmToVmmNetworkMappingSettings
-### Properties
-* **instanceType**: 'VmmToVmm' (Required): Gets the Instance type.
 
 ## CreateProtectionContainerInputProperties
 ### Properties
@@ -625,7 +607,7 @@
 * **friendlyName**: string (ReadOnly): The name.
 * **pairingStatus**: string (ReadOnly): The pairing status of this cloud.
 * **protectedItemCount**: int (ReadOnly): Number of protected PEs
-* **providerSpecificInput**: [ReplicationProviderSpecificContainerCreationInput](#replicationproviderspecificcontainercreationinput)[] (WriteOnly)
+* **providerSpecificInput**: [ReplicationProviderSpecificContainerCreationInput](#replicationproviderspecificcontainercreationinput)[] (WriteOnly): Provider specific inputs for container creation.
 * **role**: string (ReadOnly): The role of this cloud.
 
 ## ProtectionContainerFabricSpecificDetails
@@ -634,24 +616,23 @@
 
 ## ReplicationProviderSpecificContainerCreationInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### VMwareCbtContainerCreationInput
+### 6c7da455-506f-43ff-a16a-8eb101aebb70
 #### Properties
-* **instanceType**: '6c7da455-506f-43ff-a16a-8eb101aebb70' (Required): The class type.
+* **instanceType**: '6c7da455-506f-43ff-a16a-8eb101aebb70' (Required): VMwareCbt container creation input.
 
-### A2AContainerCreationInput
+### A2A
 #### Properties
-* **instanceType**: 'A2A' (Required): The class type.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
 
-## VMwareCbtContainerCreationInput
+## 6c7da455-506f-43ff-a16a-8eb101aebb70
 ### Properties
-* **instanceType**: '6c7da455-506f-43ff-a16a-8eb101aebb70' (Required): The class type.
+* **instanceType**: '6c7da455-506f-43ff-a16a-8eb101aebb70' (Required): VMwareCbt container creation input.
 
-## A2AContainerCreationInput
+## A2A
 ### Properties
-* **instanceType**: 'A2A' (Required): The class type.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
 ## EnableMigrationInputProperties
 ### Properties
@@ -663,8 +644,8 @@
 * **migrationState**: 'DisableMigrationFailed' | 'DisableMigrationInProgress' | 'EnableMigrationFailed' | 'EnableMigrationInProgress' | 'InitialSeedingFailed' | 'InitialSeedingInProgress' | 'MigrationFailed' | 'MigrationInProgress' | 'MigrationSucceeded' | 'None' | 'Replicating' (ReadOnly): The migration status.
 * **migrationStateDescription**: string (ReadOnly): The migration state description.
 * **policyFriendlyName**: string (ReadOnly): The name of policy governing this item.
-* **policyId**: string (Required): The ARM Id of policy governing this item.
-* **providerSpecificDetails**: [EnableMigrationProviderSpecificInput](#enablemigrationproviderspecificinput) (Required): Migration provider specific settings.
+* **policyId**: string (Required): The policy Id.
+* **providerSpecificDetails**: [EnableMigrationProviderSpecificInput](#enablemigrationproviderspecificinput) (Required): Enable migration provider specific input.
 * **recoveryServicesProviderId**: string (ReadOnly): The recovery services provider ARM Id.
 * **testMigrateState**: 'None' | 'TestMigrationCleanupInProgress' | 'TestMigrationFailed' | 'TestMigrationInProgress' | 'TestMigrationSucceeded' (ReadOnly): The test migrate state.
 * **testMigrateStateDescription**: string (ReadOnly): The test migrate state description.
@@ -677,60 +658,59 @@
 
 ## EnableMigrationProviderSpecificInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### VMwareCbtEnableMigrationInput
+### VMwareCbt
 #### Properties
 * **dataMoverRunAsAccountId**: string (Required): The data mover RunAs account Id.
-* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly)
-* **instanceType**: 'VMwareCbt' (Required): The class type.
+* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
+* **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License Type of the VM to be used.
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **snapshotRunAsAccountId**: string (Required): The snapshot RunAs account Id.
-* **targetAvailabilitySetId**: string: The target availability set Id.
+* **targetAvailabilitySetId**: string: The target availability set ARM Id.
 * **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
 * **targetLocation**: string (ReadOnly): The target location.
-* **targetNetworkId**: string (Required): The target network Id.
-* **targetResourceGroupId**: string (Required): The target resource group Id.
-* **targetSubnetName**: string (WriteOnly)
-* **targetVmName**: string: Target VM name.
+* **targetNetworkId**: string (Required): The target network ARM Id.
+* **targetResourceGroupId**: string (Required): The target resource group ARM Id.
+* **targetSubnetName**: string (WriteOnly): The target subnet name.
+* **targetVmName**: string: The target VM name.
 * **targetVmSize**: string: The target VM size.
 * **vmNics**: [VMwareCbtNicDetails](#vmwarecbtnicdetails)[] (ReadOnly): The network details.
 * **vmwareMachineId**: string (Required): The ARM Id of the VM discovered in VMware.
 
 
-## VMwareCbtEnableMigrationInput
+## VMwareCbt
 ### Properties
 * **dataMoverRunAsAccountId**: string (Required): The data mover RunAs account Id.
-* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly)
-* **instanceType**: 'VMwareCbt' (Required): The class type.
+* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
+* **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
 * **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License Type of the VM to be used.
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
 * **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **snapshotRunAsAccountId**: string (Required): The snapshot RunAs account Id.
-* **targetAvailabilitySetId**: string: The target availability set Id.
+* **targetAvailabilitySetId**: string: The target availability set ARM Id.
 * **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
 * **targetLocation**: string (ReadOnly): The target location.
-* **targetNetworkId**: string (Required): The target network Id.
-* **targetResourceGroupId**: string (Required): The target resource group Id.
-* **targetSubnetName**: string (WriteOnly)
-* **targetVmName**: string: Target VM name.
+* **targetNetworkId**: string (Required): The target network ARM Id.
+* **targetResourceGroupId**: string (Required): The target resource group ARM Id.
+* **targetSubnetName**: string (WriteOnly): The target subnet name.
+* **targetVmName**: string: The target VM name.
 * **targetVmSize**: string: The target VM size.
 * **vmNics**: [VMwareCbtNicDetails](#vmwarecbtnicdetails)[] (ReadOnly): The network details.
 * **vmwareMachineId**: string (Required): The ARM Id of the VM discovered in VMware.
 
 ## VMwareCbtDiskInput
 ### Properties
-* **diskId**: string (Required, WriteOnly)
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (WriteOnly)
-* **isOSDisk**: string (Required, WriteOnly)
-* **logStorageAccountId**: string (Required, WriteOnly)
-* **logStorageAccountSasSecretName**: string (Required, WriteOnly)
+* **diskId**: string (Required, WriteOnly): The disk Id.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The disk type.
+* **isOSDisk**: string (Required, WriteOnly): A value indicating whether the disk is the OS disk.
+* **logStorageAccountId**: string (Required, WriteOnly): The log storage account ARM Id.
+* **logStorageAccountSasSecretName**: string (Required, WriteOnly): The key vault secret name of the log storage account.
 
 ## VMwareCbtProtectedDiskDetails
 ### Properties
@@ -738,7 +718,7 @@
 * **diskId**: string (ReadOnly): The disk id.
 * **diskName**: string (ReadOnly): The disk name.
 * **diskPath**: string (ReadOnly): The disk path.
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (ReadOnly): The disk type.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (ReadOnly): The disk type.
 * **isOSDisk**: string (ReadOnly): A value indicating whether the disk is the OS disk.
 * **logStorageAccountId**: string (ReadOnly): The log storage account ARM Id.
 * **logStorageAccountSasSecretName**: string (ReadOnly): The key vault secret name of the log storage account.
@@ -754,7 +734,7 @@
 * **sourceIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type.
 * **sourceNetworkId**: string (ReadOnly): Source network Id.
 * **targetIPAddress**: string (ReadOnly): The target IP address.
-* **targetIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type.
+* **targetIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The target IP address type.
 * **targetSubnetName**: string (ReadOnly): Target subnet name.
 
 ## EnableProtectionInputProperties
@@ -769,15 +749,15 @@
 * **lastSuccessfulFailoverTime**: string (ReadOnly): The Last successful failover time.
 * **lastSuccessfulTestFailoverTime**: string (ReadOnly): The Last successful test failover time.
 * **policyFriendlyName**: string (ReadOnly): The name of Policy governing this PE.
-* **policyId**: string: The ID of Policy governing this PE.
+* **policyId**: string: The Policy Id.
 * **primaryFabricFriendlyName**: string (ReadOnly): The friendly name of the primary fabric.
 * **primaryFabricProvider**: string (ReadOnly): The fabric provider of the primary fabric.
 * **primaryProtectionContainerFriendlyName**: string (ReadOnly): The name of primary protection container friendly name.
-* **protectableItemId**: string: The protected item ARM Id.
+* **protectableItemId**: string: The protectable item Id.
 * **protectedItemType**: string (ReadOnly): The type of protected item type.
 * **protectionState**: string (ReadOnly): The protection status.
 * **protectionStateDescription**: string (ReadOnly): The protection state description.
-* **providerSpecificDetails**: [EnableProtectionProviderSpecificInput](#enableprotectionproviderspecificinput): Replication provider specific settings.
+* **providerSpecificDetails**: [EnableProtectionProviderSpecificInput](#enableprotectionproviderspecificinput): Enable protection provider specific input.
 * **recoveryContainerId**: string (ReadOnly): The recovery container Id.
 * **recoveryFabricFriendlyName**: string (ReadOnly): The friendly name of recovery fabric.
 * **recoveryFabricId**: string (ReadOnly): The Arm Id of recovery fabric.
@@ -795,66 +775,15 @@
 
 ## EnableProtectionProviderSpecificInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### A2AEnableProtectionInput
+### A2A
 #### Properties
-* **agentVersion**: string (ReadOnly): The agent version.
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo) (WriteOnly)
-* **fabricObjectId**: string: The fabric specific object Id of the virtual machine.
-* **initialPrimaryFabricLocation**: string (ReadOnly): The initial primary fabric location.
-* **initialPrimaryZone**: string (ReadOnly): The initial primary availability zone.
-* **initialRecoveryFabricLocation**: string (ReadOnly): The initial recovery fabric location.
-* **initialRecoveryZone**: string (ReadOnly): The initial recovery availability zone.
-* **instanceType**: 'A2A' (Required): The class type.
-* **isReplicationAgentUpdateRequired**: bool (ReadOnly): A value indicating whether replication agent update is required.
-* **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
-* **lastRpoCalculatedTime**: string (ReadOnly): The time (in UTC) when the last RPO value was calculated by Protection Service.
-* **lifecycleId**: string (ReadOnly): An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
-* **managementId**: string (ReadOnly): The management Id.
-* **monitoringJobType**: string (ReadOnly): The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-* **monitoringPercentageCompletion**: int (ReadOnly): The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-* **multiVmGroupCreateOption**: 'AutoCreated' | 'UserSpecified' (ReadOnly): Whether Multi VM group is auto created or specified by user.
-* **multiVmGroupId**: string (ReadOnly): The multi vm group Id.
-* **multiVmGroupName**: string: The multi vm group name.
-* **osType**: string (ReadOnly): The type of operating system.
-* **primaryFabricLocation**: string (ReadOnly): Primary fabric location.
-* **protectedDisks**: [A2AProtectedDiskDetails](#a2aprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
-* **protectedManagedDisks**: [A2AProtectedManagedDiskDetails](#a2aprotectedmanageddiskdetails)[] (ReadOnly): The list of protected managed disks.
-* **recoveryAvailabilitySet**: string (ReadOnly): The recovery availability set.
-* **recoveryAvailabilitySetId**: string (WriteOnly)
-* **recoveryAvailabilityZone**: string: The recovery availability zone.
-* **recoveryAzureNetworkId**: string (WriteOnly)
-* **recoveryAzureResourceGroupId**: string (ReadOnly): The recovery resource group.
-* **recoveryAzureVMName**: string (ReadOnly): The name of recovery virtual machine.
-* **recoveryAzureVMSize**: string (ReadOnly): The size of recovery virtual machine.
-* **recoveryBootDiagStorageAccountId**: string: The recovery boot diagnostic storage account Arm Id.
-* **recoveryCloudService**: string (ReadOnly): The recovery cloud service.
-* **recoveryCloudServiceId**: string (WriteOnly)
-* **recoveryContainerId**: string (WriteOnly)
-* **recoveryFabricLocation**: string (ReadOnly): The recovery fabric location.
-* **recoveryFabricObjectId**: string (ReadOnly): The recovery fabric object Id.
-* **recoveryProximityPlacementGroupId**: string: The recovery proximity placement group Id.
-* **recoveryResourceGroupId**: string (WriteOnly)
-* **recoverySubnetName**: string (WriteOnly)
-* **rpoInSeconds**: int (ReadOnly): The last RPO value in seconds.
-* **selectedRecoveryAzureNetworkId**: string (ReadOnly): The recovery virtual network.
-* **selectedTfoAzureNetworkId**: string (ReadOnly): The test failover virtual network.
-* **testFailoverRecoveryFabricObjectId**: string (ReadOnly): The test failover fabric object Id.
-* **tfoAzureVMName**: string (ReadOnly): The test failover VM name.
-* **unprotectedDisks**: [A2AUnprotectedDiskDetails](#a2aunprotecteddiskdetails)[] (ReadOnly): The list of unprotected disks.
-* **vmDisks**: [A2AVmDiskInputDetails](#a2avmdiskinputdetails)[] (WriteOnly)
-* **vmEncryptionType**: 'NotEncrypted' | 'OnePassEncrypted' | 'TwoPassEncrypted' (ReadOnly): The encryption type of the VM.
-* **vmManagedDisks**: [A2AVmManagedDiskInputDetails](#a2avmmanageddiskinputdetails)[] (WriteOnly)
-* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The virtual machine nic details.
-* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
-* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
-* **vmSyncedConfigDetails**: [AzureToAzureVmSyncedConfigDetails](#azuretoazurevmsyncedconfigdetails) (ReadOnly): Azure to Azure VM synced configuration details.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-### HyperVReplicaReplicationDetails
+### HyperVReplica2012
 #### Properties
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplica2012' (Required): The class type.
+* **instanceType**: 'HyperVReplica2012' (Required): Hyper-V Replica Blue specific protection profile details.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
 * **vmId**: string (ReadOnly): The virtual machine Id.
@@ -862,10 +791,10 @@
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### HyperVReplicaBlueReplicationDetails
+### HyperVReplica2012R2
 #### Properties
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplica2012R2' (Required): The class type.
+* **instanceType**: 'HyperVReplica2012R2' (Required): Hyper-V Replica Blue specific protection profile details.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
 * **vmId**: string (ReadOnly): The virtual machine Id.
@@ -873,21 +802,21 @@
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### HyperVReplicaAzureEnableProtectionInput
+### HyperVReplicaAzure
 #### Properties
 * **azureVmDiskDetails**: [AzureVmDiskDetails](#azurevmdiskdetails)[] (ReadOnly): Azure VM Disk details.
-* **disksToInclude**: string[] (WriteOnly)
+* **disksToInclude**: string[] (WriteOnly): The list of VHD IDs of disks to be protected.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **encryption**: string (ReadOnly): The encryption info.
-* **hvHostVmId**: string (WriteOnly)
+* **hvHostVmId**: string (WriteOnly): The Hyper-V host Vm Id.
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplicaAzure' (Required): The class type.
+* **instanceType**: 'HyperVReplicaAzure' (Required): Hyper-V Replica Azure specific protection profile details.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **licenseType**: string (ReadOnly): License Type of the VM to be used.
-* **logStorageAccountId**: string (WriteOnly)
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
 * **oSDetails**: [OSDetails](#osdetails) (ReadOnly): Disk Details.
-* **osType**: string (WriteOnly)
+* **osType**: string (WriteOnly): The OS type associated with vm.
 * **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
 * **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
 * **recoveryAzureResourceGroupId**: string (ReadOnly): The target resource group Id.
@@ -899,20 +828,20 @@
 * **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
 * **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
 * **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
-* **targetAvailabilitySetId**: string (WriteOnly)
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
 * **targetAvailabilityZone**: string: The target availability zone.
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetProximityPlacementGroupId**: string: The target proximity placement group Id.
-* **targetStorageAccountId**: string (WriteOnly)
-* **targetVmSize**: string (WriteOnly)
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
+* **targetStorageAccountId**: string (WriteOnly): The storage account name.
+* **targetVmSize**: string (WriteOnly): The target VM size.
 * **useManagedDisks**: string: A value indicating whether managed disks should be used during failover.
-* **vhdId**: string (WriteOnly)
+* **vhdId**: string (WriteOnly): The OS disk VHD id associated with vm.
 * **vmId**: string (ReadOnly): The virtual machine Id.
-* **vmName**: string (WriteOnly)
+* **vmName**: string (WriteOnly): The Vm Name.
 * **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
@@ -920,7 +849,7 @@
 ### HyperVReplicaBaseReplicationDetails
 #### Properties
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required): The class type.
+* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required): Hyper V replica provider specific settings base class.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
 * **vmId**: string (ReadOnly): The virtual machine Id.
@@ -928,54 +857,54 @@
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMageEnableProtectionInput
+### InMage
 #### Properties
 * **activeSiteType**: string (ReadOnly): The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
 * **agentDetails**: [InMageAgentDetails](#inmageagentdetails) (ReadOnly): The details of the InMage agent.
 * **azureStorageAccountId**: string (ReadOnly): A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
 * **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
-* **consistencyPoints**: [InMageReplicationDetailsConsistencyPoints](#inmagereplicationdetailsconsistencypoints) (ReadOnly): The collection of Consistency points.
-* **datastoreName**: string (WriteOnly)
+* **consistencyPoints**: [Dictionary<string,DateTime>](#dictionarystringdatetime) (ReadOnly): The collection of Consistency points.
+* **datastoreName**: string (WriteOnly): The target data store name.
 * **datastores**: string[] (ReadOnly): The data stores of the on-premise machine Value can be list of strings that contain data store names
 * **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine.
-* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly)
+* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly): DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
-* **disksToInclude**: string[] (WriteOnly)
+* **disksToInclude**: string[] (WriteOnly): The disks to include list.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
-* **instanceType**: 'InMage' (Required): The class type.
+* **instanceType**: 'InMage' (Required): InMage specific protection profile details.
 * **ipAddress**: string (ReadOnly): The source IP address.
 * **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
-* **masterTargetId**: string (Required): The master target Id.
-* **multiVmGroupId**: string (Required): The multi vm group Id, if any.
-* **multiVmGroupName**: string (Required): The multi vm group name, if any.
+* **masterTargetId**: string (Required): The Master Target Id.
+* **multiVmGroupId**: string (Required): The multi vm group Id.
+* **multiVmGroupName**: string (Required): The multi vm group name.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether the multi vm sync is enabled or disabled.
 * **osDetails**: [OSDiskDetails](#osdiskdetails) (ReadOnly): Details of the OS Disk.
 * **osVersion**: string (ReadOnly): The OS Version of the protected item.
-* **processServerId**: string (Required): The process server Id.
+* **processServerId**: string (Required): The Process Server Id.
 * **protectedDisks**: [InMageProtectedDiskDetails](#inmageprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **protectionStage**: string (ReadOnly): The protection stage.
 * **rebootAfterUpdateStatus**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
 * **replicaId**: string (ReadOnly): The replica id of the protected item.
 * **resyncDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **retentionDrive**: string (Required, WriteOnly)
+* **retentionDrive**: string (Required, WriteOnly): The retention drive to use on the MT.
 * **retentionWindowEnd**: string (ReadOnly): The retention window end time.
 * **retentionWindowStart**: string (ReadOnly): The retention window start time.
 * **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
-* **runAsAccountId**: string (WriteOnly)
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
 * **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
 * **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
 * **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
 * **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors
 * **vCenterInfrastructureId**: string (ReadOnly): The vCenter infrastructure Id.
-* **vmFriendlyName**: string (WriteOnly)
+* **vmFriendlyName**: string (WriteOnly): The Vm Name.
 * **vmId**: string (ReadOnly): The virtual machine Id.
 * **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMageAzureV2EnableProtectionInput
+### InMageAzureV2
 #### Properties
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
 * **agentVersion**: string (ReadOnly): The agent version.
@@ -983,13 +912,13 @@
 * **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
 * **datastores**: string[] (ReadOnly): The data stores of the on-premise machine. Value can be list of strings that contain data store names.
 * **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine. Value can be vCenter or physical.
-* **diskEncryptionSetId**: string (WriteOnly)
+* **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
-* **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly)
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (WriteOnly)
+* **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
-* **instanceType**: 'InMageAzureV2' (Required): The class type.
+* **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
 * **ipAddress**: string (ReadOnly): The source IP address.
 * **isAgentUpdateRequired**: string (ReadOnly): A value indicating whether installed agent needs to be updated.
 * **isRebootAfterUpdateRequired**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
@@ -997,15 +926,15 @@
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
 * **licenseType**: string (ReadOnly): License Type of the VM to be used.
-* **logStorageAccountId**: string (WriteOnly)
-* **masterTargetId**: string: The master target Id.
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
+* **masterTargetId**: string: The Master target Id.
 * **multiVmGroupId**: string: The multi vm group Id.
 * **multiVmGroupName**: string: The multi vm group name.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi vm sync is enabled or disabled.
 * **osDiskId**: string (ReadOnly): The id of the disk containing the OS.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **osVersion**: string (ReadOnly): The OS Version of the protected item.
-* **processServerId**: string: The process server Id.
+* **processServerId**: string: The Process Server Id.
 * **processServerName**: string (ReadOnly): The process server name.
 * **protectedDisks**: [InMageAzureV2ProtectedDiskDetails](#inmageazurev2protecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **protectedManagedDisks**: [InMageAzureV2ManagedDiskDetails](#inmageazurev2manageddiskdetails)[] (ReadOnly): The list of protected managed disks.
@@ -1019,23 +948,23 @@
 * **replicaId**: string (ReadOnly): The replica id of the protected item.
 * **resyncProgressPercentage**: int (ReadOnly): The resync progress percentage.
 * **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
-* **runAsAccountId**: string (WriteOnly)
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
 * **selectedRecoveryAzureNetworkId**: string (ReadOnly): The selected recovery azure network Id.
 * **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
 * **selectedTfoAzureNetworkId**: string (ReadOnly): The test failover virtual network.
 * **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
 * **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
-* **storageAccountId**: string (WriteOnly)
-* **targetAvailabilitySetId**: string (WriteOnly)
+* **storageAccountId**: string (WriteOnly): The storage account name.
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
 * **targetAvailabilityZone**: string: The target availability zone.
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetProximityPlacementGroupId**: string: The target proximity placement group Id.
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
 * **targetVmId**: string (ReadOnly): The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
-* **targetVmSize**: string (WriteOnly)
+* **targetVmSize**: string (WriteOnly): The target VM size.
 * **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
 * **useManagedDisks**: string (ReadOnly): A value indicating whether managed disks should be used during failover.
 * **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors.
@@ -1046,204 +975,53 @@
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMageRcmEnableProtectionInput
+### InMageRcm
 #### Properties
-* **agentUpgradeBlockingErrorDetails**: [InMageRcmAgentUpgradeBlockingErrorDetails](#inmagercmagentupgradeblockingerrordetails)[] (ReadOnly): The agent upgrade blocking error information.
-* **agentUpgradeState**: 'Commit' | 'Completed' | 'None' | 'Started' (ReadOnly): The agent auto upgrade state.
-* **allocatedMemoryInMB**: int (ReadOnly): The allocated memory in MB.
-* **discoveryType**: string (ReadOnly): The type of the discovered VM.
-* **disksDefault**: [InMageRcmDisksDefaultInput](#inmagercmdisksdefaultinput) (WriteOnly)
-* **disksToInclude**: [InMageRcmDiskInput](#inmagercmdiskinput)[] (WriteOnly)
-* **fabricDiscoveryMachineId**: string: The ARM Id of the discovered VM.
-* **failoverRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was failed over.
-* **firmwareType**: string (ReadOnly): The firmware type.
-* **initialReplicationProcessedBytes**: int (ReadOnly): The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
-* **initialReplicationProgressPercentage**: int (ReadOnly): The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
-* **initialReplicationTransferredBytes**: int (ReadOnly): The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
-* **instanceType**: 'InMageRcm' (Required): The class type.
-* **internalIdentifier**: string (ReadOnly): The virtual machine internal identifier.
-* **isLastUpgradeSuccessful**: string (ReadOnly): A value indicating whether last agent upgrade was successful or not.
-* **lastAgentUpgradeErrorDetails**: [InMageRcmLastAgentUpgradeErrorDetails](#inmagercmlastagentupgradeerrordetails)[] (ReadOnly): The last agent upgrade error information.
-* **lastAgentUpgradeFailedJobId**: string (ReadOnly): The last agent upgrade failed or cancelled job Id.
-* **lastAgentUpgradeType**: string (ReadOnly): The last agent upgrade type.
-* **lastRecoveryPointId**: string (ReadOnly): The last recovery point Id.
-* **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **lastRpoCalculatedTime**: string (ReadOnly): The last recovery point objective calculated time.
-* **lastRpoInSeconds**: int (ReadOnly): The last recovery point objective value.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License Type of the VM to be used.
-* **mobilityAgentDetails**: [InMageRcmMobilityAgentDetails](#inmagercmmobilityagentdetails) (ReadOnly): InMageRcm mobility agent details.
-* **multiVmGroupName**: string: The multi VM group name.
-* **osType**: string (ReadOnly): The type of the OS on the VM.
-* **processorCoreCount**: int (ReadOnly): The processor core count.
-* **processServerId**: string: The process server Id.
-* **processServerName**: string (ReadOnly): The process server name.
-* **protectedDisks**: [InMageRcmProtectedDiskDetails](#inmagercmprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
-* **resyncProcessedBytes**: int (ReadOnly): The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
-* **resyncProgressPercentage**: int (ReadOnly): The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
-* **resyncRequired**: string (ReadOnly): A value indicating whether resync is required.
-* **resyncState**: 'None' | 'PreparedForResynchronization' | 'StartedResynchronization' (ReadOnly): The resync state.
-* **resyncTransferredBytes**: int (ReadOnly): The resync transferred bytes from source VM to azure for all selected disks on source VM.
-* **runAsAccountId**: string: The run-as account Id.
-* **targetAvailabilitySetId**: string: The target availability set Id.
-* **targetAvailabilityZone**: string: The target availability zone.
-* **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
-* **targetGeneration**: string (ReadOnly): The target generation.
-* **targetNetworkId**: string: The target network Id.
-* **targetProximityPlacementGroupId**: string: The target proximity placement group Id.
-* **targetResourceGroupId**: string: The target resource group Id.
-* **targetSubnetName**: string (WriteOnly)
-* **targetVmName**: string: Target VM name.
-* **targetVmSize**: string: The target VM size.
-* **testNetworkId**: string: The test network Id.
-* **testSubnetName**: string (WriteOnly)
-* **vmNics**: [InMageRcmNicDetails](#inmagercmnicdetails)[] (ReadOnly): The network details.
+* **agentDetails**: [AgentDetails](#agentdetails)[] (ReadOnly): The list of agent details.
+* **authCertificate**: string (WriteOnly): The certificate to be used for AAD authentication.
+* **controlPlaneUri**: string (ReadOnly): The control plane Uri.
+* **dataPlaneUri**: string (ReadOnly): The data plane Uri.
+* **dras**: [DraDetails](#dradetails)[] (ReadOnly): The list of DRAs.
+* **instanceType**: 'InMageRcm' (Required): InMageRcm specific policy details.
+* **physicalSiteId**: string: The ARM Id of the physical site.
+* **processServers**: [ProcessServerDetails](#processserverdetails)[] (ReadOnly): The list of process servers.
+* **pushInstallers**: [PushInstallerDetails](#pushinstallerdetails)[] (ReadOnly): The list of push installers.
+* **rcmProxies**: [RcmProxyDetails](#rcmproxydetails)[] (ReadOnly): The list of RCM proxies.
+* **replicationAgents**: [ReplicationAgentDetails](#replicationagentdetails)[] (ReadOnly): The list of replication agents.
+* **reprotectAgents**: [ReprotectAgentDetails](#reprotectagentdetails)[] (ReadOnly): The list of reprotect agents.
+* **serviceContainerId**: string (ReadOnly): The service container Id.
+* **serviceEndpoint**: string (ReadOnly): The service endpoint.
+* **serviceResourceId**: string (ReadOnly): The service resource Id.
+* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly): Identity provider input.
+* **vmwareSiteId**: string: The ARM Id of the VMware site.
 
-### SanEnableProtectionInput
+### San
 #### Properties
-* **instanceType**: 'San' (Required): The class type.
+* **instanceType**: 'San' (Required): San enable protection provider specific input.
 
 
-## A2AEnableProtectionInput
+## HyperVReplica2012
 ### Properties
-* **agentVersion**: string (ReadOnly): The agent version.
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo) (WriteOnly)
-* **fabricObjectId**: string: The fabric specific object Id of the virtual machine.
-* **initialPrimaryFabricLocation**: string (ReadOnly): The initial primary fabric location.
-* **initialPrimaryZone**: string (ReadOnly): The initial primary availability zone.
-* **initialRecoveryFabricLocation**: string (ReadOnly): The initial recovery fabric location.
-* **initialRecoveryZone**: string (ReadOnly): The initial recovery availability zone.
-* **instanceType**: 'A2A' (Required): The class type.
-* **isReplicationAgentUpdateRequired**: bool (ReadOnly): A value indicating whether replication agent update is required.
-* **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
-* **lastRpoCalculatedTime**: string (ReadOnly): The time (in UTC) when the last RPO value was calculated by Protection Service.
-* **lifecycleId**: string (ReadOnly): An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
-* **managementId**: string (ReadOnly): The management Id.
-* **monitoringJobType**: string (ReadOnly): The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-* **monitoringPercentageCompletion**: int (ReadOnly): The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-* **multiVmGroupCreateOption**: 'AutoCreated' | 'UserSpecified' (ReadOnly): Whether Multi VM group is auto created or specified by user.
-* **multiVmGroupId**: string (ReadOnly): The multi vm group Id.
-* **multiVmGroupName**: string: The multi vm group name.
-* **osType**: string (ReadOnly): The type of operating system.
-* **primaryFabricLocation**: string (ReadOnly): Primary fabric location.
-* **protectedDisks**: [A2AProtectedDiskDetails](#a2aprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
-* **protectedManagedDisks**: [A2AProtectedManagedDiskDetails](#a2aprotectedmanageddiskdetails)[] (ReadOnly): The list of protected managed disks.
-* **recoveryAvailabilitySet**: string (ReadOnly): The recovery availability set.
-* **recoveryAvailabilitySetId**: string (WriteOnly)
-* **recoveryAvailabilityZone**: string: The recovery availability zone.
-* **recoveryAzureNetworkId**: string (WriteOnly)
-* **recoveryAzureResourceGroupId**: string (ReadOnly): The recovery resource group.
-* **recoveryAzureVMName**: string (ReadOnly): The name of recovery virtual machine.
-* **recoveryAzureVMSize**: string (ReadOnly): The size of recovery virtual machine.
-* **recoveryBootDiagStorageAccountId**: string: The recovery boot diagnostic storage account Arm Id.
-* **recoveryCloudService**: string (ReadOnly): The recovery cloud service.
-* **recoveryCloudServiceId**: string (WriteOnly)
-* **recoveryContainerId**: string (WriteOnly)
-* **recoveryFabricLocation**: string (ReadOnly): The recovery fabric location.
-* **recoveryFabricObjectId**: string (ReadOnly): The recovery fabric object Id.
-* **recoveryProximityPlacementGroupId**: string: The recovery proximity placement group Id.
-* **recoveryResourceGroupId**: string (WriteOnly)
-* **recoverySubnetName**: string (WriteOnly)
-* **rpoInSeconds**: int (ReadOnly): The last RPO value in seconds.
-* **selectedRecoveryAzureNetworkId**: string (ReadOnly): The recovery virtual network.
-* **selectedTfoAzureNetworkId**: string (ReadOnly): The test failover virtual network.
-* **testFailoverRecoveryFabricObjectId**: string (ReadOnly): The test failover fabric object Id.
-* **tfoAzureVMName**: string (ReadOnly): The test failover VM name.
-* **unprotectedDisks**: [A2AUnprotectedDiskDetails](#a2aunprotecteddiskdetails)[] (ReadOnly): The list of unprotected disks.
-* **vmDisks**: [A2AVmDiskInputDetails](#a2avmdiskinputdetails)[] (WriteOnly)
-* **vmEncryptionType**: 'NotEncrypted' | 'OnePassEncrypted' | 'TwoPassEncrypted' (ReadOnly): The encryption type of the VM.
-* **vmManagedDisks**: [A2AVmManagedDiskInputDetails](#a2avmmanageddiskinputdetails)[] (WriteOnly)
-* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The virtual machine nic details.
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplica2012' (Required): Hyper-V Replica Blue specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
-* **vmSyncedConfigDetails**: [AzureToAzureVmSyncedConfigDetails](#azuretoazurevmsyncedconfigdetails) (ReadOnly): Azure to Azure VM synced configuration details.
 
-## DiskEncryptionInfo
+## InitialReplicationDetails
 ### Properties
-* **diskEncryptionKeyInfo**: [DiskEncryptionKeyInfo](#diskencryptionkeyinfo) (WriteOnly)
-* **keyEncryptionKeyInfo**: [KeyEncryptionKeyInfo](#keyencryptionkeyinfo) (WriteOnly)
+* **initialReplicationProgressPercentage**: string (ReadOnly): The initial replication progress percentage.
+* **initialReplicationType**: string (ReadOnly): Initial replication type.
 
-## DiskEncryptionKeyInfo
+## DiskDetails
 ### Properties
-* **keyVaultResourceArmId**: string (WriteOnly)
-* **secretIdentifier**: string (WriteOnly)
-
-## KeyEncryptionKeyInfo
-### Properties
-* **keyIdentifier**: string (WriteOnly)
-* **keyVaultResourceArmId**: string (WriteOnly)
-
-## A2AProtectedDiskDetails
-### Properties
-* **allowedDiskLevelOperation**: string[] (ReadOnly): The disk level operations list.
-* **dataPendingAtSourceAgentInMB**: int (ReadOnly): The data pending at source virtual machine in MB.
-* **dataPendingInStagingStorageAccountInMB**: int (ReadOnly): The data pending for replication in MB at staging account.
-* **dekKeyVaultArmId**: string (ReadOnly): The KeyVault resource id for secret (BEK).
-* **diskCapacityInBytes**: int (ReadOnly): The disk capacity in bytes.
-* **diskName**: string (ReadOnly): The disk name.
-* **diskState**: string (ReadOnly): The disk state.
-* **diskType**: string (ReadOnly): The type of disk.
-* **diskUri**: string (ReadOnly): The disk uri.
-* **isDiskEncrypted**: bool (ReadOnly): A value indicating whether vm has encrypted os disk or not.
-* **isDiskKeyEncrypted**: bool (ReadOnly): A value indicating whether disk key got encrypted or not.
-* **kekKeyVaultArmId**: string (ReadOnly): The KeyVault resource id for key (KEK).
-* **keyIdentifier**: string (ReadOnly): The key URL / identifier (KEK).
-* **monitoringJobType**: string (ReadOnly): The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-* **monitoringPercentageCompletion**: int (ReadOnly): The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-* **primaryDiskAzureStorageAccountId**: string (ReadOnly): The primary disk storage account.
-* **primaryStagingAzureStorageAccountId**: string (ReadOnly): The primary staging storage account.
-* **recoveryAzureStorageAccountId**: string (ReadOnly): The recovery disk storage account.
-* **recoveryDiskUri**: string (ReadOnly): Recovery disk uri.
-* **resyncRequired**: bool (ReadOnly): A value indicating whether resync is required for this disk.
-* **secretIdentifier**: string (ReadOnly): The secret URL / identifier (BEK).
-
-## A2AProtectedManagedDiskDetails
-### Properties
-* **allowedDiskLevelOperation**: string[] (ReadOnly): The disk level operations list.
-* **dataPendingAtSourceAgentInMB**: int (ReadOnly): The data pending at source virtual machine in MB.
-* **dataPendingInStagingStorageAccountInMB**: int (ReadOnly): The data pending for replication in MB at staging account.
-* **dekKeyVaultArmId**: string (ReadOnly): The KeyVault resource id for secret (BEK).
-* **diskCapacityInBytes**: int (ReadOnly): The disk capacity in bytes.
-* **diskId**: string (ReadOnly): The managed disk Arm id.
-* **diskName**: string (ReadOnly): The disk name.
-* **diskState**: string (ReadOnly): The disk state.
-* **diskType**: string (ReadOnly): The type of disk.
-* **failoverDiskName**: string (ReadOnly): The failover name for the managed disk.
-* **isDiskEncrypted**: bool (ReadOnly): A value indicating whether vm has encrypted os disk or not.
-* **isDiskKeyEncrypted**: bool (ReadOnly): A value indicating whether disk key got encrypted or not.
-* **kekKeyVaultArmId**: string (ReadOnly): The KeyVault resource id for key (KEK).
-* **keyIdentifier**: string (ReadOnly): The key URL / identifier (KEK).
-* **monitoringJobType**: string (ReadOnly): The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-* **monitoringPercentageCompletion**: int (ReadOnly): The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-* **primaryStagingAzureStorageAccountId**: string (ReadOnly): The primary staging storage account.
-* **recoveryDiskEncryptionSetId**: string (ReadOnly): The recovery disk encryption set Id.
-* **recoveryReplicaDiskAccountType**: string (ReadOnly): The replica disk type. Its an optional value and will be same as source disk type if not user provided.
-* **recoveryReplicaDiskId**: string (ReadOnly): Recovery replica disk Arm Id.
-* **recoveryResourceGroupId**: string (ReadOnly): The recovery disk resource group Arm Id.
-* **recoveryTargetDiskAccountType**: string (ReadOnly): The target disk type after failover. Its an optional value and will be same as source disk type if not user provided.
-* **recoveryTargetDiskId**: string (ReadOnly): Recovery target disk Arm Id.
-* **resyncRequired**: bool (ReadOnly): A value indicating whether resync is required for this disk.
-* **secretIdentifier**: string (ReadOnly): The secret URL / identifier (BEK).
-* **tfoDiskName**: string (ReadOnly): The test failover name for the managed disk.
-
-## A2AUnprotectedDiskDetails
-### Properties
-* **diskLunId**: int (ReadOnly): The source lun Id for the data disk.
-
-## A2AVmDiskInputDetails
-### Properties
-* **diskUri**: string (WriteOnly)
-* **primaryStagingAzureStorageAccountId**: string (WriteOnly)
-* **recoveryAzureStorageAccountId**: string (WriteOnly)
-
-## A2AVmManagedDiskInputDetails
-### Properties
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo) (WriteOnly)
-* **diskId**: string (WriteOnly)
-* **primaryStagingAzureStorageAccountId**: string (WriteOnly)
-* **recoveryDiskEncryptionSetId**: string (WriteOnly)
-* **recoveryReplicaDiskAccountType**: string (WriteOnly)
-* **recoveryResourceGroupId**: string (WriteOnly)
-* **recoveryTargetDiskAccountType**: string (WriteOnly)
+* **maxSizeMB**: int (ReadOnly): The hard disk max size in MB.
+* **vhdId**: string (ReadOnly): The VHD Id.
+* **vhdName**: string (ReadOnly): The VHD name.
+* **vhdType**: string (ReadOnly): The type of the volume.
 
 ## VMNicDetails
 ### Properties
@@ -1281,27 +1059,10 @@
 * **publicIpAddressId**: string (ReadOnly): The Id of the public IP address associated with the IP configuration.
 * **staticIPAddress**: string (ReadOnly): The static IP address of the IP configuration.
 
-## AzureToAzureVmSyncedConfigDetails
-### Properties
-* **inputEndpoints**: [InputEndpoint](#inputendpoint)[] (ReadOnly): The Azure VM input endpoints.
-* **tags**: [AzureToAzureVmSyncedConfigDetailsTags](#azuretoazurevmsyncedconfigdetailstags) (ReadOnly): The Azure VM tags.
-
-## InputEndpoint
-### Properties
-* **endpointName**: string (ReadOnly): The input endpoint name.
-* **privatePort**: int (ReadOnly): The input endpoint private port.
-* **protocol**: string (ReadOnly): The input endpoint protocol.
-* **publicPort**: int (ReadOnly): The input endpoint public port.
-
-## AzureToAzureVmSyncedConfigDetailsTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## HyperVReplicaReplicationDetails
+## HyperVReplica2012R2
 ### Properties
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplica2012' (Required): The class type.
+* **instanceType**: 'HyperVReplica2012R2' (Required): Hyper-V Replica Blue specific protection profile details.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
 * **vmId**: string (ReadOnly): The virtual machine Id.
@@ -1309,44 +1070,21 @@
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-## InitialReplicationDetails
-### Properties
-* **initialReplicationProgressPercentage**: string (ReadOnly): The initial replication progress percentage.
-* **initialReplicationType**: string (ReadOnly): Initial replication type.
-
-## DiskDetails
-### Properties
-* **maxSizeMB**: int (ReadOnly): The hard disk max size in MB.
-* **vhdId**: string (ReadOnly): The VHD Id.
-* **vhdName**: string (ReadOnly): The VHD name.
-* **vhdType**: string (ReadOnly): The type of the volume.
-
-## HyperVReplicaBlueReplicationDetails
-### Properties
-* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplica2012R2' (Required): The class type.
-* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
-* **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
-* **vmId**: string (ReadOnly): The virtual machine Id.
-* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
-* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
-* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
-
-## HyperVReplicaAzureEnableProtectionInput
+## HyperVReplicaAzure
 ### Properties
 * **azureVmDiskDetails**: [AzureVmDiskDetails](#azurevmdiskdetails)[] (ReadOnly): Azure VM Disk details.
-* **disksToInclude**: string[] (WriteOnly)
+* **disksToInclude**: string[] (WriteOnly): The list of VHD IDs of disks to be protected.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **encryption**: string (ReadOnly): The encryption info.
-* **hvHostVmId**: string (WriteOnly)
+* **hvHostVmId**: string (WriteOnly): The Hyper-V host Vm Id.
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplicaAzure' (Required): The class type.
+* **instanceType**: 'HyperVReplicaAzure' (Required): Hyper-V Replica Azure specific protection profile details.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **licenseType**: string (ReadOnly): License Type of the VM to be used.
-* **logStorageAccountId**: string (WriteOnly)
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
 * **oSDetails**: [OSDetails](#osdetails) (ReadOnly): Disk Details.
-* **osType**: string (WriteOnly)
+* **osType**: string (WriteOnly): The OS type associated with vm.
 * **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
 * **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
 * **recoveryAzureResourceGroupId**: string (ReadOnly): The target resource group Id.
@@ -1358,20 +1096,20 @@
 * **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
 * **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
 * **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
-* **targetAvailabilitySetId**: string (WriteOnly)
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
 * **targetAvailabilityZone**: string: The target availability zone.
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetProximityPlacementGroupId**: string: The target proximity placement group Id.
-* **targetStorageAccountId**: string (WriteOnly)
-* **targetVmSize**: string (WriteOnly)
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
+* **targetStorageAccountId**: string (WriteOnly): The storage account name.
+* **targetVmSize**: string (WriteOnly): The target VM size.
 * **useManagedDisks**: string: A value indicating whether managed disks should be used during failover.
-* **vhdId**: string (WriteOnly)
+* **vhdId**: string (WriteOnly): The OS disk VHD id associated with vm.
 * **vmId**: string (ReadOnly): The virtual machine Id.
-* **vmName**: string (WriteOnly)
+* **vmName**: string (WriteOnly): The Vm Name.
 * **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
@@ -1400,7 +1138,7 @@
 ## HyperVReplicaBaseReplicationDetails
 ### Properties
 * **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required): The class type.
+* **instanceType**: 'HyperVReplicaBaseReplicationDetails' (Required): Hyper V replica provider specific settings base class.
 * **lastReplicatedTime**: string (ReadOnly): The Last replication time.
 * **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
 * **vmId**: string (ReadOnly): The virtual machine Id.
@@ -1408,48 +1146,48 @@
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
 * **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-## InMageEnableProtectionInput
+## InMage
 ### Properties
 * **activeSiteType**: string (ReadOnly): The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
 * **agentDetails**: [InMageAgentDetails](#inmageagentdetails) (ReadOnly): The details of the InMage agent.
 * **azureStorageAccountId**: string (ReadOnly): A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
 * **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
-* **consistencyPoints**: [InMageReplicationDetailsConsistencyPoints](#inmagereplicationdetailsconsistencypoints) (ReadOnly): The collection of Consistency points.
-* **datastoreName**: string (WriteOnly)
+* **consistencyPoints**: [Dictionary<string,DateTime>](#dictionarystringdatetime) (ReadOnly): The collection of Consistency points.
+* **datastoreName**: string (WriteOnly): The target data store name.
 * **datastores**: string[] (ReadOnly): The data stores of the on-premise machine Value can be list of strings that contain data store names
 * **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine.
-* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly)
+* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly): DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
-* **disksToInclude**: string[] (WriteOnly)
+* **disksToInclude**: string[] (WriteOnly): The disks to include list.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
-* **instanceType**: 'InMage' (Required): The class type.
+* **instanceType**: 'InMage' (Required): InMage specific protection profile details.
 * **ipAddress**: string (ReadOnly): The source IP address.
 * **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
-* **masterTargetId**: string (Required): The master target Id.
-* **multiVmGroupId**: string (Required): The multi vm group Id, if any.
-* **multiVmGroupName**: string (Required): The multi vm group name, if any.
+* **masterTargetId**: string (Required): The Master Target Id.
+* **multiVmGroupId**: string (Required): The multi vm group Id.
+* **multiVmGroupName**: string (Required): The multi vm group name.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether the multi vm sync is enabled or disabled.
 * **osDetails**: [OSDiskDetails](#osdiskdetails) (ReadOnly): Details of the OS Disk.
 * **osVersion**: string (ReadOnly): The OS Version of the protected item.
-* **processServerId**: string (Required): The process server Id.
+* **processServerId**: string (Required): The Process Server Id.
 * **protectedDisks**: [InMageProtectedDiskDetails](#inmageprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **protectionStage**: string (ReadOnly): The protection stage.
 * **rebootAfterUpdateStatus**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
 * **replicaId**: string (ReadOnly): The replica id of the protected item.
 * **resyncDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
-* **retentionDrive**: string (Required, WriteOnly)
+* **retentionDrive**: string (Required, WriteOnly): The retention drive to use on the MT.
 * **retentionWindowEnd**: string (ReadOnly): The retention window end time.
 * **retentionWindowStart**: string (ReadOnly): The retention window start time.
 * **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
-* **runAsAccountId**: string (WriteOnly)
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
 * **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
 * **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
 * **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
 * **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors
 * **vCenterInfrastructureId**: string (ReadOnly): The vCenter infrastructure Id.
-* **vmFriendlyName**: string (WriteOnly)
+* **vmFriendlyName**: string (WriteOnly): The Vm Name.
 * **vmId**: string (ReadOnly): The virtual machine Id.
 * **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
 * **vmProtectionState**: string (ReadOnly): The protection state for the vm.
@@ -1462,24 +1200,24 @@
 * **agentVersion**: string (ReadOnly): The agent version.
 * **postUpdateRebootStatus**: string (ReadOnly): A value indicating whether reboot is required after update is applied.
 
-## InMageReplicationDetailsConsistencyPoints
+## Dictionary<string,DateTime>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## InMageDiskExclusionInput
 ### Properties
-* **diskSignatureOptions**: [InMageDiskSignatureExclusionOptions](#inmagedisksignatureexclusionoptions)[] (WriteOnly)
-* **volumeOptions**: [InMageVolumeExclusionOptions](#inmagevolumeexclusionoptions)[] (WriteOnly)
+* **diskSignatureOptions**: [InMageDiskSignatureExclusionOptions](#inmagedisksignatureexclusionoptions)[] (WriteOnly): The guest disk signature based option for disk exclusion.
+* **volumeOptions**: [InMageVolumeExclusionOptions](#inmagevolumeexclusionoptions)[] (WriteOnly): The volume label based option for disk exclusion.
 
 ## InMageDiskSignatureExclusionOptions
 ### Properties
-* **diskSignature**: string (WriteOnly)
+* **diskSignature**: string (WriteOnly): The guest signature of disk to be excluded from replication.
 
 ## InMageVolumeExclusionOptions
 ### Properties
-* **onlyExcludeIfSingleVolume**: string (WriteOnly)
-* **volumeLabel**: string (WriteOnly)
+* **onlyExcludeIfSingleVolume**: string (WriteOnly): The value indicating whether to exclude multi volume disk or not. If a disk has multiple volumes and one of the volume has label matching with VolumeLabel this disk will be excluded from replication if OnlyExcludeIfSingleVolume is false.
+* **volumeLabel**: string (WriteOnly): The volume label. The disk having any volume with this label will be excluded from replication.
 
 ## OSDiskDetails
 ### Properties
@@ -1505,7 +1243,7 @@
 * **sourceDataInMB**: int (ReadOnly): The source data transit in MB.
 * **targetDataInMB**: int (ReadOnly): The target data transit in MB.
 
-## InMageAzureV2EnableProtectionInput
+## InMageAzureV2
 ### Properties
 * **agentExpiryDate**: string (ReadOnly): Agent expiry date.
 * **agentVersion**: string (ReadOnly): The agent version.
@@ -1513,13 +1251,13 @@
 * **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
 * **datastores**: string[] (ReadOnly): The data stores of the on-premise machine. Value can be list of strings that contain data store names.
 * **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine. Value can be vCenter or physical.
-* **diskEncryptionSetId**: string (WriteOnly)
+* **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
 * **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
-* **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly)
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (WriteOnly)
+* **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
 * **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
 * **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
-* **instanceType**: 'InMageAzureV2' (Required): The class type.
+* **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
 * **ipAddress**: string (ReadOnly): The source IP address.
 * **isAgentUpdateRequired**: string (ReadOnly): A value indicating whether installed agent needs to be updated.
 * **isRebootAfterUpdateRequired**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
@@ -1527,15 +1265,15 @@
 * **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
 * **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
 * **licenseType**: string (ReadOnly): License Type of the VM to be used.
-* **logStorageAccountId**: string (WriteOnly)
-* **masterTargetId**: string: The master target Id.
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
+* **masterTargetId**: string: The Master target Id.
 * **multiVmGroupId**: string: The multi vm group Id.
 * **multiVmGroupName**: string: The multi vm group name.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi vm sync is enabled or disabled.
 * **osDiskId**: string (ReadOnly): The id of the disk containing the OS.
 * **osType**: string (ReadOnly): The type of the OS on the VM.
 * **osVersion**: string (ReadOnly): The OS Version of the protected item.
-* **processServerId**: string: The process server Id.
+* **processServerId**: string: The Process Server Id.
 * **processServerName**: string (ReadOnly): The process server name.
 * **protectedDisks**: [InMageAzureV2ProtectedDiskDetails](#inmageazurev2protecteddiskdetails)[] (ReadOnly): The list of protected disks.
 * **protectedManagedDisks**: [InMageAzureV2ManagedDiskDetails](#inmageazurev2manageddiskdetails)[] (ReadOnly): The list of protected managed disks.
@@ -1549,23 +1287,23 @@
 * **replicaId**: string (ReadOnly): The replica id of the protected item.
 * **resyncProgressPercentage**: int (ReadOnly): The resync progress percentage.
 * **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
-* **runAsAccountId**: string (WriteOnly)
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
 * **selectedRecoveryAzureNetworkId**: string (ReadOnly): The selected recovery azure network Id.
 * **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
 * **selectedTfoAzureNetworkId**: string (ReadOnly): The test failover virtual network.
 * **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
 * **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
-* **storageAccountId**: string (WriteOnly)
-* **targetAvailabilitySetId**: string (WriteOnly)
+* **storageAccountId**: string (WriteOnly): The storage account name.
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
 * **targetAvailabilityZone**: string: The target availability zone.
-* **targetAzureNetworkId**: string (WriteOnly)
-* **targetAzureSubnetId**: string (WriteOnly)
-* **targetAzureV1ResourceGroupId**: string (WriteOnly)
-* **targetAzureV2ResourceGroupId**: string (WriteOnly)
-* **targetAzureVmName**: string (WriteOnly)
-* **targetProximityPlacementGroupId**: string: The target proximity placement group Id.
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
 * **targetVmId**: string (ReadOnly): The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
-* **targetVmSize**: string (WriteOnly)
+* **targetVmSize**: string (WriteOnly): The target VM size.
 * **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
 * **useManagedDisks**: string (ReadOnly): A value indicating whether managed disks should be used during failover.
 * **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors.
@@ -1578,10 +1316,10 @@
 
 ## InMageAzureV2DiskInputDetails
 ### Properties
-* **diskEncryptionSetId**: string (WriteOnly)
-* **diskId**: string (WriteOnly)
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (WriteOnly)
-* **logStorageAccountId**: string (WriteOnly)
+* **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
+* **diskId**: string (WriteOnly): The DiskId.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
+* **logStorageAccountId**: string (WriteOnly): The LogStorageAccountId.
 
 ## InMageAzureV2ProtectedDiskDetails
 ### Properties
@@ -1607,268 +1345,107 @@
 * **replicaDiskType**: string (ReadOnly): The replica disk type.
 * **seedManagedDiskId**: string (ReadOnly): Seed managed disk Id.
 
-## InMageRcmEnableProtectionInput
+## San
 ### Properties
-* **agentUpgradeBlockingErrorDetails**: [InMageRcmAgentUpgradeBlockingErrorDetails](#inmagercmagentupgradeblockingerrordetails)[] (ReadOnly): The agent upgrade blocking error information.
-* **agentUpgradeState**: 'Commit' | 'Completed' | 'None' | 'Started' (ReadOnly): The agent auto upgrade state.
-* **allocatedMemoryInMB**: int (ReadOnly): The allocated memory in MB.
-* **discoveryType**: string (ReadOnly): The type of the discovered VM.
-* **disksDefault**: [InMageRcmDisksDefaultInput](#inmagercmdisksdefaultinput) (WriteOnly)
-* **disksToInclude**: [InMageRcmDiskInput](#inmagercmdiskinput)[] (WriteOnly)
-* **fabricDiscoveryMachineId**: string: The ARM Id of the discovered VM.
-* **failoverRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was failed over.
-* **firmwareType**: string (ReadOnly): The firmware type.
-* **initialReplicationProcessedBytes**: int (ReadOnly): The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
-* **initialReplicationProgressPercentage**: int (ReadOnly): The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
-* **initialReplicationTransferredBytes**: int (ReadOnly): The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
-* **instanceType**: 'InMageRcm' (Required): The class type.
-* **internalIdentifier**: string (ReadOnly): The virtual machine internal identifier.
-* **isLastUpgradeSuccessful**: string (ReadOnly): A value indicating whether last agent upgrade was successful or not.
-* **lastAgentUpgradeErrorDetails**: [InMageRcmLastAgentUpgradeErrorDetails](#inmagercmlastagentupgradeerrordetails)[] (ReadOnly): The last agent upgrade error information.
-* **lastAgentUpgradeFailedJobId**: string (ReadOnly): The last agent upgrade failed or cancelled job Id.
-* **lastAgentUpgradeType**: string (ReadOnly): The last agent upgrade type.
-* **lastRecoveryPointId**: string (ReadOnly): The last recovery point Id.
-* **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
-* **lastRpoCalculatedTime**: string (ReadOnly): The last recovery point objective calculated time.
-* **lastRpoInSeconds**: int (ReadOnly): The last recovery point objective value.
-* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License Type of the VM to be used.
-* **mobilityAgentDetails**: [InMageRcmMobilityAgentDetails](#inmagercmmobilityagentdetails) (ReadOnly): InMageRcm mobility agent details.
-* **multiVmGroupName**: string: The multi VM group name.
-* **osType**: string (ReadOnly): The type of the OS on the VM.
-* **processorCoreCount**: int (ReadOnly): The processor core count.
-* **processServerId**: string: The process server Id.
-* **processServerName**: string (ReadOnly): The process server name.
-* **protectedDisks**: [InMageRcmProtectedDiskDetails](#inmagercmprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
-* **resyncProcessedBytes**: int (ReadOnly): The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
-* **resyncProgressPercentage**: int (ReadOnly): The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
-* **resyncRequired**: string (ReadOnly): A value indicating whether resync is required.
-* **resyncState**: 'None' | 'PreparedForResynchronization' | 'StartedResynchronization' (ReadOnly): The resync state.
-* **resyncTransferredBytes**: int (ReadOnly): The resync transferred bytes from source VM to azure for all selected disks on source VM.
-* **runAsAccountId**: string: The run-as account Id.
-* **targetAvailabilitySetId**: string: The target availability set Id.
-* **targetAvailabilityZone**: string: The target availability zone.
-* **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
-* **targetGeneration**: string (ReadOnly): The target generation.
-* **targetNetworkId**: string: The target network Id.
-* **targetProximityPlacementGroupId**: string: The target proximity placement group Id.
-* **targetResourceGroupId**: string: The target resource group Id.
-* **targetSubnetName**: string (WriteOnly)
-* **targetVmName**: string: Target VM name.
-* **targetVmSize**: string: The target VM size.
-* **testNetworkId**: string: The test network Id.
-* **testSubnetName**: string (WriteOnly)
-* **vmNics**: [InMageRcmNicDetails](#inmagercmnicdetails)[] (ReadOnly): The network details.
-
-## InMageRcmAgentUpgradeBlockingErrorDetails
-### Properties
-* **errorCode**: string (ReadOnly): The error code.
-* **errorMessage**: string (ReadOnly): The error message.
-* **errorMessageParameters**: [InMageRcmAgentUpgradeBlockingErrorDetailsErrorMessageParameters](#inmagercmagentupgradeblockingerrordetailserrormessageparameters) (ReadOnly): The error message parameters.
-* **errorTags**: [InMageRcmAgentUpgradeBlockingErrorDetailsErrorTags](#inmagercmagentupgradeblockingerrordetailserrortags) (ReadOnly): The error tags.
-* **possibleCauses**: string (ReadOnly): The possible causes.
-* **recommendedAction**: string (ReadOnly): The recommended action.
-
-## InMageRcmAgentUpgradeBlockingErrorDetailsErrorMessageParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## InMageRcmAgentUpgradeBlockingErrorDetailsErrorTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## InMageRcmDisksDefaultInput
-### Properties
-* **diskEncryptionSetId**: string (WriteOnly)
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (WriteOnly)
-* **logStorageAccountId**: string (WriteOnly)
-
-## InMageRcmDiskInput
-### Properties
-* **diskEncryptionSetId**: string (WriteOnly)
-* **diskId**: string (WriteOnly)
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (WriteOnly)
-* **logStorageAccountId**: string (WriteOnly)
-
-## InMageRcmLastAgentUpgradeErrorDetails
-### Properties
-* **errorCode**: string (ReadOnly): The error code.
-* **errorMessage**: string (ReadOnly): The error message.
-* **errorMessageParameters**: [InMageRcmLastAgentUpgradeErrorDetailsErrorMessageParameters](#inmagercmlastagentupgradeerrordetailserrormessageparameters) (ReadOnly): The error message parameters.
-* **errorTags**: [InMageRcmLastAgentUpgradeErrorDetailsErrorTags](#inmagercmlastagentupgradeerrordetailserrortags) (ReadOnly): The error tags.
-* **possibleCauses**: string (ReadOnly): The possible causes.
-* **recommendedAction**: string (ReadOnly): The recommended action.
-
-## InMageRcmLastAgentUpgradeErrorDetailsErrorMessageParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## InMageRcmLastAgentUpgradeErrorDetailsErrorTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## InMageRcmMobilityAgentDetails
-### Properties
-* **agentVersionExpiryDate**: string (ReadOnly): The agent version expiry date.
-* **driverVersion**: string (ReadOnly): The driver version.
-* **driverVersionExpiryDate**: string (ReadOnly): The driver version expiry date.
-* **isUpgradeable**: string (ReadOnly): A value indicating whether agent is upgradeable or not.
-* **lastHeartbeatUtc**: string (ReadOnly): The time of the last heartbeat received from the agent.
-* **latestUpgradableVersionWithoutReboot**: string (ReadOnly): The latest upgradeable version available without reboot.
-* **latestVersion**: string (ReadOnly): The latest agent version available.
-* **reasonsBlockingUpgrade**: 'AgentNoHeartbeat' | 'AlreadyOnLatestVersion' | 'DistroIsNotReported' | 'DistroNotSupportedForUpgrade' | 'IncompatibleApplianceVersion' | 'InvalidAgentVersion' | 'InvalidDriverVersion' | 'MissingUpgradePath' | 'NotProtected' | 'ProcessServerNoHeartbeat' | 'RcmProxyNoHeartbeat' | 'RebootRequired' | 'Unknown' | 'UnsupportedProtectionScenario'[] (ReadOnly): The whether update is possible or not.
-* **version**: string (ReadOnly): The agent version.
-
-## InMageRcmProtectedDiskDetails
-### Properties
-* **capacityInBytes**: int (ReadOnly): The disk capacity in bytes.
-* **diskEncryptionSetId**: string (ReadOnly): The disk encryption set ARM Id.
-* **diskId**: string (ReadOnly): The disk Id.
-* **diskName**: string (ReadOnly): The disk name.
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (ReadOnly): The DiskType.
-* **isOSDisk**: string (ReadOnly): A value indicating whether the disk is the OS disk.
-* **logStorageAccountId**: string (ReadOnly): The log storage account ARM Id.
-* **seedManagedDiskId**: string (ReadOnly): The ARM Id of the seed managed disk.
-* **targetManagedDiskId**: string (ReadOnly): The ARM Id of the target managed disk.
-
-## InMageRcmNicDetails
-### Properties
-* **isPrimaryNic**: string (ReadOnly): A value indicating whether this is the primary NIC.
-* **isSelectedForFailover**: string (ReadOnly): A value indicating whether this NIC is selected for failover.
-* **nicId**: string (ReadOnly): The NIC Id.
-* **sourceIPAddress**: string (ReadOnly): The source IP address.
-* **sourceIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type.
-* **sourceNetworkId**: string (ReadOnly): Source network Id.
-* **sourceSubnetName**: string (ReadOnly): Source subnet name.
-* **targetIPAddress**: string (ReadOnly): The target IP address.
-* **targetIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type.
-* **targetSubnetName**: string (ReadOnly): Target subnet name.
-* **testIPAddress**: string (ReadOnly): The test IP address.
-* **testIPAddressType**: 'Dynamic' | 'Static' (ReadOnly): The source IP address type.
-* **testSubnetName**: string (ReadOnly): Test subnet name.
-
-## SanEnableProtectionInput
-### Properties
-* **instanceType**: 'San' (Required): The class type.
+* **instanceType**: 'San' (Required): San enable protection provider specific input.
 
 ## CreateProtectionContainerMappingInputProperties
 ### Properties
 * **health**: string (ReadOnly): Health of pairing.
 * **healthErrorDetails**: [HealthError](#healtherror)[] (ReadOnly): Health error.
 * **policyFriendlyName**: string (ReadOnly): Friendly name of replication policy.
-* **policyId**: string: Policy ARM Id.
+* **policyId**: string: Applicable policy.
 * **providerSpecificDetails**: [ProtectionContainerMappingProviderSpecificDetails](#protectioncontainermappingproviderspecificdetails) (ReadOnly): Container mapping provider specific details.
-* **providerSpecificInput**: [ReplicationProviderSpecificContainerMappingInput](#replicationproviderspecificcontainermappinginput) (WriteOnly)
+* **providerSpecificInput**: [ReplicationProviderSpecificContainerMappingInput](#replicationproviderspecificcontainermappinginput) (WriteOnly): Provider specific input for pairing operations.
 * **sourceFabricFriendlyName**: string (ReadOnly): Friendly name of source fabric.
 * **sourceProtectionContainerFriendlyName**: string (ReadOnly): Friendly name of source protection container.
 * **state**: string (ReadOnly): Association Status
 * **targetFabricFriendlyName**: string (ReadOnly): Friendly name of target fabric.
 * **targetProtectionContainerFriendlyName**: string (ReadOnly): Friendly name of paired container.
-* **targetProtectionContainerId**: string: Paired protection container ARM ID.
+* **targetProtectionContainerId**: string: The target unique protection container name.
 
 ## ProtectionContainerMappingProviderSpecificDetails
 * **Discriminator**: instanceType
-
 ### Base Properties
-### A2AProtectionContainerMappingDetails
+### A2A
 #### Properties
-* **agentAutoUpdateStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether the auto update is enabled.
-* **automationAccountArmId**: string (ReadOnly): The automation account arm id.
-* **instanceType**: 'A2A' (Required): Gets the class type. Overridden in derived classes.
-* **jobScheduleName**: string (ReadOnly): The job schedule arm name.
-* **scheduleName**: string (ReadOnly): The schedule arm name.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-### VMwareCbtProtectionContainerMappingDetails
+### VMwareCbt
 #### Properties
-* **instanceType**: 'VMwareCbt' (Required): Gets the class type. Overridden in derived classes.
-* **keyVaultId**: string (ReadOnly): The target key vault ARM Id.
-* **keyVaultUri**: string (ReadOnly): The target key vault URI.
-* **serviceBusConnectionStringSecretName**: string (ReadOnly): The secret name of the service bus connection string.
-* **storageAccountId**: string (ReadOnly): The storage account ARM Id.
-* **storageAccountSasSecretName**: string (ReadOnly): The secret name of the storage account.
+* **dataMoverRunAsAccountId**: string (Required): The data mover RunAs account Id.
+* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
+* **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
+* **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
+* **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
+* **osType**: string (ReadOnly): The type of the OS on the VM.
+* **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **snapshotRunAsAccountId**: string (Required): The snapshot RunAs account Id.
+* **targetAvailabilitySetId**: string: The target availability set ARM Id.
+* **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
 * **targetLocation**: string (ReadOnly): The target location.
+* **targetNetworkId**: string (Required): The target network ARM Id.
+* **targetResourceGroupId**: string (Required): The target resource group ARM Id.
+* **targetSubnetName**: string (WriteOnly): The target subnet name.
+* **targetVmName**: string: The target VM name.
+* **targetVmSize**: string: The target VM size.
+* **vmNics**: [VMwareCbtNicDetails](#vmwarecbtnicdetails)[] (ReadOnly): The network details.
+* **vmwareMachineId**: string (Required): The ARM Id of the VM discovered in VMware.
 
-
-## A2AProtectionContainerMappingDetails
-### Properties
-* **agentAutoUpdateStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether the auto update is enabled.
-* **automationAccountArmId**: string (ReadOnly): The automation account arm id.
-* **instanceType**: 'A2A' (Required): Gets the class type. Overridden in derived classes.
-* **jobScheduleName**: string (ReadOnly): The job schedule arm name.
-* **scheduleName**: string (ReadOnly): The schedule arm name.
-
-## VMwareCbtProtectionContainerMappingDetails
-### Properties
-* **instanceType**: 'VMwareCbt' (Required): Gets the class type. Overridden in derived classes.
-* **keyVaultId**: string (ReadOnly): The target key vault ARM Id.
-* **keyVaultUri**: string (ReadOnly): The target key vault URI.
-* **serviceBusConnectionStringSecretName**: string (ReadOnly): The secret name of the service bus connection string.
-* **storageAccountId**: string (ReadOnly): The storage account ARM Id.
-* **storageAccountSasSecretName**: string (ReadOnly): The secret name of the storage account.
-* **targetLocation**: string (ReadOnly): The target location.
 
 ## ReplicationProviderSpecificContainerMappingInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### A2AContainerMappingInput
+### A2A
 #### Properties
-* **agentAutoUpdateStatus**: 'Disabled' | 'Enabled' (WriteOnly)
-* **automationAccountArmId**: string (WriteOnly)
-* **instanceType**: 'A2A' (Required): The class type.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-### VMwareCbtContainerMappingInput
+### VMwareCbt
 #### Properties
-* **instanceType**: 'VMwareCbt' (Required): The class type.
-* **keyVaultId**: string (Required, WriteOnly)
-* **keyVaultUri**: string (Required, WriteOnly)
-* **serviceBusConnectionStringSecretName**: string (Required, WriteOnly)
-* **storageAccountId**: string (Required, WriteOnly)
-* **storageAccountSasSecretName**: string (Required, WriteOnly)
-* **targetLocation**: string (Required, WriteOnly)
+* **dataMoverRunAsAccountId**: string (Required): The data mover RunAs account Id.
+* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
+* **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
+* **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
+* **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
+* **osType**: string (ReadOnly): The type of the OS on the VM.
+* **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **snapshotRunAsAccountId**: string (Required): The snapshot RunAs account Id.
+* **targetAvailabilitySetId**: string: The target availability set ARM Id.
+* **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
+* **targetLocation**: string (ReadOnly): The target location.
+* **targetNetworkId**: string (Required): The target network ARM Id.
+* **targetResourceGroupId**: string (Required): The target resource group ARM Id.
+* **targetSubnetName**: string (WriteOnly): The target subnet name.
+* **targetVmName**: string: The target VM name.
+* **targetVmSize**: string: The target VM size.
+* **vmNics**: [VMwareCbtNicDetails](#vmwarecbtnicdetails)[] (ReadOnly): The network details.
+* **vmwareMachineId**: string (Required): The ARM Id of the VM discovered in VMware.
 
-
-## A2AContainerMappingInput
-### Properties
-* **agentAutoUpdateStatus**: 'Disabled' | 'Enabled' (WriteOnly)
-* **automationAccountArmId**: string (WriteOnly)
-* **instanceType**: 'A2A' (Required): The class type.
-
-## VMwareCbtContainerMappingInput
-### Properties
-* **instanceType**: 'VMwareCbt' (Required): The class type.
-* **keyVaultId**: string (Required, WriteOnly)
-* **keyVaultUri**: string (Required, WriteOnly)
-* **serviceBusConnectionStringSecretName**: string (Required, WriteOnly)
-* **storageAccountId**: string (Required, WriteOnly)
-* **storageAccountSasSecretName**: string (Required, WriteOnly)
-* **targetLocation**: string (Required, WriteOnly)
 
 ## AddRecoveryServicesProviderInputProperties
 ### Properties
 * **allowedScenarios**: string[] (ReadOnly): The scenarios allowed on this provider.
 * **authenticationIdentityDetails**: [IdentityProviderDetails](#identityproviderdetails) (ReadOnly): Identity provider details.
-* **authenticationIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly)
+* **authenticationIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): Identity provider input.
 * **connectionStatus**: string (ReadOnly): A value indicating whether DRA is responsive.
-* **dataPlaneAuthenticationIdentityInput**: [IdentityProviderInput](#identityproviderinput) (WriteOnly)
+* **dataPlaneAuthenticationIdentityInput**: [IdentityProviderInput](#identityproviderinput) (WriteOnly): Identity provider input.
 * **draIdentifier**: string (ReadOnly): The DRA Id.
 * **fabricFriendlyName**: string (ReadOnly): The fabric friendly name.
 * **fabricType**: string (ReadOnly): Type of the site.
 * **friendlyName**: string (ReadOnly): Friendly name of the DRA.
 * **healthErrorDetails**: [HealthError](#healtherror)[] (ReadOnly): The recovery services provider health error details.
 * **lastHeartBeat**: string (ReadOnly): Time when last heartbeat was sent by the DRA.
-* **machineId**: string (WriteOnly)
-* **machineName**: string (Required, WriteOnly)
+* **machineId**: string (WriteOnly): The Id of the machine where the provider is getting added.
+* **machineName**: string (Required, WriteOnly): The name of the machine where the provider is getting added.
 * **protectedItemCount**: int (ReadOnly): Number of protected VMs currently managed by the DRA.
 * **providerVersion**: string (ReadOnly): The provider version.
 * **providerVersionDetails**: [VersionDetails](#versiondetails) (ReadOnly): Version related details.
 * **providerVersionExpiryDate**: string (ReadOnly): Expiry date of the version.
 * **providerVersionState**: string (ReadOnly): DRA version status.
 * **resourceAccessIdentityDetails**: [IdentityProviderDetails](#identityproviderdetails) (ReadOnly): Identity provider details.
-* **resourceAccessIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly)
+* **resourceAccessIdentityInput**: [IdentityProviderInput](#identityproviderinput) (Required, WriteOnly): Identity provider input.
 * **serverVersion**: string (ReadOnly): The fabric provider.
 
 ## IdentityProviderDetails
@@ -1881,79 +1458,100 @@
 
 ## StorageMappingInputProperties
 ### Properties
-* **targetStorageClassificationId**: string: Target storage object Id.
+* **targetStorageClassificationId**: string: The ID of the storage object.
 
 ## AddVCenterRequestProperties
 ### Properties
 * **discoveryStatus**: string (ReadOnly): The VCenter discovery status.
 * **fabricArmResourceName**: string (ReadOnly): The ARM resource name of the fabric containing this VCenter.
-* **friendlyName**: string: Friendly name of the vCenter.
+* **friendlyName**: string: The friendly name of the vCenter.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The health errors for this VCenter.
 * **infrastructureId**: string (ReadOnly): The infrastructure Id of vCenter.
 * **internalId**: string (ReadOnly): VCenter internal ID.
-* **ipAddress**: string: The IP address of the vCenter.
+* **ipAddress**: string: The IP address of the vCenter to be discovered.
 * **lastHeartbeat**: string (ReadOnly): The time when the last heartbeat was received by vCenter.
 * **port**: string: The port number for discovery.
-* **processServerId**: string: The process server Id.
+* **processServerId**: string: The process server Id from where the discovery is orchestrated.
 * **runAsAccountId**: string: The account Id which has privileges to discover the vCenter.
 
 ## CreatePolicyInputProperties
 ### Properties
 * **friendlyName**: string (ReadOnly): The FriendlyName.
 * **providerSpecificDetails**: [PolicyProviderSpecificDetails](#policyproviderspecificdetails) (ReadOnly): Base class for Provider specific details for policies.
-* **providerSpecificInput**: [PolicyProviderSpecificInput](#policyproviderspecificinput) (WriteOnly)
+* **providerSpecificInput**: [PolicyProviderSpecificInput](#policyproviderspecificinput) (WriteOnly): Base class for provider specific input
 
 ## PolicyProviderSpecificDetails
 * **Discriminator**: instanceType
-
 ### Base Properties
-### A2APolicyDetails
+### A2A
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'A2A' (Required): Gets the class type. Overridden in derived classes.
-* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-* **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-### HyperVReplicaPolicyDetails
+### HyperVReplica2012
 #### Properties
-* **allowedAuthenticationType**: int (ReadOnly): A value indicating the authentication type.
-* **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): A value indicating the application consistent frequency.
-* **compression**: string (ReadOnly): A value indicating whether compression has to be enabled.
-* **initialReplicationMethod**: string (ReadOnly): A value indicating whether IR is online.
-* **instanceType**: 'HyperVReplica2012' (Required): Gets the class type. Overridden in derived classes.
-* **offlineReplicationExportPath**: string (ReadOnly): A value indicating the offline IR export path.
-* **offlineReplicationImportPath**: string (ReadOnly): A value indicating the offline IR import path.
-* **onlineReplicationStartTime**: string (ReadOnly): A value indicating the online IR start time.
-* **recoveryPoints**: int (ReadOnly): A value indicating the number of recovery points.
-* **replicaDeletionOption**: string (ReadOnly): A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
-* **replicationPort**: int (ReadOnly): A value indicating the recovery HTTPS port.
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplica2012' (Required): Hyper-V Replica Blue specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### HyperVReplicaBluePolicyDetails
+### HyperVReplica2012R2
 #### Properties
-* **allowedAuthenticationType**: int (ReadOnly): A value indicating the authentication type.
-* **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): A value indicating the application consistent frequency.
-* **compression**: string (ReadOnly): A value indicating whether compression has to be enabled.
-* **initialReplicationMethod**: string (ReadOnly): A value indicating whether IR is online.
-* **instanceType**: 'HyperVReplica2012R2' (Required): Gets the class type. Overridden in derived classes.
-* **offlineReplicationExportPath**: string (ReadOnly): A value indicating the offline IR export path.
-* **offlineReplicationImportPath**: string (ReadOnly): A value indicating the offline IR import path.
-* **onlineReplicationStartTime**: string (ReadOnly): A value indicating the online IR start time.
-* **recoveryPoints**: int (ReadOnly): A value indicating the number of recovery points.
-* **replicaDeletionOption**: string (ReadOnly): A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
-* **replicationFrequencyInSeconds**: int (ReadOnly): A value indicating the replication interval.
-* **replicationPort**: int (ReadOnly): A value indicating the recovery HTTPS port.
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplica2012R2' (Required): Hyper-V Replica Blue specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### HyperVReplicaAzurePolicyDetails
+### HyperVReplicaAzure
 #### Properties
-* **activeStorageAccountId**: string (ReadOnly): The active storage account Id.
-* **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
-* **encryption**: string (ReadOnly): A value indicating whether encryption is enabled for virtual machines in this cloud.
-* **instanceType**: 'HyperVReplicaAzure' (Required): Gets the class type. Overridden in derived classes.
-* **onlineReplicationStartTime**: string (ReadOnly): The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
-* **recoveryPointHistoryDurationInHours**: int (ReadOnly): The duration (in hours) to which point the recovery history needs to be maintained.
-* **replicationInterval**: int (ReadOnly): The replication interval.
+* **azureVmDiskDetails**: [AzureVmDiskDetails](#azurevmdiskdetails)[] (ReadOnly): Azure VM Disk details.
+* **disksToInclude**: string[] (WriteOnly): The list of VHD IDs of disks to be protected.
+* **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+* **encryption**: string (ReadOnly): The encryption info.
+* **hvHostVmId**: string (WriteOnly): The Hyper-V host Vm Id.
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplicaAzure' (Required): Hyper-V Replica Azure specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
+* **licenseType**: string (ReadOnly): License Type of the VM to be used.
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
+* **oSDetails**: [OSDetails](#osdetails) (ReadOnly): Disk Details.
+* **osType**: string (WriteOnly): The OS type associated with vm.
+* **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+* **recoveryAzureResourceGroupId**: string (ReadOnly): The target resource group Id.
+* **recoveryAzureStorageAccount**: string (ReadOnly): The recovery Azure storage account.
+* **recoveryAzureVmName**: string (ReadOnly): Recovery Azure given name.
+* **recoveryAzureVMSize**: string (ReadOnly): The Recovery Azure VM size.
+* **rpoInSeconds**: int (ReadOnly): Last RPO value.
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly): The selected recovery azure network Id.
+* **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
+* **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
+* **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
+* **targetAvailabilityZone**: string: The target availability zone.
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
+* **targetStorageAccountId**: string (WriteOnly): The storage account name.
+* **targetVmSize**: string (WriteOnly): The target VM size.
+* **useManagedDisks**: string: A value indicating whether managed disks should be used during failover.
+* **vhdId**: string (WriteOnly): The OS disk VHD id associated with vm.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmName**: string (WriteOnly): The Vm Name.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
 ### HyperVReplicaBasePolicyDetails
 #### Properties
@@ -1961,7 +1559,7 @@
 * **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): A value indicating the application consistent frequency.
 * **compression**: string (ReadOnly): A value indicating whether compression has to be enabled.
 * **initialReplicationMethod**: string (ReadOnly): A value indicating whether IR is online.
-* **instanceType**: 'HyperVReplicaBasePolicyDetails' (Required): Gets the class type. Overridden in derived classes.
+* **instanceType**: 'HyperVReplicaBasePolicyDetails' (Required): Base class for HyperVReplica policy details.
 * **offlineReplicationExportPath**: string (ReadOnly): A value indicating the offline IR export path.
 * **offlineReplicationImportPath**: string (ReadOnly): A value indicating the offline IR import path.
 * **onlineReplicationStartTime**: string (ReadOnly): A value indicating the online IR start time.
@@ -1969,103 +1567,183 @@
 * **replicaDeletionOption**: string (ReadOnly): A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
 * **replicationPort**: int (ReadOnly): A value indicating the recovery HTTPS port.
 
-### InMagePolicyDetails
+### InMage
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **instanceType**: 'InMage' (Required): Gets the class type. Overridden in derived classes.
-* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-* **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
+* **activeSiteType**: string (ReadOnly): The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
+* **agentDetails**: [InMageAgentDetails](#inmageagentdetails) (ReadOnly): The details of the InMage agent.
+* **azureStorageAccountId**: string (ReadOnly): A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
+* **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
+* **consistencyPoints**: [Dictionary<string,DateTime>](#dictionarystringdatetime) (ReadOnly): The collection of Consistency points.
+* **datastoreName**: string (WriteOnly): The target data store name.
+* **datastores**: string[] (ReadOnly): The data stores of the on-premise machine Value can be list of strings that contain data store names
+* **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine.
+* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly): DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
+* **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
+* **disksToInclude**: string[] (WriteOnly): The disks to include list.
+* **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
+* **instanceType**: 'InMage' (Required): InMage specific protection profile details.
+* **ipAddress**: string (ReadOnly): The source IP address.
+* **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
+* **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
+* **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
+* **masterTargetId**: string (Required): The Master Target Id.
+* **multiVmGroupId**: string (Required): The multi vm group Id.
+* **multiVmGroupName**: string (Required): The multi vm group name.
+* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether the multi vm sync is enabled or disabled.
+* **osDetails**: [OSDiskDetails](#osdiskdetails) (ReadOnly): Details of the OS Disk.
+* **osVersion**: string (ReadOnly): The OS Version of the protected item.
+* **processServerId**: string (Required): The Process Server Id.
+* **protectedDisks**: [InMageProtectedDiskDetails](#inmageprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **protectionStage**: string (ReadOnly): The protection stage.
+* **rebootAfterUpdateStatus**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
+* **replicaId**: string (ReadOnly): The replica id of the protected item.
+* **resyncDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **retentionDrive**: string (Required, WriteOnly): The retention drive to use on the MT.
+* **retentionWindowEnd**: string (ReadOnly): The retention window end time.
+* **retentionWindowStart**: string (ReadOnly): The retention window start time.
+* **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
+* **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
+* **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
+* **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
+* **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors
+* **vCenterInfrastructureId**: string (ReadOnly): The vCenter infrastructure Id.
+* **vmFriendlyName**: string (WriteOnly): The Vm Name.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMageAzureV2PolicyDetails
+### InMageAzureV2
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'InMageAzureV2' (Required): Gets the class type. Overridden in derived classes.
-* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-* **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
+* **agentExpiryDate**: string (ReadOnly): Agent expiry date.
+* **agentVersion**: string (ReadOnly): The agent version.
+* **azureVMDiskDetails**: [AzureVmDiskDetails](#azurevmdiskdetails)[] (ReadOnly): Azure VM Disk details.
+* **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
+* **datastores**: string[] (ReadOnly): The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+* **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine. Value can be vCenter or physical.
+* **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
+* **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
+* **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
+* **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+* **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
+* **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
+* **ipAddress**: string (ReadOnly): The source IP address.
+* **isAgentUpdateRequired**: string (ReadOnly): A value indicating whether installed agent needs to be updated.
+* **isRebootAfterUpdateRequired**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
+* **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
+* **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
+* **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
+* **licenseType**: string (ReadOnly): License Type of the VM to be used.
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
+* **masterTargetId**: string: The Master target Id.
+* **multiVmGroupId**: string: The multi vm group Id.
+* **multiVmGroupName**: string: The multi vm group name.
+* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi vm sync is enabled or disabled.
+* **osDiskId**: string (ReadOnly): The id of the disk containing the OS.
+* **osType**: string (ReadOnly): The type of the OS on the VM.
+* **osVersion**: string (ReadOnly): The OS Version of the protected item.
+* **processServerId**: string: The Process Server Id.
+* **processServerName**: string (ReadOnly): The process server name.
+* **protectedDisks**: [InMageAzureV2ProtectedDiskDetails](#inmageazurev2protecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **protectedManagedDisks**: [InMageAzureV2ManagedDiskDetails](#inmageazurev2manageddiskdetails)[] (ReadOnly): The list of protected managed disks.
+* **protectionStage**: string (ReadOnly): The protection stage.
+* **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+* **recoveryAzureResourceGroupId**: string (ReadOnly): The target resource group Id.
+* **recoveryAzureStorageAccount**: string (ReadOnly): The recovery Azure storage account.
+* **recoveryAzureVMName**: string (ReadOnly): Recovery Azure given name.
+* **recoveryAzureVMSize**: string (ReadOnly): The Recovery Azure VM size.
+* **replicaId**: string (ReadOnly): The replica id of the protected item.
+* **resyncProgressPercentage**: int (ReadOnly): The resync progress percentage.
+* **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly): The selected recovery azure network Id.
+* **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
+* **selectedTfoAzureNetworkId**: string (ReadOnly): The test failover virtual network.
+* **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
+* **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
+* **storageAccountId**: string (WriteOnly): The storage account name.
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
+* **targetAvailabilityZone**: string: The target availability zone.
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
+* **targetVmId**: string (ReadOnly): The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+* **targetVmSize**: string (WriteOnly): The target VM size.
+* **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
+* **useManagedDisks**: string (ReadOnly): A value indicating whether managed disks should be used during failover.
+* **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors.
+* **vCenterInfrastructureId**: string (ReadOnly): The vCenter infrastructure Id.
+* **vhdName**: string (ReadOnly): The OS disk VHD name.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
 ### InMageBasePolicyDetails
 #### Properties
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **instanceType**: 'InMageBasePolicyDetails' (Required): Gets the class type. Overridden in derived classes.
+* **instanceType**: 'InMageBasePolicyDetails' (Required): Base class for the policies of providers using InMage replication.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
-### InMageRcmPolicyDetails
+### InMageRcm
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **enableMultiVmSync**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **instanceType**: 'InMageRcm' (Required): Gets the class type. Overridden in derived classes.
-* **recoveryPointHistoryInMinutes**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
+* **agentDetails**: [AgentDetails](#agentdetails)[] (ReadOnly): The list of agent details.
+* **authCertificate**: string (WriteOnly): The certificate to be used for AAD authentication.
+* **controlPlaneUri**: string (ReadOnly): The control plane Uri.
+* **dataPlaneUri**: string (ReadOnly): The data plane Uri.
+* **dras**: [DraDetails](#dradetails)[] (ReadOnly): The list of DRAs.
+* **instanceType**: 'InMageRcm' (Required): InMageRcm specific policy details.
+* **physicalSiteId**: string: The ARM Id of the physical site.
+* **processServers**: [ProcessServerDetails](#processserverdetails)[] (ReadOnly): The list of process servers.
+* **pushInstallers**: [PushInstallerDetails](#pushinstallerdetails)[] (ReadOnly): The list of push installers.
+* **rcmProxies**: [RcmProxyDetails](#rcmproxydetails)[] (ReadOnly): The list of RCM proxies.
+* **replicationAgents**: [ReplicationAgentDetails](#replicationagentdetails)[] (ReadOnly): The list of replication agents.
+* **reprotectAgents**: [ReprotectAgentDetails](#reprotectagentdetails)[] (ReadOnly): The list of reprotect agents.
+* **serviceContainerId**: string (ReadOnly): The service container Id.
+* **serviceEndpoint**: string (ReadOnly): The service endpoint.
+* **serviceResourceId**: string (ReadOnly): The service resource Id.
+* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly): Identity provider input.
+* **vmwareSiteId**: string: The ARM Id of the VMware site.
 
-### RcmAzureMigrationPolicyDetails
+### RcmAzureMigration
 #### Properties
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
 * **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'RcmAzureMigration' (Required): Gets the class type. Overridden in derived classes.
+* **instanceType**: 'RcmAzureMigration' (Required): RCM based Azure migration specific policy details.
 * **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
-### VmwareCbtPolicyDetails
+### VMwareCbt
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'VMwareCbt' (Required): Gets the class type. Overridden in derived classes.
-* **recoveryPointHistoryInMinutes**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
+* **dataMoverRunAsAccountId**: string (Required): The data mover RunAs account Id.
+* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
+* **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
+* **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
+* **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
+* **osType**: string (ReadOnly): The type of the OS on the VM.
+* **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **snapshotRunAsAccountId**: string (Required): The snapshot RunAs account Id.
+* **targetAvailabilitySetId**: string: The target availability set ARM Id.
+* **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
+* **targetLocation**: string (ReadOnly): The target location.
+* **targetNetworkId**: string (Required): The target network ARM Id.
+* **targetResourceGroupId**: string (Required): The target resource group ARM Id.
+* **targetSubnetName**: string (WriteOnly): The target subnet name.
+* **targetVmName**: string: The target VM name.
+* **targetVmSize**: string: The target VM size.
+* **vmNics**: [VMwareCbtNicDetails](#vmwarecbtnicdetails)[] (ReadOnly): The network details.
+* **vmwareMachineId**: string (Required): The ARM Id of the VM discovered in VMware.
 
-
-## A2APolicyDetails
-### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'A2A' (Required): Gets the class type. Overridden in derived classes.
-* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-* **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
-
-## HyperVReplicaPolicyDetails
-### Properties
-* **allowedAuthenticationType**: int (ReadOnly): A value indicating the authentication type.
-* **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): A value indicating the application consistent frequency.
-* **compression**: string (ReadOnly): A value indicating whether compression has to be enabled.
-* **initialReplicationMethod**: string (ReadOnly): A value indicating whether IR is online.
-* **instanceType**: 'HyperVReplica2012' (Required): Gets the class type. Overridden in derived classes.
-* **offlineReplicationExportPath**: string (ReadOnly): A value indicating the offline IR export path.
-* **offlineReplicationImportPath**: string (ReadOnly): A value indicating the offline IR import path.
-* **onlineReplicationStartTime**: string (ReadOnly): A value indicating the online IR start time.
-* **recoveryPoints**: int (ReadOnly): A value indicating the number of recovery points.
-* **replicaDeletionOption**: string (ReadOnly): A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
-* **replicationPort**: int (ReadOnly): A value indicating the recovery HTTPS port.
-
-## HyperVReplicaBluePolicyDetails
-### Properties
-* **allowedAuthenticationType**: int (ReadOnly): A value indicating the authentication type.
-* **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): A value indicating the application consistent frequency.
-* **compression**: string (ReadOnly): A value indicating whether compression has to be enabled.
-* **initialReplicationMethod**: string (ReadOnly): A value indicating whether IR is online.
-* **instanceType**: 'HyperVReplica2012R2' (Required): Gets the class type. Overridden in derived classes.
-* **offlineReplicationExportPath**: string (ReadOnly): A value indicating the offline IR export path.
-* **offlineReplicationImportPath**: string (ReadOnly): A value indicating the offline IR import path.
-* **onlineReplicationStartTime**: string (ReadOnly): A value indicating the online IR start time.
-* **recoveryPoints**: int (ReadOnly): A value indicating the number of recovery points.
-* **replicaDeletionOption**: string (ReadOnly): A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
-* **replicationFrequencyInSeconds**: int (ReadOnly): A value indicating the replication interval.
-* **replicationPort**: int (ReadOnly): A value indicating the recovery HTTPS port.
-
-## HyperVReplicaAzurePolicyDetails
-### Properties
-* **activeStorageAccountId**: string (ReadOnly): The active storage account Id.
-* **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
-* **encryption**: string (ReadOnly): A value indicating whether encryption is enabled for virtual machines in this cloud.
-* **instanceType**: 'HyperVReplicaAzure' (Required): Gets the class type. Overridden in derived classes.
-* **onlineReplicationStartTime**: string (ReadOnly): The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
-* **recoveryPointHistoryDurationInHours**: int (ReadOnly): The duration (in hours) to which point the recovery history needs to be maintained.
-* **replicationInterval**: int (ReadOnly): The replication interval.
 
 ## HyperVReplicaBasePolicyDetails
 ### Properties
@@ -2073,7 +1751,7 @@
 * **applicationConsistentSnapshotFrequencyInHours**: int (ReadOnly): A value indicating the application consistent frequency.
 * **compression**: string (ReadOnly): A value indicating whether compression has to be enabled.
 * **initialReplicationMethod**: string (ReadOnly): A value indicating whether IR is online.
-* **instanceType**: 'HyperVReplicaBasePolicyDetails' (Required): Gets the class type. Overridden in derived classes.
+* **instanceType**: 'HyperVReplicaBasePolicyDetails' (Required): Base class for HyperVReplica policy details.
 * **offlineReplicationExportPath**: string (ReadOnly): A value indicating the offline IR export path.
 * **offlineReplicationImportPath**: string (ReadOnly): A value indicating the offline IR import path.
 * **onlineReplicationStartTime**: string (ReadOnly): A value indicating the online IR start time.
@@ -2081,215 +1759,256 @@
 * **replicaDeletionOption**: string (ReadOnly): A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
 * **replicationPort**: int (ReadOnly): A value indicating the recovery HTTPS port.
 
-## InMagePolicyDetails
-### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **instanceType**: 'InMage' (Required): Gets the class type. Overridden in derived classes.
-* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-* **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
-
-## InMageAzureV2PolicyDetails
-### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'InMageAzureV2' (Required): Gets the class type. Overridden in derived classes.
-* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-* **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
-
 ## InMageBasePolicyDetails
 ### Properties
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **instanceType**: 'InMageBasePolicyDetails' (Required): Gets the class type. Overridden in derived classes.
+* **instanceType**: 'InMageBasePolicyDetails' (Required): Base class for the policies of providers using InMage replication.
 * **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
-## InMageRcmPolicyDetails
+## RcmAzureMigration
 ### Properties
 * **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
 * **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **enableMultiVmSync**: string (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
-* **instanceType**: 'InMageRcm' (Required): Gets the class type. Overridden in derived classes.
-* **recoveryPointHistoryInMinutes**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-
-## RcmAzureMigrationPolicyDetails
-### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'RcmAzureMigration' (Required): Gets the class type. Overridden in derived classes.
+* **instanceType**: 'RcmAzureMigration' (Required): RCM based Azure migration specific policy details.
 * **multiVmSyncStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether multi-VM sync has to be enabled.
 * **recoveryPointHistory**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
 * **recoveryPointThresholdInMinutes**: int (ReadOnly): The recovery point threshold in minutes.
 
-## VmwareCbtPolicyDetails
-### Properties
-* **appConsistentFrequencyInMinutes**: int (ReadOnly): The app consistent snapshot frequency in minutes.
-* **crashConsistentFrequencyInMinutes**: int (ReadOnly): The crash consistent snapshot frequency in minutes.
-* **instanceType**: 'VMwareCbt' (Required): Gets the class type. Overridden in derived classes.
-* **recoveryPointHistoryInMinutes**: int (ReadOnly): The duration in minutes until which the recovery points need to be stored.
-
 ## PolicyProviderSpecificInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### A2APolicyCreationInput
+### A2A
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'A2A' (Required): The class type.
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-### HyperVReplicaPolicyInput
+### HyperVReplica2012
 #### Properties
-* **allowedAuthenticationType**: int (WriteOnly)
-* **applicationConsistentSnapshotFrequencyInHours**: int (WriteOnly)
-* **compression**: string (WriteOnly)
-* **initialReplicationMethod**: string (WriteOnly)
-* **instanceType**: 'HyperVReplica2012' (Required): The class type.
-* **offlineReplicationExportPath**: string (WriteOnly)
-* **offlineReplicationImportPath**: string (WriteOnly)
-* **onlineReplicationStartTime**: string (WriteOnly)
-* **recoveryPoints**: int (WriteOnly)
-* **replicaDeletion**: string (WriteOnly)
-* **replicationPort**: int (WriteOnly)
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplica2012' (Required): Hyper-V Replica Blue specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### HyperVReplicaBluePolicyInput
+### HyperVReplica2012R2
 #### Properties
-* **allowedAuthenticationType**: int (WriteOnly)
-* **applicationConsistentSnapshotFrequencyInHours**: int (WriteOnly)
-* **compression**: string (WriteOnly)
-* **initialReplicationMethod**: string (WriteOnly)
-* **instanceType**: 'HyperVReplica2012R2' (Required): The class type.
-* **offlineReplicationExportPath**: string (WriteOnly)
-* **offlineReplicationImportPath**: string (WriteOnly)
-* **onlineReplicationStartTime**: string (WriteOnly)
-* **recoveryPoints**: int (WriteOnly)
-* **replicaDeletion**: string (WriteOnly)
-* **replicationFrequencyInSeconds**: int (WriteOnly)
-* **replicationPort**: int (WriteOnly)
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplica2012R2' (Required): Hyper-V Replica Blue specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **vMDiskDetails**: [DiskDetails](#diskdetails)[] (ReadOnly): VM disk details.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### HyperVReplicaAzurePolicyInput
+### HyperVReplicaAzure
 #### Properties
-* **applicationConsistentSnapshotFrequencyInHours**: int (WriteOnly)
-* **instanceType**: 'HyperVReplicaAzure' (Required): The class type.
-* **onlineReplicationStartTime**: string (WriteOnly)
-* **recoveryPointHistoryDuration**: int (WriteOnly)
-* **replicationInterval**: int (WriteOnly)
-* **storageAccounts**: string[] (WriteOnly)
+* **azureVmDiskDetails**: [AzureVmDiskDetails](#azurevmdiskdetails)[] (ReadOnly): Azure VM Disk details.
+* **disksToInclude**: string[] (WriteOnly): The list of VHD IDs of disks to be protected.
+* **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+* **encryption**: string (ReadOnly): The encryption info.
+* **hvHostVmId**: string (WriteOnly): The Hyper-V host Vm Id.
+* **initialReplicationDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **instanceType**: 'HyperVReplicaAzure' (Required): Hyper-V Replica Azure specific protection profile details.
+* **lastReplicatedTime**: string (ReadOnly): The Last replication time.
+* **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
+* **licenseType**: string (ReadOnly): License Type of the VM to be used.
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
+* **oSDetails**: [OSDetails](#osdetails) (ReadOnly): Disk Details.
+* **osType**: string (WriteOnly): The OS type associated with vm.
+* **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+* **recoveryAzureResourceGroupId**: string (ReadOnly): The target resource group Id.
+* **recoveryAzureStorageAccount**: string (ReadOnly): The recovery Azure storage account.
+* **recoveryAzureVmName**: string (ReadOnly): Recovery Azure given name.
+* **recoveryAzureVMSize**: string (ReadOnly): The Recovery Azure VM size.
+* **rpoInSeconds**: int (ReadOnly): Last RPO value.
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly): The selected recovery azure network Id.
+* **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
+* **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
+* **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
+* **targetAvailabilityZone**: string: The target availability zone.
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
+* **targetStorageAccountId**: string (WriteOnly): The storage account name.
+* **targetVmSize**: string (WriteOnly): The target VM size.
+* **useManagedDisks**: string: A value indicating whether managed disks should be used during failover.
+* **vhdId**: string (WriteOnly): The OS disk VHD id associated with vm.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmName**: string (WriteOnly): The Vm Name.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMagePolicyInput
+### InMage
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'InMage' (Required): The class type.
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-* **recoveryPointThresholdInMinutes**: int (WriteOnly)
+* **activeSiteType**: string (ReadOnly): The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
+* **agentDetails**: [InMageAgentDetails](#inmageagentdetails) (ReadOnly): The details of the InMage agent.
+* **azureStorageAccountId**: string (ReadOnly): A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
+* **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
+* **consistencyPoints**: [Dictionary<string,DateTime>](#dictionarystringdatetime) (ReadOnly): The collection of Consistency points.
+* **datastoreName**: string (WriteOnly): The target data store name.
+* **datastores**: string[] (ReadOnly): The data stores of the on-premise machine Value can be list of strings that contain data store names
+* **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine.
+* **diskExclusionInput**: [InMageDiskExclusionInput](#inmagediskexclusioninput) (WriteOnly): DiskExclusionInput when doing enable protection of virtual machine in InMage provider.
+* **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
+* **disksToInclude**: string[] (WriteOnly): The disks to include list.
+* **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
+* **instanceType**: 'InMage' (Required): InMage specific protection profile details.
+* **ipAddress**: string (ReadOnly): The source IP address.
+* **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
+* **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
+* **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
+* **masterTargetId**: string (Required): The Master Target Id.
+* **multiVmGroupId**: string (Required): The multi vm group Id.
+* **multiVmGroupName**: string (Required): The multi vm group name.
+* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether the multi vm sync is enabled or disabled.
+* **osDetails**: [OSDiskDetails](#osdiskdetails) (ReadOnly): Details of the OS Disk.
+* **osVersion**: string (ReadOnly): The OS Version of the protected item.
+* **processServerId**: string (Required): The Process Server Id.
+* **protectedDisks**: [InMageProtectedDiskDetails](#inmageprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **protectionStage**: string (ReadOnly): The protection stage.
+* **rebootAfterUpdateStatus**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
+* **replicaId**: string (ReadOnly): The replica id of the protected item.
+* **resyncDetails**: [InitialReplicationDetails](#initialreplicationdetails) (ReadOnly): Initial replication details.
+* **retentionDrive**: string (Required, WriteOnly): The retention drive to use on the MT.
+* **retentionWindowEnd**: string (ReadOnly): The retention window end time.
+* **retentionWindowStart**: string (ReadOnly): The retention window start time.
+* **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
+* **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
+* **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
+* **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
+* **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors
+* **vCenterInfrastructureId**: string (ReadOnly): The vCenter infrastructure Id.
+* **vmFriendlyName**: string (WriteOnly): The Vm Name.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMageAzureV2PolicyInput
+### InMageAzureV2
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'InMageAzureV2' (Required): The class type.
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-* **recoveryPointThresholdInMinutes**: int (WriteOnly)
+* **agentExpiryDate**: string (ReadOnly): Agent expiry date.
+* **agentVersion**: string (ReadOnly): The agent version.
+* **azureVMDiskDetails**: [AzureVmDiskDetails](#azurevmdiskdetails)[] (ReadOnly): Azure VM Disk details.
+* **compressedDataRateInMB**: int (ReadOnly): The compressed data change rate in MB.
+* **datastores**: string[] (ReadOnly): The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+* **discoveryType**: string (ReadOnly): A value indicating the discovery type of the machine. Value can be vCenter or physical.
+* **diskEncryptionSetId**: string (WriteOnly): The DiskEncryptionSet ARM ID.
+* **diskResized**: string (ReadOnly): A value indicating whether any disk is resized for this VM.
+* **disksToInclude**: [InMageAzureV2DiskInputDetails](#inmageazurev2diskinputdetails)[] (WriteOnly): The disks to include list.
+* **diskType**: 'Premium_LRS' | 'Standard_LRS' | 'StandardSSD_LRS' (WriteOnly): The DiskType.
+* **enableRdpOnTargetOption**: string: The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+* **infrastructureVmId**: string (ReadOnly): The infrastructure VM Id.
+* **instanceType**: 'InMageAzureV2' (Required): InMage Azure v2 specific protection profile details.
+* **ipAddress**: string (ReadOnly): The source IP address.
+* **isAgentUpdateRequired**: string (ReadOnly): A value indicating whether installed agent needs to be updated.
+* **isRebootAfterUpdateRequired**: string (ReadOnly): A value indicating whether the source server requires a restart after update.
+* **lastHeartbeat**: string (ReadOnly): The last heartbeat received from the source server.
+* **lastRpoCalculatedTime**: string (ReadOnly): The last RPO calculated time.
+* **lastUpdateReceivedTime**: string (ReadOnly): The last update time received from on-prem components.
+* **licenseType**: string (ReadOnly): License Type of the VM to be used.
+* **logStorageAccountId**: string (WriteOnly): The storage account to be used for logging during replication.
+* **masterTargetId**: string: The Master target Id.
+* **multiVmGroupId**: string: The multi vm group Id.
+* **multiVmGroupName**: string: The multi vm group name.
+* **multiVmSyncStatus**: string (ReadOnly): A value indicating whether multi vm sync is enabled or disabled.
+* **osDiskId**: string (ReadOnly): The id of the disk containing the OS.
+* **osType**: string (ReadOnly): The type of the OS on the VM.
+* **osVersion**: string (ReadOnly): The OS Version of the protected item.
+* **processServerId**: string: The Process Server Id.
+* **processServerName**: string (ReadOnly): The process server name.
+* **protectedDisks**: [InMageAzureV2ProtectedDiskDetails](#inmageazurev2protecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **protectedManagedDisks**: [InMageAzureV2ManagedDiskDetails](#inmageazurev2manageddiskdetails)[] (ReadOnly): The list of protected managed disks.
+* **protectionStage**: string (ReadOnly): The protection stage.
+* **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
+* **recoveryAzureLogStorageAccountId**: string (ReadOnly): The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+* **recoveryAzureResourceGroupId**: string (ReadOnly): The target resource group Id.
+* **recoveryAzureStorageAccount**: string (ReadOnly): The recovery Azure storage account.
+* **recoveryAzureVMName**: string (ReadOnly): Recovery Azure given name.
+* **recoveryAzureVMSize**: string (ReadOnly): The Recovery Azure VM size.
+* **replicaId**: string (ReadOnly): The replica id of the protected item.
+* **resyncProgressPercentage**: int (ReadOnly): The resync progress percentage.
+* **rpoInSeconds**: int (ReadOnly): The RPO in seconds.
+* **runAsAccountId**: string (WriteOnly): The CS account Id.
+* **selectedRecoveryAzureNetworkId**: string (ReadOnly): The selected recovery azure network Id.
+* **selectedSourceNicId**: string (ReadOnly): The selected source nic Id which will be used as the primary nic during failover.
+* **selectedTfoAzureNetworkId**: string (ReadOnly): The test failover virtual network.
+* **sourceVmCpuCount**: int (ReadOnly): The CPU count of the VM on the primary side.
+* **sourceVmRamSizeInMB**: int (ReadOnly): The RAM size of the VM on the primary side.
+* **storageAccountId**: string (WriteOnly): The storage account name.
+* **targetAvailabilitySetId**: string (WriteOnly): The availability set ARM Id.
+* **targetAvailabilityZone**: string: The target availability zone.
+* **targetAzureNetworkId**: string (WriteOnly): The selected target Azure network Id.
+* **targetAzureSubnetId**: string (WriteOnly): The selected target Azure subnet Id.
+* **targetAzureV1ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+* **targetAzureV2ResourceGroupId**: string (WriteOnly): The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+* **targetAzureVmName**: string (WriteOnly): The target azure Vm Name.
+* **targetProximityPlacementGroupId**: string: The proximity placement group ARM Id.
+* **targetVmId**: string (ReadOnly): The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+* **targetVmSize**: string (WriteOnly): The target VM size.
+* **uncompressedDataRateInMB**: int (ReadOnly): The uncompressed data change rate in MB.
+* **useManagedDisks**: string (ReadOnly): A value indicating whether managed disks should be used during failover.
+* **validationErrors**: [HealthError](#healtherror)[] (ReadOnly): The validation errors of the on-premise machine Value can be list of validation errors.
+* **vCenterInfrastructureId**: string (ReadOnly): The vCenter infrastructure Id.
+* **vhdName**: string (ReadOnly): The OS disk VHD name.
+* **vmId**: string (ReadOnly): The virtual machine Id.
+* **vmNics**: [VMNicDetails](#vmnicdetails)[] (ReadOnly): The PE Network details.
+* **vmProtectionState**: string (ReadOnly): The protection state for the vm.
+* **vmProtectionStateDescription**: string (ReadOnly): The protection state description for the vm.
 
-### InMageRcmPolicyCreationInput
+### InMageRcm
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **enableMultiVmSync**: string (WriteOnly)
-* **instanceType**: 'InMageRcm' (Required): The class type.
-* **recoveryPointHistoryInMinutes**: int (WriteOnly)
+* **agentDetails**: [AgentDetails](#agentdetails)[] (ReadOnly): The list of agent details.
+* **authCertificate**: string (WriteOnly): The certificate to be used for AAD authentication.
+* **controlPlaneUri**: string (ReadOnly): The control plane Uri.
+* **dataPlaneUri**: string (ReadOnly): The data plane Uri.
+* **dras**: [DraDetails](#dradetails)[] (ReadOnly): The list of DRAs.
+* **instanceType**: 'InMageRcm' (Required): InMageRcm specific policy details.
+* **physicalSiteId**: string: The ARM Id of the physical site.
+* **processServers**: [ProcessServerDetails](#processserverdetails)[] (ReadOnly): The list of process servers.
+* **pushInstallers**: [PushInstallerDetails](#pushinstallerdetails)[] (ReadOnly): The list of push installers.
+* **rcmProxies**: [RcmProxyDetails](#rcmproxydetails)[] (ReadOnly): The list of RCM proxies.
+* **replicationAgents**: [ReplicationAgentDetails](#replicationagentdetails)[] (ReadOnly): The list of replication agents.
+* **reprotectAgents**: [ReprotectAgentDetails](#reprotectagentdetails)[] (ReadOnly): The list of reprotect agents.
+* **serviceContainerId**: string (ReadOnly): The service container Id.
+* **serviceEndpoint**: string (ReadOnly): The service endpoint.
+* **serviceResourceId**: string (ReadOnly): The service resource Id.
+* **sourceAgentIdentity**: [IdentityProviderInput](#identityproviderinput) (WriteOnly): Identity provider input.
+* **vmwareSiteId**: string: The ARM Id of the VMware site.
 
-### VMwareCbtPolicyCreationInput
+### VMwareCbt
 #### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'VMwareCbt' (Required): The class type.
-* **recoveryPointHistoryInMinutes**: int (WriteOnly)
+* **dataMoverRunAsAccountId**: string (Required): The data mover RunAs account Id.
+* **disksToInclude**: [VMwareCbtDiskInput](#vmwarecbtdiskinput)[] (Required, WriteOnly): The disks to include list.
+* **instanceType**: 'VMwareCbt' (Required): VMware Cbt specific policy details.
+* **lastRecoveryPointReceived**: string (ReadOnly): The last recovery point received time.
+* **licenseType**: 'NoLicenseType' | 'NotSpecified' | 'WindowsServer': License type.
+* **migrationRecoveryPointId**: string (ReadOnly): The recovery point Id to which the VM was migrated.
+* **osType**: string (ReadOnly): The type of the OS on the VM.
+* **protectedDisks**: [VMwareCbtProtectedDiskDetails](#vmwarecbtprotecteddiskdetails)[] (ReadOnly): The list of protected disks.
+* **snapshotRunAsAccountId**: string (Required): The snapshot RunAs account Id.
+* **targetAvailabilitySetId**: string: The target availability set ARM Id.
+* **targetBootDiagnosticsStorageAccountId**: string: The target boot diagnostics storage account ARM Id.
+* **targetLocation**: string (ReadOnly): The target location.
+* **targetNetworkId**: string (Required): The target network ARM Id.
+* **targetResourceGroupId**: string (Required): The target resource group ARM Id.
+* **targetSubnetName**: string (WriteOnly): The target subnet name.
+* **targetVmName**: string: The target VM name.
+* **targetVmSize**: string: The target VM size.
+* **vmNics**: [VMwareCbtNicDetails](#vmwarecbtnicdetails)[] (ReadOnly): The network details.
+* **vmwareMachineId**: string (Required): The ARM Id of the VM discovered in VMware.
 
-
-## A2APolicyCreationInput
-### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'A2A' (Required): The class type.
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-
-## HyperVReplicaPolicyInput
-### Properties
-* **allowedAuthenticationType**: int (WriteOnly)
-* **applicationConsistentSnapshotFrequencyInHours**: int (WriteOnly)
-* **compression**: string (WriteOnly)
-* **initialReplicationMethod**: string (WriteOnly)
-* **instanceType**: 'HyperVReplica2012' (Required): The class type.
-* **offlineReplicationExportPath**: string (WriteOnly)
-* **offlineReplicationImportPath**: string (WriteOnly)
-* **onlineReplicationStartTime**: string (WriteOnly)
-* **recoveryPoints**: int (WriteOnly)
-* **replicaDeletion**: string (WriteOnly)
-* **replicationPort**: int (WriteOnly)
-
-## HyperVReplicaBluePolicyInput
-### Properties
-* **allowedAuthenticationType**: int (WriteOnly)
-* **applicationConsistentSnapshotFrequencyInHours**: int (WriteOnly)
-* **compression**: string (WriteOnly)
-* **initialReplicationMethod**: string (WriteOnly)
-* **instanceType**: 'HyperVReplica2012R2' (Required): The class type.
-* **offlineReplicationExportPath**: string (WriteOnly)
-* **offlineReplicationImportPath**: string (WriteOnly)
-* **onlineReplicationStartTime**: string (WriteOnly)
-* **recoveryPoints**: int (WriteOnly)
-* **replicaDeletion**: string (WriteOnly)
-* **replicationFrequencyInSeconds**: int (WriteOnly)
-* **replicationPort**: int (WriteOnly)
-
-## HyperVReplicaAzurePolicyInput
-### Properties
-* **applicationConsistentSnapshotFrequencyInHours**: int (WriteOnly)
-* **instanceType**: 'HyperVReplicaAzure' (Required): The class type.
-* **onlineReplicationStartTime**: string (WriteOnly)
-* **recoveryPointHistoryDuration**: int (WriteOnly)
-* **replicationInterval**: int (WriteOnly)
-* **storageAccounts**: string[] (WriteOnly)
-
-## InMagePolicyInput
-### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'InMage' (Required): The class type.
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-* **recoveryPointThresholdInMinutes**: int (WriteOnly)
-
-## InMageAzureV2PolicyInput
-### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'InMageAzureV2' (Required): The class type.
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-* **recoveryPointThresholdInMinutes**: int (WriteOnly)
-
-## InMageRcmPolicyCreationInput
-### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **enableMultiVmSync**: string (WriteOnly)
-* **instanceType**: 'InMageRcm' (Required): The class type.
-* **recoveryPointHistoryInMinutes**: int (WriteOnly)
-
-## VMwareCbtPolicyCreationInput
-### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **instanceType**: 'VMwareCbt' (Required): The class type.
-* **recoveryPointHistoryInMinutes**: int (WriteOnly)
 
 ## CreateProtectionIntentProperties
 ### Properties
@@ -2298,220 +2017,15 @@
 * **isActive**: bool (ReadOnly): A value indicating whether the intent object is active.
 * **jobId**: string (ReadOnly): The job Id.
 * **jobState**: string (ReadOnly): The job state.
-* **providerSpecificDetails**: [CreateProtectionIntentProviderSpecificDetails](#createprotectionintentproviderspecificdetails): Replication provider specific settings.
+* **providerSpecificDetails**: [CreateProtectionIntentProviderSpecificDetails](#createprotectionintentproviderspecificdetails): Create protection intent provider specific input.
 
 ## CreateProtectionIntentProviderSpecificDetails
 * **Discriminator**: instanceType
-
 ### Base Properties
-### A2ACreateProtectionIntentInput
+### A2A
 #### Properties
-* **autoProtectionOfDataDisk**: 'Disabled' | 'Enabled' (WriteOnly)
-* **autoProtectionOfDataDiskStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether the auto protection is enabled.
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo): Recovery disk encryption info (BEK and KEK).
-* **fabricObjectId**: string (Required): The fabric specific object Id of the virtual machine.
-* **instanceType**: 'A2A' (Required): The class type.
-* **multiVmGroupId**: string: The multi vm group id.
-* **multiVmGroupName**: string: The multi vm group name.
-* **policyId**: string (ReadOnly): The ID of Policy governing this PE.
-* **primaryContainerFriendlyName**: string (ReadOnly): The primary container Name.
-* **primaryFabricFriendlyName**: string (ReadOnly): The recovery fabric Name.
-* **primaryLocation**: string (Required): The primary location for the virtual machine.
-* **primaryStagingStorageAccountCustomInput**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **protectionProfileCustomInput**: [ProtectionProfileCustomDetails](#protectionprofilecustomdetails) (WriteOnly)
-* **recoveryAvailabilitySetCustomInput**: [RecoveryAvailabilitySetCustomDetails](#recoveryavailabilitysetcustomdetails) (WriteOnly)
-* **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
-* **recoveryAvailabilityType**: 'AvailabilitySet' | 'AvailabilityZone' | 'Single' (Required): The recovery availability type of the virtual machine.
-* **recoveryAvailabilityZone**: string: The recovery availability zone.
-* **recoveryBootDiagStorageAccount**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **recoveryBootDiagStorageAccountId**: string (ReadOnly): The boot diagnostic storage account.
-* **recoveryContainerFriendlyName**: string (ReadOnly): The recovery container Name.
-* **recoveryFabricFriendlyName**: string (ReadOnly): The recovery fabric Name.
-* **recoveryLocation**: string (Required): The recovery location for the virtual machine.
-* **recoveryProximityPlacementGroupCustomInput**: [RecoveryProximityPlacementGroupCustomDetails](#recoveryproximityplacementgroupcustomdetails) (WriteOnly)
-* **recoveryProximityPlacementGroupId**: string (ReadOnly): The recovery proximity placement group custom details.
-* **recoveryResourceGroupId**: string (Required): The recovery resource group id.
-* **recoverySubscriptionId**: string (Required): The recovery subscription Id of the virtual machine.
-* **recoveryVirtualNetworkCustomInput**: [RecoveryVirtualNetworkCustomDetails](#recoveryvirtualnetworkcustomdetails) (WriteOnly)
-* **recoveryVirtualNetworkId**: string (ReadOnly): The recovery virtual network Id.
-* **vmDisks**: [A2AProtectionIntentDiskInputDetails](#a2aprotectionintentdiskinputdetails)[]: The list of vm disk details.
-* **vmManagedDisks**: [A2AProtectionIntentManagedDiskInputDetails](#a2aprotectionintentmanageddiskinputdetails)[]: The list of vm managed disk details.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-
-## A2ACreateProtectionIntentInput
-### Properties
-* **autoProtectionOfDataDisk**: 'Disabled' | 'Enabled' (WriteOnly)
-* **autoProtectionOfDataDiskStatus**: 'Disabled' | 'Enabled' (ReadOnly): A value indicating whether the auto protection is enabled.
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo): Recovery disk encryption info (BEK and KEK).
-* **fabricObjectId**: string (Required): The fabric specific object Id of the virtual machine.
-* **instanceType**: 'A2A' (Required): The class type.
-* **multiVmGroupId**: string: The multi vm group id.
-* **multiVmGroupName**: string: The multi vm group name.
-* **policyId**: string (ReadOnly): The ID of Policy governing this PE.
-* **primaryContainerFriendlyName**: string (ReadOnly): The primary container Name.
-* **primaryFabricFriendlyName**: string (ReadOnly): The recovery fabric Name.
-* **primaryLocation**: string (Required): The primary location for the virtual machine.
-* **primaryStagingStorageAccountCustomInput**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **protectionProfileCustomInput**: [ProtectionProfileCustomDetails](#protectionprofilecustomdetails) (WriteOnly)
-* **recoveryAvailabilitySetCustomInput**: [RecoveryAvailabilitySetCustomDetails](#recoveryavailabilitysetcustomdetails) (WriteOnly)
-* **recoveryAvailabilitySetId**: string (ReadOnly): The recovery availability set Id.
-* **recoveryAvailabilityType**: 'AvailabilitySet' | 'AvailabilityZone' | 'Single' (Required): The recovery availability type of the virtual machine.
-* **recoveryAvailabilityZone**: string: The recovery availability zone.
-* **recoveryBootDiagStorageAccount**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **recoveryBootDiagStorageAccountId**: string (ReadOnly): The boot diagnostic storage account.
-* **recoveryContainerFriendlyName**: string (ReadOnly): The recovery container Name.
-* **recoveryFabricFriendlyName**: string (ReadOnly): The recovery fabric Name.
-* **recoveryLocation**: string (Required): The recovery location for the virtual machine.
-* **recoveryProximityPlacementGroupCustomInput**: [RecoveryProximityPlacementGroupCustomDetails](#recoveryproximityplacementgroupcustomdetails) (WriteOnly)
-* **recoveryProximityPlacementGroupId**: string (ReadOnly): The recovery proximity placement group custom details.
-* **recoveryResourceGroupId**: string (Required): The recovery resource group id.
-* **recoverySubscriptionId**: string (Required): The recovery subscription Id of the virtual machine.
-* **recoveryVirtualNetworkCustomInput**: [RecoveryVirtualNetworkCustomDetails](#recoveryvirtualnetworkcustomdetails) (WriteOnly)
-* **recoveryVirtualNetworkId**: string (ReadOnly): The recovery virtual network Id.
-* **vmDisks**: [A2AProtectionIntentDiskInputDetails](#a2aprotectionintentdiskinputdetails)[]: The list of vm disk details.
-* **vmManagedDisks**: [A2AProtectionIntentManagedDiskInputDetails](#a2aprotectionintentmanageddiskinputdetails)[]: The list of vm managed disk details.
-
-## StorageAccountCustomDetails
-* **Discriminator**: resourceType
-
-### Base Properties
-### ExistingStorageAccount
-#### Properties
-* **azureStorageAccountId**: string (Required, WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-
-## ExistingStorageAccount
-### Properties
-* **azureStorageAccountId**: string (Required, WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-## ProtectionProfileCustomDetails
-* **Discriminator**: resourceType
-
-### Base Properties
-### ExistingProtectionProfile
-#### Properties
-* **protectionProfileId**: string (Required, WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-### NewProtectionProfile
-#### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **policyName**: string (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-* **resourceType**: 'New' (Required): The class type.
-
-
-## ExistingProtectionProfile
-### Properties
-* **protectionProfileId**: string (Required, WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-## NewProtectionProfile
-### Properties
-* **appConsistentFrequencyInMinutes**: int (WriteOnly)
-* **crashConsistentFrequencyInMinutes**: int (WriteOnly)
-* **multiVmSyncStatus**: 'Disable' | 'Enable' (Required, WriteOnly)
-* **policyName**: string (Required, WriteOnly)
-* **recoveryPointHistory**: int (WriteOnly)
-* **resourceType**: 'New' (Required): The class type.
-
-## RecoveryAvailabilitySetCustomDetails
-* **Discriminator**: resourceType
-
-### Base Properties
-### ExistingRecoveryAvailabilitySet
-#### Properties
-* **recoveryAvailabilitySetId**: string (WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-
-## ExistingRecoveryAvailabilitySet
-### Properties
-* **recoveryAvailabilitySetId**: string (WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-## RecoveryProximityPlacementGroupCustomDetails
-* **Discriminator**: resourceType
-
-### Base Properties
-### ExistingRecoveryProximityPlacementGroup
-#### Properties
-* **recoveryProximityPlacementGroupId**: string (WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-
-## ExistingRecoveryProximityPlacementGroup
-### Properties
-* **recoveryProximityPlacementGroupId**: string (WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-## RecoveryVirtualNetworkCustomDetails
-* **Discriminator**: resourceType
-
-### Base Properties
-### ExistingRecoveryVirtualNetwork
-#### Properties
-* **recoverySubnetName**: string (WriteOnly)
-* **recoveryVirtualNetworkId**: string (Required, WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-### NewRecoveryVirtualNetwork
-#### Properties
-* **recoveryVirtualNetworkName**: string (WriteOnly)
-* **recoveryVirtualNetworkResourceGroupName**: string (WriteOnly)
-* **resourceType**: 'New' (Required): The class type.
-
-
-## ExistingRecoveryVirtualNetwork
-### Properties
-* **recoverySubnetName**: string (WriteOnly)
-* **recoveryVirtualNetworkId**: string (Required, WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-## NewRecoveryVirtualNetwork
-### Properties
-* **recoveryVirtualNetworkName**: string (WriteOnly)
-* **recoveryVirtualNetworkResourceGroupName**: string (WriteOnly)
-* **resourceType**: 'New' (Required): The class type.
-
-## A2AProtectionIntentDiskInputDetails
-### Properties
-* **diskUri**: string (Required): The disk Uri.
-* **primaryStagingAzureStorageAccountId**: string (ReadOnly): The primary staging storage account Id.
-* **primaryStagingStorageAccountCustomInput**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **recoveryAzureStorageAccountCustomInput**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **recoveryAzureStorageAccountId**: string (ReadOnly): The recovery VHD storage account Id.
-
-## A2AProtectionIntentManagedDiskInputDetails
-### Properties
-* **diskEncryptionInfo**: [DiskEncryptionInfo](#diskencryptioninfo): Recovery disk encryption info (BEK and KEK).
-* **diskId**: string (Required): The disk Id.
-* **primaryStagingAzureStorageAccountId**: string (ReadOnly): The primary staging storage account Arm Id.
-* **primaryStagingStorageAccountCustomInput**: [StorageAccountCustomDetails](#storageaccountcustomdetails) (WriteOnly)
-* **recoveryDiskEncryptionSetId**: string: The recovery disk encryption set Id.
-* **recoveryReplicaDiskAccountType**: string: The replica disk type.
-* **recoveryResourceGroupCustomInput**: [RecoveryResourceGroupCustomDetails](#recoveryresourcegroupcustomdetails) (WriteOnly)
-* **recoveryResourceGroupId**: string (ReadOnly): The target resource group Arm Id.
-* **recoveryTargetDiskAccountType**: string: The target disk type after failover.
-
-## RecoveryResourceGroupCustomDetails
-* **Discriminator**: resourceType
-
-### Base Properties
-### ExistingRecoveryResourceGroup
-#### Properties
-* **recoveryResourceGroupId**: string (WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
-
-
-## ExistingRecoveryResourceGroup
-### Properties
-* **recoveryResourceGroupId**: string (WriteOnly)
-* **resourceType**: 'Existing' (Required): The class type.
 
 ## CreateRecoveryPlanInputProperties
 ### Properties
@@ -2528,7 +2042,7 @@
 * **primaryFabricFriendlyName**: string (ReadOnly): The primary fabric friendly name.
 * **primaryFabricId**: string (Required): The primary fabric Id.
 * **providerSpecificDetails**: [RecoveryPlanProviderSpecificDetails](#recoveryplanproviderspecificdetails)[] (ReadOnly): The provider id and provider specific details.
-* **providerSpecificInput**: [RecoveryPlanProviderSpecificInput](#recoveryplanproviderspecificinput)[] (WriteOnly)
+* **providerSpecificInput**: [RecoveryPlanProviderSpecificInput](#recoveryplanproviderspecificinput)[] (WriteOnly): The provider specific input.
 * **recoveryFabricFriendlyName**: string (ReadOnly): The recovery fabric friendly name.
 * **recoveryFabricId**: string (Required): The recovery fabric Id.
 * **replicationProviders**: string[] (ReadOnly): The list of replication providers.
@@ -2549,44 +2063,43 @@
 
 ## RecoveryPlanActionDetails
 * **Discriminator**: instanceType
-
 ### Base Properties
-### RecoveryPlanAutomationRunbookActionDetails
+### AutomationRunbookActionDetails
 #### Properties
 * **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
-* **instanceType**: 'AutomationRunbookActionDetails' (Required): Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+* **instanceType**: 'AutomationRunbookActionDetails' (Required): Recovery plan Automation runbook action details.
 * **runbookId**: string: The runbook ARM Id.
 * **timeout**: string: The runbook timeout.
 
-### RecoveryPlanManualActionDetails
+### ManualActionDetails
 #### Properties
 * **description**: string: The manual action description.
-* **instanceType**: 'ManualActionDetails' (Required): Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+* **instanceType**: 'ManualActionDetails' (Required): Recovery plan manual action details.
 
-### RecoveryPlanScriptActionDetails
+### ScriptActionDetails
 #### Properties
 * **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
-* **instanceType**: 'ScriptActionDetails' (Required): Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+* **instanceType**: 'ScriptActionDetails' (Required): Recovery plan script action details.
 * **path**: string (Required): The script path.
 * **timeout**: string: The script timeout.
 
 
-## RecoveryPlanAutomationRunbookActionDetails
+## AutomationRunbookActionDetails
 ### Properties
 * **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
-* **instanceType**: 'AutomationRunbookActionDetails' (Required): Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+* **instanceType**: 'AutomationRunbookActionDetails' (Required): Recovery plan Automation runbook action details.
 * **runbookId**: string: The runbook ARM Id.
 * **timeout**: string: The runbook timeout.
 
-## RecoveryPlanManualActionDetails
+## ManualActionDetails
 ### Properties
 * **description**: string: The manual action description.
-* **instanceType**: 'ManualActionDetails' (Required): Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+* **instanceType**: 'ManualActionDetails' (Required): Recovery plan manual action details.
 
-## RecoveryPlanScriptActionDetails
+## ScriptActionDetails
 ### Properties
 * **fabricLocation**: 'Primary' | 'Recovery' (Required): The fabric location.
-* **instanceType**: 'ScriptActionDetails' (Required): Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+* **instanceType**: 'ScriptActionDetails' (Required): Recovery plan script action details.
 * **path**: string (Required): The script path.
 * **timeout**: string: The script timeout.
 
@@ -2597,39 +2110,21 @@
 
 ## RecoveryPlanProviderSpecificDetails
 * **Discriminator**: instanceType
-
 ### Base Properties
-### RecoveryPlanA2ADetails
+### A2A
 #### Properties
-* **instanceType**: 'A2A' (Required): Gets the Instance type.
-* **primaryZone**: string (ReadOnly): The primary zone.
-* **recoveryZone**: string (ReadOnly): The recovery zone.
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-
-## RecoveryPlanA2ADetails
-### Properties
-* **instanceType**: 'A2A' (Required): Gets the Instance type.
-* **primaryZone**: string (ReadOnly): The primary zone.
-* **recoveryZone**: string (ReadOnly): The recovery zone.
 
 ## RecoveryPlanProviderSpecificInput
 * **Discriminator**: instanceType
-
 ### Base Properties
-### RecoveryPlanA2AInput
+### A2A
 #### Properties
-* **instanceType**: 'A2A' (Required): Gets the Instance type.
-* **primaryZone**: string (WriteOnly)
-* **recoveryZone**: string (WriteOnly)
+* **instanceType**: 'A2A' (Required): Recovery plan A2A specific details.
 
-
-## RecoveryPlanA2AInput
-### Properties
-* **instanceType**: 'A2A' (Required): Gets the Instance type.
-* **primaryZone**: string (WriteOnly)
-* **recoveryZone**: string (WriteOnly)
 
 ## VaultSettingCreationInputProperties
 ### Properties
-* **migrationSolutionId**: string (Required): The migration solution ARM Id.
+* **migrationSolutionId**: string (Required): The migration solution Id.
 

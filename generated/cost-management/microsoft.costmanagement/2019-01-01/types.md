@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExportProperties](#exportproperties): The properties of the export.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ExportProperties
@@ -22,25 +22,25 @@
 * **dataset**: [QueryDataset](#querydataset): The definition of data present in the query.
 * **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
 * **timePeriod**: [QueryTimePeriod](#querytimeperiod): The start and end date for pulling data for the query.
-* **type**: 'Usage' (Required): The type of the query.
+* **type**: string (Required): The type of the query.
 
 ## QueryDataset
 ### Properties
-* **aggregation**: [QueryDatasetAggregation](#querydatasetaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
+* **aggregation**: [Dictionary<string,QueryAggregation>](#dictionarystringqueryaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
 * **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): The configuration of dataset in the query.
 * **filter**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
 * **granularity**: 'Daily' | 'Hourly': The granularity of rows in the query.
 * **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 * **sorting**: [QuerySortingConfiguration](#querysortingconfiguration)[]: Array of sorting by columns in query.
 
-## QueryDatasetAggregation
+## Dictionary<string,QueryAggregation>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [QueryAggregation](#queryaggregation)
 
 ## QueryAggregation
 ### Properties
-* **function**: 'Sum' (Required): The name of the aggregation function to use.
+* **function**: string (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## QueryDatasetConfiguration
@@ -58,18 +58,18 @@
 ## QueryComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'In' (Required): The operator to use for comparison.
+* **operator**: string (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## QueryGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): The type of the column in the export.
+* **type**: 'Dimension' | 'Tag' (Required): Has type of the column to group.
 
 ## QuerySortingConfiguration
 ### Properties
 * **name**: string: The name of the column to use in sorting.
-* **querySortingDirection**: 'Ascending' | 'Descending': The sorting direction
+* **querySortingDirection**: 'Ascending' | 'Descending': The sorting direction.
 
 ## QueryTimePeriod
 ### Properties
@@ -97,7 +97,7 @@
 * **from**: string (Required): The start date of recurrence.
 * **to**: string: The end date of recurrence.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

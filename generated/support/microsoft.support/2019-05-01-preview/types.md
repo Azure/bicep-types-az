@@ -82,8 +82,8 @@
 ## CommunicationDetailsProperties
 ### Properties
 * **body**: string (Required): Body of the communication
-* **communicationDirection**: 'inbound' | 'outbound' (ReadOnly): Direction of communication
-* **communicationType**: 'phone' | 'web' (ReadOnly): Communication type
+* **communicationDirection**: 'inbound' | 'outbound' (ReadOnly): Direction of communication.
+* **communicationType**: 'phone' | 'web' (ReadOnly): Communication type.
 * **createdDate**: string (ReadOnly): Time in UTC (ISO 8601 format) when the communication was created.
 * **sender**: string: Email address of the sender
 * **subject**: string (Required): Subject of the communication

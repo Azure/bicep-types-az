@@ -7,24 +7,25 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required)
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **properties**: [schemas:16_properties](#schemas16properties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## ContainerGroupProperties
+## schemas:16_properties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): Container group diagnostic information.
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
-* **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
+* **instanceView**: [schemas:16_properties_instanceView](#schemas16propertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
 * **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile): Container group network profile information.
 * **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
-* **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group. 
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
+.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## Container
@@ -37,7 +38,7 @@
 * **command**: string[]: The commands to execute within the container instance in exec form.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the container instance.
 * **image**: string (Required): The name of the image used to create the container instance.
-* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
+* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
 * **livenessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
 * **readinessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
@@ -50,7 +51,7 @@
 * **secureValue**: string: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
-## ContainerPropertiesInstanceView
+## schemas:1_instanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
 * **events**: [Event](#event)[] (ReadOnly): The events of the container instance.
@@ -127,11 +128,11 @@
 ## LogAnalytics
 ### Properties
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used.
-* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
 * **workspaceKey**: string (Required): The workspace key for log analytics
 
-## LogAnalyticsMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -142,7 +143,7 @@
 * **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
 * **username**: string (Required): The username for the private registry.
 
-## ContainerGroupPropertiesInstanceView
+## schemas:16_properties_instanceView
 ### Properties
 * **events**: [Event](#event)[] (ReadOnly): The events of this container group.
 * **state**: string (ReadOnly): The state of the container group. Only valid in response.
@@ -167,10 +168,10 @@
 ## Volume
 ### Properties
 * **azureFile**: [AzureFileVolume](#azurefilevolume): The properties of the Azure File volume. Azure File shares are mounted as volumes.
-* **emptyDir**: any: Any object
+* **emptyDir**: any: The empty directory volume.
 * **gitRepo**: [GitRepoVolume](#gitrepovolume): Represents a volume that is populated with the contents of a git repository
 * **name**: string (Required): The name of the volume.
-* **secret**: [SecretVolume](#secretvolume): The secret volume.
+* **secret**: [Dictionary<string,String>](#dictionarystringstring): The secret volume.
 
 ## AzureFileVolume
 ### Properties
@@ -185,12 +186,12 @@
 * **repository**: string (Required): Repository URL
 * **revision**: string: Commit hash for the specified revision.
 
-## SecretVolume
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

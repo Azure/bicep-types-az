@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
+* **properties**: [schemas:20_properties](#schemas20properties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): SKU parameters supplied to the create namespace operation
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/authorizationRules@2017-04-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
+* **properties**: [schemas:1_properties](#schemas1properties): Properties supplied to create or update AuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2017-04-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
+* **properties**: [schemas:12_properties](#schemas12properties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs@2017-04-01
@@ -36,7 +36,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventhubProperties](#eventhubproperties): Properties supplied to the Create Or Update Event Hub operation.
+* **properties**: [schemas:15_properties](#schemas15properties): Properties supplied to the Create Or Update Event Hub operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2017-04-01
@@ -45,7 +45,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
+* **properties**: [schemas:1_properties](#schemas1properties): Properties supplied to create or update AuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2017-04-01
@@ -54,7 +54,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConsumerGroupProperties](#consumergroupproperties): Single item in List or Get Consumer group operation
+* **properties**: [schemas:7_properties](#schemas7properties): Single item in List or Get Consumer group operation
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/networkRuleSets@2017-04-01
@@ -63,10 +63,10 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
+* **properties**: [schemas:25_properties](#schemas25properties): NetworkRuleSet properties
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## EHNamespaceProperties
+## schemas:20_properties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the Namespace was created.
 * **isAutoInflateEnabled**: bool: Value that indicates whether AutoInflate is enabled for eventhub namespace.
@@ -83,24 +83,24 @@
 * **name**: 'Basic' | 'Standard' (Required): Name of this SKU.
 * **tier**: 'Basic' | 'Standard': The billing tier of this particular SKU.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AuthorizationRuleProperties
+## schemas:1_properties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
 
-## ArmDisasterRecoveryProperties
+## schemas:12_properties
 ### Properties
 * **alternateName**: string: Alternate name specified when alias and namespace names are same.
 * **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
 * **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
-* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'.
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'.
 
-## EventhubProperties
+## schemas:15_properties
 ### Properties
 * **captureDescription**: [CaptureDescription](#capturedescription): Properties to configure capture description for eventhub
 * **createdAt**: string (ReadOnly): Exact time the Event Hub was created.
@@ -114,7 +114,7 @@
 ### Properties
 * **destination**: [Destination](#destination): Capture storage details for capture description
 * **enabled**: bool: A value that indicates whether capture description is enabled.
-* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version.
 * **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
 * **sizeLimitInBytes**: int: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
 * **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
@@ -122,29 +122,29 @@
 ## Destination
 ### Properties
 * **name**: string: Name for capture destination
-* **properties**: [DestinationProperties](#destinationproperties): Properties describing the storage account, blob container and archive name format for capture destination
+* **properties**: [schemas:17_properties](#schemas17properties): Properties describing the storage account, blob container and archive name format for capture destination
 
-## DestinationProperties
+## schemas:17_properties
 ### Properties
 * **archiveNameFormat**: string: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
 * **blobContainer**: string: Blob container Name
 * **storageAccountResourceId**: string: Resource id of the storage account to be used to create the blobs
 
-## ConsumerGroupProperties
+## schemas:7_properties
 ### Properties
 * **createdAt**: string (ReadOnly): Exact time the message was created.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 * **userMetadata**: string: User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
 
-## NetworkRuleSetProperties
+## schemas:25_properties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set.
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow': The IP Filter Action.
 * **ipMask**: string: IP Mask
 
 ## NWRuleSetVirtualNetworkRules

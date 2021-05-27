@@ -22,7 +22,7 @@
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **parameters**: any: Any object
+* **parameters**: any: Required if a parameter is used in policy rule.
 * **policyDefinitionId**: string: The ID of the policy definition.
 * **scope**: string: The scope for the policy assignment.
 
@@ -30,9 +30,9 @@
 ### Properties
 * **description**: string: The policy definition description.
 * **displayName**: string: The display name of the policy definition.
-* **metadata**: any: Any object
+* **metadata**: any: The policy definition metadata.
 * **mode**: 'All' | 'Indexed' | 'NotSpecified': The policy definition mode. Possible values are NotSpecified, Indexed, and All.
-* **parameters**: any: Any object
-* **policyRule**: any: Any object
+* **parameters**: any: Required if a parameter is used in policy rule.
+* **policyRule**: any: The policy rule.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 

@@ -16,7 +16,7 @@
 * **detector**: [Detector](#detector) (Required): The detector information. By default this is not populated, unless it's specified in expandDetector
 * **frequency**: string (Required): The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
 * **scope**: string[] (Required): The alert rule resources scope.
-* **severity**: 'Sev0' | 'Sev1' | 'Sev2' | 'Sev3' | 'Sev4' (Required)
+* **severity**: 'Sev0' | 'Sev1' | 'Sev2' | 'Sev3' | 'Sev4' (Required): The alert rule severity.
 * **state**: 'Disabled' | 'Enabled' (Required): The alert rule state.
 * **throttling**: [ThrottlingInformation](#throttlinginformation): Optional throttling information for the alert rule.
 
@@ -32,10 +32,10 @@
 * **id**: string (Required): The detector id.
 * **imagePaths**: string[]: The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
 * **name**: string: The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
-* **parameters**: [DetectorParameters](#detectorparameters): The detector's parameters.'
+* **parameters**: [Dictionary<string,Object>](#dictionarystringobject): The detector's parameters.'
 * **supportedResourceTypes**: string[]: The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
 
-## DetectorParameters
+## Dictionary<string,Object>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any

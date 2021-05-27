@@ -8,7 +8,7 @@
 * **location**: string (Required): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Properties of the Domain
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the resource
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventGrid/eventSubscriptions@2018-09-15-preview
@@ -28,7 +28,7 @@
 * **location**: string (Required): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicProperties](#topicproperties): Properties of the Topic
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DomainProperties
@@ -40,17 +40,16 @@
 
 ## InputSchemaMapping
 * **Discriminator**: inputSchemaMappingType
-
 ### Base Properties
-### JsonInputSchemaMapping
+### Json
 #### Properties
-* **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
+* **inputSchemaMappingType**: 'Json' (Required): This enables publishing to Event Grid using a custom input schema. This can be used to map properties from a custom input JSON schema to the Event Grid event schema.
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
 
 
-## JsonInputSchemaMapping
+## Json
 ### Properties
-* **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
+* **inputSchemaMappingType**: 'Json' (Required): This enables publishing to Event Grid using a custom input schema. This can be used to map properties from a custom input JSON schema to the Event Grid event schema.
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
 
 ## JsonInputSchemaMappingProperties
@@ -71,7 +70,7 @@
 ### Properties
 * **sourceField**: string: Name of a field in the input event schema that's to be used as the source of a mapping.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -90,17 +89,16 @@
 
 ## DeadLetterDestination
 * **Discriminator**: endpointType
-
 ### Base Properties
-### StorageBlobDeadLetterDestination
+### StorageBlob
 #### Properties
-* **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
+* **endpointType**: 'StorageBlob' (Required): Information about the storage blob based dead letter destination.
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
 
 
-## StorageBlobDeadLetterDestination
+## StorageBlob
 ### Properties
-* **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
+* **endpointType**: 'StorageBlob' (Required): Information about the storage blob based dead letter destination.
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
 
 ## StorageBlobDeadLetterDestinationProperties
@@ -110,50 +108,49 @@
 
 ## EventSubscriptionDestination
 * **Discriminator**: endpointType
-
 ### Base Properties
-### EventHubEventSubscriptionDestination
+### EventHub
 #### Properties
-* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'EventHub' (Required): Information about the event hub destination for an event subscription
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
 
-### HybridConnectionEventSubscriptionDestination
+### HybridConnection
 #### Properties
-* **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'HybridConnection' (Required): Information about the HybridConnection destination for an event subscription.
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
 
-### StorageQueueEventSubscriptionDestination
+### StorageQueue
 #### Properties
-* **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'StorageQueue' (Required): Information about the storage queue destination for an event subscription.
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
 
-### WebHookEventSubscriptionDestination
+### WebHook
 #### Properties
-* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'WebHook' (Required): Information about the webhook destination for an event subscription
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
 
 
-## EventHubEventSubscriptionDestination
+## EventHub
 ### Properties
-* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'EventHub' (Required): Information about the event hub destination for an event subscription
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
 
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
 * **resourceId**: string: The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
 
-## HybridConnectionEventSubscriptionDestination
+## HybridConnection
 ### Properties
-* **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'HybridConnection' (Required): Information about the HybridConnection destination for an event subscription.
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
 
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
 * **resourceId**: string: The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
 
-## StorageQueueEventSubscriptionDestination
+## StorageQueue
 ### Properties
-* **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'StorageQueue' (Required): Information about the storage queue destination for an event subscription.
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
 
 ## StorageQueueEventSubscriptionDestinationProperties
@@ -161,9 +158,9 @@
 * **queueName**: string: The name of the Storage queue under a storage account that is the destination of an event subscription.
 * **resourceId**: string: The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
 
-## WebHookEventSubscriptionDestination
+## WebHook
 ### Properties
-* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
+* **endpointType**: 'WebHook' (Required): Information about the webhook destination for an event subscription
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
 
 ## WebHookEventSubscriptionDestinationProperties
@@ -174,140 +171,139 @@
 ## EventSubscriptionFilter
 ### Properties
 * **advancedFilters**: [AdvancedFilter](#advancedfilter)[]: A list of advanced filters.
-* **includedEventTypes**: string[]: A list of applicable event types that need to be part of the event subscription. 
+* **includedEventTypes**: string[]: A list of applicable event types that need to be part of the event subscription.
 If it is desired to subscribe to all event types, the string "all" needs to be specified as an element in this list.
-* **isSubjectCaseSensitive**: bool: Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter 
+* **isSubjectCaseSensitive**: bool: Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
 should be compared in a case sensitive manner.
 * **subjectBeginsWith**: string: An optional string to filter events for an event subscription based on a resource path prefix.
-The format of this depends on the publisher of the events. 
+The format of this depends on the publisher of the events.
 Wildcard characters are not supported in this path.
 * **subjectEndsWith**: string: An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.
 
 ## AdvancedFilter
 * **Discriminator**: operatorType
-
 ### Base Properties
 * **key**: string: The filter key. Represents an event property with up to two levels of nesting.
-### BoolEqualsAdvancedFilter
+### BoolEquals
 #### Properties
-* **operatorType**: 'BoolEquals' (Required): Represents the filter operator
+* **operatorType**: 'BoolEquals' (Required): BoolEquals Filter
 * **value**: bool: The filter value
 
-### NumberGreaterThanAdvancedFilter
+### NumberGreaterThan
 #### Properties
-* **operatorType**: 'NumberGreaterThan' (Required): Represents the filter operator
+* **operatorType**: 'NumberGreaterThan' (Required): NumberGreaterThan Filter
 * **value**: int: The filter value
 
-### NumberGreaterThanOrEqualsAdvancedFilter
+### NumberGreaterThanOrEquals
 #### Properties
-* **operatorType**: 'NumberGreaterThanOrEquals' (Required): Represents the filter operator
+* **operatorType**: 'NumberGreaterThanOrEquals' (Required): NumberGreaterThanOrEquals Filter
 * **value**: int: The filter value
 
-### NumberInAdvancedFilter
+### NumberIn
 #### Properties
-* **operatorType**: 'NumberIn' (Required): Represents the filter operator
+* **operatorType**: 'NumberIn' (Required): NumberIn filter
 * **values**: int[]: The set of filter values
 
-### NumberLessThanAdvancedFilter
+### NumberLessThan
 #### Properties
-* **operatorType**: 'NumberLessThan' (Required): Represents the filter operator
+* **operatorType**: 'NumberLessThan' (Required): NumberLessThan Filter
 * **value**: int: The filter value
 
-### NumberLessThanOrEqualsAdvancedFilter
+### NumberLessThanOrEquals
 #### Properties
-* **operatorType**: 'NumberLessThanOrEquals' (Required): Represents the filter operator
+* **operatorType**: 'NumberLessThanOrEquals' (Required): NumberLessThanOrEquals Filter
 * **value**: int: The filter value
 
-### NumberNotInAdvancedFilter
+### NumberNotIn
 #### Properties
-* **operatorType**: 'NumberNotIn' (Required): Represents the filter operator
+* **operatorType**: 'NumberNotIn' (Required): NumberNotIn Filter
 * **values**: int[]: The set of filter values
 
-### StringBeginsWithAdvancedFilter
+### StringBeginsWith
 #### Properties
-* **operatorType**: 'StringBeginsWith' (Required): Represents the filter operator
+* **operatorType**: 'StringBeginsWith' (Required): StringBeginsWith Filter
 * **values**: string[]: The set of filter values
 
-### StringContainsAdvancedFilter
+### StringContains
 #### Properties
-* **operatorType**: 'StringContains' (Required): Represents the filter operator
+* **operatorType**: 'StringContains' (Required): StringContains Filter
 * **values**: string[]: The set of filter values
 
-### StringEndsWithAdvancedFilter
+### StringEndsWith
 #### Properties
-* **operatorType**: 'StringEndsWith' (Required): Represents the filter operator
+* **operatorType**: 'StringEndsWith' (Required): StringEndsWith Filter
 * **values**: string[]: The set of filter values
 
-### StringInAdvancedFilter
+### StringIn
 #### Properties
-* **operatorType**: 'StringIn' (Required): Represents the filter operator
+* **operatorType**: 'StringIn' (Required): StringIn Filter
 * **values**: string[]: The set of filter values
 
-### StringNotInAdvancedFilter
+### StringNotIn
 #### Properties
-* **operatorType**: 'StringNotIn' (Required): Represents the filter operator
+* **operatorType**: 'StringNotIn' (Required): StringNotIn Filter
 * **values**: string[]: The set of filter values
 
 
-## BoolEqualsAdvancedFilter
+## BoolEquals
 ### Properties
-* **operatorType**: 'BoolEquals' (Required): Represents the filter operator
+* **operatorType**: 'BoolEquals' (Required): BoolEquals Filter
 * **value**: bool: The filter value
 
-## NumberGreaterThanAdvancedFilter
+## NumberGreaterThan
 ### Properties
-* **operatorType**: 'NumberGreaterThan' (Required): Represents the filter operator
+* **operatorType**: 'NumberGreaterThan' (Required): NumberGreaterThan Filter
 * **value**: int: The filter value
 
-## NumberGreaterThanOrEqualsAdvancedFilter
+## NumberGreaterThanOrEquals
 ### Properties
-* **operatorType**: 'NumberGreaterThanOrEquals' (Required): Represents the filter operator
+* **operatorType**: 'NumberGreaterThanOrEquals' (Required): NumberGreaterThanOrEquals Filter
 * **value**: int: The filter value
 
-## NumberInAdvancedFilter
+## NumberIn
 ### Properties
-* **operatorType**: 'NumberIn' (Required): Represents the filter operator
+* **operatorType**: 'NumberIn' (Required): NumberIn filter
 * **values**: int[]: The set of filter values
 
-## NumberLessThanAdvancedFilter
+## NumberLessThan
 ### Properties
-* **operatorType**: 'NumberLessThan' (Required): Represents the filter operator
+* **operatorType**: 'NumberLessThan' (Required): NumberLessThan Filter
 * **value**: int: The filter value
 
-## NumberLessThanOrEqualsAdvancedFilter
+## NumberLessThanOrEquals
 ### Properties
-* **operatorType**: 'NumberLessThanOrEquals' (Required): Represents the filter operator
+* **operatorType**: 'NumberLessThanOrEquals' (Required): NumberLessThanOrEquals Filter
 * **value**: int: The filter value
 
-## NumberNotInAdvancedFilter
+## NumberNotIn
 ### Properties
-* **operatorType**: 'NumberNotIn' (Required): Represents the filter operator
+* **operatorType**: 'NumberNotIn' (Required): NumberNotIn Filter
 * **values**: int[]: The set of filter values
 
-## StringBeginsWithAdvancedFilter
+## StringBeginsWith
 ### Properties
-* **operatorType**: 'StringBeginsWith' (Required): Represents the filter operator
+* **operatorType**: 'StringBeginsWith' (Required): StringBeginsWith Filter
 * **values**: string[]: The set of filter values
 
-## StringContainsAdvancedFilter
+## StringContains
 ### Properties
-* **operatorType**: 'StringContains' (Required): Represents the filter operator
+* **operatorType**: 'StringContains' (Required): StringContains Filter
 * **values**: string[]: The set of filter values
 
-## StringEndsWithAdvancedFilter
+## StringEndsWith
 ### Properties
-* **operatorType**: 'StringEndsWith' (Required): Represents the filter operator
+* **operatorType**: 'StringEndsWith' (Required): StringEndsWith Filter
 * **values**: string[]: The set of filter values
 
-## StringInAdvancedFilter
+## StringIn
 ### Properties
-* **operatorType**: 'StringIn' (Required): Represents the filter operator
+* **operatorType**: 'StringIn' (Required): StringIn Filter
 * **values**: string[]: The set of filter values
 
-## StringNotInAdvancedFilter
+## StringNotIn
 ### Properties
-* **operatorType**: 'StringNotIn' (Required): Represents the filter operator
+* **operatorType**: 'StringNotIn' (Required): StringNotIn Filter
 * **values**: string[]: The set of filter values
 
 ## RetryPolicy
@@ -318,11 +314,11 @@ Wildcard characters are not supported in this path.
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain.
+* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the topic.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

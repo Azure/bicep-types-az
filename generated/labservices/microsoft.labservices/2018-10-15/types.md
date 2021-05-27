@@ -8,7 +8,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabAccountProperties](#labaccountproperties): Properties of a Lab Account.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labaccounts/galleryimages@2018-10-15
@@ -19,7 +19,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryImageProperties](#galleryimageproperties): The gallery image properties
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/galleryimages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labaccounts/labs@2018-10-15
@@ -30,7 +30,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabProperties](#labproperties): Properties of a Lab.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15
@@ -41,7 +41,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentSettingProperties](#environmentsettingproperties): Properties of an environment setting
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings/environments@2018-10-15
@@ -52,7 +52,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentProperties](#environmentproperties): Properties of an environment
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/environmentsettings/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.LabServices/labaccounts/labs/users@2018-10-15
@@ -63,7 +63,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties): Lab User properties
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LabAccountProperties
@@ -92,7 +92,7 @@
 * **maxPrice**: int (ReadOnly): The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
 * **minMemory**: int (ReadOnly): The amount of memory available (in GB). This is the minimum amount of memory within this tier.
 * **minNumberOfCores**: int (ReadOnly): The number of cores a VM of this size has. This is the minimum number of cores within this tier.
-* **name**: 'Basic' | 'Performance' | 'Standard': The size category
+* **name**: 'Basic' | 'Performance' | 'Standard': The size category.
 * **vmSizes**: [SizeInfo](#sizeinfo)[]: Represents a set of compute sizes that can serve this given size type
 
 ## SizeInfo
@@ -102,7 +102,7 @@
 * **numberOfCores**: int: The number of cores a VM of this size has.
 * **price**: int: The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -130,7 +130,7 @@
 * **sku**: string: The SKU of the gallery image.
 * **version**: string: The version of the gallery image.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -149,20 +149,20 @@
 * **userAccessMode**: 'Open' | 'Restricted': Lab user access mode (open to all vs. restricted to those listed on the lab).
 * **userQuota**: int (ReadOnly): Maximum value MaxUsersInLab can be set to, as specified by the service
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## EnvironmentSettingProperties
 ### Properties
-* **configurationState**: 'Completed' | 'NotApplicable': Describes the user's progress in configuring their environment setting
+* **configurationState**: 'Completed' | 'NotApplicable': Describes the user's progress in configuring their environment setting.
 * **description**: string: Describes the environment and its resource settings
 * **lastChanged**: string (ReadOnly): Time when the template VM was last changed.
 * **lastPublished**: string (ReadOnly): Time when the template VM was last sent for publishing.
 * **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
 * **provisioningState**: string: The provisioning status of the resource.
-* **publishingState**: 'Draft' | 'PublishFailed' | 'Published' | 'Publishing' | 'Scaling' (ReadOnly): Describes the readiness of this environment setting
+* **publishingState**: 'Draft' | 'Published' | 'PublishFailed' | 'Publishing' | 'Scaling' (ReadOnly): Describes the readiness of this environment setting.
 * **resourceSettings**: [ResourceSettings](#resourcesettings) (Required): Represents resource specific settings
 * **title**: string: Brief title describing the environment and its resource settings
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
@@ -174,7 +174,7 @@
 * **id**: string (ReadOnly): The unique id of the resource setting
 * **imageName**: string (ReadOnly): The name of the image used to created the environment setting
 * **referenceVm**: [ReferenceVm](#referencevm) (Required): Details of a Reference Vm
-* **size**: 'Basic' | 'Performance' | 'Standard': The size category
+* **size**: 'Basic' | 'Performance' | 'Standard': The size of the virtual machine.
 
 ## ReferenceVm
 ### Properties
@@ -190,7 +190,7 @@
 * **rdpAuthority**: string (ReadOnly): The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
 * **sshAuthority**: string (ReadOnly): The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -222,7 +222,7 @@
 * **resourceSettingId**: string: resourceSettingId for the environment
 * **vmResourceId**: string: VM resource Id for the environment
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -238,7 +238,7 @@
 * **totalUsage**: string (ReadOnly): How long the user has used his VMs in this lab
 * **uniqueIdentifier**: string: The unique immutable identifier of a resource (Guid).
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

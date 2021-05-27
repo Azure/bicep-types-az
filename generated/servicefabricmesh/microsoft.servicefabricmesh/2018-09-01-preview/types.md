@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationResourceProperties](#applicationresourceproperties) (Required): This type describes properties of an application resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/gateways@2018-09-01-preview
@@ -19,7 +19,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GatewayResourceProperties](#gatewayresourceproperties) (Required): This type describes properties of a gateway resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-09-01-preview
@@ -30,7 +30,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkResourceProperties](#networkresourceproperties) (Required): Describes properties of a network resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/secrets@2018-09-01-preview
@@ -41,7 +41,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretResourceProperties](#secretresourceproperties) (Required): Describes the properties of a secret resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/secrets/values@2018-09-01-preview
@@ -52,7 +52,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretValueResourceProperties](#secretvalueresourceproperties) (Required): This type describes properties of a secret value resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/secrets/values' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ServiceFabricMesh/volumes@2018-09-01-preview
@@ -63,7 +63,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeResourceProperties](#volumeresourceproperties) (Required): This type describes properties of a volume resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationResourceProperties
@@ -71,11 +71,11 @@
 * **debugParams**: string: Internal - used by Visual Studio to setup the debugging session on the local development environment.
 * **description**: string: User readable description of the application.
 * **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): Describes the health state of an application resource.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the application.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the application.
 * **unhealthyEvaluation**: string (ReadOnly): When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
 
@@ -87,26 +87,25 @@
 
 ## DiagnosticsSinkProperties
 * **Discriminator**: kind
-
 ### Base Properties
 * **description**: string: A description of the sink.
 * **name**: string: Name of the sink. This value is referenced by DiagnosticsReferenceDescription
-### AzureInternalMonitoringPipelineSinkDescription
+### AzureInternalMonitoringPipeline
 #### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
 * **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Anything
-* **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
+* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
+* **kind**: 'AzureInternalMonitoringPipeline' (Required): Diagnostics settings for Geneva.
 * **maConfigUrl**: string: Azure Internal monitoring agent configuration.
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
 
-## AzureInternalMonitoringPipelineSinkDescription
+## AzureInternalMonitoringPipeline
 ### Properties
 * **accountName**: string: Azure Internal monitoring pipeline account.
 * **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Anything
-* **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
+* **fluentdConfigUrl**: any: Azure Internal monitoring agent fluentd configuration.
+* **kind**: 'AzureInternalMonitoringPipeline' (Required): Diagnostics settings for Geneva.
 * **maConfigUrl**: string: Azure Internal monitoring agent configuration.
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
@@ -123,12 +122,12 @@
 * **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required): Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
 * **description**: string: User readable description of the service.
 * **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): Describes the health state of an application resource.
 * **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
 * **osType**: 'Linux' | 'Windows' (Required): The operation system required by the code in service.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the service.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the service.
 * **unhealthyEvaluation**: string (ReadOnly): When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
 
@@ -140,39 +139,37 @@
 
 ## AutoScalingMechanism
 * **Discriminator**: kind
-
 ### Base Properties
-### AddRemoveReplicaScalingMechanism
+### AddRemoveReplica
 #### Properties
-* **kind**: 'AddRemoveReplica' (Required): The type of auto scaling mechanism.
+* **kind**: 'AddRemoveReplica' (Required): Describes the horizontal auto scaling mechanism that adds or removes replicas (containers or container groups).
 * **maxCount**: int (Required): Maximum number of containers (scale up won't be performed above this number).
 * **minCount**: int (Required): Minimum number of containers (scale down won't be performed below this number).
 * **scaleIncrement**: int (Required): Each time auto scaling is performed, this number of containers will be added or removed.
 
 
-## AddRemoveReplicaScalingMechanism
+## AddRemoveReplica
 ### Properties
-* **kind**: 'AddRemoveReplica' (Required): The type of auto scaling mechanism.
+* **kind**: 'AddRemoveReplica' (Required): Describes the horizontal auto scaling mechanism that adds or removes replicas (containers or container groups).
 * **maxCount**: int (Required): Maximum number of containers (scale up won't be performed above this number).
 * **minCount**: int (Required): Minimum number of containers (scale down won't be performed below this number).
 * **scaleIncrement**: int (Required): Each time auto scaling is performed, this number of containers will be added or removed.
 
 ## AutoScalingTrigger
 * **Discriminator**: kind
-
 ### Base Properties
-### AverageLoadScalingTrigger
+### AverageLoad
 #### Properties
-* **kind**: 'AverageLoad' (Required): The type of auto scaling trigger
+* **kind**: 'AverageLoad' (Required): Describes the average load trigger used for auto scaling.
 * **lowerLoadThreshold**: int (Required): Lower load threshold (if average load is below this threshold, service will scale down).
 * **metric**: [AutoScalingMetric](#autoscalingmetric) (Required): Describes the metric that is used for triggering auto scaling operation. Derived classes will describe resources or metrics.
 * **scaleIntervalInSeconds**: int (Required): Scale interval that indicates how often will this trigger be checked.
 * **upperLoadThreshold**: int (Required): Upper load threshold (if average load is above this threshold, service will scale up).
 
 
-## AverageLoadScalingTrigger
+## AverageLoad
 ### Properties
-* **kind**: 'AverageLoad' (Required): The type of auto scaling trigger
+* **kind**: 'AverageLoad' (Required): Describes the average load trigger used for auto scaling.
 * **lowerLoadThreshold**: int (Required): Lower load threshold (if average load is below this threshold, service will scale down).
 * **metric**: [AutoScalingMetric](#autoscalingmetric) (Required): Describes the metric that is used for triggering auto scaling operation. Derived classes will describe resources or metrics.
 * **scaleIntervalInSeconds**: int (Required): Scale interval that indicates how often will this trigger be checked.
@@ -180,18 +177,17 @@
 
 ## AutoScalingMetric
 * **Discriminator**: kind
-
 ### Base Properties
-### AutoScalingResourceMetric
+### Resource
 #### Properties
-* **kind**: 'Resource' (Required): The type of auto scaling metric
-* **name**: 'cpu' | 'memoryInGB' (Required): Enumerates the resources that are used for triggering auto scaling.
+* **kind**: 'Resource' (Required): Describes the resource that is used for triggering auto scaling.
+* **name**: 'cpu' | 'memoryInGB' (Required): Name of the resource.
 
 
-## AutoScalingResourceMetric
+## Resource
 ### Properties
-* **kind**: 'Resource' (Required): The type of auto scaling metric
-* **name**: 'cpu' | 'memoryInGB' (Required): Enumerates the resources that are used for triggering auto scaling.
+* **kind**: 'Resource' (Required): Describes the resource that is used for triggering auto scaling.
+* **name**: 'cpu' | 'memoryInGB' (Required): Name of the resource.
 
 ## ContainerCodePackageProperties
 ### Properties
@@ -301,19 +297,18 @@
 
 ## ApplicationScopedVolumeCreationParameters
 * **Discriminator**: kind
-
 ### Base Properties
 * **description**: string: User readable description of the volume.
-### ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
+### ServiceFabricVolumeDisk
 #### Properties
-* **kind**: 'ServiceFabricVolumeDisk' (Required): Specifies the application-scoped volume kind.
-* **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size
+* **kind**: 'ServiceFabricVolumeDisk' (Required): Describes parameters for creating application-scoped volumes provided by Service Fabric Volume Disks
+* **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size.
 
 
-## ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
+## ServiceFabricVolumeDisk
 ### Properties
-* **kind**: 'ServiceFabricVolumeDisk' (Required): Specifies the application-scoped volume kind.
-* **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size
+* **kind**: 'ServiceFabricVolumeDisk' (Required): Describes parameters for creating application-scoped volumes provided by Service Fabric Volume Disks
+* **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size.
 
 ## NetworkRef
 ### Properties
@@ -324,7 +319,7 @@
 ### Properties
 * **name**: string: Name of the endpoint.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -372,13 +367,13 @@
 ## HttpRouteMatchHeader
 ### Properties
 * **name**: string (Required): Name of header to match in request.
-* **type**: 'exact': how to match header value
+* **type**: 'exact': how to match header value.
 * **value**: string: Value of header to match in request.
 
 ## HttpRouteMatchPath
 ### Properties
 * **rewrite**: string: replacement string for matched part of the Uri.
-* **type**: 'prefix' (Required): how to match value in the Uri
+* **type**: string (Required): how to match value in the Uri
 * **value**: string (Required): Uri path to match for request.
 
 ## TcpConfig
@@ -387,54 +382,32 @@
 * **name**: string (Required): tcp gateway config name.
 * **port**: int (Required): Specifies the port at which the service endpoint below needs to be exposed.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## NetworkResourceProperties
-* **Discriminator**: kind
-
-### Base Properties
+### Properties
 * **description**: string: User readable description of the network.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the network.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the network.
-### LocalNetworkResourceProperties
-#### Properties
-* **kind**: 'Local' (Required): The type of a Service Fabric container network.
-* **networkAddressPrefix**: string: Address space for a container network. This is expressed in CIDR notation.
 
-
-## LocalNetworkResourceProperties
-### Properties
-* **kind**: 'Local' (Required): The type of a Service Fabric container network.
-* **networkAddressPrefix**: string: Address space for a container network. This is expressed in CIDR notation.
-
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SecretResourceProperties
-* **Discriminator**: kind
-
-### Base Properties
+### Properties
 * **contentType**: string: The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
 * **description**: string: User readable description of the secret.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the secret.
-### InlinedValueSecretResourceProperties
-#### Properties
-* **kind**: 'inlinedValue' (Required): Describes the kind of secret.
 
-
-## InlinedValueSecretResourceProperties
-### Properties
-* **kind**: 'inlinedValue' (Required): Describes the kind of secret.
-
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -444,7 +417,7 @@
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **value**: string: The actual value of the secret.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -453,9 +426,9 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile): This type describes a volume provided by an Azure Files file share.
 * **description**: string: User readable description of the volume.
-* **provider**: 'SFAzureFile' (Required): Describes the provider of the volume resource.
+* **provider**: string (Required): Provider of the volume.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the volume.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the volume.
 
 ## VolumeProviderParametersAzureFile
@@ -464,7 +437,7 @@
 * **accountName**: string (Required): Name of the Azure storage account for the File Share.
 * **shareName**: string (Required): Name of the Azure Files file share that provides storage for the volume.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

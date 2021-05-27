@@ -6,15 +6,15 @@
 * **apiVersion**: '2018-08-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Setting indicating whether the service has a managed identity associated with it.
-* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required): The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.
+* **identity**: [schemas:11_identity](#schemas11identity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service. Valid values are: fhir, fhir-Stu3 and fhir-R4.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
-## ResourceIdentity
+## schemas:11_identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource.
@@ -50,7 +50,7 @@
 ### Properties
 * **offerThroughput**: int: The provisioned throughput for the backing database.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

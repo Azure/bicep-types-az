@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
 * **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: An array represents the availability zones of the cluster.
 
@@ -27,47 +27,45 @@
 ## Resource Microsoft.Kusto/clusters/databases@2019-11-09
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
-### ReadOnlyFollowingDatabase
+### ReadOnlyFollowing
 #### Properties
-* **kind**: 'ReadOnlyFollowing' (Required): Kind of the database
+* **kind**: 'ReadOnlyFollowing' (Required): Class representing a read only following database.
 * **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
 
-### ReadWriteDatabase
+### ReadWrite
 #### Properties
-* **kind**: 'ReadWrite' (Required): Kind of the database
+* **kind**: 'ReadWrite' (Required): Class representing a read write database.
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-11-09
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
-### EventGridDataConnection
+### EventGrid
 #### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
-### EventHubDataConnection
+### EventHub
 #### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
-### IotHubDataConnection
+### IotHub
 #### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 
@@ -94,14 +92,14 @@
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'None' | 'SystemAssigned' (Required): The identity type.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [Dictionary<string,Schemas62UserAssignedIdentitiesValue>](#dictionarystringschemas62userassignedidentitiesvalue): The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## IdentityUserAssignedIdentities
+## Dictionary<string,Schemas62UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [schemas:62_userAssignedIdentitiesValue](#schemas62userassignedidentitiesvalue)
 
-## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+## schemas:62_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -149,7 +147,7 @@
 * **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required): SKU name.
 * **tier**: 'Basic' | 'Standard' (Required): SKU tier.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -159,12 +157,12 @@
 * **attachedDatabaseNames**: string[] (ReadOnly): The list of databases from the clusterResourceId which are currently attached to the cluster.
 * **clusterResourceId**: string (Required): The resource id of the cluster where the databases you would like to attach reside.
 * **databaseName**: string (Required): The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required): The default principals modification kind
+* **defaultPrincipalsModificationKind**: 'None' | 'Replace' | 'Union' (Required): The default principals modification kind.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 
-## ReadOnlyFollowingDatabase
+## ReadOnlyFollowing
 ### Properties
-* **kind**: 'ReadOnlyFollowing' (Required): Kind of the database
+* **kind**: 'ReadOnlyFollowing' (Required): Class representing a read only following database.
 * **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
 
 ## ReadOnlyFollowingDatabaseProperties
@@ -172,18 +170,18 @@
 * **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
 * **leaderClusterResourceId**: string (ReadOnly): The name of the leader cluster
-* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly): The principals modification kind of the database
+* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly): The principals modification kind of the database.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## ReadWriteDatabase
+## ReadWrite
 ### Properties
-* **kind**: 'ReadWrite' (Required): Kind of the database
+* **kind**: 'ReadWrite' (Required): Class representing a read write database.
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 ## ReadWriteDatabaseProperties
@@ -192,11 +190,11 @@
 * **isFollowed**: string (ReadOnly): Indicates whether the database is followed.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
-## EventGridDataConnection
+## EventGrid
 ### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ## EventGridConnectionProperties
@@ -208,14 +206,14 @@
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
 * **tableName**: string (Required): The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## EventHubDataConnection
+## EventHub
 ### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
 ## EventHubConnectionProperties
 ### Properties
-* **compression**: 'GZip' | 'None': The compression type
+* **compression**: 'GZip' | 'None': The event hub messages compression type.
 * **consumerGroup**: string (Required): The event hub consumer group.
 * **dataFormat**: 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT': The data format of the message. Optionally the data format can be added to each message.
 * **eventHubResourceId**: string (Required): The resource ID of the event hub to be used to create a data connection.
@@ -223,9 +221,9 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## IotHubDataConnection
+## IotHub
 ### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 ## IotHubConnectionProperties

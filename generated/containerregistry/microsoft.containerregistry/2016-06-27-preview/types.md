@@ -8,7 +8,7 @@
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegistryProperties](#registryproperties): The properties of a container registry.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## RegistryProperties
@@ -23,7 +23,7 @@
 * **accessKey**: string (Required): The access key to the storage account.
 * **name**: string (Required): The name of the storage account.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
