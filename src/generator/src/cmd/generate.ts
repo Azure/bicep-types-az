@@ -23,10 +23,11 @@ const defaultLogger: ILogger = {
   err: data => process.stderr.write(data),
 }
 
-const extensionDir = path.resolve(`${__dirname}/../`);
-const autorestDll = path.resolve(`${extensionDir}/src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll`);
+const rootDir = `${__dirname}/../../../../`;
+
+const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
-const defaultOutDir = path.resolve(`${extensionDir}/../../generated`);
+const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
 const argsConfig = yargs
   .strict()
@@ -44,8 +45,8 @@ executeSynchronous(async () => {
   const waitForDebugger = args['wait-for-debugger'];
   const singlePath = args['single-path'];
 
-  if (!existsSync(autorestDll)) {
-    throw `Unable to find ${autorestDll}. Did you forget to run dotnet build?`;
+  if (!existsSync(`${extensionDir}/dist`)) {
+    throw `Unable to find ${extensionDir}/dist. Did you forget to run 'npm run build'?`;
   }
 
   // find all readme paths in the azure-rest-api-specs repo
@@ -60,38 +61,52 @@ executeSynchronous(async () => {
 
   // this file is deliberately gitignored as it'll be overwritten when using --single-path
   // it's used to generate the git commit message
+  await mkdir(outputBaseDir, { recursive: true });
   const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
 
   // use consistent sorting to make log changes easier to review
   for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
     const bicepReadmePath = `${path.dirname(readmePath)}/readme.bicep.md`;
     const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
-    const outputDir = `${tmpOutputPath}/${basePath}`;
+    const tmpOutputDir = `${tmpOutputPath}/${basePath}`;
+    const outputDir = `${outputBaseDir}/${basePath}`;
 
     if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
       continue;
     }
 
-    // remove all previously-generated files
-    await rmdir(outputDir, { recursive: true });
-    await mkdir(outputDir, { recursive: true });
-    const logger = await getLogger(`${outputDir}/log.out`);
+    // prepare temp dir for output
+    await rmdir(tmpOutputDir, { recursive: true });
+    await mkdir(tmpOutputDir, { recursive: true });
+    const logger = await getLogger(`${tmpOutputDir}/log.out`);
     const config = getConfig(basePath);
 
     try {
       // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
-      await generateAutorestConfig(readmePath, bicepReadmePath, config);
-      await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
+      await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
+      await generateSchema(logger, readmePath, tmpOutputDir, verbose, waitForDebugger);
 
-      await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
-    } catch (e) {
-      logErr(logger, e);
+      // remove all previously-generated files and copy over results
+      await rmdir(outputDir, { recursive: true });
+      await mkdir(outputDir, { recursive: true });
+      await copyRecursive(tmpOutputDir, outputDir);
+    } catch (err) {
+      logErr(logger, err);
+      
+      // Use markdown formatting as this summary will be included in the PR description
+      logOut(summaryLogger, 
+`<details>
+  <summary>Failed to generate types for path '${basePath}'</summary>
 
-      logErr(summaryLogger, `Failed to generate types for path '${basePath}'`);
+\`\`\`
+${err}
+\`\`\`
+</details>
+`);
     }
 
     // clean up temp dir
-    await rmdir(outputDir, { recursive: true });
+    await rmdir(tmpOutputDir, { recursive: true });
     // clean up autorest readme.bicep.md files
     await rm(bicepReadmePath, { force: true });
   }
@@ -100,7 +115,11 @@ executeSynchronous(async () => {
   await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
-async function generateAutorestConfig(readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
+function normalizeJsonPath(jsonPath: string) {
+  return path.normalize(jsonPath).replace(/[\\\/]/g, '/');
+}
+
+async function generateAutorestConfig(logger: ILogger, readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
   // We expect a path format convention of <provider>/(preview|stable)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
   // This information is used to generate individual tags in the generated autorest configuration
   const pathRegex = /^([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
@@ -127,10 +146,10 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
       // input-file may be a single string or an array of strings
       const inputFile = yamlData['input-file'];
       if (typeof inputFile === 'string') {
-        inputFiles.add(inputFile.replace(/[\\\/]/g, '/'));
+        inputFiles.add(inputFile);
       } else if (inputFile instanceof Array) {
         for (const i of inputFile) {
-          inputFiles.add(i.replace(/[\\\/]/g, '/'));
+          inputFiles.add(i);
         }
       }
     }
@@ -138,7 +157,8 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
 
   const filesByTag: Dictionary<string[]> = {};
   for (const file of inputFiles) {
-    const match = pathRegex.exec(file);
+    const normalizedFile = normalizeJsonPath(file);
+    const match = pathRegex.exec(normalizedFile);
     if (match) {
       // Generate a unique tag. We can't process all of the different API versions in one autorest pass
       // because there are constraints on naming uniqueness (e.g. naming of definitions), so we want to pass over
@@ -148,7 +168,9 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
         filesByTag[tagName] = [];
       }
 
-      filesByTag[tagName].push(file);
+      filesByTag[tagName].push(normalizedFile);
+    } else {
+      logOut(logger, `WARNING: Unable to parse swagger path \"${file}\"`);
     }
   }
 
@@ -166,9 +188,9 @@ ${yaml.dump({ 'batch': Object.keys(filesByTag).map(tag => ({ 'tag': tag })) }, {
 ${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
 \`\`\`
 `;
-
-    await writeFile(bicepReadmePath, generatedContent);
   }
+
+  await writeFile(bicepReadmePath, generatedContent);
 }
 
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
@@ -177,6 +199,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--bicep',
     `--output-folder=${outputBaseDir}`,
     `--multiapi`,
+    '--title=none',
     // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
     // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
     // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types. 
@@ -193,7 +216,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 
   if (waitForDebugger) {
     autoRestParams = autoRestParams.concat([
-      `--bicep.debugger=true`,
+      `--bicep.debugger`,
     ]);
   }
 
@@ -387,7 +410,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
       }
 
       if (resourceTypes.has(resource.Name.toLowerCase())) {
-        logger.out(`WARNING: Found duplicate type \"${resource.Name}\"\n`);
+        logOut(logger, `WARNING: Found duplicate type \"${resource.Name}\"`);
         continue;
       }
       resourceTypes.add(resource.Name.toLowerCase());

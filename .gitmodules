@@ -1,4 +1,0 @@
-[submodule "autorest.common"]
-	path = autorest.common
-	url = https://github.com/Azure/autorest.common.git
-	branch = v3
