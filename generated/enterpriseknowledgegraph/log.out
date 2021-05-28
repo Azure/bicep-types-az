@@ -6,4 +6,4 @@ INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/
 Processing batch task - {"tag":"microsoft.enterpriseknowledgegraph-2018-12-03"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[4.73 s] Generation Complete
+[5.44 s] Generation Complete

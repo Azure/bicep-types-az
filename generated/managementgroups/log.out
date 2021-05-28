@@ -38,4 +38,4 @@ INFORMATION: Resource type Microsoft.Management/managementGroups/subscriptions u
 Processing batch task - {"tag":"microsoft.management-2017-08-31-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[24.5 s] Generation Complete
+[26.46 s] Generation Complete

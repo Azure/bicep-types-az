@@ -23,4 +23,4 @@ Processing batch task - {"tag":"microsoft.maintenance-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.Maintenance/applyUpdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default' has no body defined.
-[15.4 s] Generation Complete
+[16.07 s] Generation Complete

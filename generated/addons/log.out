@@ -11,4 +11,4 @@ Processing batch task - {"tag":"microsoft.addons-2017-05-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.Addons/supportProviders/supportPlanTypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}' has no body defined.
-[6.33 s] Generation Complete
+[6.47 s] Generation Complete

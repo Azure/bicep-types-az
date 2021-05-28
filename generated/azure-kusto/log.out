@@ -1,3 +1,4 @@
+WARNING: Unable to parse swagger path "Microsoft.Kusto/preview/2017-09-07-privatepreview/kusto.json"
 AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
@@ -30,4 +31,4 @@ WARNING: Semantic validation was skipped.
 Processing batch task - {"tag":"microsoft.kusto-2018-09-07-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[39.65 s] Generation Complete
+[43.58 s] Generation Complete

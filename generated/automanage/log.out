@@ -6,4 +6,4 @@ INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/
 Processing batch task - {"tag":"microsoft.automanage-2020-06-30-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[5.55 s] Generation Complete
+[6.37 s] Generation Complete

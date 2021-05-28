@@ -233,4 +233,4 @@ INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/
 WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/{applianceId}': Unable to locate '/providers/' segment
 WARNING: Skipping path '/{applianceDefinitionId}': Unable to locate '/providers/' segment
-[177.92 s] Generation Complete
+[192.09 s] Generation Complete

@@ -7,4 +7,4 @@ Processing batch task - {"tag":"microsoft.iotsecurity-2021-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.IoTSecurity/onPremiseSensors under path '/subscriptions/{subscriptionId}/providers/Microsoft.IoTSecurity/onPremiseSensors/{onPremiseSensorName}' has no body defined.
-[7.22 s] Generation Complete
+[7.83 s] Generation Complete
