@@ -7,4 +7,4 @@ Processing batch task - {"tag":"microsoft.managementpartner-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.ManagementPartner/partners under path '/providers/Microsoft.ManagementPartner/partners/{partnerId}' has no body defined.
-[4.66 s] Generation Complete
+[4.75 s] Generation Complete

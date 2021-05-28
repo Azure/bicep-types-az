@@ -53,4 +53,4 @@ WARNING: Skipping path '/{roleAssignmentId}': Unable to locate '/providers/' seg
 Processing batch task - {"tag":"microsoft.authorization-2021-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[33.92 s] Generation Complete
+[36.28 s] Generation Complete

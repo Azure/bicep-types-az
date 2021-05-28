@@ -75,4 +75,4 @@ Processing batch task - {"tag":"microsoft.devices-2016-02-03"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/eventHubEndpoints/{eventHubEndpointName}/ConsumerGroups/{name}' has no body defined.
-[87.27 s] Generation Complete
+[92.34 s] Generation Complete

@@ -7,4 +7,4 @@ Processing batch task - {"tag":"microsoft.agfoodplatform-2020-05-12-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.AgFoodPlatform/farmBeats/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AgFoodPlatform/farmBeats/{farmBeatsResourceName}/extensions/{extensionId}' has no body defined.
-[5.41 s] Generation Complete
+[5.71 s] Generation Complete

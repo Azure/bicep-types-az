@@ -37,4 +37,4 @@ Processing batch task - {"tag":"microsoft.network-2015-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-[19.97 s] Generation Complete
+[20.96 s] Generation Complete

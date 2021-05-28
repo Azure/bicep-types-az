@@ -24,4 +24,4 @@ INFORMATION: Resource type Microsoft.Automation/automationAccounts/runbooks/draf
 Processing batch task - {"tag":"microsoft.automation-2020-01-13-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[86.95 s] Generation Complete
+[89.32 s] Generation Complete

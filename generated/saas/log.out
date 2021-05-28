@@ -1,8 +1,7 @@
+WARNING: Unable to parse swagger path "Microsoft.SaaS/preview/2018-03-01-beta/saas.json"
 AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-WARNING: Semantic validation was skipped.
-WARNING: Skipping path '/providers/Microsoft.SaaS/saasresources': Found mismatch betwen type segments (1) and name segments (0)
-[4.93 s] Generation Complete
+[1.61 s] Generation Complete
