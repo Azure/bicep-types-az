@@ -9,8 +9,18 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationInsightsComponentProperties](#applicationinsightscomponentproperties): Properties that define an Application Insights component resource.
-* **tags**: [ComponentsResourceTags](#componentsresourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2018-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplicationInsightsComponentProactiveDetectionConfigurationProperties](#applicationinsightscomponentproactivedetectionconfigurationproperties): Properties that define a ProactiveDetection configuration.
+* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationInsightsComponentProperties
 ### Properties
@@ -28,8 +38,8 @@
 * **InstrumentationKey**: string (ReadOnly): Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
 * **PrivateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
 * **provisioningState**: string (ReadOnly): Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for operating on the Application Insights Component. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for operating on the Application Insights Component. By default it is Enabled
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for accessing Application Insights ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for accessing Application Insights query.
 * **Request_Source**: 'rest': Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
 * **RetentionInDays**: int: Retention period in days.
 * **SamplingPercentage**: int: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
@@ -40,8 +50,28 @@
 * **ResourceId**: string: The full resource Id of the private link scope resource.
 * **ScopeId**: string: The private link scope unique Identifier.
 
-## ComponentsResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
+### Properties
+* **CustomEmails**: string[]: Custom email addresses for this rule notifications
+* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
+* **LastUpdatedTime**: string (ReadOnly): The last time this rule was updated
+* **Name**: string (ReadOnly): The rule name
+* **RuleDefinitions**: [schemas:13_RuleDefinitions](#schemas13ruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+
+## schemas:13_RuleDefinitions
+### Properties
+* **Description**: string: The rule description
+* **DisplayName**: string: The rule name as it is displayed in UI
+* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
+* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
+* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
+* **IsInPreview**: bool: A flag indicating whether the rule is in preview
+* **Name**: string: The rule name
+* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
 

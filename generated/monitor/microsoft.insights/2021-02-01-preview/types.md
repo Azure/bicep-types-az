@@ -10,8 +10,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): scheduled query rule Definition
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ScheduledQueryRuleProperties
@@ -38,9 +38,9 @@
 ## Action
 ### Properties
 * **actionGroupId**: string: Action Group resource Id to invoke when the alert fires.
-* **webHookProperties**: [ActionWebHookProperties](#actionwebhookproperties): The properties of a webhook object.
+* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring): The properties of a webhook object.
 
-## ActionWebHookProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -52,7 +52,7 @@
 ## Condition
 ### Properties
 * **dimensions**: [Dimension](#dimension)[]: List of Dimensions conditions
-* **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.
+* **failingPeriods**: [schemas:6_failingPeriods](#schemas6failingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.
 * **metricMeasureColumn**: string: The column containing the metric measure number. Relevant only for rules of the kind LogAlert.
 * **metricName**: string: The name of the metric to be sent. Relevant and required only for rules of the kind LogToMetric.
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): The criteria operator. Relevant and required only for rules of the kind LogAlert.
@@ -64,24 +64,24 @@
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values
+* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values.
 * **values**: string[] (Required): List of dimension values
 
-## ConditionFailingPeriods
+## schemas:6_failingPeriods
 ### Properties
 * **minFailingPeriodsToAlert**: int: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods. Default value is 1
 * **numberOfEvaluationPeriods**: int: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

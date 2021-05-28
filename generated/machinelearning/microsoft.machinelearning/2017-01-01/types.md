@@ -8,14 +8,13 @@
 * **location**: string (Required): Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebServiceProperties](#webserviceproperties) (Required): The set of properties specific to the Azure ML web service resource.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearning/webServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WebServiceProperties
 * **Discriminator**: packageType
-
 ### Base Properties
-* **assets**: [WebServicePropertiesAssets](#webservicepropertiesassets): Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
+* **assets**: [Dictionary<string,AssetItem>](#dictionarystringassetitem): Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
 * **commitmentPlan**: [CommitmentPlan](#commitmentplan): Information about the machine learning commitment plan associated with the web service.
 * **createdOn**: string (ReadOnly): Read Only: The date and time when the web service was created.
 * **description**: string: The description of the web service.
@@ -27,7 +26,7 @@
 * **machineLearningWorkspace**: [MachineLearningWorkspace](#machinelearningworkspace): Information about the machine learning workspace containing the experiment that is source for the web service.
 * **modifiedOn**: string (ReadOnly): Read Only: The date and time when the web service was last modified.
 * **output**: [ServiceInputOutputSpecification](#serviceinputoutputspecification): The swagger 2.0 schema describing the service's inputs or outputs. See Swagger specification: http://swagger.io/specification/
-* **parameters**: [WebServicePropertiesParameters](#webservicepropertiesparameters): The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
+* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter): The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
 * **payloadsInBlobStorage**: bool: When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
 * **payloadsLocation**: [BlobLocation](#bloblocation): Describes the access location for a blob.
 * **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' (ReadOnly): Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
@@ -36,13 +35,13 @@
 * **storageAccount**: [StorageAccount](#storageaccount): Access information for a storage account.
 * **swaggerLocation**: string (ReadOnly): Read Only: Contains the URI of the swagger spec associated with this web service.
 * **title**: string: The title of the web service.
-### WebServicePropertiesForGraph
+### Graph
 #### Properties
 * **package**: [GraphPackage](#graphpackage): Defines the graph of modules making up the machine learning solution.
-* **packageType**: 'Graph' (Required): Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
+* **packageType**: 'Graph' (Required): Properties specific to a Graph based web service.
 
 
-## WebServicePropertiesAssets
+## Dictionary<string,AssetItem>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AssetItem](#assetitem)
@@ -50,15 +49,15 @@
 ## AssetItem
 ### Properties
 * **id**: string: Asset's Id.
-* **inputPorts**: [AssetItemInputPorts](#assetiteminputports): Information about the asset's input ports.
+* **inputPorts**: [Dictionary<string,InputPort>](#dictionarystringinputport): Information about the asset's input ports.
 * **locationInfo**: [BlobLocation](#bloblocation) (Required): Describes the access location for a blob.
-* **metadata**: [AssetItemMetadata](#assetitemmetadata): If the asset is a custom module, this holds the module's metadata.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): If the asset is a custom module, this holds the module's metadata.
 * **name**: string (Required): Asset's friendly name.
-* **outputPorts**: [AssetItemOutputPorts](#assetitemoutputports): Information about the asset's output ports.
+* **outputPorts**: [Dictionary<string,OutputPort>](#dictionarystringoutputport): Information about the asset's output ports.
 * **parameters**: [ModuleAssetParameter](#moduleassetparameter)[]: If the asset is a custom module, this holds the module's parameters.
 * **type**: 'Module' | 'Resource' (Required): Asset's type.
 
-## AssetItemInputPorts
+## Dictionary<string,InputPort>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InputPort](#inputport)
@@ -72,12 +71,12 @@
 * **credentials**: string: Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
 * **uri**: string (Required): The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
 
-## AssetItemMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AssetItemOutputPorts
+## Dictionary<string,OutputPort>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [OutputPort](#outputport)
@@ -88,11 +87,11 @@
 
 ## ModuleAssetParameter
 ### Properties
-* **modeValuesInfo**: [ModuleAssetParameterModeValuesInfo](#moduleassetparametermodevaluesinfo): Definitions for nested interface parameters if this is a complex module parameter.
+* **modeValuesInfo**: [Dictionary<string,ModeValueInfo>](#dictionarystringmodevalueinfo): Definitions for nested interface parameters if this is a complex module parameter.
 * **name**: string: Parameter name.
 * **parameterType**: string: Parameter type.
 
-## ModuleAssetParameterModeValuesInfo
+## Dictionary<string,ModeValueInfo>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ModeValueInfo](#modevalueinfo)
@@ -113,15 +112,15 @@
 
 ## ExampleRequest
 ### Properties
-* **globalParameters**: [ExampleRequestGlobalParameters](#examplerequestglobalparameters): Sample input data for the web service's global parameters
-* **inputs**: [ExampleRequestInputs](#examplerequestinputs): Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
+* **globalParameters**: [Dictionary<string,Object>](#dictionarystringobject): Sample input data for the web service's global parameters
+* **inputs**: [Dictionary<string,IList<IList<Object>>>](#dictionarystringilistilistobject): Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
 
-## ExampleRequestGlobalParameters
+## Dictionary<string,Object>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## ExampleRequestInputs
+## Dictionary<string,IList<IList<Object>>>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any[][]
@@ -129,11 +128,11 @@
 ## ServiceInputOutputSpecification
 ### Properties
 * **description**: string: The description of the Swagger schema.
-* **properties**: [ServiceInputOutputSpecificationProperties](#serviceinputoutputspecificationproperties) (Required): Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+* **properties**: [Dictionary<string,TableSpecification>](#dictionarystringtablespecification) (Required): Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
 * **title**: string: The title of your Swagger schema.
 * **type**: string (Required): The type of the entity described in swagger. Always 'object'.
 
-## ServiceInputOutputSpecificationProperties
+## Dictionary<string,TableSpecification>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [TableSpecification](#tablespecification)
@@ -142,11 +141,11 @@
 ### Properties
 * **description**: string: Swagger schema description.
 * **format**: string: The format, if 'type' is not 'object'
-* **properties**: [TableSpecificationProperties](#tablespecificationproperties): The set of columns within the data table.
+* **properties**: [Dictionary<string,ColumnSpecification>](#dictionarystringcolumnspecification): The set of columns within the data table.
 * **title**: string: Swagger schema title.
 * **type**: string (Required): The type of the entity described in swagger.
 
-## TableSpecificationProperties
+## Dictionary<string,ColumnSpecification>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ColumnSpecification](#columnspecification)
@@ -168,7 +167,7 @@
 ### Properties
 * **id**: string (Required): Specifies the workspace ID of the machine learning workspace associated with the web service
 
-## WebServicePropertiesParameters
+## Dictionary<string,WebServiceParameter>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
@@ -176,7 +175,7 @@
 ## WebServiceParameter
 ### Properties
 * **certificateThumbprint**: string: If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
-* **value**: any: Any object
+* **value**: any: The parameter value
 
 ## RealtimeConfiguration
 ### Properties
@@ -187,16 +186,16 @@
 * **key**: string: Specifies the key used to access the storage account.
 * **name**: string: Specifies the name of the storage account.
 
-## WebServicePropertiesForGraph
+## Graph
 ### Properties
 * **package**: [GraphPackage](#graphpackage): Defines the graph of modules making up the machine learning solution.
-* **packageType**: 'Graph' (Required): Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
+* **packageType**: 'Graph' (Required): Properties specific to a Graph based web service.
 
 ## GraphPackage
 ### Properties
 * **edges**: [GraphEdge](#graphedge)[]: The list of edges making up the graph.
-* **graphParameters**: [GraphPackageGraphParameters](#graphpackagegraphparameters): The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
-* **nodes**: [GraphPackageNodes](#graphpackagenodes): The set of nodes making up the graph, provided as a nodeId to GraphNode map
+* **graphParameters**: [Dictionary<string,GraphParameter>](#dictionarystringgraphparameter): The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+* **nodes**: [Dictionary<string,GraphNode>](#dictionarystringgraphnode): The set of nodes making up the graph, provided as a nodeId to GraphNode map
 
 ## GraphEdge
 ### Properties
@@ -205,7 +204,7 @@
 * **targetNodeId**: string: The destination graph node's identifier.
 * **targetPortId**: string: The identifier of the destination node's port that the edge connects into.
 
-## GraphPackageGraphParameters
+## Dictionary<string,GraphParameter>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [GraphParameter](#graphparameter)
@@ -221,7 +220,7 @@
 * **nodeId**: string (Required): The graph node's identifier
 * **parameterKey**: string (Required): The identifier of the node parameter that the global parameter maps to.
 
-## GraphPackageNodes
+## Dictionary<string,GraphNode>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [GraphNode](#graphnode)
@@ -231,14 +230,14 @@
 * **assetId**: string: The id of the asset represented by this node.
 * **inputId**: string: The id of the input element represented by this node.
 * **outputId**: string: The id of the output element represented by this node.
-* **parameters**: [GraphNodeParameters](#graphnodeparameters): If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+* **parameters**: [Dictionary<string,WebServiceParameter>](#dictionarystringwebserviceparameter): If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
 
-## GraphNodeParameters
+## Dictionary<string,WebServiceParameter>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WebServiceParameter](#webserviceparameter)
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

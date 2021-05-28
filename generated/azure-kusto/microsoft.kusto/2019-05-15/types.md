@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
 * **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: An array represents the availability zones of the cluster.
 
@@ -26,26 +26,25 @@
 ## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-05-15
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2019-05-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
-### EventGridDataConnection
+### EventGrid
 #### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
-### EventHubDataConnection
+### EventHub
 #### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
-### IotHubDataConnection
+### IotHub
 #### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto iot hub connection properties.
 
 
@@ -84,7 +83,7 @@
 * **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s' (Required): SKU name.
 * **tier**: 'Basic' | 'Standard' (Required): SKU tier.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -94,15 +93,15 @@
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## EventGridDataConnection
+## EventGrid
 ### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ## EventGridConnectionProperties
@@ -114,9 +113,9 @@
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
 * **tableName**: string (Required): The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## EventHubDataConnection
+## EventHub
 ### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
 ## EventHubConnectionProperties
@@ -128,9 +127,9 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## IotHubDataConnection
+## IotHub
 ### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
+* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto iot hub connection properties.
 
 ## IotHubConnectionProperties

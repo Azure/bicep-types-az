@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [PurchasePlan](#purchaseplan): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
 * **properties**: [OpenShiftManagedClusterProperties](#openshiftmanagedclusterproperties): Properties of the OpenShift managed cluster.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.ContainerService/openShiftManagedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PurchasePlan
@@ -36,9 +36,9 @@
 * **count**: int (Required): Number of agents (VMs) to host docker containers.
 * **name**: string (Required): Unique name of the pool profile in the context of the subscription and resource group.
 * **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-* **role**: 'compute' | 'infra': OpenShiftAgentPoolProfileRole represents the role of the AgentPoolProfile.
+* **role**: 'compute' | 'infra': Define the role of the AgentPoolProfile.
 * **subnetCidr**: string: Subnet CIDR for the peering.
-* **vmSize**: 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32s_v3' | 'Standard_D4s_v3' | 'Standard_D64s_v3' | 'Standard_D8s_v3' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_E16s_v3' | 'Standard_E20s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64s_v3' | 'Standard_E8s_v3' | 'Standard_F16s' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8s' | 'Standard_F8s_v2' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' (Required): Size of OpenShift VMs.
+* **vmSize**: 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32s_v3' | 'Standard_D4s_v3' | 'Standard_D64s_v3' | 'Standard_D8s_v3' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_E16s_v3' | 'Standard_E20s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64s_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F32s_v2' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' (Required): Size of agent VMs.
 
 ## OpenShiftManagedClusterAuthProfile
 ### Properties
@@ -51,22 +51,21 @@
 
 ## OpenShiftManagedClusterBaseIdentityProvider
 * **Discriminator**: kind
-
 ### Base Properties
-### OpenShiftManagedClusterAADIdentityProvider
+### AADIdentityProvider
 #### Properties
 * **clientId**: string: The clientId password associated with the provider.
 * **customerAdminGroupId**: string: The groupId to be granted cluster admin role.
-* **kind**: 'AADIdentityProvider' (Required): The kind of the provider.
+* **kind**: 'AADIdentityProvider' (Required): Defines the Identity provider for MS AAD.
 * **secret**: string: The secret password associated with the provider.
 * **tenantId**: string: The tenantId associated with the provider.
 
 
-## OpenShiftManagedClusterAADIdentityProvider
+## AADIdentityProvider
 ### Properties
 * **clientId**: string: The clientId password associated with the provider.
 * **customerAdminGroupId**: string: The groupId to be granted cluster admin role.
-* **kind**: 'AADIdentityProvider' (Required): The kind of the provider.
+* **kind**: 'AADIdentityProvider' (Required): Defines the Identity provider for MS AAD.
 * **secret**: string: The secret password associated with the provider.
 * **tenantId**: string: The tenantId associated with the provider.
 
@@ -76,7 +75,7 @@
 * **name**: string: Unique name of the master pool profile in the context of the subscription and resource group.
 * **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **subnetCidr**: string: Subnet CIDR for the peering.
-* **vmSize**: 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32s_v3' | 'Standard_D4s_v3' | 'Standard_D64s_v3' | 'Standard_D8s_v3' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_E16s_v3' | 'Standard_E20s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64s_v3' | 'Standard_E8s_v3' | 'Standard_F16s' | 'Standard_F16s_v2' | 'Standard_F32s_v2' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8s' | 'Standard_F8s_v2' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' (Required): Size of OpenShift VMs.
+* **vmSize**: 'Standard_D16s_v3' | 'Standard_D2s_v3' | 'Standard_D32s_v3' | 'Standard_D4s_v3' | 'Standard_D64s_v3' | 'Standard_D8s_v3' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS14_v2' | 'Standard_DS15_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_E16s_v3' | 'Standard_E20s_v3' | 'Standard_E32s_v3' | 'Standard_E4s_v3' | 'Standard_E64s_v3' | 'Standard_E8s_v3' | 'Standard_F16s_v2' | 'Standard_F16s' | 'Standard_F32s_v2' | 'Standard_F64s_v2' | 'Standard_F72s_v2' | 'Standard_F8s_v2' | 'Standard_F8s' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | 'Standard_L16s' | 'Standard_L32s' | 'Standard_L4s' | 'Standard_L8s' (Required): Size of agent VMs.
 
 ## NetworkProfile
 ### Properties
@@ -89,7 +88,7 @@
 * **name**: string: Name of the router profile.
 * **publicSubdomain**: string: DNS subdomain for OpenShift router.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,10 +8,10 @@
 * **identity**: [Identity](#identity): Properties to configure Identity for Bring your Own Keys
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
+* **properties**: [schemas:1_properties](#schemas1properties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): SKU parameters supplied to the create namespace operation
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.EventHub/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/authorizationRules@2021-01-01-preview
@@ -20,8 +20,8 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [schemas:31_properties](#schemas31properties): Properties supplied to create or update AuthorizationRule
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2021-01-01-preview
@@ -30,8 +30,8 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [schemas:24_properties](#schemas24properties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs@2021-01-01-preview
@@ -40,8 +40,8 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventhubProperties](#eventhubproperties): Properties supplied to the Create Or Update Event Hub operation.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [schemas:18_properties](#schemas18properties): Properties supplied to the Create Or Update Event Hub operation.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2021-01-01-preview
@@ -50,8 +50,8 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [schemas:31_properties](#schemas31properties): Properties supplied to create or update AuthorizationRule
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/eventhubs/consumergroups@2021-01-01-preview
@@ -60,8 +60,8 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConsumerGroupProperties](#consumergroupproperties): Single item in List or Get Consumer group operation
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [schemas:34_properties](#schemas34properties): Single item in List or Get Consumer group operation
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/networkRuleSets@2021-01-01-preview
@@ -70,8 +70,8 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [schemas:29_properties](#schemas29properties): NetworkRuleSet properties
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EventHub/namespaces/privateEndpointConnections@2021-01-01-preview
@@ -81,27 +81,27 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault
 * **tenantId**: string (ReadOnly): TenantId from the KeyVault
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': Type of managed service identity.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): Properties for User Assigned Identities
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity.
+* **userAssignedIdentities**: [Dictionary<string,Schemas3UserAssignedIdentitiesValue>](#dictionarystringschemas3userassignedidentitiesvalue): Properties for User Assigned Identities
 
-## IdentityUserAssignedIdentities
+## Dictionary<string,Schemas3UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties](#componentssgqdofschemasidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [schemas:3_userAssignedIdentitiesValue](#schemas3userassignedidentitiesvalue)
 
-## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
+## schemas:3_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): Client Id of user assigned identity
 * **principalId**: string (ReadOnly): Principal Id of user assigned identity
 
-## EHNamespaceProperties
+## schemas:1_properties
 ### Properties
 * **clusterArmId**: string: Cluster ARM ID of the Namespace.
 * **createdAt**: string (ReadOnly): The time the Namespace was created.
@@ -118,18 +118,18 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
+* **keySource**: 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)[]: Properties of KeyVault
 * **requireInfrastructureEncryption**: bool: Enable Infrastructure Encryption (Double Encryption)
 
 ## KeyVaultProperties
 ### Properties
-* **identity**: [UserAssignedIdentityProperties](#userassignedidentityproperties)
+* **identity**: [userAssignedIdentityProperties](#userassignedidentityproperties)
 * **keyName**: string: Name of the Key from KeyVault
 * **keyVaultUri**: string: Uri of KeyVault
 * **keyVersion**: string: Key Version
 
-## UserAssignedIdentityProperties
+## userAssignedIdentityProperties
 ### Properties
 * **userAssignedIdentity**: string: ARM ID of user Identity selected for encryption
 
@@ -138,7 +138,7 @@
 * **id**: string (ReadOnly): Resource ID.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): Resource type.
 
 ## PrivateEndpointConnectionProperties
@@ -156,14 +156,14 @@
 * **description**: string: Description of the connection state.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Status of the connection.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## Sku
 ### Properties
@@ -171,24 +171,24 @@
 * **name**: 'Basic' | 'Premium' | 'Standard' (Required): Name of this SKU.
 * **tier**: 'Basic' | 'Premium' | 'Standard': The billing tier of this particular SKU.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AuthorizationRuleProperties
+## schemas:31_properties
 ### Properties
 * **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
 
-## ArmDisasterRecoveryProperties
+## schemas:24_properties
 ### Properties
 * **alternateName**: string: Alternate name specified when alias and namespace names are same.
 * **partnerNamespace**: string: ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
 * **pendingReplicationOperationsCount**: int (ReadOnly): Number of entities pending to be replicated.
-* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
-* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
+* **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'.
+* **role**: 'Primary' | 'PrimaryNotReplicating' | 'Secondary' (ReadOnly): role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'.
 
-## EventhubProperties
+## schemas:18_properties
 ### Properties
 * **captureDescription**: [CaptureDescription](#capturedescription): Properties to configure capture description for eventhub
 * **createdAt**: string (ReadOnly): Exact time the Event Hub was created.
@@ -202,7 +202,7 @@
 ### Properties
 * **destination**: [Destination](#destination): Capture storage details for capture description
 * **enabled**: bool: A value that indicates whether capture description is enabled.
-* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+* **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version.
 * **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
 * **sizeLimitInBytes**: int: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
 * **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
@@ -210,30 +210,30 @@
 ## Destination
 ### Properties
 * **name**: string: Name for capture destination
-* **properties**: [DestinationProperties](#destinationproperties): Properties describing the storage account, blob container and archive name format for capture destination
+* **properties**: [schemas:20_properties](#schemas20properties): Properties describing the storage account, blob container and archive name format for capture destination
 
-## DestinationProperties
+## schemas:20_properties
 ### Properties
 * **archiveNameFormat**: string: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
 * **blobContainer**: string: Blob container Name
 * **storageAccountResourceId**: string: Resource id of the storage account to be used to create the blobs
 
-## ConsumerGroupProperties
+## schemas:34_properties
 ### Properties
 * **createdAt**: string (ReadOnly): Exact time the message was created.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 * **userMetadata**: string: User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
 
-## NetworkRuleSetProperties
+## schemas:29_properties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set.
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 * **trustedServiceAccessEnabled**: bool: Value that indicates whether Trusted Service Access is Enabled or not.
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow': The IP Filter Action.
 * **ipMask**: string: IP Mask
 
 ## NWRuleSetVirtualNetworkRules

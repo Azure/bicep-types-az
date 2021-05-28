@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SpatialAnchorsAccountProperties](#spatialanchorsaccountproperties): Spatial Anchors Account Customize Properties
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -23,7 +23,7 @@
 * **accountDomain**: string (ReadOnly): Correspond domain name of certain Spatial Anchors Account
 * **accountId**: string (ReadOnly): unique id of certain Spatial Anchors Account data contract.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

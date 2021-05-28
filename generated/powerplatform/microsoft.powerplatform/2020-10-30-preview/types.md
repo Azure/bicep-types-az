@@ -9,8 +9,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Properties](#properties): The properties that define configuration for the enterprise policy.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.PowerPlatform/enterprisePolicies/privateEndpointConnections@2020-10-30-preview
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## EnterprisePolicyIdentity
@@ -31,11 +31,11 @@
 
 ## Properties
 ### Properties
-* **encryption**: [PropertiesEncryption](#propertiesencryption): The encryption settings for a configuration store.
-* **lockbox**: [PropertiesLockbox](#propertieslockbox): Settings concerning lockbox.
-* **networkInjection**: [PropertiesNetworkInjection](#propertiesnetworkinjection): Settings concerning network injection.
+* **encryption**: [schemas:2_encryption](#schemas2encryption): The encryption settings for a configuration store.
+* **lockbox**: [schemas:2_lockbox](#schemas2lockbox): Settings concerning lockbox.
+* **networkInjection**: [schemas:2_networkInjection](#schemas2networkinjection): Settings concerning network injection.
 
-## PropertiesEncryption
+## schemas:2_encryption
 ### Properties
 * **keyVault**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
 * **state**: 'Disabled' | 'Enabled' | 'NotConfigured': The state of onboarding, which only appears in the response.
@@ -43,18 +43,18 @@
 ## KeyVaultProperties
 ### Properties
 * **id**: string: Uri of KeyVault
-* **key**: [KeyProperties](#keyproperties): Url and version of the KeyVault Secret
+* **key**: [keyProperties](#keyproperties): Url and version of the KeyVault Secret
 
-## KeyProperties
+## keyProperties
 ### Properties
 * **name**: string: The identifier of the key vault key used to encrypt data.
 * **version**: string: The version of the identity which will be used to access key vault.
 
-## PropertiesLockbox
+## schemas:2_lockbox
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | 'NotConfigured': The state of onboarding, which only appears in the response.
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured': lockbox configuration.
 
-## PropertiesNetworkInjection
+## schemas:2_networkInjection
 ### Properties
 * **virtualNetworks**: [VirtualNetworkPropertiesList](#virtualnetworkpropertieslist): A list of private link resources
 
@@ -71,16 +71,16 @@
 ### Properties
 * **name**: string: Subnet name.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -89,7 +89,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -99,5 +99,5 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 

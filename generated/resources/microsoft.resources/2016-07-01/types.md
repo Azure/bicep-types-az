@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties): Deployment properties with additional details.
+* **properties**: [DeploymentProperties](#deploymentproperties): Deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2016-07-01
@@ -17,7 +17,7 @@
 * **location**: string (Required): The location of the resource group. It cannot be changed after the resource group has been created. Has to be one of the supported Azure Locations, such as West US, East US, West Europe, East Asia, etc.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties): The resource group properties.
-* **tags**: [ResourceGroupTags](#resourcegrouptags): The tags attached to the resource group.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags attached to the resource group.
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DeploymentProperties
@@ -26,12 +26,12 @@
 * **debugSetting**: [DebugSetting](#debugsetting)
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
 * **mode**: 'Complete' | 'Incremental' (Required): The deployment mode.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
+* **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
+* **parameters**: any: Deployment parameters. It can be a JObject or a well formed JSON string. Use only one of Parameters or ParametersLink.
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
 * **provisioningState**: string (ReadOnly): The state of the provisioning.
-* **template**: any: Any object
+* **template**: any: The template content. It can be a JObject or a well formed JSON string. Use only one of Template or TemplateLink.
 * **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
 
@@ -69,9 +69,9 @@
 * **aliases**: [AliasType](#aliastype)[] (ReadOnly): The aliases that are supported by this resource type.
 * **apiVersions**: string[] (ReadOnly): The api version.
 * **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created in.
-* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly): The properties.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): The properties.
 * **resourceType**: string (ReadOnly): The resource type.
-* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
+* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly)
 
 ## AliasType
 ### Properties
@@ -83,7 +83,7 @@
 * **apiVersions**: string[] (ReadOnly): The api versions.
 * **path**: string (ReadOnly): The path of an alias.
 
-## ProviderResourceTypeProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -91,7 +91,7 @@
 ## ZoneMapping
 ### Properties
 * **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
+* **zones**: string[] (ReadOnly)
 
 ## TemplateLink
 ### Properties
@@ -102,7 +102,7 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): The provisioning state.
 
-## ResourceGroupTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

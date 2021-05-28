@@ -8,11 +8,11 @@
 * **location**: string: The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **suppressionId**: string: The GUID of the suppression.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **ttl**: string: The duration for which the suppression is valid.
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant): The resource type
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

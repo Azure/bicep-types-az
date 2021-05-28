@@ -10,8 +10,8 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupVault](#backupvault) (Required): Backup Vault
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags): Resource tags.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupInstances@2021-01-01
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupInstance](#backupinstance): Backup Instance
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupPolicies@2021-01-01
@@ -31,7 +31,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BaseBackupPolicy](#basebackuppolicy): BackupPolicy base
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DppIdentityDetails
@@ -42,7 +42,7 @@
 
 ## BackupVault
 ### Properties
-* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the BackupVault resource
+* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the BackupVault resource.
 * **storageSettings**: [StorageSetting](#storagesetting)[] (Required): Storage Settings
 
 ## StorageSetting
@@ -50,23 +50,23 @@
 * **datastoreType**: 'ArchiveStore' | 'SnapshotStore' | 'VaultStore': Gets or sets the type of the datastore.
 * **type**: 'GeoRedundant' | 'LocallyRedundant': Gets or sets the type.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## DppTrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## BackupInstance
 ### Properties
-* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly): Specifies the current protection state of the resource
+* **currentProtectionState**: 'BackupSchedulesSuspended' | 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'Invalid' | 'NotProtected' | 'ProtectionConfigured' | 'ProtectionError' | 'ProtectionStopped' | 'RetentionSchedulesSuspended' | 'SoftDeleted' | 'SoftDeleting' | 'UpdatingProtection' (ReadOnly): Specifies the current protection state of the resource.
 * **dataSourceInfo**: [Datasource](#datasource) (Required): Datasource to be backed up
 * **dataSourceSetInfo**: [DatasourceSet](#datasourceset): DatasourceSet details of datasource to be backed up
 * **friendlyName**: string: Gets or sets the Backup Instance friendly name.
@@ -108,18 +108,17 @@
 
 ## DataStoreParameters
 * **Discriminator**: objectType
-
 ### Base Properties
-* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive
+* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive.
 ### AzureOperationalStoreParameters
 #### Properties
-* **objectType**: 'AzureOperationalStoreParameters' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AzureOperationalStoreParameters' (Required): Parameters for Operational-Tier DataStore
 * **resourceGroupId**: string: Gets or sets the Snapshot Resource Group Uri.
 
 
 ## AzureOperationalStoreParameters
 ### Properties
-* **objectType**: 'AzureOperationalStoreParameters' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AzureOperationalStoreParameters' (Required): Parameters for Operational-Tier DataStore
 * **resourceGroupId**: string: Gets or sets the Snapshot Resource Group Uri.
 
 ## UserFacingError
@@ -130,22 +129,22 @@
 * **isRetryable**: bool: Whether the operation will be retryable or not
 * **isUserError**: bool: Whether the operation is due to a user error or service error
 * **message**: string
-* **properties**: [UserFacingErrorProperties](#userfacingerrorproperties): Any key value pairs that can be injected inside error object
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): Any key value pairs that can be injected inside error object
 * **recommendedAction**: string[]: RecommendedAction � localized.
 * **target**: string: Target of the error.
 
 ## InnerError
 ### Properties
-* **additionalInfo**: [InnerErrorAdditionalInfo](#innererroradditionalinfo): Any Key value pairs that can be provided to the client for additional  verbose information.
+* **additionalInfo**: [Dictionary<string,String>](#dictionarystringstring): Any Key value pairs that can be provided to the client for additional  verbose information.
 * **code**: string: Unique code for this error
 * **embeddedInnerError**: [InnerError](#innererror): Inner Error
 
-## InnerErrorAdditionalInfo
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## UserFacingErrorProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -153,89 +152,85 @@
 ## ProtectionStatusDetails
 ### Properties
 * **errorDetails**: [UserFacingError](#userfacingerror): Error object used by layers that have access to localized content, and propagate that to user
-* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting': Specifies the protection status of the resource
+* **status**: 'ConfiguringProtection' | 'ConfiguringProtectionFailed' | 'ProtectionConfigured' | 'ProtectionStopped' | 'SoftDeleted' | 'SoftDeleting': Specifies the protection status of the resource.
 
 ## BaseBackupPolicy
 * **Discriminator**: objectType
-
 ### Base Properties
 * **datasourceTypes**: string[] (Required): Type of datasource for the backup management
 ### BackupPolicy
 #### Properties
-* **objectType**: 'BackupPolicy' (Required)
+* **objectType**: 'BackupPolicy' (Required): Rule based backup policy
 * **policyRules**: [BasePolicyRule](#basepolicyrule)[] (Required): Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
 
 
 ## BackupPolicy
 ### Properties
-* **objectType**: 'BackupPolicy' (Required)
+* **objectType**: 'BackupPolicy' (Required): Rule based backup policy
 * **policyRules**: [BasePolicyRule](#basepolicyrule)[] (Required): Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
 
 ## BasePolicyRule
 * **Discriminator**: objectType
-
 ### Base Properties
 * **name**: string (Required)
 ### AzureBackupRule
 #### Properties
 * **backupParameters**: [BackupParameters](#backupparameters): BackupParameters base
 * **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
-* **objectType**: 'AzureBackupRule' (Required)
+* **objectType**: 'AzureBackupRule' (Required): Azure backup rule
 * **trigger**: [TriggerContext](#triggercontext) (Required): Trigger context
 
 ### AzureRetentionRule
 #### Properties
 * **isDefault**: bool
-* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required): Array of SourceLifeCycle
-* **objectType**: 'AzureRetentionRule' (Required)
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
+* **objectType**: 'AzureRetentionRule' (Required): Azure retention rule
 
 
 ## AzureBackupRule
 ### Properties
 * **backupParameters**: [BackupParameters](#backupparameters): BackupParameters base
 * **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
-* **objectType**: 'AzureBackupRule' (Required)
+* **objectType**: 'AzureBackupRule' (Required): Azure backup rule
 * **trigger**: [TriggerContext](#triggercontext) (Required): Trigger context
 
 ## BackupParameters
 * **Discriminator**: objectType
-
 ### Base Properties
 ### AzureBackupParams
 #### Properties
 * **backupType**: string (Required): BackupType ; Full/Incremental etc
-* **objectType**: 'AzureBackupParams' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AzureBackupParams' (Required): Azure backup parameters
 
 
 ## AzureBackupParams
 ### Properties
 * **backupType**: string (Required): BackupType ; Full/Incremental etc
-* **objectType**: 'AzureBackupParams' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AzureBackupParams' (Required): Azure backup parameters
 
 ## DataStoreInfoBase
 ### Properties
-* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive
+* **dataStoreType**: 'ArchiveStore' | 'OperationalStore' | 'VaultStore' (Required): type of datastore; Operational/Vault/Archive.
 * **objectType**: string (Required): Type of Datasource object, used to initialize the right inherited type
 
 ## TriggerContext
 * **Discriminator**: objectType
-
 ### Base Properties
 ### AdhocBasedTriggerContext
 #### Properties
-* **objectType**: 'AdhocBasedTriggerContext' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AdhocBasedTriggerContext' (Required): Adhoc trigger context
 * **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required): Adhoc backup tagging criteria
 
 ### ScheduleBasedTriggerContext
 #### Properties
-* **objectType**: 'ScheduleBasedTriggerContext' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'ScheduleBasedTriggerContext' (Required): Schedule based trigger context
 * **schedule**: [BackupSchedule](#backupschedule) (Required): Schedule for backup
 * **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required): List of tags that can be applicable for given schedule.
 
 
 ## AdhocBasedTriggerContext
 ### Properties
-* **objectType**: 'AdhocBasedTriggerContext' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AdhocBasedTriggerContext' (Required): Adhoc trigger context
 * **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required): Adhoc backup tagging criteria
 
 ## AdhocBasedTaggingCriteria
@@ -250,7 +245,7 @@
 
 ## ScheduleBasedTriggerContext
 ### Properties
-* **objectType**: 'ScheduleBasedTriggerContext' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'ScheduleBasedTriggerContext' (Required): Schedule based trigger context
 * **schedule**: [BackupSchedule](#backupschedule) (Required): Schedule for backup
 * **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required): List of tags that can be applicable for given schedule.
 
@@ -267,7 +262,6 @@
 
 ## BackupCriteria
 * **Discriminator**: objectType
-
 ### Base Properties
 ### ScheduleBasedBackupCriteria
 #### Properties
@@ -276,7 +270,7 @@ and should be part of AbsoluteMarker enum
 * **daysOfMonth**: [Day](#day)[]: This is day of the month from 1 to 28 other wise last of month
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: It should be Sunday/Monday/T..../Saturday
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: It should be January/February/....../December
-* **objectType**: 'ScheduleBasedBackupCriteria' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'ScheduleBasedBackupCriteria' (Required): Schedule based backup criteria
 * **scheduleTimes**: string[]: List of schedule times for backup
 * **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third'[]: It should be First/Second/Third/Fourth/Last
 
@@ -288,7 +282,7 @@ and should be part of AbsoluteMarker enum
 * **daysOfMonth**: [Day](#day)[]: This is day of the month from 1 to 28 other wise last of month
 * **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: It should be Sunday/Monday/T..../Saturday
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: It should be January/February/....../December
-* **objectType**: 'ScheduleBasedBackupCriteria' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'ScheduleBasedBackupCriteria' (Required): Schedule based backup criteria
 * **scheduleTimes**: string[]: List of schedule times for backup
 * **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third'[]: It should be First/Second/Third/Fourth/Last
 
@@ -300,28 +294,27 @@ and should be part of AbsoluteMarker enum
 ## AzureRetentionRule
 ### Properties
 * **isDefault**: bool
-* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required): Array of SourceLifeCycle
-* **objectType**: 'AzureRetentionRule' (Required)
+* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required)
+* **objectType**: 'AzureRetentionRule' (Required): Azure retention rule
 
 ## SourceLifeCycle
 ### Properties
 * **deleteAfter**: [DeleteOption](#deleteoption) (Required): Delete Option
 * **sourceDataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
-* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]: Array of TargetCopySetting
+* **targetDataStoreCopySettings**: [TargetCopySetting](#targetcopysetting)[]
 
 ## DeleteOption
 * **Discriminator**: objectType
-
 ### Base Properties
 * **duration**: string (Required): Duration of deletion after given timespan
 ### AbsoluteDeleteOption
 #### Properties
-* **objectType**: 'AbsoluteDeleteOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AbsoluteDeleteOption' (Required): Delete option with duration
 
 
 ## AbsoluteDeleteOption
 ### Properties
-* **objectType**: 'AbsoluteDeleteOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'AbsoluteDeleteOption' (Required): Delete option with duration
 
 ## TargetCopySetting
 ### Properties
@@ -330,32 +323,31 @@ and should be part of AbsoluteMarker enum
 
 ## CopyOption
 * **Discriminator**: objectType
-
 ### Base Properties
 ### CopyOnExpiryOption
 #### Properties
-* **objectType**: 'CopyOnExpiryOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'CopyOnExpiryOption' (Required): Copy on Expiry Option
 
 ### CustomCopyOption
 #### Properties
 * **duration**: string: Data copied after given timespan
-* **objectType**: 'CustomCopyOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'CustomCopyOption' (Required): Duration based custom options to copy
 
 ### ImmediateCopyOption
 #### Properties
-* **objectType**: 'ImmediateCopyOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'ImmediateCopyOption' (Required): Immediate copy Option
 
 
 ## CopyOnExpiryOption
 ### Properties
-* **objectType**: 'CopyOnExpiryOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'CopyOnExpiryOption' (Required): Copy on Expiry Option
 
 ## CustomCopyOption
 ### Properties
 * **duration**: string: Data copied after given timespan
-* **objectType**: 'CustomCopyOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'CustomCopyOption' (Required): Duration based custom options to copy
 
 ## ImmediateCopyOption
 ### Properties
-* **objectType**: 'ImmediateCopyOption' (Required): Type of the specific object - used for deserializing
+* **objectType**: 'ImmediateCopyOption' (Required): Immediate copy Option
 

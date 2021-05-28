@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureMonitorPrivateLinkScopeProperties](#azuremonitorprivatelinkscopeproperties) (Required): Properties that define a Azure Monitor PrivateLinkScope resource.
-* **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'microsoft.insights/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/privateLinkScopes/privateEndpointConnections@2019-10-17-preview
@@ -57,7 +57,7 @@
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
 
-## PrivateLinkScopesResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

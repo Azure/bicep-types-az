@@ -9,7 +9,7 @@
 * **location**: string: The location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GraphQueryProperties](#graphqueryproperties): Properties that contain a graph query.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.ResourceGraph/queries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## GraphQueryProperties
@@ -19,7 +19,7 @@
 * **resultKind**: 'basic' (ReadOnly): Enum indicating a type of graph query.
 * **timeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this graph query definition.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

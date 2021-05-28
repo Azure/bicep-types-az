@@ -3,26 +3,25 @@
 ## Resource Microsoft.SecurityInsights/alertRules@2020-01-01
 * **Valid Scope(s)**: Extension
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/alertRules' (ReadOnly, DeployTimeConstant): The resource type
-### FusionAlertRule
+### Fusion
 #### Properties
-* **kind**: 'Fusion' (Required): The alert rule kind
+* **kind**: 'Fusion' (Required): Represents Fusion alert rule.
 * **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule base property bag.
 
-### MicrosoftSecurityIncidentCreationAlertRule
+### MicrosoftSecurityIncidentCreation
 #### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): Represents MicrosoftSecurityIncidentCreation rule.
 * **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule property bag.
 
-### ScheduledAlertRule
+### Scheduled
 #### Properties
-* **kind**: 'Scheduled' (Required): The alert rule kind
+* **kind**: 'Scheduled' (Required): Represents scheduled alert rule.
 * **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule base property bag.
 
 
@@ -30,7 +29,7 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the action.
+* **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
@@ -49,51 +48,50 @@
 ## Resource Microsoft.SecurityInsights/dataConnectors@2020-01-01
 * **Valid Scope(s)**: Extension
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/dataConnectors' (ReadOnly, DeployTimeConstant): The resource type
-### AwsCloudTrailDataConnector
+### AmazonWebServicesCloudTrail
 #### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind
+* **kind**: 'AmazonWebServicesCloudTrail' (Required): Represents Amazon Web Services CloudTrail data connector.
 * **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties): Amazon Web Services CloudTrail data connector properties.
 
-### AADDataConnector
+### AzureActiveDirectory
 #### Properties
-* **kind**: 'AzureActiveDirectory' (Required): The data connector kind
+* **kind**: 'AzureActiveDirectory' (Required): Represents AAD (Azure Active Directory) data connector.
 * **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): AAD (Azure Active Directory) data connector properties.
 
-### AatpDataConnector
+### AzureAdvancedThreatProtection
 #### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required): The data connector kind
-* **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
+* **kind**: 'AzureAdvancedThreatProtection' (Required): Represents AATP (Azure Advanced Threat Protection) data connector.
+* **properties**: [AATPDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
 
-### ASCDataConnector
+### AzureSecurityCenter
 #### Properties
-* **kind**: 'AzureSecurityCenter' (Required): The data connector kind
+* **kind**: 'AzureSecurityCenter' (Required): Represents ASC (Azure Security Center) data connector.
 * **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties): ASC (Azure Security Center) data connector properties.
 
-### McasDataConnector
+### MicrosoftCloudAppSecurity
 #### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required): The data connector kind
-* **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
+* **kind**: 'MicrosoftCloudAppSecurity' (Required): Represents MCAS (Microsoft Cloud App Security) data connector.
+* **properties**: [MCASDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
 
-### MdatpDataConnector
+### MicrosoftDefenderAdvancedThreatProtection
 #### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): The data connector kind
-* **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
+* **properties**: [MDATPDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
 
-### OfficeDataConnector
+### Office365
 #### Properties
-* **kind**: 'Office365' (Required): The data connector kind
+* **kind**: 'Office365' (Required): Represents office data connector.
 * **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties): Office data connector properties.
 
-### TIDataConnector
+### ThreatIntelligence
 #### Properties
-* **kind**: 'ThreatIntelligence' (Required): The data connector kind
+* **kind**: 'ThreatIntelligence' (Required): Represents threat intelligence data connector.
 * **properties**: [TIDataConnectorProperties](#tidataconnectorproperties): TI (Threat Intelligence) data connector properties.
 
 
@@ -116,9 +114,9 @@
 * **properties**: [IncidentCommentProperties](#incidentcommentproperties): Incident comment property bag.
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
-## FusionAlertRule
+## Fusion
 ### Properties
-* **kind**: 'Fusion' (Required): The alert rule kind
+* **kind**: 'Fusion' (Required): Represents Fusion alert rule.
 * **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule base property bag.
 
 ## FusionAlertRuleProperties
@@ -128,12 +126,12 @@
 * **displayName**: string (ReadOnly): The display name for alerts created by this alert rule.
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity for alerts created by this alert rule.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
 
-## MicrosoftSecurityIncidentCreationAlertRule
+## MicrosoftSecurityIncidentCreation
 ### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The alert rule kind
+* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): Represents MicrosoftSecurityIncidentCreation rule.
 * **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule property bag.
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
@@ -145,12 +143,12 @@
 * **displayNamesFilter**: string[]: the alerts' displayNames on which the cases will be generated
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
-* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' (Required): The alerts' productName on which the cases will be generated
+* **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' (Required): The alerts' productName on which the cases will be generated.
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]: the alerts' severities on which the cases will be generated
 
-## ScheduledAlertRule
+## Scheduled
 ### Properties
-* **kind**: 'Scheduled' (Required): The alert rule kind
+* **kind**: 'Scheduled' (Required): Represents scheduled alert rule.
 * **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule base property bag.
 
 ## ScheduledAlertRuleProperties
@@ -163,7 +161,7 @@
 * **query**: string: The query that creates alerts for this rule.
 * **queryFrequency**: string: The frequency (in ISO 8601 duration format) for this alert rule to run.
 * **queryPeriod**: string: The period (in ISO 8601 duration format) that this alert rule looks at.
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity of the alert
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity for alerts created by this alert rule.
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PrivilegeEscalation'[]: The tactics of the alert rule
@@ -173,7 +171,7 @@
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly)
+* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## BookmarkProperties
@@ -202,12 +200,12 @@
 ### Properties
 * **incidentId**: string: Incident Id
 * **relationName**: string: Relation Name
-* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident
+* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident.
 * **title**: string: The title of the incident
 
-## AwsCloudTrailDataConnector
+## AmazonWebServicesCloudTrail
 ### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind
+* **kind**: 'AmazonWebServicesCloudTrail' (Required): Represents Amazon Web Services CloudTrail data connector.
 * **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties): Amazon Web Services CloudTrail data connector properties.
 
 ## AwsCloudTrailDataConnectorProperties
@@ -217,15 +215,15 @@
 
 ## AwsCloudTrailDataConnectorDataTypes
 ### Properties
-* **logs**: [AwsCloudTrailDataConnectorDataTypesLogs](#awscloudtraildataconnectordatatypeslogs): Logs data type.
+* **logs**: [schemas:25_logs](#schemas25logs): Logs data type.
 
-## AwsCloudTrailDataConnectorDataTypesLogs
+## schemas:25_logs
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## AADDataConnector
+## AzureActiveDirectory
 ### Properties
-* **kind**: 'AzureActiveDirectory' (Required): The data connector kind
+* **kind**: 'AzureActiveDirectory' (Required): Represents AAD (Azure Active Directory) data connector.
 * **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): AAD (Azure Active Directory) data connector properties.
 
 ## AADDataConnectorProperties
@@ -241,19 +239,19 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## AatpDataConnector
+## AzureAdvancedThreatProtection
 ### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required): The data connector kind
-* **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
+* **kind**: 'AzureAdvancedThreatProtection' (Required): Represents AATP (Azure Advanced Threat Protection) data connector.
+* **properties**: [AATPDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
 
-## AatpDataConnectorProperties
+## AATPDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
-## ASCDataConnector
+## AzureSecurityCenter
 ### Properties
-* **kind**: 'AzureSecurityCenter' (Required): The data connector kind
+* **kind**: 'AzureSecurityCenter' (Required): Represents ASC (Azure Security Center) data connector.
 * **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties): ASC (Azure Security Center) data connector properties.
 
 ## ASCDataConnectorProperties
@@ -261,34 +259,34 @@
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **subscriptionId**: string: The subscription id to connect to, and get the data from.
 
-## McasDataConnector
+## MicrosoftCloudAppSecurity
 ### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required): The data connector kind
-* **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
+* **kind**: 'MicrosoftCloudAppSecurity' (Required): Represents MCAS (Microsoft Cloud App Security) data connector.
+* **properties**: [MCASDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
 
-## McasDataConnectorProperties
+## MCASDataConnectorProperties
 ### Properties
-* **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
+* **dataTypes**: [MCASDataConnectorDataTypes](#mcasdataconnectordatatypes): The available data types for MCAS (Microsoft Cloud App Security) data connector.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
-## McasDataConnectorDataTypes
+## MCASDataConnectorDataTypes
 ### Properties
 * **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
 * **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
 
-## MdatpDataConnector
+## MicrosoftDefenderAdvancedThreatProtection
 ### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): The data connector kind
-* **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
+* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
+* **properties**: [MDATPDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
 
-## MdatpDataConnectorProperties
+## MDATPDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **tenantId**: string: The tenant id to connect to, and get the data from.
 
-## OfficeDataConnector
+## Office365
 ### Properties
-* **kind**: 'Office365' (Required): The data connector kind
+* **kind**: 'Office365' (Required): Represents office data connector.
 * **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties): Office data connector properties.
 
 ## OfficeDataConnectorProperties
@@ -298,25 +296,25 @@
 
 ## OfficeDataConnectorDataTypes
 ### Properties
-* **exchange**: [OfficeDataConnectorDataTypesExchange](#officedataconnectordatatypesexchange): Exchange data type connection.
-* **sharePoint**: [OfficeDataConnectorDataTypesSharePoint](#officedataconnectordatatypessharepoint): SharePoint data type connection.
-* **teams**: [OfficeDataConnectorDataTypesTeams](#officedataconnectordatatypesteams): Teams data type connection.
+* **exchange**: [schemas:66_exchange](#schemas66exchange): Exchange data type connection.
+* **sharePoint**: [schemas:66_sharePoint](#schemas66sharepoint): SharePoint data type connection.
+* **teams**: [schemas:66_teams](#schemas66teams): Teams data type connection.
 
-## OfficeDataConnectorDataTypesExchange
+## schemas:66_exchange
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## OfficeDataConnectorDataTypesSharePoint
+## schemas:66_sharePoint
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## OfficeDataConnectorDataTypesTeams
+## schemas:66_teams
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
-## TIDataConnector
+## ThreatIntelligence
 ### Properties
-* **kind**: 'ThreatIntelligence' (Required): The data connector kind
+* **kind**: 'ThreatIntelligence' (Required): Represents threat intelligence data connector.
 * **properties**: [TIDataConnectorProperties](#tidataconnectorproperties): TI (Threat Intelligence) data connector properties.
 
 ## TIDataConnectorProperties
@@ -327,18 +325,18 @@
 
 ## TIDataConnectorDataTypes
 ### Properties
-* **indicators**: [TIDataConnectorDataTypesIndicators](#tidataconnectordatatypesindicators): Data type for indicators connection.
+* **indicators**: [schemas:80_indicators](#schemas80indicators): Data type for indicators connection.
 
-## TIDataConnectorDataTypesIndicators
+## schemas:80_indicators
 ### Properties
 * **state**: 'Disabled' | 'Enabled': Describe whether this data type connection is enabled or not.
 
 ## IncidentProperties
 ### Properties
 * **additionalData**: [IncidentAdditionalData](#incidentadditionaldata) (ReadOnly): Incident additional data property bag.
-* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed
+* **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed.
 * **classificationComment**: string: Describes the reason the incident was closed
-* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason the incident was closed with
+* **classificationReason**: 'InaccurateData' | 'IncorrectAlertLogic' | 'SuspiciousActivity' | 'SuspiciousButExpected': The classification reason the incident was closed with.
 * **createdTimeUtc**: string (ReadOnly): The time the incident was created
 * **description**: string: The description of the incident
 * **firstActivityTimeUtc**: string: The time of the first activity in the incident
@@ -349,8 +347,8 @@
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the incident was updated
 * **owner**: [IncidentOwnerInfo](#incidentownerinfo): Information on the user an incident is assigned to
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
-* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident
-* **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident.
+* **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident.
 * **title**: string (Required): The title of the incident
 
 ## IncidentAdditionalData
@@ -364,7 +362,7 @@
 ## IncidentLabel
 ### Properties
 * **labelName**: string (Required): The name of the label
-* **labelType**: 'System' | 'User' (ReadOnly): The type of the label
+* **labelType**: 'System' | 'User' (ReadOnly): The type of the label.
 
 ## IncidentOwnerInfo
 ### Properties

@@ -8,7 +8,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabProperties](#labproperties): Properties of a lab.
-* **tags**: [LabTags](#labtags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources@2015-05-21-preview
@@ -19,7 +19,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArtifactSourceProperties](#artifactsourceproperties): Properties of an artifact source.
-* **tags**: [ArtifactSourceTags](#artifactsourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/customimages@2015-05-21-preview
@@ -30,7 +30,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CustomImageProperties](#customimageproperties): Properties of a custom image.
-* **tags**: [CustomImageTags](#customimagetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/formulas@2015-05-21-preview
@@ -41,7 +41,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FormulaProperties](#formulaproperties): Properties of a formula.
-* **tags**: [FormulaTags](#formulatags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/policysets/policies@2015-05-21-preview
@@ -52,7 +52,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyProperties](#policyproperties): Properties of a Policy.
-* **tags**: [PolicyTags](#policytags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/schedules@2015-05-21-preview
@@ -63,7 +63,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties): Properties of a schedule.
-* **tags**: [ScheduleTags](#scheduletags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview
@@ -74,7 +74,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties): Properties of a virtual machine.
-* **tags**: [LabVirtualMachineTags](#labvirtualmachinetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview
@@ -85,7 +85,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): Properties of a virtual network.
-* **tags**: [VirtualNetworkTags](#virtualnetworktags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LabProperties
@@ -99,7 +99,7 @@
 * **storageAccounts**: string[]: The storage accounts of the lab.
 * **vaultName**: string: The name of the key vault of the lab.
 
-## LabTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -115,7 +115,7 @@
 * **status**: 'Disabled' | 'Enabled': The status of the artifact source.
 * **uri**: string: The URI of the artifact source.
 
-## ArtifactSourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -150,7 +150,7 @@
 ### Properties
 * **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested': The state of the Windows OS.
 
-## CustomImageTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,7 +171,7 @@
 * **location**: string: The location of the resource.
 * **name**: string: The name of the resource.
 * **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties): Properties of a virtual machine.
-* **tags**: [LabVirtualMachineTags](#labvirtualmachinetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: string: The type of the resource.
 
 ## LabVirtualMachineProperties
@@ -221,7 +221,7 @@
 * **sku**: string: The SKU of the gallery image.
 * **version**: string: The version of the gallery image.
 
-## LabVirtualMachineTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -230,7 +230,7 @@
 ### Properties
 * **labVmId**: string: The identifier of the VM from which a formula is to be created.
 
-## FormulaTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -245,7 +245,7 @@
 * **status**: 'Disabled' | 'Enabled': The status of the policy.
 * **threshold**: string: The threshold of the policy.
 
-## PolicyTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -255,7 +255,7 @@
 * **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
 * **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
 * **provisioningState**: string: The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled': The status of the artifact source.
+* **status**: 'Disabled' | 'Enabled': The status of the schedule.
 * **taskType**: 'LabBillingTask' | 'LabVmsShutdownTask' | 'LabVmsStartupTask': The task type of the schedule.
 * **timeZoneId**: string: The time zone id.
 * **weeklyRecurrence**: [WeekDetails](#weekdetails): Properties of a weekly schedule.
@@ -273,12 +273,12 @@
 * **time**: string: The time of the day.
 * **weekdays**: string[]: The days of the week.
 
-## ScheduleTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## LabVirtualMachineTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -301,10 +301,10 @@
 ### Properties
 * **labSubnetName**: string: The name given to the subnet within the lab.
 * **resourceId**: string: The resource identifier of the subnet.
-* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny'
-* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny'
+* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether this subnet can be used during virtual machine creation.
+* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether public IP addresses can be assigned to virtual machines on this subnet.
 
-## VirtualNetworkTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

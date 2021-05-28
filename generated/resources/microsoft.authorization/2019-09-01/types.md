@@ -41,20 +41,20 @@
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
 * **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-* **metadata**: any: Any object
+* **metadata**: any: The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
 * **notScopes**: string[]: The policy's excluded scopes.
-* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
+* **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue): The parameter values for the policy rule. The keys are the parameter names.
 * **policyDefinitionId**: string: The ID of the policy definition or policy set definition being assigned.
 * **scope**: string: The scope for the policy assignment.
 
-## ParameterValues
+## Dictionary<string,ParameterValuesValue>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)
 
 ## ParameterValuesValue
 ### Properties
-* **value**: any: Any object
+* **value**: any: The value of the parameter.
 
 ## PolicySku
 ### Properties
@@ -65,13 +65,13 @@
 ### Properties
 * **description**: string: The policy definition description.
 * **displayName**: string: The display name of the policy definition.
-* **metadata**: any: Any object
+* **metadata**: any: The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
 * **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-* **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
-* **policyRule**: any: Any object
+* **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue): The parameter definitions for parameters used in the policy. The keys are the parameter names.
+* **policyRule**: any: The policy rule.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
-## ParameterDefinitions
+## Dictionary<string,ParameterDefinitionsValue>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
@@ -79,26 +79,28 @@
 ## ParameterDefinitionsValue
 ### Properties
 * **allowedValues**: any[]: The allowed values for the parameter.
-* **defaultValue**: any: Any object
-* **metadata**: [ParameterDefinitionsValueMetadata](#parameterdefinitionsvaluemetadata): General metadata for the parameter.
+* **defaultValue**: any: The default value for the parameter if no value is provided.
+* **metadata**: [schemas:10_metadata](#schemas10metadata): General metadata for the parameter.
 * **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String': The data type of the parameter.
 
-## ParameterDefinitionsValueMetadata
+## schemas:10_metadata
 ### Properties
 * **description**: string: The description of the parameter.
 * **displayName**: string: The display name for the parameter.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PolicySetDefinitionProperties
 ### Properties
 * **description**: string: The policy set definition description.
 * **displayName**: string: The display name of the policy set definition.
-* **metadata**: any: Any object
-* **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
+* **metadata**: any: The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+* **parameters**: [Dictionary<string,ParameterDefinitionsValue>](#dictionarystringparameterdefinitionsvalue): The parameter definitions for parameters used in the policy. The keys are the parameter names.
 * **policyDefinitionGroups**: [PolicyDefinitionGroup](#policydefinitiongroup)[]: The metadata describing groups of policy definition references within the policy set definition.
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
-## ParameterDefinitions
+## Dictionary<string,ParameterDefinitionsValue>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinitionsValue](#parameterdefinitionsvalue)
@@ -114,11 +116,11 @@
 ## PolicyDefinitionReference
 ### Properties
 * **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
-* **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
+* **parameters**: [Dictionary<string,ParameterValuesValue>](#dictionarystringparametervaluesvalue): The parameter values for the policy rule. The keys are the parameter names.
 * **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
 * **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
 
-## ParameterValues
+## Dictionary<string,ParameterValuesValue>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValuesValue](#parametervaluesvalue)

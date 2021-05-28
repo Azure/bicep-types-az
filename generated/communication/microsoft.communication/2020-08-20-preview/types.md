@@ -8,7 +8,7 @@
 * **location**: string: The Azure location where the CommunicationService is running.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CommunicationServiceProperties](#communicationserviceproperties): A class that describes the properties of the CommunicationService.
-* **tags**: [TaggedResourceTags](#taggedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CommunicationServiceProperties
@@ -20,7 +20,7 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **version**: string (ReadOnly): Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
 
-## TaggedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

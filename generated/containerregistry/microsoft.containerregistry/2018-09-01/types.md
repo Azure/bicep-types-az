@@ -8,7 +8,7 @@
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## TaskProperties
@@ -17,7 +17,7 @@
 * **creationDate**: string (ReadOnly): The creation date of task.
 * **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a run.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled': The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties) (Required): Base properties for any task step.
 * **timeout**: int: Run timeout in seconds.
@@ -29,12 +29,12 @@
 
 ## Credentials
 ### Properties
-* **customRegistries**: [CredentialsCustomRegistries](#credentialscustomregistries): Describes the credential parameters for accessing other custom registries. The key
+* **customRegistries**: [Dictionary<string,CustomRegistryCredentials>](#dictionarystringcustomregistrycredentials): Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
 the value of the item will be the registry credentials for accessing the registry.
 * **sourceRegistry**: [SourceRegistryCredentials](#sourceregistrycredentials): Describes the credential parameters for accessing the source registry.
 
-## CredentialsCustomRegistries
+## Dictionary<string,CustomRegistryCredentials>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomRegistryCredentials](#customregistrycredentials)
@@ -66,12 +66,11 @@ the source registry during the run.
 
 ## TaskStepProperties
 * **Discriminator**: type
-
 ### Base Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
 * **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
-### DockerBuildStep
+### Docker
 #### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
@@ -79,19 +78,19 @@ the source registry during the run.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'Docker' (Required): The Docker build step.
 
-### EncodedTaskStep
+### EncodedTask
 #### Properties
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
+* **type**: 'EncodedTask' (Required): The properties of a encoded task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
-### FileTaskStep
+### FileTask
 #### Properties
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
+* **type**: 'FileTask' (Required): The properties of a task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -104,7 +103,7 @@ the source registry during the run.
 * **tag**: string: The tag name.
 * **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
-## DockerBuildStep
+## Docker
 ### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
@@ -112,7 +111,7 @@ the source registry during the run.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'Docker' (Required): The Docker build step.
 
 ## Argument
 ### Properties
@@ -120,11 +119,11 @@ the source registry during the run.
 * **name**: string (Required): The name of the argument.
 * **value**: string (Required): The value of the argument.
 
-## EncodedTaskStep
+## EncodedTask
 ### Properties
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
+* **type**: 'EncodedTask' (Required): The properties of a encoded task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
 ## SetValue
@@ -133,10 +132,10 @@ the source registry during the run.
 * **name**: string (Required): The name of the overridable value.
 * **value**: string (Required): The overridable value.
 
-## FileTaskStep
+## FileTask
 ### Properties
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
+* **type**: 'FileTask' (Required): The properties of a task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -173,7 +172,7 @@ the source registry during the run.
 * **token**: string (Required): The access token used to access the source control provider.
 * **tokenType**: 'OAuth' | 'PAT' (Required): The type of Auth token.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabProperties](#labproperties): Properties of a lab.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/artifactsources@2018-09-15
@@ -19,7 +19,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ArtifactSourceProperties](#artifactsourceproperties) (Required): Properties of an artifact source.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/artifactsources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/costs@2018-09-15
@@ -30,7 +30,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabCostProperties](#labcostproperties) (Required): Properties of a cost item.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/customimages@2018-09-15
@@ -41,7 +41,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CustomImageProperties](#customimageproperties) (Required): Properties of a custom image.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/formulas@2018-09-15
@@ -52,7 +52,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FormulaProperties](#formulaproperties) (Required): Properties of a formula.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/notificationchannels@2018-09-15
@@ -63,7 +63,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotificationChannelProperties](#notificationchannelproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/notificationchannels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/policysets/policies@2018-09-15
@@ -74,7 +74,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyProperties](#policyproperties) (Required): Properties of a Policy.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/schedules@2018-09-15
@@ -85,7 +85,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/servicerunners@2018-09-15
@@ -96,7 +96,7 @@
 * **identity**: [IdentityProperties](#identityproperties): Properties of a managed identity
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/servicerunners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users@2018-09-15
@@ -107,7 +107,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties): Properties of a lab user profile.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/disks@2018-09-15
@@ -118,7 +118,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskProperties](#diskproperties) (Required): Properties of a disk.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/disks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/environments@2018-09-15
@@ -129,7 +129,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentProperties](#environmentproperties) (Required): Properties of an environment.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/secrets@2018-09-15
@@ -140,7 +140,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretProperties](#secretproperties) (Required): Properties of a secret.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15
@@ -151,7 +151,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceFabricProperties](#servicefabricproperties) (Required): Properties of a service fabric.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/users/servicefabrics/schedules@2018-09-15
@@ -162,7 +162,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
@@ -173,7 +173,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LabVirtualMachineProperties](#labvirtualmachineproperties) (Required): Properties of a virtual machine.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualmachines/schedules@2018-09-15
@@ -184,7 +184,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15
@@ -195,7 +195,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): Properties of a virtual network.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevTestLab/schedules@2018-09-15
@@ -206,7 +206,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LabProperties
@@ -216,9 +216,9 @@
 * **createdDate**: string (ReadOnly): The creation date of the lab.
 * **defaultPremiumStorageAccount**: string (ReadOnly): The lab's default premium storage account.
 * **defaultStorageAccount**: string (ReadOnly): The lab's default storage account.
-* **environmentPermission**: 'Contributor' | 'Reader': The access rights to be granted to the user when provisioning an environment
-* **extendedProperties**: [LabPropertiesExtendedProperties](#labpropertiesextendedproperties): Extended properties of the lab used for experimental features
-* **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD': The storage type for the disk (i.e. Standard, Premium).
+* **environmentPermission**: 'Contributor' | 'Reader': The access rights to be granted to the user when provisioning an environment.
+* **extendedProperties**: [Dictionary<string,String>](#dictionarystringstring): Extended properties of the lab used for experimental features
+* **labStorageType**: 'Premium' | 'Standard' | 'StandardSSD': Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
 * **loadBalancerId**: string (ReadOnly): The load balancer used to for lab VMs that use shared IP address.
 * **mandatoryArtifactsResourceIdsLinux**: string[]: The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
 * **mandatoryArtifactsResourceIdsWindows**: string[]: The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
@@ -236,7 +236,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## LabAnnouncementProperties
 ### Properties
-* **enabled**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled).
+* **enabled**: 'Disabled' | 'Enabled': Is the lab announcement active/enabled at this time?.
 * **expirationDate**: string: The time at which the announcement expires (null for never)
 * **expired**: bool: Has this announcement expired?
 * **markdown**: string: The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
@@ -244,17 +244,17 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **title**: string: The plain text title for the lab announcement
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
-## LabPropertiesExtendedProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## LabSupportProperties
 ### Properties
-* **enabled**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled).
+* **enabled**: 'Disabled' | 'Enabled': Is the lab support banner active/enabled at this time?.
 * **markdown**: string: The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -273,7 +273,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **uri**: string: The artifact source's URI.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -319,7 +319,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **cycleEndDateTime**: string: Reporting cycle end date.
 * **cycleStartDateTime**: string: Reporting cycle start date.
 * **cycleType**: 'CalendarMonth' | 'Custom': Reporting cycle type.
-* **status**: 'Disabled' | 'Enabled': Target cost status
+* **status**: 'Disabled' | 'Enabled': Target cost status.
 * **target**: int: Lab target cost
 
 ## CostThresholdProperties
@@ -327,14 +327,14 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **displayOnChart**: 'Disabled' | 'Enabled': Indicates whether this threshold will be displayed on cost charts.
 * **notificationSent**: string: Indicates the datetime when notifications were last sent for this threshold.
 * **percentageThreshold**: [PercentageCostThresholdProperties](#percentagecostthresholdproperties): Properties of a percentage cost threshold.
-* **sendNotificationWhenExceeded**: 'Disabled' | 'Enabled': Indicates whether this threshold will be displayed on cost charts.
+* **sendNotificationWhenExceeded**: 'Disabled' | 'Enabled': Indicates whether notifications will be sent when this threshold is exceeded.
 * **thresholdId**: string: The ID of the cost threshold item.
 
 ## PercentageCostThresholdProperties
 ### Properties
 * **thresholdValue**: int: The cost threshold value.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -363,12 +363,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ## DataDiskStorageTypeInfo
 ### Properties
 * **lun**: string: Disk Lun
-* **storageType**: 'Premium' | 'Standard' | 'StandardSSD': The storage type for the disk (i.e. Standard, Premium).
+* **storageType**: 'Premium' | 'Standard' | 'StandardSSD': Disk Storage Type.
 
 ## CustomImagePropertiesCustom
 ### Properties
 * **imageName**: string: The image name.
-* **osType**: 'Linux' | 'None' | 'Windows' (Required): The OS type of the custom image (i.e. Windows, Linux)
+* **osType**: 'Linux' | 'None' | 'Windows' (Required): The OS type of the custom image (i.e. Windows, Linux).
 * **sysPrep**: bool: Indicates whether sysprep has been run on the VHD.
 
 ## CustomImagePropertiesFromVm
@@ -385,7 +385,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 * **windowsOsState**: 'NonSysprepped' | 'SysprepApplied' | 'SysprepRequested': The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -406,7 +406,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **location**: string: The location of the new virtual machine or environment
 * **name**: string: The name of the virtual machine or environment
 * **properties**: [LabVirtualMachineCreationParameterProperties](#labvirtualmachinecreationparameterproperties): Properties for virtual machine creation.
-* **tags**: [LabVirtualMachineCreationParameterTags](#labvirtualmachinecreationparametertags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 
 ## LabVirtualMachineCreationParameterProperties
 ### Properties
@@ -501,14 +501,14 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **location**: string (ReadOnly): The location of the new virtual machine or environment
 * **name**: string: The name of the virtual machine or environment
 * **properties**: [ScheduleCreationParameterProperties](#schedulecreationparameterproperties): Properties for schedule creation.
-* **tags**: [ScheduleCreationParameterTags](#schedulecreationparametertags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 
 ## ScheduleCreationParameterProperties
 ### Properties
 * **dailyRecurrence**: [DayDetails](#daydetails): Properties of a daily schedule.
 * **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
 * **notificationSettings**: [NotificationSettings](#notificationsettings): Notification settings for a schedule.
-* **status**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled).
+* **status**: 'Disabled' | 'Enabled': The status of the schedule (i.e. Enabled, Disabled).
 * **targetResourceId**: string: The resource ID to which the schedule belongs
 * **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
 * **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
@@ -526,7 +526,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 * **emailRecipient**: string: The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
 * **notificationLocale**: string: The locale to use when sending a notification (fallback for unsupported languages is EN).
-* **status**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled).
+* **status**: 'Disabled' | 'Enabled': If notifications are enabled for this schedule (i.e. Enabled, Disabled).
 * **timeInMinutes**: int: Time in minutes before event at which notification will be sent.
 * **webhookUrl**: string: The webhook URL to which the notification will be sent.
 
@@ -535,12 +535,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **time**: string: The time of the day the schedule will occur.
 * **weekdays**: string[]: The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
 
-## ScheduleCreationParameterTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## LabVirtualMachineCreationParameterTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -549,7 +549,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 * **labVmId**: string: The identifier of the VM from which a formula is to be created.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -567,9 +567,9 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## Event
 ### Properties
-* **eventName**: 'AutoShutdown' | 'Cost': The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+* **eventName**: 'AutoShutdown' | 'Cost': The event type for which this notification is enabled (i.e. AutoShutdown, Cost).
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -586,7 +586,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **threshold**: string: The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -598,14 +598,14 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **hourlyRecurrence**: [HourDetails](#hourdetails): Properties of an hourly schedule.
 * **notificationSettings**: [NotificationSettings](#notificationsettings): Notification settings for a schedule.
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
-* **status**: 'Disabled' | 'Enabled': Indicates if the artifact source is enabled (values: Enabled, Disabled).
+* **status**: 'Disabled' | 'Enabled': The status of the schedule (i.e. Enabled, Disabled).
 * **targetResourceId**: string: The resource ID to which the schedule belongs
 * **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
 * **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **weeklyRecurrence**: [WeekDetails](#weekdetails): Properties of a weekly schedule.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -615,9 +615,9 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **clientSecretUrl**: string: The client secret URL of the identity.
 * **principalId**: string: The principal id of resource identity.
 * **tenantId**: string: The tenant identifier of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': Managed identity.
+* **type**: 'None' | 'SystemAssigned,UserAssigned' | 'SystemAssigned' | 'UserAssigned': Managed identity.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -643,7 +643,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **keyVaultId**: string: The ID of the user's Key vault.
 * **keyVaultUri**: string: The URI of the user's Key vault.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -662,7 +662,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **storageAccountId**: string: When backed by a blob, the storage account where the blob is.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -686,7 +686,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **name**: string: The name of the template parameter.
 * **value**: string: The value of the template parameter.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -697,7 +697,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **value**: string: The value of the secret for secret creation.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -716,7 +716,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **location**: string: The location of the resource.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): Properties of a schedules applicable to a virtual machine.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: string (ReadOnly): The type of the resource.
 
 ## ApplicableScheduleProperties
@@ -730,25 +730,25 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **location**: string: The location of the resource.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Properties of a schedule.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: string (ReadOnly): The type of the resource.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -820,12 +820,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **displayStatus**: string: Gets the short localizable label for the status.
 * **message**: string: Gets the message associated with the status.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -857,8 +857,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **labSubnetName**: string: The name given to the subnet within the lab.
 * **resourceId**: string: The resource ID of the subnet.
 * **sharedPublicIpAddressConfiguration**: [SubnetSharedPublicIpAddressConfiguration](#subnetsharedpublicipaddressconfiguration): Configuration for public IP address sharing.
-* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
-* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+* **useInVmCreationPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+* **usePublicIpAddressPermission**: 'Allow' | 'Default' | 'Deny': Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
 * **virtualNetworkPoolName**: string: The virtual network pool associated with this subnet.
 
 ## SubnetSharedPublicIpAddressConfiguration
@@ -868,14 +868,14 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ## Port
 ### Properties
 * **backendPort**: int: Backend port of the target virtual machine.
-* **transportProtocol**: 'Tcp' | 'Udp': The transport protocol for the endpoint.
+* **transportProtocol**: 'Tcp' | 'Udp': Protocol type of the port.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

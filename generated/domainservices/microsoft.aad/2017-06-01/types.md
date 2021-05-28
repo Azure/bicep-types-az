@@ -9,22 +9,22 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainServiceProperties](#domainserviceproperties): Properties of the Domain Service.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Aad/domainServices/ouContainer@2017-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **accountName**: string (WriteOnly)
+* **accountName**: string (WriteOnly): The account name
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **password**: string (WriteOnly)
+* **password**: string (WriteOnly): The account password
 * **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): Properties of the OuContainer.
-* **spn**: string (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **spn**: string (WriteOnly): The account spn
+* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DomainServiceProperties
@@ -34,7 +34,7 @@
 * **domainControllerIpAddress**: string[] (ReadOnly): List of Domain Controller IP Address
 * **domainName**: string: The name of the Azure domain that the user would like to deploy Domain Services to.
 * **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): Domain Security Settings
-* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync
+* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync.
 * **healthAlerts**: [HealthAlert](#healthalert)[] (ReadOnly): List of Domain Health Alerts
 * **healthLastEvaluated**: string (ReadOnly): Last domain evaluation run DateTime
 * **healthMonitors**: [HealthMonitor](#healthmonitor)[] (ReadOnly): List of Domain Health Monitors
@@ -99,8 +99,8 @@
 ## NotificationSettings
 ### Properties
 * **additionalRecipients**: string[]: The list of additional recipients
-* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified
-* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified
+* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified.
+* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified.
 
 ## ResourceForestSettings
 ### Properties
@@ -115,7 +115,7 @@
 * **trustedDomainFqdn**: string: Trusted Domain FQDN
 * **trustPassword**: string: Trust Password
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -137,7 +137,7 @@
 * **password**: string (ReadOnly): The account password
 * **spn**: string (ReadOnly): The account spn
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

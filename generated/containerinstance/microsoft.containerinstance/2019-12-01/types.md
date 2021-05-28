@@ -8,28 +8,28 @@
 * **identity**: [ContainerGroupIdentity](#containergroupidentity): Identity for the container group.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContainerGroupProperties](#containergroupproperties) (Required): The container group properties
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **properties**: [schemas:17_properties](#schemas17properties) (Required): The container group properties
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.ContainerInstance/containerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ContainerGroupIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the container group identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the container group. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
-* **userAssignedIdentities**: [ContainerGroupIdentityUserAssignedIdentities](#containergroupidentityuserassignedidentities): The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
+* **userAssignedIdentities**: [Dictionary<string,Schemas18UserAssignedIdentitiesValue>](#dictionarystringschemas18userassignedidentitiesvalue): The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## ContainerGroupIdentityUserAssignedIdentities
+## Dictionary<string,Schemas18UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties](#components10wh5udschemascontainergroupidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [schemas:18_userAssignedIdentitiesValue](#schemas18userassignedidentitiesvalue)
 
-## Components10Wh5UdSchemasContainergroupidentityPropertiesUserassignedidentitiesAdditionalproperties
+## schemas:18_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
-## ContainerGroupProperties
+## schemas:17_properties
 ### Properties
 * **containers**: [Container](#container)[] (Required): The containers within the container group.
 * **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): Container group diagnostic information.
@@ -37,16 +37,17 @@
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): The container group encryption properties.
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
 * **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]: The init containers for a container group.
-* **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
+* **instanceView**: [schemas:17_properties_instanceView](#schemas17propertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
 * **networkProfile**: [ContainerGroupNetworkProfile](#containergroupnetworkprofile): Container group network profile information.
 * **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
-* **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group. 
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group.
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-* **sku**: 'Dedicated' | 'Standard': The container group SKU.
+.
+* **sku**: 'Dedicated' | 'Standard': The SKU for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## Container
@@ -59,7 +60,7 @@
 * **command**: string[]: The commands to execute within the container instance in exec form.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the container instance.
 * **image**: string (Required): The name of the image used to create the container instance.
-* **instanceView**: [ContainerPropertiesInstanceView](#containerpropertiesinstanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
+* **instanceView**: [schemas:1_instanceView](#schemas1instanceview) (ReadOnly): The instance view of the container instance. Only valid in response.
 * **livenessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
 * **readinessProbe**: [ContainerProbe](#containerprobe): The container probe, for liveness or readiness
@@ -72,7 +73,7 @@
 * **secureValue**: string: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
-## ContainerPropertiesInstanceView
+## schemas:1_instanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
 * **events**: [Event](#event)[] (ReadOnly): The events of the container instance.
@@ -156,11 +157,11 @@
 ## LogAnalytics
 ### Properties
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used.
-* **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
 * **workspaceKey**: string (Required): The workspace key for log analytics
 
-## LogAnalyticsMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -193,17 +194,17 @@
 * **command**: string[]: The command to execute within the init container in exec form.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the init container.
 * **image**: string: The image of the init container.
-* **instanceView**: [InitContainerPropertiesDefinitionInstanceView](#initcontainerpropertiesdefinitioninstanceview) (ReadOnly): The instance view of the init container. Only valid in response.
+* **instanceView**: [schemas:44_instanceView](#schemas44instanceview) (ReadOnly): The instance view of the init container. Only valid in response.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the init container.
 
-## InitContainerPropertiesDefinitionInstanceView
+## schemas:44_instanceView
 ### Properties
 * **currentState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
 * **events**: [Event](#event)[] (ReadOnly): The events of the init container.
 * **previousState**: [ContainerState](#containerstate) (ReadOnly): The container instance state.
 * **restartCount**: int (ReadOnly): The number of times that the init container has been restarted.
 
-## ContainerGroupPropertiesInstanceView
+## schemas:17_properties_instanceView
 ### Properties
 * **events**: [Event](#event)[] (ReadOnly): The events of this container group.
 * **state**: string (ReadOnly): The state of the container group. Only valid in response.
@@ -228,10 +229,10 @@
 ## Volume
 ### Properties
 * **azureFile**: [AzureFileVolume](#azurefilevolume): The properties of the Azure File volume. Azure File shares are mounted as volumes.
-* **emptyDir**: any: Any object
+* **emptyDir**: any: The empty directory volume.
 * **gitRepo**: [GitRepoVolume](#gitrepovolume): Represents a volume that is populated with the contents of a git repository
 * **name**: string (Required): The name of the volume.
-* **secret**: [SecretVolume](#secretvolume): The secret volume.
+* **secret**: [Dictionary<string,String>](#dictionarystringstring): The secret volume.
 
 ## AzureFileVolume
 ### Properties
@@ -246,12 +247,12 @@
 * **repository**: string (Required): Repository URL
 * **revision**: string: Commit hash for the specified revision.
 
-## SecretVolume
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

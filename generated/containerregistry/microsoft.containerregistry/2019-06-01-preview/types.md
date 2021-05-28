@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AgentPoolProperties](#agentpoolproperties): The properties of agent pool.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
@@ -34,14 +34,14 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AgentPoolProperties
 ### Properties
 * **count**: int: The count of agent machine
-* **os**: 'Linux' | 'Windows': The OS of agent machine
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this agent pool
+* **os**: 'Linux' | 'Windows': The OS of agent machine.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this agent pool.
 * **tier**: string: The Tier of agent machine
 * **virtualNetworkSubnetResourceId**: string: The Virtual Network Subnet Resource Id of the agent machine
 
@@ -54,7 +54,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -63,13 +63,13 @@
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityPropertiesUserAssignedIdentities](#identitypropertiesuserassignedidentities): The list of user identities associated with the resource. The user identity 
-dictionary key references will be ARM resource ids in the form: 
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [Dictionary<string,UserIdentityProperties>](#dictionarystringuseridentityproperties): The list of user identities associated with the resource. The user identity
+dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## IdentityPropertiesUserAssignedIdentities
+## Dictionary<string,UserIdentityProperties>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
@@ -82,13 +82,12 @@ dictionary key references will be ARM resource ids in the form:
 ## TaskRunProperties
 ### Properties
 * **forceUpdateTag**: string: How the run should be forced to rerun even if the run request configuration has not changed
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this agent pool
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this task run.
 * **runRequest**: [RunRequest](#runrequest): The request parameters for scheduling a run.
 * **runResult**: [Run](#run) (ReadOnly): Run resource properties
 
 ## RunRequest
 * **Discriminator**: type
-
 ### Base Properties
 * **agentPoolName**: string: The dedicated agent pool for the run.
 * **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled for the run or not.
@@ -107,7 +106,7 @@ dictionary key references will be ARM resource ids in the form:
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **target**: string: The name of the target build stage for the docker build.
 * **timeout**: int: Run timeout in seconds.
-* **type**: 'DockerBuildRequest' (Required): The type of the run request.
+* **type**: 'DockerBuildRequest' (Required): The parameters for a docker quick build.
 
 ### EncodedTaskRunRequest
 #### Properties
@@ -119,7 +118,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **timeout**: int: Run timeout in seconds.
-* **type**: 'EncodedTaskRunRequest' (Required): The type of the run request.
+* **type**: 'EncodedTaskRunRequest' (Required): The parameters for a quick task run request.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
 ### FileTaskRunRequest
@@ -131,7 +130,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **taskFilePath**: string (Required): The template/definition file path relative to the source.
 * **timeout**: int: Run timeout in seconds.
-* **type**: 'FileTaskRunRequest' (Required): The type of the run request.
+* **type**: 'FileTaskRunRequest' (Required): The request parameters for a scheduling run against a task file.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The values/parameters file path relative to the source.
 
@@ -139,7 +138,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 #### Properties
 * **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
 * **taskId**: string (Required): The resource ID of task against which run has to be queued.
-* **type**: 'TaskRunRequest' (Required): The type of the run request.
+* **type**: 'TaskRunRequest' (Required): The parameters for a task run request.
 
 
 ## DockerBuildRequest
@@ -156,7 +155,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **target**: string: The name of the target build stage for the docker build.
 * **timeout**: int: Run timeout in seconds.
-* **type**: 'DockerBuildRequest' (Required): The type of the run request.
+* **type**: 'DockerBuildRequest' (Required): The parameters for a docker quick build.
 
 ## AgentProperties
 ### Properties
@@ -170,12 +169,12 @@ If it is relative URL, the relative path should be obtained from calling listBui
 
 ## Credentials
 ### Properties
-* **customRegistries**: [CredentialsCustomRegistries](#credentialscustomregistries): Describes the credential parameters for accessing other custom registries. The key
+* **customRegistries**: [Dictionary<string,CustomRegistryCredentials>](#dictionarystringcustomregistrycredentials): Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
 the value of the item will be the registry credentials for accessing the registry.
 * **sourceRegistry**: [SourceRegistryCredentials](#sourceregistrycredentials): Describes the credential parameters for accessing the source registry.
 
-## CredentialsCustomRegistries
+## Dictionary<string,CustomRegistryCredentials>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomRegistryCredentials](#customregistrycredentials)
@@ -185,7 +184,7 @@ the value of the item will be the registry credentials for accessing the registr
 * **identity**: string: Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
 the case of a system-assigned identity, the Client ID will be determined by the runner. This
-identity may be used to authenticate to key vault to retrieve credentials or it may be the only 
+identity may be used to authenticate to key vault to retrieve credentials or it may be the only
 source of authentication used for accessing the registry.
 * **password**: [SecretObject](#secretobject): Describes the properties of a secret object value.
 * **userName**: [SecretObject](#secretobject): Describes the properties of a secret object value.
@@ -207,7 +206,7 @@ the source registry during the run.
 ## PlatformProperties
 ### Properties
 * **architecture**: '386' | 'amd64' | 'arm' | 'arm64' | 'x86': The OS architecture.
-* **os**: 'Linux' | 'Windows' (Required): The OS of agent machine
+* **os**: 'Linux' | 'Windows' (Required): The operating system type required for the run.
 * **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU.
 
 ## EncodedTaskRunRequest
@@ -220,7 +219,7 @@ the source registry during the run.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **timeout**: int: Run timeout in seconds.
-* **type**: 'EncodedTaskRunRequest' (Required): The type of the run request.
+* **type**: 'EncodedTaskRunRequest' (Required): The parameters for a quick task run request.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
 ## SetValue
@@ -238,7 +237,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **taskFilePath**: string (Required): The template/definition file path relative to the source.
 * **timeout**: int: Run timeout in seconds.
-* **type**: 'FileTaskRunRequest' (Required): The type of the run request.
+* **type**: 'FileTaskRunRequest' (Required): The request parameters for a scheduling run against a task file.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The values/parameters file path relative to the source.
 
@@ -246,7 +245,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 ### Properties
 * **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
 * **taskId**: string (Required): The resource ID of task against which run has to be queued.
-* **type**: 'TaskRunRequest' (Required): The type of the run request.
+* **type**: 'TaskRunRequest' (Required): The parameters for a task run request.
 
 ## OverrideTaskStepProperties
 ### Properties
@@ -279,7 +278,7 @@ executing a build step.
 * **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly): Properties for a registry image.
 * **outputImages**: [ImageDescriptor](#imagedescriptor)[]: The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
 * **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of this agent pool
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of a run.
 * **runErrorMessage**: string (ReadOnly): The error message received from backend systems after the run is scheduled.
 * **runId**: string: The unique identifier for the run.
 * **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun': The type of run.
@@ -328,7 +327,7 @@ executing a build step.
 * **isSystemTask**: bool: The value of this property indicates whether the task resource is system task or not.
 * **logTemplate**: string: The template that describes the repository and tag information for run log artifact.
 * **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of this agent pool
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled': The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties): Base properties for any task step.
 * **timeout**: int: Run timeout in seconds.
@@ -336,12 +335,11 @@ executing a build step.
 
 ## TaskStepProperties
 * **Discriminator**: type
-
 ### Base Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **contextAccessToken**: string: The token (git PAT or SAS token of storage account blob) associated with the context for a step.
 * **contextPath**: string: The URL(absolute or relative) of the source context for the task step.
-### DockerBuildStep
+### Docker
 #### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
@@ -349,19 +347,19 @@ executing a build step.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'Docker' (Required): The Docker build step.
 
-### EncodedTaskStep
+### EncodedTask
 #### Properties
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
+* **type**: 'EncodedTask' (Required): The properties of a encoded task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
-### FileTaskStep
+### FileTask
 #### Properties
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
+* **type**: 'FileTask' (Required): The properties of a task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -374,7 +372,7 @@ executing a build step.
 * **tag**: string: The tag name.
 * **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
-## DockerBuildStep
+## Docker
 ### Properties
 * **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
 * **dockerFilePath**: string (Required): The Docker file path relative to the source context.
@@ -382,19 +380,19 @@ executing a build step.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
 * **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'Docker' (Required): The Docker build step.
 
-## EncodedTaskStep
+## EncodedTask
 ### Properties
 * **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
 * **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
+* **type**: 'EncodedTask' (Required): The properties of a encoded task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
-## FileTaskStep
+## FileTask
 ### Properties
 * **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
+* **type**: 'FileTask' (Required): The properties of a task step.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
@@ -440,7 +438,7 @@ executing a build step.
 * **schedule**: string (Required): The CRON expression for the task schedule
 * **status**: 'Disabled' | 'Enabled': The current status of trigger.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

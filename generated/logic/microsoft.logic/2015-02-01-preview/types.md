@@ -8,7 +8,7 @@
 * **location**: string: Gets or sets the resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkflowProperties](#workflowproperties)
-* **tags**: [ResourceTags](#resourcetags): Gets or sets the resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the resource tags.
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/workflows/accessKeys@2015-02-01-preview
@@ -25,13 +25,13 @@
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
 * **changedTime**: string (ReadOnly): Gets the changed time.
 * **createdTime**: string (ReadOnly): Gets the created time.
-* **definition**: any: Any object
+* **definition**: any
 * **definitionLink**: [ContentLink](#contentlink)
-* **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): Gets or sets the parameters.
+* **parameters**: [Dictionary<string,WorkflowParameter>](#dictionarystringworkflowparameter): Gets or sets the parameters.
 * **parametersLink**: [ContentLink](#contentlink)
-* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly)
+* **provisioningState**: 'Moving' | 'NotSpecified' | 'Succeeded' (ReadOnly): Gets the provisioning state.
 * **sku**: [Sku](#sku)
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': Gets or sets the state.
 * **version**: string (ReadOnly): Gets the version.
 
 ## ContentLink
@@ -39,7 +39,7 @@
 * **contentHash**: [ContentHash](#contenthash)
 * **contentSize**: int: Gets or sets the content size.
 * **contentVersion**: string: Gets or sets the content version.
-* **metadata**: any: Any object
+* **metadata**: any
 * **uri**: string: Gets or sets the content link URI.
 
 ## ContentHash
@@ -47,20 +47,20 @@
 * **algorithm**: string: Gets or sets the algorithm.
 * **value**: string: Gets or sets the value.
 
-## WorkflowPropertiesParameters
+## Dictionary<string,WorkflowParameter>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WorkflowParameter](#workflowparameter)
 
 ## WorkflowParameter
 ### Properties
-* **metadata**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
-* **value**: any: Any object
+* **metadata**: any
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String': Gets or sets the type.
+* **value**: any
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard': Gets or sets the name.
 * **plan**: [ResourceReference](#resourcereference)
 
 ## ResourceReference
@@ -69,7 +69,7 @@
 * **name**: string (ReadOnly): Gets the resource name.
 * **type**: string (ReadOnly): Gets the resource type.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

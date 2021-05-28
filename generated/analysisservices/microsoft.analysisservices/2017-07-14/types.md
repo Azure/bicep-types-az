@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties): Properties of Analysis Services resource.
 * **sku**: [ResourceSku](#resourcesku) (Required): Represents the SKU name and Azure pricing tier for Analysis Services resource.
-* **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AnalysisServicesServerProperties
@@ -38,7 +38,7 @@
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'Basic' | 'Development' | 'Standard': The name of the Azure pricing tier to which the SKU applies.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

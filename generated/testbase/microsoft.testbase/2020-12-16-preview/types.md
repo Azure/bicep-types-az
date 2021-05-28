@@ -9,8 +9,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TestBaseAccountResourceProperties](#testbaseaccountresourceproperties): The properties of a Test Base Account resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Tags](#tags): Resource tags.
+* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.TestBase/testBaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview
@@ -22,8 +22,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PackageProperties](#packageproperties): The properties of the Test Base Package.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Tags](#tags): Resource tags.
+* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.TestBase/testBaseAccounts/packages/favoriteProcesses@2020-12-16-preview
@@ -33,13 +33,13 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FavoriteProcessProperties](#favoriteprocessproperties): Properties of a favorite process identifier.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.TestBase/testBaseAccounts/packages/favoriteProcesses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## TestBaseAccountResourceProperties
 ### Properties
 * **accessLevel**: string (ReadOnly): The access level of the Test Base Account.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of the resource.
 * **sku**: [TestBaseAccountSKU](#testbaseaccountsku) (Required): Describes a Test Base Account SKU.
 
 ## TestBaseAccountSKU
@@ -62,9 +62,9 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## Tags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -77,7 +77,7 @@
 * **isEnabled**: bool (ReadOnly): Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
 * **lastModifiedTime**: string (ReadOnly): The UTC timestamp when the package was last modified.
 * **packageStatus**: 'Deleted' | 'Error' | 'PreValidationCheckPass' | 'Ready' | 'Registered' | 'Unknown' | 'ValidatingPackage' | 'ValidationLongerThanUsual' | 'VerifyingPackage' (ReadOnly): The status of the package.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of the resource.
 * **targetOSList**: [TargetOSInfo](#targetosinfo)[] (Required): Specifies the target OSs of specific OS Update types.
 * **tests**: [Test](#test)[] (Required): The detailed test information.
 * **testTypes**: 'FunctionalTest' | 'OutOfBoxTest'[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
@@ -93,7 +93,7 @@
 ### Properties
 * **commands**: [Command](#command)[] (Required): The commands used in the test.
 * **isActive**: bool: Indicates if this test is active.It doesn't schedule test for not active Test.
-* **testType**: 'FunctionalTest' | 'OutOfBoxTest' (Required): The test type.
+* **testType**: 'FunctionalTest' | 'OutOfBoxTest' (Required): The type of the test.
 * **validationRunStatus**: 'Failed' | 'Passed' | 'Pending' | 'Unknown' (ReadOnly): The status of the validation run of the package.
 
 ## Command
@@ -115,7 +115,7 @@
 * **isValid**: bool (ReadOnly): Indicates whether the package passed the validation.
 * **validationName**: string (ReadOnly): Validation name.
 
-## Tags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

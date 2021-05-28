@@ -10,8 +10,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebPubSubProperties](#webpubsubproperties): A class that describes the properties of the resource
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/webPubSub/privateEndpointConnections@2021-04-01-preview
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources@2021-04-01-preview
@@ -31,7 +31,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagedIdentity
@@ -40,10 +40,10 @@
 Only be used in response.
 * **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
 Only be used in response
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represent the identity type: systemAssigned, userAssigned, None
-* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represent the identity type: systemAssigned, userAssigned, None.
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentityProperty>](#dictionarystringuserassignedidentityproperty): Get or set the user assigned identities
 
-## ManagedIdentityUserAssignedIdentities
+## Dictionary<string,UserAssignedIdentityProperty>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
@@ -60,7 +60,7 @@ Only be used in response
 * **features**: [WebPubSubFeature](#webpubsubfeature)[]: List of the featureFlags.
 
 FeatureFlags that are not included in the parameters for the update operation will not be modified.
-And the response will only include featureFlags that are explicitly set. 
+And the response will only include featureFlags that are explicitly set.
 When a featureFlag is not explicitly set, its globally default value will be used
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
 * **hostName**: string (ReadOnly): FQDN of the service instance.
@@ -78,9 +78,9 @@ When it's Disabled, public network access is always disabled no matter what you 
 
 ## EventHandlerSettings
 ### Properties
-* **items**: [EventHandlerSettingsItems](#eventhandlersettingsitems): Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+* **items**: [Dictionary<string,IList<EventHandlerTemplate>>](#dictionarystringilisteventhandlertemplate): Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
 
-## EventHandlerSettingsItems
+## Dictionary<string,IList<EventHandlerTemplate>>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [EventHandlerTemplate](#eventhandlertemplate)[]
@@ -116,17 +116,18 @@ It also appears in the aud (audience) claim of the issued token.
  - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
  - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category respectively.
  - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
-* **properties**: [WebPubSubFeatureProperties](#webpubsubfeatureproperties): Optional properties related to this feature.
+.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): Optional properties related to this feature.
 * **value**: string (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
 
-## WebPubSubFeatureProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## WebPubSubNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches
+* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches.
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
@@ -146,14 +147,14 @@ It also appears in the aud (audience) claim of the issued token.
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -165,30 +166,30 @@ It also appears in the aud (audience) claim of the issued token.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## SharedPrivateLinkResource
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource.
 * **name**: string (ReadOnly): The name of the resource.
 * **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
 
 ## SharedPrivateLinkResourceProperties
 ### Properties
 * **groupId**: string (Required): The group id from the provider of resource the shared private link resource is for
 * **privateLinkResourceId**: string (Required): The resource id of the resource the shared private link resource is for
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the shared private link resource.
 * **requestMessage**: string: The request message for requesting approval of the shared private link resource
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' (ReadOnly): Status of the shared private link resource
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' (ReadOnly): Status of the shared private link resource.
 
 ## WebPubSubTlsSettings
 ### Properties
@@ -206,11 +207,11 @@ If present, following values are allowed:
 
 Allowed values: Standard_S1, Free_F1
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'.
 
 `Basic` is deprecated, use `Standard` instead.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

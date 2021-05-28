@@ -8,7 +8,7 @@
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertRuleProperties](#alertruleproperties): The alert rule properties.
-* **tags**: [AzureResourceTags](#azureresourcetags): The resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'microsoft.alertsManagement/smartDetectorAlertRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertRuleProperties
@@ -35,7 +35,7 @@
 * **imagePaths**: string[] (ReadOnly): The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
 * **name**: string (ReadOnly): The Smart Detector name.
 * **parameterDefinitions**: [DetectorParameterDefinition](#detectorparameterdefinition)[] (ReadOnly): The Smart Detector parameters definitions.'
-* **parameters**: [DetectorParameters](#detectorparameters): The detector's parameters.'
+* **parameters**: [Dictionary<string,Object>](#dictionarystringobject): The detector's parameters.'
 * **supportedCadences**: int[] (ReadOnly): The Smart Detector supported cadences.
 * **supportedResourceTypes**: string[] (ReadOnly): The Smart Detector supported resource types.
 
@@ -47,7 +47,7 @@
 * **name**: string: The detector parameter name.
 * **type**: 'Boolean' | 'DateTime' | 'Double' | 'Integer' | 'String': The detector parameter type.
 
-## DetectorParameters
+## Dictionary<string,Object>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -56,7 +56,7 @@
 ### Properties
 * **duration**: string: The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
 
-## AzureResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

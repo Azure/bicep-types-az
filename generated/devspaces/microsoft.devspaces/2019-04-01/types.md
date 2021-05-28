@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ControllerProperties](#controllerproperties) (Required)
 * **sku**: [Sku](#sku) (Required): Model representing SKU for Azure Dev Spaces Controller.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags for the Azure resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags for the Azure resource.
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ControllerProperties
@@ -23,10 +23,10 @@
 
 ## Sku
 ### Properties
-* **name**: 'S1' (Required): The name of the SKU for Azure Dev Spaces Controller.
+* **name**: string (Required): The name of the SKU for Azure Dev Spaces Controller.
 * **tier**: 'Standard': The tier of the SKU for Azure Dev Spaces Controller.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

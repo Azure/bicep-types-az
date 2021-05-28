@@ -6,12 +6,12 @@
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedIdentity](#managedidentity): A class represent managed identities used for request and response
-* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR" for "Microsoft.SignalRService/SignalR"
+* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR" for "Microsoft.SignalRService/SignalR".
 * **location**: string: The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the resource
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SignalRService/signalR/privateEndpointConnections@2020-07-01-preview
@@ -29,10 +29,10 @@
 Only be used in response.
 * **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
 Only be used in response
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represent the identity type: systemAssigned, userAssigned, None
-* **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represent the identity type: systemAssigned, userAssigned, None.
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentityProperty>](#dictionarystringuserassignedidentityproperty): Get or set the user assigned identities
 
-## ManagedIdentityUserAssignedIdentities
+## Dictionary<string,UserAssignedIdentityProperty>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentityProperty](#userassignedidentityproperty)
@@ -49,8 +49,8 @@ Only be used in response
 * **features**: [SignalRFeature](#signalrfeature)[]: List of SignalR featureFlags. e.g. ServiceMode.
 
 FeatureFlags that are not included in the parameters for the update operation will not be modified.
-And the response will only include featureFlags that are explicitly set. 
-When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
+And the response will only include featureFlags that are explicitly set.
+When a featureFlag is not explicitly set, SignalR service will use its globally default value.
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
 * **hostName**: string (ReadOnly): FQDN of the service instance.
 * **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs for the resource
@@ -71,17 +71,17 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 * **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required): FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
-* **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): Optional properties related to this feature.
 * **value**: string (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
 
-## SignalRFeatureProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SignalRNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches
+* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches.
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
@@ -107,7 +107,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the private endpoint connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -170,11 +170,11 @@ If present, following values are allowed:
 
 Allowed values: Standard_S1, Free_F1
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'.
 
 `Basic` is deprecated, use `Standard` instead.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

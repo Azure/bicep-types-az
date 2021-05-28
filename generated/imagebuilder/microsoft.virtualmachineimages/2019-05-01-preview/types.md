@@ -9,20 +9,20 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties): Describes the properties of an image template
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ImageTemplateIdentity
 ### Properties
 * **type**: 'None' | 'UserAssigned': The type of identity used for the image template. The type 'None' will remove any identities from the image template.
-* **userAssignedIdentities**: [ImageTemplateIdentityUserAssignedIdentities](#imagetemplateidentityuserassignedidentities): The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [Dictionary<string,Schemas20UserAssignedIdentitiesValue>](#dictionarystringschemas20userassignedidentitiesvalue): The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## ImageTemplateIdentityUserAssignedIdentities
+## Dictionary<string,Schemas20UserAssignedIdentitiesValue>
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties](#componentsvrq145schemasimagetemplateidentitypropertiesuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [schemas:20_userAssignedIdentitiesValue](#schemas20userassignedidentitiesvalue)
 
-## ComponentsVrq145SchemasImagetemplateidentityPropertiesUserassignedidentitiesAdditionalproperties
+## schemas:20_userAssignedIdentitiesValue
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -34,191 +34,181 @@
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): Describes the latest status of running an image template
 * **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly): Describes the error happened when create or update an image template
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
 * **source**: [ImageTemplateSource](#imagetemplatesource) (Required): Describes a virtual machine image source for building, customizing and distributing
 * **vmProfile**: [ImageTemplateVmProfile](#imagetemplatevmprofile): Describes the virtual machine used to build, customize and capture images
 
 ## ImageTemplateCustomizer
 * **Discriminator**: type
-
 ### Base Properties
 * **name**: string: Friendly Name to provide context on what this customization step does
-### ImageTemplateFileCustomizer
+### File
 #### Properties
 * **destination**: string: The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
 * **sha256Checksum**: string: SHA256 checksum of the file provided in the sourceUri field above
 * **sourceUri**: string: The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
-* **type**: 'File' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'File' (Required): Uploads files to VMs (Linux, Windows). Corresponds to Packer file provisioner
 
-### ImageTemplatePowerShellCustomizer
+### PowerShell
 #### Properties
 * **inline**: string[]: Array of PowerShell commands to execute
 * **runElevated**: bool: If specified, the PowerShell script will be run with elevated privileges
 * **scriptUri**: string: URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
 * **sha256Checksum**: string: SHA256 checksum of the power shell script provided in the scriptUri field above
-* **type**: 'PowerShell' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'PowerShell' (Required): Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
 * **validExitCodes**: int[]: Valid exit codes for the PowerShell script. [Default: 0]
 
-### ImageTemplateShellCustomizer
+### Shell
 #### Properties
 * **inline**: string[]: Array of shell commands to execute
 * **scriptUri**: string: URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
 * **sha256Checksum**: string: SHA256 checksum of the shell script provided in the scriptUri field
-* **type**: 'Shell' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'Shell' (Required): Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
 
-### ImageTemplateRestartCustomizer
+### WindowsRestart
 #### Properties
 * **restartCheckCommand**: string: Command to check if restart succeeded [Default: '']
 * **restartCommand**: string: Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
 * **restartTimeout**: string: Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
-* **type**: 'WindowsRestart' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'WindowsRestart' (Required): Reboots a VM and waits for it to come back online (Windows). Corresponds to Packer windows-restart provisioner
 
 
-## ImageTemplateFileCustomizer
+## File
 ### Properties
 * **destination**: string: The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
 * **sha256Checksum**: string: SHA256 checksum of the file provided in the sourceUri field above
 * **sourceUri**: string: The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
-* **type**: 'File' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'File' (Required): Uploads files to VMs (Linux, Windows). Corresponds to Packer file provisioner
 
-## ImageTemplatePowerShellCustomizer
+## PowerShell
 ### Properties
 * **inline**: string[]: Array of PowerShell commands to execute
 * **runElevated**: bool: If specified, the PowerShell script will be run with elevated privileges
 * **scriptUri**: string: URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
 * **sha256Checksum**: string: SHA256 checksum of the power shell script provided in the scriptUri field above
-* **type**: 'PowerShell' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'PowerShell' (Required): Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
 * **validExitCodes**: int[]: Valid exit codes for the PowerShell script. [Default: 0]
 
-## ImageTemplateShellCustomizer
+## Shell
 ### Properties
 * **inline**: string[]: Array of shell commands to execute
 * **scriptUri**: string: URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
 * **sha256Checksum**: string: SHA256 checksum of the shell script provided in the scriptUri field
-* **type**: 'Shell' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'Shell' (Required): Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
 
-## ImageTemplateRestartCustomizer
+## WindowsRestart
 ### Properties
 * **restartCheckCommand**: string: Command to check if restart succeeded [Default: '']
 * **restartCommand**: string: Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
 * **restartTimeout**: string: Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
-* **type**: 'WindowsRestart' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+* **type**: 'WindowsRestart' (Required): Reboots a VM and waits for it to come back online (Windows). Corresponds to Packer windows-restart provisioner
 
 ## ImageTemplateDistributor
 * **Discriminator**: type
-
 ### Base Properties
-* **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
+* **artifactTags**: [Dictionary<string,String>](#dictionarystringstring): Tags that will be applied to the artifact once it has been created/updated by the distributor.
 * **runOutputName**: string (Required): The name to be used for the associated RunOutput.
-### ImageTemplateManagedImageDistributor
+### ManagedImage
 #### Properties
-* **imageId**: string (Required): Resource Id of the Managed Disk Image
-* **location**: string (Required): Azure location for the image, should match if image already exists
-* **type**: 'ManagedImage' (Required): Type of distribution.
+* **imageId**: string (Required): ARM resource id of the managed image in customer subscription
+* **type**: 'ManagedImage' (Required): Distribute as a Managed Disk Image.
 
-### ImageTemplateSharedImageDistributor
+### SharedImage
 #### Properties
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
 * **replicationRegions**: string[] (Required): A list of regions that the image will be replicated to
-* **type**: 'SharedImage' (Required): Type of distribution.
+* **type**: 'SharedImage' (Required): Distribute via Shared Image Gallery.
 
-### ImageTemplateVhdDistributor
+### VHD
 #### Properties
-* **type**: 'VHD' (Required): Type of distribution.
+* **type**: 'VHD' (Required): Distribute via VHD in a storage account.
 
 
-## ImageTemplateDistributorArtifactTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ImageTemplateManagedImageDistributor
+## ManagedImage
 ### Properties
-* **imageId**: string (Required): Resource Id of the Managed Disk Image
-* **location**: string (Required): Azure location for the image, should match if image already exists
-* **type**: 'ManagedImage' (Required): Type of distribution.
+* **imageId**: string (Required): ARM resource id of the managed image in customer subscription
+* **type**: 'ManagedImage' (Required): Distribute as a Managed Disk Image.
 
-## ImageTemplateSharedImageDistributor
+## SharedImage
 ### Properties
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
 * **replicationRegions**: string[] (Required): A list of regions that the image will be replicated to
-* **type**: 'SharedImage' (Required): Type of distribution.
+* **type**: 'SharedImage' (Required): Distribute via Shared Image Gallery.
 
-## ImageTemplateVhdDistributor
+## VHD
 ### Properties
-* **type**: 'VHD' (Required): Type of distribution.
+* **type**: 'VHD' (Required): Distribute via VHD in a storage account.
 
 ## ImageTemplateLastRunStatus
 ### Properties
 * **endTime**: string: End time of the last run (UTC)
 * **message**: string: Verbose information about the last run state
-* **runState**: 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded': State of the last run
-* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued': Sub-state of the last run
+* **runState**: 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded': State of the last run.
+* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued': Sub-state of the last run.
 * **startTime**: string: Start time of the last run (UTC)
 
 ## ProvisioningError
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadISOSource' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadISOSource' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure.
 
 ## ImageTemplateSource
 * **Discriminator**: type
-
 ### Base Properties
-### ImageTemplateIsoSource
+### ISO
 #### Properties
 * **sha256Checksum**: string (Required): SHA256 Checksum of the ISO image.
 * **sourceUri**: string (Required): URI to get the ISO image. This URI has to be accessible to the resource provider at the time of the image template creation.
-* **type**: 'ISO' (Required): Specifies the type of source image you want to start with.
+* **type**: 'ISO' (Required): Describes an image source that is an installation ISO. Currently only supports Red Hat Enterprise Linux 7.2-7.5 ISO's.
 
-### ImageTemplateManagedImageSource
+### ManagedImage
 #### Properties
 * **imageId**: string (Required): ARM resource id of the managed image in customer subscription
-* **type**: 'ManagedImage' (Required): Specifies the type of source image you want to start with.
+* **type**: 'ManagedImage' (Required): Distribute as a Managed Disk Image.
 
-### ImageTemplatePlatformImageSource
+### PlatformImage
 #### Properties
 * **offer**: string: Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **publisher**: string: Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **sku**: string: Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-* **type**: 'PlatformImage' (Required): Specifies the type of source image you want to start with.
+* **type**: 'PlatformImage' (Required): Describes an image source from [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **version**: string: Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
-### ImageTemplateSharedImageVersionSource
+### SharedImageVersion
 #### Properties
 * **imageVersionId**: string (Required): ARM resource id of the image version in the shared image gallery
-* **type**: 'SharedImageVersion' (Required): Specifies the type of source image you want to start with.
+* **type**: 'SharedImageVersion' (Required): Describes an image source that is an image version in a shared image gallery.
 
 
-## ImageTemplateIsoSource
+## ISO
 ### Properties
 * **sha256Checksum**: string (Required): SHA256 Checksum of the ISO image.
 * **sourceUri**: string (Required): URI to get the ISO image. This URI has to be accessible to the resource provider at the time of the image template creation.
-* **type**: 'ISO' (Required): Specifies the type of source image you want to start with.
+* **type**: 'ISO' (Required): Describes an image source that is an installation ISO. Currently only supports Red Hat Enterprise Linux 7.2-7.5 ISO's.
 
-## ImageTemplateManagedImageSource
-### Properties
-* **imageId**: string (Required): ARM resource id of the managed image in customer subscription
-* **type**: 'ManagedImage' (Required): Specifies the type of source image you want to start with.
-
-## ImageTemplatePlatformImageSource
+## PlatformImage
 ### Properties
 * **offer**: string: Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **publisher**: string: Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **sku**: string: Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-* **type**: 'PlatformImage' (Required): Specifies the type of source image you want to start with.
+* **type**: 'PlatformImage' (Required): Describes an image source from [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 * **version**: string: Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
-## ImageTemplateSharedImageVersionSource
+## SharedImageVersion
 ### Properties
 * **imageVersionId**: string (Required): ARM resource id of the image version in the shared image gallery
-* **type**: 'SharedImageVersion' (Required): Specifies the type of source image you want to start with.
+* **type**: 'SharedImageVersion' (Required): Describes an image source that is an image version in a shared image gallery.
 
 ## ImageTemplateVmProfile
 ### Properties
 * **vmSize**: string: Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

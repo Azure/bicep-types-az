@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerServiceProperties](#containerserviceproperties): Properties of the container service.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.ContainerService/containerServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ContainerServiceProperties
@@ -20,7 +20,7 @@
 * **masterProfile**: [ContainerServiceMasterProfile](#containerservicemasterprofile) (Required): Profile for the container service master.
 * **orchestratorProfile**: [ContainerServiceOrchestratorProfile](#containerserviceorchestratorprofile): Profile for the container service orchestrator.
 * **provisioningState**: string (ReadOnly): the current deployment or provisioning state, which only appears in the response.
-* **servicePrincipalProfile**: [ContainerServicePrincipalProfile](#containerserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+* **servicePrincipalProfile**: [ContainerServiceServicePrincipalProfile](#containerserviceserviceprincipalprofile): Information about a service principal identity for the cluster to use for manipulating Azure APIs.
 * **windowsProfile**: [ContainerServiceWindowsProfile](#containerservicewindowsprofile): Profile for Windows VMs in the container service cluster.
 
 ## ContainerServiceAgentPoolProfile
@@ -29,7 +29,7 @@
 * **dnsPrefix**: string (Required): DNS prefix to be used to create the FQDN for the agent pool.
 * **fqdn**: string (ReadOnly): FQDN for the agent pool.
 * **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
-* **vmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' (Required): Size of agent VMs.
+* **vmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1_v2' | 'Standard_D1' | 'Standard_D11_v2' | 'Standard_D11' | 'Standard_D12_v2' | 'Standard_D12' | 'Standard_D13_v2' | 'Standard_D13' | 'Standard_D14_v2' | 'Standard_D14' | 'Standard_D2_v2' | 'Standard_D2' | 'Standard_D3_v2' | 'Standard_D3' | 'Standard_D4_v2' | 'Standard_D4' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' (Required): Size of agent VMs.
 
 ## ContainerServiceCustomProfile
 ### Properties
@@ -67,7 +67,7 @@
 ### Properties
 * **orchestratorType**: 'Custom' | 'DCOS' | 'Kubernetes' | 'Swarm' (Required): The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.
 
-## ContainerServicePrincipalProfile
+## ContainerServiceServicePrincipalProfile
 ### Properties
 * **clientId**: string (Required): The ID for the service principal.
 * **secret**: string (Required): The secret password associated with the service principal.
@@ -77,7 +77,7 @@
 * **adminPassword**: string (Required): The administrator password to use for Windows VMs.
 * **adminUsername**: string (Required): The administrator username to use for Windows VMs.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

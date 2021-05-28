@@ -8,10 +8,10 @@
 * **identity**: [CacheIdentity](#cacheidentity): Cache identity properties.
 * **location**: string: Region name string.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CacheProperties](#cacheproperties): Properties of the Cache.
-* **sku**: [CacheSku](#cachesku): SKU for the Cache.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: any: Any object
+* **properties**: [schemas:7_properties](#schemas7properties): Properties of the Cache.
+* **sku**: [schemas:7_sku](#schemas7sku): SKU for the Cache.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: any: ARM tags as name/value pairs.
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageCache/caches/storageTargets@2020-10-01
@@ -22,16 +22,16 @@
 * **location**: string (ReadOnly): Region name string.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageTargetProperties](#storagetargetproperties): Properties of the Storage Target.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CacheIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the cache.
 * **tenantId**: string (ReadOnly): The tenant id associated with the cache.
-* **type**: 'None' | 'SystemAssigned': The type of identity used for the cache
+* **type**: 'None' | 'SystemAssigned': The type of identity used for the cache.
 
-## CacheProperties
+## schemas:7_properties
 ### Properties
 * **cacheSizeGB**: int: The size of this Cache, in GB.
 * **directoryServicesSettings**: [CacheDirectorySettings](#cachedirectorysettings): Cache Directory Services settings.
@@ -39,7 +39,7 @@
 * **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
 * **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
 * **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property.
 * **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
 * **subnet**: string: A fully qualified URL.
 * **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
@@ -52,14 +52,14 @@
 ## CacheActiveDirectorySettings
 ### Properties
 * **cacheNetBiosName**: string (Required): The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
-* **credentials**: [CacheActiveDirectorySettingsCredentials](#cacheactivedirectorysettingscredentials): Active Directory admin credentials used to join the HPC Cache to a domain.
+* **credentials**: [schemas:13_credentials](#schemas13credentials): Active Directory admin credentials used to join the HPC Cache to a domain.
 * **domainJoined**: 'Error' | 'No' | 'Yes' (ReadOnly): True if the HPC Cache is joined to the Active Directory domain.
 * **domainName**: string (Required): The fully qualified domain name of the Active Directory domain controller.
 * **domainNetBiosName**: string (Required): The Active Directory domain's NetBIOS name.
 * **primaryDnsIpAddress**: string (Required): Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
 * **secondaryDnsIpAddress**: string: Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
 
-## CacheActiveDirectorySettingsCredentials
+## schemas:13_credentials
 ### Properties
 * **password**: string (Required): Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
 * **username**: string (Required): Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
@@ -68,7 +68,7 @@
 ### Properties
 * **autoDownloadCertificate**: bool: Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
 * **caCertificateURI**: string: The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
-* **credentials**: [CacheUsernameDownloadSettingsCredentials](#cacheusernamedownloadsettingscredentials): When present, these are the credentials for the secure LDAP connection.
+* **credentials**: [schemas:14_credentials](#schemas14credentials): When present, these are the credentials for the secure LDAP connection.
 * **encryptLdapConnection**: bool: Whether or not the LDAP connection should be encrypted.
 * **extendedGroups**: bool: Whether or not Extended Groups is enabled.
 * **groupFileURI**: string: The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
@@ -79,7 +79,7 @@
 * **usernameDownloaded**: 'Error' | 'No' | 'Yes' (ReadOnly): Indicates whether or not the HPC Cache has performed the username download successfully.
 * **usernameSource**: 'AD' | 'File' | 'LDAP' | 'None': This setting determines how the cache gets username and group names for clients.
 
-## CacheUsernameDownloadSettingsCredentials
+## schemas:14_credentials
 ### Properties
 * **bindDn**: string: The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
 * **bindPassword**: string: The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
@@ -91,9 +91,9 @@
 ## KeyVaultKeyReference
 ### Properties
 * **keyUrl**: string (Required): The URL referencing a key encryption key in Key Vault.
-* **sourceVault**: [KeyVaultKeyReferenceSourceVault](#keyvaultkeyreferencesourcevault) (Required): Describes a resource Id to source Key Vault.
+* **sourceVault**: [schemas:17_sourceVault](#schemas17sourcevault) (Required): Describes a resource Id to source Key Vault.
 
-## KeyVaultKeyReferenceSourceVault
+## schemas:17_sourceVault
 ### Properties
 * **id**: string: Resource Id.
 
@@ -135,39 +135,38 @@
 * **lastFirmwareUpdate**: string (ReadOnly): Time of the last successful firmware update.
 * **pendingFirmwareVersion**: string (ReadOnly): When firmwareUpdateAvailable is true, this field holds the version string for the update.
 
-## CacheSku
+## schemas:7_sku
 ### Properties
 * **name**: string: SKU name for this Cache.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## StorageTargetProperties
 * **Discriminator**: targetType
-
 ### Base Properties
 * **clfs**: [ClfsTarget](#clfstarget): Properties pertaining to the ClfsTarget
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
 * **nfs3**: [Nfs3Target](#nfs3target): Properties pertaining to the Nfs3Target
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property.
 * **unknown**: [UnknownTarget](#unknowntarget): Properties pertaining to the UnknownTarget
-### ClfsTargetProperties
+### clfs
 #### Properties
-* **targetType**: 'clfs' (Required): Type of the Storage Target.
+* **targetType**: 'clfs' (Required): Storage container for use as a CLFS Storage Target.
 
-### Nfs3TargetProperties
+### nfs3
 #### Properties
-* **targetType**: 'nfs3' (Required): Type of the Storage Target.
+* **targetType**: 'nfs3' (Required): An NFSv3 mount point for use as a Storage Target.
 
-### UnknownTargetProperties
+### unknown
 #### Properties
-* **targetType**: 'unknown' (Required): Type of the Storage Target.
+* **targetType**: 'unknown' (Required): Storage container for use as an Unknown Storage Target.
 
 
 ## ClfsTarget
@@ -188,22 +187,22 @@
 
 ## UnknownTarget
 ### Properties
-* **unknownMap**: [UnknownProperties](#unknownproperties): Properties of an unknown type of Storage Target.
+* **unknownMap**: [Dictionary<string,String>](#dictionarystringstring): Properties of an unknown type of Storage Target.
 
-## UnknownProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ClfsTargetProperties
+## clfs
 ### Properties
-* **targetType**: 'clfs' (Required): Type of the Storage Target.
+* **targetType**: 'clfs' (Required): Storage container for use as a CLFS Storage Target.
 
-## Nfs3TargetProperties
+## nfs3
 ### Properties
-* **targetType**: 'nfs3' (Required): Type of the Storage Target.
+* **targetType**: 'nfs3' (Required): An NFSv3 mount point for use as a Storage Target.
 
-## UnknownTargetProperties
+## unknown
 ### Properties
-* **targetType**: 'unknown' (Required): Type of the Storage Target.
+* **targetType**: 'unknown' (Required): Storage container for use as an Unknown Storage Target.
 
