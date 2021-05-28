@@ -10,4 +10,4 @@ INFORMATION: Resource type Microsoft.Blueprint/blueprints/versions under path '/
 Processing batch task - {"tag":"microsoft.blueprint-2018-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[10.64 s] Generation Complete
+[10.3 s] Generation Complete

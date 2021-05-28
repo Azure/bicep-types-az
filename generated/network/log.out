@@ -154,4 +154,4 @@ Processing batch task - {"tag":"microsoft.network-2015-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch betwen type segments (2) and name segments (1)
-[2305.41 s] Generation Complete
+[2345.24 s] Generation Complete

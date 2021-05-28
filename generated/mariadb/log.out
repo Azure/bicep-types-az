@@ -1,3 +1,7 @@
+WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2018-06-01-privatepreview/mariadb.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2018-06-01-privatepreview/PrivateEndpointConnections.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2020-01-01-privatepreview/DataEncryptionKeys.json"
 AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
@@ -12,4 +16,4 @@ WARNING: Semantic validation was skipped.
 Processing batch task - {"tag":"microsoft.dbformariadb-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[15.28 s] Generation Complete
+[15.71 s] Generation Complete

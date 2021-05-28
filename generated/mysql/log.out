@@ -1,3 +1,8 @@
+WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2018-06-01-privatepreview/mysql.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2018-06-01-privatepreview/PrivateEndpointConnections.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2020-01-01-privatepreview/DataEncryptionKeys.json"
+WARNING: Unable to parse swagger path "Microsoft.DBforMySQL/preview/2020-07-01-privatepreview/mysql.json"
 AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
@@ -18,4 +23,4 @@ WARNING: Semantic validation was skipped.
 Processing batch task - {"tag":"microsoft.dbformysql-2020-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[20.29 s] Generation Complete
+[21.69 s] Generation Complete

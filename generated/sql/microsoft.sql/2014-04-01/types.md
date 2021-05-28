@@ -1,5 +1,17 @@
 # Microsoft.Sql @ 2014-04-01
 
+## Resource Microsoft.Sql/servers@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of sql server.  This is metadata used for the Azure portal experience.
+* **location**: string (Required): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerProperties](#serverproperties): Represents the properties of a server.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/administrators@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -8,6 +20,28 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties): The properties of an server Administrator.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/advisors@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdvisorProperties](#advisorproperties): Properties for a Database, Server or Elastic Pool Advisor.
+* **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/auditingPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerTableAuditingPolicyProperties](#servertableauditingpolicyproperties): Properties of a server table auditing policy.
+* **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/communicationLinks@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
@@ -42,6 +76,39 @@
 * **properties**: [DatabaseProperties](#databaseproperties): Represents the properties of a database.
 * **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/advisors@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdvisorProperties](#advisorproperties): Properties for a Database, Server or Elastic Pool Advisor.
+* **type**: 'Microsoft.Sql/servers/databases/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/auditingPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseTableAuditingPolicyProperties](#databasetableauditingpolicyproperties): Properties of a database table auditing policy.
+* **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Sql/servers/databases/connectionPolicies@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseConnectionPolicyProperties](#databaseconnectionpolicyproperties): Properties of a database connection policy.
+* **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/dataMaskingPolicies@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
@@ -106,6 +173,16 @@
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Location of the server that contains this disaster recovery configuration.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DisasterRecoveryConfigurationProperties](#disasterrecoveryconfigurationproperties) (ReadOnly): Represents the properties of a disaster recovery configuration.
+* **type**: 'Microsoft.Sql/servers/disasterRecoveryConfiguration' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/elasticPools@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -129,12 +206,48 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties): Represents the properties of a server firewall rule.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## ServerProperties
+### Properties
+* **administratorLogin**: string: Administrator username for the server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLoginPassword**: string: The administrator login password (required for server creation).
+* **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
+* **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
+* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
+* **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
+* **version**: '12.0' | '2.0': The version of the server.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ServerAdministratorProperties
 ### Properties
 * **administratorType**: string (Required): The type of administrator.
 * **login**: string (Required): The server administrator login value.
 * **sid**: string (Required): The server administrator Sid (Secure ID).
 * **tenantId**: string (Required): The server Active Directory Administrator tenant id.
+
+## AdvisorProperties
+### Properties
+* **advisorStatus**: 'GA' | 'LimitedPublicPreview' | 'PrivatePreview' | 'PublicPreview' (ReadOnly): Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
+* **autoExecuteValue**: 'Default' | 'Disabled' | 'Enabled' (Required): Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'.
+* **lastChecked**: string (ReadOnly): Gets the time when the current resource was analyzed for recommendations by this advisor.
+* **recommendationsStatus**: string (ReadOnly): Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available), LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
+
+## ServerTableAuditingPolicyProperties
+### Properties
+* **auditingState**: string: The state of the policy.
+* **auditLogsTableName**: string: The audit logs table name.
+* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
+* **fullAuditLogsTableName**: string: The full audit logs table name.
+* **retentionDays**: string: The number of days to keep in the audit logs.
+* **storageAccountKey**: string: The key of the auditing storage account.
+* **storageAccountName**: string: The table storage account name
+* **storageAccountResourceGroupName**: string: The table storage account resource group name
+* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
+* **storageAccountSubscriptionId**: string: The table storage subscription Id.
+* **storageTableEndpoint**: string: The storage table endpoint.
 
 ## ServerCommunicationLinkProperties
 ### Properties
@@ -295,6 +408,31 @@ Get-AzSqlServerServiceObjective -Location <location>
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DatabaseTableAuditingPolicyProperties
+### Properties
+* **auditingState**: string: The state of the policy.
+* **auditLogsTableName**: string: The audit logs table name.
+* **eventTypesToAudit**: string: Comma-separated list of event types to audit.
+* **fullAuditLogsTableName**: string: The full audit logs table name.
+* **retentionDays**: string: The number of days to keep in the audit logs.
+* **storageAccountKey**: string: The key of the auditing storage account.
+* **storageAccountName**: string: The table storage account name
+* **storageAccountResourceGroupName**: string: The table storage account resource group name
+* **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
+* **storageAccountSubscriptionId**: string: The table storage subscription Id.
+* **storageTableEndpoint**: string: The storage table endpoint.
+* **useServerDefault**: string: Whether server default is enabled or disabled.
+
+## DatabaseConnectionPolicyProperties
+### Properties
+* **proxyDnsName**: string: The fully qualified host name of the auditing proxy.
+* **proxyPort**: string: The port number of the auditing proxy.
+* **redirectionState**: string: The state of proxy redirection.
+* **securityEnabledAccess**: string: The state of security access.
+* **state**: string: The connection policy state.
+* **useServerDefault**: string: Whether server default is enabled or disabled.
+* **visibility**: string: The visibility of the auditing proxy.
+
 ## DataMaskingPolicyProperties
 ### Properties
 * **applicationPrincipals**: string (ReadOnly): The list of the application principals. This is a legacy parameter and is no longer used.
@@ -342,6 +480,16 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
 * **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
+
+## DisasterRecoveryConfigurationProperties
+### Properties
+* **autoFailover**: 'Off' | 'On' (ReadOnly): Whether or not failover can be done automatically.
+* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly): How aggressive the automatic failover should be.
+* **logicalServerName**: string (ReadOnly): Logical name of the server.
+* **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
+* **partnerServerId**: string (ReadOnly): Id of the partner server.
+* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly): The role of the current server in the disaster recovery configuration.
+* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly): The status of the disaster recovery configuration.
 
 ## ElasticPoolProperties
 ### Properties

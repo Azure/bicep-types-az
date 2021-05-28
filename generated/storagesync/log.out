@@ -33,4 +33,4 @@ WARNING: Semantic validation was skipped.
 Processing batch task - {"tag":"microsoft.storagesync-2017-06-05-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
-[50.84 s] Generation Complete
+[53.47 s] Generation Complete

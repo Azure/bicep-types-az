@@ -1,5 +1,16 @@
 # Microsoft.Sql @ 2019-06-01-preview
 
+## Resource Microsoft.Sql/managedInstances/databases@2019-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties): The managed database's properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -71,6 +82,29 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Workload classifier definition. For more information look at sys.workload_management_workload_classifiers (DMV).
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
+
+## ManagedDatabaseProperties
+### Properties
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
+* **collation**: string: Collation of the managed database.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
+* **creationDate**: string (ReadOnly): Creation date of the database.
+* **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
+* **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
+* **failoverGroupId**: string (ReadOnly): Instance Failover Group resource identifier that this managed database belongs to.
+* **longTermRetentionBackupResourceId**: string: The name of the Long Term Retention backup to be used for restore of this managed database.
+* **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
+* **restorableDroppedDatabaseId**: string: The restorable dropped database resource id to restore when creating this database.
+* **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
+* **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
+* **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
+
+## Dictionary<string,String>
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceIdentity
 ### Properties

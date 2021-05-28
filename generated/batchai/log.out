@@ -13,4 +13,4 @@ Processing batch task - {"tag":"microsoft.batchai-2018-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
 WARNING: Semantic validation was skipped.
 INFORMATION: Resource type Microsoft.BatchAI/workspaces/experiments under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BatchAI/workspaces/{workspaceName}/experiments/{experimentName}' has no body defined.
-[15.35 s] Generation Complete
+[16.33 s] Generation Complete
