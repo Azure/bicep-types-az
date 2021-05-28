@@ -80,7 +80,7 @@ executeSynchronous(async () => {
 
     try {
       // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
-      await generateAutorestConfig(readmePath, bicepReadmePath, config);
+      await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
       await generateSchema(logger, readmePath, outputDir, verbose, waitForDebugger);
 
       await copyRecursive(outputDir, `${outputBaseDir}/${basePath}`);
@@ -100,7 +100,11 @@ executeSynchronous(async () => {
   await buildTypeIndex(defaultLogger, outputBaseDir);
 });
 
-async function generateAutorestConfig(readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
+function normalizeJsonPath(jsonPath: string) {
+  return path.normalize(jsonPath).replace(/[\\\/]/g, '/');
+}
+
+async function generateAutorestConfig(logger: ILogger, readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
   // We expect a path format convention of <provider>/(preview|stable)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
   // This information is used to generate individual tags in the generated autorest configuration
   const pathRegex = /^([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
@@ -127,10 +131,10 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
       // input-file may be a single string or an array of strings
       const inputFile = yamlData['input-file'];
       if (typeof inputFile === 'string') {
-        inputFiles.add(inputFile.replace(/[\\\/]/g, '/'));
+        inputFiles.add(inputFile);
       } else if (inputFile instanceof Array) {
         for (const i of inputFile) {
-          inputFiles.add(i.replace(/[\\\/]/g, '/'));
+          inputFiles.add(i);
         }
       }
     }
@@ -138,7 +142,8 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
 
   const filesByTag: Dictionary<string[]> = {};
   for (const file of inputFiles) {
-    const match = pathRegex.exec(file);
+    const normalizedFile = normalizeJsonPath(file);
+    const match = pathRegex.exec(normalizedFile);
     if (match) {
       // Generate a unique tag. We can't process all of the different API versions in one autorest pass
       // because there are constraints on naming uniqueness (e.g. naming of definitions), so we want to pass over
@@ -148,7 +153,9 @@ async function generateAutorestConfig(readmePath: string, bicepReadmePath: strin
         filesByTag[tagName] = [];
       }
 
-      filesByTag[tagName].push(file);
+      filesByTag[tagName].push(normalizedFile);
+    } else {
+      logOut(logger, `WARNING: Unable to parse swagger path \"${file}\"`);
     }
   }
 
@@ -166,9 +173,9 @@ ${yaml.dump({ 'batch': Object.keys(filesByTag).map(tag => ({ 'tag': tag })) }, {
 ${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
 \`\`\`
 `;
-
-    await writeFile(bicepReadmePath, generatedContent);
   }
+
+  await writeFile(bicepReadmePath, generatedContent);
 }
 
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
@@ -387,7 +394,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
       }
 
       if (resourceTypes.has(resource.Name.toLowerCase())) {
-        logger.out(`WARNING: Found duplicate type \"${resource.Name}\"\n`);
+        logOut(logger, `WARNING: Found duplicate type \"${resource.Name}\"`);
         continue;
       }
       resourceTypes.add(resource.Name.toLowerCase());
