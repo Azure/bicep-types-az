@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETCoreApp,Version=v5.0": {
+      "Nerdbank.GitVersioning": {
+        "type": "Direct",
+        "requested": "[3.4.203, )",
+        "resolved": "3.4.203",
+        "contentHash": "efM2Zo1YP6Y/IiYvozorEpQLpyA4QS50D2/Zi6BH/1LGRNVV3jPgBVSfieJIfthhhnKdiVq1zOuqV8NBoMl74g=="
+      },
+      "System.Text.Json": {
+        "type": "Transitive",
+        "resolved": "5.0.2",
+        "contentHash": "I47dVIGiV6SfAyppphxqupertT/5oZkYLDCX6vC3HpOI4ZLjyoKAreUoem2ie6G0RbRuFrlqz/PcTQjfb2DOfQ=="
+      },
+      "Azure.Bicep.Types": {
+        "type": "Project",
+        "dependencies": {
+          "System.Text.Json": "5.0.2"
+        }
+      }
+    }
+  }
+}
