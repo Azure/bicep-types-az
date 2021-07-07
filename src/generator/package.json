@@ -27,7 +27,7 @@
     "@ts-common/commonmark-to-markdown": "^2.0.0",
     "@types/async": "^3.2.6",
     "@types/js-yaml": "^4.0.1",
-    "@types/lodash": "^4.14.170",
+    "@types/lodash": "^4.14.171",
     "@types/node": "^16.0.0",
     "@types/yargs": "^17.0.0",
     "async": "^3.2.0",
