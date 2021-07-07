@@ -25,7 +25,7 @@
   "devDependencies": {
     "@autorest/core": "^3.4.5",
     "@ts-common/commonmark-to-markdown": "^2.0.0",
-    "@types/async": "^3.2.6",
+    "@types/async": "^3.2.7",
     "@types/js-yaml": "^4.0.1",
     "@types/lodash": "^4.14.170",
     "@types/node": "^16.0.0",
