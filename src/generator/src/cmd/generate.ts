@@ -281,6 +281,10 @@ function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string,
       cwd: cwd,
       windowsHide: true,
       shell: true,
+      env: {
+        ...process.env,
+        'NODE_OPTIONS' : '--max-old-space-size=4096',
+      }
     });
 
     child.stdout.on('data', data => logger.out(chalk.grey(data.toString())));

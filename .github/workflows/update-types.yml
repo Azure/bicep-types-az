@@ -45,9 +45,9 @@ jobs:
         run: |
           if [ -z "${{ github.event.inputs.single_path }}" ]
           then
-            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs
+            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --verbose
           else
-            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ github.event.inputs.single_path }}
+            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ github.event.inputs.single_path }} --verbose
           fi
 
           summary="$(<../../generated/summary.log)"
