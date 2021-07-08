@@ -1,8 +1,10 @@
 # AutoRest extension configuration
 
 ```yaml
+version: "https://tinyurl.com/yfjyy27f"
+
 use-extension:
-  "@autorest/modelerfour": "4.19.2"
+  "@autorest/modelerfour": "https://tinyurl.com/yhlkz69y"
 
 modelerfour:
   # this runs a pre-namer step to clean up names
