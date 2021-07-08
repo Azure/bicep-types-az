@@ -4,9 +4,9 @@
     ".NETCoreApp,Version=v5.0": {
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.4.203, )",
-        "resolved": "3.4.203",
-        "contentHash": "efM2Zo1YP6Y/IiYvozorEpQLpyA4QS50D2/Zi6BH/1LGRNVV3jPgBVSfieJIfthhhnKdiVq1zOuqV8NBoMl74g=="
+        "requested": "[3.4.220, )",
+        "resolved": "3.4.220",
+        "contentHash": "a4A8qKgM1OLmAEnP30qlA8AhVAutKfJtQbfhwXIeUE5QhWKlnGe6cThJik9aKAzZvhcdmUIaN4O0q+JSI6BU4A=="
       },
       "Microsoft.CSharp": {
         "type": "Transitive",
