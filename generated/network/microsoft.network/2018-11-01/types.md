@@ -1,9 +1,9 @@
-# Microsoft.Network @ 2018-10-01
+# Microsoft.Network @ 2018-11-01
 
-## Resource Microsoft.Network/applicationGateways@2018-10-01
+## Resource Microsoft.Network/applicationGateways@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
@@ -14,10 +14,10 @@
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
-## Resource Microsoft.Network/applicationSecurityGroups@2018-10-01
+## Resource Microsoft.Network/applicationSecurityGroups@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -26,10 +26,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/azureFirewalls@2018-10-01
+## Resource Microsoft.Network/azureFirewalls@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -38,10 +38,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/azureFirewalls' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/connections@2018-10-01
+## Resource Microsoft.Network/connections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -50,10 +50,22 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/ddosProtectionPlans@2018-10-01
+## Resource Microsoft.Network/ddosCustomPolicies@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DdosCustomPolicyPropertiesFormat](#ddoscustompolicypropertiesformat): DDoS custom policy properties.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/ddosCustomPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/ddosProtectionPlans@2018-11-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -62,10 +74,10 @@
 * **tags**: [DdosProtectionPlanTags](#ddosprotectionplantags): Resource tags.
 * **type**: 'Microsoft.Network/ddosProtectionPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -75,40 +87,40 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/authorizations@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits/authorizations@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits/peerings@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings/connections@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits/peerings/connections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitConnectionPropertiesFormat](#expressroutecircuitconnectionpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCrossConnections@2018-10-01
+## Resource Microsoft.Network/expressRouteCrossConnections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -117,20 +129,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCrossConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2018-10-01
+## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCrossConnectionPeeringProperties](#expressroutecrossconnectionpeeringproperties)
 * **type**: 'Microsoft.Network/expressRouteCrossConnections/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteGateways@2018-10-01
+## Resource Microsoft.Network/expressRouteGateways@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -139,19 +151,19 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteGateways/expressRouteConnections@2018-10-01
+## Resource Microsoft.Network/expressRouteGateways/expressRouteConnections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteConnectionProperties](#expressrouteconnectionproperties): Properties of the ExpressRouteConnection subresource.
 * **type**: 'Microsoft.Network/expressRouteGateways/expressRouteConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/ExpressRoutePorts@2018-10-01
+## Resource Microsoft.Network/ExpressRoutePorts@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -160,10 +172,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ExpressRoutePorts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/interfaceEndpoints@2018-10-01
+## Resource Microsoft.Network/interfaceEndpoints@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -172,10 +184,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/interfaceEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/loadBalancers@2018-10-01
+## Resource Microsoft.Network/loadBalancers@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -185,20 +197,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/loadBalancers/inboundNatRules@2018-10-01
+## Resource Microsoft.Network/loadBalancers/inboundNatRules@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat): Properties of the inbound NAT rule.
 * **type**: 'Microsoft.Network/loadBalancers/inboundNatRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/localNetworkGateways@2018-10-01
+## Resource Microsoft.Network/localNetworkGateways@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -207,10 +219,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkInterfaces@2018-10-01
+## Resource Microsoft.Network/networkInterfaces@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -219,20 +231,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkInterfaces/tapConfigurations@2018-10-01
+## Resource Microsoft.Network/networkInterfaces/tapConfigurations@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkInterfaceTapConfigurationPropertiesFormat](#networkinterfacetapconfigurationpropertiesformat): Properties of Virtual Network Tap configuration.
 * **type**: 'Microsoft.Network/networkInterfaces/tapConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkProfiles@2018-10-01
+## Resource Microsoft.Network/networkProfiles@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -241,10 +253,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups@2018-10-01
+## Resource Microsoft.Network/networkSecurityGroups@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -253,20 +265,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups/securityRules@2018-10-01
+## Resource Microsoft.Network/networkSecurityGroups/securityRules@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat): Security rule resource.
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers@2018-10-01
+## Resource Microsoft.Network/networkWatchers@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -275,10 +287,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers/connectionMonitors@2018-10-01
+## Resource Microsoft.Network/networkWatchers/connectionMonitors@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Connection monitor location.
@@ -287,20 +299,20 @@
 * **tags**: [ConnectionMonitorTags](#connectionmonitortags): Connection monitor tags.
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers/packetCaptures@2018-10-01
+## Resource Microsoft.Network/networkWatchers/packetCaptures@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Describes the properties of a packet capture session.
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/p2svpnGateways@2018-10-01
+## Resource Microsoft.Network/p2svpnGateways@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -309,10 +321,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/p2svpnGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/publicIPAddresses@2018-10-01
+## Resource Microsoft.Network/publicIPAddresses@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -323,10 +335,10 @@
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
-## Resource Microsoft.Network/publicIPPrefixes@2018-10-01
+## Resource Microsoft.Network/publicIPPrefixes@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -337,10 +349,10 @@
 * **type**: 'Microsoft.Network/publicIPPrefixes' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
-## Resource Microsoft.Network/routeFilters@2018-10-01
+## Resource Microsoft.Network/routeFilters@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -349,10 +361,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeFilters/routeFilterRules@2018-10-01
+## Resource Microsoft.Network/routeFilters/routeFilterRules@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -360,10 +372,10 @@
 * **properties**: [RouteFilterRulePropertiesFormat](#routefilterrulepropertiesformat): Route Filter Rule Resource
 * **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables@2018-10-01
+## Resource Microsoft.Network/routeTables@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -372,20 +384,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables/routes@2018-10-01
+## Resource Microsoft.Network/routeTables/routes@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RoutePropertiesFormat](#routepropertiesformat): Route resource
 * **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/serviceEndpointPolicies@2018-10-01
+## Resource Microsoft.Network/serviceEndpointPolicies@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -394,20 +406,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/serviceEndpointPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions@2018-10-01
+## Resource Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceEndpointPolicyDefinitionPropertiesFormat](#serviceendpointpolicydefinitionpropertiesformat): Service Endpoint policy definition resource.
 * **type**: 'Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualHubs@2018-10-01
+## Resource Microsoft.Network/virtualHubs@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -416,10 +428,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualHubs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworkGateways@2018-10-01
+## Resource Microsoft.Network/virtualNetworkGateways@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -428,10 +440,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks@2018-10-01
+## Resource Microsoft.Network/virtualNetworks@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -440,30 +452,30 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks/subnets@2018-10-01
+## Resource Microsoft.Network/virtualNetworks/subnets@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat): Properties of the subnet.
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2018-10-01
+## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat): Properties of the virtual network peering.
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworkTaps@2018-10-01
+## Resource Microsoft.Network/virtualNetworkTaps@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -472,20 +484,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualWans/p2sVpnServerConfigurations@2018-10-01
+## Resource Microsoft.Network/virtualWans/p2sVpnServerConfigurations@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [P2SVpnServerConfigurationProperties](#p2svpnserverconfigurationproperties): Parameters for P2SVpnServerConfiguration
 * **type**: 'Microsoft.Network/virtualWans/p2sVpnServerConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/vpnGateways@2018-10-01
+## Resource Microsoft.Network/vpnGateways@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -494,20 +506,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/vpnGateways/vpnConnections@2018-10-01
+## Resource Microsoft.Network/vpnGateways/vpnConnections@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VpnConnectionProperties](#vpnconnectionproperties): Parameters for VpnConnection
 * **type**: 'Microsoft.Network/vpnGateways/vpnConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/vpnSites@2018-10-01
+## Resource Microsoft.Network/vpnSites@2018-11-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -575,7 +587,8 @@
 
 ## ApplicationGatewayAutoscaleConfiguration
 ### Properties
-* **minCapacity**: int (Required): Lower bound on number of Application Gateway instances
+* **maxCapacity**: int: Upper bound on number of Application Gateway capacity
+* **minCapacity**: int (Required): Lower bound on number of Application Gateway capacity
 
 ## ApplicationGatewayBackendAddressPool
 ### Properties
@@ -690,6 +703,7 @@
 
 ## PublicIPAddressPropertiesFormat
 ### Properties
+* **ddosSettings**: [DdosSettings](#ddossettings): Contains the DDoS protection settings of the public IP.
 * **dnsSettings**: [PublicIPAddressDnsSettings](#publicipaddressdnssettings): Contains FQDN of the DNS record associated with the public IP address
 * **idleTimeoutInMinutes**: int: The idle timeout of the public IP address.
 * **ipAddress**: string: The IP address associated with the public IP address resource.
@@ -700,6 +714,11 @@
 * **publicIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method.
 * **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
 * **resourceGuid**: string: The resource GUID property of the public IP resource.
+
+## DdosSettings
+### Properties
+* **ddosCustomPolicy**: [SubResource](#subresource): Reference to another subresource.
+* **protectionCoverage**: 'Basic' | 'Standard': The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
 
 ## PublicIPAddressDnsSettings
 ### Properties
@@ -846,19 +865,19 @@
 ### Properties
 * **access**: 'Allow' | 'Deny' (Required): Whether network traffic is allowed or denied. Possible values are: 'Allow' and 'Deny'.
 * **description**: string: A description for this rule. Restricted to 140 chars.
-* **destinationAddressPrefix**: string: The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+* **destinationAddressPrefix**: string: The destination address prefix. CIDR or destination IP range. Asterisks '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
 * **destinationAddressPrefixes**: string[]: The destination address prefixes. CIDR or destination IP ranges.
 * **destinationApplicationSecurityGroups**: [ApplicationSecurityGroup](#applicationsecuritygroup)[]: The application security group specified as destination.
-* **destinationPortRange**: string: The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+* **destinationPortRange**: string: The destination port or range. Integer or range between 0 and 65535. Asterisks '*' can also be used to match all ports.
 * **destinationPortRanges**: string[]: The destination port ranges.
 * **direction**: 'Inbound' | 'Outbound' (Required): The direction of the rule. Possible values are: 'Inbound and Outbound'.
 * **priority**: int: The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
 * **protocol**: '*' | 'Tcp' | 'Udp' (Required): Network protocol this rule applies to. Possible values are 'Tcp', 'Udp', and '*'.
 * **provisioningState**: string: The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **sourceAddressPrefix**: string: The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+* **sourceAddressPrefix**: string: The CIDR or source IP range. Asterisks '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
 * **sourceApplicationSecurityGroups**: [ApplicationSecurityGroup](#applicationsecuritygroup)[]: The application security group specified as source.
-* **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+* **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisks '*' can also be used to match all ports.
 * **sourcePortRanges**: string[]: The source port ranges.
 
 ## ResourceTags
@@ -1637,6 +1656,25 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DdosCustomPolicyPropertiesFormat
+### Properties
+* **protocolCustomSettings**: [ProtocolCustomSettingsFormat](#protocolcustomsettingsformat)[]: The protocol-specific DDoS policy customization parameters.
+* **provisioningState**: string (ReadOnly): The provisioning state of the DDoS custom policy resource. Possible values are: 'Succeeded', 'Updating', 'Deleting', and 'Failed'.
+* **publicIPAddresses**: [SubResource](#subresource)[] (ReadOnly): The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
+* **resourceGuid**: string (ReadOnly): The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
+
+## ProtocolCustomSettingsFormat
+### Properties
+* **protocol**: 'Syn' | 'Tcp' | 'Udp': The protocol for which the DDoS protection policy is being customized.
+* **sourceRateOverride**: string: The customized DDoS protection source rate.
+* **triggerRateOverride**: string: The customized DDoS protection trigger rate.
+* **triggerSensitivityOverride**: 'Default' | 'High' | 'Low' | 'Relaxed': The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## DdosProtectionPlanPropertiesFormat
 ### Properties
 * **provisioningState**: string (ReadOnly): The provisioning state of the DDoS protection plan resource. Possible values are: 'Succeeded', 'Updating', 'Deleting', and 'Failed'.
@@ -2317,7 +2355,7 @@
 ## P2SVpnServerConfigurationProperties
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **name**: string: The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Parent VirtualWan resource name.
+* **name**: string: The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
 * **p2SVpnGateways**: [SubResource](#subresource)[] (ReadOnly): Array of SubResource
 * **p2SVpnServerConfigRadiusClientRootCertificates**: [P2SVpnServerConfigRadiusClientRootCertificate](#p2svpnserverconfigradiusclientrootcertificate)[]: Radius client root certificate of P2SVpnServerConfiguration.
 * **p2SVpnServerConfigRadiusServerRootCertificates**: [P2SVpnServerConfigRadiusServerRootCertificate](#p2svpnserverconfigradiusserverrootcertificate)[]: Radius Server root certificate of P2SVpnServerConfiguration.

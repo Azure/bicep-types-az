@@ -1,12 +1,11 @@
-# Microsoft.Network @ 2018-10-01
+# Microsoft.Network @ 2018-04-01
 
-## Resource Microsoft.Network/applicationGateways@2018-10-01
+## Resource Microsoft.Network/applicationGateways@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationGatewayPropertiesFormat](#applicationgatewaypropertiesformat): Properties of the application gateway.
@@ -14,10 +13,10 @@
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
-## Resource Microsoft.Network/applicationSecurityGroups@2018-10-01
+## Resource Microsoft.Network/applicationSecurityGroups@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -26,10 +25,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/azureFirewalls@2018-10-01
+## Resource Microsoft.Network/azureFirewalls@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -38,10 +37,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/azureFirewalls' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/connections@2018-10-01
+## Resource Microsoft.Network/connections@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -50,10 +49,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/ddosProtectionPlans@2018-10-01
+## Resource Microsoft.Network/ddosProtectionPlans@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -62,10 +61,10 @@
 * **tags**: [DdosProtectionPlanTags](#ddosprotectionplantags): Resource tags.
 * **type**: 'Microsoft.Network/ddosProtectionPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -75,40 +74,40 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/authorizations@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits/authorizations@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits/peerings@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings/connections@2018-10-01
+## Resource Microsoft.Network/expressRouteCircuits/peerings/connections@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitConnectionPropertiesFormat](#expressroutecircuitconnectionpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCrossConnections@2018-10-01
+## Resource Microsoft.Network/expressRouteCrossConnections@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -117,65 +116,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCrossConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2018-10-01
+## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCrossConnectionPeeringProperties](#expressroutecrossconnectionpeeringproperties)
 * **type**: 'Microsoft.Network/expressRouteCrossConnections/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteGateways@2018-10-01
+## Resource Microsoft.Network/loadBalancers@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExpressRouteGatewayProperties](#expressroutegatewayproperties): ExpressRoute gateway resource properties.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/expressRouteGateways' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/expressRouteGateways/expressRouteConnections@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExpressRouteConnectionProperties](#expressrouteconnectionproperties): Properties of the ExpressRouteConnection subresource.
-* **type**: 'Microsoft.Network/expressRouteGateways/expressRouteConnections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/ExpressRoutePorts@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ExpressRoutePortPropertiesFormat](#expressrouteportpropertiesformat): Properties specific to ExpressRoutePort resources.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/ExpressRoutePorts' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/interfaceEndpoints@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [InterfaceEndpointProperties](#interfaceendpointproperties): Properties of the interface endpoint.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/interfaceEndpoints' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/loadBalancers@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -185,20 +139,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/loadBalancers/inboundNatRules@2018-10-01
+## Resource Microsoft.Network/loadBalancers/inboundNatRules@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InboundNatRulePropertiesFormat](#inboundnatrulepropertiesformat): Properties of the inbound NAT rule.
 * **type**: 'Microsoft.Network/loadBalancers/inboundNatRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/localNetworkGateways@2018-10-01
+## Resource Microsoft.Network/localNetworkGateways@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -207,10 +161,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkInterfaces@2018-10-01
+## Resource Microsoft.Network/networkInterfaces@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -219,32 +173,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkInterfaces/tapConfigurations@2018-10-01
+## Resource Microsoft.Network/networkSecurityGroups@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkInterfaceTapConfigurationPropertiesFormat](#networkinterfacetapconfigurationpropertiesformat): Properties of Virtual Network Tap configuration.
-* **type**: 'Microsoft.Network/networkInterfaces/tapConfigurations' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/networkProfiles@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkProfilePropertiesFormat](#networkprofilepropertiesformat): Network profile properties.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/networkProfiles' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/networkSecurityGroups@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -253,20 +185,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups/securityRules@2018-10-01
+## Resource Microsoft.Network/networkSecurityGroups/securityRules@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat): Security rule resource.
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers@2018-10-01
+## Resource Microsoft.Network/networkWatchers@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -275,10 +207,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers/connectionMonitors@2018-10-01
+## Resource Microsoft.Network/networkWatchers/connectionMonitors@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Connection monitor location.
@@ -287,32 +219,20 @@
 * **tags**: [ConnectionMonitorTags](#connectionmonitortags): Connection monitor tags.
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers/packetCaptures@2018-10-01
+## Resource Microsoft.Network/networkWatchers/packetCaptures@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Describes the properties of a packet capture session.
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/p2svpnGateways@2018-10-01
+## Resource Microsoft.Network/publicIPAddresses@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [P2SVpnGatewayProperties](#p2svpngatewayproperties): Parameters for P2SVpnGateway
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/p2svpnGateways' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/publicIPAddresses@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -323,24 +243,10 @@
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
-## Resource Microsoft.Network/publicIPPrefixes@2018-10-01
+## Resource Microsoft.Network/routeFilters@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PublicIPPrefixPropertiesFormat](#publicipprefixpropertiesformat): Public IP prefix properties.
-* **sku**: [PublicIPPrefixSku](#publicipprefixsku): SKU of a public IP prefix
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/publicIPPrefixes' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
-
-## Resource Microsoft.Network/routeFilters@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -349,10 +255,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeFilters/routeFilterRules@2018-10-01
+## Resource Microsoft.Network/routeFilters/routeFilterRules@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -360,10 +266,10 @@
 * **properties**: [RouteFilterRulePropertiesFormat](#routefilterrulepropertiesformat): Route Filter Rule Resource
 * **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables@2018-10-01
+## Resource Microsoft.Network/routeTables@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -372,42 +278,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables/routes@2018-10-01
+## Resource Microsoft.Network/routeTables/routes@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RoutePropertiesFormat](#routepropertiesformat): Route resource
 * **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/serviceEndpointPolicies@2018-10-01
+## Resource Microsoft.Network/virtualHubs@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServiceEndpointPolicyPropertiesFormat](#serviceendpointpolicypropertiesformat): Service Endpoint Policy resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/serviceEndpointPolicies' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServiceEndpointPolicyDefinitionPropertiesFormat](#serviceendpointpolicydefinitionpropertiesformat): Service Endpoint policy definition resource.
-* **type**: 'Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/virtualHubs@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -416,10 +300,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualHubs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworkGateways@2018-10-01
+## Resource Microsoft.Network/virtualNetworkGateways@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -428,10 +312,10 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks@2018-10-01
+## Resource Microsoft.Network/virtualNetworks@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -440,52 +324,30 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks/subnets@2018-10-01
+## Resource Microsoft.Network/virtualNetworks/subnets@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat): Properties of the subnet.
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2018-10-01
+## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat): Properties of the virtual network peering.
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworkTaps@2018-10-01
+## Resource Microsoft.Network/vpnGateways@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkTapPropertiesFormat](#virtualnetworktappropertiesformat): Virtual Network Tap properties.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/virtualWans/p2sVpnServerConfigurations@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [P2SVpnServerConfigurationProperties](#p2svpnserverconfigurationproperties): Parameters for P2SVpnServerConfiguration
-* **type**: 'Microsoft.Network/virtualWans/p2sVpnServerConfigurations' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/vpnGateways@2018-10-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -494,20 +356,20 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/vpnGateways/vpnConnections@2018-10-01
+## Resource Microsoft.Network/vpnGateways/vpnConnections@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VpnConnectionProperties](#vpnconnectionproperties): Parameters for VpnConnection
 * **type**: 'Microsoft.Network/vpnGateways/vpnConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/vpnSites@2018-10-01
+## Resource Microsoft.Network/vpnSites@2018-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
@@ -516,30 +378,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## ManagedServiceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
-
-## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
 ## ApplicationGatewayPropertiesFormat
 ### Properties
 * **authenticationCertificates**: [ApplicationGatewayAuthenticationCertificate](#applicationgatewayauthenticationcertificate)[]: Authentication certificates of the application gateway resource.
 * **autoscaleConfiguration**: [ApplicationGatewayAutoscaleConfiguration](#applicationgatewayautoscaleconfiguration): Application Gateway autoscale configuration.
 * **backendAddressPools**: [ApplicationGatewayBackendAddressPool](#applicationgatewaybackendaddresspool)[]: Backend address pool of the application gateway resource.
 * **backendHttpSettingsCollection**: [ApplicationGatewayBackendHttpSettings](#applicationgatewaybackendhttpsettings)[]: Backend http settings of the application gateway resource.
-* **customErrorConfigurations**: [ApplicationGatewayCustomError](#applicationgatewaycustomerror)[]: Custom error configurations of the application gateway resource.
 * **enableFips**: bool: Whether FIPS is enabled on the application gateway resource.
 * **enableHttp2**: bool: Whether HTTP2 is enabled on the application gateway resource.
 * **frontendIPConfigurations**: [ApplicationGatewayFrontendIPConfiguration](#applicationgatewayfrontendipconfiguration)[]: Frontend IP addresses of the application gateway resource.
@@ -552,11 +396,9 @@
 * **redirectConfigurations**: [ApplicationGatewayRedirectConfiguration](#applicationgatewayredirectconfiguration)[]: Redirect configurations of the application gateway resource.
 * **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Request routing rules of the application gateway resource.
 * **resourceGuid**: string: Resource GUID property of the application gateway resource.
-* **rewriteRuleSets**: [ApplicationGatewayRewriteRuleSet](#applicationgatewayrewriteruleset)[]: Rewrite rules for the application gateway resource.
 * **sku**: [ApplicationGatewaySku](#applicationgatewaysku): SKU of an application gateway
 * **sslCertificates**: [ApplicationGatewaySslCertificate](#applicationgatewaysslcertificate)[]: SSL certificates of the application gateway resource.
 * **sslPolicy**: [ApplicationGatewaySslPolicy](#applicationgatewaysslpolicy): Application Gateway Ssl policy.
-* **trustedRootCertificates**: [ApplicationGatewayTrustedRootCertificate](#applicationgatewaytrustedrootcertificate)[]: Trusted Root certificates of the application gateway resource.
 * **urlPathMaps**: [ApplicationGatewayUrlPathMap](#applicationgatewayurlpathmap)[]: URL path map of the application gateway resource.
 * **webApplicationFirewallConfiguration**: [ApplicationGatewayWebApplicationFirewallConfiguration](#applicationgatewaywebapplicationfirewallconfiguration): Application gateway web application firewall configuration.
 
@@ -575,7 +417,12 @@
 
 ## ApplicationGatewayAutoscaleConfiguration
 ### Properties
-* **minCapacity**: int (Required): Lower bound on number of Application Gateway instances
+* **bounds**: [ApplicationGatewayAutoscaleBounds](#applicationgatewayautoscalebounds) (Required): Application Gateway autoscale bounds on number of Application Gateway instance.
+
+## ApplicationGatewayAutoscaleBounds
+### Properties
+* **max**: int (Required): Upper bound on number of Application Gateway instances.
+* **min**: int (Required): Lower bound on number of Application Gateway instances.
 
 ## ApplicationGatewayBackendAddressPool
 ### Properties
@@ -616,7 +463,6 @@
 * **provisioningState**: string: The provisioning state of the network interface IP configuration. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
-* **virtualNetworkTaps**: [VirtualNetworkTap](#virtualnetworktap)[]: The reference to Virtual Network Taps.
 
 ## ApplicationSecurityGroup
 ### Properties
@@ -649,8 +495,7 @@
 ### Properties
 * **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[] (ReadOnly): Gets collection of references to IP addresses defined in network interfaces.
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets load balancing rules that use this backend address pool.
-* **outboundRule**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
-* **outboundRules**: [SubResource](#subresource)[] (ReadOnly): Gets outbound rules that use this backend address pool.
+* **outboundNatRule**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
 * **provisioningState**: string: Get provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## SubResource
@@ -669,7 +514,6 @@
 * **backendIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration) (ReadOnly): IPConfiguration in a network interface.
 * **backendPort**: int: The port used for the internal endpoint. Acceptable values range from 1 to 65535.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **enableTcpReset**: bool: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
 * **frontendIPConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **frontendPort**: int: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
@@ -698,7 +542,6 @@
 * **provisioningState**: string: The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **publicIPAddressVersion**: 'IPv4' | 'IPv6': Available from Api-Version 2016-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
 * **publicIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method.
-* **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
 * **resourceGuid**: string: The resource GUID property of the public IP resource.
 
 ## PublicIPAddressDnsSettings
@@ -732,89 +575,12 @@
 ## SubnetPropertiesFormat
 ### Properties
 * **addressPrefix**: string: The address prefix for the subnet.
-* **addressPrefixes**: string[]: List of  address prefixes for the subnet.
-* **delegations**: [Delegation](#delegation)[]: Gets an array of references to the delegations on the subnet.
-* **interfaceEndpoints**: [InterfaceEndpoint](#interfaceendpoint)[] (ReadOnly): An array of references to interface endpoints
-* **ipConfigurationProfiles**: [IPConfigurationProfile](#ipconfigurationprofile)[] (ReadOnly): Array of IP configuration profiles which reference this subnet.
 * **ipConfigurations**: [IPConfiguration](#ipconfiguration)[] (ReadOnly): Gets an array of references to the network interface IP configurations using subnet.
 * **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
 * **provisioningState**: string: The provisioning state of the resource.
-* **purpose**: string (ReadOnly): A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
 * **resourceNavigationLinks**: [ResourceNavigationLink](#resourcenavigationlink)[]: Gets an array of references to the external resources using subnet.
 * **routeTable**: [RouteTable](#routetable): Route table resource.
-* **serviceAssociationLinks**: [ServiceAssociationLink](#serviceassociationlink)[]: Gets an array of references to services injecting into this subnet.
-* **serviceEndpointPolicies**: [ServiceEndpointPolicy](#serviceendpointpolicy)[]: An array of service endpoint policies.
 * **serviceEndpoints**: [ServiceEndpointPropertiesFormat](#serviceendpointpropertiesformat)[]: An array of service endpoints.
-
-## Delegation
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a subnet. This name can be used to access the resource.
-* **properties**: [ServiceDelegationPropertiesFormat](#servicedelegationpropertiesformat): Properties of a service delegation.
-
-## ServiceDelegationPropertiesFormat
-### Properties
-* **actions**: string[]: Describes the actions permitted to the service upon delegation
-* **provisioningState**: string (ReadOnly): The provisioning state of the resource.
-* **serviceName**: string: The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers)
-
-## InterfaceEndpoint
-### Properties
-* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **location**: string: Resource location.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [InterfaceEndpointProperties](#interfaceendpointproperties): Properties of the interface endpoint.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: string (ReadOnly): Resource type.
-
-## InterfaceEndpointProperties
-### Properties
-* **endpointService**: [EndpointService](#endpointservice): Identifies the service being brought into the virtual network.
-* **fqdn**: string: A first-party service's FQDN that is mapped to the private IP allocated via this interface endpoint.
-* **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): Gets an array of references to the network interfaces created for this interface endpoint.
-* **owner**: string (ReadOnly): A read-only property that identifies who created this interface endpoint.
-* **provisioningState**: string (ReadOnly): The provisioning state of the interface endpoint. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
-
-## EndpointService
-### Properties
-* **id**: string: A unique identifier of the service being referenced by the interface endpoint.
-
-## NetworkInterface
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **location**: string: Resource location.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat): NetworkInterface properties.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: string (ReadOnly): Resource type.
-
-## NetworkInterfacePropertiesFormat
-### Properties
-* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): DNS settings of a network interface.
-* **enableAcceleratedNetworking**: bool: If the network interface is accelerated networking enabled.
-* **enableIPForwarding**: bool: Indicates whether IP forwarding is enabled on this network interface.
-* **hostedWorkloads**: string[] (ReadOnly): A list of references to linked BareMetal resources
-* **interfaceEndpoint**: [InterfaceEndpoint](#interfaceendpoint) (ReadOnly): Interface endpoint resource.
-* **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: A list of IPConfigurations of the network interface.
-* **macAddress**: string: The MAC address of the network interface.
-* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
-* **primary**: bool: Gets whether this is a primary network interface on a virtual machine.
-* **provisioningState**: string: The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **resourceGuid**: string: The resource GUID property of the network interface resource.
-* **tapConfigurations**: [NetworkInterfaceTapConfiguration](#networkinterfacetapconfiguration)[]: A list of TapConfigurations of the network interface.
-* **virtualMachine**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
-
-## NetworkInterfaceDnsSettings
-### Properties
-* **appliedDnsServers**: string[]: If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
-* **dnsServers**: string[]: List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
-* **internalDnsNameLabel**: string: Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
-* **internalDomainNameSuffix**: string: Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
-* **internalFqdn**: string: Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
 
 ## NetworkSecurityGroup
 ### Properties
@@ -861,63 +627,36 @@
 * **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 * **sourcePortRanges**: string[]: The source port ranges.
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NetworkInterfaceTapConfiguration
+## NetworkInterface
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [NetworkInterfaceTapConfigurationPropertiesFormat](#networkinterfacetapconfigurationpropertiesformat): Properties of Virtual Network Tap configuration.
-* **type**: string (ReadOnly): Sub Resource type.
-
-## NetworkInterfaceTapConfigurationPropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the network interface tap configuration. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **virtualNetworkTap**: [VirtualNetworkTap](#virtualnetworktap): Virtual Network Tap resource
-
-## VirtualNetworkTap
-### Properties
-* **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
-* **properties**: [VirtualNetworkTapPropertiesFormat](#virtualnetworktappropertiesformat): Virtual Network Tap properties.
+* **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat): NetworkInterface properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
-## VirtualNetworkTapPropertiesFormat
+## NetworkInterfacePropertiesFormat
 ### Properties
-* **destinationLoadBalancerFrontEndIPConfiguration**: [FrontendIPConfiguration](#frontendipconfiguration): Frontend IP address of the load balancer.
-* **destinationNetworkInterfaceIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration): IPConfiguration in a network interface.
-* **destinationPort**: int: The VXLAN destination port that will receive the tapped traffic.
-* **networkInterfaceTapConfigurations**: [NetworkInterfaceTapConfiguration](#networkinterfacetapconfiguration)[] (ReadOnly): Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
-* **provisioningState**: string (ReadOnly): The provisioning state of the virtual network tap. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **resourceGuid**: string (ReadOnly): The resourceGuid property of the virtual network tap.
+* **dnsSettings**: [NetworkInterfaceDnsSettings](#networkinterfacednssettings): DNS settings of a network interface.
+* **enableAcceleratedNetworking**: bool: If the network interface is accelerated networking enabled.
+* **enableIPForwarding**: bool: Indicates whether IP forwarding is enabled on this network interface.
+* **ipConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[]: A list of IPConfigurations of the network interface.
+* **macAddress**: string: The MAC address of the network interface.
+* **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
+* **primary**: bool: Gets whether this is a primary network interface on a virtual machine.
+* **provisioningState**: string: The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+* **resourceGuid**: string: The resource GUID property of the network interface resource.
+* **virtualMachine**: [SubResource](#subresource): Reference to another subresource.
 
-## FrontendIPConfiguration
+## NetworkInterfaceDnsSettings
 ### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat): Properties of Frontend IP Configuration of the load balancer.
-* **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
-
-## FrontendIPConfigurationPropertiesFormat
-### Properties
-* **inboundNatPools**: [SubResource](#subresource)[] (ReadOnly): Read only. Inbound pools URIs that use this frontend IP.
-* **inboundNatRules**: [SubResource](#subresource)[] (ReadOnly): Read only. Inbound rules URIs that use this frontend IP.
-* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets load balancing rules URIs that use this frontend IP.
-* **outboundRules**: [SubResource](#subresource)[] (ReadOnly): Read only. Outbound rules URIs that use this frontend IP.
-* **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method.
-* **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
-* **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
+* **appliedDnsServers**: string[]: If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
+* **dnsServers**: string[]: List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+* **internalDnsNameLabel**: string: Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+* **internalDomainNameSuffix**: string: Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
+* **internalFqdn**: string: Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
 
 ## ResourceTags
 ### Properties
@@ -928,24 +667,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## IPConfigurationProfile
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource. This name can be used to access the resource.
-* **properties**: [IPConfigurationProfilePropertiesFormat](#ipconfigurationprofilepropertiesformat): IP configuration profile properties.
-* **type**: string (ReadOnly): Sub Resource type.
-
-## IPConfigurationProfilePropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the resource.
-* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## ResourceNavigationLink
 ### Properties
@@ -996,55 +717,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ServiceAssociationLink
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: Name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [ServiceAssociationLinkPropertiesFormat](#serviceassociationlinkpropertiesformat): Properties of ServiceAssociationLink.
-
-## ServiceAssociationLinkPropertiesFormat
-### Properties
-* **link**: string: Link to the external resource.
-* **linkedResourceType**: string: Resource type of the linked resource.
-* **provisioningState**: string (ReadOnly): Provisioning state of the ServiceAssociationLink resource.
-
-## ServiceEndpointPolicy
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **location**: string: Resource location.
-* **name**: string (ReadOnly): Resource name.
-* **properties**: [ServiceEndpointPolicyPropertiesFormat](#serviceendpointpolicypropertiesformat): Service Endpoint Policy resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: string (ReadOnly): Resource type.
-
-## ServiceEndpointPolicyPropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the service endpoint policy. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **resourceGuid**: string (ReadOnly): The resource GUID property of the service endpoint policy resource.
-* **serviceEndpointPolicyDefinitions**: [ServiceEndpointPolicyDefinition](#serviceendpointpolicydefinition)[]: A collection of service endpoint policy definitions of the service endpoint policy.
-* **subnets**: [Subnet](#subnet)[] (ReadOnly): A collection of references to subnets.
-
-## ServiceEndpointPolicyDefinition
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [ServiceEndpointPolicyDefinitionPropertiesFormat](#serviceendpointpolicydefinitionpropertiesformat): Service Endpoint policy definition resource.
-
-## ServiceEndpointPolicyDefinitionPropertiesFormat
-### Properties
-* **description**: string: A description for this rule. Restricted to 140 chars.
-* **provisioningState**: string (ReadOnly): The provisioning state of the service end point policy definition. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **service**: string: service endpoint name.
-* **serviceResources**: string[]: A list of service resources.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ServiceEndpointPropertiesFormat
 ### Properties
 * **locations**: string[]: A list of locations.
@@ -1088,17 +760,11 @@
 * **protocol**: 'Http' | 'Https': The protocol used to communicate with the backend. Possible values are 'Http' and 'Https'.
 * **provisioningState**: string: Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **requestTimeout**: int: Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
-* **trustedRootCertificates**: [SubResource](#subresource)[]: Array of references to application gateway trusted root certificates.
 
 ## ApplicationGatewayConnectionDraining
 ### Properties
 * **drainTimeoutInSec**: int (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
 * **enabled**: bool (Required): Whether connection draining is enabled or not.
-
-## ApplicationGatewayCustomError
-### Properties
-* **customErrorPageUrl**: string: Error page URL of the application gateway customer error.
-* **statusCode**: 'HttpStatus403' | 'HttpStatus502': Status code of the application gateway customer error.
 
 ## ApplicationGatewayFrontendIPConfiguration
 ### Properties
@@ -1152,7 +818,6 @@
 
 ## ApplicationGatewayHttpListenerPropertiesFormat
 ### Properties
-* **customErrorConfigurations**: [ApplicationGatewayCustomError](#applicationgatewaycustomerror)[]: Custom error configurations of the HTTP listener.
 * **frontendIPConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **frontendPort**: [SubResource](#subresource): Reference to another subresource.
 * **hostName**: string: Host name of HTTP listener.
@@ -1221,36 +886,8 @@
 * **httpListener**: [SubResource](#subresource): Reference to another subresource.
 * **provisioningState**: string: Provisioning state of the request routing rule resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **redirectConfiguration**: [SubResource](#subresource): Reference to another subresource.
-* **rewriteRuleSet**: [SubResource](#subresource): Reference to another subresource.
 * **ruleType**: 'Basic' | 'PathBasedRouting': Rule type.
 * **urlPathMap**: [SubResource](#subresource): Reference to another subresource.
-
-## ApplicationGatewayRewriteRuleSet
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: Name of the rewrite rule set that is unique within an Application Gateway.
-* **properties**: [ApplicationGatewayRewriteRuleSetPropertiesFormat](#applicationgatewayrewriterulesetpropertiesformat): Properties of rewrite rule set of the application gateway.
-
-## ApplicationGatewayRewriteRuleSetPropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): Provisioning state of the rewrite rule set resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **rewriteRules**: [ApplicationGatewayRewriteRule](#applicationgatewayrewriterule)[]: Rewrite rules in the rewrite rule set.
-
-## ApplicationGatewayRewriteRule
-### Properties
-* **actionSet**: [ApplicationGatewayRewriteRuleActionSet](#applicationgatewayrewriteruleactionset): Set of actions in the Rewrite Rule in Application Gateway.
-* **name**: string: Name of the rewrite rule that is unique within an Application Gateway.
-
-## ApplicationGatewayRewriteRuleActionSet
-### Properties
-* **requestHeaderConfigurations**: [ApplicationGatewayHeaderConfiguration](#applicationgatewayheaderconfiguration)[]: Request Header Actions in the Action Set
-* **responseHeaderConfigurations**: [ApplicationGatewayHeaderConfiguration](#applicationgatewayheaderconfiguration)[]: Response Header Actions in the Action Set
-
-## ApplicationGatewayHeaderConfiguration
-### Properties
-* **headerName**: string: Header name of the header configuration
-* **headerValue**: string: Header value of the header configuration
 
 ## ApplicationGatewaySku
 ### Properties
@@ -1269,7 +906,6 @@
 ## ApplicationGatewaySslCertificatePropertiesFormat
 ### Properties
 * **data**: string: Base-64 encoded pfx certificate. Only applicable in PUT Request.
-* **keyVaultSecretId**: string: Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
 * **password**: string: Password for the pfx file specified in data. Only applicable in PUT request.
 * **provisioningState**: string: Provisioning state of the SSL certificate resource Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **publicCertData**: string: Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
@@ -1281,20 +917,6 @@
 * **minProtocolVersion**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2': Ssl protocol enums.
 * **policyName**: 'AppGwSslPolicy20150501' | 'AppGwSslPolicy20170401' | 'AppGwSslPolicy20170401S': Ssl predefined policy name enums.
 * **policyType**: 'Custom' | 'Predefined': Type of Ssl Policy
-
-## ApplicationGatewayTrustedRootCertificate
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: Name of the trusted root certificate that is unique within an Application Gateway.
-* **properties**: [ApplicationGatewayTrustedRootCertificatePropertiesFormat](#applicationgatewaytrustedrootcertificatepropertiesformat): Trusted Root certificates properties of an application gateway.
-* **type**: string: Type of the resource.
-
-## ApplicationGatewayTrustedRootCertificatePropertiesFormat
-### Properties
-* **data**: string: Certificate public data.
-* **keyVaultSecretId**: string: Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
-* **provisioningState**: string: Provisioning state of the trusted root certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## ApplicationGatewayUrlPathMap
 ### Properties
@@ -1309,7 +931,6 @@
 * **defaultBackendAddressPool**: [SubResource](#subresource): Reference to another subresource.
 * **defaultBackendHttpSettings**: [SubResource](#subresource): Reference to another subresource.
 * **defaultRedirectConfiguration**: [SubResource](#subresource): Reference to another subresource.
-* **defaultRewriteRuleSet**: [SubResource](#subresource): Reference to another subresource.
 * **pathRules**: [ApplicationGatewayPathRule](#applicationgatewaypathrule)[]: Path rule of URL path map resource.
 * **provisioningState**: string: Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
@@ -1328,17 +949,13 @@
 * **paths**: string[]: Path rules of URL path map.
 * **provisioningState**: string: Path rule of URL path map resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **redirectConfiguration**: [SubResource](#subresource): Reference to another subresource.
-* **rewriteRuleSet**: [SubResource](#subresource): Reference to another subresource.
 
 ## ApplicationGatewayWebApplicationFirewallConfiguration
 ### Properties
 * **disabledRuleGroups**: [ApplicationGatewayFirewallDisabledRuleGroup](#applicationgatewayfirewalldisabledrulegroup)[]: The disabled rule groups.
 * **enabled**: bool (Required): Whether the web application firewall is enabled or not.
-* **exclusions**: [ApplicationGatewayFirewallExclusion](#applicationgatewayfirewallexclusion)[]: The exclusion list.
-* **fileUploadLimitInMb**: int: Maximum file upload size in Mb for WAF.
 * **firewallMode**: 'Detection' | 'Prevention' (Required): Web application firewall mode.
 * **maxRequestBodySize**: int: Maximum request body size for WAF.
-* **maxRequestBodySizeInKb**: int: Maximum request body size in Kb for WAF.
 * **requestBodyCheck**: bool: Whether allow WAF to check request Body.
 * **ruleSetType**: string (Required): The type of the web application firewall rule set. Possible values are: 'OWASP'.
 * **ruleSetVersion**: string (Required): The version of the rule set type.
@@ -1347,12 +964,6 @@
 ### Properties
 * **ruleGroupName**: string (Required): The name of the rule group that will be disabled.
 * **rules**: int[]: The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
-
-## ApplicationGatewayFirewallExclusion
-### Properties
-* **matchVariable**: string (Required): The variable to be excluded.
-* **selector**: string (Required): When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
-* **selectorMatchOperator**: string (Required): When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
 
 ## ResourceTags
 ### Properties
@@ -1366,10 +977,9 @@
 
 ## AzureFirewallPropertiesFormat
 ### Properties
-* **applicationRuleCollections**: [AzureFirewallApplicationRuleCollection](#azurefirewallapplicationrulecollection)[]: Collection of application rule collections used by Azure Firewall.
+* **applicationRuleCollections**: [AzureFirewallApplicationRuleCollection](#azurefirewallapplicationrulecollection)[]: Collection of application rule collections used by a Azure Firewall.
 * **ipConfigurations**: [AzureFirewallIPConfiguration](#azurefirewallipconfiguration)[]: IP configuration of the Azure Firewall resource.
-* **natRuleCollections**: [AzureFirewallNatRuleCollection](#azurefirewallnatrulecollection)[]: Collection of NAT rule collections used by Azure Firewall.
-* **networkRuleCollections**: [AzureFirewallNetworkRuleCollection](#azurefirewallnetworkrulecollection)[]: Collection of network rule collections used by Azure Firewall.
+* **networkRuleCollections**: [AzureFirewallNetworkRuleCollection](#azurefirewallnetworkrulecollection)[]: Collection of network rule collections used by a Azure Firewall.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
 
 ## AzureFirewallApplicationRuleCollection
@@ -1393,11 +1003,10 @@
 ## AzureFirewallApplicationRule
 ### Properties
 * **description**: string: Description of the rule.
-* **fqdnTags**: string[]: List of FQDN Tags for this rule.
 * **name**: string: Name of the application rule.
 * **protocols**: [AzureFirewallApplicationRuleProtocol](#azurefirewallapplicationruleprotocol)[]: Array of ApplicationRuleProtocols.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
-* **targetFqdns**: string[]: List of FQDNs for this rule.
+* **targetUrls**: string[]: List of URLs for this rule.
 
 ## AzureFirewallApplicationRuleProtocol
 ### Properties
@@ -1406,46 +1015,18 @@
 
 ## AzureFirewallIPConfiguration
 ### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: Name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [AzureFirewallIPConfigurationPropertiesFormat](#azurefirewallipconfigurationpropertiesformat): Properties of IP configuration of an Azure Firewall.
 
 ## AzureFirewallIPConfigurationPropertiesFormat
 ### Properties
-* **privateIPAddress**: string (ReadOnly): The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
+* **internalPublicIpAddress**: [SubResource](#subresource): Reference to another subresource.
+* **privateIPAddress**: string: The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
 * **publicIPAddress**: [SubResource](#subresource): Reference to another subresource.
 * **subnet**: [SubResource](#subresource): Reference to another subresource.
-
-## AzureFirewallNatRuleCollection
-### Properties
-* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: Gets name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [AzureFirewallNatRuleCollectionProperties](#azurefirewallnatrulecollectionproperties): Properties of the NAT rule collection.
-
-## AzureFirewallNatRuleCollectionProperties
-### Properties
-* **action**: [AzureFirewallNatRCAction](#azurefirewallnatrcaction): AzureFirewall NAT Rule Collection Action.
-* **priority**: int: Priority of the NAT rule collection resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
-* **rules**: [AzureFirewallNatRule](#azurefirewallnatrule)[]: Collection of rules used by a NAT rule collection.
-
-## AzureFirewallNatRCAction
-### Properties
-* **type**: 'Dnat' | 'Snat': The action type of a NAT rule collection
-
-## AzureFirewallNatRule
-### Properties
-* **description**: string: Description of the rule.
-* **destinationAddresses**: string[]: List of destination IP addresses for this rule.
-* **destinationPorts**: string[]: List of destination ports.
-* **name**: string: Name of the NAT rule.
-* **protocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
-* **sourceAddresses**: string[]: List of source IP addresses for this rule.
-* **translatedAddress**: string: The translated address for this NAT rule.
-* **translatedPort**: string: The translated port for this NAT rule.
 
 ## AzureFirewallNetworkRuleCollection
 ### Properties
@@ -1478,12 +1059,10 @@
 ## VirtualNetworkGatewayConnectionPropertiesFormat
 ### Properties
 * **authorizationKey**: string: The authorizationKey.
-* **connectionProtocol**: 'IKEv1' | 'IKEv2': Gateway connection protocol. Possible values are: 'IKEv2', 'IKEv1'.
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly): Virtual network Gateway connection status
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' (Required): Gateway connection type. Possible values are: 'Ipsec','Vnet2Vnet','ExpressRoute', and 'VPNClient.
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' (Required): Gateway connection type. Possible values are: 'IPsec','Vnet2Vnet','ExpressRoute', and 'VPNClient.
 * **egressBytesTransferred**: int (ReadOnly): The egress bytes transferred in this connection.
 * **enableBgp**: bool: EnableBgp flag
-* **expressRouteGatewayBypass**: bool: Bypass ExpressRoute Gateway for data forwarding
 * **ingressBytesTransferred**: int (ReadOnly): The ingress bytes transferred in this connection.
 * **ipsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: The IPSec Policies to be considered by this connection.
 * **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information
@@ -1651,11 +1230,8 @@
 ## ExpressRouteCircuitPropertiesFormat
 ### Properties
 * **allowClassicOperations**: bool: Allow classic operations
-* **allowGlobalReach**: bool: Flag to enable Global Reach on the circuit.
 * **authorizations**: [ExpressRouteCircuitAuthorization](#expressroutecircuitauthorization)[]: The list of authorizations.
-* **bandwidthInGbps**: int: The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
 * **circuitProvisioningState**: string: The CircuitProvisioningState state of the resource.
-* **expressRoutePort**: [SubResource](#subresource): Reference to another subresource.
 * **gatewayManagerEtag**: string: The GatewayManager Etag.
 * **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[]: The list of peerings.
 * **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
@@ -1663,7 +1239,6 @@
 * **serviceProviderNotes**: string: The ServiceProviderNotes.
 * **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit.
 * **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning': The ServiceProviderProvisioningState state of the resource. Possible values are 'NotProvisioned', 'Provisioning', 'Provisioned', and 'Deprovisioning'.
-* **stag**: int (ReadOnly): The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
 
 ## ExpressRouteCircuitAuthorization
 ### Properties
@@ -1689,7 +1264,6 @@
 ### Properties
 * **azureASN**: int: The Azure ASN.
 * **connections**: [ExpressRouteCircuitConnection](#expressroutecircuitconnection)[]: The list of circuit connections associated with Azure Private Peering for this circuit.
-* **expressRouteConnection**: [ExpressRouteConnectionId](#expressrouteconnectionid): The ID of the ExpressRouteConnection.
 * **gatewayManagerEtag**: string: The GatewayManager Etag.
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): Contains IPv6 peering config.
 * **lastModifiedBy**: string: Gets whether the provider or the customer last modified the peering.
@@ -1722,10 +1296,6 @@
 * **expressRouteCircuitPeering**: [SubResource](#subresource): Reference to another subresource.
 * **peerExpressRouteCircuitPeering**: [SubResource](#subresource): Reference to another subresource.
 * **provisioningState**: string (ReadOnly): Provisioning state of the circuit connection resource. Possible values are: 'Succeeded', 'Updating', 'Deleting', and 'Failed'.
-
-## ExpressRouteConnectionId
-### Properties
-* **id**: string (ReadOnly): The ID of the ExpressRouteConnection.
 
 ## Ipv6ExpressRouteCircuitPeeringConfig
 ### Properties
@@ -1797,7 +1367,7 @@
 ### Properties
 * **family**: 'MeteredData' | 'UnlimitedData': The family of the SKU. Possible values are: 'UnlimitedData' and 'MeteredData'.
 * **name**: string: The name of the SKU.
-* **tier**: 'Basic' | 'Premium' | 'Standard': The tier of the SKU. Possible values are 'Standard', 'Premium' or 'Basic'.
+* **tier**: 'Premium' | 'Standard': The tier of the SKU. Possible values are 'Standard' and 'Premium'.
 
 ## ResourceTags
 ### Properties
@@ -1851,89 +1421,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ExpressRouteGatewayProperties
-### Properties
-* **autoScaleConfiguration**: [ExpressRouteGatewayPropertiesAutoScaleConfiguration](#expressroutegatewaypropertiesautoscaleconfiguration): Configuration for auto scaling.
-* **expressRouteConnections**: [ExpressRouteConnection](#expressrouteconnection)[] (ReadOnly): List of ExpressRoute connections to the ExpressRoute gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
-* **virtualHub**: [VirtualHubId](#virtualhubid) (Required): Virtual Hub identifier.
-
-## ExpressRouteGatewayPropertiesAutoScaleConfiguration
-### Properties
-* **bounds**: [ExpressRouteGatewayPropertiesAutoScaleConfigurationBounds](#expressroutegatewaypropertiesautoscaleconfigurationbounds): Minimum and maximum number of scale units to deploy.
-
-## ExpressRouteGatewayPropertiesAutoScaleConfigurationBounds
-### Properties
-* **max**: int: Maximum number of scale units deployed for ExpressRoute gateway.
-* **min**: int: Minimum number of scale units deployed for ExpressRoute gateway.
-
-## ExpressRouteConnection
-### Properties
-* **id**: string: Resource ID.
-* **name**: string (Required): The name of the resource.
-* **properties**: [ExpressRouteConnectionProperties](#expressrouteconnectionproperties): Properties of the ExpressRouteConnection subresource.
-
-## ExpressRouteConnectionProperties
-### Properties
-* **authorizationKey**: string: Authorization key to establish the connection.
-* **expressRouteCircuitPeering**: [ExpressRouteCircuitPeeringId](#expressroutecircuitpeeringid) (Required): ExpressRoute circuit peering identifier.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
-* **routingWeight**: int: The routing weight associated to the connection.
-
-## ExpressRouteCircuitPeeringId
-### Properties
-* **id**: string: The ID of the ExpressRoute circuit peering.
-
-## VirtualHubId
-### Properties
-* **id**: string: The resource URI for the Virtual Hub where the ExpressRoute gateway is or will be deployed. The Virtual Hub resource and the ExpressRoute gateway resource reside in the same subscription.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ExpressRoutePortPropertiesFormat
-### Properties
-* **allocationDate**: string (ReadOnly): Date of the physical port allocation to be used in Letter of Authorization.
-* **bandwidthInGbps**: int: Bandwidth of procured ports in Gbps
-* **circuits**: [SubResource](#subresource)[] (ReadOnly): Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
-* **encapsulation**: 'Dot1Q' | 'QinQ': Encapsulation method on physical ports.
-* **etherType**: string (ReadOnly): Ether type of the physical port.
-* **links**: [ExpressRouteLink](#expressroutelink)[]: The set of physical links of the ExpressRoutePort resource
-* **mtu**: string (ReadOnly): Maximum transmission unit of the physical port pair(s)
-* **peeringLocation**: string: The name of the peering location that the ExpressRoutePort is mapped to physically.
-* **provisionedBandwidthInGbps**: int (ReadOnly): Aggregate Gbps of associated circuit bandwidths.
-* **provisioningState**: string (ReadOnly): The provisioning state of the ExpressRoutePort resource. Possible values are: 'Succeeded', 'Updating', 'Deleting', and 'Failed'.
-* **resourceGuid**: string: The resource GUID property of the ExpressRoutePort resource.
-
-## ExpressRouteLink
-### Properties
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: Name of child port resource that is unique among child port resources of the parent.
-* **properties**: [ExpressRouteLinkPropertiesFormat](#expressroutelinkpropertiesformat): Properties specific to ExpressRouteLink resources.
-
-## ExpressRouteLinkPropertiesFormat
-### Properties
-* **adminState**: 'Disabled' | 'Enabled': Administrative state of the physical port
-* **connectorType**: 'LC' | 'SC' (ReadOnly): Physical fiber port type.
-* **interfaceName**: string (ReadOnly): Name of Azure router interface.
-* **patchPanelId**: string (ReadOnly): Mapping between physical port to patch panel port.
-* **provisioningState**: string (ReadOnly): The provisioning state of the ExpressRouteLink resource. Possible values are: 'Succeeded', 'Updating', 'Deleting', and 'Failed'.
-* **rackId**: string (ReadOnly): Mapping of physical patch panel to rack.
-* **routerName**: string (ReadOnly): Name of Azure router associated with physical port.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## LoadBalancerPropertiesFormat
 ### Properties
 * **backendAddressPools**: [BackendAddressPool](#backendaddresspool)[]: Collection of backend address pools used by a load balancer
@@ -1941,10 +1428,30 @@
 * **inboundNatPools**: [InboundNatPool](#inboundnatpool)[]: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
 * **inboundNatRules**: [InboundNatRule](#inboundnatrule)[]: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Object collection representing the load balancing rules Gets the provisioning
-* **outboundRules**: [OutboundRule](#outboundrule)[]: The outbound rules.
+* **outboundNatRules**: [OutboundNatRule](#outboundnatrule)[]: The outbound NAT rules.
 * **probes**: [Probe](#probe)[]: Collection of probe objects used in the load balancer
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **resourceGuid**: string: The resource GUID property of the load balancer resource.
+
+## FrontendIPConfiguration
+### Properties
+* **etag**: string: A unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **properties**: [FrontendIPConfigurationPropertiesFormat](#frontendipconfigurationpropertiesformat): Properties of Frontend IP Configuration of the load balancer.
+* **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
+
+## FrontendIPConfigurationPropertiesFormat
+### Properties
+* **inboundNatPools**: [SubResource](#subresource)[] (ReadOnly): Read only. Inbound pools URIs that use this frontend IP.
+* **inboundNatRules**: [SubResource](#subresource)[] (ReadOnly): Read only. Inbound rules URIs that use this frontend IP.
+* **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): Gets load balancing rules URIs that use this frontend IP.
+* **outboundNatRules**: [SubResource](#subresource)[] (ReadOnly): Read only. Outbound rules URIs that use this frontend IP.
+* **privateIPAddress**: string: The private IP address of the IP configuration.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': PrivateIP allocation method.
+* **provisioningState**: string: Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+* **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
+* **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## InboundNatPool
 ### Properties
@@ -1957,7 +1464,6 @@
 ### Properties
 * **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **enableTcpReset**: bool: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
 * **frontendIPConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **frontendPortRangeEnd**: int (Required): The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
 * **frontendPortRangeStart**: int (Required): The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
@@ -1978,7 +1484,6 @@
 * **backendPort**: int: The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port"
 * **disableOutboundSnat**: bool: Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
 * **enableFloatingIP**: bool: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-* **enableTcpReset**: bool: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
 * **frontendIPConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port"
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
@@ -1987,21 +1492,18 @@
 * **protocol**: 'All' | 'Tcp' | 'Udp' (Required): The transport protocol for the endpoint. Possible values are 'Udp' or 'Tcp' or 'All'.
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
-## OutboundRule
+## OutboundNatRule
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
 * **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [OutboundRulePropertiesFormat](#outboundrulepropertiesformat): Outbound rule of the load balancer.
+* **properties**: [OutboundNatRulePropertiesFormat](#outboundnatrulepropertiesformat): Outbound NAT pool of the load balancer.
 
-## OutboundRulePropertiesFormat
+## OutboundNatRulePropertiesFormat
 ### Properties
 * **allocatedOutboundPorts**: int: The number of outbound ports to be used for NAT.
 * **backendAddressPool**: [SubResource](#subresource) (Required): Reference to another subresource.
-* **enableTcpReset**: bool: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-* **frontendIPConfigurations**: [SubResource](#subresource)[] (Required): The Frontend IP addresses of the load balancer.
-* **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection
-* **protocol**: 'All' | 'Tcp' | 'Udp' (Required): Protocol - TCP, UDP or All
+* **frontendIPConfigurations**: [SubResource](#subresource)[]: The Frontend IP addresses of the load balancer.
 * **provisioningState**: string: Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 
 ## Probe
@@ -2034,62 +1536,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## NetworkProfilePropertiesFormat
-### Properties
-* **containerNetworkInterfaceConfigurations**: [ContainerNetworkInterfaceConfiguration](#containernetworkinterfaceconfiguration)[]: List of chid container network interface configurations.
-* **containerNetworkInterfaces**: [ContainerNetworkInterface](#containernetworkinterface)[]: List of child container network interfaces.
-* **provisioningState**: string (ReadOnly): The provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): The resource GUID property of the network interface resource.
-
-## ContainerNetworkInterfaceConfiguration
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource. This name can be used to access the resource.
-* **properties**: [ContainerNetworkInterfaceConfigurationPropertiesFormat](#containernetworkinterfaceconfigurationpropertiesformat): Container network interface configuration properties.
-* **type**: string (ReadOnly): Sub Resource type.
-
-## ContainerNetworkInterfaceConfigurationPropertiesFormat
-### Properties
-* **containerNetworkInterfaces**: [SubResource](#subresource)[]: A list of container network interfaces created from this container network interface configuration.
-* **ipConfigurations**: [IPConfigurationProfile](#ipconfigurationprofile)[]: A list of ip configurations of the container network interface configuration.
-* **provisioningState**: string (ReadOnly): The provisioning state of the resource.
-
-## ContainerNetworkInterface
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource. This name can be used to access the resource.
-* **properties**: [ContainerNetworkInterfacePropertiesFormat](#containernetworkinterfacepropertiesformat)
-* **type**: string (ReadOnly): Sub Resource type.
-
-## ContainerNetworkInterfacePropertiesFormat
-### Properties
-* **container**: [Container](#container): Reference to container resource in remote resource provider.
-* **containerNetworkInterfaceConfiguration**: [ContainerNetworkInterfaceConfiguration](#containernetworkinterfaceconfiguration): Container network interface configuration child resource.
-* **ipConfigurations**: [ContainerNetworkInterfaceIpConfiguration](#containernetworkinterfaceipconfiguration)[]: Reference to the ip configuration on this container nic.
-* **provisioningState**: string (ReadOnly): The provisioning state of the resource.
-
-## Container
-### Properties
-* **id**: string: Resource ID.
-
-## ContainerNetworkInterfaceIpConfiguration
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **name**: string: The name of the resource. This name can be used to access the resource.
-* **properties**: [ContainerNetworkInterfaceIpConfigurationPropertiesFormat](#containernetworkinterfaceipconfigurationpropertiesformat): Properties of the container network interface IP configuration.
-* **type**: string (ReadOnly): Sub Resource type.
-
-## ContainerNetworkInterfaceIpConfigurationPropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the resource.
 
 ## ResourceTags
 ### Properties
@@ -2160,56 +1606,6 @@
 * **storageId**: string: The ID of the storage account to save the packet capture session. Required if no local file path is provided.
 * **storagePath**: string: The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
 
-## P2SVpnGatewayProperties
-### Properties
-* **p2SVpnServerConfiguration**: [SubResource](#subresource): Reference to another subresource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
-* **virtualHub**: [SubResource](#subresource): Reference to another subresource.
-* **vpnClientAddressPool**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
-* **vpnClientConnectionHealth**: [VpnClientConnectionHealth](#vpnclientconnectionhealth) (ReadOnly): VpnClientConnectionHealth properties
-* **vpnGatewayScaleUnit**: int: The scale unit for this p2s vpn gateway.
-
-## VpnClientConnectionHealth
-### Properties
-* **allocatedIpAddresses**: string[]: List of allocated ip addresses to the connected p2s vpn clients.
-* **totalEgressBytesTransferred**: int (ReadOnly): Total of the Egress Bytes Transferred in this connection
-* **totalIngressBytesTransferred**: int (ReadOnly): Total of the Ingress Bytes Transferred in this P2S Vpn connection
-* **vpnClientConnectionsCount**: int: The total of p2s vpn clients connected at this time to this P2SVpnGateway.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## PublicIPPrefixPropertiesFormat
-### Properties
-* **ipPrefix**: string: The allocated Prefix
-* **ipTags**: [IpTag](#iptag)[]: The list of tags associated with the public IP prefix.
-* **loadBalancerFrontendIpConfiguration**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
-* **prefixLength**: int: The Length of the Public IP Prefix.
-* **provisioningState**: string: The provisioning state of the Public IP prefix resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicIPAddresses**: [ReferencedPublicIpAddress](#referencedpublicipaddress)[]: The list of all referenced PublicIPAddresses
-* **publicIPAddressVersion**: 'IPv4' | 'IPv6': Available from Api-Version 2016-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
-* **resourceGuid**: string: The resource GUID property of the public IP prefix resource.
-
-## ReferencedPublicIpAddress
-### Properties
-* **id**: string: The PublicIPAddress Reference
-
-## PublicIPPrefixSku
-### Properties
-* **name**: 'Standard': Name of a public IP prefix SKU.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ResourceTags
 ### Properties
 ### Additional Properties
@@ -2228,37 +1624,31 @@
 ## VirtualHubProperties
 ### Properties
 * **addressPrefix**: string: Address-prefix for this VirtualHub.
-* **expressRouteGateway**: [SubResource](#subresource): Reference to another subresource.
-* **p2SVpnGateway**: [SubResource](#subresource): Reference to another subresource.
+* **hubVirtualNetworkConnections**: [HubVirtualNetworkConnection](#hubvirtualnetworkconnection)[]: list of all vnet connections with this VirtualHub.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
-* **routeTable**: [VirtualHubRouteTable](#virtualhubroutetable): VirtualHub route table
-* **virtualNetworkConnections**: [HubVirtualNetworkConnection](#hubvirtualnetworkconnection)[]: list of all vnet connections with this VirtualHub.
 * **virtualWan**: [SubResource](#subresource): Reference to another subresource.
-* **vpnGateway**: [SubResource](#subresource): Reference to another subresource.
-
-## VirtualHubRouteTable
-### Properties
-* **routes**: [VirtualHubRoute](#virtualhubroute)[]: list of all routes.
-
-## VirtualHubRoute
-### Properties
-* **addressPrefixes**: string[]: list of all addressPrefixes.
-* **nextHopIpAddress**: string: NextHop ip address.
 
 ## HubVirtualNetworkConnection
 ### Properties
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **location**: string: Resource location.
+* **name**: string (ReadOnly): Resource name.
 * **properties**: [HubVirtualNetworkConnectionProperties](#hubvirtualnetworkconnectionproperties): Parameters for HubVirtualNetworkConnection
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: string (ReadOnly): Resource type.
 
 ## HubVirtualNetworkConnectionProperties
 ### Properties
 * **allowHubToRemoteVnetTransit**: bool: VirtualHub to RemoteVnet transit to enabled or not.
 * **allowRemoteVnetToUseHubVnetGateways**: bool: Allow RemoteVnet to use Virtual Hub's gateways.
-* **enableInternetSecurity**: bool: Enable internet security
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
 * **remoteVirtualNetwork**: [SubResource](#subresource): Reference to another subresource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties
@@ -2309,81 +1699,13 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## P2SVpnServerConfigurationProperties
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **name**: string: The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Parent VirtualWan resource name.
-* **p2SVpnGateways**: [SubResource](#subresource)[] (ReadOnly): Array of SubResource
-* **p2SVpnServerConfigRadiusClientRootCertificates**: [P2SVpnServerConfigRadiusClientRootCertificate](#p2svpnserverconfigradiusclientrootcertificate)[]: Radius client root certificate of P2SVpnServerConfiguration.
-* **p2SVpnServerConfigRadiusServerRootCertificates**: [P2SVpnServerConfigRadiusServerRootCertificate](#p2svpnserverconfigradiusserverrootcertificate)[]: Radius Server root certificate of P2SVpnServerConfiguration.
-* **p2SVpnServerConfigVpnClientRevokedCertificates**: [P2SVpnServerConfigVpnClientRevokedCertificate](#p2svpnserverconfigvpnclientrevokedcertificate)[]: VPN client revoked certificate of P2SVpnServerConfiguration.
-* **p2SVpnServerConfigVpnClientRootCertificates**: [P2SVpnServerConfigVpnClientRootCertificate](#p2svpnserverconfigvpnclientrootcertificate)[]: VPN client root certificate of P2SVpnServerConfiguration.
-* **provisioningState**: string (ReadOnly): The provisioning state of the P2SVpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **radiusServerAddress**: string: The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
-* **radiusServerSecret**: string: The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
-* **vpnClientIpsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: VpnClientIpsecPolicies for P2SVpnServerConfiguration.
-* **vpnProtocols**: 'IkeV2' | 'OpenVPN'[]: vpnProtocols for the P2SVpnServerConfiguration.
-
-## P2SVpnServerConfigRadiusClientRootCertificate
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [P2SVpnServerConfigRadiusClientRootCertificatePropertiesFormat](#p2svpnserverconfigradiusclientrootcertificatepropertiesformat): Properties of the Radius client root certificate of P2SVpnServerConfiguration.
-
-## P2SVpnServerConfigRadiusClientRootCertificatePropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the Radius client root certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **thumbprint**: string: The Radius client root certificate thumbprint.
-
-## P2SVpnServerConfigRadiusServerRootCertificate
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [P2SVpnServerConfigRadiusServerRootCertificatePropertiesFormat](#p2svpnserverconfigradiusserverrootcertificatepropertiesformat) (Required): Properties of Radius Server root certificate of P2SVpnServerConfiguration.
-
-## P2SVpnServerConfigRadiusServerRootCertificatePropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the P2SVpnServerConfiguration Radius Server root certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicCertData**: string (Required): The certificate public data.
-
-## P2SVpnServerConfigVpnClientRevokedCertificate
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [P2SVpnServerConfigVpnClientRevokedCertificatePropertiesFormat](#p2svpnserverconfigvpnclientrevokedcertificatepropertiesformat): Properties of the revoked VPN client certificate of P2SVpnServerConfiguration.
-
-## P2SVpnServerConfigVpnClientRevokedCertificatePropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the VPN client revoked certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **thumbprint**: string: The revoked VPN client certificate thumbprint.
-
-## P2SVpnServerConfigVpnClientRootCertificate
-### Properties
-* **etag**: string: A unique read-only string that changes whenever the resource is updated.
-* **id**: string: Resource ID.
-* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
-* **properties**: [P2SVpnServerConfigVpnClientRootCertificatePropertiesFormat](#p2svpnserverconfigvpnclientrootcertificatepropertiesformat) (Required): Properties of VPN client root certificate of P2SVpnServerConfiguration.
-
-## P2SVpnServerConfigVpnClientRootCertificatePropertiesFormat
-### Properties
-* **provisioningState**: string (ReadOnly): The provisioning state of the P2SVpnServerConfiguration VPN client root certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
-* **publicCertData**: string (Required): The certificate public data.
-
 ## VpnGatewayProperties
 ### Properties
 * **bgpSettings**: [BgpSettings](#bgpsettings): BGP settings details
 * **connections**: [VpnConnection](#vpnconnection)[]: list of all vpn connections to the gateway.
+* **policies**: [Policies](#policies): Policies for vpn gateway.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
 * **virtualHub**: [SubResource](#subresource): Reference to another subresource.
-* **vpnGatewayScaleUnit**: int: The scale unit for this vpn gateway.
 
 ## VpnConnection
 ### Properties
@@ -2394,19 +1716,21 @@
 
 ## VpnConnectionProperties
 ### Properties
-* **connectionBandwidth**: int: Expected bandwidth in MBPS.
+* **connectionBandwidth**: int (ReadOnly): Expected bandwidth in MBPS.
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly): The current state of the vpn connection.
 * **egressBytesTransferred**: int (ReadOnly): Egress bytes transferred.
 * **enableBgp**: bool: EnableBgp flag
-* **enableInternetSecurity**: bool: Enable internet security
-* **enableRateLimiting**: bool: EnableBgp flag
 * **ingressBytesTransferred**: int (ReadOnly): Ingress bytes transferred.
 * **ipsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: The IPSec Policies to be considered by this connection.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
 * **remoteVpnSite**: [SubResource](#subresource): Reference to another subresource.
 * **routingWeight**: int: routing weight for vpn connection.
 * **sharedKey**: string: SharedKey for the vpn connection.
-* **vpnConnectionProtocolType**: 'IKEv1' | 'IKEv2': Gateway connection protocol. Possible values are: 'IKEv2', 'IKEv1'.
+
+## Policies
+### Properties
+* **allowBranchToBranchTraffic**: bool: True if branch to branch traffic is allowed.
+* **allowVnetToVnetTraffic**: bool: True if Vnet to Vnet traffic is allowed.
 
 ## ResourceTags
 ### Properties
@@ -2419,10 +1743,9 @@
 * **bgpProperties**: [BgpSettings](#bgpsettings): BGP settings details
 * **deviceProperties**: [DeviceProperties](#deviceproperties): List of properties of the device.
 * **ipAddress**: string: The ip-address for the vpn-site.
-* **isSecuritySite**: bool: IsSecuritySite flag
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
 * **siteKey**: string: The key for vpn-site that can be used for connections.
-* **virtualWan**: [SubResource](#subresource): Reference to another subresource.
+* **virtualWAN**: [SubResource](#subresource): Reference to another subresource.
 
 ## DeviceProperties
 ### Properties
