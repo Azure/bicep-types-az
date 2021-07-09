@@ -12,8 +12,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): Properties of Cognitive Services account.
 * **sku**: [Sku](#sku): The resource model definition representing SKU
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [AccountTags](#accounttags): Resource tags.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2021-04-30
@@ -25,17 +25,17 @@
 * **location**: string: The location of the private endpoint connection
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 
-## IdentityUserAssignedIdentities
+## Dictionary<string,UserAssignedIdentity>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -47,7 +47,7 @@
 
 ## AccountProperties
 ### Properties
-* **allowedFqdnList**: string[]: Array of AccountPropertiesAllowedFqdnListItem
+* **allowedFqdnList**: string[]
 * **apiProperties**: [ApiProperties](#apiproperties): The api properties for special APIs.
 * **callRateLimit**: [CallRateLimit](#callratelimit) (ReadOnly): The call rate limit Cognitive Services account.
 * **capabilities**: [SkuCapability](#skucapability)[] (ReadOnly): Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
@@ -56,14 +56,14 @@
 * **disableLocalAuth**: bool
 * **encryption**: [Encryption](#encryption): Properties to configure Encryption
 * **endpoint**: string (ReadOnly): Endpoint of the created account.
-* **endpoints**: [AccountPropertiesEndpoints](#accountpropertiesendpoints) (ReadOnly): Dictionary of <string>
+* **endpoints**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly)
 * **internalId**: string (ReadOnly): The internal identifier (deprecated, do not use this property).
 * **isMigrated**: bool (ReadOnly): If the resource is migrated from an existing key.
 * **migrationToken**: string: Resource migration token.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The private endpoint connection associated with the Cognitive Services account.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the cognitive services account at the time the operation was called.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
 * **quotaLimit**: [QuotaLimit](#quotalimit) (ReadOnly)
 * **restore**: bool
 * **restrictOutboundNetworkAccess**: bool
@@ -82,19 +82,21 @@
 * **storageAccountConnectionString**: string: (Personalization Only) The storage account connection string.
 * **superUser**: string: (Metrics Advisor Only) The super user of Metrics Advisor.
 * **websiteName**: string: (Metrics Advisor Only) The website name of Metrics Advisor.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## CallRateLimit
 ### Properties
 * **count**: int: The count value of Call Rate Limit.
 * **renewalPeriod**: int: The renewal period in seconds of Call Rate Limit.
-* **rules**: [ThrottlingRule](#throttlingrule)[]: Array of ThrottlingRule
+* **rules**: [ThrottlingRule](#throttlingrule)[]
 
 ## ThrottlingRule
 ### Properties
 * **count**: int
 * **dynamicThrottlingEnabled**: bool
 * **key**: string
-* **matchPatterns**: [RequestMatchPattern](#requestmatchpattern)[]: Array of RequestMatchPattern
+* **matchPatterns**: [RequestMatchPattern](#requestmatchpattern)[]
 * **minCount**: int
 * **renewalPeriod**: int
 
@@ -110,7 +112,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
+* **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties to configure keyVault Properties
 
 ## KeyVaultProperties
@@ -120,7 +122,7 @@
 * **keyVaultUri**: string: Uri of KeyVault
 * **keyVersion**: string: Version of the Key from KeyVault
 
-## AccountPropertiesEndpoints
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -148,7 +150,7 @@
 * **location**: string: The location of the private endpoint connection
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
@@ -156,7 +158,7 @@
 * **groupIds**: string[]: The private link resource group ids.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -166,22 +168,22 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## QuotaLimit
 ### Properties
 * **count**: int
 * **renewalPeriod**: int
-* **rules**: [ThrottlingRule](#throttlingrule)[]: Array of ThrottlingRule
+* **rules**: [ThrottlingRule](#throttlingrule)[]
 
 ## SkuChangeInfo
 ### Properties
@@ -202,7 +204,7 @@
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'Basic' | 'Enterprise' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 
-## AccountTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): The account properties
 * **sku**: [AccountSku](#accountsku): The Sku
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags on the azure resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags on the azure resource.
 * **type**: 'Microsoft.Purview/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Purview/accounts/privateEndpointConnections@2020-12-01-preview
@@ -26,7 +26,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned': Identity Type
+* **type**: 'SystemAssigned': Identity Type.
 
 ## AccountProperties
 ### Properties
@@ -34,27 +34,27 @@
 * **createdAt**: string (ReadOnly): Gets the time at which the entity was created.
 * **createdBy**: string (ReadOnly): Gets the creator of the entity.
 * **createdByObjectId**: string (ReadOnly): Gets the creators of the entity's object id.
-* **endpoints**: [AccountPropertiesEndpoints](#accountpropertiesendpoints) (ReadOnly): The URIs that are the public endpoints of the account.
+* **endpoints**: [schemas:3_endpoints](#schemas3endpoints) (ReadOnly): The URIs that are the public endpoints of the account.
 * **friendlyName**: string (ReadOnly): Gets or sets the friendly name.
 * **managedResourceGroupName**: string: Gets or sets the managed resource group name
-* **managedResources**: [AccountPropertiesManagedResources](#accountpropertiesmanagedresources) (ReadOnly): Gets the resource identifiers of the managed resources.
+* **managedResources**: [schemas:3_managedResources](#schemas3managedresources) (ReadOnly): Gets the resource identifiers of the managed resources.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections information.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'SoftDeleted' | 'SoftDeleting' | 'Succeeded' | 'Unknown' (ReadOnly): Gets or sets the state of the provisioning.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the public network access.
-* **systemData**: [AccountPropertiesSystemData](#accountpropertiessystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [schemas:3_systemData](#schemas3systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 
 ## CloudConnectors
 ### Properties
 * **awsExternalId**: string (ReadOnly): AWS external identifier.
 Configured in AWS to allow use of the role arn used for scanning
 
-## AccountPropertiesEndpoints
+## schemas:3_endpoints
 ### Properties
 * **catalog**: string (ReadOnly): Gets the catalog endpoint.
 * **guardian**: string (ReadOnly): Gets the guardian endpoint.
 * **scan**: string (ReadOnly): Gets the scan endpoint.
 
-## AccountPropertiesManagedResources
+## schemas:3_managedResources
 ### Properties
 * **eventHubNamespace**: string (ReadOnly): Gets the managed event hub namespace resource identifier.
 * **resourceGroup**: string (ReadOnly): Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
@@ -83,7 +83,7 @@ Configured in AWS to allow use of the role arn used for scanning
 * **description**: string: The description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Unknown': The status.
 
-## AccountPropertiesSystemData
+## schemas:3_systemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
@@ -94,10 +94,10 @@ Configured in AWS to allow use of the role arn used for scanning
 
 ## AccountSku
 ### Properties
-* **capacity**: int: Gets or sets the sku capacity. Possible values include: 4, 16
+* **capacity**: int: Gets or sets the sku capacity.
 * **name**: 'Standard': Gets or sets the sku name.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

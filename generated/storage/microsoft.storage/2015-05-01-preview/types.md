@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## StorageAccountPropertiesCreateParameters
@@ -23,7 +23,7 @@
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue or table object.
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo replicated secondary for the storage account. Only available if the accountType is StandardGRS or StandardRAGRS.
 * **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
+* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the accountType is StandardGRS or StandardRAGRS.
 
 ## CustomDomain
 ### Properties
@@ -36,7 +36,7 @@
 * **queue**: string (ReadOnly): Gets the queue endpoint.
 * **table**: string (ReadOnly): Gets the table endpoint.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

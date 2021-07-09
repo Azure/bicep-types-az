@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): Account property bag.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DefaultDtoTags](#defaultdtotags): Tags on the azure resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags on the azure resource.
 * **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares@2020-10-01-preview
@@ -26,86 +26,85 @@
 ## Resource Microsoft.DataShare/accounts/shares/dataSets@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataShare/accounts/shares/dataSets' (ReadOnly, DeployTimeConstant): The resource type
-### AdlsGen1FileDataSet
+### AdlsGen1File
 #### Properties
-* **kind**: 'AdlsGen1File' (Required): Kind of data set.
-* **properties**: [AdlsGen1FileProperties](#adlsgen1fileproperties) (Required): Properties of the ADLS Gen1 file data set.
+* **kind**: 'AdlsGen1File' (Required): An ADLS Gen 1 file data set.
+* **properties**: [ADLSGen1FileProperties](#adlsgen1fileproperties) (Required): Properties of the ADLS Gen1 file data set.
 
-### AdlsGen1FolderDataSet
+### AdlsGen1Folder
 #### Properties
-* **kind**: 'AdlsGen1Folder' (Required): Kind of data set.
-* **properties**: [AdlsGen1FolderProperties](#adlsgen1folderproperties) (Required): Properties of the ADLS Gen1 folder data set.
+* **kind**: 'AdlsGen1Folder' (Required): An ADLS Gen 1 folder data set.
+* **properties**: [ADLSGen1FolderProperties](#adlsgen1folderproperties) (Required): Properties of the ADLS Gen1 folder data set.
 
-### AdlsGen2FileDataSet
+### AdlsGen2File
 #### Properties
-* **kind**: 'AdlsGen2File' (Required): Kind of data set.
-* **properties**: [AdlsGen2FileProperties](#adlsgen2fileproperties) (Required): Properties of the ADLS Gen2 file data set.
+* **kind**: 'AdlsGen2File' (Required): An ADLS Gen2 file data set mapping.
+* **properties**: [ADLSGen2FileProperties](#adlsgen2fileproperties) (Required): Properties of the ADLS Gen2 file data set.
 
-### AdlsGen2FileSystemDataSet
+### AdlsGen2FileSystem
 #### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required): Kind of data set.
-* **properties**: [AdlsGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required): Properties of the ADLS Gen2 file system data set.
+* **kind**: 'AdlsGen2FileSystem' (Required): An ADLS Gen2 file system data set mapping.
+* **properties**: [ADLSGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required): Properties of the ADLS Gen2 file system data set.
 
-### AdlsGen2FolderDataSet
+### AdlsGen2Folder
 #### Properties
-* **kind**: 'AdlsGen2Folder' (Required): Kind of data set.
-* **properties**: [AdlsGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
+* **kind**: 'AdlsGen2Folder' (Required): An ADLS Gen2 folder data set mapping.
+* **properties**: [ADLSGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
 
-### AdlsGen2StorageAccountDataSet
+### AdlsGen2StorageAccount
 #### Properties
-* **kind**: 'AdlsGen2StorageAccount' (Required): Kind of data set.
-* **properties**: [AdlsGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
+* **kind**: 'AdlsGen2StorageAccount' (Required): ADLSGen2 storage account data set mapping.
+* **properties**: [ADLSGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
 
-### BlobDataSet
+### Blob
 #### Properties
-* **kind**: 'Blob' (Required): Kind of data set.
+* **kind**: 'Blob' (Required): A Blob data set mapping.
 * **properties**: [BlobProperties](#blobproperties) (Required): Properties of the blob data set.
 
-### BlobFolderDataSet
+### BlobFolder
 #### Properties
-* **kind**: 'BlobFolder' (Required): Kind of data set.
+* **kind**: 'BlobFolder' (Required): A Blob folder data set mapping.
 * **properties**: [BlobFolderProperties](#blobfolderproperties) (Required): Properties of the blob folder data set.
 
-### BlobStorageAccountDataSet
+### BlobStorageAccount
 #### Properties
-* **kind**: 'BlobStorageAccount' (Required): Kind of data set.
+* **kind**: 'BlobStorageAccount' (Required): A blob storage account data set mapping.
 * **properties**: [BlobStorageAccountDataSetProperties](#blobstorageaccountdatasetproperties) (Required): Properties of the blob storage account data set.
 
-### BlobContainerDataSet
+### Container
 #### Properties
-* **kind**: 'Container' (Required): Kind of data set.
+* **kind**: 'Container' (Required): A Blob container data set mapping.
 * **properties**: [BlobContainerProperties](#blobcontainerproperties) (Required): Properties of the BLOB container data set.
 
-### KustoClusterDataSet
+### KustoCluster
 #### Properties
-* **kind**: 'KustoCluster' (Required): Kind of data set.
+* **kind**: 'KustoCluster' (Required): A Kusto cluster data set mapping
 * **properties**: [KustoClusterDataSetProperties](#kustoclusterdatasetproperties) (Required): Properties of the kusto cluster data set.
 
-### KustoDatabaseDataSet
+### KustoDatabase
 #### Properties
-* **kind**: 'KustoDatabase' (Required): Kind of data set.
+* **kind**: 'KustoDatabase' (Required): A Kusto database data set mapping
 * **properties**: [KustoDatabaseDataSetProperties](#kustodatabasedatasetproperties) (Required): Properties of the kusto database data set.
 
-### SqlDBTableDataSet
+### SqlDBTable
 #### Properties
-* **kind**: 'SqlDBTable' (Required): Kind of data set.
+* **kind**: 'SqlDBTable' (Required): A SQL DB Table data set mapping.
 * **properties**: [SqlDBTableProperties](#sqldbtableproperties): Properties of the SQL DB table data set.
 
-### SqlDWTableDataSet
+### SqlDWTable
 #### Properties
-* **kind**: 'SqlDWTable' (Required): Kind of data set.
+* **kind**: 'SqlDWTable' (Required): A SQL DW Table data set mapping.
 * **properties**: [SqlDWTableProperties](#sqldwtableproperties): Properties of the SQL DW table data set.
 
-### SynapseWorkspaceSqlPoolTableDataSet
+### SynapseWorkspaceSqlPoolTable
 #### Properties
-* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): Kind of data set.
+* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): A Synapse Workspace Sql Pool Table data set mapping
 * **properties**: [SynapseWorkspaceSqlPoolTableDataSetProperties](#synapseworkspacesqlpooltabledatasetproperties) (Required): Properties of the Synapse Workspace SQL Pool Table data set.
 
 
@@ -122,16 +121,15 @@
 ## Resource Microsoft.DataShare/accounts/shares/synchronizationSettings@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataShare/accounts/shares/synchronizationSettings' (ReadOnly, DeployTimeConstant): The resource type
-### ScheduledSynchronizationSetting
+### ScheduleBased
 #### Properties
-* **kind**: 'ScheduleBased' (Required): Kind of synchronization setting.
+* **kind**: 'ScheduleBased' (Required): A type of trigger based on schedule
 * **properties**: [ScheduledSynchronizationSettingProperties](#scheduledsynchronizationsettingproperties) (Required): A Scheduled synchronization setting data transfer object.
 
 
@@ -148,105 +146,103 @@
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings' (ReadOnly, DeployTimeConstant): The resource type
-### AdlsGen2FileDataSetMapping
+### AdlsGen2File
 #### Properties
-* **kind**: 'AdlsGen2File' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2FileDataSetMappingProperties](#adlsgen2filedatasetmappingproperties) (Required): ADLS Gen 2 file data set mapping property bag.
+* **kind**: 'AdlsGen2File' (Required): An ADLS Gen2 file data set mapping.
+* **properties**: [ADLSGen2FileProperties](#adlsgen2fileproperties) (Required): Properties of the ADLS Gen2 file data set.
 
-### AdlsGen2FileSystemDataSetMapping
+### AdlsGen2FileSystem
 #### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2FileSystemDataSetMappingProperties](#adlsgen2filesystemdatasetmappingproperties) (Required): ADLS Gen 2 file system data set mapping property bag.
+* **kind**: 'AdlsGen2FileSystem' (Required): An ADLS Gen2 file system data set mapping.
+* **properties**: [ADLSGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required): Properties of the ADLS Gen2 file system data set.
 
-### AdlsGen2FolderDataSetMapping
+### AdlsGen2Folder
 #### Properties
-* **kind**: 'AdlsGen2Folder' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2FolderDataSetMappingProperties](#adlsgen2folderdatasetmappingproperties) (Required): ADLS Gen 2 folder data set mapping property bag.
+* **kind**: 'AdlsGen2Folder' (Required): An ADLS Gen2 folder data set mapping.
+* **properties**: [ADLSGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
 
-### AdlsGen2StorageAccountDataSetMapping
+### AdlsGen2StorageAccount
 #### Properties
-* **kind**: 'AdlsGen2StorageAccount' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2StorageAccountDataSetMappingProperties](#adlsgen2storageaccountdatasetmappingproperties) (Required): Properties of the ADLSGen2 storage account data set.
+* **kind**: 'AdlsGen2StorageAccount' (Required): ADLSGen2 storage account data set mapping.
+* **properties**: [ADLSGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
 
-### BlobDataSetMapping
+### Blob
 #### Properties
-* **kind**: 'Blob' (Required): Kind of data set mapping.
-* **properties**: [BlobMappingProperties](#blobmappingproperties) (Required): Azure storage Blob data set mapping property bag.
+* **kind**: 'Blob' (Required): A Blob data set mapping.
+* **properties**: [BlobProperties](#blobproperties) (Required): Properties of the blob data set.
 
-### BlobFolderDataSetMapping
+### BlobFolder
 #### Properties
-* **kind**: 'BlobFolder' (Required): Kind of data set mapping.
-* **properties**: [BlobFolderMappingProperties](#blobfoldermappingproperties) (Required): Azure storage Blob folder data set mapping property bag.
+* **kind**: 'BlobFolder' (Required): A Blob folder data set mapping.
+* **properties**: [BlobFolderProperties](#blobfolderproperties) (Required): Properties of the blob folder data set.
 
-### BlobStorageAccountDataSetMapping
+### BlobStorageAccount
 #### Properties
-* **kind**: 'BlobStorageAccount' (Required): Kind of data set mapping.
-* **properties**: [BlobStorageAccountDataSetMappingProperties](#blobstorageaccountdatasetmappingproperties) (Required): Properties of the blob storage account data set.
+* **kind**: 'BlobStorageAccount' (Required): A blob storage account data set mapping.
+* **properties**: [BlobStorageAccountDataSetProperties](#blobstorageaccountdatasetproperties) (Required): Properties of the blob storage account data set.
 
-### BlobContainerDataSetMapping
+### Container
 #### Properties
-* **kind**: 'Container' (Required): Kind of data set mapping.
-* **properties**: [BlobContainerMappingProperties](#blobcontainermappingproperties) (Required): Azure storage Blob container data set mapping property bag.
+* **kind**: 'Container' (Required): A Blob container data set mapping.
+* **properties**: [BlobContainerProperties](#blobcontainerproperties) (Required): Properties of the BLOB container data set.
 
-### KustoClusterDataSetMapping
+### KustoCluster
 #### Properties
-* **kind**: 'KustoCluster' (Required): Kind of data set mapping.
-* **properties**: [KustoClusterDataSetMappingProperties](#kustoclusterdatasetmappingproperties) (Required): Properties of the Kusto cluster data set mapping
+* **kind**: 'KustoCluster' (Required): A Kusto cluster data set mapping
+* **properties**: [KustoClusterDataSetProperties](#kustoclusterdatasetproperties) (Required): Properties of the kusto cluster data set.
 
-### KustoDatabaseDataSetMapping
+### KustoDatabase
 #### Properties
-* **kind**: 'KustoDatabase' (Required): Kind of data set mapping.
-* **properties**: [KustoDatabaseDataSetMappingProperties](#kustodatabasedatasetmappingproperties) (Required): Properties of the Kusto database data set mapping
+* **kind**: 'KustoDatabase' (Required): A Kusto database data set mapping
+* **properties**: [KustoDatabaseDataSetProperties](#kustodatabasedatasetproperties) (Required): Properties of the kusto database data set.
 
-### SqlDBTableDataSetMapping
+### SqlDBTable
 #### Properties
-* **kind**: 'SqlDBTable' (Required): Kind of data set mapping.
-* **properties**: [SqlDBTableDataSetMappingProperties](#sqldbtabledatasetmappingproperties) (Required): Properties of the SQL DB table data set mapping.
+* **kind**: 'SqlDBTable' (Required): A SQL DB Table data set mapping.
+* **properties**: [SqlDBTableProperties](#sqldbtableproperties): Properties of the SQL DB table data set.
 
-### SqlDWTableDataSetMapping
+### SqlDWTable
 #### Properties
-* **kind**: 'SqlDWTable' (Required): Kind of data set mapping.
-* **properties**: [SqlDWTableDataSetMappingProperties](#sqldwtabledatasetmappingproperties) (Required): Properties of the SQL DW table data set mapping.
+* **kind**: 'SqlDWTable' (Required): A SQL DW Table data set mapping.
+* **properties**: [SqlDWTableProperties](#sqldwtableproperties): Properties of the SQL DW table data set.
 
-### SynapseWorkspaceSqlPoolTableDataSetMapping
+### SynapseWorkspaceSqlPoolTable
 #### Properties
-* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): Kind of data set mapping.
-* **properties**: [SynapseWorkspaceSqlPoolTableDataSetMappingProperties](#synapseworkspacesqlpooltabledatasetmappingproperties) (Required): Properties of the Synapse Workspace SQL Pool Table data set mapping
+* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): A Synapse Workspace Sql Pool Table data set mapping
+* **properties**: [SynapseWorkspaceSqlPoolTableDataSetProperties](#synapseworkspacesqlpooltabledatasetproperties) (Required): Properties of the Synapse Workspace SQL Pool Table data set.
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2020-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions/triggers' (ReadOnly, DeployTimeConstant): The resource type
-### ScheduledTrigger
+### ScheduleBased
 #### Properties
-* **kind**: 'ScheduleBased' (Required): Kind of synchronization on trigger.
-* **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required): A Scheduled trigger data transfer object.
+* **kind**: 'ScheduleBased' (Required): A type of trigger based on schedule
+* **properties**: [ScheduledSynchronizationSettingProperties](#scheduledsynchronizationsettingproperties) (Required): A Scheduled synchronization setting data transfer object.
 
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): service principal Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned': Identity Type
+* **type**: 'SystemAssigned': Identity Type.
 
 ## AccountProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the account was created.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
@@ -259,7 +255,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## DefaultDtoTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -268,18 +264,18 @@
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the share was created.
 * **description**: string: Share description.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Gets or sets the provisioning state.
 * **shareKind**: 'CopyBased' | 'InPlace': Share kind.
 * **terms**: string: Share terms.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
-## AdlsGen1FileDataSet
+## AdlsGen1File
 ### Properties
-* **kind**: 'AdlsGen1File' (Required): Kind of data set.
-* **properties**: [AdlsGen1FileProperties](#adlsgen1fileproperties) (Required): Properties of the ADLS Gen1 file data set.
+* **kind**: 'AdlsGen1File' (Required): An ADLS Gen 1 file data set.
+* **properties**: [ADLSGen1FileProperties](#adlsgen1fileproperties) (Required): Properties of the ADLS Gen1 file data set.
 
-## AdlsGen1FileProperties
+## ADLSGen1FileProperties
 ### Properties
 * **accountName**: string (Required): The ADLS account name.
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
@@ -288,12 +284,12 @@
 * **resourceGroup**: string (Required): Resource group of ADLS account.
 * **subscriptionId**: string (Required): Subscription id of ADLS account.
 
-## AdlsGen1FolderDataSet
+## AdlsGen1Folder
 ### Properties
-* **kind**: 'AdlsGen1Folder' (Required): Kind of data set.
-* **properties**: [AdlsGen1FolderProperties](#adlsgen1folderproperties) (Required): Properties of the ADLS Gen1 folder data set.
+* **kind**: 'AdlsGen1Folder' (Required): An ADLS Gen 1 folder data set.
+* **properties**: [ADLSGen1FolderProperties](#adlsgen1folderproperties) (Required): Properties of the ADLS Gen1 folder data set.
 
-## AdlsGen1FolderProperties
+## ADLSGen1FolderProperties
 ### Properties
 * **accountName**: string (Required): The ADLS account name.
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
@@ -301,12 +297,12 @@
 * **resourceGroup**: string (Required): Resource group of ADLS account.
 * **subscriptionId**: string (Required): Subscription id of ADLS account.
 
-## AdlsGen2FileDataSet
+## AdlsGen2File
 ### Properties
-* **kind**: 'AdlsGen2File' (Required): Kind of data set.
-* **properties**: [AdlsGen2FileProperties](#adlsgen2fileproperties) (Required): Properties of the ADLS Gen2 file data set.
+* **kind**: 'AdlsGen2File' (Required): An ADLS Gen2 file data set mapping.
+* **properties**: [ADLSGen2FileProperties](#adlsgen2fileproperties) (Required): Properties of the ADLS Gen2 file data set.
 
-## AdlsGen2FileProperties
+## ADLSGen2FileProperties
 ### Properties
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **filePath**: string (Required): File path within the file system.
@@ -315,12 +311,12 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## AdlsGen2FileSystemDataSet
+## AdlsGen2FileSystem
 ### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required): Kind of data set.
-* **properties**: [AdlsGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required): Properties of the ADLS Gen2 file system data set.
+* **kind**: 'AdlsGen2FileSystem' (Required): An ADLS Gen2 file system data set mapping.
+* **properties**: [ADLSGen2FileSystemProperties](#adlsgen2filesystemproperties) (Required): Properties of the ADLS Gen2 file system data set.
 
-## AdlsGen2FileSystemProperties
+## ADLSGen2FileSystemProperties
 ### Properties
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **fileSystem**: string (Required): The file system name.
@@ -328,12 +324,12 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## AdlsGen2FolderDataSet
+## AdlsGen2Folder
 ### Properties
-* **kind**: 'AdlsGen2Folder' (Required): Kind of data set.
-* **properties**: [AdlsGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
+* **kind**: 'AdlsGen2Folder' (Required): An ADLS Gen2 folder data set mapping.
+* **properties**: [ADLSGen2FolderProperties](#adlsgen2folderproperties) (Required): Properties of the ADLS Gen2 folder data set.
 
-## AdlsGen2FolderProperties
+## ADLSGen2FolderProperties
 ### Properties
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **fileSystem**: string (Required): File system to which the folder belongs.
@@ -342,27 +338,27 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## AdlsGen2StorageAccountDataSet
+## AdlsGen2StorageAccount
 ### Properties
-* **kind**: 'AdlsGen2StorageAccount' (Required): Kind of data set.
-* **properties**: [AdlsGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
+* **kind**: 'AdlsGen2StorageAccount' (Required): ADLSGen2 storage account data set mapping.
+* **properties**: [ADLSGen2StorageAccountDataSetProperties](#adlsgen2storageaccountdatasetproperties) (Required): Properties of the ADLSGen2 storage account data set.
 
-## AdlsGen2StorageAccountDataSetProperties
+## ADLSGen2StorageAccountDataSetProperties
 ### Properties
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **location**: string (ReadOnly): Location of the ADLSGen2 storage account.
-* **paths**: [AdlsGen2StorageAccountPath](#adlsgen2storageaccountpath)[] (Required): A list of ADLSGen2 storage account paths.
+* **paths**: [ADLSGen2StorageAccountPath](#adlsgen2storageaccountpath)[] (Required): A list of ADLSGen2 storage account paths.
 * **storageAccountResourceId**: string (Required): Resource id of the ADLSGen2 storage account.
 
-## AdlsGen2StorageAccountPath
+## ADLSGen2StorageAccountPath
 ### Properties
 * **consumerPath**: string: Gets or sets the path on the consumer side where the dataset is to be mapped.
 * **containerName**: string (Required): Gets or sets the container name to share.
 * **providerPath**: string: Gets or sets the path to file/folder within the container.
 
-## BlobDataSet
+## Blob
 ### Properties
-* **kind**: 'Blob' (Required): Kind of data set.
+* **kind**: 'Blob' (Required): A Blob data set mapping.
 * **properties**: [BlobProperties](#blobproperties) (Required): Properties of the blob data set.
 
 ## BlobProperties
@@ -374,9 +370,9 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## BlobFolderDataSet
+## BlobFolder
 ### Properties
-* **kind**: 'BlobFolder' (Required): Kind of data set.
+* **kind**: 'BlobFolder' (Required): A Blob folder data set mapping.
 * **properties**: [BlobFolderProperties](#blobfolderproperties) (Required): Properties of the blob folder data set.
 
 ## BlobFolderProperties
@@ -388,9 +384,9 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## BlobStorageAccountDataSet
+## BlobStorageAccount
 ### Properties
-* **kind**: 'BlobStorageAccount' (Required): Kind of data set.
+* **kind**: 'BlobStorageAccount' (Required): A blob storage account data set mapping.
 * **properties**: [BlobStorageAccountDataSetProperties](#blobstorageaccountdatasetproperties) (Required): Properties of the blob storage account data set.
 
 ## BlobStorageAccountDataSetProperties
@@ -406,9 +402,9 @@
 * **containerName**: string (Required): Gets or sets the container name to share.
 * **providerPath**: string: Gets or sets the path to file/folder within the container.
 
-## BlobContainerDataSet
+## Container
 ### Properties
-* **kind**: 'Container' (Required): Kind of data set.
+* **kind**: 'Container' (Required): A Blob container data set mapping.
 * **properties**: [BlobContainerProperties](#blobcontainerproperties) (Required): Properties of the BLOB container data set.
 
 ## BlobContainerProperties
@@ -419,9 +415,9 @@
 * **storageAccountName**: string (Required): Storage account name of the source data set
 * **subscriptionId**: string (Required): Subscription id of storage account
 
-## KustoClusterDataSet
+## KustoCluster
 ### Properties
-* **kind**: 'KustoCluster' (Required): Kind of data set.
+* **kind**: 'KustoCluster' (Required): A Kusto cluster data set mapping
 * **properties**: [KustoClusterDataSetProperties](#kustoclusterdatasetproperties) (Required): Properties of the kusto cluster data set.
 
 ## KustoClusterDataSetProperties
@@ -429,11 +425,11 @@
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **kustoClusterResourceId**: string (Required): Resource id of the kusto cluster.
 * **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the kusto cluster data set.
 
-## KustoDatabaseDataSet
+## KustoDatabase
 ### Properties
-* **kind**: 'KustoDatabase' (Required): Kind of data set.
+* **kind**: 'KustoDatabase' (Required): A Kusto database data set mapping
 * **properties**: [KustoDatabaseDataSetProperties](#kustodatabasedatasetproperties) (Required): Properties of the kusto database data set.
 
 ## KustoDatabaseDataSetProperties
@@ -441,11 +437,11 @@
 * **dataSetId**: string (ReadOnly): Unique id for identifying a data set resource
 * **kustoDatabaseResourceId**: string (Required): Resource id of the kusto database.
 * **location**: string (ReadOnly): Location of the kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the kusto database data set.
 
-## SqlDBTableDataSet
+## SqlDBTable
 ### Properties
-* **kind**: 'SqlDBTable' (Required): Kind of data set.
+* **kind**: 'SqlDBTable' (Required): A SQL DB Table data set mapping.
 * **properties**: [SqlDBTableProperties](#sqldbtableproperties): Properties of the SQL DB table data set.
 
 ## SqlDBTableProperties
@@ -456,9 +452,9 @@
 * **sqlServerResourceId**: string (Required): Resource id of SQL server
 * **tableName**: string (Required): SQL DB table name.
 
-## SqlDWTableDataSet
+## SqlDWTable
 ### Properties
-* **kind**: 'SqlDWTable' (Required): Kind of data set.
+* **kind**: 'SqlDWTable' (Required): A SQL DW Table data set mapping.
 * **properties**: [SqlDWTableProperties](#sqldwtableproperties): Properties of the SQL DW table data set.
 
 ## SqlDWTableProperties
@@ -469,9 +465,9 @@
 * **sqlServerResourceId**: string (Required): Resource id of SQL server
 * **tableName**: string (Required): SQL DW table name.
 
-## SynapseWorkspaceSqlPoolTableDataSet
+## SynapseWorkspaceSqlPoolTable
 ### Properties
-* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): Kind of data set.
+* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): A Synapse Workspace Sql Pool Table data set mapping
 * **properties**: [SynapseWorkspaceSqlPoolTableDataSetProperties](#synapseworkspacesqlpooltabledatasetproperties) (Required): Properties of the Synapse Workspace SQL Pool Table data set.
 
 ## SynapseWorkspaceSqlPoolTableDataSetProperties
@@ -494,16 +490,16 @@ invitations to specific users or applications in an AD tenant.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
 
-## ScheduledSynchronizationSetting
+## ScheduleBased
 ### Properties
-* **kind**: 'ScheduleBased' (Required): Kind of synchronization setting.
+* **kind**: 'ScheduleBased' (Required): A type of trigger based on schedule
 * **properties**: [ScheduledSynchronizationSettingProperties](#scheduledsynchronizationsettingproperties) (Required): A Scheduled synchronization setting data transfer object.
 
 ## ScheduledSynchronizationSettingProperties
 ### Properties
 * **createdAt**: string (ReadOnly): Time at which the synchronization setting was created.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **recurrenceInterval**: 'Day' | 'Hour' (Required): Recurrence Interval
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Gets or sets the provisioning state.
+* **recurrenceInterval**: 'Day' | 'Hour' (Required): Recurrence Interval.
 * **synchronizationTime**: string (Required): Synchronization time
 * **userName**: string (ReadOnly): Name of the user who created the synchronization setting.
 
@@ -515,224 +511,13 @@ invitations to specific users or applications in an AD tenant.
 * **providerEmail**: string (ReadOnly): Email of the provider who created the resource
 * **providerName**: string (ReadOnly): Name of the provider who created the resource
 * **providerTenantName**: string (ReadOnly): Tenant name of the provider who created the resource
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the share subscription.
 * **shareDescription**: string (ReadOnly): Description of share
-* **shareKind**: 'CopyBased' | 'InPlace' (ReadOnly): Share kind.
+* **shareKind**: 'CopyBased' | 'InPlace' (ReadOnly): Kind of share.
 * **shareName**: string (ReadOnly): Name of the share
-* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' (ReadOnly): Gets the status of share subscription
+* **shareSubscriptionStatus**: 'Active' | 'Revoked' | 'Revoking' | 'SourceDeleted' (ReadOnly): Gets the current status of share subscription.
 * **shareTerms**: string (ReadOnly): Terms of a share
 * **sourceShareLocation**: string (Required): Source share location.
 * **userEmail**: string (ReadOnly): Email of the user who created the resource
 * **userName**: string (ReadOnly): Name of the user who created the resource
-
-## AdlsGen2FileDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2File' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2FileDataSetMappingProperties](#adlsgen2filedatasetmappingproperties) (Required): ADLS Gen 2 file data set mapping property bag.
-
-## AdlsGen2FileDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **filePath**: string (Required): File path within the file system.
-* **fileSystem**: string (Required): File system to which the file belongs.
-* **outputType**: 'Csv' | 'Parquet': Type of output file
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## AdlsGen2FileSystemDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2FileSystem' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2FileSystemDataSetMappingProperties](#adlsgen2filesystemdatasetmappingproperties) (Required): ADLS Gen 2 file system data set mapping property bag.
-
-## AdlsGen2FileSystemDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **fileSystem**: string (Required): The file system name.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## AdlsGen2FolderDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2Folder' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2FolderDataSetMappingProperties](#adlsgen2folderdatasetmappingproperties) (Required): ADLS Gen 2 folder data set mapping property bag.
-
-## AdlsGen2FolderDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **fileSystem**: string (Required): File system to which the folder belongs.
-* **folderPath**: string (Required): Folder path within the file system.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## AdlsGen2StorageAccountDataSetMapping
-### Properties
-* **kind**: 'AdlsGen2StorageAccount' (Required): Kind of data set mapping.
-* **properties**: [AdlsGen2StorageAccountDataSetMappingProperties](#adlsgen2storageaccountdatasetmappingproperties) (Required): Properties of the ADLSGen2 storage account data set.
-
-## AdlsGen2StorageAccountDataSetMappingProperties
-### Properties
-* **containerName**: string (Required): Gets or sets the container name.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **folder**: string (Required): Gets or sets the path to folder within the container.
-* **location**: string (ReadOnly): Location of the sink storage account.
-* **mountPath**: string: Gets or sets the mount path
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **storageAccountResourceId**: string (Required): Resource id of the sink storage account
-
-## BlobDataSetMapping
-### Properties
-* **kind**: 'Blob' (Required): Kind of data set mapping.
-* **properties**: [BlobMappingProperties](#blobmappingproperties) (Required): Azure storage Blob data set mapping property bag.
-
-## BlobMappingProperties
-### Properties
-* **containerName**: string (Required): Container that has the file path.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **filePath**: string (Required): File path within the source data set
-* **outputType**: 'Csv' | 'Parquet': Type of output file
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## BlobFolderDataSetMapping
-### Properties
-* **kind**: 'BlobFolder' (Required): Kind of data set mapping.
-* **properties**: [BlobFolderMappingProperties](#blobfoldermappingproperties) (Required): Azure storage Blob folder data set mapping property bag.
-
-## BlobFolderMappingProperties
-### Properties
-* **containerName**: string (Required): Container that has the file path.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **prefix**: string (Required): Prefix for blob folder
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## BlobStorageAccountDataSetMapping
-### Properties
-* **kind**: 'BlobStorageAccount' (Required): Kind of data set mapping.
-* **properties**: [BlobStorageAccountDataSetMappingProperties](#blobstorageaccountdatasetmappingproperties) (Required): Properties of the blob storage account data set.
-
-## BlobStorageAccountDataSetMappingProperties
-### Properties
-* **containerName**: string (Required): Gets or sets the container name.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **folder**: string (Required): Gets or sets the path to folder within the container.
-* **location**: string (ReadOnly): Location of the sink storage account.
-* **mountPath**: string: Gets or sets the mount path on the consumer side where the dataset is to be mapped.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **storageAccountResourceId**: string (Required): Resource id of the sink storage account
-
-## BlobContainerDataSetMapping
-### Properties
-* **kind**: 'Container' (Required): Kind of data set mapping.
-* **properties**: [BlobContainerMappingProperties](#blobcontainermappingproperties) (Required): Azure storage Blob container data set mapping property bag.
-
-## BlobContainerMappingProperties
-### Properties
-* **containerName**: string (Required): BLOB Container name.
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **resourceGroup**: string (Required): Resource group of storage account.
-* **storageAccountName**: string (Required): Storage account name of the source data set.
-* **subscriptionId**: string (Required): Subscription id of storage account.
-
-## KustoClusterDataSetMapping
-### Properties
-* **kind**: 'KustoCluster' (Required): Kind of data set mapping.
-* **properties**: [KustoClusterDataSetMappingProperties](#kustoclusterdatasetmappingproperties) (Required): Properties of the Kusto cluster data set mapping
-
-## KustoClusterDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
-* **location**: string (ReadOnly): Location of the sink kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-
-## KustoDatabaseDataSetMapping
-### Properties
-* **kind**: 'KustoDatabase' (Required): Kind of data set mapping.
-* **properties**: [KustoDatabaseDataSetMappingProperties](#kustodatabasedatasetmappingproperties) (Required): Properties of the Kusto database data set mapping
-
-## KustoDatabaseDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **kustoClusterResourceId**: string (Required): Resource id of the sink kusto cluster.
-* **location**: string (ReadOnly): Location of the sink kusto cluster.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-
-## SqlDBTableDataSetMapping
-### Properties
-* **kind**: 'SqlDBTable' (Required): Kind of data set mapping.
-* **properties**: [SqlDBTableDataSetMappingProperties](#sqldbtabledatasetmappingproperties) (Required): Properties of the SQL DB table data set mapping.
-
-## SqlDBTableDataSetMappingProperties
-### Properties
-* **databaseName**: string (Required): DatabaseName name of the sink data set
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **schemaName**: string (Required): Schema of the table. Default value is dbo.
-* **sqlServerResourceId**: string (Required): Resource id of SQL server
-* **tableName**: string (Required): SQL DB table name.
-
-## SqlDWTableDataSetMapping
-### Properties
-* **kind**: 'SqlDWTable' (Required): Kind of data set mapping.
-* **properties**: [SqlDWTableDataSetMappingProperties](#sqldwtabledatasetmappingproperties) (Required): Properties of the SQL DW table data set mapping.
-
-## SqlDWTableDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **dataWarehouseName**: string (Required): DataWarehouse name of the source data set
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **schemaName**: string (Required): Schema of the table. Default value is dbo.
-* **sqlServerResourceId**: string (Required): Resource id of SQL server
-* **tableName**: string (Required): SQL DW table name.
-
-## SynapseWorkspaceSqlPoolTableDataSetMapping
-### Properties
-* **kind**: 'SynapseWorkspaceSqlPoolTable' (Required): Kind of data set mapping.
-* **properties**: [SynapseWorkspaceSqlPoolTableDataSetMappingProperties](#synapseworkspacesqlpooltabledatasetmappingproperties) (Required): Properties of the Synapse Workspace SQL Pool Table data set mapping
-
-## SynapseWorkspaceSqlPoolTableDataSetMappingProperties
-### Properties
-* **dataSetId**: string (Required): The id of the source data set.
-* **dataSetMappingStatus**: 'Broken' | 'Ok' (ReadOnly): Gets the status of the data set mapping.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **synapseWorkspaceSqlPoolTableResourceId**: string (Required): Resource id of the Synapse Workspace SQL Pool Table
-
-## ScheduledTrigger
-### Properties
-* **kind**: 'ScheduleBased' (Required): Kind of synchronization on trigger.
-* **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required): A Scheduled trigger data transfer object.
-
-## ScheduledTriggerProperties
-### Properties
-* **createdAt**: string (ReadOnly): Time at which the trigger was created.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' (ReadOnly): Provisioning state of the Account
-* **recurrenceInterval**: 'Day' | 'Hour' (Required): Recurrence Interval
-* **synchronizationMode**: 'FullSync' | 'Incremental': Synchronization mode
-* **synchronizationTime**: string (Required): Synchronization time
-* **triggerStatus**: 'Active' | 'Inactive' | 'SourceSynchronizationSettingDeleted' (ReadOnly): Gets the trigger state
-* **userName**: string (ReadOnly): Name of the user who created the trigger.
 

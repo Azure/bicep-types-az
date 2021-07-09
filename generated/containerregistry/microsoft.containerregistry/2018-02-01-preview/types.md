@@ -8,7 +8,7 @@
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BuildTaskProperties](#buildtaskproperties): The properties of a build task.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview
@@ -25,7 +25,7 @@
 * **alias**: string (Required): The alternative updatable name for a build task.
 * **creationDate**: string (ReadOnly): The creation date of build task.
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the build has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a build.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the build task.
 * **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties of the source code repository.
 * **status**: 'Disabled' | 'Enabled': The current status of build task.
 * **timeout**: int: Build timeout in seconds.
@@ -50,17 +50,16 @@
 * **token**: string (Required): The access token used to access the source control provider.
 * **tokenType**: 'OAuth' | 'PAT': The type of Auth token.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## BuildStepProperties
 * **Discriminator**: type
-
 ### Base Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of a build.
-### DockerBuildStep
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the build step.
+### Docker
 #### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates.
@@ -71,10 +70,10 @@
 * **imageNames**: string[]: The fully qualified image names including the repository and tag.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'Docker' (Required): The Docker build step.
 
 
-## DockerBuildStep
+## Docker
 ### Properties
 * **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
 * **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates.
@@ -85,7 +84,7 @@
 * **imageNames**: string[]: The fully qualified image names including the repository and tag.
 * **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
 * **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
-* **type**: 'Docker' (Required): The type of the step.
+* **type**: 'Docker' (Required): The Docker build step.
 
 ## BaseImageDependency
 ### Properties
@@ -99,6 +98,6 @@
 ### Properties
 * **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
 * **name**: string (Required): The name of the argument.
-* **type**: 'DockerBuildArgument' (Required): The type of the argument.
+* **type**: string (Required): The type of the argument.
 * **value**: string (Required): The value of the argument.
 

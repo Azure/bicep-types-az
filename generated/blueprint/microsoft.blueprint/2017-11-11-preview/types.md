@@ -23,25 +23,24 @@
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2017-11-11-preview
 * **Valid Scope(s)**: ManagementGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Blueprint/blueprints/artifacts' (ReadOnly, DeployTimeConstant): The resource type
-### PolicyAssignmentArtifact
+### policyAssignment
 #### Properties
-* **kind**: 'policyAssignment' (Required): Specifies the kind of Blueprint artifact.
+* **kind**: 'policyAssignment' (Required): Blueprint artifact applies Policy assignments.
 * **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required): PolicyAssignment properties
 
-### RoleAssignmentArtifact
+### roleAssignment
 #### Properties
-* **kind**: 'roleAssignment' (Required): Specifies the kind of Blueprint artifact.
+* **kind**: 'roleAssignment' (Required): Blueprint artifact applies Azure role assignment.
 * **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required): Properties of the Role assignment artifact.
 
-### TemplateArtifact
+### template
 #### Properties
-* **kind**: 'template' (Required): Specifies the kind of Blueprint artifact.
+* **kind**: 'template' (Required): Blueprint artifact deploys Azure resource manager template.
 * **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required): Properties of a Template Artifact.
 
 
@@ -66,16 +65,16 @@
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
 * **locks**: [AssignmentLockSettings](#assignmentlocksettings): Defines how Blueprint-managed resources will be locked.
-* **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): A dictionary for parameters and their corresponding values.
+* **parameters**: [Dictionary<string,ParameterValueBase>](#dictionarystringparametervaluebase) (Required): A dictionary for parameters and their corresponding values.
 * **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' (ReadOnly): State of the assignment.
-* **resourceGroups**: [ResourceGroupValueCollection](#resourcegroupvaluecollection) (Required): A dictionary which maps resource group placeholders to the resource groups which will be created.
+* **resourceGroups**: [Dictionary<string,ResourceGroupValue>](#dictionarystringresourcegroupvalue) (Required): A dictionary which maps resource group placeholders to the resource groups which will be created.
 * **status**: [AssignmentStatus](#assignmentstatus) (ReadOnly): The status of Blueprint assignment. This field is readonly.
 
 ## AssignmentLockSettings
 ### Properties
 * **mode**: 'AllResources' | 'None': Lock mode.
 
-## ParameterValueCollection
+## Dictionary<string,ParameterValueBase>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
@@ -84,7 +83,7 @@
 ### Properties
 * **description**: string: Optional property, just to establish ParameterValueBase as a BaseClass.
 
-## ResourceGroupValueCollection
+## Dictionary<string,ResourceGroupValue>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupValue](#resourcegroupvalue)
@@ -103,14 +102,14 @@
 ### Properties
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **layout**: any: Any object
-* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection): A dictionary hold parameter name and it's metadata.
-* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection): A dictionary which maps resource group placeholders to the resource groups which will be created.
+* **layout**: any: Layout view of the blueprint, for UI reference.
+* **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition): A dictionary hold parameter name and it's metadata.
+* **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition): A dictionary which maps resource group placeholders to the resource groups which will be created.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
 * **targetScope**: 'managementGroup' | 'subscription': The scope where this Blueprint can be applied.
-* **versions**: any: Any object
+* **versions**: any: Published versions of this blueprint.
 
-## ParameterDefinitionCollection
+## Dictionary<string,ParameterDefinition>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
@@ -118,7 +117,7 @@
 ## ParameterDefinition
 ### Properties
 * **allowedValues**: any[]: Array of allowed values for this parameter.
-* **defaultValue**: any: Anything
+* **defaultValue**: any: Default Value for this parameter.
 * **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this parameter.
 * **type**: 'array' | 'bool' | 'int' | 'object' | 'secureObject' | 'secureString' | 'string' (Required): Allowed data types for Azure Resource Manager template parameters.
 
@@ -128,7 +127,7 @@
 * **displayName**: string: DisplayName of this parameter/resourceGroup.
 * **strongType**: string: StrongType for UI to render rich experience during assignment time.
 
-## ResourceGroupDefinitionCollection
+## Dictionary<string,ResourceGroupDefinition>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
@@ -145,9 +144,9 @@
 * **lastModified**: string (ReadOnly): Last modified time of this blueprint.
 * **timeCreated**: string (ReadOnly): Creation time of this blueprint.
 
-## PolicyAssignmentArtifact
+## policyAssignment
 ### Properties
-* **kind**: 'policyAssignment' (Required): Specifies the kind of Blueprint artifact.
+* **kind**: 'policyAssignment' (Required): Blueprint artifact applies Policy assignments.
 * **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required): PolicyAssignment properties
 
 ## PolicyAssignmentArtifactProperties
@@ -155,18 +154,18 @@
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): A dictionary for parameters and their corresponding values.
+* **parameters**: [Dictionary<string,ParameterValueBase>](#dictionarystringparametervaluebase) (Required): A dictionary for parameters and their corresponding values.
 * **policyDefinitionId**: string (Required): Azure resource ID of the policy definition.
 * **resourceGroup**: string: Name of the resource group placeholder to which the policy will be assigned.
 
-## ParameterValueCollection
+## Dictionary<string,ParameterValueBase>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
 
-## RoleAssignmentArtifact
+## roleAssignment
 ### Properties
-* **kind**: 'roleAssignment' (Required): Specifies the kind of Blueprint artifact.
+* **kind**: 'roleAssignment' (Required): Blueprint artifact applies Azure role assignment.
 * **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required): Properties of the Role assignment artifact.
 
 ## RoleAssignmentArtifactProperties
@@ -174,13 +173,13 @@
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **principalIds**: any (Required): Anything
+* **principalIds**: any (Required): Array of user or group identities in Azure Active Directory. The roleDefinition will apply to these identity.
 * **resourceGroup**: string: RoleAssignment will be scope to this resourceGroup, if left empty, it would scope to the subscription.
 * **roleDefinitionId**: string (Required): Azure resource ID of the RoleDefinition.
 
-## TemplateArtifact
+## template
 ### Properties
-* **kind**: 'template' (Required): Specifies the kind of Blueprint artifact.
+* **kind**: 'template' (Required): Blueprint artifact deploys Azure resource manager template.
 * **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required): Properties of a Template Artifact.
 
 ## TemplateArtifactProperties
@@ -188,11 +187,11 @@
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
 * **description**: string: Multi-line explain this resource.
 * **displayName**: string: One-liner string explain this resource.
-* **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): A dictionary for parameters and their corresponding values.
+* **parameters**: [Dictionary<string,ParameterValueBase>](#dictionarystringparametervaluebase) (Required): A dictionary for parameters and their corresponding values.
 * **resourceGroup**: string: If applicable, the name of the resource group placeholder to which the template will be deployed.
-* **template**: any (Required): Any object
+* **template**: any (Required): The Azure Resource Manager template body.
 
-## ParameterValueCollection
+## Dictionary<string,ParameterValueBase>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
@@ -203,17 +202,17 @@
 * **changeNotes**: string (ReadOnly): Version-specific change notes
 * **description**: string (ReadOnly): Multi-line explain this resource.
 * **displayName**: string (ReadOnly): One-liner string explain this resource.
-* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection) (ReadOnly): A dictionary hold parameter name and it's metadata.
-* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection) (ReadOnly): A dictionary which maps resource group placeholders to the resource groups which will be created.
+* **parameters**: [Dictionary<string,ParameterDefinition>](#dictionarystringparameterdefinition) (ReadOnly): A dictionary hold parameter name and it's metadata.
+* **resourceGroups**: [Dictionary<string,ResourceGroupDefinition>](#dictionarystringresourcegroupdefinition) (ReadOnly): A dictionary which maps resource group placeholders to the resource groups which will be created.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
 * **targetScope**: 'managementGroup' | 'subscription' (ReadOnly): The scope where this Blueprint can be applied.
 
-## ParameterDefinitionCollection
+## Dictionary<string,ParameterDefinition>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
 
-## ResourceGroupDefinitionCollection
+## Dictionary<string,ResourceGroupDefinition>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)

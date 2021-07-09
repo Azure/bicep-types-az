@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of a machine learning workspace.
 * **sku**: [Sku](#sku): Sku of the resource
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
 * **type**: 'Microsoft.MachineLearning/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WorkspaceProperties
@@ -28,7 +28,7 @@
 * **name**: string: Name of the sku
 * **tier**: string: Tier of the sku like Basic or Enterprise
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

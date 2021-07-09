@@ -20,96 +20,91 @@
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type
-
 ### Base Properties
 * **inputs**: string[] (Required): Sink inputs.
 * **name**: string (Required): Sink name.
-### MediaGraphAssetSink
+### #Microsoft.Media.MediaGraphAssetSink
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): Asset sink.
 * **assetName**: string (Required): Asset name.
 
 
-## MediaGraphAssetSink
+## #Microsoft.Media.MediaGraphAssetSink
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): Asset sink.
 * **assetName**: string (Required): Asset name.
 
 ## MediaGraphSource
 * **Discriminator**: @odata.type
-
 ### Base Properties
 * **name**: string (Required): Source name.
-### MediaGraphRtspSource
+### #Microsoft.Media.MediaGraphRtspSource
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): RTSP source.
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
 * **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 
-## MediaGraphRtspSource
+## #Microsoft.Media.MediaGraphRtspSource
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): RTSP source.
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
 * **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 ## MediaGraphEndpoint
 * **Discriminator**: @odata.type
-
 ### Base Properties
 * **credentials**: [MediaGraphCredentials](#mediagraphcredentials): Credentials to present during authentication.
 * **url**: string (Required): Url for the endpoint.
-### MediaGraphClearEndpoint
+### #Microsoft.Media.MediaGraphClearEndpoint
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required): An endpoint to connect to with no encryption in transit.
 
-### MediaGraphTlsEndpoint
+### #Microsoft.Media.MediaGraphTlsEndpoint
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required): An endpoint which must be connected over TLS/SSL.
 * **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource): Base class for certificate sources.
 * **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions): Options for controlling the authentication of TLS endpoints.
 
 
 ## MediaGraphCredentials
 * **Discriminator**: @odata.type
-
 ### Base Properties
-### MediaGraphUsernamePasswordCredentials
+### #Microsoft.Media.MediaGraphUsernamePasswordCredentials
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required): Username/password credential pair.
 * **password**: string (Required): Password for a username/password pair.
 * **username**: string (Required): Username for a username/password pair.
 
 
-## MediaGraphUsernamePasswordCredentials
+## #Microsoft.Media.MediaGraphUsernamePasswordCredentials
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required): Username/password credential pair.
 * **password**: string (Required): Password for a username/password pair.
 * **username**: string (Required): Username for a username/password pair.
 
-## MediaGraphClearEndpoint
+## #Microsoft.Media.MediaGraphClearEndpoint
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required): An endpoint to connect to with no encryption in transit.
 
-## MediaGraphTlsEndpoint
+## #Microsoft.Media.MediaGraphTlsEndpoint
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required): An endpoint which must be connected over TLS/SSL.
 * **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource): Base class for certificate sources.
 * **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions): Options for controlling the authentication of TLS endpoints.
 
 ## MediaGraphCertificateSource
 * **Discriminator**: @odata.type
-
 ### Base Properties
-### MediaGraphPemCertificateList
+### #Microsoft.Media.MediaGraphPemCertificateList
 #### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): A list of PEM formatted certificates.
 * **certificates**: string[] (Required): PEM formatted public certificates, one per entry.
 
 
-## MediaGraphPemCertificateList
+## #Microsoft.Media.MediaGraphPemCertificateList
 ### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): The discriminator for derived types.
+* **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): A list of PEM formatted certificates.
 * **certificates**: string[] (Required): PEM formatted public certificates, one per entry.
 
 ## MediaGraphTlsValidationOptions

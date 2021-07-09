@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagerProperties](#managerproperties): The properties of the StorSimple Manager.
-* **tags**: [ResourceTags](#resourcetags): The tags attached to the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags attached to the resource.
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorSimple/managers/accessControlRecords@2017-06-01
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessControlRecordProperties](#accesscontrolrecordproperties) (Required): The properties of access control record.
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BandwidthRateSettingProperties](#bandwidthratesettingproperties) (Required): The properties of the bandwidth setting.
 * **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant): The resource type
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertNotificationProperties](#alertnotificationproperties) (Required): The properties of the alert notification settings.
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant): The resource type
@@ -47,7 +47,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): The properties of the backup policy.
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupScheduleProperties](#backupscheduleproperties) (Required): The properties of the backup schedule.
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant): The resource type
@@ -67,7 +67,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [TimeSettingsProperties](#timesettingsproperties) (Required): The properties of time settings of a device.
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant): The resource type
@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeContainerProperties](#volumecontainerproperties) (Required): The properties of volume container.
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant): The resource type
@@ -87,7 +87,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): The properties of volume.
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers/volumes' (ReadOnly, DeployTimeConstant): The resource type
@@ -98,7 +98,7 @@
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties): The properties of the manager extended info.
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
@@ -108,7 +108,7 @@
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported
+* **kind**: 'Series8000': The Kind of the object. Currently only Series8000 is supported.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required): The storage account credential properties.
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
@@ -125,9 +125,9 @@
 
 ## ManagerSku
 ### Properties
-* **name**: 'Standard' (Required): Refers to the sku name which should be "Standard"
+* **name**: string (Required): Refers to the sku name which should be "Standard"
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -160,11 +160,11 @@
 * **additionalRecipientEmailList**: string[]: The alert notification email list.
 * **alertNotificationCulture**: string: The alert notification culture.
 * **emailNotification**: 'Disabled' | 'Enabled' (Required): Indicates whether email notification enabled or not.
-* **notificationToServiceOwners**: 'Disabled' | 'Enabled': Indicates whether email notification enabled or not.
+* **notificationToServiceOwners**: 'Disabled' | 'Enabled': The value indicating whether alert notification enabled for admin or not.
 
 ## BackupPolicyProperties
 ### Properties
-* **backupPolicyCreationType**: 'BySSM' | 'BySaaS' (ReadOnly): The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
+* **backupPolicyCreationType**: 'BySaaS' | 'BySSM' (ReadOnly): The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
 * **lastBackupTime**: string (ReadOnly): The time of the last backup for the backup policy.
 * **nextBackupTime**: string (ReadOnly): The time of the next backup for the backup policy.
 * **scheduledBackupStatus**: 'Disabled' | 'Enabled' (ReadOnly): Indicates whether at least one of the schedules in the backup policy is active or not.
@@ -174,7 +174,7 @@
 
 ## BackupScheduleProperties
 ### Properties
-* **backupType**: 'CloudSnapshot' | 'LocalSnapshot' (Required): The type of the backup.
+* **backupType**: 'CloudSnapshot' | 'LocalSnapshot' (Required): The type of backup which needs to be taken.
 * **lastSuccessfulRun**: string (ReadOnly): The last successful backup run which was triggered for the schedule.
 * **retentionCount**: int (Required): The number of backups to be retained.
 * **scheduleRecurrence**: [ScheduleRecurrence](#schedulerecurrence) (Required): The schedule recurrence.
@@ -198,7 +198,7 @@
 * **bandWidthRateInMbps**: int: The bandwidth-rate set on the volume container.
 * **bandwidthSettingId**: string: The ID of the bandwidth setting associated with the volume container.
 * **encryptionKey**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
-* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): The encryption status to indicates if encryption is enabled or not.
+* **encryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): The flag to denote whether encryption is enabled or not.
 * **ownerShipStatus**: 'NotOwned' | 'Owned' (ReadOnly): The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
 * **storageAccountCredentialId**: string (Required): The path ID of storage account associated with the volume container.
 * **totalCloudStorageUsageInBytes**: int (ReadOnly): The total cloud storage for the volume container.
@@ -220,7 +220,7 @@
 * **sizeInBytes**: int (Required): The size of the volume in bytes.
 * **volumeContainerId**: string (ReadOnly): The ID of the volume container, in which this volume is created.
 * **volumeStatus**: 'Offline' | 'Online' (Required): The volume status.
-* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required): The volume type.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (Required): The type of the volume.
 
 ## ManagerExtendedInfoProperties
 ### Properties

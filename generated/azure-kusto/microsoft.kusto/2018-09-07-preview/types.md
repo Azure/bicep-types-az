@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Class representing the Kusto cluster properties.
 * **sku**: [AzureSku](#azuresku) (Required)
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases@2018-09-07-preview
@@ -22,7 +22,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): Class representing the Kusto database properties.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Kusto/clusters/databases/eventhubconnections@2018-09-07-preview
@@ -51,9 +51,9 @@
 ### Properties
 * **capacity**: int: SKU capacity.
 * **name**: 'D13_v2' | 'D14_v2' | 'KC16' | 'KC8' | 'KS16' | 'KS8' | 'L16' | 'L8' (Required): SKU name.
-* **tier**: 'Standard' (Required): SKU tier.
+* **tier**: string (Required): SKU tier.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -63,13 +63,13 @@
 * **hotCachePeriodInDays**: int: The number of days of data that should be kept in cache for fast queries.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriodInDays**: int (Required): The number of days data should be kept before it stops being accessible to queries.
-* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly)
+* **statistics**: [DatabaseStatistics](#databasestatistics)
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1.8.0
+        uses: actions/setup-dotnet@v1.8.1
       
       - name: Build
         run: dotnet build --configuration release
@@ -47,7 +47,7 @@ jobs:
         run: dotnet test --configuration release --collect:"XPlat Code Coverage" --settings ./.github/workflows/codecov.runsettings
 
       - name: Upload Code Coverage
-        uses: codecov/codecov-action@v1.5.0
+        uses: codecov/codecov-action@v1.5.2
         with:
           flags: dotnet
 

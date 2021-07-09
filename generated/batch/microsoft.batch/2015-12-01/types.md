@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the resource
+* **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties): Account specific properties.
-* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The tags of the resource
+* **properties**: [BatchAccountBaseProperties](#batchaccountbaseproperties): The properties of a Batch account.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The user specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2015-12-01
@@ -41,17 +41,17 @@
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
-* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): Contains information about the auto storage account associated with a Batch account.
+* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to auto storage account.
 * **coreQuota**: int (ReadOnly): The core quota for this Batch account.
 * **poolQuota**: int (ReadOnly): The pool quota for this Batch account.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 
 ## AutoStorageBaseProperties
 ### Properties
 * **lastKeySync**: string (ReadOnly): The UTC time at which storage keys were last synchronized with the Batch account.
 * **storageAccountId**: string (Required): The resource ID of the storage account to be used for auto storage account.
 
-## BatchAccountCreateParametersTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

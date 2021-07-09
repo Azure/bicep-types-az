@@ -3,24 +3,23 @@
 ## Resource Microsoft.Resources/deploymentScripts@2019-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
-
 ### Base Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity) (Required): Managed identity generic object.
 * **location**: string (Required): The location of the ACI and the storage account for the deployment script.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [DeploymentScriptTags](#deploymentscripttags): Resource tags.
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant): The resource type
-### AzureCliScript
+### AzureCLI
 #### Properties
-* **kind**: 'AzureCLI' (Required): Type of the script.
+* **kind**: 'AzureCLI' (Required): Object model for the Azure CLI script.
 * **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required): Properties of the Azure CLI script object.
 
-### AzurePowerShellScript
+### AzurePowerShell
 #### Properties
-* **kind**: 'AzurePowerShell' (Required): Type of the script.
+* **kind**: 'AzurePowerShell' (Required): Object model for the Azure PowerShell script.
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 
@@ -28,9 +27,9 @@
 ### Properties
 * **tenantId**: string (ReadOnly): ID of the Azure Active Directory.
 * **type**: 'UserAssigned': Type of the managed identity.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
 
-## ManagedServiceIdentityUserAssignedIdentities
+## Dictionary<string,UserAssignedIdentity>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -40,23 +39,23 @@
 * **clientId**: string (ReadOnly): Client App Id associated with this identity.
 * **principalId**: string (ReadOnly): Azure Active Directory principal ID associated with this identity.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## DeploymentScriptTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AzureCliScript
+## AzureCLI
 ### Properties
-* **kind**: 'AzureCLI' (Required): Type of the script.
+* **kind**: 'AzureCLI' (Required): Object model for the Azure CLI script.
 * **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required): Properties of the Azure CLI script object.
 
 ## AzureCliScriptProperties
@@ -67,7 +66,7 @@
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration): Settings to customize ACI container instance.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to pass over to the script.
 * **forceUpdateTag**: string: Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
-* **outputs**: [DeploymentScriptPropertiesBaseOutputs](#deploymentscriptpropertiesbaseoutputs) (ReadOnly): List of script outputs.
+* **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly): List of script outputs.
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
@@ -87,7 +86,7 @@
 * **secureValue**: string: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
-## DeploymentScriptPropertiesBaseOutputs
+## Dictionary<string,Object>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -111,7 +110,7 @@
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## StorageAccountConfiguration
@@ -119,9 +118,9 @@
 * **storageAccountKey**: string: The storage account access key.
 * **storageAccountName**: string: The storage account name.
 
-## AzurePowerShellScript
+## AzurePowerShell
 ### Properties
-* **kind**: 'AzurePowerShell' (Required): Type of the script.
+* **kind**: 'AzurePowerShell' (Required): Object model for the Azure PowerShell script.
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 ## AzurePowerShellScriptProperties
@@ -132,7 +131,7 @@
 * **containerSettings**: [ContainerConfiguration](#containerconfiguration): Settings to customize ACI container instance.
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to pass over to the script.
 * **forceUpdateTag**: string: Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
-* **outputs**: [DeploymentScriptPropertiesBaseOutputs](#deploymentscriptpropertiesbaseoutputs) (ReadOnly): List of script outputs.
+* **outputs**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly): List of script outputs.
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
@@ -142,7 +141,7 @@
 * **supportingScriptUris**: string[]: Supporting files for the external script.
 * **timeout**: string: Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
 
-## DeploymentScriptPropertiesBaseOutputs
+## Dictionary<string,Object>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any

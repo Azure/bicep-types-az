@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: 'service' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceDiagnosticSettings](#servicediagnosticsettings): The diagnostic settings for service.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServiceDiagnosticSettings
@@ -36,7 +36,7 @@
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
 * **timeGrain**: string (Required): the timegrain of the metric in ISO8601 format.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

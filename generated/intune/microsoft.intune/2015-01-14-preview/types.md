@@ -8,7 +8,7 @@
 * **location**: string: Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AndroidMAMPolicyProperties](#androidmampolicyproperties): Intune MAM iOS Policy Properties.
-* **tags**: [ResourceTags](#resourcetags): Resource Tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource Tags
 * **type**: 'Microsoft.Intune/locations/androidPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/androidPolicies/apps@2015-01-14-preview
@@ -36,8 +36,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IOsmamPolicyProperties](#iosmampolicyproperties): Intune MAM iOS Policy Properties.
-* **tags**: [ResourceTags](#resourcetags): Resource Tags
+* **properties**: [iOSMAMPolicyProperties](#iosmampolicyproperties): Intune MAM iOS Policy Properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource Tags
 * **type**: 'Microsoft.Intune/locations/iosPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Intune/locations/iosPolicies/apps@2015-01-14-preview
@@ -81,7 +81,7 @@
 * **pinNumRetry**: int
 * **screenCapture**: 'allow' | 'block'
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -90,7 +90,7 @@
 ### Properties
 * **url**: string (Required)
 
-## IOsmamPolicyProperties
+## iOSMAMPolicyProperties
 ### Properties
 * **accessRecheckOfflineTimeout**: string
 * **accessRecheckOnlineTimeout**: string
@@ -113,7 +113,7 @@
 * **pinNumRetry**: int
 * **touchId**: 'disable' | 'enable'
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

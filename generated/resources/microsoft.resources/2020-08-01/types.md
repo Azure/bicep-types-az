@@ -1,14 +1,14 @@
 # Microsoft.Resources @ 2020-08-01
 
 ## Resource Microsoft.Resources/deployments@2020-08-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: the location of the deployment.
+* **location**: string: The location to store the deployment data.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties with additional details.
-* **tags**: [DeploymentTags](#deploymenttags): Deployment tags
+* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2020-08-01
@@ -20,7 +20,7 @@
 * **managedBy**: string: The ID of the resource that manages this resource group.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties): The resource group properties.
-* **tags**: [ResourceGroupTags](#resourcegrouptags): The tags attached to the resource group.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags attached to the resource group.
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/tags@2020-08-01
@@ -40,14 +40,14 @@
 * **duration**: string (ReadOnly): The duration of the template deployment.
 * **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
 * **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
-* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior with additional details.
+* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior.
 * **outputResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of provisioned resources.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
+* **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
+* **parameters**: any: Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Denotes the state of provisioning.
-* **template**: any (WriteOnly)
+* **template**: any (WriteOnly): The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
 * **templateHash**: string (ReadOnly): The hash produced for the template.
 * **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
@@ -80,7 +80,7 @@
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): Any object
+* **info**: any (ReadOnly): The additional info.
 * **type**: string (ReadOnly): The additional info type.
 
 ## OnErrorDeployment
@@ -115,9 +115,9 @@
 * **defaultApiVersion**: string (ReadOnly): The default API version.
 * **locationMappings**: [ProviderExtendedLocation](#providerextendedlocation)[] (ReadOnly): The location mappings that are supported by this resource type.
 * **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created.
-* **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly): The properties.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): The properties.
 * **resourceType**: string (ReadOnly): The resource type.
-* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
+* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly)
 
 ## Alias
 ### Properties
@@ -136,7 +136,7 @@
 ## AliasPattern
 ### Properties
 * **phrase**: string (ReadOnly): The alias pattern phrase.
-* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern
+* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern.
 * **variable**: string (ReadOnly): The alias pattern variable.
 
 ## AliasPath
@@ -157,7 +157,7 @@
 * **location**: string (ReadOnly): The azure location.
 * **type**: string (ReadOnly): The extended location type.
 
-## ProviderResourceTypeProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -165,7 +165,7 @@
 ## ZoneMapping
 ### Properties
 * **location**: string (ReadOnly): The location of the zone mapping.
-* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
+* **zones**: string[] (ReadOnly)
 
 ## TemplateLink
 ### Properties
@@ -174,7 +174,7 @@
 * **relativePath**: string: Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.
 * **uri**: string: The URI of the template to deploy. Use either the uri or id property, but not both.
 
-## DeploymentTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -183,16 +183,16 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): The provisioning state.
 
-## ResourceGroupTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## Tags
 ### Properties
-* **tags**: [Tags](#tags): Dictionary of <string>
+* **tags**: [Dictionary<string,String>](#dictionarystringstring)
 
-## Tags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

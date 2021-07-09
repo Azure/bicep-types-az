@@ -26,7 +26,7 @@
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
 * **contentHash**: string (ReadOnly): Combined hash of the guest configuration package and configuration parameters.
 * **contentUri**: string (ReadOnly): Uri of the storage where guest configuration package is uploaded.
-* **kind**: 'DSC': Kind of the guest configuration. For example:DSC
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC.
 * **name**: string: Name of the guest configuration.
 * **version**: string: Version of the guest configuration.
 
@@ -37,7 +37,7 @@
 
 ## ConfigurationSetting
 ### Properties
-* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
+* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration.
 * **allowModuleOverwrite**: bool: If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
 * **configurationMode**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'ApplyOnly': Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
 * **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.

@@ -9,7 +9,7 @@
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DeviceServiceProperties](#deviceserviceproperties): The properties of a Windows IoT Device Service.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.WindowsIoT/deviceServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DeviceServiceProperties
@@ -20,7 +20,7 @@
 * **quantity**: int: Windows IoT Device Service device allocation,
 * **startDate**: string (ReadOnly): Windows IoT Device Service start date,
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

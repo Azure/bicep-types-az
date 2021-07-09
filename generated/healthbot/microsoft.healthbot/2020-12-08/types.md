@@ -10,7 +10,7 @@
 * **properties**: [HealthBotProperties](#healthbotproperties): The properties of a HealthBot. The Health Bot Service is a cloud platform that empowers developers in Healthcare organizations to build and deploy their compliant, AI-powered virtual health assistants and health bots, that help them improve processes and reduce costs.
 * **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.HealthBot/healthBots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## HealthBotProperties
@@ -20,18 +20,18 @@
 
 ## Sku
 ### Properties
-* **name**: 'C0' | 'F0' | 'S1' (Required): The name of the HealthBot SKU
+* **name**: 'C0' | 'F0' | 'S1' (Required): The name of the HealthBot SKU.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -6,21 +6,21 @@
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlConfigurationProperties](#sourcecontrolconfigurationproperties): Properties to create a Source Control Configuration resource
+* **properties**: [schemas:13_properties](#schemas13properties): Properties to create a Source Control Configuration resource
 * **systemData**: [SystemData](#systemdata): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## SourceControlConfigurationProperties
+## schemas:13_properties
 ### Properties
 * **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
-* **configurationProtectedSettings**: [ConfigurationProtectedSettings](#configurationprotectedsettings): Name-value pairs of protected configuration settings for the configuration
+* **configurationProtectedSettings**: [Dictionary<string,String>](#dictionarystringstring): Name-value pairs of protected configuration settings for the configuration
 * **enableHelmOperator**: bool: Option to enable Helm Operator for this git configuration.
 * **helmOperatorProperties**: [HelmOperatorProperties](#helmoperatorproperties): Properties for Helm operator.
 * **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
 * **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
 * **operatorParams**: string: Any Parameters for the Operator instance in string format.
 * **operatorScope**: 'cluster' | 'namespace': Scope at which the operator will be installed.
-* **operatorType**: 'Flux': Type of the operator
+* **operatorType**: 'Flux': Type of the operator.
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.
@@ -33,7 +33,7 @@
 * **message**: string: Message from when the configuration was applied.
 * **messageLevel**: 'Error' | 'Information' | 'Warning': Level of the message.
 
-## ConfigurationProtectedSettings
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

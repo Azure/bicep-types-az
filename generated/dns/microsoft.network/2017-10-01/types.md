@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ZoneProperties](#zoneproperties): Represents the properties of the zone.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/A@2017-10-01
@@ -120,7 +120,7 @@
 * **numberOfRecordSets**: int (ReadOnly): The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
 * **zoneType**: 'Private' | 'Public': The type of this DNS zone (Public or Private).
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -132,7 +132,7 @@
 * **caaRecords**: [CaaRecord](#caarecord)[]: The list of CAA records in the record set.
 * **CNAMERecord**: [CnameRecord](#cnamerecord): A CNAME record.
 * **fqdn**: string (ReadOnly): Fully qualified domain name of the record set.
-* **metadata**: [RecordSetPropertiesMetadata](#recordsetpropertiesmetadata): The metadata attached to the record set.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): The metadata attached to the record set.
 * **MXRecords**: [MxRecord](#mxrecord)[]: The list of MX records in the record set.
 * **NSRecords**: [NsRecord](#nsrecord)[]: The list of NS records in the record set.
 * **PTRRecords**: [PtrRecord](#ptrrecord)[]: The list of PTR records in the record set.
@@ -159,7 +159,7 @@
 ### Properties
 * **cname**: string: The canonical name for this CNAME record.
 
-## RecordSetPropertiesMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

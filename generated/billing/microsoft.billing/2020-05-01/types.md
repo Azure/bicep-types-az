@@ -62,7 +62,7 @@
 * **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
 * **systemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
-* **tags**: [BillingProfilePropertiesTags](#billingprofilepropertiestags): Tags of billing profiles.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of billing profiles.
 * **targetClouds**: 'USGov' | 'USNat' | 'USSec'[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## AddressDetails
@@ -108,17 +108,17 @@
 ## InvoiceSectionProperties
 ### Properties
 * **displayName**: string: The name of the invoice section.
-* **labels**: [InvoiceSectionPropertiesLabels](#invoicesectionpropertieslabels): Dictionary of metadata associated with the invoice section.
+* **labels**: [Dictionary<string,String>](#dictionarystringstring): Dictionary of metadata associated with the invoice section.
 * **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Possible cloud environments.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
 
-## InvoiceSectionPropertiesLabels
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BillingProfilePropertiesTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

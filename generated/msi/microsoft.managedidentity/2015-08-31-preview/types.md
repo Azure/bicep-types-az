@@ -8,17 +8,17 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IdentityProperties](#identityproperties) (ReadOnly): The properties associated with the identity.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityProperties
 ### Properties
 * **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
-* **clientSecretUrl**: string (ReadOnly): The ManagedServiceIdentity DataPlane URL that can be queried to obtain the identity credentials.
+* **clientSecretUrl**: string (ReadOnly):  The ManagedServiceIdentity DataPlane URL that can be queried to obtain the identity credentials.
 * **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
 * **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

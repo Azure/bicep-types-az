@@ -8,25 +8,24 @@
 * **location**: string: Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PipelineProperties](#pipelineproperties) (Required): Custom properties of a Pipeline.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): Resource Tags
+* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource Tags
 * **type**: 'Microsoft.DevOps/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PipelineProperties
 * **Discriminator**: pipelineType
-
 ### Base Properties
 * **bootstrapConfiguration**: [BootstrapConfiguration](#bootstrapconfiguration) (Required): Configuration used to bootstrap a Pipeline.
 * **pipelineId**: int (ReadOnly): Unique identifier of the Pipeline
-### AzurePipelineProperties
+### azurePipeline
 #### Properties
 * **organization**: [OrganizationReference](#organizationreference) (Required): Reference to an Azure DevOps Organization.
-* **pipelineType**: 'azurePipeline' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+* **pipelineType**: 'azurePipeline' (Required): Custom properties of a Azure Pipeline.
 * **project**: [ProjectReference](#projectreference) (Required): Reference to an Azure DevOps Project.
 
-### GithubWorkflowProperties
+### githubWorkflow
 #### Properties
-* **pipelineType**: 'githubWorkflow' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+* **pipelineType**: 'githubWorkflow' (Required): Custom properties of an Github Pipeline.
 * **repository**: [CodeRepository](#coderepository) (Required): Repository containing the source code for a pipeline.
 
 
@@ -40,20 +39,20 @@
 * **authorization**: [Authorization](#authorization): Authorization info used to access a resource (like code repository).
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
-* **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
+* **properties**: [Dictionary<string,String>](#dictionarystringstring): Repository-specific properties.
 * **repositoryType**: 'gitHub' | 'vstsGit' (Required): Type of code repository.
 
 ## Authorization
 ### Properties
-* **authorizationType**: 'personalAccessToken' (Required): Type of authorization.
-* **parameters**: [AuthorizationParameters](#authorizationparameters): Authorization parameters corresponding to the authorization type.
+* **authorizationType**: string (Required): Type of authorization.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Authorization parameters corresponding to the authorization type.
 
-## AuthorizationParameters
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CodeRepositoryProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -61,17 +60,17 @@
 ## PipelineTemplate
 ### Properties
 * **id**: string (Required): Unique identifier of the pipeline template.
-* **parameters**: [PipelineTemplateParameters](#pipelinetemplateparameters): Dictionary of input parameters used in the pipeline template.
+* **parameters**: [Dictionary<string,String>](#dictionarystringstring): Dictionary of input parameters used in the pipeline template.
 
-## PipelineTemplateParameters
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AzurePipelineProperties
+## azurePipeline
 ### Properties
 * **organization**: [OrganizationReference](#organizationreference) (Required): Reference to an Azure DevOps Organization.
-* **pipelineType**: 'azurePipeline' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+* **pipelineType**: 'azurePipeline' (Required): Custom properties of a Azure Pipeline.
 * **project**: [ProjectReference](#projectreference) (Required): Reference to an Azure DevOps Project.
 
 ## OrganizationReference
@@ -84,21 +83,21 @@
 * **id**: string (ReadOnly): Unique immutable identifier of the Azure DevOps Project.
 * **name**: string (Required): Name of the Azure DevOps Project.
 
-## GithubWorkflowProperties
+## githubWorkflow
 ### Properties
-* **pipelineType**: 'githubWorkflow' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+* **pipelineType**: 'githubWorkflow' (Required): Custom properties of an Github Pipeline.
 * **repository**: [CodeRepository](#coderepository) (Required): Repository containing the source code for a pipeline.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

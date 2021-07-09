@@ -8,7 +8,7 @@
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): The properties of a DigitalTwinsInstance.
-* **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-10-31
@@ -27,14 +27,13 @@
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state.
 
-## DigitalTwinsResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## DigitalTwinsEndpointResourceProperties
 * **Discriminator**: endpointType
-
 ### Base Properties
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
 * **deadLetterSecret**: string: Dead letter storage secret. Will be obfuscated during read.
@@ -43,18 +42,18 @@
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
 * **accessKey2**: string: EventGrid secondary accesskey. Will be obfuscated during read.
-* **endpointType**: 'EventGrid' (Required): The type of Digital Twins endpoint
+* **endpointType**: 'EventGrid' (Required): Properties related to EventGrid.
 * **TopicEndpoint**: string (Required): EventGrid Topic Endpoint
 
 ### EventHub
 #### Properties
 * **connectionStringPrimaryKey**: string (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
 * **connectionStringSecondaryKey**: string: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
-* **endpointType**: 'EventHub' (Required): The type of Digital Twins endpoint
+* **endpointType**: 'EventHub' (Required): Properties related to EventHub.
 
 ### ServiceBus
 #### Properties
-* **endpointType**: 'ServiceBus' (Required): The type of Digital Twins endpoint
+* **endpointType**: 'ServiceBus' (Required): Properties related to ServiceBus.
 * **primaryConnectionString**: string (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
 * **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
 
@@ -63,18 +62,18 @@
 ### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
 * **accessKey2**: string: EventGrid secondary accesskey. Will be obfuscated during read.
-* **endpointType**: 'EventGrid' (Required): The type of Digital Twins endpoint
+* **endpointType**: 'EventGrid' (Required): Properties related to EventGrid.
 * **TopicEndpoint**: string (Required): EventGrid Topic Endpoint
 
 ## EventHub
 ### Properties
 * **connectionStringPrimaryKey**: string (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
 * **connectionStringSecondaryKey**: string: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
-* **endpointType**: 'EventHub' (Required): The type of Digital Twins endpoint
+* **endpointType**: 'EventHub' (Required): Properties related to EventHub.
 
 ## ServiceBus
 ### Properties
-* **endpointType**: 'ServiceBus' (Required): The type of Digital Twins endpoint
+* **endpointType**: 'ServiceBus' (Required): Properties related to ServiceBus.
 * **primaryConnectionString**: string (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
 * **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
 

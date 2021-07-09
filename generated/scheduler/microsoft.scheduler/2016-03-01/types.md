@@ -8,7 +8,7 @@
 * **location**: string: Gets or sets the storage account location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobCollectionProperties](#jobcollectionproperties)
-* **tags**: [JobCollectionDefinitionTags](#jobcollectiondefinitiontags): Gets or sets the tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags.
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Scheduler/jobCollections/jobs@2016-03-01
@@ -41,7 +41,7 @@
 ### Properties
 * **name**: 'Free' | 'P10Premium' | 'P20Premium' | 'Standard': Gets or set the SKU.
 
-## JobCollectionDefinitionTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -71,7 +71,7 @@
 * **retryPolicy**: [RetryPolicy](#retrypolicy)
 * **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
 * **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type.
 
 ## StorageQueueMessage
 ### Properties
@@ -84,62 +84,61 @@
 ### Properties
 * **authentication**: [HttpAuthentication](#httpauthentication)
 * **body**: string: Gets or sets the request body.
-* **headers**: [HttpRequestHeaders](#httprequestheaders): Gets or sets the headers.
+* **headers**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the headers.
 * **method**: string: Gets or sets the method of the request.
 * **uri**: string: Gets or sets the URI of the request.
 
 ## HttpAuthentication
 * **Discriminator**: type
-
 ### Base Properties
-### OAuthAuthentication
+### ActiveDirectoryOAuth
 #### Properties
 * **audience**: string: Gets or sets the audience.
 * **clientId**: string: Gets or sets the client identifier.
 * **secret**: string: Gets or sets the secret, return value will always be empty.
 * **tenant**: string: Gets or sets the tenant.
-* **type**: 'ActiveDirectoryOAuth' (Required): Gets or sets the HTTP authentication type.
+* **type**: 'ActiveDirectoryOAuth' (Required)
 
-### BasicAuthentication
+### Basic
 #### Properties
 * **password**: string: Gets or sets the password, return value will always be empty.
-* **type**: 'Basic' (Required): Gets or sets the HTTP authentication type.
+* **type**: 'Basic' (Required)
 * **username**: string: Gets or sets the username.
 
-### ClientCertAuthentication
+### ClientCertificate
 #### Properties
 * **certificateExpirationDate**: string: Gets or sets the certificate expiration date.
 * **certificateSubjectName**: string: Gets or sets the certificate subject name.
 * **certificateThumbprint**: string: Gets or sets the certificate thumbprint.
 * **password**: string: Gets or sets the certificate password, return value will always be empty.
 * **pfx**: string: Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
-* **type**: 'ClientCertificate' (Required): Gets or sets the HTTP authentication type.
+* **type**: 'ClientCertificate' (Required)
 
 
-## OAuthAuthentication
+## ActiveDirectoryOAuth
 ### Properties
 * **audience**: string: Gets or sets the audience.
 * **clientId**: string: Gets or sets the client identifier.
 * **secret**: string: Gets or sets the secret, return value will always be empty.
 * **tenant**: string: Gets or sets the tenant.
-* **type**: 'ActiveDirectoryOAuth' (Required): Gets or sets the HTTP authentication type.
+* **type**: 'ActiveDirectoryOAuth' (Required)
 
-## BasicAuthentication
+## Basic
 ### Properties
 * **password**: string: Gets or sets the password, return value will always be empty.
-* **type**: 'Basic' (Required): Gets or sets the HTTP authentication type.
+* **type**: 'Basic' (Required)
 * **username**: string: Gets or sets the username.
 
-## ClientCertAuthentication
+## ClientCertificate
 ### Properties
 * **certificateExpirationDate**: string: Gets or sets the certificate expiration date.
 * **certificateSubjectName**: string: Gets or sets the certificate subject name.
 * **certificateThumbprint**: string: Gets or sets the certificate thumbprint.
 * **password**: string: Gets or sets the certificate password, return value will always be empty.
 * **pfx**: string: Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
-* **type**: 'ClientCertificate' (Required): Gets or sets the HTTP authentication type.
+* **type**: 'ClientCertificate' (Required)
 
-## HttpRequestHeaders
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -154,7 +153,7 @@
 ### Properties
 * **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
 * **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
+* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
 * **queueName**: string: Gets or sets the queue name.
@@ -182,7 +181,7 @@
 * **to**: string: Gets or sets the to.
 * **viaPartitionKey**: string: Gets or sets the via partition key.
 
-## ServiceBusMessageCustomMessageProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -191,13 +190,13 @@
 ### Properties
 * **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
 * **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
+* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
 * **topicPath**: string: Gets or sets the topic path.
 * **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
 
-## ServiceBusMessageCustomMessageProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

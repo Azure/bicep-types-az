@@ -21,16 +21,16 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
-* **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): Registration definition inside registration assignment.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration assignment.
+* **registrationDefinition**: [schemas:4_registrationDefinition](#schemas4registrationdefinition) (ReadOnly): Registration definition inside registration assignment.
 * **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
 
-## RegistrationAssignmentPropertiesRegistrationDefinition
+## schemas:4_registrationDefinition
 ### Properties
 * **id**: string (ReadOnly): Fully qualified path of the registration definition.
 * **name**: string (ReadOnly): Name of the registration definition.
 * **plan**: [Plan](#plan): Plan details for the managed services.
-* **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties): Properties of registration definition inside registration assignment.
+* **properties**: [schemas:4_registrationDefinition_properties](#schemas4registrationdefinitionproperties): Properties of registration definition inside registration assignment.
 * **type**: string (ReadOnly): Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
 
 ## Plan
@@ -40,7 +40,7 @@
 * **publisher**: string (Required): The publisher ID.
 * **version**: string (Required): The plan's version.
 
-## RegistrationAssignmentPropertiesRegistrationDefinitionProperties
+## schemas:4_registrationDefinition_properties
 ### Properties
 * **authorizations**: [Authorization](#authorization)[]: Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
 * **description**: string: Description of the registration definition.

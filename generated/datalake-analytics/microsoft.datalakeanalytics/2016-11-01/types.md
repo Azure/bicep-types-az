@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateDataLakeAnalyticsAccountProperties](#createdatalakeanalyticsaccountproperties) (Required): The account specific properties that are associated with an underlying Data Lake Analytics account. Returned only when retrieving a specific account.
-* **tags**: [CreateDataLakeAnalyticsAccountParametersTags](#createdatalakeanalyticsaccountparameterstags): The resource tags.
+* **properties**: [CreateDataLakeAnalyticsAccountProperties](#createdatalakeanalyticsaccountproperties) (Required)
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/computePolicies@2016-11-01
@@ -17,7 +17,7 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required): The compute policy properties.
+* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required): The compute policy properties to use when creating a new compute policy.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/computePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/dataLakeStoreAccounts@2016-11-01
@@ -26,7 +26,7 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties): The Data Lake Store account properties.
+* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties): The Data Lake Store account properties to use when adding a new Data Lake Store account.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/dataLakeStoreAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/firewallRules@2016-11-01
@@ -35,7 +35,7 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties.
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties to use when creating a new firewall rule.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeAnalytics/accounts/storageAccounts@2016-11-01
@@ -44,7 +44,7 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AddStorageAccountProperties](#addstorageaccountproperties) (Required): The Azure Storage account properties.
+* **properties**: [AddStorageAccountProperties](#addstorageaccountproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CreateDataLakeAnalyticsAccountProperties
@@ -52,7 +52,7 @@
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Analytics account.
 * **computePolicies**: [CreateComputePolicyWithAccountParameters](#createcomputepolicywithaccountparameters)[]: The list of compute policies associated with this account.
 * **creationTime**: string (ReadOnly): The account creation time.
-* **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly): The commitment tier for the next month.
+* **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
 * **dataLakeStoreAccounts**: [AddDataLakeStoreWithAccountParameters](#adddatalakestorewithaccountparameters)[] (Required): The list of Data Lake Store accounts associated with this account.
 * **debugDataAccessLevel**: 'All' | 'Customer' | 'None' (ReadOnly): The current state of the DebugDataAccessLevel for this account.
 * **defaultDataLakeStoreAccount**: string (Required): The default Data Lake Store account associated with this account.
@@ -79,22 +79,22 @@
 ## CreateComputePolicyWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The resource name.
-* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required): The compute policy properties.
+* **name**: string (Required): The unique name of the compute policy to create.
+* **properties**: [CreateOrUpdateComputePolicyProperties](#createorupdatecomputepolicyproperties) (Required): The compute policy properties to use when creating a new compute policy.
 * **type**: string (ReadOnly): The resource type.
 
 ## CreateOrUpdateComputePolicyProperties
 ### Properties
-* **maxDegreeOfParallelismPerJob**: int: The maximum degree of parallelism per job this user can use to submit jobs.
-* **minPriorityPerJob**: int: The minimum priority per job this user can use to submit jobs.
+* **maxDegreeOfParallelismPerJob**: int: The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
+* **minPriorityPerJob**: int: The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
 * **objectId**: string (Required): The AAD object identifier for the entity to create a policy for.
 * **objectType**: 'Group' | 'ServicePrincipal' | 'User' (Required): The type of AAD object the object identifier refers to.
 
 ## AddDataLakeStoreWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The resource name.
-* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties): The Data Lake Store account properties.
+* **name**: string (Required): The unique name of the Data Lake Store account to add.
+* **properties**: [AddDataLakeStoreProperties](#adddatalakestoreproperties): The Data Lake Store account properties to use when adding a new Data Lake Store account.
 * **type**: string (ReadOnly): The resource type.
 
 ## AddDataLakeStoreProperties
@@ -104,8 +104,8 @@
 ## CreateFirewallRuleWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The resource name.
-* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties.
+* **name**: string (Required): The unique name of the firewall rule to create.
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties to use when creating a new firewall rule.
 * **type**: string (ReadOnly): The resource type.
 
 ## CreateOrUpdateFirewallRuleProperties
@@ -123,7 +123,7 @@
 ## HiveMetastoreProperties
 ### Properties
 * **databaseName**: string (ReadOnly): The databaseName for the Hive MetaStore
-* **nestedResourceProvisioningState**: 'Canceled' | 'Failed' | 'Succeeded' (ReadOnly): The current state of the NestedResourceProvisioning for this account.
+* **nestedResourceProvisioningState**: 'Canceled' | 'Failed' | 'Succeeded' (ReadOnly): The current state of the NestedResource.
 * **password**: string (ReadOnly): The password for the Hive MetaStore
 * **runtimeVersion**: string (ReadOnly): The runtimeVersion for the Hive MetaStore
 * **serverUri**: string (ReadOnly): The serverUri for the Hive MetaStore
@@ -143,13 +143,13 @@
 ## AddStorageAccountWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The resource name.
-* **properties**: [AddStorageAccountProperties](#addstorageaccountproperties) (Required): The Azure Storage account properties.
+* **name**: string (Required): The unique name of the Azure Storage account to add.
+* **properties**: [AddStorageAccountProperties](#addstorageaccountproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
 * **type**: string (ReadOnly): The resource type.
 
 ## AddStorageAccountProperties
 ### Properties
-* **accessKey**: string (Required, WriteOnly)
+* **accessKey**: string (Required, WriteOnly): The access key associated with this Azure Storage account that will be used to connect to it.
 * **suffix**: string: The optional suffix for the storage account.
 
 ## VirtualNetworkRule
@@ -162,9 +162,9 @@
 ## VirtualNetworkRuleProperties
 ### Properties
 * **subnetId**: string (ReadOnly): The resource identifier for the subnet
-* **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly): The current state of the VirtualNetworkRule for this account.
+* **virtualNetworkRuleState**: 'Active' | 'Failed' | 'NetworkSourceDeleted' (ReadOnly): The current state of the VirtualNetwork Rule.
 
-## CreateDataLakeAnalyticsAccountParametersTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

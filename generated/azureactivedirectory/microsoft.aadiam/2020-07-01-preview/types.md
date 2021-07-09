@@ -8,14 +8,14 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureADMetricsPropertiesFormat](#azureadmetricspropertiesformat)
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'microsoft.aadiam/azureADMetrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureADMetricsPropertiesFormat
 ### Properties
 * **provisioningState**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the resource.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

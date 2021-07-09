@@ -8,7 +8,7 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProfileProperties
@@ -51,7 +51,7 @@
 * **profileMonitorStatus**: string: Gets or sets the profile-level monitoring status of the Traffic Manager profile.
 * **protocol**: string: Gets or sets the protocol (HTTP or HTTPS) used to probe for endpoint health.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

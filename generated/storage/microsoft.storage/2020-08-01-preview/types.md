@@ -7,13 +7,23 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
-* **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required): Indicates the type of storage account.
-* **location**: string (Required): The geo-location where the resource lives
+* **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account.
+* **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): Properties of the storage account.
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
 * **sku**: [Sku](#sku) (Required): The SKU of the storage account.
-* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Storage/storageAccounts/blobServices@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:96_properties](#schemas96properties): The properties of a storage account’s Blob service.
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the storage account.
+* **type**: 'Microsoft.Storage/storageAccounts/blobServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -31,7 +41,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required): The properties of an ImmutabilityPolicy of a blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -43,6 +53,16 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionScopeProperties](#encryptionscopeproperties): Properties of the encryption scope.
 * **type**: 'Microsoft.Storage/storageAccounts/encryptionScopes' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Storage/storageAccounts/fileServices@2020-08-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:104_properties](#schemas104properties): The properties of File services in storage account.
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the storage account.
+* **type**: 'Microsoft.Storage/storageAccounts/fileServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/fileServices/shares@2020-08-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -59,9 +79,9 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BlobInventoryPolicyProperties](#blobinventorypolicyproperties): The storage account blob inventory policy properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Storage/storageAccounts/inventoryPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/managementPolicies@2020-08-01-preview
@@ -69,7 +89,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagementPolicyProperties](#managementpolicyproperties): The Storage Account ManagementPolicy properties.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -96,8 +116,8 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [QueueServicePropertiesAutoGenerated](#queueservicepropertiesautogenerated): The properties of a storage account’s Queue service.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:116_properties](#schemas116properties): The properties of a storage account’s Queue service.
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/queueServices/queues@2020-08-01-preview
@@ -114,8 +134,8 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [TableServicePropertiesAutoGenerated](#tableservicepropertiesautogenerated): The properties of a storage account’s Table service.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [schemas:123_properties](#schemas123properties): The properties of a storage account’s Table service.
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/tableServices/tables@2020-08-01-preview
@@ -130,13 +150,13 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of extendedLocation.
+* **type**: 'EdgeZone': The type of the extended location.
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned' (Required): The identity type.
+* **type**: string (Required): The identity type.
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
@@ -163,8 +183,8 @@
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true.
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
+* **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
 
 ## AzureFilesIdentityBasedAuthentication
 ### Properties
@@ -204,7 +224,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault.
 * **keyvaultproperties**: [KeyVaultProperties](#keyvaultproperties): Properties of key vault.
 * **requireInfrastructureEncryption**: bool: A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
@@ -241,12 +261,12 @@
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None': Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
 * **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules
-* **resourceAccessRules**: [ResourceAccessRule](#resourceaccessrule)[]: Array of ResourceAccessRule
+* **resourceAccessRules**: [ResourceAccessRule](#resourceaccessrule)[]
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: Sets the virtual network rules
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of virtual network rule.
+* **action**: 'Allow': The action of IP ACL rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## ResourceAccessRule
@@ -298,7 +318,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the private endpoint connection resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -308,7 +328,7 @@
 ### Properties
 * **actionRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## RoutingPreference
 ### Properties
@@ -318,13 +338,61 @@
 
 ## Sku
 ### Properties
-* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' (Required): The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
-* **tier**: 'Premium' | 'Standard' (ReadOnly): The SKU tier. This is based on the SKU name.
+* **name**: 'Premium_LRS' | 'Premium_ZRS' | 'Standard_GRS' | 'Standard_GZRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_RAGZRS' | 'Standard_ZRS' (Required)
+* **tier**: 'Premium' | 'Standard'
 
-## StorageAccountCreateParametersTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## schemas:96_properties
+### Properties
+* **automaticSnapshotPolicyEnabled**: bool: Deprecated in favor of isVersioningEnabled property.
+* **changeFeed**: [ChangeFeed](#changefeed): The blob service properties for change feed events.
+* **containerDeleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy): The service properties for soft delete.
+* **cors**: [CorsRules](#corsrules): Sets the CORS rules. You can include up to five CorsRule elements in the request.
+* **defaultServiceVersion**: string: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
+* **deleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy): The service properties for soft delete.
+* **isVersioningEnabled**: bool: Versioning is enabled if set to true.
+* **lastAccessTimeTrackingPolicy**: [LastAccessTimeTrackingPolicy](#lastaccesstimetrackingpolicy): The blob service properties for Last access time based tracking policy.
+* **restorePolicy**: [RestorePolicyProperties](#restorepolicyproperties): The blob service properties for blob restore policy
+
+## ChangeFeed
+### Properties
+* **enabled**: bool: Indicates whether change feed event logging is enabled for the Blob service.
+* **retentionInDays**: int: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+
+## DeleteRetentionPolicy
+### Properties
+* **days**: int: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+* **enabled**: bool: Indicates whether DeleteRetentionPolicy is enabled.
+
+## CorsRules
+### Properties
+* **corsRules**: [CorsRule](#corsrule)[]: The List of CORS rules. You can include up to five CorsRule elements in the request.
+
+## CorsRule
+### Properties
+* **allowedHeaders**: string[] (Required): Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
+* **allowedMethods**: 'DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'POST' | 'PUT'[] (Required): Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
+* **allowedOrigins**: string[] (Required): Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
+* **exposedHeaders**: string[] (Required): Required if CorsRule element is present. A list of response headers to expose to CORS clients.
+* **maxAgeInSeconds**: int (Required): Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
+
+## LastAccessTimeTrackingPolicy
+### Properties
+* **blobType**: string[]: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
+* **enable**: bool (Required): When set to true last access time based tracking is enabled.
+* **name**: 'AccessTimeTracking': Name of the policy. The valid value is AccessTimeTracking. This field is currently read only.
+* **trackingGranularityInDays**: int: The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
+
+## RestorePolicyProperties
+### Properties
+* **days**: int: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+* **enabled**: bool (Required): Blob restore is enabled if set to true.
+* **lastEnabledTime**: string (ReadOnly): Deprecated in favor of minRestoreTime property.
+* **minRestoreTime**: string (ReadOnly): Returns the minimum date and time that the restore can be started.
 
 ## ContainerProperties
 ### Properties
@@ -340,7 +408,7 @@
 * **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly): Lease state of the container.
 * **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly): The lease status of the container.
 * **legalHold**: [LegalHoldProperties](#legalholdproperties) (ReadOnly): The LegalHold property of a blob container.
-* **metadata**: [ContainerPropertiesMetadata](#containerpropertiesmetadata): A name-value pair to associate with the container as metadata.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair to associate with the container as metadata.
 * **publicAccess**: 'Blob' | 'Container' | 'None': Specifies whether data in the container may be accessed publicly and the level of access.
 * **remainingRetentionDays**: int (ReadOnly): Remaining retention days for soft deleted blob container.
 * **version**: string (ReadOnly): The version of the deleted blob container.
@@ -355,7 +423,7 @@
 ### Properties
 * **allowProtectedAppendWrites**: bool: This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
 * **immutabilityPeriodSinceCreationInDays**: int: The immutability period for the blobs in the container since the policy creation, in days.
-* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container,
 
 ## UpdateHistoryProperty
 ### Properties
@@ -363,7 +431,7 @@
 * **objectIdentifier**: string (ReadOnly): Returns the Object ID of the user who updated the ImmutabilityPolicy.
 * **tenantId**: string (ReadOnly): Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
 * **timestamp**: string (ReadOnly): Returns the date and time the ImmutabilityPolicy was updated.
-* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
+* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container,
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
 
 ## LegalHoldProperties
@@ -379,7 +447,7 @@
 * **timestamp**: string (ReadOnly): Returns the date and time the tag was added.
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who added the tag.
 
-## ContainerPropertiesMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -396,6 +464,24 @@
 ### Properties
 * **keyUri**: string: The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
 
+## schemas:104_properties
+### Properties
+* **cors**: [CorsRules](#corsrules): Sets the CORS rules. You can include up to five CorsRule elements in the request.
+* **protocolSettings**: [ProtocolSettings](#protocolsettings): Protocol settings for file service
+* **shareDeleteRetentionPolicy**: [DeleteRetentionPolicy](#deleteretentionpolicy): The service properties for soft delete.
+
+## ProtocolSettings
+### Properties
+* **smb**: [SmbSetting](#smbsetting): Setting for SMB protocol
+
+## SmbSetting
+### Properties
+* **multichannel**: [Multichannel](#multichannel): Multichannel setting. Applies to Premium FileStorage only.
+
+## Multichannel
+### Properties
+* **enabled**: bool: Indicates whether multichannel is enabled
+
 ## FileShareProperties
 ### Properties
 * **accessTier**: 'Cool' | 'Hot' | 'Premium' | 'TransactionOptimized': Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
@@ -405,7 +491,7 @@
 * **deletedTime**: string (ReadOnly): The deleted time if the share was deleted.
 * **enabledProtocols**: 'NFS' | 'SMB': The authentication protocol that is used for the file share. Can only be specified when creating a share.
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the share was last modified.
-* **metadata**: [FileSharePropertiesMetadata](#filesharepropertiesmetadata): A name-value pair to associate with the share as metadata.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair to associate with the share as metadata.
 * **remainingRetentionDays**: int (ReadOnly): Remaining retention days for share that was soft deleted.
 * **rootSquash**: 'AllSquash' | 'NoRootSquash' | 'RootSquash': The property is for NFS share only. The default is NoRootSquash.
 * **shareQuota**: int: The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
@@ -413,7 +499,7 @@
 * **snapshotTime**: string (ReadOnly): Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
 * **version**: string (ReadOnly): The version of the share.
 
-## FileSharePropertiesMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -428,7 +514,7 @@
 * **destination**: string (Required): Container name where blob inventory files are stored. Must be pre-created.
 * **enabled**: bool (Required): Policy is enabled if set to true.
 * **rules**: [BlobInventoryPolicyRule](#blobinventorypolicyrule)[] (Required): The storage account blob inventory policy rules. The rule is applied when it is enabled.
-* **type**: 'Inventory' (Required): The valid value is Inventory
+* **type**: string (Required): The valid value is Inventory
 
 ## BlobInventoryPolicyRule
 ### Properties
@@ -447,14 +533,14 @@
 * **includeSnapshots**: bool: Includes blob snapshots in blob inventory when value set to true.
 * **prefixMatch**: string[]: An array of strings for blob prefixes to be matched.
 
-## SystemData
+## systemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
 
 ## ManagementPolicyProperties
 ### Properties
@@ -470,7 +556,7 @@
 * **definition**: [ManagementPolicyDefinition](#managementpolicydefinition) (Required): An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
 * **enabled**: bool: Rule is enabled if set to true.
 * **name**: string (Required): A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-* **type**: 'Lifecycle' (Required): The valid value is Lifecycle
+* **type**: string (Required): The valid value is Lifecycle
 
 ## ManagementPolicyDefinition
 ### Properties
@@ -543,33 +629,21 @@
 * **minCreationTime**: string: Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
 * **prefixMatch**: string[]: Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
 
-## QueueServicePropertiesAutoGenerated
+## schemas:116_properties
 ### Properties
 * **cors**: [CorsRules](#corsrules): Sets the CORS rules. You can include up to five CorsRule elements in the request.
-
-## CorsRules
-### Properties
-* **corsRules**: [CorsRule](#corsrule)[]: The List of CORS rules. You can include up to five CorsRule elements in the request.
-
-## CorsRule
-### Properties
-* **allowedHeaders**: string[] (Required): Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
-* **allowedMethods**: 'DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'POST' | 'PUT'[] (Required): Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
-* **allowedOrigins**: string[] (Required): Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
-* **exposedHeaders**: string[] (Required): Required if CorsRule element is present. A list of response headers to expose to CORS clients.
-* **maxAgeInSeconds**: int (Required): Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
 
 ## QueueProperties
 ### Properties
 * **approximateMessageCount**: int (ReadOnly): Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher.
-* **metadata**: [QueuePropertiesMetadata](#queuepropertiesmetadata): A name-value pair that represents queue metadata.
+* **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair that represents queue metadata.
 
-## QueuePropertiesMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## TableServicePropertiesAutoGenerated
+## schemas:123_properties
 ### Properties
 * **cors**: [CorsRules](#corsrules): Sets the CORS rules. You can include up to five CorsRule elements in the request.
 

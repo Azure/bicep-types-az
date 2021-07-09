@@ -50,8 +50,8 @@ repositories/repository-name/metadata/write
 ## TokenCredentialsProperties
 ### Properties
 * **activeDirectoryObject**: [ActiveDirectoryObject](#activedirectoryobject): The Active Directory Object that will be used for authenticating the token of a container registry.
-* **certificates**: [TokenCertificate](#tokencertificate)[]: Array of TokenCertificate
-* **passwords**: [TokenPassword](#tokenpassword)[]: Array of TokenPassword
+* **certificates**: [TokenCertificate](#tokencertificate)[]
+* **passwords**: [TokenPassword](#tokenpassword)[]
 
 ## ActiveDirectoryObject
 ### Properties
@@ -69,6 +69,6 @@ repositories/repository-name/metadata/write
 ### Properties
 * **creationTime**: string: The creation datetime of the password.
 * **expiry**: string: The expiry datetime of the password.
-* **name**: 'password1' | 'password2': The password name "password1" or "password2"
+* **name**: 'password1' | 'password2': The password name "password1" or "password2".
 * **value**: string (ReadOnly): The password value.
 

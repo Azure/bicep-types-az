@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (Required): Job Properties
 * **sku**: [Sku](#sku) (Required): The Sku.
-* **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## JobProperties
@@ -32,7 +32,6 @@
 
 ## JobDetails
 * **Discriminator**: jobDetailsType
-
 ### Base Properties
 * **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
@@ -46,25 +45,27 @@
 * **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Shipping details.
 * **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
 * **shippingAddress**: [ShippingAddress](#shippingaddress) (Required): Shipping address where customer wishes to receive the device.
-### DataBoxJobDetails
+### DataBox
 #### Properties
-* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
-* **devicePassword**: string: Set Device password for unlocking Databox
-* **jobDetailsType**: 'DataBox' (Required): Indicates the type of job details.
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
+* **copyLogLink**: string (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBox' (Required): Databox Job Details
 
-### DataBoxDiskJobDetails
+### DataBoxDisk
 #### Properties
-* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
-* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly): Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
-* **jobDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
-* **passkey**: string: User entered passkey for DataBox Disk job.
-* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks): User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
+* **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
+* **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
+* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
-### DataBoxHeavyJobDetails
+### DataBoxHeavy
 #### Properties
-* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per account.
-* **devicePassword**: string: Set Device password for unlocking Databox Heavy
-* **jobDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
+* **accountName**: string (ReadOnly): Destination account name.
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for Databox heavy
+* **copyLogLink**: string[] (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBoxHeavy' (Required): Databox Heavy Device Job Details
 
 
 ## ContactDetails
@@ -83,46 +84,51 @@
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
-
 ### Base Properties
-### DataBoxAccountCopyLogDetails
+### DataBox
 #### Properties
 * **accountName**: string (ReadOnly): Destination account name.
-* **copyLogDetailsType**: 'DataBox' (Required): Indicates the type of job details.
+* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
 * **copyLogLink**: string (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBox' (Required): Databox Job Details
 
-### DataBoxDiskCopyLogDetails
+### DataBoxDisk
 #### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
 * **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
 * **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
 * **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
-### DataBoxHeavyAccountCopyLogDetails
+### DataBoxHeavy
 #### Properties
 * **accountName**: string (ReadOnly): Destination account name.
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for Databox heavy
 * **copyLogLink**: string[] (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBoxHeavy' (Required): Databox Heavy Device Job Details
 
 
-## DataBoxAccountCopyLogDetails
+## DataBox
 ### Properties
 * **accountName**: string (ReadOnly): Destination account name.
-* **copyLogDetailsType**: 'DataBox' (Required): Indicates the type of job details.
+* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
 * **copyLogLink**: string (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBox' (Required): Databox Job Details
 
-## DataBoxDiskCopyLogDetails
+## DataBoxDisk
 ### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
 * **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
 * **errorLogLink**: string (ReadOnly): Link for copy error logs.
+* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
 * **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
-## DataBoxHeavyAccountCopyLogDetails
+## DataBoxHeavy
 ### Properties
 * **accountName**: string (ReadOnly): Destination account name.
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for Databox heavy
 * **copyLogLink**: string[] (ReadOnly): Link for copy logs.
+* **jobDetailsType**: 'DataBoxHeavy' (Required): Databox Heavy Device Job Details
 
 ## PackageShippingDetails
 ### Properties
@@ -132,31 +138,30 @@
 
 ## DestinationAccountDetails
 * **Discriminator**: dataDestinationType
-
 ### Base Properties
 * **accountId**: string: Arm Id of the destination where the data has to be moved.
 * **sharePassword**: string: Share password to be shared by all shares in SA.
-### DestinationManagedDiskDetails
+### ManagedDisk
 #### Properties
-* **dataDestinationType**: 'ManagedDisk' (Required): Data Destination Type.
+* **dataDestinationType**: 'ManagedDisk' (Required): Details for the destination compute disks.
 * **resourceGroupId**: string (Required): Destination Resource Group Id where the Compute disks should be created.
 * **stagingStorageAccountId**: string (Required): Arm Id of the storage account that can be used to copy the vhd for staging.
 
-### DestinationStorageAccountDetails
+### StorageAccount
 #### Properties
-* **dataDestinationType**: 'StorageAccount' (Required): Data Destination Type.
+* **dataDestinationType**: 'StorageAccount' (Required): Details for the destination storage account.
 * **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
 
-## DestinationManagedDiskDetails
+## ManagedDisk
 ### Properties
-* **dataDestinationType**: 'ManagedDisk' (Required): Data Destination Type.
+* **dataDestinationType**: 'ManagedDisk' (Required): Details for the destination compute disks.
 * **resourceGroupId**: string (Required): Destination Resource Group Id where the Compute disks should be created.
 * **stagingStorageAccountId**: string (Required): Arm Id of the storage account that can be used to copy the vhd for staging.
 
-## DestinationStorageAccountDetails
+## StorageAccount
 ### Properties
-* **dataDestinationType**: 'StorageAccount' (Required): Data Destination Type.
+* **dataDestinationType**: 'StorageAccount' (Required): Details for the destination storage account.
 * **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
 ## JobErrorDetails
@@ -170,8 +175,8 @@
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the job stage.
 * **errorDetails**: [JobErrorDetails](#joberrordetails)[] (ReadOnly): Error details for the stage.
-* **jobStageDetails**: any (ReadOnly): Any object
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the stage which is in progress.
+* **jobStageDetails**: any (ReadOnly): Job Stage Details
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the job stage.
 * **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
@@ -182,7 +187,7 @@
 
 ## TransportPreferences
 ### Properties
-* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Transport Shipment Type supported for given region.
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred.
 
 ## ShippingAddress
 ### Properties
@@ -197,57 +202,6 @@
 * **streetAddress3**: string: Street Address line 3.
 * **zipExtendedCode**: string: Extended Zip Code.
 
-## DataBoxJobDetails
-### Properties
-* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
-* **devicePassword**: string: Set Device password for unlocking Databox
-* **jobDetailsType**: 'DataBox' (Required): Indicates the type of job details.
-
-## CopyProgress
-### Properties
-* **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
-* **bytesSentToCloud**: int (ReadOnly): Amount of data uploaded by the job as of now.
-* **dataDestinationType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Destination Type.
-* **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
-* **filesProcessed**: int (ReadOnly): Number of files processed by the job as of now.
-* **invalidFileBytesUploaded**: int (ReadOnly): Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
-* **invalidFilesProcessed**: int (ReadOnly): Number of files not adhering to azure naming conventions which were processed by automatic renaming
-* **renamedContainerCount**: int (ReadOnly): Number of folders not adhering to azure naming conventions which were processed by automatic renaming
-* **storageAccountName**: string (ReadOnly): Name of the storage account where the data needs to be uploaded.
-* **totalBytesToProcess**: int (ReadOnly): Total amount of data to be processed by the job.
-* **totalFilesToProcess**: int (ReadOnly): Total number of files to be processed by the job.
-
-## DataBoxDiskJobDetails
-### Properties
-* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
-* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly): Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
-* **jobDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
-* **passkey**: string: User entered passkey for DataBox Disk job.
-* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks): User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
-
-## DataBoxDiskCopyProgress
-### Properties
-* **bytesCopied**: int (ReadOnly): Bytes copied during the copy of disk.
-* **percentComplete**: int (ReadOnly): Indicates the percentage completed for the copy of the disk.
-* **serialNumber**: string (ReadOnly): The serial number of the disk
-* **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'Failed' | 'HardwareError' | 'InProgress' | 'NotReturned' | 'NotStarted' | 'StorageAccountNotAccessible' | 'UnsupportedData' (ReadOnly): The Status of the copy
-
-## DataBoxDiskJobDetailsDisksAndSizeDetails
-### Properties
-### Additional Properties
-* **Additional Properties Type**: int
-
-## DataBoxDiskJobDetailsPreferredDisks
-### Properties
-### Additional Properties
-* **Additional Properties Type**: int
-
-## DataBoxHeavyJobDetails
-### Properties
-* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per account.
-* **devicePassword**: string: Set Device password for unlocking Databox Heavy
-* **jobDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
-
 ## Error
 ### Properties
 * **code**: string (ReadOnly): Error code that can be used to programmatically identify the error.
@@ -257,9 +211,9 @@
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

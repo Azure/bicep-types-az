@@ -9,7 +9,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties): Common Properties shared by Mixed Reality Accounts
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MixedReality/spatialAnchorsAccounts@2019-12-02-preview
@@ -21,7 +21,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties): Common Properties shared by Mixed Reality Accounts
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -35,12 +35,12 @@
 * **accountDomain**: string (ReadOnly): Correspond domain name of certain Spatial Anchors Account
 * **accountId**: string (ReadOnly): unique id of certain account.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

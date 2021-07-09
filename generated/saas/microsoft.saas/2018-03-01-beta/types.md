@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2018-03-01-beta' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (WriteOnly)
+* **location**: string (WriteOnly): Resource location. Only value allowed for SaaS is 'global'
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SaasCreationProperties](#saascreationproperties): saas properties
-* **tags**: [Tags](#tags): the resource tags.
+* **properties**: [SaasCreationProperties](#saascreationproperties): properties for creation saas
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): the resource tags.
 * **type**: 'Microsoft.SaaS/resources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SaasCreationProperties
@@ -18,7 +18,7 @@
 * **isFreeTrial**: bool (ReadOnly): Whether the current term is a Free Trial term
 * **lastModified**: string (ReadOnly): The last modifier date if this resource.
 * **offerId**: string: The offer id.
-* **paymentChannelMetadata**: [SaasCreationPropertiesPaymentChannelMetadata](#saascreationpropertiespaymentchannelmetadata): The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+* **paymentChannelMetadata**: [Dictionary<string,String>](#dictionarystringstring): The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
 * **paymentChannelType**: 'CustomerDelegated' | 'SubscriptionDelegated': The Payment channel for the SaasSubscription.
 * **publisherId**: string: The publisher id.
 * **publisherTestEnvironment**: string: The environment in the publisher side for this resource.
@@ -28,21 +28,21 @@
 * **saasSubscriptionId**: string: The saas subscription id used for tenant to subscription level migration request.
 * **skuId**: string: The plan id.
 * **status**: 'NotStarted' | 'PendingFulfillmentStart' | 'Subscribed' | 'Suspended' | 'Unsubscribed' (ReadOnly): The SaaS Subscription Status.
-* **term**: [SaasPropertiesTerm](#saaspropertiesterm) (ReadOnly): The current Term object.
+* **term**: [schemas:4_properties_term](#schemas4propertiesterm) (ReadOnly): The current Term object.
 * **termId**: string: The current Term id.
 
-## SaasCreationPropertiesPaymentChannelMetadata
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## SaasPropertiesTerm
+## schemas:4_properties_term
 ### Properties
 * **endDate**: string (ReadOnly): The end date of the current term
 * **startDate**: string (ReadOnly): The start date of the current term
 * **termUnit**: string (ReadOnly): The unit indicating Monthly / Yearly
 
-## Tags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

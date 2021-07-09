@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVirtualMachineGroupProperties](#sqlvirtualmachinegroupproperties): The properties of a SQL virtual machine group.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2017-03-01-preview
@@ -29,7 +29,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVirtualMachineProperties](#sqlvirtualmachineproperties): The SQL virtual machine properties.
-* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SqlVirtualMachineGroupProperties
@@ -53,7 +53,7 @@
 * **storageAccountPrimaryKey**: string: Primary key of the witness storage account.
 * **storageAccountUrl**: string: Fully qualified ARM resource id of the witness storage account.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -178,7 +178,7 @@
 * **clusterOperatorAccountPassword**: string: Cluster operator account password.
 * **sqlServiceAccountPassword**: string: SQL service account password.
 
-## TrackedResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

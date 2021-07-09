@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActivityLogAlert](#activitylogalert): An Azure activity log alert.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'microsoft.insights/activityLogAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ActivityLogAlert
@@ -26,9 +26,9 @@
 ## ActivityLogAlertActionGroup
 ### Properties
 * **actionGroupId**: string (Required): The resourceId of the action group. This cannot be null or empty.
-* **webhookProperties**: [ActivityLogAlertActionGroupWebhookProperties](#activitylogalertactiongroupwebhookproperties): The dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+* **webhookProperties**: [Dictionary<string,String>](#dictionarystringstring): The dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
 
-## ActivityLogAlertActionGroupWebhookProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -42,7 +42,7 @@
 * **equals**: string (Required): The field value will be compared to this value (case-insensitive) to determine if the condition is met.
 * **field**: string (Required): The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

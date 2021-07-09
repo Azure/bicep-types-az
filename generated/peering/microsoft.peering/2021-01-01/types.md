@@ -19,7 +19,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringProperties](#peeringproperties): The properties that define connectivity to the Microsoft Cloud Edge.
 * **sku**: [PeeringSku](#peeringsku) (Required): The SKU that defines the tier and kind of the peering.
-* **tags**: [PeeringTags](#peeringtags): The resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Peering/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peerings/registeredAsns@2021-01-01
@@ -49,7 +49,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PeeringServiceProperties](#peeringserviceproperties): The properties that define connectivity to the Peering Service.
 * **sku**: [PeeringServiceSku](#peeringservicesku): The SKU that defines the type of the peering service.
-* **tags**: [PeeringServiceTags](#peeringservicetags): The resource tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
 * **type**: 'Microsoft.Peering/peeringServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Peering/peeringServices/prefixes@2021-01-01
@@ -140,7 +140,7 @@
 * **size**: 'Free' | 'Metered' | 'Unlimited': The size of the peering SKU.
 * **tier**: 'Basic' | 'Premium': The tier of the peering SKU.
 
-## PeeringTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,7 +171,7 @@
 ### Properties
 * **name**: string: The name of the peering service SKU.
 
-## PeeringServiceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -180,7 +180,7 @@
 ### Properties
 * **errorMessage**: string (ReadOnly): The error message for validation state
 * **events**: [PeeringServicePrefixEvent](#peeringserviceprefixevent)[] (ReadOnly): The list of events for peering service prefix
-* **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly): The prefix learned type
+* **learnedType**: 'None' | 'ViaServiceProvider' | 'ViaSession' (ReadOnly): The prefix learned type.
 * **peeringServicePrefixKey**: string: The peering service prefix key
 * **prefix**: string: The prefix from which your traffic originates.
 * **prefixValidationState**: 'Failed' | 'Invalid' | 'None' | 'Pending' | 'Unknown' | 'Verified' | 'Warning' (ReadOnly): The prefix validation state.

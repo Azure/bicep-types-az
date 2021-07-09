@@ -8,7 +8,7 @@
 * **location**: string: Gets or sets the storage account location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobCollectionProperties](#jobcollectionproperties)
-* **tags**: [JobCollectionDefinitionTags](#jobcollectiondefinitiontags): Gets or sets the tags.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the tags.
 * **type**: 'Microsoft.Scheduler/jobCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Scheduler/jobCollections/jobs@2014-08-01-preview
@@ -41,7 +41,7 @@
 ### Properties
 * **name**: 'Free' | 'Premium' | 'Standard': Gets or set the SKU.
 
-## JobCollectionDefinitionTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -71,7 +71,7 @@
 * **retryPolicy**: [RetryPolicy](#retrypolicy)
 * **serviceBusQueueMessage**: [ServiceBusQueueMessage](#servicebusqueuemessage)
 * **serviceBusTopicMessage**: [ServiceBusTopicMessage](#servicebustopicmessage)
-* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job action type.
+* **type**: 'Http' | 'Https' | 'ServiceBusQueue' | 'ServiceBusTopic' | 'StorageQueue': Gets or sets the job error action type.
 
 ## StorageQueueMessage
 ### Properties
@@ -84,7 +84,7 @@
 ### Properties
 * **authentication**: [HttpAuthentication](#httpauthentication)
 * **body**: string: Gets or sets the request body.
-* **headers**: [HttpRequestHeaders](#httprequestheaders): Gets or sets the headers.
+* **headers**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the headers.
 * **method**: string: Gets or sets the method of the request.
 * **uri**: string: Gets or sets the Uri.
 
@@ -92,7 +92,7 @@
 ### Properties
 * **type**: 'ActiveDirectoryOAuth' | 'Basic' | 'ClientCertificate' | 'NotSpecified': Gets or sets the http authentication type.
 
-## HttpRequestHeaders
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -107,7 +107,7 @@
 ### Properties
 * **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
 * **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
+* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
 * **queueName**: string: Gets or sets the queue name.
@@ -135,7 +135,7 @@
 * **to**: string: Gets or sets the to.
 * **viaPartitionKey**: string: Gets or sets the via partition key.
 
-## ServiceBusMessageCustomMessageProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -144,13 +144,13 @@
 ### Properties
 * **authentication**: [ServiceBusAuthentication](#servicebusauthentication)
 * **brokeredMessageProperties**: [ServiceBusBrokeredMessageProperties](#servicebusbrokeredmessageproperties)
-* **customMessageProperties**: [ServiceBusMessageCustomMessageProperties](#servicebusmessagecustommessageproperties): Gets or sets the custom message properties.
+* **customMessageProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets the custom message properties.
 * **message**: string: Gets or sets the message.
 * **namespace**: string: Gets or sets the namespace.
 * **topicPath**: string: Gets or sets the topic path.
 * **transportType**: 'AMQP' | 'NetMessaging' | 'NotSpecified': Gets or sets the transport type.
 
-## ServiceBusMessageCustomMessageProperties
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

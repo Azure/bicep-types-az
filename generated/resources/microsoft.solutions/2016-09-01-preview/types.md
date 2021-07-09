@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplianceDefinitionProperties](#appliancedefinitionproperties) (Required): The appliance definition properties.
 * **sku**: [Sku](#sku): SKU for the resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Solutions/applianceDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Solutions/appliances@2016-09-01-preview
@@ -27,7 +27,7 @@
 * **plan**: [Plan](#plan): Plan for the appliance.
 * **properties**: [ApplianceProperties](#applianceproperties): The appliance properties.
 * **sku**: [Sku](#sku): SKU for the resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
 * **type**: 'Microsoft.Solutions/appliances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -65,7 +65,7 @@
 * **size**: string: The SKU size.
 * **tier**: string: The SKU tier.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -82,12 +82,12 @@
 ### Properties
 * **applianceDefinitionId**: string: The fully qualified path of appliance definition Id.
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
-* **outputs**: any (ReadOnly): Any object
-* **parameters**: any: Any object
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the appliance.
+* **outputs**: any (ReadOnly): Name and value pairs that define the appliance outputs.
+* **parameters**: any: Name and value pairs that define the appliance parameters. It can be a JObject or a well formed JSON string.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The appliance provisioning state.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
 
-## ResourceTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

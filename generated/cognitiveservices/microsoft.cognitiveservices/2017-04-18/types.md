@@ -12,7 +12,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CognitiveServicesAccountProperties](#cognitiveservicesaccountproperties): Properties of Cognitive Services account.
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
-* **tags**: [CognitiveServicesAccountTags](#cognitiveservicesaccounttags): Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2017-04-18
@@ -31,9 +31,9 @@
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
 * **tenantId**: string (ReadOnly): Tenant of managed service identity.
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Type of managed service identity.
-* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+* **userAssignedIdentities**: [Dictionary<string,UserAssignedIdentity>](#dictionarystringuserassignedidentity): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 
-## IdentityUserAssignedIdentities
+## Dictionary<string,UserAssignedIdentity>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
@@ -56,7 +56,7 @@
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The private endpoint connection associated with the Cognitive Services account.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'ResolvingDNS' | 'Succeeded' (ReadOnly): Gets the status of the cognitive services account at the time the operation was called.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
 * **skuChangeInfo**: [CognitiveServicesAccountSkuChangeInfo](#cognitiveservicesaccountskuchangeinfo) (ReadOnly): Sku change info of account.
 * **userOwnedStorage**: [UserOwnedStorage](#userownedstorage)[]: The storage accounts for this resource.
 
@@ -80,7 +80,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption
+* **keySource**: 'Microsoft.CognitiveServices' | 'Microsoft.KeyVault': Enumerates the possible value of keySource for Encryption.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Properties to configure keyVault Properties
 
 ## KeyVaultProperties
@@ -128,7 +128,7 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## CognitiveServicesAccountSkuChangeInfo
 ### Properties
@@ -145,7 +145,7 @@
 * **name**: string (Required): The name of SKU.
 * **tier**: 'Enterprise' | 'Free' | 'Premium' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
-## CognitiveServicesAccountTags
+## Dictionary<string,String>
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

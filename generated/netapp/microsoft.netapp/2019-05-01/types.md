@@ -7,8 +7,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AccountProperties](#accountproperties): NetApp account properties
-* **tags**: any: Any object
+* **properties**: [accountProperties](#accountproperties): NetApp account properties
+* **tags**: any: Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2019-05-01
@@ -18,8 +18,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PoolProperties](#poolproperties) (Required): Pool properties
-* **tags**: any: Any object
+* **properties**: [poolProperties](#poolproperties) (Required): Pool properties
+* **tags**: any: Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-05-01
@@ -29,8 +29,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
-* **tags**: any: Any object
+* **properties**: [volumeProperties](#volumeproperties) (Required): Volume properties
+* **tags**: any: Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2019-05-01
@@ -40,16 +40,16 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SnapshotProperties](#snapshotproperties): Snapshot properties
-* **tags**: any: Any object
+* **properties**: [snapshotProperties](#snapshotproperties): Snapshot properties
+* **tags**: any: Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## AccountProperties
+## accountProperties
 ### Properties
-* **activeDirectories**: [ActiveDirectory](#activedirectory)[]: Active Directories
+* **activeDirectories**: [activeDirectory](#activedirectory)[]: Active Directories
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 
-## ActiveDirectory
+## activeDirectory
 ### Properties
 * **activeDirectoryId**: string: Id of the Active Directory
 * **dns**: string: Comma separated list of DNS server IP addresses for the Active Directory domain
@@ -60,32 +60,32 @@
 * **status**: string: Status of the Active Directory
 * **username**: string: Username of Active Directory domain administrator
 
-## PoolProperties
+## poolProperties
 ### Properties
 * **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system.
 * **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
-## VolumeProperties
+## volumeProperties
 ### Properties
 * **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
 * **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
-* **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules
+* **exportPolicy**: [schemas:21_exportPolicy](#schemas21exportpolicy): Set of export policy rules
 * **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
-* **mountTargets**: [MountTargetProperties](#mounttargetproperties)[]: List of mount targets
+* **mountTargets**: [mountTargetProperties](#mounttargetproperties)[]: List of mount targets
 * **protocolTypes**: string[]: Set of protocol types
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system.
 * **snapshotId**: string: UUID v4 used to identify the Snapshot
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
 
-## VolumePropertiesExportPolicy
+## schemas:21_exportPolicy
 ### Properties
-* **rules**: [ExportPolicyRule](#exportpolicyrule)[]: Export policy rule
+* **rules**: [exportPolicyRule](#exportpolicyrule)[]: Export policy rule
 
-## ExportPolicyRule
+## exportPolicyRule
 ### Properties
 * **allowedClients**: string: Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
 * **cifs**: bool: Allows CIFS protocol
@@ -95,7 +95,7 @@
 * **unixReadOnly**: bool: Read only access
 * **unixReadWrite**: bool: Read and write access
 
-## MountTargetProperties
+## mountTargetProperties
 ### Properties
 * **endIp**: string: The end of IPv4 address range to use when creating a new mount target
 * **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
@@ -108,7 +108,7 @@
 * **startIp**: string: The start of IPv4 address range to use when creating a new mount target
 * **subnet**: string: The subnet
 
-## SnapshotProperties
+## snapshotProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of the snapshot
 * **fileSystemId**: string: UUID v4 used to identify the FileSystem
