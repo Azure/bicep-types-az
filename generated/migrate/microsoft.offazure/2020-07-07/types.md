@@ -9,7 +9,7 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Class for site properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [HyperVSiteTags](#hypervsitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/HyperVSites/clusters@2020-07-07
@@ -50,7 +50,7 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Class for site properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [VMwareSiteTags](#vmwaresitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/VMwareSites/vCenters@2020-07-07
@@ -87,7 +87,7 @@
 * **rawCertData**: string: Raw certificate data for building certificate expiry flows.
 * **tenantId**: string: Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 
-## Dictionary<string,String>
+## HyperVSiteTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -108,14 +108,14 @@
 * **code**: string (ReadOnly): Error name.
 * **id**: int (ReadOnly): Error ID.
 * **message**: string (ReadOnly): Error message.
-* **messageParameters**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Message parameters.
+* **messageParameters**: [HealthErrorDetailsMessageParameters](#healtherrordetailsmessageparameters) (ReadOnly): Message parameters.
 * **possibleCauses**: string (ReadOnly): Possible causes of error.
 * **recommendedAction**: string (ReadOnly): Recommended action to resolve error.
 * **severity**: string (ReadOnly): Error severity.
 * **source**: string (ReadOnly): Error source.
 * **summaryMessage**: string (ReadOnly): Error summary message.
 
-## Dictionary<string,String>
+## HealthErrorDetailsMessageParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -135,7 +135,7 @@
 * **publicNetworkAccess**: string: State of public network access.
 * **sites**: string[]: List of sites that are a part of Master Site.
 
-## Dictionary<string,String>
+## VMwareSiteTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

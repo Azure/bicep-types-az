@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required): The managed application definition properties.
 * **sku**: [Sku](#sku): SKU for the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Solutions/applications@2020-08-21-preview
@@ -26,7 +26,7 @@
 * **plan**: [Plan](#plan): Plan for the managed application.
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): The managed application properties.
 * **sku**: [Sku](#sku): SKU for the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Solutions/jitRequests@2020-08-21-preview
@@ -37,21 +37,21 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JitRequestProperties](#jitrequestproperties): Information about JIT request properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/jitRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApplicationDefinitionProperties
 ### Properties
 * **artifacts**: [ApplicationDefinitionArtifact](#applicationdefinitionartifact)[]: The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
 * **authorizations**: [ApplicationAuthorization](#applicationauthorization)[]: The managed application provider authorizations.
-* **createUiDefinition**: any: The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
+* **createUiDefinition**: any: Any object
 * **deploymentPolicy**: [ApplicationDeploymentPolicy](#applicationdeploymentpolicy): Managed application deployment policy.
 * **description**: string: The managed application definition description.
 * **displayName**: string: The managed application definition display name.
 * **isEnabled**: bool: A value indicating whether the package is enabled or not.
 * **lockingPolicy**: [ApplicationPackageLockingPolicyDefinition](#applicationpackagelockingpolicydefinition): Managed application locking policy.
 * **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level.
-* **mainTemplate**: any: The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
+* **mainTemplate**: any: Any object
 * **managementPolicy**: [ApplicationManagementPolicy](#applicationmanagementpolicy): Managed application management policy.
 * **notificationPolicy**: [ApplicationNotificationPolicy](#applicationnotificationpolicy): Managed application notification policy.
 * **packageFileUri**: string: The managed application definition package file Uri. Use this element
@@ -60,8 +60,8 @@
 
 ## ApplicationDefinitionArtifact
 ### Properties
-* **name**: 'ApplicationResourceTemplate' | 'CreateUiDefinition' | 'MainTemplateParameters' | 'NotSpecified' (Required): The managed application definition artifact name.
-* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required): The managed application definition artifact type.
+* **name**: 'ApplicationResourceTemplate' | 'CreateUiDefinition' | 'MainTemplateParameters' | 'NotSpecified' (Required): The managed application artifact name.
+* **type**: 'Custom' | 'NotSpecified' | 'Template' (Required): The managed application artifact type.
 * **uri**: string (Required): The managed application definition artifact blob uri.
 
 ## ApplicationAuthorization
@@ -71,7 +71,7 @@
 
 ## ApplicationDeploymentPolicy
 ### Properties
-* **deploymentMode**: 'Complete' | 'Incremental' | 'NotSpecified' (Required): The managed application deployment mode.
+* **deploymentMode**: 'Complete' | 'Incremental' | 'NotSpecified' (Required): The deployment mode.
 
 ## ApplicationPackageLockingPolicyDefinition
 ### Properties
@@ -79,7 +79,7 @@
 
 ## ApplicationManagementPolicy
 ### Properties
-* **mode**: 'Managed' | 'NotSpecified' | 'Unmanaged': The managed application management mode.
+* **mode**: 'Managed' | 'NotSpecified' | 'Unmanaged': The management mode.
 
 ## ApplicationNotificationPolicy
 ### Properties
@@ -104,7 +104,7 @@
 * **size**: string: The SKU size.
 * **tier**: string: The SKU tier.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -113,15 +113,15 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The identity type.
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedResourceIdentity>](#dictionarystringuserassignedresourceidentity): The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,UserAssignedResourceIdentity>
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [userAssignedResourceIdentity](#userassignedresourceidentity)
+* **Additional Properties Type**: [UserAssignedResourceIdentity](#userassignedresourceidentity)
 
-## userAssignedResourceIdentity
+## UserAssignedResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of user assigned identity.
@@ -144,10 +144,10 @@
 * **customerSupport**: [ApplicationPackageContact](#applicationpackagecontact) (ReadOnly): The application package contact information.
 * **jitAccessPolicy**: [ApplicationJitAccessPolicy](#applicationjitaccesspolicy): Managed application Jit access policy.
 * **managedResourceGroupId**: string: The managed resource group Id.
-* **managementMode**: 'Managed' | 'NotSpecified' | 'Unmanaged' (ReadOnly): The managed application management mode.
-* **outputs**: any (ReadOnly): Name and value pairs that define the managed application outputs.
-* **parameters**: any: Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state.
+* **managementMode**: 'Managed' | 'NotSpecified' | 'Unmanaged' (ReadOnly): The management mode.
+* **outputs**: any (ReadOnly): Any object
+* **parameters**: any: Any object
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the managed application.
 * **publisherTenantId**: string (ReadOnly): The publisher tenant Id.
 * **supportUrls**: [ApplicationPackageSupportUrls](#applicationpackagesupporturls) (ReadOnly): The appliance package support URLs.
 * **updatedBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly): The application client details to track the entity creating/updating the managed app resource.
@@ -177,7 +177,7 @@
 ## ApplicationJitAccessPolicy
 ### Properties
 * **jitAccessEnabled**: bool (Required): Whether the JIT access is enabled.
-* **jitApprovalMode**: 'AutoApprove' | 'ManualApprove' | 'NotSpecified': JIT approval mode.
+* **jitApprovalMode**: 'AutoApprove' | 'ManualApprove' | 'NotSpecified': The Jit approval mode.
 * **jitApprovers**: [JitApproverDefinition](#jitapproverdefinition)[]: The JIT approvers
 * **maximumJitAccessDuration**: string: The maximum duration JIT access is granted. This is an ISO8601 time period value.
 
@@ -192,7 +192,7 @@
 * **governmentCloud**: string: The government cloud support URL.
 * **publicAzure**: string: The public azure support URL.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -204,7 +204,7 @@
 * **jitAuthorizationPolicies**: [JitAuthorizationPolicies](#jitauthorizationpolicies)[] (Required): The JIT authorization policies.
 * **jitRequestState**: 'Approved' | 'Canceled' | 'Denied' | 'Expired' | 'Failed' | 'NotSpecified' | 'Pending' | 'Timeout' (ReadOnly): The JIT request state.
 * **jitSchedulingPolicy**: [JitSchedulingPolicy](#jitschedulingpolicy) (Required): The JIT scheduling policies.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The JIT request provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the managed application.
 * **publisherTenantId**: string (ReadOnly): The publisher tenant id.
 * **updatedBy**: [ApplicationClientDetails](#applicationclientdetails) (ReadOnly): The application client details to track the entity creating/updating the managed app resource.
 
@@ -215,11 +215,11 @@
 
 ## JitSchedulingPolicy
 ### Properties
-* **duration**: string (Required)
+* **duration**: string (Required): The required duration of the JIT request.
 * **startTime**: string (Required): The start time of the request.
-* **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required): The type of JIT schedule.
+* **type**: 'NotSpecified' | 'Once' | 'Recurring' (Required, ReadOnly): The JIT request scheduling type.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

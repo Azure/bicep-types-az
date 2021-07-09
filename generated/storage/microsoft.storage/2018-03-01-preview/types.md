@@ -6,12 +6,12 @@
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
-* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account.
-* **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **kind**: 'BlobStorage' | 'Storage' | 'StorageV2' (Required): Indicates the type of storage account.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): Properties of the storage account.
 * **sku**: [Sku](#sku) (Required): The SKU of the storage account.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Resource tags.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/blobServices/containers@2018-03-01-preview
@@ -30,7 +30,7 @@
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required): The properties of an ImmutabilityPolicy of a blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,15 +39,15 @@
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagementPoliciesRules](#managementpoliciesrules): The Storage Account ManagementPolicies Rules, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagementPoliciesRules](#managementpoliciesrules): The Storage Account Data Policies properties.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: string (Required): The identity type.
+* **type**: 'SystemAssigned' (Required): The identity type.
 
 ## StorageAccountPropertiesCreateParameters
 ### Properties
@@ -64,7 +64,7 @@
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
 * **secondaryLocation**: string (ReadOnly): Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
 * **statusOfPrimary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
-* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
+* **statusOfSecondary**: 'available' | 'unavailable' (ReadOnly): Gets the status indicating whether the primary location of the storage account is available or unavailable.
 * **supportsHttpsTrafficOnly**: bool: Allows https traffic only to storage service if sets to true.
 
 ## CustomDomain
@@ -74,7 +74,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault.
+* **keySource**: 'Microsoft.Keyvault' | 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
 * **keyvaultproperties**: [KeyVaultProperties](#keyvaultproperties): Properties of key vault.
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
 
@@ -105,7 +105,7 @@
 
 ## IPRule
 ### Properties
-* **action**: 'Allow': The action of IP ACL rule.
+* **action**: 'Allow': The action of virtual network rule.
 * **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
 
 ## VirtualNetworkRule
@@ -144,7 +144,7 @@
 * **type**: string (ReadOnly): The type of restrictions. As of now only possible value for this is location.
 * **values**: string[] (ReadOnly): The value of restrictions. If the restriction type is set to location. This would be different locations where the SKU is restricted.
 
-## Dictionary<string,String>
+## StorageAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -159,7 +159,7 @@
 * **leaseState**: 'Available' | 'Breaking' | 'Broken' | 'Expired' | 'Leased' (ReadOnly): Lease state of the container.
 * **leaseStatus**: 'Locked' | 'Unlocked' (ReadOnly): The lease status of the container.
 * **legalHold**: [LegalHoldProperties](#legalholdproperties) (ReadOnly): The LegalHold property of a blob container.
-* **metadata**: [Dictionary<string,String>](#dictionarystringstring): A name-value pair to associate with the container as metadata.
+* **metadata**: [ContainerPropertiesMetadata](#containerpropertiesmetadata): A name-value pair to associate with the container as metadata.
 * **publicAccess**: 'Blob' | 'Container' | 'None': Specifies whether data in the container may be accessed publicly and the level of access.
 
 ## ImmutabilityPolicyProperties
@@ -171,7 +171,7 @@
 ## ImmutabilityPolicyProperty
 ### Properties
 * **immutabilityPeriodSinceCreationInDays**: int (Required): The immutability period for the blobs in the container since the policy creation, in days.
-* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container,
+* **state**: 'Locked' | 'Unlocked' (ReadOnly): The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
 
 ## UpdateHistoryProperty
 ### Properties
@@ -179,7 +179,7 @@
 * **objectIdentifier**: string (ReadOnly): Returns the Object ID of the user who updated the ImmutabilityPolicy.
 * **tenantId**: string (ReadOnly): Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
 * **timestamp**: string (ReadOnly): Returns the date and time the ImmutabilityPolicy was updated.
-* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container,
+* **update**: 'extend' | 'lock' | 'put' (ReadOnly): The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
 
 ## LegalHoldProperties
@@ -195,7 +195,7 @@
 * **timestamp**: string (ReadOnly): Returns the date and time the tag was added.
 * **upn**: string (ReadOnly): Returns the User Principal Name of the user who added the tag.
 
-## Dictionary<string,String>
+## ContainerPropertiesMetadata
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -203,5 +203,5 @@
 ## ManagementPoliciesRules
 ### Properties
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the ManagementPolicies was last modified.
-* **policy**: any: The Storage Account ManagementPolicies Rules, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+* **policy**: any: Any object
 

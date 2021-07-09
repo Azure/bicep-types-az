@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+* **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): The parameters used to create the storage account.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+* **properties**: [StorageAccountPropertiesCreateParameters](#storageaccountpropertiescreateparameters): Properties of the storage account.
+* **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Resource tags
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## StorageAccountPropertiesCreateParameters
@@ -23,7 +23,7 @@
 * **secondaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): The URIs that are used to perform a retrieval of a public blob, queue or table object.
 * **secondaryLocation**: string (ReadOnly): The location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
 * **statusOfPrimary**: 'Available' | 'Unavailable' (ReadOnly): The status indicating whether the primary location of the storage account is available or unavailable.
-* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): The status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
+* **statusOfSecondary**: 'Available' | 'Unavailable' (ReadOnly): The status indicating whether the primary location of the storage account is available or unavailable.
 
 ## CustomDomain
 ### Properties
@@ -37,7 +37,7 @@
 * **queue**: string (ReadOnly): The queue endpoint.
 * **table**: string (ReadOnly): The table endpoint.
 
-## Dictionary<string,String>
+## StorageAccountCreateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

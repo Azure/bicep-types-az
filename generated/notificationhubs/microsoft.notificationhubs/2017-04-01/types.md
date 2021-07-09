@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Namespace properties.
 * **sku**: [Sku](#sku): The Sku description for a namespace
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2017-04-01
@@ -21,7 +21,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
 * **sku**: [Sku](#sku) (ReadOnly): The Sku description for a namespace
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2017-04-01
@@ -33,7 +33,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotificationHubProperties](#notificationhubproperties) (Required): NotificationHub properties.
 * **sku**: [Sku](#sku): The Sku description for a namespace
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2017-04-01
@@ -45,7 +45,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
 * **sku**: [Sku](#sku) (ReadOnly): The Sku description for a namespace
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## NamespaceProperties
@@ -69,11 +69,11 @@
 ### Properties
 * **capacity**: int: The capacity of the resource
 * **family**: string: The Sku Family
-* **name**: 'Basic' | 'Free' | 'Standard' (Required): Name of the notification hub sku.
+* **name**: 'Basic' | 'Free' | 'Standard' (Required): Name of the notification hub sku
 * **size**: string: The Sku size
 * **tier**: string: The tier of particular sku
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -90,7 +90,7 @@
 * **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
 * **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -171,12 +171,12 @@
 * **secretKey**: string: The secret key.
 * **windowsLiveEndpoint**: string: The Windows Live endpoint.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

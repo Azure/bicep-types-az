@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutoscaleSetting](#autoscalesetting) (Required): A setting that contains all of the configuration for the automatic scaling of a resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'microsoft.insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoscaleSetting
@@ -22,7 +22,7 @@
 ## AutoscaleNotification
 ### Properties
 * **email**: [EmailNotification](#emailnotification): Email notification of an autoscale event.
-* **operation**: string (Required): the operation associated with the notification and its value must be "scale"
+* **operation**: 'Scale' (Required): the operation associated with the notification and its value must be "scale"
 * **webhooks**: [WebhookNotification](#webhooknotification)[]: the collection of webhook notifications.
 
 ## EmailNotification
@@ -33,10 +33,10 @@
 
 ## WebhookNotification
 ### Properties
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): a property bag of settings. This value can be empty.
+* **properties**: [WebhookNotificationProperties](#webhooknotificationproperties): a property bag of settings. This value can be empty.
 * **serviceUri**: string: the service address to receive the notification.
 
-## Dictionary<string,String>
+## WebhookNotificationProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -95,7 +95,7 @@
 ## ScaleRuleMetricDimension
 ### Properties
 * **DimensionName**: string (Required): Name of the dimension.
-* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values.
+* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
 * **Values**: string[] (Required): list of dimension values. For example: ["App1","App2"].
 
 ## ScaleAction
@@ -105,7 +105,7 @@
 * **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required): the type of action that should occur when the scale rule fires.
 * **value**: string: the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

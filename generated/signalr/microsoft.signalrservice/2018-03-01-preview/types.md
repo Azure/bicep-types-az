@@ -5,12 +5,11 @@
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Azure GEO region: e.g. West US | East US | North Central US | South Central US | West Europe | North Europe | East Asia | Southeast Asia | etc.
-The geo region of a resource never changes after it is created.
+* **location**: string (Required): The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): Settings used to provision or configure the resource.
+* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): A class that describes the properties of the SignalR service that should contain more read-only properties than AzSignalR.Models.SignalRCreateOrUpdateProperties
 * **sku**: [ResourceSku](#resourcesku): The billing information of the resource.(e.g. basic vs. standard)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): A list of key value pairs that describe the resource.
+* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SignalRCreateOrUpdateProperties
@@ -26,14 +25,14 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 
 ## ResourceSku
 ### Properties
-* **capacity**: int: Optional, integer. If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not
+* **capacity**: int: Optional, integer. If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not 
 possible for the resource this may be omitted.
 * **family**: string: Optional, string. If the service has different generations of hardware, for the same SKU, then that can be captured here.
 * **name**: string (Required): The name of the SKU. This is typically a letter + number code, such as A0 or P3.  Required (if sku is specified)
 * **size**: string: Optional, string. When the name field is the combination of tier and some other value, this would be the standalone code.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. `Basic` is deprecated, use `Standard` instead for Basic tier
 
-## Dictionary<string,String>
+## SignalRUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -10,7 +10,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationGatewayPropertiesFormat](#applicationgatewaypropertiesformat): Properties of the application gateway.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
@@ -33,7 +33,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WebApplicationFirewallPolicyPropertiesFormat](#webapplicationfirewallpolicypropertiesformat): Defines web application firewall policy properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/applicationSecurityGroups@2020-05-01
@@ -45,7 +45,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationSecurityGroupPropertiesFormat](#applicationsecuritygrouppropertiesformat): Application security group properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/azureFirewalls@2020-05-01
@@ -57,7 +57,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureFirewallPropertiesFormat](#azurefirewallpropertiesformat): Properties of the Azure Firewall.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/azureFirewalls' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
@@ -70,7 +70,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BastionHostPropertiesFormat](#bastionhostpropertiesformat): Properties of the Bastion Host.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/bastionHosts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/connections@2020-05-01
@@ -82,7 +82,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkGatewayConnectionPropertiesFormat](#virtualnetworkgatewayconnectionpropertiesformat) (Required): VirtualNetworkGatewayConnection properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/ddosCustomPolicies@2020-05-01
@@ -94,7 +94,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DdosCustomPolicyPropertiesFormat](#ddoscustompolicypropertiesformat): DDoS custom policy properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ddosCustomPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/ddosProtectionPlans@2020-05-01
@@ -106,7 +106,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DdosProtectionPlanPropertiesFormat](#ddosprotectionplanpropertiesformat): DDoS protection plan properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [DdosProtectionPlanTags](#ddosprotectionplantags): Resource tags.
 * **type**: 'Microsoft.Network/ddosProtectionPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits@2020-05-01
@@ -119,7 +119,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCircuitPropertiesFormat](#expressroutecircuitpropertiesformat): Properties of ExpressRouteCircuit.
 * **sku**: [ExpressRouteCircuitSku](#expressroutecircuitsku): Contains SKU in an ExpressRouteCircuit.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCircuits/authorizations@2020-05-01
@@ -161,7 +161,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteCrossConnectionProperties](#expressroutecrossconnectionproperties): Properties of ExpressRouteCrossConnection.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCrossConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2020-05-01
@@ -183,7 +183,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRouteGatewayProperties](#expressroutegatewayproperties): ExpressRoute gateway resource properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/expressRouteGateways/expressRouteConnections@2020-05-01
@@ -205,7 +205,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExpressRoutePortPropertiesFormat](#expressrouteportpropertiesformat): Properties specific to ExpressRoutePort resources.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ExpressRoutePorts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/firewallPolicies@2020-05-01
@@ -217,7 +217,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallPolicyPropertiesFormat](#firewallpolicypropertiesformat): Firewall Policy definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/firewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-05-01
@@ -239,7 +239,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IpAllocationPropertiesFormat](#ipallocationpropertiesformat): Properties of the IpAllocation.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/IpAllocations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/ipGroups@2020-05-01
@@ -251,7 +251,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IpGroupPropertiesFormat](#ipgrouppropertiesformat): The IpGroups property information.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ipGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/loadBalancers@2020-05-01
@@ -264,7 +264,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LoadBalancerPropertiesFormat](#loadbalancerpropertiesformat): Properties of the load balancer.
 * **sku**: [LoadBalancerSku](#loadbalancersku): SKU of a load balancer.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/loadBalancers/backendAddressPools@2020-05-01
@@ -296,7 +296,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required): LocalNetworkGateway properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/natGateways@2020-05-01
@@ -309,7 +309,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NatGatewayPropertiesFormat](#natgatewaypropertiesformat): Nat Gateway properties.
 * **sku**: [NatGatewaySku](#natgatewaysku): SKU of nat gateway.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/natGateways' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the zone in which Nat Gateway should be deployed.
 
@@ -322,7 +322,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat): NetworkInterface properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkInterfaces/tapConfigurations@2020-05-01
@@ -344,7 +344,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkProfilePropertiesFormat](#networkprofilepropertiesformat): Network profile properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityGroups@2020-05-01
@@ -356,7 +356,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkSecurityGroupPropertiesFormat](#networksecuritygrouppropertiesformat): Network Security Group resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkSecurityGroups/securityRules@2020-05-01
@@ -379,7 +379,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkVirtualAppliancePropertiesFormat](#networkvirtualappliancepropertiesformat): Network Virtual Appliance definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkVirtualAppliances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkVirtualAppliances/virtualApplianceSites@2020-05-01
@@ -401,7 +401,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkWatcherPropertiesFormat](#networkwatcherpropertiesformat): The network watcher properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers/connectionMonitors@2020-05-01
@@ -412,8 +412,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Connection monitor location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionMonitorParameters](#connectionmonitorparameters) (Required): Parameters that define the operation to create a connection monitor.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Connection monitor tags.
+* **properties**: [ConnectionMonitorParameters](#connectionmonitorparameters) (Required): Describes the properties of a connection monitor.
+* **tags**: [ConnectionMonitorTags](#connectionmonitortags): Connection monitor tags.
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers/flowLogs@2020-05-01
@@ -425,7 +425,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FlowLogPropertiesFormat](#flowlogpropertiesformat): Parameters that define the configuration of flow log.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkWatchers/flowLogs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkWatchers/packetCaptures@2020-05-01
@@ -435,7 +435,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Parameters that define the create packet capture operation.
+* **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): The properties of a packet capture session.
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/p2svpnGateways@2020-05-01
@@ -447,7 +447,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [P2SVpnGatewayProperties](#p2svpngatewayproperties): Parameters for P2SVpnGateway.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/p2svpnGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateEndpoints@2020-05-01
@@ -459,7 +459,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointProperties](#privateendpointproperties): Properties of the private endpoint.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2020-05-01
@@ -481,7 +481,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkServiceProperties](#privatelinkserviceproperties): Properties of the private link service.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/privateLinkServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/privateLinkServices/privateEndpointConnections@2020-05-01
@@ -504,7 +504,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat): Public IP address properties.
 * **sku**: [PublicIPAddressSku](#publicipaddresssku): SKU of a public IP address.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
@@ -518,7 +518,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PublicIPPrefixPropertiesFormat](#publicipprefixpropertiesformat): Public IP prefix properties.
 * **sku**: [PublicIPPrefixSku](#publicipprefixsku): SKU of a public IP prefix.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/publicIPPrefixes' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
@@ -531,7 +531,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RouteFilterPropertiesFormat](#routefilterpropertiesformat): Route Filter Resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/routeFilters/routeFilterRules@2020-05-01
@@ -554,7 +554,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RouteTablePropertiesFormat](#routetablepropertiesformat): Route Table resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/routeTables/routes@2020-05-01
@@ -576,7 +576,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityPartnerProviderPropertiesFormat](#securitypartnerproviderpropertiesformat): Properties of the Security Partner Provider.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/securityPartnerProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/serviceEndpointPolicies@2020-05-01
@@ -588,7 +588,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceEndpointPolicyPropertiesFormat](#serviceendpointpolicypropertiesformat): Service Endpoint Policy resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/serviceEndpointPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/serviceEndpointPolicies/serviceEndpointPolicyDefinitions@2020-05-01
@@ -610,7 +610,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualHubProperties](#virtualhubproperties): Parameters for VirtualHub.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualHubs/bgpConnections@2020-05-01
@@ -672,7 +672,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat) (Required): VirtualNetworkGateway properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworks@2020-05-01
@@ -684,7 +684,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkPropertiesFormat](#virtualnetworkpropertiesformat): Properties of the virtual network.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualNetworks/subnets@2020-05-01
@@ -716,7 +716,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkTapPropertiesFormat](#virtualnetworktappropertiesformat): Virtual Network Tap properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualRouters@2020-05-01
@@ -728,7 +728,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualRouterPropertiesFormat](#virtualrouterpropertiesformat): Virtual Router definition.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualRouters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/virtualRouters/peerings@2020-05-01
@@ -741,18 +741,6 @@
 * **properties**: [VirtualRouterPeeringProperties](#virtualrouterpeeringproperties): Properties of the rule group.
 * **type**: 'Microsoft.Network/virtualRouters/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualWans@2020-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualWanProperties](#virtualwanproperties): Parameters for VirtualWAN.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
-* **type**: 'Microsoft.Network/virtualWans' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Network/vpnGateways@2020-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -762,7 +750,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VpnGatewayProperties](#vpngatewayproperties): Parameters for VpnGateway.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/vpnGateways/vpnConnections@2020-05-01
@@ -784,7 +772,7 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VpnServerConfigurationProperties](#vpnserverconfigurationproperties): Parameters for VpnServerConfiguration.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnServerConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/vpnSites@2020-05-01
@@ -796,22 +784,22 @@
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VpnSiteProperties](#vpnsiteproperties): Parameters for VpnSite.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/vpnSites' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
-* **userAssignedIdentities**: [Dictionary<string,Schemas267UserAssignedIdentitiesValue>](#dictionarystringschemas267userassignedidentitiesvalue): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas267UserAssignedIdentitiesValue>
+## ManagedServiceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:267_userAssignedIdentitiesValue](#schemas267userassignedidentitiesvalue)
+* **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:267_userAssignedIdentitiesValue
+## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
@@ -835,7 +823,7 @@
 * **privateEndpointConnections**: [ApplicationGatewayPrivateEndpointConnection](#applicationgatewayprivateendpointconnection)[] (ReadOnly): Private Endpoint connections on application gateway.
 * **privateLinkConfigurations**: [ApplicationGatewayPrivateLinkConfiguration](#applicationgatewayprivatelinkconfiguration)[]: PrivateLink configurations on application gateway.
 * **probes**: [ApplicationGatewayProbe](#applicationgatewayprobe)[]: Probes of the application gateway resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **redirectConfigurations**: [ApplicationGatewayRedirectConfiguration](#applicationgatewayredirectconfiguration)[]: Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
 * **requestRoutingRules**: [ApplicationGatewayRequestRoutingRule](#applicationgatewayrequestroutingrule)[]: Request routing rules of the application gateway resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the application gateway resource.
@@ -858,7 +846,7 @@
 ## ApplicationGatewayAuthenticationCertificatePropertiesFormat
 ### Properties
 * **data**: string: Certificate public data.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the authentication certificate resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayAutoscaleConfiguration
 ### Properties
@@ -877,7 +865,7 @@
 ### Properties
 * **backendAddresses**: [ApplicationGatewayBackendAddress](#applicationgatewaybackendaddress)[]: Backend addresses.
 * **backendIPConfigurations**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration)[] (ReadOnly): Collection of references to IPs defined in network interfaces.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the backend address pool resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayBackendAddress
 ### Properties
@@ -899,10 +887,10 @@
 * **loadBalancerInboundNatRules**: [InboundNatRule](#inboundnatrule)[]: A list of references of LoadBalancerInboundNatRules.
 * **primary**: bool: Whether this is a primary customer address on the network interface.
 * **privateIPAddress**: string: Private IP address of the IP configuration.
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6': IP address version.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
 * **privateLinkConnectionProperties**: [NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties](#networkinterfaceipconfigurationprivatelinkconnectionproperties) (ReadOnly): PrivateLinkConnection properties for the network interface.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network interface IP configuration.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 * **virtualNetworkTaps**: [VirtualNetworkTap](#virtualnetworktap)[]: The reference to Virtual Network Taps.
@@ -914,15 +902,15 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [ApplicationSecurityGroupPropertiesFormat](#applicationsecuritygrouppropertiesformat): Application security group properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## ApplicationSecurityGroupPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application security group resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the application security group resource. It uniquely identifies a resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -942,7 +930,7 @@
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to load balancing rules that use this backend address pool.
 * **outboundRule**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
 * **outboundRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to outbound rules that use this backend address pool.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the backend address pool resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## LoadBalancerBackendAddress
 ### Properties
@@ -976,8 +964,8 @@
 * **frontendIPConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **frontendPort**: int: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-* **protocol**: 'All' | 'Tcp' | 'Udp': The reference to the transport protocol used by the load balancing rule.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the inbound NAT rule resource.
+* **protocol**: 'All' | 'Tcp' | 'Udp': The transport protocol for the endpoint.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties
 ### Properties
@@ -993,7 +981,7 @@
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [PublicIPAddressPropertiesFormat](#publicipaddresspropertiesformat): Public IP address properties.
 * **sku**: [PublicIPAddressSku](#publicipaddresssku): SKU of a public IP address.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
@@ -1005,9 +993,9 @@
 * **ipAddress**: string: The IP address associated with the public IP address resource.
 * **ipConfiguration**: [IPConfiguration](#ipconfiguration) (ReadOnly): IP configuration.
 * **ipTags**: [IpTag](#iptag)[]: The list of tags associated with the public IP address.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the public IP address resource.
-* **publicIPAddressVersion**: 'IPv4' | 'IPv6': The public IP address version.
-* **publicIPAllocationMethod**: 'Dynamic' | 'Static': The public IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **publicIPAddressVersion**: 'IPv4' | 'IPv6': IP address version.
+* **publicIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
 * **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the public IP address resource.
 
@@ -1033,8 +1021,8 @@
 ## IPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the IP configuration resource.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
@@ -1058,7 +1046,7 @@
 * **privateEndpointNetworkPolicies**: string: Enable or Disable apply network policies on private end point in the subnet.
 * **privateEndpoints**: [PrivateEndpoint](#privateendpoint)[] (ReadOnly): An array of references to private endpoints.
 * **privateLinkServiceNetworkPolicies**: string: Enable or Disable apply network policies on private link service in the subnet.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the subnet resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **purpose**: string (ReadOnly): A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
 * **resourceNavigationLinks**: [ResourceNavigationLink](#resourcenavigationlink)[] (ReadOnly): An array of references to the external resources using subnet.
 * **routeTable**: [RouteTable](#routetable): Route table resource.
@@ -1076,7 +1064,7 @@
 ## ServiceDelegationPropertiesFormat
 ### Properties
 * **actions**: string[] (ReadOnly): The actions permitted to the service upon delegation.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the service delegation resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **serviceName**: string: The name of the service to whom the subnet should be delegated (e.g. Microsoft.Sql/servers).
 
 ## IPConfigurationProfile
@@ -1089,7 +1077,7 @@
 
 ## IPConfigurationProfilePropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the IP configuration profile resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## NetworkSecurityGroup
@@ -1099,7 +1087,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [NetworkSecurityGroupPropertiesFormat](#networksecuritygrouppropertiesformat): Network Security Group resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## NetworkSecurityGroupPropertiesFormat
@@ -1107,7 +1095,7 @@
 * **defaultSecurityRules**: [SecurityRule](#securityrule)[] (ReadOnly): The default security rules of network security group.
 * **flowLogs**: [FlowLog](#flowlog)[] (ReadOnly): A collection of references to flow log resources.
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): A collection of references to network interfaces.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network security group resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the network security group resource.
 * **securityRules**: [SecurityRule](#securityrule)[]: A collection of security rules of the network security group.
 * **subnets**: [Subnet](#subnet)[] (ReadOnly): A collection of references to subnets.
@@ -1121,7 +1109,7 @@
 
 ## SecurityRulePropertiesFormat
 ### Properties
-* **access**: 'Allow' | 'Deny' (Required): The network traffic is allowed or denied.
+* **access**: 'Allow' | 'Deny' (Required): Whether network traffic is allowed or denied.
 * **description**: string: A description for this rule. Restricted to 140 chars.
 * **destinationAddressPrefix**: string: The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
 * **destinationAddressPrefixes**: string[]: The destination address prefixes. CIDR or destination IP ranges.
@@ -1131,7 +1119,7 @@
 * **direction**: 'Inbound' | 'Outbound' (Required): The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
 * **priority**: int: The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
 * **protocol**: '*' | 'Ah' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' (Required): Network protocol this rule applies to.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the security rule resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **sourceAddressPrefix**: string: The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
 * **sourceApplicationSecurityGroups**: [ApplicationSecurityGroup](#applicationsecuritygroup)[]: The application security group specified as source.
@@ -1145,7 +1133,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [FlowLogPropertiesFormat](#flowlogpropertiesformat): Parameters that define the configuration of flow log.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## FlowLogPropertiesFormat
@@ -1153,7 +1141,7 @@
 * **enabled**: bool: Flag to enable/disable flow logging.
 * **flowAnalyticsConfiguration**: [TrafficAnalyticsProperties](#trafficanalyticsproperties): Parameters that define the configuration of traffic analytics.
 * **format**: [FlowLogFormatParameters](#flowlogformatparameters): Parameters that define the flow log format.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the flow log.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **retentionPolicy**: [RetentionPolicyParameters](#retentionpolicyparameters): Parameters that define the retention policy for flow log.
 * **storageId**: string (Required): ID of the storage account which is used to store the flow log.
 * **targetResourceGuid**: string (ReadOnly): Guid of network security group to which flow log will be applied.
@@ -1181,7 +1169,7 @@
 * **days**: int: Number of days to retain flow log records.
 * **enabled**: bool: Flag to enable/disable retention.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1193,7 +1181,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [NetworkInterfacePropertiesFormat](#networkinterfacepropertiesformat): NetworkInterface properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## NetworkInterfacePropertiesFormat
@@ -1207,7 +1195,7 @@
 * **networkSecurityGroup**: [NetworkSecurityGroup](#networksecuritygroup): NetworkSecurityGroup resource.
 * **primary**: bool (ReadOnly): Whether this is a primary network interface on a virtual machine.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): Private endpoint resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network interface resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the network interface resource.
 * **tapConfigurations**: [NetworkInterfaceTapConfiguration](#networkinterfacetapconfiguration)[] (ReadOnly): A list of TapConfigurations of the network interface.
 * **virtualMachine**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
@@ -1227,7 +1215,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [PrivateEndpointProperties](#privateendpointproperties): Properties of the private endpoint.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## PrivateEndpointProperties
@@ -1236,7 +1224,7 @@
 * **manualPrivateLinkServiceConnections**: [PrivateLinkServiceConnection](#privatelinkserviceconnection)[]: A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private endpoint.
 * **privateLinkServiceConnections**: [PrivateLinkServiceConnection](#privatelinkserviceconnection)[]: A grouping of information about the connection to the remote resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## CustomDnsConfigPropertiesFormat
@@ -1257,7 +1245,7 @@
 * **groupIds**: string[]: The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
 * **privateLinkServiceId**: string: The resource id of private link service.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **requestMessage**: string: A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
 
 ## PrivateLinkServiceConnectionState
@@ -1266,7 +1254,7 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1281,7 +1269,7 @@
 
 ## NetworkInterfaceTapConfigurationPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network interface tap configuration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualNetworkTap**: [VirtualNetworkTap](#virtualnetworktap): Virtual Network Tap resource.
 
 ## VirtualNetworkTap
@@ -1291,7 +1279,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [VirtualNetworkTapPropertiesFormat](#virtualnetworktappropertiesformat): Virtual Network Tap properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## VirtualNetworkTapPropertiesFormat
@@ -1300,7 +1288,7 @@
 * **destinationNetworkInterfaceIPConfiguration**: [NetworkInterfaceIPConfiguration](#networkinterfaceipconfiguration): IPConfiguration in a network interface.
 * **destinationPort**: int: The VXLAN destination port that will receive the tapped traffic.
 * **networkInterfaceTapConfigurations**: [NetworkInterfaceTapConfiguration](#networkinterfacetapconfiguration)[] (ReadOnly): Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network tap resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network tap resource.
 
 ## FrontendIPConfiguration
@@ -1319,24 +1307,24 @@
 * **loadBalancingRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to load balancing rules that use this frontend IP.
 * **outboundRules**: [SubResource](#subresource)[] (ReadOnly): An array of references to outbound rules that use this frontend IP.
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The Private IP allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the frontend IP configuration resource.
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6': IP address version.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **publicIPPrefix**: [SubResource](#subresource): Reference to another subresource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1353,7 +1341,7 @@
 ### Properties
 * **link**: string: Link to the external resource.
 * **linkedResourceType**: string: Resource type of the linked resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource navigation link resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## RouteTable
 ### Properties
@@ -1362,13 +1350,13 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [RouteTablePropertiesFormat](#routetablepropertiesformat): Route Table resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## RouteTablePropertiesFormat
 ### Properties
 * **disableBgpRoutePropagation**: bool: Whether to disable the routes learned by BGP on that route table. True means disable.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the route table resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routes**: [Route](#route)[]: Collection of routes contained within a route table.
 * **subnets**: [Subnet](#subnet)[] (ReadOnly): A collection of references to subnets.
 
@@ -1384,9 +1372,9 @@
 * **addressPrefix**: string: The destination CIDR to which the route applies.
 * **nextHopIpAddress**: string: The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
 * **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' (Required): The type of Azure hop the packet should be sent to.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the route resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1405,7 +1393,7 @@
 * **link**: string: Link to the external resource.
 * **linkedResourceType**: string: Resource type of the linked resource.
 * **locations**: string[]: A list of locations.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the service association link resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ServiceEndpointPolicy
 ### Properties
@@ -1414,12 +1402,12 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [ServiceEndpointPolicyPropertiesFormat](#serviceendpointpolicypropertiesformat): Service Endpoint Policy resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## ServiceEndpointPolicyPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the service endpoint policy resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the service endpoint policy resource.
 * **serviceEndpointPolicyDefinitions**: [ServiceEndpointPolicyDefinition](#serviceendpointpolicydefinition)[]: A collection of service endpoint policy definitions of the service endpoint policy.
 * **subnets**: [Subnet](#subnet)[] (ReadOnly): A collection of references to subnets.
@@ -1434,11 +1422,11 @@
 ## ServiceEndpointPolicyDefinitionPropertiesFormat
 ### Properties
 * **description**: string: A description for this rule. Restricted to 140 chars.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the service endpoint policy definition resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **service**: string: Service endpoint name.
 * **serviceResources**: string[]: A list of service resources.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1446,7 +1434,7 @@
 ## ServiceEndpointPropertiesFormat
 ### Properties
 * **locations**: string[]: A list of locations.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the service endpoint resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **service**: string: The type of the endpoint service.
 
 ## IpTag
@@ -1458,7 +1446,7 @@
 ### Properties
 * **name**: 'Basic' | 'Standard': Name of a public IP address SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1483,8 +1471,8 @@
 * **port**: int: The destination port on the backend.
 * **probe**: [SubResource](#subresource): Reference to another subresource.
 * **probeEnabled**: bool: Whether the probe is enabled. Default value is false.
-* **protocol**: 'Http' | 'Https': The protocol used to communicate with the backend.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the backend HTTP settings resource.
+* **protocol**: 'Http' | 'Https': Application Gateway protocol.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **requestTimeout**: int: Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
 * **trustedRootCertificates**: [SubResource](#subresource)[]: Array of references to application gateway trusted root certificates.
 
@@ -1509,9 +1497,9 @@
 ## ApplicationGatewayFrontendIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: PrivateIPAddress of the network interface IP Configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
 * **privateLinkConfiguration**: [SubResource](#subresource): Reference to another subresource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the frontend IP configuration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [SubResource](#subresource): Reference to another subresource.
 * **subnet**: [SubResource](#subresource): Reference to another subresource.
 
@@ -1526,7 +1514,7 @@
 ## ApplicationGatewayFrontendPortPropertiesFormat
 ### Properties
 * **port**: int: Frontend port.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the frontend port resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayIPConfiguration
 ### Properties
@@ -1538,7 +1526,7 @@
 
 ## ApplicationGatewayIPConfigurationPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway IP configuration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **subnet**: [SubResource](#subresource): Reference to another subresource.
 
 ## ApplicationGatewayHttpListener
@@ -1557,8 +1545,8 @@
 * **frontendPort**: [SubResource](#subresource): Reference to another subresource.
 * **hostName**: string: Host name of HTTP listener.
 * **hostNames**: string[]: List of Host names for HTTP Listener that allows special wildcard characters as well.
-* **protocol**: 'Http' | 'Https': Protocol of the HTTP listener.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the HTTP listener resource.
+* **protocol**: 'Http' | 'Https': Application Gateway protocol.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **requireServerNameIndication**: bool: Applicable only if protocol is https. Enables SNI for multi-hosting.
 * **sslCertificate**: [SubResource](#subresource): Reference to another subresource.
 
@@ -1575,7 +1563,7 @@
 * **linkIdentifier**: string (ReadOnly): The consumer link id.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): Private endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway private endpoint connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayPrivateLinkConfiguration
 ### Properties
@@ -1588,7 +1576,7 @@
 ## ApplicationGatewayPrivateLinkConfigurationProperties
 ### Properties
 * **ipConfigurations**: [ApplicationGatewayPrivateLinkIpConfiguration](#applicationgatewayprivatelinkipconfiguration)[]: An array of application gateway private link ip configurations.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway private link configuration.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayPrivateLinkIpConfiguration
 ### Properties
@@ -1602,8 +1590,8 @@
 ### Properties
 * **primary**: bool: Whether the ip configuration is primary or not.
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application gateway private link IP configuration.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **subnet**: [SubResource](#subresource): Reference to another subresource.
 
 ## ApplicationGatewayProbe
@@ -1623,8 +1611,8 @@
 * **path**: string: Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
 * **pickHostNameFromBackendHttpSettings**: bool: Whether the host header should be picked from the backend http settings. Default value is false.
 * **port**: int: Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
-* **protocol**: 'Http' | 'Https': The protocol used for the probe.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the probe resource.
+* **protocol**: 'Http' | 'Https': Application Gateway protocol.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **timeout**: int: The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
 * **unhealthyThreshold**: int: The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
 
@@ -1646,7 +1634,7 @@
 * **includePath**: bool: Include path in the redirected url.
 * **includeQueryString**: bool: Include query string in the redirected url.
 * **pathRules**: [SubResource](#subresource)[]: Path rules specifying redirect configuration.
-* **redirectType**: 'Found' | 'Permanent' | 'SeeOther' | 'Temporary': HTTP redirection type.
+* **redirectType**: 'Found' | 'Permanent' | 'SeeOther' | 'Temporary': Redirect type enum.
 * **requestRoutingRules**: [SubResource](#subresource)[]: Request routing specifying redirect configuration.
 * **targetListener**: [SubResource](#subresource): Reference to another subresource.
 * **targetUrl**: string: Url to redirect the request to.
@@ -1666,7 +1654,7 @@
 * **backendHttpSettings**: [SubResource](#subresource): Reference to another subresource.
 * **httpListener**: [SubResource](#subresource): Reference to another subresource.
 * **priority**: int: Priority of the request routing rule.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the request routing rule resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **redirectConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **rewriteRuleSet**: [SubResource](#subresource): Reference to another subresource.
 * **ruleType**: 'Basic' | 'PathBasedRouting': Rule type.
@@ -1681,7 +1669,7 @@
 
 ## ApplicationGatewayRewriteRuleSetPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the rewrite rule set resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rewriteRules**: [ApplicationGatewayRewriteRule](#applicationgatewayrewriterule)[]: Rewrite rules in the rewrite rule set.
 
 ## ApplicationGatewayRewriteRule
@@ -1719,7 +1707,7 @@
 ### Properties
 * **capacity**: int: Capacity (instance count) of an application gateway.
 * **name**: 'Standard_Large' | 'Standard_Medium' | 'Standard_Small' | 'Standard_v2' | 'WAF_Large' | 'WAF_Medium' | 'WAF_v2': Name of an application gateway SKU.
-* **tier**: 'Standard_v2' | 'Standard' | 'WAF_v2' | 'WAF': Tier of an application gateway.
+* **tier**: 'Standard' | 'Standard_v2' | 'WAF' | 'WAF_v2': Tier of an application gateway.
 
 ## ApplicationGatewaySslCertificate
 ### Properties
@@ -1734,15 +1722,15 @@
 * **data**: string: Base-64 encoded pfx certificate. Only applicable in PUT Request.
 * **keyVaultSecretId**: string: Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
 * **password**: string: Password for the pfx file specified in data. Only applicable in PUT request.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the SSL certificate resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicCertData**: string (ReadOnly): Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
 
 ## ApplicationGatewaySslPolicy
 ### Properties
 * **cipherSuites**: 'TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384'[]: Ssl cipher suites to be enabled in the specified order to application gateway.
 * **disabledSslProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2'[]: Ssl protocols to be disabled on application gateway.
-* **minProtocolVersion**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2': Minimum version of Ssl protocol to be supported on application gateway.
-* **policyName**: 'AppGwSslPolicy20150501' | 'AppGwSslPolicy20170401' | 'AppGwSslPolicy20170401S': Name of Ssl predefined policy.
+* **minProtocolVersion**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2': Ssl protocol enums.
+* **policyName**: 'AppGwSslPolicy20150501' | 'AppGwSslPolicy20170401' | 'AppGwSslPolicy20170401S': Ssl predefined policy name enums.
 * **policyType**: 'Custom' | 'Predefined': Type of Ssl Policy.
 
 ## ApplicationGatewayTrustedRootCertificate
@@ -1757,7 +1745,7 @@
 ### Properties
 * **data**: string: Certificate public data.
 * **keyVaultSecretId**: string: Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the trusted root certificate resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayUrlPathMap
 ### Properties
@@ -1774,7 +1762,7 @@
 * **defaultRedirectConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **defaultRewriteRuleSet**: [SubResource](#subresource): Reference to another subresource.
 * **pathRules**: [ApplicationGatewayPathRule](#applicationgatewaypathrule)[]: Path rule of URL path map resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the URL path map resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ApplicationGatewayPathRule
 ### Properties
@@ -1790,7 +1778,7 @@
 * **backendHttpSettings**: [SubResource](#subresource): Reference to another subresource.
 * **firewallPolicy**: [SubResource](#subresource): Reference to another subresource.
 * **paths**: string[]: Path rules of URL path map.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the path rule resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **redirectConfiguration**: [SubResource](#subresource): Reference to another subresource.
 * **rewriteRuleSet**: [SubResource](#subresource): Reference to another subresource.
 
@@ -1818,7 +1806,7 @@
 * **selector**: string (Required): When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
 * **selectorMatchOperator**: string (Required): When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1831,7 +1819,7 @@
 * **managedRules**: [ManagedRulesDefinition](#managedrulesdefinition) (Required): Allow to exclude some variable satisfy the condition for the WAF check.
 * **pathBasedRules**: [SubResource](#subresource)[] (ReadOnly): A collection of references to application gateway path rules.
 * **policySettings**: [PolicySettings](#policysettings): Defines contents of a web application firewall global configuration.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the web application firewall policy resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Resource status of the policy.
 
 ## ApplicationGateway
@@ -1842,11 +1830,11 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [ApplicationGatewayPropertiesFormat](#applicationgatewaypropertiesformat): Properties of the application gateway.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1908,19 +1896,19 @@
 * **requestBodyCheck**: bool: Whether to allow WAF to check request Body.
 * **state**: 'Disabled' | 'Enabled': The state of the policy.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AzureFirewallPropertiesFormat
 ### Properties
-* **additionalProperties**: [Dictionary<string,String>](#dictionarystringstring): The additional properties of azure firewall.
+* **additionalProperties**: [AzureFirewallAdditionalProperties](#azurefirewalladditionalproperties): The additional properties of azure firewall.
 * **applicationRuleCollections**: [AzureFirewallApplicationRuleCollection](#azurefirewallapplicationrulecollection)[]: Collection of application rule collections used by Azure Firewall.
 * **firewallPolicy**: [SubResource](#subresource): Reference to another subresource.
 * **hubIPAddresses**: [HubIPAddresses](#hubipaddresses): IP addresses associated with azure firewall.
@@ -1929,12 +1917,12 @@
 * **managementIpConfiguration**: [AzureFirewallIPConfiguration](#azurefirewallipconfiguration): IP configuration of an Azure Firewall.
 * **natRuleCollections**: [AzureFirewallNatRuleCollection](#azurefirewallnatrulecollection)[]: Collection of NAT rule collections used by Azure Firewall.
 * **networkRuleCollections**: [AzureFirewallNetworkRuleCollection](#azurefirewallnetworkrulecollection)[]: Collection of network rule collections used by Azure Firewall.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the Azure firewall resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **sku**: [AzureFirewallSku](#azurefirewallsku): SKU of an Azure Firewall.
-* **threatIntelMode**: 'Alert' | 'Deny' | 'Off': The operation mode for Threat Intelligence.
+* **threatIntelMode**: 'Alert' | 'Deny' | 'Off': The operation mode for Threat Intel.
 * **virtualHub**: [SubResource](#subresource): Reference to another subresource.
 
-## Dictionary<string,String>
+## AzureFirewallAdditionalProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1950,12 +1938,12 @@
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): Properties of the AzureFirewallRCAction.
 * **priority**: int: Priority of the application rule collection resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application rule collection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rules**: [AzureFirewallApplicationRule](#azurefirewallapplicationrule)[]: Collection of rules used by a application rule collection.
 
 ## AzureFirewallRCAction
 ### Properties
-* **type**: 'Allow' | 'Deny': The type of action.
+* **type**: 'Allow' | 'Deny': The action type of a rule collection.
 
 ## AzureFirewallApplicationRule
 ### Properties
@@ -1970,7 +1958,7 @@
 ## AzureFirewallApplicationRuleProtocol
 ### Properties
 * **port**: int: Port number for the protocol, cannot be greater than 64000. This field is optional.
-* **protocolType**: 'Http' | 'Https' | 'Mssql': Protocol type.
+* **protocolType**: 'Http' | 'Https' | 'Mssql': The protocol type of a Application Rule resource.
 
 ## HubIPAddresses
 ### Properties
@@ -1997,7 +1985,7 @@
 ## AzureFirewallIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string (ReadOnly): The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the Azure firewall IP configuration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [SubResource](#subresource): Reference to another subresource.
 * **subnet**: [SubResource](#subresource): Reference to another subresource.
 
@@ -2017,12 +2005,12 @@
 ### Properties
 * **action**: [AzureFirewallNatRCAction](#azurefirewallnatrcaction): AzureFirewall NAT Rule Collection Action.
 * **priority**: int: Priority of the NAT rule collection resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the NAT rule collection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rules**: [AzureFirewallNatRule](#azurefirewallnatrule)[]: Collection of rules used by a NAT rule collection.
 
 ## AzureFirewallNatRCAction
 ### Properties
-* **type**: 'Dnat' | 'Snat': The type of action.
+* **type**: 'Dnat' | 'Snat': The action type of a NAT rule collection.
 
 ## AzureFirewallNatRule
 ### Properties
@@ -2048,7 +2036,7 @@
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): Properties of the AzureFirewallRCAction.
 * **priority**: int: Priority of the network rule collection resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network rule collection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rules**: [AzureFirewallNetworkRule](#azurefirewallnetworkrule)[]: Collection of rules used by a network rule collection.
 
 ## AzureFirewallNetworkRule
@@ -2068,7 +2056,7 @@
 * **name**: 'AZFW_Hub' | 'AZFW_VNet': Name of an Azure Firewall SKU.
 * **tier**: 'Premium' | 'Standard': Tier of an Azure Firewall.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2077,7 +2065,7 @@
 ### Properties
 * **dnsName**: string: FQDN for the endpoint on which bastion host is accessible.
 * **ipConfigurations**: [BastionHostIPConfiguration](#bastionhostipconfiguration)[]: IP configuration of the Bastion Host resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the bastion host resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## BastionHostIPConfiguration
 ### Properties
@@ -2089,12 +2077,12 @@
 
 ## BastionHostIPConfigurationPropertiesFormat
 ### Properties
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': Private IP allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the bastion host IP configuration resource.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [SubResource](#subresource) (Required): Reference to another subresource.
 * **subnet**: [SubResource](#subresource) (Required): Reference to another subresource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2102,9 +2090,9 @@
 ## VirtualNetworkGatewayConnectionPropertiesFormat
 ### Properties
 * **authorizationKey**: string: The authorizationKey.
-* **connectionProtocol**: 'IKEv1' | 'IKEv2': Connection protocol used for this connection.
+* **connectionProtocol**: 'IKEv1' | 'IKEv2': Gateway connection protocol.
 * **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly): Virtual Network Gateway connection status.
-* **connectionType**: 'ExpressRoute' | 'IPsec' | 'Vnet2Vnet' | 'VPNClient' (Required): Gateway connection type.
+* **connectionType**: 'ExpressRoute' | 'IPsec' | 'VPNClient' | 'Vnet2Vnet' (Required): Gateway connection type.
 * **dpdTimeoutSeconds**: int: The dead peer detection timeout of this connection in seconds.
 * **egressBytesTransferred**: int (ReadOnly): The egress bytes transferred in this connection.
 * **enableBgp**: bool: EnableBgp flag.
@@ -2113,7 +2101,7 @@
 * **ipsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: The IPSec Policies to be considered by this connection.
 * **localNetworkGateway2**: [LocalNetworkGateway](#localnetworkgateway): A common class for general resource information.
 * **peer**: [SubResource](#subresource): Reference to another subresource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network gateway connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network gateway connection resource.
 * **routingWeight**: int: The routing weight.
 * **sharedKey**: string: The IPSec shared key.
@@ -2126,12 +2114,12 @@
 
 ## IpsecPolicy
 ### Properties
-* **dhGroup**: 'DHGroup1' | 'DHGroup14' | 'DHGroup2' | 'DHGroup2048' | 'DHGroup24' | 'ECP256' | 'ECP384' | 'None' (Required): The DH Group used in IKE Phase 1 for initial SA.
+* **dhGroup**: 'DHGroup1' | 'DHGroup14' | 'DHGroup2' | 'DHGroup2048' | 'DHGroup24' | 'ECP256' | 'ECP384' | 'None' (Required): The DH Groups used in IKE Phase 1 for initial SA.
 * **ikeEncryption**: 'AES128' | 'AES192' | 'AES256' | 'DES' | 'DES3' | 'GCMAES128' | 'GCMAES256' (Required): The IKE encryption algorithm (IKE phase 2).
 * **ikeIntegrity**: 'GCMAES128' | 'GCMAES256' | 'MD5' | 'SHA1' | 'SHA256' | 'SHA384' (Required): The IKE integrity algorithm (IKE phase 2).
 * **ipsecEncryption**: 'AES128' | 'AES192' | 'AES256' | 'DES' | 'DES3' | 'GCMAES128' | 'GCMAES192' | 'GCMAES256' | 'None' (Required): The IPSec encryption algorithm (IKE phase 1).
 * **ipsecIntegrity**: 'GCMAES128' | 'GCMAES192' | 'GCMAES256' | 'MD5' | 'SHA1' | 'SHA256' (Required): The IPSec integrity algorithm (IKE phase 1).
-* **pfsGroup**: 'ECP256' | 'ECP384' | 'None' | 'PFS1' | 'PFS14' | 'PFS2' | 'PFS2048' | 'PFS24' | 'PFSMM' (Required): The Pfs Group used in IKE Phase 2 for new child SA.
+* **pfsGroup**: 'ECP256' | 'ECP384' | 'None' | 'PFS1' | 'PFS14' | 'PFS2' | 'PFS2048' | 'PFS24' | 'PFSMM' (Required): The Pfs Groups used in IKE Phase 2 for new child SA.
 * **saDataSizeKilobytes**: int (Required): The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
 * **saLifeTimeSeconds**: int (Required): The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
 
@@ -2142,7 +2130,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required): LocalNetworkGateway properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## LocalNetworkGatewayPropertiesFormat
@@ -2151,7 +2139,7 @@
 * **fqdn**: string: FQDN of local network gateway.
 * **gatewayIpAddress**: string: IP address of local network gateway.
 * **localNetworkAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the local network gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the local network gateway resource.
 
 ## BgpSettings
@@ -2172,7 +2160,7 @@
 ### Properties
 * **addressPrefixes**: string[]: A list of address blocks reserved for this virtual network in CIDR notation.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2197,7 +2185,7 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [VirtualNetworkGatewayPropertiesFormat](#virtualnetworkgatewaypropertiesformat) (Required): VirtualNetworkGateway properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
 ## VirtualNetworkGatewayPropertiesFormat
@@ -2212,7 +2200,7 @@
 * **gatewayType**: 'ExpressRoute' | 'Vpn': The type of this virtual network gateway.
 * **inboundDnsForwardingEndpoint**: string (ReadOnly): The IP address allocated by the gateway to which dns requests can be sent.
 * **ipConfigurations**: [VirtualNetworkGatewayIPConfiguration](#virtualnetworkgatewayipconfiguration)[]: IP configurations for virtual network gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the virtual network gateway resource.
 * **sku**: [VirtualNetworkGatewaySku](#virtualnetworkgatewaysku): VirtualNetworkGatewaySku details.
 * **vpnClientConfiguration**: [VpnClientConfiguration](#vpnclientconfiguration): VpnClientConfiguration for P2S client.
@@ -2229,8 +2217,8 @@
 ## VirtualNetworkGatewayIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string (ReadOnly): Private IP Address for this gateway.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network gateway IP configuration resource.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [SubResource](#subresource): Reference to another subresource.
 * **subnet**: [SubResource](#subresource): Reference to another subresource.
 
@@ -2269,7 +2257,7 @@
 
 ## VpnClientRevokedCertificatePropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN client revoked certificate resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **thumbprint**: string: The revoked VPN client certificate thumbprint.
 
 ## VpnClientRootCertificate
@@ -2281,15 +2269,15 @@
 
 ## VpnClientRootCertificatePropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN client root certificate resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicCertData**: string (Required): The certificate public data.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2297,7 +2285,7 @@
 ## DdosCustomPolicyPropertiesFormat
 ### Properties
 * **protocolCustomSettings**: [ProtocolCustomSettingsFormat](#protocolcustomsettingsformat)[]: The protocol-specific DDoS policy customization parameters.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the DDoS custom policy resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddresses**: [SubResource](#subresource)[] (ReadOnly): The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
 
@@ -2308,18 +2296,18 @@
 * **triggerRateOverride**: string: The customized DDoS protection trigger rate.
 * **triggerSensitivityOverride**: 'Default' | 'High' | 'Low' | 'Relaxed': The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## DdosProtectionPlanPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the DDoS protection plan resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the DDoS protection plan resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
 * **virtualNetworks**: [SubResource](#subresource)[] (ReadOnly): The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.
 
-## Dictionary<string,String>
+## DdosProtectionPlanTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2334,7 +2322,7 @@
 * **gatewayManagerEtag**: string: The GatewayManager Etag.
 * **globalReachEnabled**: bool: Flag denoting global reach status.
 * **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[]: The list of peerings.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route circuit resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **serviceKey**: string: The ServiceKey.
 * **serviceProviderNotes**: string: The ServiceProviderNotes.
 * **serviceProviderProperties**: [ExpressRouteCircuitServiceProviderProperties](#expressroutecircuitserviceproviderproperties): Contains ServiceProviderProperties in an ExpressRouteCircuit.
@@ -2353,7 +2341,7 @@
 ### Properties
 * **authorizationKey**: string: The authorization key.
 * **authorizationUseStatus**: 'Available' | 'InUse': The authorization use status.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the authorization resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ExpressRouteCircuitPeering
 ### Properties
@@ -2377,12 +2365,12 @@
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering': The peering type.
 * **primaryAzurePort**: string: The primary port.
 * **primaryPeerAddressPrefix**: string: The primary address prefix.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route circuit peering resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routeFilter**: [SubResource](#subresource): Reference to another subresource.
 * **secondaryAzurePort**: string: The secondary port.
 * **secondaryPeerAddressPrefix**: string: The secondary address prefix.
 * **sharedKey**: string: The shared key.
-* **state**: 'Disabled' | 'Enabled': The peering state.
+* **state**: 'Disabled' | 'Enabled': The state of peering.
 * **stats**: [ExpressRouteCircuitStats](#expressroutecircuitstats): Contains stats associated with the peering.
 * **vlanId**: int: The VLAN ID.
 
@@ -2398,11 +2386,11 @@
 ### Properties
 * **addressPrefix**: string: /29 IP address space to carve out Customer addresses for tunnels.
 * **authorizationKey**: string: The authorization key.
-* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected': Express Route Circuit connection state.
+* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' (ReadOnly): Express Route Circuit connection state.
 * **expressRouteCircuitPeering**: [SubResource](#subresource): Reference to another subresource.
 * **ipv6CircuitConnectionConfig**: [Ipv6CircuitConnectionConfig](#ipv6circuitconnectionconfig): IPv6 Circuit Connection properties for global reach.
 * **peerExpressRouteCircuitPeering**: [SubResource](#subresource): Reference to another subresource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route circuit connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## Ipv6CircuitConnectionConfig
 ### Properties
@@ -2442,11 +2430,11 @@
 ### Properties
 * **addressPrefix**: string: /29 IP address space to carve out Customer addresses for tunnels.
 * **authResourceGuid**: string: The resource guid of the authorization used for the express route circuit connection.
-* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected': Express Route Circuit connection state.
+* **circuitConnectionStatus**: 'Connected' | 'Connecting' | 'Disconnected' (ReadOnly): Express Route Circuit connection state.
 * **connectionName**: string: The name of the express route circuit connection resource.
 * **expressRouteCircuitPeering**: [SubResource](#subresource): Reference to another subresource.
 * **peerExpressRouteCircuitPeering**: [SubResource](#subresource): Reference to another subresource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the peer express route circuit connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ExpressRouteCircuitStats
 ### Properties
@@ -2467,7 +2455,7 @@
 * **name**: string: The name of the SKU.
 * **tier**: 'Basic' | 'Local' | 'Premium' | 'Standard': The tier of the SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2479,10 +2467,10 @@
 * **peeringLocation**: string: The peering location of the ExpressRoute circuit.
 * **peerings**: [ExpressRouteCrossConnectionPeering](#expressroutecrossconnectionpeering)[]: The list of peerings.
 * **primaryAzurePort**: string (ReadOnly): The name of the primary port.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route cross connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **secondaryAzurePort**: string (ReadOnly): The name of the secondary port.
 * **serviceProviderNotes**: string: Additional read only notes set by the connectivity provider.
-* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning': The provisioning state of the circuit in the connectivity provider system.
+* **serviceProviderProvisioningState**: 'Deprovisioning' | 'NotProvisioned' | 'Provisioned' | 'Provisioning': The ServiceProviderProvisioningState state of the resource.
 * **sTag**: int (ReadOnly): The identifier of the circuit traffic.
 
 ## ExpressRouteCircuitReference
@@ -2507,30 +2495,30 @@
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering': The peering type.
 * **primaryAzurePort**: string (ReadOnly): The primary port.
 * **primaryPeerAddressPrefix**: string: The primary address prefix.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route cross connection peering resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **secondaryAzurePort**: string (ReadOnly): The secondary port.
 * **secondaryPeerAddressPrefix**: string: The secondary address prefix.
 * **sharedKey**: string: The shared key.
-* **state**: 'Disabled' | 'Enabled': The peering state.
+* **state**: 'Disabled' | 'Enabled': The state of peering.
 * **vlanId**: int: The VLAN ID.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ExpressRouteGatewayProperties
 ### Properties
-* **autoScaleConfiguration**: [schemas:665_autoScaleConfiguration](#schemas665autoscaleconfiguration): Configuration for auto scaling.
+* **autoScaleConfiguration**: [ExpressRouteGatewayPropertiesAutoScaleConfiguration](#expressroutegatewaypropertiesautoscaleconfiguration): Configuration for auto scaling.
 * **expressRouteConnections**: [ExpressRouteConnection](#expressrouteconnection)[] (ReadOnly): List of ExpressRoute connections to the ExpressRoute gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualHub**: [VirtualHubId](#virtualhubid) (Required): Virtual Hub identifier.
 
-## schemas:665_autoScaleConfiguration
+## ExpressRouteGatewayPropertiesAutoScaleConfiguration
 ### Properties
-* **bounds**: [schemas:665_autoScaleConfiguration_bounds](#schemas665autoscaleconfigurationbounds): Minimum and maximum number of scale units to deploy.
+* **bounds**: [ExpressRouteGatewayPropertiesAutoScaleConfigurationBounds](#expressroutegatewaypropertiesautoscaleconfigurationbounds): Minimum and maximum number of scale units to deploy.
 
-## schemas:665_autoScaleConfiguration_bounds
+## ExpressRouteGatewayPropertiesAutoScaleConfigurationBounds
 ### Properties
 * **max**: int: Maximum number of scale units deployed for ExpressRoute gateway.
 * **min**: int: Minimum number of scale units deployed for ExpressRoute gateway.
@@ -2546,7 +2534,7 @@
 * **authorizationKey**: string: Authorization key to establish the connection.
 * **enableInternetSecurity**: bool: Enable internet security.
 * **expressRouteCircuitPeering**: [ExpressRouteCircuitPeeringId](#expressroutecircuitpeeringid) (Required): ExpressRoute circuit peering identifier.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): Routing Configuration indicating the associated and propagated route tables for this connection.
 * **routingWeight**: int: The routing weight associated to the connection.
 
@@ -2579,7 +2567,7 @@
 ### Properties
 * **id**: string: The resource URI for the Virtual Hub where the ExpressRoute gateway is or will be deployed. The Virtual Hub resource and the ExpressRoute gateway resource reside in the same subscription.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2595,7 +2583,7 @@
 * **mtu**: string (ReadOnly): Maximum transmission unit of the physical port pair(s).
 * **peeringLocation**: string: The name of the peering location that the ExpressRoutePort is mapped to physically.
 * **provisionedBandwidthInGbps**: int (ReadOnly): Aggregate Gbps of associated circuit bandwidths.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route port resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the express route port resource.
 
 ## ExpressRouteLink
@@ -2612,7 +2600,7 @@
 * **interfaceName**: string (ReadOnly): Name of Azure router interface.
 * **macSecConfig**: [ExpressRouteLinkMacSecConfig](#expressroutelinkmacsecconfig): ExpressRouteLink Mac Security Configuration.
 * **patchPanelId**: string (ReadOnly): Mapping between physical port to patch panel port.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the express route link resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rackId**: string (ReadOnly): Mapping of physical patch panel to rack.
 * **routerName**: string (ReadOnly): Name of Azure router associated with physical port.
 
@@ -2622,7 +2610,7 @@
 * **cipher**: 'GcmAes128' | 'GcmAes256': Mac security cipher.
 * **cknSecretIdentifier**: string: Keyvault Secret Identifier URL containing Mac security CKN key.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2633,9 +2621,9 @@
 * **childPolicies**: [SubResource](#subresource)[] (ReadOnly): List of references to Child Firewall Policies.
 * **dnsSettings**: [DnsSettings](#dnssettings): DNS Proxy Settings in Firewall Policy.
 * **firewalls**: [SubResource](#subresource)[] (ReadOnly): List of references to Azure Firewalls that this Firewall Policy is associated with.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the firewall policy resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **ruleCollectionGroups**: [SubResource](#subresource)[] (ReadOnly): List of references to FirewallPolicyRuleCollectionGroups.
-* **threatIntelMode**: 'Alert' | 'Deny' | 'Off': The operation mode for Threat Intelligence.
+* **threatIntelMode**: 'Alert' | 'Deny' | 'Off': The operation mode for Threat Intel.
 * **threatIntelWhitelist**: [FirewallPolicyThreatIntelWhitelist](#firewallpolicythreatintelwhitelist): ThreatIntel Whitelist for Firewall Policy.
 
 ## DnsSettings
@@ -2649,7 +2637,7 @@
 * **fqdns**: string[]: List of FQDNs for the ThreatIntel Whitelist.
 * **ipAddresses**: string[]: List of IP addresses for the ThreatIntel Whitelist.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2657,39 +2645,41 @@
 ## FirewallPolicyRuleCollectionGroupProperties
 ### Properties
 * **priority**: int: Priority of the Firewall Policy Rule Collection Group resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the firewall policy rule collection group resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **ruleCollections**: [FirewallPolicyRuleCollection](#firewallpolicyrulecollection)[]: Group of Firewall Policy rule collections.
 
 ## FirewallPolicyRuleCollection
 * **Discriminator**: ruleCollectionType
+
 ### Base Properties
 * **name**: string: The name of the rule collection.
 * **priority**: int: Priority of the Firewall Policy Rule Collection resource.
 ### FirewallPolicyFilterRuleCollection
 #### Properties
 * **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): Properties of the FirewallPolicyFilterRuleCollectionAction.
-* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required): Firewall Policy Filter Rule Collection.
+* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required): The type of the rule collection.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 ### FirewallPolicyNatRuleCollection
 #### Properties
 * **action**: [FirewallPolicyNatRuleCollectionAction](#firewallpolicynatrulecollectionaction): Properties of the FirewallPolicyNatRuleCollectionAction.
-* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required): Firewall Policy NAT Rule Collection.
+* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required): The type of the rule collection.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 
 ## FirewallPolicyFilterRuleCollection
 ### Properties
 * **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): Properties of the FirewallPolicyFilterRuleCollectionAction.
-* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required): Firewall Policy Filter Rule Collection.
+* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required): The type of the rule collection.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 ## FirewallPolicyFilterRuleCollectionAction
 ### Properties
-* **type**: 'Allow' | 'Deny': The type of action.
+* **type**: 'Allow' | 'Deny': The action type of a rule.
 
 ## FirewallPolicyRule
 * **Discriminator**: ruleType
+
 ### Base Properties
 * **description**: string: Description of the rule.
 * **name**: string: Name of the rule.
@@ -2698,7 +2688,7 @@
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
 * **fqdnTags**: string[]: List of FQDN Tags for this rule.
 * **protocols**: [FirewallPolicyRuleApplicationProtocol](#firewallpolicyruleapplicationprotocol)[]: Array of Application Protocols.
-* **ruleType**: 'ApplicationRule' (Required): Rule of type application.
+* **ruleType**: 'ApplicationRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **targetFqdns**: string[]: List of FQDNs for this rule.
@@ -2708,7 +2698,7 @@
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
 * **destinationPorts**: string[]: List of destination ports.
 * **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of FirewallPolicyRuleNetworkProtocols.
-* **ruleType**: 'NatRule' (Required): Rule of type nat.
+* **ruleType**: 'NatRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **translatedAddress**: string: The translated address for this NAT rule.
@@ -2721,7 +2711,7 @@
 * **destinationIpGroups**: string[]: List of destination IpGroups for this rule.
 * **destinationPorts**: string[]: List of destination ports.
 * **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of FirewallPolicyRuleNetworkProtocols.
-* **ruleType**: 'NetworkRule' (Required): Rule of type network.
+* **ruleType**: 'NetworkRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 
@@ -2731,7 +2721,7 @@
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
 * **fqdnTags**: string[]: List of FQDN Tags for this rule.
 * **protocols**: [FirewallPolicyRuleApplicationProtocol](#firewallpolicyruleapplicationprotocol)[]: Array of Application Protocols.
-* **ruleType**: 'ApplicationRule' (Required): Rule of type application.
+* **ruleType**: 'ApplicationRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **targetFqdns**: string[]: List of FQDNs for this rule.
@@ -2739,14 +2729,14 @@
 ## FirewallPolicyRuleApplicationProtocol
 ### Properties
 * **port**: int: Port number for the protocol, cannot be greater than 64000.
-* **protocolType**: 'Http' | 'Https': Protocol type.
+* **protocolType**: 'Http' | 'Https': The application protocol type of a Rule.
 
 ## NatRule
 ### Properties
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
 * **destinationPorts**: string[]: List of destination ports.
 * **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of FirewallPolicyRuleNetworkProtocols.
-* **ruleType**: 'NatRule' (Required): Rule of type nat.
+* **ruleType**: 'NatRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **translatedAddress**: string: The translated address for this NAT rule.
@@ -2759,37 +2749,37 @@
 * **destinationIpGroups**: string[]: List of destination IpGroups for this rule.
 * **destinationPorts**: string[]: List of destination ports.
 * **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of FirewallPolicyRuleNetworkProtocols.
-* **ruleType**: 'NetworkRule' (Required): Rule of type network.
+* **ruleType**: 'NetworkRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 
 ## FirewallPolicyNatRuleCollection
 ### Properties
 * **action**: [FirewallPolicyNatRuleCollectionAction](#firewallpolicynatrulecollectionaction): Properties of the FirewallPolicyNatRuleCollectionAction.
-* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required): Firewall Policy NAT Rule Collection.
+* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required): The type of the rule collection.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 ## FirewallPolicyNatRuleCollectionAction
 ### Properties
-* **type**: 'DNAT': The type of action.
+* **type**: 'DNAT': The action type of a rule.
 
 ## IpAllocationPropertiesFormat
 ### Properties
-* **allocationTags**: [Dictionary<string,String>](#dictionarystringstring): IpAllocation tags.
+* **allocationTags**: [IpAllocationPropertiesFormatAllocationTags](#ipallocationpropertiesformatallocationtags): IpAllocation tags.
 * **ipamAllocationId**: string: The IPAM allocation ID.
 * **prefix**: string: The address prefix for the IpAllocation.
 * **prefixLength**: int: The address prefix length for the IpAllocation.
-* **prefixType**: 'IPv4' | 'IPv6': The address prefix Type for the IpAllocation.
+* **prefixType**: 'IPv4' | 'IPv6': IP address version.
 * **subnet**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
-* **type**: 'Hypernet' | 'Undefined': The type for the IpAllocation.
+* **type**: 'Hypernet' | 'Undefined': IpAllocation type.
 * **virtualNetwork**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
 
-## Dictionary<string,String>
+## IpAllocationPropertiesFormatAllocationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2798,9 +2788,9 @@
 ### Properties
 * **firewalls**: [SubResource](#subresource)[] (ReadOnly): List of references to Azure resources that this IpGroups is associated with.
 * **ipAddresses**: string[]: IpAddresses/IpAddressPrefixes in the IpGroups resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the IpGroups resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2814,7 +2804,7 @@
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Object collection representing the load balancing rules Gets the provisioning.
 * **outboundRules**: [OutboundRule](#outboundrule)[]: The outbound rules.
 * **probes**: [Probe](#probe)[]: Collection of probe objects used in the load balancer.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the load balancer resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the load balancer resource.
 
 ## InboundNatPool
@@ -2834,8 +2824,8 @@
 * **frontendPortRangeEnd**: int (Required): The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
 * **frontendPortRangeStart**: int (Required): The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-* **protocol**: 'All' | 'Tcp' | 'Udp' (Required): The reference to the transport protocol used by the inbound NAT pool.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the inbound NAT pool resource.
+* **protocol**: 'All' | 'Tcp' | 'Udp' (Required): The transport protocol for the endpoint.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## LoadBalancingRule
 ### Properties
@@ -2857,8 +2847,8 @@
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
 * **loadDistribution**: 'Default' | 'SourceIP' | 'SourceIPProtocol': The load distribution policy for this rule.
 * **probe**: [SubResource](#subresource): Reference to another subresource.
-* **protocol**: 'All' | 'Tcp' | 'Udp' (Required): The reference to the transport protocol used by the load balancing rule.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the load balancing rule resource.
+* **protocol**: 'All' | 'Tcp' | 'Udp' (Required): The transport protocol for the endpoint.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## OutboundRule
 ### Properties
@@ -2876,7 +2866,7 @@
 * **frontendIPConfigurations**: [SubResource](#subresource)[] (Required): The Frontend IP addresses of the load balancer.
 * **idleTimeoutInMinutes**: int: The timeout for the TCP idle connection.
 * **protocol**: 'All' | 'Tcp' | 'Udp' (Required): The protocol for the outbound rule in load balancer.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the outbound rule resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## Probe
 ### Properties
@@ -2893,19 +2883,19 @@
 * **numberOfProbes**: int: The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
 * **port**: int (Required): The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
 * **protocol**: 'Http' | 'Https' | 'Tcp' (Required): The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the probe resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **requestPath**: string: The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
 
 ## LoadBalancerSku
 ### Properties
 * **name**: 'Basic' | 'Standard': Name of a load balancer SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2913,7 +2903,7 @@
 ## NatGatewayPropertiesFormat
 ### Properties
 * **idleTimeoutInMinutes**: int: The idle timeout of the nat gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the NAT gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIpAddresses**: [SubResource](#subresource)[]: An array of public ip addresses associated with the nat gateway resource.
 * **publicIpPrefixes**: [SubResource](#subresource)[]: An array of public ip prefixes associated with the nat gateway resource.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the NAT gateway resource.
@@ -2923,12 +2913,12 @@
 ### Properties
 * **name**: 'Standard': Name of Nat Gateway SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -2937,7 +2927,7 @@
 ### Properties
 * **containerNetworkInterfaceConfigurations**: [ContainerNetworkInterfaceConfiguration](#containernetworkinterfaceconfiguration)[]: List of chid container network interface configurations.
 * **containerNetworkInterfaces**: [ContainerNetworkInterface](#containernetworkinterface)[] (ReadOnly): List of child container network interfaces.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network profile resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the network profile resource.
 
 ## ContainerNetworkInterfaceConfiguration
@@ -2952,7 +2942,7 @@
 ### Properties
 * **containerNetworkInterfaces**: [SubResource](#subresource)[]: A list of container network interfaces created from this container network interface configuration.
 * **ipConfigurations**: [IPConfigurationProfile](#ipconfigurationprofile)[]: A list of ip configurations of the container network interface configuration.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container network interface configuration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## ContainerNetworkInterface
 ### Properties
@@ -2967,7 +2957,7 @@
 * **container**: [Container](#container): Reference to container resource in remote resource provider.
 * **containerNetworkInterfaceConfiguration**: [ContainerNetworkInterfaceConfiguration](#containernetworkinterfaceconfiguration) (ReadOnly): Container network interface configuration child resource.
 * **ipConfigurations**: [ContainerNetworkInterfaceIpConfiguration](#containernetworkinterfaceipconfiguration)[] (ReadOnly): Reference to the ip configuration on this container nic.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container network interface resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## Container
 ### Properties
@@ -2982,14 +2972,14 @@
 
 ## ContainerNetworkInterfaceIpConfigurationPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container network interface IP configuration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3000,7 +2990,7 @@
 * **cloudInitConfiguration**: string: CloudInitConfiguration string in plain text.
 * **cloudInitConfigurationBlobs**: string[]: CloudInitConfigurationBlob storage URLs.
 * **nvaSku**: [VirtualApplianceSkuProperties](#virtualapplianceskuproperties): Network Virtual Appliance Sku Properties.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualApplianceAsn**: int: VirtualAppliance ASN.
 * **virtualApplianceNics**: [VirtualApplianceNicProperties](#virtualappliancenicproperties)[] (ReadOnly): List of Virtual Appliance Network Interfaces.
 * **virtualApplianceSites**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualApplianceSite.
@@ -3018,7 +3008,7 @@
 * **privateIpAddress**: string (ReadOnly): Private IP address.
 * **publicIpAddress**: string (ReadOnly): Public IP address.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3027,7 +3017,7 @@
 ### Properties
 * **addressPrefix**: string: Address Prefix.
 * **o365Policy**: [Office365PolicyProperties](#office365policyproperties): Network Virtual Appliance Sku Properties.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## Office365PolicyProperties
 ### Properties
@@ -3041,9 +3031,9 @@
 
 ## NetworkWatcherPropertiesFormat
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the network watcher resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3058,7 +3048,7 @@
 * **monitoringStatus**: string (ReadOnly): The monitoring status of the connection monitor.
 * **notes**: string: Optional notes to be associated with the connection monitor.
 * **outputs**: [ConnectionMonitorOutput](#connectionmonitoroutput)[]: List of connection monitor outputs.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the connection monitor.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **source**: [ConnectionMonitorSource](#connectionmonitorsource): Describes the source of connection monitor.
 * **startTime**: string (ReadOnly): The date and time when the connection monitor was started.
 * **testConfigurations**: [ConnectionMonitorTestConfiguration](#connectionmonitortestconfiguration)[]: List of connection monitor test configurations.
@@ -3118,10 +3108,10 @@
 * **path**: string: The path component of the URI. For instance, "/dir1/dir2".
 * **port**: int: The port to connect to.
 * **preferHTTPS**: bool: Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-* **requestHeaders**: [HTTPHeader](#httpheader)[]: The HTTP headers to transmit with the request.
+* **requestHeaders**: [HttpHeader](#httpheader)[]: The HTTP headers to transmit with the request.
 * **validStatusCodeRanges**: string[]: HTTP status codes to consider successful. For instance, "2xx,301-304,418".
 
-## HTTPHeader
+## HttpHeader
 ### Properties
 * **name**: string: The name in HTTP header.
 * **value**: string: The value in HTTP header.
@@ -3148,12 +3138,12 @@
 * **sources**: string[] (Required): List of source endpoint names.
 * **testConfigurations**: string[] (Required): List of test configuration names.
 
-## Dictionary<string,String>
+## ConnectionMonitorTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3162,7 +3152,7 @@
 ### Properties
 * **bytesToCapturePerPacket**: int: Number of bytes captured per packet, the remaining bytes are truncated.
 * **filters**: [PacketCaptureFilter](#packetcapturefilter)[]: A list of packet capture filters.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the packet capture session.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **storageLocation**: [PacketCaptureStorageLocation](#packetcapturestoragelocation) (Required): The storage location for a packet capture session.
 * **target**: string (Required): The ID of the targeted resource, only VM is currently supported.
 * **timeLimitInSeconds**: int: Maximum duration of the capture session in seconds.
@@ -3186,7 +3176,7 @@
 ### Properties
 * **customDnsServers**: string[]: List of all customer specified DNS servers IP addresses.
 * **p2SConnectionConfigurations**: [P2SConnectionConfiguration](#p2sconnectionconfiguration)[]: List of all p2s connection configurations of the gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the P2S VPN gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualHub**: [SubResource](#subresource): Reference to another subresource.
 * **vpnClientConnectionHealth**: [VpnClientConnectionHealth](#vpnclientconnectionhealth) (ReadOnly): VpnClientConnectionHealth properties.
 * **vpnGatewayScaleUnit**: int: The scale unit for this p2s vpn gateway.
@@ -3201,7 +3191,7 @@
 
 ## P2SConnectionConfigurationProperties
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the P2SConnectionConfiguration resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): Routing Configuration indicating the associated and propagated route tables for this connection.
 * **vpnClientAddressPool**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 
@@ -3212,12 +3202,12 @@
 * **totalIngressBytesTransferred**: int (ReadOnly): Total of the Ingress Bytes Transferred in this P2S Vpn connection.
 * **vpnClientConnectionsCount**: int: The total of p2s vpn clients connected at this time to this P2SVpnGateway.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3225,7 +3215,7 @@
 ## PrivateDnsZoneGroupPropertiesFormat
 ### Properties
 * **privateDnsZoneConfigs**: [PrivateDnsZoneConfig](#privatednszoneconfig)[]: A collection of private dns zone configurations of the private dns zone group.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private dns zone group resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## PrivateDnsZoneConfig
 ### Properties
@@ -3241,7 +3231,7 @@
 ### Properties
 * **fqdn**: string: Fqdn that resolves to private endpoint ip address.
 * **ipAddresses**: string[]: The private ip address of the private endpoint.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the recordset.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **recordSetName**: string: Recordset name.
 * **recordType**: string: Resource record type.
 * **ttl**: int: Recordset time to live.
@@ -3249,17 +3239,17 @@
 ## PrivateLinkServiceProperties
 ### Properties
 * **alias**: string (ReadOnly): The alias of the private link service.
-* **autoApproval**: [schemas:442_autoApproval](#schemas442autoapproval): The auto-approval list of the private link service.
+* **autoApproval**: [PrivateLinkServicePropertiesAutoApproval](#privatelinkservicepropertiesautoapproval): The auto-approval list of the private link service.
 * **enableProxyProtocol**: bool: Whether the private link service is enabled for proxy protocol or not.
 * **fqdns**: string[]: The list of Fqdn.
 * **ipConfigurations**: [PrivateLinkServiceIpConfiguration](#privatelinkserviceipconfiguration)[]: An array of private link service IP configurations.
 * **loadBalancerFrontendIpConfigurations**: [FrontendIPConfiguration](#frontendipconfiguration)[]: An array of references to the load balancer IP configurations.
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private link service.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): An array of list about connections to the private endpoint.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service resource.
-* **visibility**: [schemas:442_visibility](#schemas442visibility): The visibility list of the private link service.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **visibility**: [PrivateLinkServicePropertiesVisibility](#privatelinkservicepropertiesvisibility): The visibility list of the private link service.
 
-## schemas:442_autoApproval
+## PrivateLinkServicePropertiesAutoApproval
 ### Properties
 * **subscriptions**: string[]: The list of subscriptions.
 
@@ -3275,9 +3265,9 @@
 ### Properties
 * **primary**: bool: Whether the ip configuration is primary or not.
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAddressVersion**: 'IPv4' | 'IPv6': Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private link service IP configuration resource.
+* **privateIPAddressVersion**: 'IPv4' | 'IPv6': IP address version.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## PrivateEndpointConnection
@@ -3293,18 +3283,18 @@
 * **linkIdentifier**: string (ReadOnly): The consumer link id.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): Private endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the private endpoint connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
-## schemas:442_visibility
+## PrivateLinkServicePropertiesVisibility
 ### Properties
 * **subscriptions**: string[]: The list of subscriptions.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3315,9 +3305,9 @@
 * **ipTags**: [IpTag](#iptag)[]: The list of tags associated with the public IP prefix.
 * **loadBalancerFrontendIpConfiguration**: [SubResource](#subresource) (ReadOnly): Reference to another subresource.
 * **prefixLength**: int: The Length of the Public IP Prefix.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the public IP prefix resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddresses**: [ReferencedPublicIpAddress](#referencedpublicipaddress)[] (ReadOnly): The list of all referenced PublicIPAddresses.
-* **publicIPAddressVersion**: 'IPv4' | 'IPv6': The public IP address version.
+* **publicIPAddressVersion**: 'IPv4' | 'IPv6': IP address version.
 * **resourceGuid**: string (ReadOnly): The resource GUID property of the public IP prefix resource.
 
 ## ReferencedPublicIpAddress
@@ -3328,7 +3318,7 @@
 ### Properties
 * **name**: 'Standard': Name of a public IP prefix SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3337,7 +3327,7 @@
 ### Properties
 * **ipv6Peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[] (ReadOnly): A collection of references to express route circuit ipv6 peerings.
 * **peerings**: [ExpressRouteCircuitPeering](#expressroutecircuitpeering)[] (ReadOnly): A collection of references to express route circuit peerings.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the route filter resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rules**: [RouteFilterRule](#routefilterrule)[]: Collection of RouteFilterRules contained within a route filter.
 
 ## RouteFilterRule
@@ -3350,34 +3340,34 @@
 
 ## RouteFilterRulePropertiesFormat
 ### Properties
-* **access**: 'Allow' | 'Deny' (Required): The access type of the rule.
+* **access**: 'Allow' | 'Deny' (Required): Access to be allowed or denied.
 * **communities**: string[] (Required): The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the route filter rule resource.
-* **routeFilterRuleType**: string (Required): The rule type of the rule.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **routeFilterRuleType**: 'Community' (Required): The rule type of the rule.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## SecurityPartnerProviderPropertiesFormat
 ### Properties
-* **connectionStatus**: 'Connected' | 'NotConnected' | 'PartiallyConnected' | 'Unknown' (ReadOnly): The connection status with the Security Partner Provider.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the Security Partner Provider resource.
-* **securityProviderName**: 'Checkpoint' | 'IBoss' | 'ZScaler': The security provider name.
+* **connectionStatus**: 'Connected' | 'NotConnected' | 'PartiallyConnected' | 'Unknown' (ReadOnly): The current state of the connection with Security Partner Provider.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **securityProviderName**: 'Checkpoint' | 'IBoss' | 'ZScaler': The Security Providers.
 * **virtualHub**: [SubResource](#subresource): Reference to another subresource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3390,9 +3380,9 @@
 * **expressRouteGateway**: [SubResource](#subresource): Reference to another subresource.
 * **ipConfigurations**: [SubResource](#subresource)[] (ReadOnly): List of references to IpConfigurations.
 * **p2SVpnGateway**: [SubResource](#subresource): Reference to another subresource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual hub resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routeTable**: [VirtualHubRouteTable](#virtualhubroutetable): VirtualHub route table.
-* **routingState**: 'Failed' | 'None' | 'Provisioned' | 'Provisioning': The routing state.
+* **routingState**: 'Failed' | 'None' | 'Provisioned' | 'Provisioning' (ReadOnly): The current routing state of the VirtualHub.
 * **securityPartnerProvider**: [SubResource](#subresource): Reference to another subresource.
 * **securityProviderName**: string: The Security Provider name.
 * **sku**: string: The sku of this VirtualHub.
@@ -3421,7 +3411,7 @@
 ## VirtualHubRouteTableV2Properties
 ### Properties
 * **attachedConnections**: string[]: List of all connections attached to this route table v2.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual hub route table v2 resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routes**: [VirtualHubRouteV2](#virtualhubroutev2)[]: List of all routes.
 
 ## VirtualHubRouteV2
@@ -3431,7 +3421,7 @@
 * **nextHops**: string[]: NextHops ip address.
 * **nextHopType**: string: The type of next hops.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3441,14 +3431,14 @@
 * **connectionState**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly): The current state of the VirtualHub to Peer.
 * **peerAsn**: int: Peer ASN.
 * **peerIp**: string: Peer IP.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## HubRouteTableProperties
 ### Properties
 * **associatedConnections**: string[] (ReadOnly): List of all connections associated with this route table.
 * **labels**: string[]: List of labels associated with this route table.
 * **propagatingConnections**: string[] (ReadOnly): List of all connections that advertise to this route table.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the RouteTable resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routes**: [HubRoute](#hubroute)[]: List of all routes.
 
 ## HubRoute
@@ -3464,19 +3454,19 @@
 * **allowHubToRemoteVnetTransit**: bool: Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
 * **allowRemoteVnetToUseHubVnetGateways**: bool: Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
 * **enableInternetSecurity**: bool: Enable internet security.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the hub virtual network connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **remoteVirtualNetwork**: [SubResource](#subresource): Reference to another subresource.
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): Routing Configuration indicating the associated and propagated route tables for this connection.
 
 ## HubIPConfigurationPropertiesFormat
 ### Properties
 * **privateIPAddress**: string: The private IP address of the IP configuration.
-* **privateIPAllocationMethod**: 'Dynamic' | 'Static': The private IP address allocation method.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the IP configuration resource.
+* **privateIPAllocationMethod**: 'Dynamic' | 'Static': IP address allocation method.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **publicIPAddress**: [PublicIPAddress](#publicipaddress): Public IP address resource.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3490,7 +3480,7 @@
 * **enableDdosProtection**: bool: Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
 * **enableVmProtection**: bool: Indicates if VM protection is enabled for all the subnets in the virtual network.
 * **ipAllocations**: [SubResource](#subresource)[]: Array of IpAllocation which reference this VNET.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **resourceGuid**: string (ReadOnly): The resourceGuid property of the Virtual Network resource.
 * **subnets**: [Subnet](#subnet)[]: A list of subnets in a Virtual Network.
 * **virtualNetworkPeerings**: [VirtualNetworkPeering](#virtualnetworkpeering)[]: A list of peerings in a Virtual Network.
@@ -3517,17 +3507,17 @@
 * **allowGatewayTransit**: bool: If gateway links can be used in remote virtual networking to link to this virtual network.
 * **allowVirtualNetworkAccess**: bool: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
 * **peeringState**: 'Connected' | 'Disconnected' | 'Initiated': The status of the virtual network peering.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual network peering resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **remoteVirtualNetwork**: [SubResource](#subresource): Reference to another subresource.
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3537,11 +3527,11 @@
 * **hostedGateway**: [SubResource](#subresource): Reference to another subresource.
 * **hostedSubnet**: [SubResource](#subresource): Reference to another subresource.
 * **peerings**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualRouterPeerings.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualRouterAsn**: int: VirtualRouter ASN.
 * **virtualRouterIps**: string[]: VirtualRouter IPs.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3550,29 +3540,13 @@
 ### Properties
 * **peerAsn**: int: Peer ASN.
 * **peerIp**: string: Peer IP.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
-
-## VirtualWanProperties
-### Properties
-* **allowBranchToBranchTraffic**: bool: True if branch to branch traffic is allowed.
-* **allowVnetToVnetTraffic**: bool: True if Vnet to Vnet traffic is allowed.
-* **disableVpnEncryption**: bool: Vpn encryption to be disabled or not.
-* **office365LocalBreakoutCategory**: 'All' | 'None' | 'Optimize' | 'OptimizeAndAllow': The office local breakout category.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the virtual WAN resource.
-* **type**: string: The type of the VirtualWAN.
-* **virtualHubs**: [SubResource](#subresource)[] (ReadOnly): List of VirtualHubs in the VirtualWAN.
-* **vpnSites**: [SubResource](#subresource)[] (ReadOnly): List of VpnSites in the VirtualWAN.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## VpnGatewayProperties
 ### Properties
 * **bgpSettings**: [BgpSettings](#bgpsettings): BGP settings details.
 * **connections**: [VpnConnection](#vpnconnection)[]: List of all vpn connections to the gateway.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN gateway resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualHub**: [SubResource](#subresource): Reference to another subresource.
 * **vpnGatewayScaleUnit**: int: The scale unit for this vpn gateway.
 
@@ -3586,7 +3560,7 @@
 ## VpnConnectionProperties
 ### Properties
 * **connectionBandwidth**: int: Expected bandwidth in MBPS.
-* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown': The connection status.
+* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly): The current state of the vpn connection.
 * **dpdTimeoutSeconds**: int: The dead peer detection timeout for a vpn connection in seconds.
 * **egressBytesTransferred**: int (ReadOnly): Egress bytes transferred.
 * **enableBgp**: bool: EnableBgp flag.
@@ -3594,14 +3568,14 @@
 * **enableRateLimiting**: bool: EnableBgp flag.
 * **ingressBytesTransferred**: int (ReadOnly): Ingress bytes transferred.
 * **ipsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: The IPSec Policies to be considered by this connection.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **remoteVpnSite**: [SubResource](#subresource): Reference to another subresource.
 * **routingConfiguration**: [RoutingConfiguration](#routingconfiguration): Routing Configuration indicating the associated and propagated route tables for this connection.
 * **routingWeight**: int: Routing weight for vpn connection.
 * **sharedKey**: string: SharedKey for the vpn connection.
 * **useLocalAzureIpAddress**: bool: Use local azure ip to initiate connection.
 * **usePolicyBasedTrafficSelectors**: bool: Enable policy-based traffic selectors.
-* **vpnConnectionProtocolType**: 'IKEv1' | 'IKEv2': Connection protocol used for this connection.
+* **vpnConnectionProtocolType**: 'IKEv1' | 'IKEv2': Gateway connection protocol.
 * **vpnLinkConnections**: [VpnSiteLinkConnection](#vpnsitelinkconnection)[]: List of all vpn site link connections to the gateway.
 
 ## VpnSiteLinkConnection
@@ -3615,21 +3589,21 @@
 ## VpnSiteLinkConnectionProperties
 ### Properties
 * **connectionBandwidth**: int: Expected bandwidth in MBPS.
-* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown': The connection status.
+* **connectionStatus**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' (ReadOnly): The current state of the vpn connection.
 * **egressBytesTransferred**: int (ReadOnly): Egress bytes transferred.
 * **enableBgp**: bool: EnableBgp flag.
 * **enableRateLimiting**: bool: EnableBgp flag.
 * **ingressBytesTransferred**: int (ReadOnly): Ingress bytes transferred.
 * **ipsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: The IPSec Policies to be considered by this connection.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN site link connection resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **routingWeight**: int: Routing weight for vpn connection.
 * **sharedKey**: string: SharedKey for the vpn connection.
 * **useLocalAzureIpAddress**: bool: Use local azure ip to initiate connection.
 * **usePolicyBasedTrafficSelectors**: bool: Enable policy-based traffic selectors.
-* **vpnConnectionProtocolType**: 'IKEv1' | 'IKEv2': Connection protocol used for this connection.
+* **vpnConnectionProtocolType**: 'IKEv1' | 'IKEv2': Gateway connection protocol.
 * **vpnSiteLink**: [SubResource](#subresource): Reference to another subresource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3665,10 +3639,10 @@
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [P2SVpnGatewayProperties](#p2svpngatewayproperties): Parameters for P2SVpnGateway.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: string (ReadOnly): Resource type.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3693,7 +3667,7 @@
 * **name**: string: The certificate name.
 * **publicCertData**: string: The certificate public data.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -3705,7 +3679,7 @@
 * **deviceProperties**: [DeviceProperties](#deviceproperties): List of properties of the device.
 * **ipAddress**: string: The ip-address for the vpn-site.
 * **isSecuritySite**: bool: IsSecuritySite flag.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN site resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **siteKey**: string: The key for vpn-site that can be used for connections.
 * **virtualWan**: [SubResource](#subresource): Reference to another subresource.
 * **vpnSiteLinks**: [VpnSiteLink](#vpnsitelink)[]: List of all vpn site links.
@@ -3730,7 +3704,7 @@
 * **fqdn**: string: FQDN of vpn-site-link.
 * **ipAddress**: string: The ip-address for the vpn-site-link.
 * **linkProperties**: [VpnLinkProviderProperties](#vpnlinkproviderproperties): List of properties of a link provider.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the VPN site link resource.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## VpnLinkBgpSettings
 ### Properties
@@ -3742,7 +3716,7 @@
 * **linkProviderName**: string: Name of the link provider.
 * **linkSpeedInMbps**: int: Link speed.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

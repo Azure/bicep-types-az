@@ -26,7 +26,7 @@
 * **location**: string: Gets or sets location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties): Properties for maintenance configuration
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets tags of the resource
+* **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ConfigurationAssignmentProperties
@@ -36,13 +36,13 @@
 
 ## MaintenanceConfigurationProperties
 ### Properties
-* **extensionProperties**: [Dictionary<string,String>](#dictionarystringstring): Gets or sets extensionProperties of the maintenanceConfiguration
-* **maintenanceScope**: 'All' | 'Extension' | 'Host' | 'InGuestPatch' | 'InResource' | 'OSImage' | 'Resource' | 'SQLDB' | 'SQLManagedInstance': Gets or sets maintenanceScope of the configuration.
+* **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration
+* **maintenanceScope**: 'All' | 'Extension' | 'Host' | 'InGuestPatch' | 'InResource' | 'OSImage' | 'Resource' | 'SQLDB' | 'SQLManagedInstance': Gets or sets maintenanceScope of the configuration
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Definition of a MaintenanceWindow
 * **namespace**: string: Gets or sets namespace of the resource
-* **visibility**: 'Custom' | 'Public': Gets or sets the visibility of the configuration.
+* **visibility**: 'Custom' | 'Public': Gets or sets the visibility of the configuration
 
-## Dictionary<string,String>
+## MaintenanceConfigurationPropertiesExtensionProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -55,7 +55,7 @@
 * **startDateTime**: string: Effective start date of the maintenance window in YYYY-MM-DD hh:mm format. The start date can be set to either the current date or future date. The window will be created in the time zone provided and adjusted to daylight savings according to that time zone.
 * **timeZone**: string: Name of the timezone. List of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell. Example: Pacific Standard Time, UTC, W. Europe Standard Time, Korea Standard Time, Cen. Australia Standard Time.
 
-## Dictionary<string,String>
+## MaintenanceConfigurationTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

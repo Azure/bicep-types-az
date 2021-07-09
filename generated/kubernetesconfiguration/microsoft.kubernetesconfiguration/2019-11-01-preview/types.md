@@ -6,10 +6,10 @@
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:10_properties](#schemas10properties): Properties to create a Source Control Configuration resource
+* **properties**: [SourceControlConfigurationProperties](#sourcecontrolconfigurationproperties): Properties to create a Source Control Configuration resource
 * **type**: 'Microsoft.KubernetesConfiguration/sourceControlConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:10_properties
+## SourceControlConfigurationProperties
 ### Properties
 * **complianceStatus**: [ComplianceStatus](#compliancestatus) (ReadOnly): Compliance Status details
 * **enableHelmOperator**: 'false' | 'true': Option to enable Helm Operator for this git configuration.
@@ -18,7 +18,7 @@
 * **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
 * **operatorParams**: string: Any Parameters for the Operator instance in string format.
 * **operatorScope**: 'cluster' | 'namespace': Scope at which the operator will be installed.
-* **operatorType**: 'Flux': Type of the operator.
+* **operatorType**: 'Flux': Type of the operator
 * **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.

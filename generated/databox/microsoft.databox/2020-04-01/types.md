@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (Required): Job Properties
 * **sku**: [Sku](#sku) (Required): The Sku.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+* **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceIdentity
@@ -33,7 +33,7 @@
 * **isShippingAddressEditable**: bool (ReadOnly): Describes whether the shipping address is editable or not.
 * **startTime**: string (ReadOnly): Time at which the job was started in UTC ISO 8601 format.
 * **status**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the stage which is in progress.
-* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the data transfer.
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the transfer.
 
 ## JobDeliveryInfo
 ### Properties
@@ -41,6 +41,7 @@
 
 ## JobDetails
 * **Discriminator**: jobDetailsType
+
 ### Base Properties
 * **chainOfCustodySasKey**: string (ReadOnly): Shared access key to download the chain of custody logs
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
@@ -55,29 +56,25 @@
 * **returnPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): Shipping details.
 * **reverseShipmentLabelSasKey**: string (ReadOnly): Shared access key to download the return shipment label
 * **shippingAddress**: [ShippingAddress](#shippingaddress): Shipping address where customer wishes to receive the device.
-### DataBox
+### DataBoxJobDetails
 #### Properties
-* **accountName**: string (ReadOnly): Account name.
-* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
-* **copyLogLink**: string (ReadOnly): Link for copy logs.
-* **copyVerboseLogLink**: string (ReadOnly): Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
-* **jobDetailsType**: 'DataBox' (Required): Databox Job Details
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
+* **devicePassword**: string: Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+* **jobDetailsType**: 'DataBox' (Required): Indicates the type of job details.
 
-### DataBoxDisk
+### DataBoxDiskJobDetails
 #### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
-* **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
-* **errorLogLink**: string (ReadOnly): Link for copy error logs.
-* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
-* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
+* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
+* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly): Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+* **jobDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
+* **passkey**: string: User entered passkey for DataBox Disk job.
+* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks): User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
 
-### DataBoxHeavy
+### DataBoxHeavyJobDetails
 #### Properties
-* **accountName**: string (ReadOnly): Account name.
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for Databox heavy
-* **copyLogLink**: string[] (ReadOnly): Link for copy logs.
-* **copyVerboseLogLink**: string[] (ReadOnly): Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
-* **jobDetailsType**: 'DataBoxHeavy' (Required): Databox Heavy Device Job Details
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per account.
+* **devicePassword**: string: Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+* **jobDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
 
 
 ## ContactDetails
@@ -96,55 +93,50 @@
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
+
 ### Base Properties
-### DataBox
+### DataBoxAccountCopyLogDetails
 #### Properties
 * **accountName**: string (ReadOnly): Account name.
-* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
+* **copyLogDetailsType**: 'DataBox' (Required): Indicates the type of job details.
 * **copyLogLink**: string (ReadOnly): Link for copy logs.
 * **copyVerboseLogLink**: string (ReadOnly): Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
-* **jobDetailsType**: 'DataBox' (Required): Databox Job Details
 
-### DataBoxDisk
+### DataBoxDiskCopyLogDetails
 #### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
 * **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
 * **errorLogLink**: string (ReadOnly): Link for copy error logs.
-* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
 * **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
-### DataBoxHeavy
+### DataBoxHeavyAccountCopyLogDetails
 #### Properties
 * **accountName**: string (ReadOnly): Account name.
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for Databox heavy
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
 * **copyLogLink**: string[] (ReadOnly): Link for copy logs.
 * **copyVerboseLogLink**: string[] (ReadOnly): Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
-* **jobDetailsType**: 'DataBoxHeavy' (Required): Databox Heavy Device Job Details
 
 
-## DataBox
+## DataBoxAccountCopyLogDetails
 ### Properties
 * **accountName**: string (ReadOnly): Account name.
-* **copyLogDetailsType**: 'DataBox' (Required): Copy log details for a storage account of a DataBox job
+* **copyLogDetailsType**: 'DataBox' (Required): Indicates the type of job details.
 * **copyLogLink**: string (ReadOnly): Link for copy logs.
 * **copyVerboseLogLink**: string (ReadOnly): Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
-* **jobDetailsType**: 'DataBox' (Required): Databox Job Details
 
-## DataBoxDisk
+## DataBoxDiskCopyLogDetails
 ### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required): Copy Log Details for a disk
+* **copyLogDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
 * **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
 * **errorLogLink**: string (ReadOnly): Link for copy error logs.
-* **jobDetailsType**: 'DataBoxDisk' (Required): DataBox Disk Job Details.
 * **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
 
-## DataBoxHeavy
+## DataBoxHeavyAccountCopyLogDetails
 ### Properties
 * **accountName**: string (ReadOnly): Account name.
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Copy log details for a storage account for Databox heavy
+* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
 * **copyLogLink**: string[] (ReadOnly): Link for copy logs.
 * **copyVerboseLogLink**: string[] (ReadOnly): Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
-* **jobDetailsType**: 'DataBoxHeavy' (Required): Databox Heavy Device Job Details
 
 ## DataExportDetails
 ### Properties
@@ -154,48 +146,49 @@
 
 ## DataAccountDetails
 * **Discriminator**: dataAccountType
+
 ### Base Properties
 * **sharePassword**: string: Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
-### ManagedDisk
+### ManagedDiskDetails
 #### Properties
-* **dataAccountType**: 'ManagedDisk' (Required): Details of the managed disks.
+* **dataAccountType**: 'ManagedDisk' (Required): Account Type of the data to be transferred.
 * **resourceGroupId**: string (Required): Resource Group Id of the compute disks.
 * **stagingStorageAccountId**: string (Required): Resource Id of the storage account that can be used to copy the vhd for staging.
 
-### StorageAccount
+### StorageAccountDetails
 #### Properties
-* **dataAccountType**: 'StorageAccount' (Required): Details for the storage account.
+* **dataAccountType**: 'StorageAccount' (Required): Account Type of the data to be transferred.
 * **storageAccountId**: string (Required): Storage Account Resource Id.
 
 
-## ManagedDisk
+## ManagedDiskDetails
 ### Properties
-* **dataAccountType**: 'ManagedDisk' (Required): Details of the managed disks.
+* **dataAccountType**: 'ManagedDisk' (Required): Account Type of the data to be transferred.
 * **resourceGroupId**: string (Required): Resource Group Id of the compute disks.
 * **stagingStorageAccountId**: string (Required): Resource Id of the storage account that can be used to copy the vhd for staging.
 
-## StorageAccount
+## StorageAccountDetails
 ### Properties
-* **dataAccountType**: 'StorageAccount' (Required): Details for the storage account.
+* **dataAccountType**: 'StorageAccount' (Required): Account Type of the data to be transferred.
 * **storageAccountId**: string (Required): Storage Account Resource Id.
 
 ## TransferConfiguration
 ### Properties
-* **transferAllDetails**: [schemas:85_transferAllDetails](#schemas85transferalldetails): Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+* **transferAllDetails**: [TransferConfigurationTransferAllDetails](#transferconfigurationtransferalldetails): Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
 * **transferConfigurationType**: 'TransferAll' | 'TransferUsingFilter' (Required): Type of the configuration for transfer.
-* **transferFilterDetails**: [schemas:85_transferFilterDetails](#schemas85transferfilterdetails): Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+* **transferFilterDetails**: [TransferConfigurationTransferFilterDetails](#transferconfigurationtransferfilterdetails): Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
 
-## schemas:85_transferAllDetails
+## TransferConfigurationTransferAllDetails
 ### Properties
 * **include**: [TransferAllDetails](#transferalldetails): Details to transfer all data.
 
 ## TransferAllDetails
 ### Properties
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account.
 * **transferAllBlobs**: bool: To indicate if all Azure blobs have to be transferred
 * **transferAllFiles**: bool: To indicate if all Azure Files have to be transferred
 
-## schemas:85_transferFilterDetails
+## TransferConfigurationTransferFilterDetails
 ### Properties
 * **include**: [TransferFilterDetails](#transferfilterdetails): Details of the filtering the transfer of data.
 
@@ -203,7 +196,7 @@
 ### Properties
 * **azureFileFilterDetails**: [AzureFileFilterDetails](#azurefilefilterdetails): Filter details to transfer Azure files
 * **blobFilterDetails**: [BlobFilterDetails](#blobfilterdetails): Filter details to transfer Azure Blobs
-* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account of data.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (Required): Type of the account.
 * **filterFileDetails**: [FilterFileDetails](#filterfiledetails)[]: Details of the filter files to be used for data transfer.
 
 ## AzureFileFilterDetails
@@ -236,8 +229,8 @@
 ## JobStages
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the job stage.
-* **jobStageDetails**: any (ReadOnly): Job Stage Details
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the job stage.
+* **jobStageDetails**: any (ReadOnly): Any object
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' (ReadOnly): Name of the stage which is in progress.
 * **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
@@ -254,7 +247,7 @@
 
 ## TransportPreferences
 ### Properties
-* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Indicates Shipment Logistics type that the customer preferred.
+* **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' (Required): Transport Shipment Type supported for given region.
 
 ## ShippingAddress
 ### Properties
@@ -269,6 +262,62 @@
 * **streetAddress3**: string: Street Address line 3.
 * **zipExtendedCode**: string: Extended Zip Code.
 
+## DataBoxJobDetails
+### Properties
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
+* **devicePassword**: string: Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+* **jobDetailsType**: 'DataBox' (Required): Indicates the type of job details.
+
+## CopyProgress
+### Properties
+* **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
+* **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
+* **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Type of the account.
+* **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
+* **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
+* **filesProcessed**: int (ReadOnly): Number of files processed
+* **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed
+* **invalidFileBytesUploaded**: int (ReadOnly): Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
+* **invalidFilesProcessed**: int (ReadOnly): Number of files not adhering to azure naming conventions which were processed by automatic renaming
+* **isEnumerationInProgress**: bool (ReadOnly): To indicate if enumeration of data is in progress. 
+Until this is true, the TotalBytesToProcess may not be valid.
+* **renamedContainerCount**: int (ReadOnly): Number of folders not adhering to azure naming conventions which were processed by automatic renaming
+* **storageAccountName**: string (ReadOnly): Name of the storage account. This will be empty for data account types other than storage account.
+* **totalBytesToProcess**: int (ReadOnly): Total amount of data to be processed by the job.
+* **totalFilesToProcess**: int (ReadOnly): Total files to process
+* **transferType**: 'ExportFromAzure' | 'ImportToAzure' (ReadOnly): Type of the transfer.
+
+## DataBoxDiskJobDetails
+### Properties
+* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
+* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly): Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
+* **jobDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
+* **passkey**: string: User entered passkey for DataBox Disk job.
+* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks): User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
+
+## DataBoxDiskCopyProgress
+### Properties
+* **bytesCopied**: int (ReadOnly): Bytes copied during the copy of disk.
+* **percentComplete**: int (ReadOnly): Indicates the percentage completed for the copy of the disk.
+* **serialNumber**: string (ReadOnly): The serial number of the disk
+* **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'Failed' | 'HardwareError' | 'InProgress' | 'NotReturned' | 'NotStarted' | 'StorageAccountNotAccessible' | 'UnsupportedData' (ReadOnly): The Status of the copy
+
+## DataBoxDiskJobDetailsDisksAndSizeDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
+## DataBoxDiskJobDetailsPreferredDisks
+### Properties
+### Additional Properties
+* **Additional Properties Type**: int
+
+## DataBoxHeavyJobDetails
+### Properties
+* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per account.
+* **devicePassword**: string: Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+* **jobDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
+
 ## CloudError
 ### Properties
 * **additionalInfo**: [AdditionalErrorInfo](#additionalerrorinfo)[] (ReadOnly): Cloud error additional info.
@@ -279,16 +328,16 @@
 
 ## AdditionalErrorInfo
 ### Properties
-* **info**: any: Additional error info.
+* **info**: any: Any object
 * **type**: string: Additional error type.
 
 ## Sku
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
+* **name**: 'DataBox' | 'DataBoxDisk' | 'DataBoxHeavy' (Required)
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

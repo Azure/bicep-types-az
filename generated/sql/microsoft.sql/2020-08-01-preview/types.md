@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InstancePoolProperties](#instancepoolproperties): Properties of an instance pool.
 * **sku**: [Sku](#sku): An ARM Resource SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/instancePools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/locations/instanceFailoverGroups@2020-08-01-preview
@@ -40,7 +40,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceProperties](#managedinstanceproperties): The properties of a managed instance.
 * **sku**: [Sku](#sku): An ARM Resource SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/administrators@2020-08-01-preview
@@ -48,7 +48,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceAdministratorProperties](#managedinstanceadministratorproperties): The properties of a managed instance administrator.
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceAzureADOnlyAuthProperties](#managedinstanceazureadonlyauthproperties): Properties of a active directory only authentication for Managed Instance.
 * **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -69,7 +69,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedDatabaseProperties](#manageddatabaseproperties): The managed database's properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2020-08-01-preview
@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties): Properties of a long term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -86,7 +86,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -96,7 +96,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **managedBy**: string (ReadOnly): Resource that manages the sensitivity label.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Properties of a sensitivity label.
 * **type**: 'Microsoft.Sql/managedInstances/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -105,7 +105,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -114,7 +114,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedTransparentDataEncryptionProperties](#managedtransparentdataencryptionproperties): Properties of a transparent data encryption.
 * **type**: 'Microsoft.Sql/managedInstances/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -123,7 +123,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Properties of a database Vulnerability Assessment.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -142,7 +142,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -170,7 +170,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -179,9 +179,9 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Properties of a security alert policy.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/managedInstances/sqlAgent@2020-08-01-preview
@@ -198,7 +198,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceVulnerabilityAssessmentProperties](#managedinstancevulnerabilityassessmentproperties): Properties of a managed instance vulnerability assessment.
 * **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -212,7 +212,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): The properties of a server.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/administrators@2020-08-01-preview
@@ -220,7 +220,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'ActiveDirectory' (Required, DeployTimeConstant): The resource name
 * **properties**: [AdministratorProperties](#administratorproperties): Properties of a active directory administrator.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -229,7 +229,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -238,7 +238,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureADOnlyAuthProperties](#azureadonlyauthproperties): Properties of a active directory only authentication.
 * **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -253,7 +253,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The database's properties.
 * **sku**: [Sku](#sku): An ARM Resource SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2020-08-01-preview
@@ -262,7 +262,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Properties of a database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -271,7 +271,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties): Properties of a long term retention policy
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -280,7 +280,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupShortTermRetentionPolicyProperties](#backupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -289,7 +289,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties): Properties of an extended database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -299,7 +299,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties): Contains the database information after successful export.
+* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly)
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/maintenanceWindows@2020-08-01-preview
@@ -317,7 +317,7 @@
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **managedBy**: string (ReadOnly): Resource that manages the sensitivity label.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Properties of a sensitivity label.
 * **type**: 'Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -326,9 +326,9 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Properties of a security alert policy.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/syncGroups@2020-08-01-preview
@@ -355,7 +355,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Properties of a transparent data encryption.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -364,7 +364,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Properties of a database Vulnerability Assessment.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -402,7 +402,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerDevOpsAuditSettingsProperties](#serverdevopsauditsettingsproperties): Properties of a server DevOps audit settings.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/devOpsAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/dnsAliases@2020-08-01-preview
@@ -424,7 +424,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ElasticPoolProperties](#elasticpoolproperties): Properties of an elastic pool
 * **sku**: [Sku](#sku): An ARM Resource SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/encryptionProtector@2020-08-01-preview
@@ -434,7 +434,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -443,7 +443,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -455,7 +455,7 @@
 * **location**: string (ReadOnly): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FailoverGroupProperties](#failovergroupproperties): Properties of a failover group.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [FailoverGroupTags](#failovergrouptags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/failoverGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/firewallRules@2020-08-01-preview
@@ -476,7 +476,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobAgentProperties](#jobagentproperties): Properties of a job agent.
 * **sku**: [Sku](#sku): An ARM Resource SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/jobAgents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/credentials@2020-08-01-preview
@@ -549,9 +549,9 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Properties of a security alert policy.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/syncAgents@2020-08-01-preview
@@ -577,7 +577,7 @@
 ### Properties
 * **apiVersion**: '2020-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Sql/servers/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -595,7 +595,7 @@
 * **size**: string: Size of the particular SKU
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -617,7 +617,7 @@
 ## PartnerRegionInfo
 ### Properties
 * **location**: string: Geo location of the partner managed instances.
-* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Replication role of the partner managed instances.
+* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Local replication role of the failover group instance.
 
 ## InstanceFailoverGroupReadOnlyEndpoint
 ### Properties
@@ -667,7 +667,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceManagedInstanceId**: string: The resource identifier of the source managed instance associated with create operation of this instance.
 * **state**: string (ReadOnly): The state of the managed instance.
-* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage).
+* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this database.
 * **storageSizeInGB**: int: Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
 * **subnetId**: string: Subnet resource ID for the managed instance.
 * **timezoneId**: string: Id of the timezone. Allowed values are timezones supported by Windows.
@@ -700,14 +700,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## ManagedInstanceAdministratorProperties
 ### Properties
-* **administratorType**: string (Required): Type of the managed instance administrator.
+* **administratorType**: 'ActiveDirectory' (Required): Type of the managed instance administrator.
 * **login**: string (Required): Login name of the managed instance administrator.
 * **sid**: string (Required): SID (object ID) of the managed instance administrator.
 * **tenantId**: string: Tenant ID of the managed instance administrator.
@@ -736,7 +736,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
 * **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -811,7 +811,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## ManagedInstanceKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The key type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the key.
 * **uri**: string: The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
 
@@ -826,14 +826,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
 ## SqlAgentConfigurationProperties
 ### Properties
@@ -853,10 +853,10 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **state**: string (ReadOnly): The state of the server.
 * **version**: string: The version of the server.
-* **workspaceFeature**: 'Connected' | 'Disconnected' (ReadOnly): Whether or not existing server has a workspace created and if it allows connection from workspace.
+* **workspaceFeature**: 'Connected' | 'Disconnected' (ReadOnly): Whether or not existing server has a workspace created and if it allows connection from workspace
 
 ## ServerPrivateEndpointConnection
 ### Properties
@@ -879,14 +879,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 * **description**: string (Required): The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The private link service connection status.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## AdministratorProperties
 ### Properties
-* **administratorType**: string (Required): Type of the sever administrator.
+* **administratorType**: 'ActiveDirectory' (Required): Type of the sever administrator.
 * **azureADOnlyAuthentication**: bool (ReadOnly): Azure Active Directory only Authentication enabled.
 * **login**: string (Required): Login name of the server administrator.
 * **sid**: string (Required): SID (object ID) of the server administrator.
@@ -951,7 +951,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -977,7 +977,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1043,7 +1043,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1107,7 +1107,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1123,7 +1123,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1195,7 +1195,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1212,7 +1212,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1223,14 +1223,14 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## DatabaseExtensionsProperties
 ### Properties
-* **operationMode**: string (Required): Operation Mode.
-* **storageKey**: string (Required): Storage key.
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required): Storage key type.
-* **storageUri**: string (Required): Storage Uri.
+* **operationMode**: 'PolybaseImport' (Required, WriteOnly)
+* **storageKey**: string (Required, WriteOnly)
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
+* **storageUri**: string (Required, WriteOnly)
 
 ## MaintenanceWindowsProperties
 ### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]
+* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Array of MaintenanceWindowTimeRange
 
 ## MaintenanceWindowTimeRange
 ### Properties
@@ -1272,7 +1272,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SyncMemberProperties
 ### Properties
 * **databaseName**: string: Database name of the member database in the sync member.
-* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Database type of the sync member.
+* **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Type of the sync agent linked database.
 * **password**: string: Password of the member database in the sync member.
 * **privateEndpointName**: string (ReadOnly): Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
 * **serverName**: string: Server name of the member database in the sync member
@@ -1280,7 +1280,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **syncAgentId**: string: ARM resource id of the sync agent in the sync member.
 * **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub': Sync direction of the sync member.
 * **syncMemberAzureDatabaseResourceId**: string: ARM resource id of the sync member logical database, for sync members in Azure.
-* **syncState**: 'DeProvisioned' | 'DeProvisionFailed' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'Provisioned' | 'ProvisionFailed' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member.
+* **syncState**: 'DeProvisionFailed' | 'DeProvisioned' | 'DeProvisioning' | 'DisabledBackupRestore' | 'DisabledTombstoneCleanup' | 'ProvisionFailed' | 'Provisioned' | 'Provisioning' | 'ReprovisionFailed' | 'Reprovisioning' | 'SyncCancelled' | 'SyncCancelling' | 'SyncFailed' | 'SyncInProgress' | 'SyncSucceeded' | 'SyncSucceededWithWarnings' | 'UnProvisioned' | 'UnReprovisioned' (ReadOnly): Sync state of the sync member.
 * **usePrivateLinkConnection**: bool: Whether to use private link connection.
 * **userName**: string: User name of the member database in the sync member.
 
@@ -1308,7 +1308,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## ServerDevOpsAuditSettingsProperties
 ### Properties
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether DevOps audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether DevOps audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure DevOps audit, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should be also created.
@@ -1319,7 +1319,7 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1347,7 +1347,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **maxCapacity**: int: The maximum capacity any one database can consume.
 * **minCapacity**: int: The minimum capacity all databases are guaranteed.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1420,7 +1420,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1447,7 +1447,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1469,7 +1469,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **id**: string (Required): Resource identifier of the partner server.
 * **location**: string (ReadOnly): Geo location of the partner server.
-* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Replication role of the partner server.
+* **replicationRole**: 'Primary' | 'Secondary' (ReadOnly): Local replication role of the failover group instance.
 
 ## FailoverGroupReadOnlyEndpoint
 ### Properties
@@ -1480,7 +1480,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **failoverPolicy**: 'Automatic' | 'Manual' (Required): Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
 * **failoverWithDataLossGracePeriodMinutes**: int: Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
 
-## Dictionary<string,String>
+## FailoverGroupTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1495,7 +1495,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **databaseId**: string (Required): Resource ID of the database to store job metadata in.
 * **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly): The state of the job agent.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1517,7 +1517,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **endTime**: string: Schedule end time.
 * **interval**: string: Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
 * **startTime**: string: Schedule start time.
-* **type**: 'Once' | 'Recurring': Schedule interval type.
+* **type**: 'Once' | 'Recurring': Schedule interval type
 
 ## JobExecutionProperties
 ### Properties
@@ -1587,12 +1587,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **refreshCredential**: string: The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
 * **serverName**: string: The target server name.
 * **shardMapName**: string: The target shard map.
-* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (Required): The target type.
+* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (Required): The type of the target.
 
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The server key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The server key type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the server key.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string: The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.
@@ -1610,7 +1610,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-* **state**: 'Deleting' | 'Failed' | 'Initializing' | 'InProgress' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State.
+* **state**: 'Deleting' | 'Failed' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
 
 ## ServerVulnerabilityAssessmentProperties

@@ -8,16 +8,16 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookTemplateProperties](#workbooktemplateproperties): Properties that contain a workbook template.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [WorkbookTemplateResourceTags](#workbooktemplateresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooktemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## WorkbookTemplateProperties
 ### Properties
 * **author**: string: Information about the author of the workbook template.
 * **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[] (Required): Workbook galleries supported by the template.
-* **localized**: [Dictionary<string,IList<WorkbookTemplateLocalizedGallery>>](#dictionarystringilistworkbooktemplatelocalizedgallery): Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+* **localized**: [WorkbookTemplatePropertiesLocalized](#workbooktemplatepropertieslocalized): Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
 * **priority**: int: Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
-* **templateData**: any (Required): Valid JSON object containing workbook template payload.
+* **templateData**: any (Required): Any object
 
 ## WorkbookTemplateGallery
 ### Properties
@@ -27,7 +27,7 @@
 * **resourceType**: string: Azure resource type supported by the gallery.
 * **type**: string: Type of workbook supported by the workbook template.
 
-## Dictionary<string,IList<WorkbookTemplateLocalizedGallery>>
+## WorkbookTemplatePropertiesLocalized
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [WorkbookTemplateLocalizedGallery](#workbooktemplatelocalizedgallery)[]
@@ -35,9 +35,9 @@
 ## WorkbookTemplateLocalizedGallery
 ### Properties
 * **galleries**: [WorkbookTemplateGallery](#workbooktemplategallery)[]: Workbook galleries supported by the template.
-* **templateData**: any: Valid JSON object containing workbook template payload.
+* **templateData**: any: Any object
 
-## Dictionary<string,String>
+## WorkbookTemplateResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

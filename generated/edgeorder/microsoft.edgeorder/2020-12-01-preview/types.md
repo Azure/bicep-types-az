@@ -8,8 +8,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AddressProperties](#addressproperties) (Required): Address Properties
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.EdgeOrder/orderItems@2020-12-01-preview
@@ -20,8 +20,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OrderItemProperties](#orderitemproperties) (Required): Represents order item details.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/orderItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AddressProperties
@@ -50,16 +50,16 @@
 * **streetAddress3**: string: Street Address line 3.
 * **zipExtendedCode**: string: Extended Zip Code.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -85,7 +85,7 @@
 * **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
 * **forwardShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
 * **managementResourceDetails**: [ManagementResourceDetails](#managementresourcedetails): Management resource details to link device
-* **managementRpDetails**: any (ReadOnly): Management RP details
+* **managementRpDetails**: any (ReadOnly): Any object
 * **notificationEmailList**: string[]: Additional notification email list
 * **orderItemStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order item status history
 * **orderItemType**: 'Purchase' | 'Rental' (Required): Order item type.
@@ -98,8 +98,8 @@
 ## StageDetails
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the resource stage.
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Confirmed' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'InReview' | 'InUse' | 'PickedUp' | 'Placed' | 'ReadyForDispatch' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'Shipped' (ReadOnly): Stage name.
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' (ReadOnly): Stage status.
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Confirmed' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'InReview' | 'InUse' | 'PickedUp' | 'Placed' | 'ReadyForDispatch' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'Shipped' (ReadOnly): Stage name
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' (ReadOnly): Stage status
 * **startTime**: string (ReadOnly): Stage start time
 
 ## ErrorDetail
@@ -112,7 +112,7 @@
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): The additional info.
+* **info**: any (ReadOnly): Any object
 * **type**: string (ReadOnly): The additional info type.
 
 ## ShippingDetails
@@ -163,7 +163,7 @@
 * **productLineName**: string: Represents product line name that uniquely identifies product line
 * **productName**: string: Represents product name that uniquely identifies product
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

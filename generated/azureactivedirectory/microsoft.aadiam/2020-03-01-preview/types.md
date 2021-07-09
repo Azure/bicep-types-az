@@ -11,11 +11,11 @@
 * **resourceGroup**: string: Name of the resource group
 * **resourceName**: string: Name of the private link policy resource
 * **subscriptionId**: string: Subscription Identifier
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [PrivateLinkPolicyTags](#privatelinkpolicytags): Resource tags.
 * **tenants**: string[]: The list of tenantIds.
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## PrivateLinkPolicyTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DevicePropertiesFormat](#devicepropertiesformat): Device properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/devices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2020-01-01-preview
@@ -29,7 +29,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkFunctionPropertiesFormat](#networkfunctionpropertiesformat): Network function properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/vendors@2020-01-01-preview
@@ -60,17 +60,18 @@
 
 ## DevicePropertiesFormat
 * **Discriminator**: deviceType
+
 ### Base Properties
 * **azureStackEdge**: [SubResource](#subresource): Reference to another sub resource.
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly): The list of network functions deployed on the device.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the device resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
 * **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' (ReadOnly): The current device status.
 
 ## SubResource
 ### Properties
 * **id**: string: Resource ID.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -78,17 +79,17 @@
 ## VendorNetworkFunctionPropertiesFormat
 ### Properties
 * **networkFunctionVendorConfigurations**: [NetworkFunctionVendorConfiguration](#networkfunctionvendorconfiguration)[]: An array of network function vendor configurations.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor network function sub resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
 * **skuName**: string (ReadOnly): The name of the sku.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): The sku type.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed': The vendor controlled provisioning state of the vendor network function.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): Sku type.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed': The current vendor provisioning state.
 
 ## NetworkFunctionVendorConfiguration
 ### Properties
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configurations.
 * **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the role instance.
 * **roleName**: string: The name of the vendor network function role.
-* **userDataParameters**: any (ReadOnly): The user data parameters.
+* **userDataParameters**: any (ReadOnly): Any object
 
 ## NetworkInterface
 ### Properties
@@ -130,45 +131,45 @@
 ### Properties
 * **device**: [SubResource](#subresource): Reference to another sub resource.
 * **managedApplication**: [SubResource](#subresource) (ReadOnly): Reference to another sub resource.
-* **managedApplicationParameters**: any: The parameters for the managed application.
+* **managedApplicationParameters**: any: Any object
 * **networkFunctionUserConfigurations**: [NetworkFunctionUserConfiguration](#networkfunctionuserconfiguration)[]: The network function configurations from the user.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the network function resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
 * **serviceKey**: string (ReadOnly): The service key for the network function resource.
 * **skuName**: string: The sku name for the network function.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): The sku type for the network function.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown' (ReadOnly): Sku type.
 * **vendorName**: string: The vendor name for the network function.
-* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' (ReadOnly): The vendor provisioning state for the network function resource.
+* **vendorProvisioningState**: 'Deprovisioned' | 'NotProvisioned' | 'Provisioned' | 'Provisioning' | 'Unknown' | 'UserDataValidationFailed' (ReadOnly): The current vendor provisioning state.
 
 ## NetworkFunctionUserConfiguration
 ### Properties
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: The network interface configuration.
-* **osProfile**: [schemas:17_osProfile](#schemas17osprofile): Specifies the operating system settings for the role instance.
+* **osProfile**: [NetworkFunctionUserConfigurationOsProfile](#networkfunctionuserconfigurationosprofile): Specifies the operating system settings for the role instance.
 * **roleName**: string: The name of the network function role.
-* **userDataParameters**: any: The user data parameters.
+* **userDataParameters**: any: Any object
 
-## schemas:17_osProfile
+## NetworkFunctionUserConfigurationOsProfile
 ### Properties
 * **customData**: string: Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## VendorPropertiesFormat
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
 * **skus**: [SubResource](#subresource)[] (ReadOnly): A list of IDs of the vendor skus offered by the vendor.
 
 ## VendorSkuPropertiesFormat
 ### Properties
 * **deploymentMode**: 'Azure' | 'PrivateEdgeZone' | 'Unknown': The sku deployment mode.
-* **managedApplicationParameters**: any: The parameters for the managed application.
-* **managedApplicationTemplate**: any: The template for the managed application deployment.
+* **managedApplicationParameters**: any: Any object
+* **managedApplicationTemplate**: any: Any object
 * **networkFunctionTemplate**: [NetworkFunctionTemplate](#networkfunctiontemplate): The network function template.
 * **preview**: bool: Indicates if the vendor sku is in preview mode.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The provisioning state of the vendor sku sub resource.
-* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown': The sku type.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **skuType**: 'EvolvedPacketCore' | 'Firewall' | 'SDWAN' | 'Unknown': Sku type.
 
 ## NetworkFunctionTemplate
 ### Properties
@@ -182,9 +183,9 @@
 * **roleName**: string: The name of the network function role.
 * **roleType**: 'Unknown' | 'VirtualMachine': Role type.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
-* **userDataParameters**: any: The user data parameters.
-* **userDataTemplate**: any: The user data template.
-* **virtualMachineSize**: 'Standard_D1_v2' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown': The size of the virtual machine.
+* **userDataParameters**: any: Any object
+* **userDataTemplate**: any: Any object
+* **virtualMachineSize**: 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D1_v2' | 'Standard_D2_v2' | 'Standard_D3_v2' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS11_v2' | 'Standard_DS12_v2' | 'Standard_DS13_v2' | 'Standard_DS1_v2' | 'Standard_DS2_v2' | 'Standard_DS3_v2' | 'Standard_DS4_v2' | 'Standard_DS5_v2' | 'Standard_F1' | 'Standard_F16' | 'Standard_F16s' | 'Standard_F1s' | 'Standard_F2' | 'Standard_F2s' | 'Standard_F4' | 'Standard_F4s' | 'Standard_F8' | 'Standard_F8s' | 'Unknown': The size of the virtual machine.
 
 ## CustomProfile
 ### Properties

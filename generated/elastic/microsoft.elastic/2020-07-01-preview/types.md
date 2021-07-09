@@ -10,8 +10,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorProperties](#monitorproperties): Properties specific to the monitor resource.
 * **sku**: [ResourceSku](#resourcesku): Microsoft.Elastic SKU.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the monitor resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ElasticMonitorResourceTags](#elasticmonitorresourcetags): The tags of the monitor resource.
 * **type**: 'Microsoft.Elastic/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/tagRules@2020-07-01-preview
@@ -21,22 +21,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': Managed identity type.
+* **type**: 'SystemAssigned': Managed Identity types.
 
 ## MonitorProperties
 ### Properties
 * **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic Resource Properties.
-* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown'
+* **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
 * **monitoringStatus**: 'Disabled' | 'Enabled': Flag specifying if the resource monitoring is enabled or disabled.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of the monitor resource.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of Elastic resource.
 * **userInfo**: [UserInfo](#userinfo): User Information to be passed to partners.
 
 ## ElasticProperties
@@ -80,16 +80,16 @@
 ### Properties
 * **name**: string (Required): Name of the SKU.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## ElasticMonitorResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -97,7 +97,7 @@
 ## MonitoringTagRulesProperties
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of the monitoring tag rules.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of Elastic resource.
 
 ## LogRules
 ### Properties
@@ -108,7 +108,7 @@
 
 ## FilteringTag
 ### Properties
-* **action**: 'Exclude' | 'Include': Valid actions for a filtering tag.
+* **action**: 'Exclude' | 'Include': Valid actions for a filtering tag. Exclusion takes priority over inclusion.
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
 

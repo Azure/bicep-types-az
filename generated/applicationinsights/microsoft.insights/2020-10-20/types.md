@@ -4,31 +4,31 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-20' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: [Dictionary<string,String>](#dictionarystringstring): Resource etag
+* **etag**: [MyWorkbookResourceEtag](#myworkbookresourceetag): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [MyWorkbookManagedIdentity](#myworkbookmanagedidentity): Customer Managed Identity
 * **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MyWorkbookProperties](#myworkbookproperties): Properties that contain a private workbook.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [MyWorkbookResourceTags](#myworkbookresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/myWorkbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/workbooks@2020-10-20
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-20' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: [Dictionary<string,String>](#dictionarystringstring): Resource etag
+* **etag**: [ResourceEtag](#resourceetag): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [WorkbookManagedIdentity](#workbookmanagedidentity): Customer Managed Identity
 * **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/workbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Dictionary<string,String>
+## MyWorkbookResourceEtag
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -55,12 +55,12 @@
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this private workbook.
 * **version**: string: This instance's version of the data model. This can change as new features are added that can be marked private workbook.
 
-## Dictionary<string,String>
+## MyWorkbookResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ResourceEtag
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -88,7 +88,7 @@
 * **userId**: string (ReadOnly): Unique user id of the specific user that owns this workbook.
 * **version**: string: Workbook version
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

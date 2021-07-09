@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of the managed cluster.
 * **sku**: [ManagedClusterSKU](#managedclustersku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerService/managedClusters/agentPools@2021-03-01
@@ -45,42 +45,32 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of the extended location.
+* **type**: 'EdgeZone': The type of extendedLocation.
 
 ## ManagedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity which is used by master components.
 * **tenantId**: string (ReadOnly): The tenant id of the system assigned identity which is used by master components.
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.
-* **userAssignedIdentities**: [Dictionary<string,Schemas53ProvisioningInfo>](#dictionarystringschemas53provisioninginfo): The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [ManagedClusterIdentityUserAssignedIdentities](#managedclusteridentityuserassignedidentities): The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,Schemas53ProvisioningInfo>
+## ManagedClusterIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:53_provisioningInfo](#schemas53provisioninginfo)
+* **Additional Properties Type**: [Components1Umhcm8SchemasManagedclusteridentityPropertiesUserassignedidentitiesAdditionalproperties](#components1umhcm8schemasmanagedclusteridentitypropertiesuserassignedidentitiesadditionalproperties)
 
-## schemas:53_provisioningInfo
+## Components1Umhcm8SchemasManagedclusteridentityPropertiesUserassignedidentitiesAdditionalproperties
 ### Properties
-* **error**: [CloudError](#clouderror): An error response from the Container service.
-
-## CloudError
-### Properties
-* **error**: [CloudErrorBody](#clouderrorbody): An error response from the Container service.
-
-## CloudErrorBody
-### Properties
-* **code**: string: An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-* **details**: [CloudErrorBody](#clouderrorbody)[]: A list of additional details about the error.
-* **message**: string: A message describing the error, intended to be suitable for display in a user interface.
-* **target**: string: The target of the particular error. For example, the name of the property in error.
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## ManagedClusterProperties
 ### Properties
 * **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): AADProfile specifies attributes for Azure Active Directory integration.
-* **addonProfiles**: [Dictionary<string,ManagedClusterAddonProfile>](#dictionarystringmanagedclusteraddonprofile): Profile of managed cluster add-on.
+* **addonProfiles**: [ManagedClusterPropertiesAddonProfiles](#managedclusterpropertiesaddonprofiles): Profile of managed cluster add-on.
 * **agentPoolProfiles**: [ManagedClusterAgentPoolProfile](#managedclusteragentpoolprofile)[]: Properties of the agent pool.
 * **apiServerAccessProfile**: [ManagedClusterAPIServerAccessProfile](#managedclusterapiserveraccessprofile): Access profile for managed cluster API server.
-* **autoScalerProfile**: [schemas:41_autoScalerProfile](#schemas41autoscalerprofile): Parameters to be applied to the cluster-autoscaler when enabled
+* **autoScalerProfile**: [ManagedClusterPropertiesAutoScalerProfile](#managedclusterpropertiesautoscalerprofile): Parameters to be applied to the cluster-autoscaler when enabled
 * **autoUpgradeProfile**: [ManagedClusterAutoUpgradeProfile](#managedclusterautoupgradeprofile): Auto upgrade profile for a managed cluster.
 * **azurePortalFQDN**: string (ReadOnly): FQDN for the master pool which used by proxy config.
 * **disableLocalAccounts**: bool: If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
@@ -90,8 +80,8 @@
 * **enableRBAC**: bool: Whether to enable Kubernetes Role-Based Access Control.
 * **fqdn**: string (ReadOnly): FQDN for the master pool.
 * **fqdnSubdomain**: string: FQDN subdomain specified when creating private cluster with custom private dns zone.
-* **httpProxyConfig**: [ManagedClusterHTTPProxyConfig](#managedclusterhttpproxyconfig): Configurations for provisioning the cluster with HTTP proxy servers.
-* **identityProfile**: [Dictionary<string,Schemas53ProvisioningInfo>](#dictionarystringschemas53provisioninginfo): Identities associated with the cluster.
+* **httpProxyConfig**: [ManagedClusterHttpProxyConfig](#managedclusterhttpproxyconfig): Configurations for provisioning the cluster with HTTP proxy servers.
+* **identityProfile**: [ManagedClusterPropertiesIdentityProfile](#managedclusterpropertiesidentityprofile): Identities associated with the cluster.
 * **kubernetesVersion**: string: Version of Kubernetes specified when creating the managed cluster.
 * **linuxProfile**: [ContainerServiceLinuxProfile](#containerservicelinuxprofile): Profile for Linux VMs in the container service cluster.
 * **maxAgentPools**: int (ReadOnly): The max number of agent pools for the managed cluster.
@@ -115,23 +105,23 @@
 * **serverAppSecret**: string: The server AAD application secret.
 * **tenantID**: string: The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
 
-## Dictionary<string,ManagedClusterAddonProfile>
+## ManagedClusterPropertiesAddonProfiles
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ManagedClusterAddonProfile](#managedclusteraddonprofile)
 
 ## ManagedClusterAddonProfile
 ### Properties
-* **config**: [Dictionary<string,String>](#dictionarystringstring): Key-value pairs for configuring an add-on.
+* **config**: [ManagedClusterAddonProfileConfig](#managedclusteraddonprofileconfig): Key-value pairs for configuring an add-on.
 * **enabled**: bool (Required): Whether the add-on is enabled or not.
-* **identity**: [schemas:52_identity](#schemas52identity) (ReadOnly): Information of user assigned identity used by this add-on.
+* **identity**: [ManagedClusterAddonProfileIdentity](#managedclusteraddonprofileidentity) (ReadOnly): Information of user assigned identity used by this add-on.
 
-## Dictionary<string,String>
+## ManagedClusterAddonProfileConfig
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## schemas:52_identity
+## ManagedClusterAddonProfileIdentity
 ### Properties
 * **clientId**: string: The client id of the user assigned identity.
 * **objectId**: string: The object id of the user assigned identity.
@@ -147,7 +137,7 @@
 * **enableNodePublicIP**: bool: Enable public IP for nodes
 * **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g': GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): Kubelet configurations of agent nodes.
-* **kubeletDiskType**: 'OS' | 'Temporary': KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+* **kubeletDiskType**: 'OS' | 'Temporary': KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
 * **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): OS configurations of Linux agent nodes.
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
@@ -155,12 +145,12 @@
 * **mode**: 'System' | 'User': AgentPoolMode represents mode of an agent pool.
 * **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
 * **nodeImageVersion**: string (ReadOnly): Version of node image
-* **nodeLabels**: [Dictionary<string,String>](#dictionarystringstring): Agent pool node labels to be persisted across all nodes in agent pool.
+* **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+* **osDiskType**: 'Ephemeral' | 'Managed': OSDiskType represents the type of an OS disk on an agent pool.
 * **osSKU**: 'CBLMariner' | 'Ubuntu': OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
 * **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
@@ -170,7 +160,7 @@
 * **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete': ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
 * **scaleSetPriority**: 'Regular' | 'Spot': ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
 * **spotMaxPrice**: int: SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Agent pool tags to be persisted on the agent pool virtual machine scale set.
+* **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): Agent pool tags to be persisted on the agent pool virtual machine scale set.
 * **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets': AgentPoolType represents types of an agent pool.
 * **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
 * **vmSize**: string: Size of agent VMs.
@@ -228,16 +218,16 @@
 * **vmSwappiness**: int: Sysctl setting vm.swappiness.
 * **vmVfsCachePressure**: int: Sysctl setting vm.vfs_cache_pressure.
 
-## Dictionary<string,String>
+## ManagedClusterAgentPoolProfilePropertiesNodeLabels
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## PowerState
 ### Properties
-* **code**: 'Running' | 'Stopped': Tells whether the cluster is Running or Stopped.
+* **code**: 'Running' | 'Stopped': Tells whether the cluster is Running or Stopped
 
-## Dictionary<string,String>
+## ManagedClusterAgentPoolProfilePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -252,7 +242,7 @@
 * **enablePrivateCluster**: bool: Whether to create the cluster as a private cluster or not.
 * **privateDNSZone**: string: Private dns zone mode for private cluster.
 
-## schemas:41_autoScalerProfile
+## ManagedClusterPropertiesAutoScalerProfile
 ### Properties
 * **balance-similar-node-groups**: string
 * **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random'
@@ -276,17 +266,23 @@
 ### Properties
 * **upgradeChannel**: 'node-image' | 'none' | 'patch' | 'rapid' | 'stable': upgrade channel for auto upgrade.
 
-## ManagedClusterHTTPProxyConfig
+## ManagedClusterHttpProxyConfig
 ### Properties
 * **httpProxy**: string: HTTP proxy server endpoint to use.
 * **httpsProxy**: string: HTTPS proxy server endpoint to use.
 * **noProxy**: string[]: Endpoints that should not go through proxy.
 * **trustedCa**: string: Alternative CA cert to use for connecting to proxy servers.
 
-## Dictionary<string,Schemas53ProvisioningInfo>
+## ManagedClusterPropertiesIdentityProfile
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [schemas:53_provisioningInfo](#schemas53provisioninginfo)
+* **Additional Properties Type**: [ComponentsQit0EtSchemasManagedclusterpropertiesPropertiesIdentityprofileAdditionalproperties](#componentsqit0etschemasmanagedclusterpropertiespropertiesidentityprofileadditionalproperties)
+
+## ComponentsQit0EtSchemasManagedclusterpropertiesPropertiesIdentityprofileAdditionalproperties
+### Properties
+* **clientId**: string: The client id of the user assigned identity.
+* **objectId**: string: The object id of the user assigned identity.
+* **resourceId**: string: The resource id of the user assigned identity.
 
 ## ContainerServiceLinuxProfile
 ### Properties
@@ -319,23 +315,23 @@
 * **allocatedOutboundPorts**: int: Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
 * **effectiveOutboundIPs**: [ResourceReference](#resourcereference)[]: The effective outbound IP resources of the cluster load balancer.
 * **idleTimeoutInMinutes**: int: Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
-* **managedOutboundIPs**: [schemas:33_managedOutboundIPs](#schemas33managedoutboundips): Desired managed outbound IPs for the cluster load balancer.
-* **outboundIPPrefixes**: [schemas:33_outboundIPPrefixes](#schemas33outboundipprefixes): Desired outbound IP Prefix resources for the cluster load balancer.
-* **outboundIPs**: [schemas:33_outboundIPs](#schemas33outboundips): Desired outbound IP resources for the cluster load balancer.
+* **managedOutboundIPs**: [ManagedClusterLoadBalancerProfileManagedOutboundIPs](#managedclusterloadbalancerprofilemanagedoutboundips): Desired managed outbound IPs for the cluster load balancer.
+* **outboundIPPrefixes**: [ManagedClusterLoadBalancerProfileOutboundIPPrefixes](#managedclusterloadbalancerprofileoutboundipprefixes): Desired outbound IP Prefix resources for the cluster load balancer.
+* **outboundIPs**: [ManagedClusterLoadBalancerProfileOutboundIPs](#managedclusterloadbalancerprofileoutboundips): Desired outbound IP resources for the cluster load balancer.
 
 ## ResourceReference
 ### Properties
 * **id**: string: The fully qualified Azure resource id.
 
-## schemas:33_managedOutboundIPs
+## ManagedClusterLoadBalancerProfileManagedOutboundIPs
 ### Properties
 * **count**: int: Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
 
-## schemas:33_outboundIPPrefixes
+## ManagedClusterLoadBalancerProfileOutboundIPPrefixes
 ### Properties
 * **publicIPPrefixes**: [ResourceReference](#resourcereference)[]: A list of public IP prefix resources.
 
-## schemas:33_outboundIPs
+## ManagedClusterLoadBalancerProfileOutboundIPs
 ### Properties
 * **publicIPs**: [ResourceReference](#resourcereference)[]: A list of public IP resources.
 
@@ -352,7 +348,7 @@
 * **identity**: [UserAssignedIdentity](#userassignedidentity) (Required)
 * **name**: string (Required): Name of the pod identity.
 * **namespace**: string (Required): Namespace of the pod identity.
-* **provisioningInfo**: [schemas:53_provisioningInfo](#schemas53provisioninginfo) (ReadOnly)
+* **provisioningInfo**: [ManagedClusterPodIdentityProvisioningInfo](#managedclusterpodidentityprovisioninginfo) (ReadOnly)
 * **provisioningState**: 'Assigned' | 'Deleting' | 'Failed' | 'Updating' (ReadOnly): The current provisioning state of the pod identity.
 
 ## UserAssignedIdentity
@@ -361,13 +357,28 @@
 * **objectId**: string: The object id of the user assigned identity.
 * **resourceId**: string: The resource id of the user assigned identity.
 
+## ManagedClusterPodIdentityProvisioningInfo
+### Properties
+* **error**: [CloudError](#clouderror): An error response from the Container service.
+
+## CloudError
+### Properties
+* **error**: [CloudErrorBody](#clouderrorbody): An error response from the Container service.
+
+## CloudErrorBody
+### Properties
+* **code**: string: An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+* **details**: [CloudErrorBody](#clouderrorbody)[]: A list of additional details about the error.
+* **message**: string: A message describing the error, intended to be suitable for display in a user interface.
+* **target**: string: The target of the particular error. For example, the name of the property in error.
+
 ## ManagedClusterPodIdentityException
 ### Properties
 * **name**: string (Required): Name of the pod identity exception.
 * **namespace**: string (Required): Namespace of the pod identity exception.
-* **podLabels**: [Dictionary<string,String>](#dictionarystringstring) (Required): Pod labels to match.
+* **podLabels**: [ManagedClusterPodIdentityExceptionPodLabels](#managedclusterpodidentityexceptionpodlabels) (Required): Pod labels to match.
 
-## Dictionary<string,String>
+## ManagedClusterPodIdentityExceptionPodLabels
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -398,7 +409,7 @@
 * **name**: 'Basic': Name of a managed cluster SKU.
 * **tier**: 'Free' | 'Paid': Tier of a managed cluster SKU.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -413,19 +424,19 @@
 * **enableNodePublicIP**: bool: Enable public IP for nodes
 * **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g': GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): Kubelet configurations of agent nodes.
-* **kubeletDiskType**: 'OS' | 'Temporary': KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+* **kubeletDiskType**: 'OS' | 'Temporary': KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
 * **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): OS configurations of Linux agent nodes.
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
 * **mode**: 'System' | 'User': AgentPoolMode represents mode of an agent pool.
 * **nodeImageVersion**: string (ReadOnly): Version of node image
-* **nodeLabels**: [Dictionary<string,String>](#dictionarystringstring): Agent pool node labels to be persisted across all nodes in agent pool.
+* **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+* **osDiskType**: 'Ephemeral' | 'Managed': OSDiskType represents the type of an OS disk on an agent pool.
 * **osSKU**: 'CBLMariner' | 'Ubuntu': OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
 * **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
@@ -435,18 +446,18 @@
 * **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete': ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
 * **scaleSetPriority**: 'Regular' | 'Spot': ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
 * **spotMaxPrice**: int: SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Agent pool tags to be persisted on the agent pool virtual machine scale set.
+* **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): Agent pool tags to be persisted on the agent pool virtual machine scale set.
 * **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets': AgentPoolType represents types of an agent pool.
 * **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
 * **vmSize**: string: Size of agent VMs.
 * **vnetSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
 
-## Dictionary<string,String>
+## ManagedClusterAgentPoolProfilePropertiesNodeLabels
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Dictionary<string,String>
+## ManagedClusterAgentPoolProfilePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -463,7 +474,7 @@
 
 ## TimeInWeek
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': A day in a week.
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The weekday enum.
 * **hourSlots**: int[]: hour slots in a day.
 
 ## SystemData
@@ -473,7 +484,7 @@
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties

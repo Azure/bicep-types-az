@@ -9,8 +9,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VideoAnalyzerProperties](#videoanalyzerproperties)
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/videoAnalyzers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/accessPolicies@2021-05-01-preview
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessPolicyProperties](#accesspolicyproperties): Application level properties for the access policy resource.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/edgeModules@2021-05-01-preview
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EdgeModuleProperties](#edgemoduleproperties): Application level properties for the edge module resource.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/edgeModules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/videoAnalyzers/videos@2021-05-01-preview
@@ -40,15 +40,15 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VideoProperties](#videoproperties): Application level properties for the video resource.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/videos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## VideoAnalyzerIdentity
 ### Properties
 * **type**: string (Required): The identity type.
-* **userAssignedIdentities**: [Dictionary<string,UserAssignedManagedIdentity>](#dictionarystringuserassignedmanagedidentity): The User Assigned Managed Identities.
+* **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The User Assigned Managed Identities.
 
-## Dictionary<string,UserAssignedManagedIdentity>
+## UserAssignedManagedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedManagedIdentity](#userassignedmanagedidentity)
@@ -83,7 +83,7 @@
 ## Endpoint
 ### Properties
 * **endpointUrl**: string: The URL of the endpoint.
-* **type**: string (Required): The type of the endpoint.
+* **type**: 'ClientApi' (Required): The type of the endpoint.
 
 ## StorageAccount
 ### Properties
@@ -91,16 +91,16 @@
 * **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
 * **status**: string (ReadOnly): The current status of the storage account mapping.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -112,19 +112,20 @@
 
 ## AuthenticationBase
 * **Discriminator**: @type
+
 ### Base Properties
-### #Microsoft.VideoAnalyzer.JwtAuthentication
+### JwtAuthentication
 #### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): Properties for access validation based on JSON Web Tokens (JWT).
+* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
 * **audiences**: string[]: List of expected token audiences. Token audience is valid if it matches at least one of the given values.
 * **claims**: [TokenClaim](#tokenclaim)[]: List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
 * **issuers**: string[]: List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
 * **keys**: [TokenKey](#tokenkey)[]: List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
 
 
-## #Microsoft.VideoAnalyzer.JwtAuthentication
+## JwtAuthentication
 ### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): Properties for access validation based on JSON Web Tokens (JWT).
+* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
 * **audiences**: string[]: List of expected token audiences. Token audience is valid if it matches at least one of the given values.
 * **claims**: [TokenClaim](#tokenclaim)[]: List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
 * **issuers**: string[]: List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
@@ -137,33 +138,34 @@
 
 ## TokenKey
 * **Discriminator**: @type
+
 ### Base Properties
 * **kid**: string (Required): JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
-### #Microsoft.VideoAnalyzer.EccTokenKey
+### EccTokenKey
 #### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): Required validation properties for tokens generated with Elliptical Curve algorithm.
+* **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.
 * **alg**: 'ES256' | 'ES384' | 'ES512' (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
 * **x**: string (Required): X coordinate.
 * **y**: string (Required): Y coordinate.
 
-### #Microsoft.VideoAnalyzer.RsaTokenKey
+### RsaTokenKey
 #### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): Required validation properties for tokens generated with RSA algorithm.
+* **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): The discriminator for derived types.
 * **alg**: 'RS256' | 'RS384' | 'RS512' (Required): RSA algorithm to be used: RS256, RS384 or RS512.
 * **e**: string (Required): RSA public key exponent.
 * **n**: string (Required): RSA public key modulus.
 
 
-## #Microsoft.VideoAnalyzer.EccTokenKey
+## EccTokenKey
 ### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): Required validation properties for tokens generated with Elliptical Curve algorithm.
+* **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.
 * **alg**: 'ES256' | 'ES384' | 'ES512' (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
 * **x**: string (Required): X coordinate.
 * **y**: string (Required): Y coordinate.
 
-## #Microsoft.VideoAnalyzer.RsaTokenKey
+## RsaTokenKey
 ### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): Required validation properties for tokens generated with RSA algorithm.
+* **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): The discriminator for derived types.
 * **alg**: 'RS256' | 'RS384' | 'RS512' (Required): RSA algorithm to be used: RS256, RS384 or RS512.
 * **e**: string (Required): RSA public key exponent.
 * **n**: string (Required): RSA public key modulus.
