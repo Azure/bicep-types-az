@@ -1,13 +1,167 @@
-AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
+Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep --bicep --output-folder=/tmp/_bcp_1625795651387/healthcareapis --multiapi --title=none --skip-semantics-validation /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md --debug --verbose
+AutoRest code generation utility [cli version: 3.2.1; node: v14.17.1, max-memory: 4096 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
+No configuration found at 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/src/cmd/'.
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/default-configuration.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/inspect.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/directives.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/pipeline.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/loader-openapi.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/miscellaneous.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-powershell.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-azureresourceschema.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-csharp.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-go.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-java.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-nodejs.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-php.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-python.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-ruby.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-typescript.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-validators.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-az.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-terraform.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/plugin-azure-functions.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/graphs.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/autorest/dist/resources/help-configuration.md'
+> Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+> Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+> Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+> Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+> Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+> Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+NOTE: AutoRest core version selected from configuration: https://tinyurl.com/yfjyy27f.
+Network Enabled: true
+
+There is a new version of AutoRest available (3.2.3).
+ > You can install the newer version with with npm install -g autorest@latest
+
+Starting @autorest/core from /home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core
+   Loading AutoRest core      '/home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist' (3.5.0-ci.b8e3f92c0)
+VERBOSE [0.69 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.bicep.md'
+VERBOSE [0.71 s]: > Initial configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [0.71 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [0.73 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/default-configuration.md'
+VERBOSE [0.75 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/inspect.md'
+VERBOSE [0.76 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/directives.md'
+VERBOSE [0.77 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/pipeline.md'
+VERBOSE [0.79 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/loader-openapi.md'
+VERBOSE [0.81 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/miscellaneous.md'
+VERBOSE [0.83 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-powershell.md'
+VERBOSE [0.85 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azureresourceschema.md'
+VERBOSE [0.87 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-csharp.md'
+VERBOSE [0.89 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-go.md'
+VERBOSE [0.9 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-java.md'
+VERBOSE [0.92 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-nodejs.md'
+VERBOSE [0.94 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-php.md'
+VERBOSE [0.96 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-python.md'
+VERBOSE [0.98 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-ruby.md'
+VERBOSE [1 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-typescript.md'
+VERBOSE [1.02 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-validators.md'
+VERBOSE [1.05 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-az.md'
+VERBOSE [1.07 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-terraform.md'
+VERBOSE [1.09 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azure-functions.md'
+VERBOSE [1.12 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/graphs.md'
+VERBOSE [1.14 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/help-configuration.md'
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+VERBOSE [1.22 s]: > Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+VERBOSE [1.22 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+VERBOSE [1.86 s]: > Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+VERBOSE [1.86 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
 Processing batch task - {"tag":"microsoft.healthcareapis-2021-01-11"} .
+VERBOSE [2.08 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.bicep.md'
+VERBOSE [2.08 s]: > Initial configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [2.08 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [2.09 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/default-configuration.md'
+VERBOSE [2.1 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/inspect.md'
+VERBOSE [2.11 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/directives.md'
+VERBOSE [2.12 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/pipeline.md'
+VERBOSE [2.14 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/loader-openapi.md'
+VERBOSE [2.15 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/miscellaneous.md'
+VERBOSE [2.17 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-powershell.md'
+VERBOSE [2.18 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azureresourceschema.md'
+VERBOSE [2.19 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-csharp.md'
+VERBOSE [2.21 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-go.md'
+VERBOSE [2.22 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-java.md'
+VERBOSE [2.24 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-nodejs.md'
+VERBOSE [2.25 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-php.md'
+VERBOSE [2.27 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-python.md'
+VERBOSE [2.29 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-ruby.md'
+VERBOSE [2.3 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-typescript.md'
+VERBOSE [2.32 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-validators.md'
+VERBOSE [2.34 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-az.md'
+VERBOSE [2.36 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-terraform.md'
+VERBOSE [2.38 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azure-functions.md'
+VERBOSE [2.4 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/graphs.md'
+VERBOSE [2.43 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/help-configuration.md'
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+VERBOSE [2.49 s]: > Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+VERBOSE [2.49 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+VERBOSE [3.06 s]: > Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+VERBOSE [3.06 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+DEBUG [3.69 s]: swagger-document/loader-swagger - START inputs = 0
+DEBUG [3.69 s]: openapi-document/loader-openapi - START inputs = 0
+DEBUG [3.69 s]: pipeline-emitter - START inputs = 0
+DEBUG [3.69 s]: configuration-emitter - START inputs = 0
+DEBUG [3.69 s]: pipeline-emitter - END [0.06 s][86 MB]
+DEBUG [3.69 s]: configuration-emitter - END [0.06 s][86 MB]
+VERBOSE [3.73 s]: Reading OpenAPI 2.0 file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2021-01-11/healthcare-apis.json
+DEBUG [3.73 s]: openapi-document/loader-openapi - END [0.1 s][91 MB]
+VERBOSE [3.8 s]: Reading $ref'd file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/common-types/resource-management/v1/privatelinks.json
+DEBUG [3.8 s]: openapi-document/individual/transform - SKIPPING
+DEBUG [3.8 s]: openapi-document/individual/schema-validator-openapi - SKIPPING
+DEBUG [3.8 s]: openapi-document/individual/identity - SKIPPING
+VERBOSE [3.82 s]: Reading $ref'd file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/common-types/resource-management/v1/types.json
+DEBUG [3.91 s]: swagger-document/loader-swagger - END [0.27 s][97 MB]
+DEBUG [3.91 s]: swagger-document/individual/transform - START inputs = 3
+DEBUG [4.01 s]: swagger-document/individual/transform - END [0.1 s][105 MB]
+DEBUG [4.01 s]: swagger-document/individual/schema-validator-swagger - START inputs = 3
+DEBUG [4.31 s]: swagger-document/individual/schema-validator-swagger - END [0.29 s][115 MB]
+DEBUG [4.31 s]: swagger-document/identity - START inputs = 3
+DEBUG [4.31 s]: swagger-document/individual/identity - START inputs = 3
+DEBUG [4.31 s]: swagger-document/identity - END [0 s][102 MB]
+DEBUG [4.31 s]: swagger-document/individual/identity - END [0 s][102 MB]
+DEBUG [4.31 s]: openapi-document/openapi-document-converter - START inputs = 3
+DEBUG [4.39 s]: openapi-document/openapi-document-converter - END [0.08 s][112 MB]
+DEBUG [4.39 s]: openapi-document/transform - START inputs = 3
+DEBUG [4.4 s]: openapi-document/transform - END [0 s][117 MB]
+DEBUG [4.41 s]: openapi-document/semantic-validator - START inputs = 3
 WARNING: Semantic validation was skipped.
+DEBUG [4.41 s]: openapi-document/semantic-validator - END [0 s][109 MB]
+DEBUG [4.41 s]: openapi-document/allof-cleaner - START inputs = 3
+DEBUG [4.42 s]: openapi-document/allof-cleaner - END [0 s][110 MB]
+DEBUG [4.42 s]: openapi-document/tree-shaker - START inputs = 3
+DEBUG [4.51 s]: openapi-document/tree-shaker - END [0.09 s][117 MB]
+DEBUG [4.51 s]: openapi-document/multi-api-merger - START inputs = 3
+DEBUG [4.62 s]: openapi-document/multi-api-merger - END [0.11 s][135 MB]
+DEBUG [4.63 s]: openapi-document/components-cleaner - START inputs = 1
+DEBUG [4.73 s]: openapi-document/components-cleaner - END [0.1 s][141 MB]
+DEBUG [4.73 s]: openapi-document/component-modifiers - START inputs = 1
+DEBUG [4.79 s]: openapi-document/component-modifiers - END [0.06 s][142 MB]
+DEBUG [4.79 s]: openapi-document/api-version-parameter-handler - START inputs = 1
+DEBUG [4.8 s]: openapi-document/api-version-parameter-handler - END [0 s][142 MB]
+DEBUG [4.8 s]: openapi-document/profile-filter - START inputs = 1
+DEBUG [4.8 s]: openapi-document/profile-filter - END [0 s][142 MB]
+DEBUG [4.8 s]: openapi-document/model-deduplicator - START inputs = 1
+DEBUG [4.8 s]: openapi-document/emitter - START inputs = 1
+DEBUG [4.8 s]: openapi-document/model-deduplicator - END [0 s][142 MB]
+DEBUG [4.8 s]: openapi-document/emitter - END [0 s][142 MB]
+DEBUG [4.8 s]: openapi-document/enum-deduplicator - START inputs = 1
+DEBUG [4.98 s]: openapi-document/enum-deduplicator - END [0.18 s][97 MB]
+DEBUG [4.98 s]: openapi-document/subset-reducer - START inputs = 1
+DEBUG [4.98 s]: openapi-document/subset-reducer - END [0 s][86 MB]
+DEBUG [4.98 s]: openapi-document/quick-check - START inputs = 1
+DEBUG [4.98 s]: openapi-document/multi-api/reset-identity - START inputs = 1
+DEBUG [5 s]: openapi-document/quick-check - END [0.01 s][95 MB]
+DEBUG [5 s]: openapi-document/multi-api/reset-identity - END [0.01 s][95 MB]
+DEBUG [5 s]: openapi-document/multi-api/identity - START inputs = 1
+DEBUG [5 s]: openapi-document/multi-api/identity - END [0 s][95 MB]
+DEBUG [5 s]: openapi-document/multi-api/emitter - START inputs = 1
+DEBUG [5 s]: prechecker - START inputs = 1
+DEBUG [5 s]: openapi-document/multi-api/emitter - END [0 s][95 MB]
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
@@ -21,117 +175,610 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionListR
 
 WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResourceListResultDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkServiceConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+VERBOSE [5.05 s]: Found and removed 0 duplicate schema
+DEBUG [5.29 s]: prechecker - END [0.28 s][97 MB]
+DEBUG [5.29 s]: modelerfour - START inputs = 2
+VERBOSE [5.36 s]:   ModelerFour/api-version-mode:client
+VERBOSE [5.36 s]:   ModelerFour/api-version-parameter:constant
+VERBOSE [5.36 s]:   ModelerFour/use-model-namespace:false
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2021-01-11/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
-INFORMATION: autorest.bicep took 10ms
+DEBUG [5.52 s]: modelerfour - END [0.23 s][100 MB]
+DEBUG [5.52 s]: modelerfour/new-transform - START inputs = 2
+DEBUG [5.52 s]: modelerfour/new-transform - END [0 s][100 MB]
+DEBUG [5.52 s]: modelerfour/flattener - START inputs = 2
+DEBUG [5.62 s]: modelerfour/flattener - END [0.09 s][102 MB]
+DEBUG [5.62 s]: modelerfour/flattener/new-transform - START inputs = 2
+DEBUG [5.62 s]: modelerfour/flattener/new-transform - END [0 s][102 MB]
+DEBUG [5.62 s]: modelerfour/grouper - START inputs = 2
+DEBUG [5.68 s]: modelerfour/grouper - END [0.06 s][104 MB]
+DEBUG [5.68 s]: modelerfour/grouper/new-transform - START inputs = 2
+DEBUG [5.68 s]: modelerfour/grouper/new-transform - END [0 s][104 MB]
+DEBUG [5.69 s]: modelerfour/pre-namer - START inputs = 2
+DEBUG [5.77 s]: modelerfour/pre-namer - END [0.08 s][107 MB]
+DEBUG [5.77 s]: modelerfour/pre-namer/new-transform - START inputs = 2
+DEBUG [5.78 s]: modelerfour/pre-namer/new-transform - END [0 s][107 MB]
+DEBUG [5.78 s]: modelerfour/checker - START inputs = 4
+DEBUG [5.84 s]: modelerfour/checker - END [0.06 s][109 MB]
+DEBUG [5.84 s]: modelerfour/identity - START inputs = 2
+DEBUG [5.84 s]: modelerfour/identity - END [0 s][109 MB]
+DEBUG [5.85 s]: bicep - START inputs = 2
+DEBUG [5.85 s]: modelerfour/emitter - START inputs = 2
+DEBUG [5.85 s]: modelerfour/notags/emitter - START inputs = 2
+DEBUG [5.85 s]: modelerfour/emitter - END [0 s][93 MB]
+DEBUG [5.85 s]: modelerfour/notags/emitter - END [0 s][93 MB]
+INFORMATION: autorest.bicep took 7ms
+DEBUG [5.93 s]: bicep - END [0.08 s][94 MB]
+DEBUG [5.93 s]: bicep/emitter - START inputs = 2
+DEBUG [5.93 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2021-01-11/types.json
+DEBUG [5.93 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2021-01-11/types.md
+DEBUG [5.93 s]: bicep/emitter - END [0 s][94 MB]
 Processing batch task - {"tag":"microsoft.healthcareapis-2020-03-30"} .
+VERBOSE [5.94 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.bicep.md'
+VERBOSE [5.95 s]: > Initial configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [5.95 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [5.95 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/default-configuration.md'
+VERBOSE [5.96 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/inspect.md'
+VERBOSE [5.97 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/directives.md'
+VERBOSE [5.98 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/pipeline.md'
+VERBOSE [6 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/loader-openapi.md'
+VERBOSE [6.01 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/miscellaneous.md'
+VERBOSE [6.02 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-powershell.md'
+VERBOSE [6.03 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azureresourceschema.md'
+VERBOSE [6.04 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-csharp.md'
+VERBOSE [6.06 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-go.md'
+VERBOSE [6.08 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-java.md'
+VERBOSE [6.1 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-nodejs.md'
+VERBOSE [6.12 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-php.md'
+VERBOSE [6.14 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-python.md'
+VERBOSE [6.15 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-ruby.md'
+VERBOSE [6.17 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-typescript.md'
+VERBOSE [6.19 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-validators.md'
+VERBOSE [6.21 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-az.md'
+VERBOSE [6.23 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-terraform.md'
+VERBOSE [6.25 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azure-functions.md'
+VERBOSE [6.27 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/graphs.md'
+VERBOSE [6.29 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/help-configuration.md'
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+VERBOSE [6.36 s]: > Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+VERBOSE [6.36 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+VERBOSE [6.89 s]: > Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+VERBOSE [6.89 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+DEBUG [7.2 s]: swagger-document/loader-swagger - START inputs = 0
+DEBUG [7.2 s]: openapi-document/loader-openapi - START inputs = 0
+DEBUG [7.2 s]: pipeline-emitter - START inputs = 0
+DEBUG [7.2 s]: configuration-emitter - START inputs = 0
+DEBUG [7.2 s]: pipeline-emitter - END [0.04 s][124 MB]
+DEBUG [7.2 s]: configuration-emitter - END [0.04 s][124 MB]
+VERBOSE [7.21 s]: Reading OpenAPI 2.0 file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2020-03-30/healthcare-apis.json
+DEBUG [7.21 s]: openapi-document/loader-openapi - END [0.05 s][128 MB]
+VERBOSE [7.24 s]: Reading $ref'd file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/common-types/resource-management/v1/privatelinks.json
+DEBUG [7.24 s]: openapi-document/individual/transform - SKIPPING
+DEBUG [7.24 s]: openapi-document/individual/schema-validator-openapi - SKIPPING
+DEBUG [7.24 s]: openapi-document/individual/identity - SKIPPING
+VERBOSE [7.26 s]: Reading $ref'd file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/common-types/resource-management/v1/types.json
+DEBUG [7.31 s]: swagger-document/loader-swagger - END [0.14 s][142 MB]
+DEBUG [7.31 s]: swagger-document/individual/transform - START inputs = 3
+DEBUG [7.41 s]: swagger-document/individual/transform - END [0.09 s][139 MB]
+DEBUG [7.41 s]: swagger-document/individual/schema-validator-swagger - START inputs = 3
+DEBUG [7.41 s]: swagger-document/individual/schema-validator-swagger - END [0 s][140 MB]
+DEBUG [7.41 s]: swagger-document/identity - START inputs = 3
+DEBUG [7.41 s]: swagger-document/individual/identity - START inputs = 3
+DEBUG [7.41 s]: swagger-document/identity - END [0 s][140 MB]
+DEBUG [7.41 s]: swagger-document/individual/identity - END [0 s][140 MB]
+DEBUG [7.41 s]: openapi-document/openapi-document-converter - START inputs = 3
+DEBUG [7.46 s]: openapi-document/openapi-document-converter - END [0.04 s][149 MB]
+DEBUG [7.46 s]: openapi-document/transform - START inputs = 3
+DEBUG [7.47 s]: openapi-document/transform - END [0 s][144 MB]
+DEBUG [7.47 s]: openapi-document/semantic-validator - START inputs = 3
 WARNING: Semantic validation was skipped.
+DEBUG [7.47 s]: openapi-document/semantic-validator - END [0 s][144 MB]
+DEBUG [7.47 s]: openapi-document/allof-cleaner - START inputs = 3
+DEBUG [7.48 s]: openapi-document/allof-cleaner - END [0 s][145 MB]
+DEBUG [7.48 s]: openapi-document/tree-shaker - START inputs = 3
+DEBUG [7.54 s]: openapi-document/tree-shaker - END [0.06 s][154 MB]
+DEBUG [7.54 s]: openapi-document/multi-api-merger - START inputs = 3
+DEBUG [7.64 s]: openapi-document/multi-api-merger - END [0.09 s][170 MB]
+DEBUG [7.65 s]: openapi-document/components-cleaner - START inputs = 1
+DEBUG [7.73 s]: openapi-document/components-cleaner - END [0.08 s][173 MB]
+DEBUG [7.74 s]: openapi-document/component-modifiers - START inputs = 1
+DEBUG [7.75 s]: openapi-document/component-modifiers - END [0.01 s][181 MB]
+DEBUG [7.75 s]: openapi-document/api-version-parameter-handler - START inputs = 1
+DEBUG [7.75 s]: openapi-document/api-version-parameter-handler - END [0 s][181 MB]
+DEBUG [7.75 s]: openapi-document/profile-filter - START inputs = 1
+DEBUG [7.75 s]: openapi-document/profile-filter - END [0 s][181 MB]
+DEBUG [7.75 s]: openapi-document/model-deduplicator - START inputs = 1
+DEBUG [7.75 s]: openapi-document/emitter - START inputs = 1
+DEBUG [7.75 s]: openapi-document/model-deduplicator - END [0 s][182 MB]
+DEBUG [7.75 s]: openapi-document/emitter - END [0 s][182 MB]
+DEBUG [7.75 s]: openapi-document/enum-deduplicator - START inputs = 1
+DEBUG [7.86 s]: openapi-document/enum-deduplicator - END [0.11 s][191 MB]
+DEBUG [7.86 s]: openapi-document/subset-reducer - START inputs = 1
+DEBUG [7.86 s]: openapi-document/subset-reducer - END [0 s][191 MB]
+DEBUG [7.86 s]: openapi-document/quick-check - START inputs = 1
+DEBUG [7.86 s]: openapi-document/multi-api/reset-identity - START inputs = 1
+DEBUG [7.88 s]: openapi-document/quick-check - END [0.01 s][187 MB]
+DEBUG [7.88 s]: openapi-document/multi-api/reset-identity - END [0.01 s][187 MB]
+DEBUG [7.88 s]: openapi-document/multi-api/identity - START inputs = 1
+DEBUG [7.88 s]: openapi-document/multi-api/identity - END [0 s][187 MB]
+DEBUG [7.88 s]: openapi-document/multi-api/emitter - START inputs = 1
+DEBUG [7.88 s]: prechecker - START inputs = 1
+DEBUG [7.88 s]: openapi-document/multi-api/emitter - END [0 s][188 MB]
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServicesResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkServiceConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+VERBOSE [7.9 s]: Found and removed 0 duplicate schema
+DEBUG [7.93 s]: prechecker - END [0.04 s][190 MB]
+DEBUG [7.93 s]: modelerfour - START inputs = 2
+VERBOSE [7.94 s]:   ModelerFour/api-version-mode:client
+VERBOSE [7.95 s]:   ModelerFour/api-version-parameter:constant
+VERBOSE [7.95 s]:   ModelerFour/use-model-namespace:false
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2020-03-30/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
-INFORMATION: autorest.bicep took 4ms
+DEBUG [8.05 s]: modelerfour - END [0.12 s][192 MB]
+DEBUG [8.05 s]: modelerfour/new-transform - START inputs = 2
+DEBUG [8.05 s]: modelerfour/new-transform - END [0 s][192 MB]
+DEBUG [8.05 s]: modelerfour/flattener - START inputs = 2
+DEBUG [8.11 s]: modelerfour/flattener - END [0.05 s][195 MB]
+DEBUG [8.11 s]: modelerfour/flattener/new-transform - START inputs = 2
+DEBUG [8.11 s]: modelerfour/flattener/new-transform - END [0 s][195 MB]
+DEBUG [8.11 s]: modelerfour/grouper - START inputs = 2
+DEBUG [8.16 s]: modelerfour/grouper - END [0.05 s][197 MB]
+DEBUG [8.16 s]: modelerfour/grouper/new-transform - START inputs = 2
+DEBUG [8.16 s]: modelerfour/grouper/new-transform - END [0 s][197 MB]
+DEBUG [8.16 s]: modelerfour/pre-namer - START inputs = 2
+DEBUG [8.24 s]: modelerfour/pre-namer - END [0.07 s][199 MB]
+DEBUG [8.24 s]: modelerfour/pre-namer/new-transform - START inputs = 2
+DEBUG [8.24 s]: modelerfour/pre-namer/new-transform - END [0 s][199 MB]
+DEBUG [8.24 s]: modelerfour/checker - START inputs = 4
+DEBUG [8.29 s]: modelerfour/checker - END [0.05 s][202 MB]
+DEBUG [8.29 s]: modelerfour/identity - START inputs = 2
+DEBUG [8.29 s]: modelerfour/identity - END [0 s][202 MB]
+DEBUG [8.29 s]: bicep - START inputs = 2
+DEBUG [8.29 s]: modelerfour/emitter - START inputs = 2
+DEBUG [8.29 s]: modelerfour/notags/emitter - START inputs = 2
+DEBUG [8.3 s]: modelerfour/emitter - END [0 s][202 MB]
+DEBUG [8.3 s]: modelerfour/notags/emitter - END [0 s][202 MB]
+INFORMATION: autorest.bicep took 2ms
+DEBUG [8.34 s]: bicep - END [0.04 s][203 MB]
+DEBUG [8.34 s]: bicep/emitter - START inputs = 2
+DEBUG [8.34 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2020-03-30/types.json
+DEBUG [8.34 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2020-03-30/types.md
+DEBUG [8.34 s]: bicep/emitter - END [0 s][203 MB]
 Processing batch task - {"tag":"microsoft.healthcareapis-2020-03-15"} .
+VERBOSE [8.34 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.bicep.md'
+VERBOSE [8.35 s]: > Initial configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [8.35 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [8.36 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/default-configuration.md'
+VERBOSE [8.37 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/inspect.md'
+VERBOSE [8.37 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/directives.md'
+VERBOSE [8.38 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/pipeline.md'
+VERBOSE [8.39 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/loader-openapi.md'
+VERBOSE [8.4 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/miscellaneous.md'
+VERBOSE [8.42 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-powershell.md'
+VERBOSE [8.43 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azureresourceschema.md'
+VERBOSE [8.44 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-csharp.md'
+VERBOSE [8.45 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-go.md'
+VERBOSE [8.47 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-java.md'
+VERBOSE [8.48 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-nodejs.md'
+VERBOSE [8.5 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-php.md'
+VERBOSE [8.51 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-python.md'
+VERBOSE [8.53 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-ruby.md'
+VERBOSE [8.55 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-typescript.md'
+VERBOSE [8.56 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-validators.md'
+VERBOSE [8.58 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-az.md'
+VERBOSE [8.6 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-terraform.md'
+VERBOSE [8.62 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azure-functions.md'
+VERBOSE [8.64 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/graphs.md'
+VERBOSE [8.66 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/help-configuration.md'
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+VERBOSE [8.73 s]: > Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+VERBOSE [8.73 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+VERBOSE [9.26 s]: > Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+VERBOSE [9.26 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+DEBUG [9.54 s]: swagger-document/loader-swagger - START inputs = 0
+DEBUG [9.55 s]: openapi-document/loader-openapi - START inputs = 0
+DEBUG [9.55 s]: pipeline-emitter - START inputs = 0
+DEBUG [9.55 s]: configuration-emitter - START inputs = 0
+DEBUG [9.55 s]: pipeline-emitter - END [0.03 s][214 MB]
+DEBUG [9.55 s]: configuration-emitter - END [0.03 s][214 MB]
+VERBOSE [9.55 s]: Reading OpenAPI 2.0 file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2020-03-15/healthcare-apis.json
+DEBUG [9.55 s]: openapi-document/loader-openapi - END [0.03 s][218 MB]
+DEBUG [9.57 s]: openapi-document/individual/transform - SKIPPING
+DEBUG [9.57 s]: openapi-document/individual/schema-validator-openapi - SKIPPING
+DEBUG [9.57 s]: openapi-document/individual/identity - SKIPPING
+DEBUG [9.6 s]: swagger-document/loader-swagger - END [0.08 s][224 MB]
+DEBUG [9.6 s]: swagger-document/individual/transform - START inputs = 1
+DEBUG [9.65 s]: swagger-document/individual/transform - END [0.05 s][223 MB]
+DEBUG [9.65 s]: swagger-document/individual/schema-validator-swagger - START inputs = 1
+DEBUG [9.66 s]: swagger-document/individual/schema-validator-swagger - END [0 s][224 MB]
+DEBUG [9.66 s]: swagger-document/identity - START inputs = 1
+DEBUG [9.66 s]: swagger-document/individual/identity - START inputs = 1
+DEBUG [9.66 s]: swagger-document/identity - END [0 s][224 MB]
+DEBUG [9.66 s]: swagger-document/individual/identity - END [0 s][224 MB]
+DEBUG [9.66 s]: openapi-document/openapi-document-converter - START inputs = 1
+DEBUG [9.68 s]: openapi-document/openapi-document-converter - END [0.02 s][224 MB]
+DEBUG [9.68 s]: openapi-document/transform - START inputs = 1
+DEBUG [9.69 s]: openapi-document/transform - END [0 s][226 MB]
+DEBUG [9.69 s]: openapi-document/semantic-validator - START inputs = 1
 WARNING: Semantic validation was skipped.
+DEBUG [9.69 s]: openapi-document/semantic-validator - END [0 s][226 MB]
+DEBUG [9.69 s]: openapi-document/allof-cleaner - START inputs = 1
+DEBUG [9.69 s]: openapi-document/allof-cleaner - END [0 s][227 MB]
+DEBUG [9.69 s]: openapi-document/tree-shaker - START inputs = 1
+DEBUG [9.73 s]: openapi-document/tree-shaker - END [0.03 s][232 MB]
+DEBUG [9.73 s]: openapi-document/multi-api-merger - START inputs = 1
+DEBUG [9.78 s]: openapi-document/multi-api-merger - END [0.05 s][235 MB]
+DEBUG [9.78 s]: openapi-document/components-cleaner - START inputs = 1
+DEBUG [9.83 s]: openapi-document/components-cleaner - END [0.05 s][245 MB]
+DEBUG [9.84 s]: openapi-document/component-modifiers - START inputs = 1
+DEBUG [9.84 s]: openapi-document/component-modifiers - END [0 s][250 MB]
+DEBUG [9.85 s]: openapi-document/api-version-parameter-handler - START inputs = 1
+DEBUG [9.85 s]: openapi-document/api-version-parameter-handler - END [0 s][243 MB]
+DEBUG [9.85 s]: openapi-document/profile-filter - START inputs = 1
+DEBUG [9.85 s]: openapi-document/profile-filter - END [0 s][243 MB]
+DEBUG [9.85 s]: openapi-document/model-deduplicator - START inputs = 1
+DEBUG [9.85 s]: openapi-document/emitter - START inputs = 1
+DEBUG [9.85 s]: openapi-document/model-deduplicator - END [0 s][243 MB]
+DEBUG [9.85 s]: openapi-document/emitter - END [0 s][243 MB]
+DEBUG [9.85 s]: openapi-document/enum-deduplicator - START inputs = 1
+DEBUG [9.92 s]: openapi-document/enum-deduplicator - END [0.06 s][258 MB]
+DEBUG [9.92 s]: openapi-document/subset-reducer - START inputs = 1
+DEBUG [9.92 s]: openapi-document/subset-reducer - END [0 s][258 MB]
+DEBUG [9.92 s]: openapi-document/quick-check - START inputs = 1
+DEBUG [9.92 s]: openapi-document/multi-api/reset-identity - START inputs = 1
+DEBUG [9.93 s]: openapi-document/quick-check - END [0.01 s][251 MB]
+DEBUG [9.93 s]: openapi-document/multi-api/reset-identity - END [0.01 s][251 MB]
+DEBUG [9.93 s]: openapi-document/multi-api/identity - START inputs = 1
+DEBUG [9.93 s]: openapi-document/multi-api/identity - END [0 s][251 MB]
+DEBUG [9.93 s]: openapi-document/multi-api/emitter - START inputs = 1
+DEBUG [9.93 s]: prechecker - START inputs = 1
+DEBUG [9.93 s]: openapi-document/multi-api/emitter - END [0 s][252 MB]
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+VERBOSE [9.95 s]: Found and removed 0 duplicate schema
+DEBUG [9.96 s]: prechecker - END [0.02 s][254 MB]
+DEBUG [9.96 s]: modelerfour - START inputs = 2
+VERBOSE [9.98 s]:   ModelerFour/api-version-mode:client
+VERBOSE [9.98 s]:   ModelerFour/api-version-parameter:constant
+VERBOSE [9.98 s]:   ModelerFour/use-model-namespace:false
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2020-03-15/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
-INFORMATION: autorest.bicep took 2ms
+DEBUG [10.05 s]: modelerfour - END [0.08 s][255 MB]
+DEBUG [10.05 s]: modelerfour/new-transform - START inputs = 2
+DEBUG [10.05 s]: modelerfour/new-transform - END [0 s][255 MB]
+DEBUG [10.05 s]: modelerfour/flattener - START inputs = 2
+DEBUG [10.08 s]: modelerfour/flattener - END [0.03 s][257 MB]
+DEBUG [10.09 s]: modelerfour/flattener/new-transform - START inputs = 2
+DEBUG [10.09 s]: modelerfour/flattener/new-transform - END [0 s][257 MB]
+DEBUG [10.09 s]: modelerfour/grouper - START inputs = 2
+DEBUG [10.12 s]: modelerfour/grouper - END [0.03 s][259 MB]
+DEBUG [10.12 s]: modelerfour/grouper/new-transform - START inputs = 2
+DEBUG [10.12 s]: modelerfour/grouper/new-transform - END [0 s][259 MB]
+DEBUG [10.12 s]: modelerfour/pre-namer - START inputs = 2
+DEBUG [10.17 s]: modelerfour/pre-namer - END [0.04 s][260 MB]
+DEBUG [10.17 s]: modelerfour/pre-namer/new-transform - START inputs = 2
+DEBUG [10.17 s]: modelerfour/pre-namer/new-transform - END [0 s][260 MB]
+DEBUG [10.17 s]: modelerfour/checker - START inputs = 4
+DEBUG [10.21 s]: modelerfour/checker - END [0.03 s][262 MB]
+DEBUG [10.21 s]: modelerfour/identity - START inputs = 2
+DEBUG [10.21 s]: modelerfour/identity - END [0 s][262 MB]
+DEBUG [10.21 s]: bicep - START inputs = 2
+DEBUG [10.21 s]: modelerfour/emitter - START inputs = 2
+DEBUG [10.21 s]: modelerfour/notags/emitter - START inputs = 2
+DEBUG [10.21 s]: modelerfour/emitter - END [0 s][263 MB]
+DEBUG [10.21 s]: modelerfour/notags/emitter - END [0 s][263 MB]
+INFORMATION: autorest.bicep took 1ms
+DEBUG [10.22 s]: bicep - END [0.01 s][263 MB]
+DEBUG [10.22 s]: bicep/emitter - START inputs = 2
+DEBUG [10.22 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2020-03-15/types.json
+DEBUG [10.23 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2020-03-15/types.md
+DEBUG [10.23 s]: bicep/emitter - END [0 s][263 MB]
 Processing batch task - {"tag":"microsoft.healthcareapis-2019-09-16"} .
+VERBOSE [10.24 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.bicep.md'
+VERBOSE [10.24 s]: > Initial configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [10.24 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [10.25 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/default-configuration.md'
+VERBOSE [10.26 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/inspect.md'
+VERBOSE [10.26 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/directives.md'
+VERBOSE [10.27 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/pipeline.md'
+VERBOSE [10.28 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/loader-openapi.md'
+VERBOSE [10.29 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/miscellaneous.md'
+VERBOSE [10.3 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-powershell.md'
+VERBOSE [10.31 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azureresourceschema.md'
+VERBOSE [10.32 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-csharp.md'
+VERBOSE [10.34 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-go.md'
+VERBOSE [10.35 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-java.md'
+VERBOSE [10.37 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-nodejs.md'
+VERBOSE [10.38 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-php.md'
+VERBOSE [10.4 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-python.md'
+VERBOSE [10.42 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-ruby.md'
+VERBOSE [10.43 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-typescript.md'
+VERBOSE [10.45 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-validators.md'
+VERBOSE [10.47 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-az.md'
+VERBOSE [10.49 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-terraform.md'
+VERBOSE [10.51 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azure-functions.md'
+VERBOSE [10.53 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/graphs.md'
+VERBOSE [10.55 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/help-configuration.md'
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+VERBOSE [10.61 s]: > Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+VERBOSE [10.61 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+VERBOSE [11.17 s]: > Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+VERBOSE [11.17 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+DEBUG [11.44 s]: swagger-document/loader-swagger - START inputs = 0
+DEBUG [11.44 s]: openapi-document/loader-openapi - START inputs = 0
+DEBUG [11.44 s]: pipeline-emitter - START inputs = 0
+DEBUG [11.44 s]: configuration-emitter - START inputs = 0
+DEBUG [11.44 s]: pipeline-emitter - END [0.03 s][274 MB]
+DEBUG [11.44 s]: configuration-emitter - END [0.03 s][274 MB]
+VERBOSE [11.45 s]: Reading OpenAPI 2.0 file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2019-09-16/healthcare-apis.json
+DEBUG [11.45 s]: openapi-document/loader-openapi - END [0.03 s][277 MB]
+DEBUG [11.47 s]: openapi-document/individual/transform - SKIPPING
+DEBUG [11.47 s]: openapi-document/individual/schema-validator-openapi - SKIPPING
+DEBUG [11.47 s]: openapi-document/individual/identity - SKIPPING
+DEBUG [11.49 s]: swagger-document/loader-swagger - END [0.08 s][283 MB]
+DEBUG [11.49 s]: swagger-document/individual/transform - START inputs = 1
+DEBUG [11.55 s]: swagger-document/individual/transform - END [0.05 s][283 MB]
+DEBUG [11.55 s]: swagger-document/individual/schema-validator-swagger - START inputs = 1
+DEBUG [11.55 s]: swagger-document/individual/schema-validator-swagger - END [0 s][283 MB]
+DEBUG [11.55 s]: swagger-document/identity - START inputs = 1
+DEBUG [11.55 s]: swagger-document/individual/identity - START inputs = 1
+DEBUG [11.55 s]: swagger-document/identity - END [0 s][284 MB]
+DEBUG [11.55 s]: swagger-document/individual/identity - END [0 s][284 MB]
+DEBUG [11.55 s]: openapi-document/openapi-document-converter - START inputs = 1
+DEBUG [11.58 s]: openapi-document/openapi-document-converter - END [0.02 s][284 MB]
+DEBUG [11.58 s]: openapi-document/transform - START inputs = 1
+DEBUG [11.58 s]: openapi-document/transform - END [0 s][286 MB]
+DEBUG [11.58 s]: openapi-document/semantic-validator - START inputs = 1
 WARNING: Semantic validation was skipped.
+DEBUG [11.58 s]: openapi-document/semantic-validator - END [0 s][286 MB]
+DEBUG [11.58 s]: openapi-document/allof-cleaner - START inputs = 1
+DEBUG [11.58 s]: openapi-document/allof-cleaner - END [0 s][287 MB]
+DEBUG [11.58 s]: openapi-document/tree-shaker - START inputs = 1
+DEBUG [11.62 s]: openapi-document/tree-shaker - END [0.03 s][292 MB]
+DEBUG [11.62 s]: openapi-document/multi-api-merger - START inputs = 1
+DEBUG [11.67 s]: openapi-document/multi-api-merger - END [0.05 s][294 MB]
+DEBUG [11.67 s]: openapi-document/components-cleaner - START inputs = 1
+DEBUG [11.73 s]: openapi-document/components-cleaner - END [0.05 s][304 MB]
+DEBUG [11.73 s]: openapi-document/component-modifiers - START inputs = 1
+DEBUG [11.73 s]: openapi-document/component-modifiers - END [0 s][309 MB]
+DEBUG [11.73 s]: openapi-document/api-version-parameter-handler - START inputs = 1
+DEBUG [11.73 s]: openapi-document/api-version-parameter-handler - END [0 s][309 MB]
+DEBUG [11.74 s]: openapi-document/profile-filter - START inputs = 1
+DEBUG [11.74 s]: openapi-document/profile-filter - END [0 s][309 MB]
+DEBUG [11.74 s]: openapi-document/model-deduplicator - START inputs = 1
+DEBUG [11.74 s]: openapi-document/emitter - START inputs = 1
+DEBUG [11.74 s]: openapi-document/model-deduplicator - END [0 s][309 MB]
+DEBUG [11.74 s]: openapi-document/emitter - END [0 s][309 MB]
+DEBUG [11.74 s]: openapi-document/enum-deduplicator - START inputs = 1
+DEBUG [11.81 s]: openapi-document/enum-deduplicator - END [0.06 s][314 MB]
+DEBUG [11.83 s]: openapi-document/subset-reducer - START inputs = 1
+DEBUG [11.83 s]: openapi-document/subset-reducer - END [0 s][314 MB]
+DEBUG [11.83 s]: openapi-document/quick-check - START inputs = 1
+DEBUG [11.83 s]: openapi-document/multi-api/reset-identity - START inputs = 1
+DEBUG [11.86 s]: openapi-document/quick-check - END [0.03 s][319 MB]
+DEBUG [11.86 s]: openapi-document/multi-api/reset-identity - END [0.03 s][319 MB]
+DEBUG [11.87 s]: openapi-document/multi-api/identity - START inputs = 1
+DEBUG [11.87 s]: openapi-document/multi-api/identity - END [0 s][319 MB]
+DEBUG [11.87 s]: openapi-document/multi-api/emitter - START inputs = 1
+DEBUG [11.87 s]: prechecker - START inputs = 1
+DEBUG [11.87 s]: openapi-document/multi-api/emitter - END [0 s][320 MB]
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+VERBOSE [11.92 s]: Found and removed 0 duplicate schema
+DEBUG [11.96 s]: prechecker - END [0.09 s][124 MB]
+DEBUG [11.96 s]: modelerfour - START inputs = 2
+VERBOSE [11.98 s]:   ModelerFour/api-version-mode:client
+VERBOSE [11.98 s]:   ModelerFour/api-version-parameter:constant
+VERBOSE [11.98 s]:   ModelerFour/use-model-namespace:false
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/stable/2019-09-16/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+DEBUG [12.06 s]: modelerfour - END [0.09 s][127 MB]
+DEBUG [12.06 s]: modelerfour/new-transform - START inputs = 2
+DEBUG [12.06 s]: modelerfour/new-transform - END [0 s][127 MB]
+DEBUG [12.06 s]: modelerfour/flattener - START inputs = 2
+DEBUG [12.1 s]: modelerfour/flattener - END [0.03 s][128 MB]
+DEBUG [12.1 s]: modelerfour/flattener/new-transform - START inputs = 2
+DEBUG [12.1 s]: modelerfour/flattener/new-transform - END [0 s][128 MB]
+DEBUG [12.1 s]: modelerfour/grouper - START inputs = 2
+DEBUG [12.13 s]: modelerfour/grouper - END [0.03 s][130 MB]
+DEBUG [12.13 s]: modelerfour/grouper/new-transform - START inputs = 2
+DEBUG [12.13 s]: modelerfour/grouper/new-transform - END [0 s][130 MB]
+DEBUG [12.13 s]: modelerfour/pre-namer - START inputs = 2
+DEBUG [12.19 s]: modelerfour/pre-namer - END [0.05 s][131 MB]
+DEBUG [12.19 s]: modelerfour/pre-namer/new-transform - START inputs = 2
+DEBUG [12.19 s]: modelerfour/pre-namer/new-transform - END [0 s][132 MB]
+DEBUG [12.19 s]: modelerfour/checker - START inputs = 4
+DEBUG [12.22 s]: modelerfour/checker - END [0.03 s][133 MB]
+DEBUG [12.23 s]: modelerfour/identity - START inputs = 2
+DEBUG [12.23 s]: modelerfour/identity - END [0 s][133 MB]
+DEBUG [12.23 s]: bicep - START inputs = 2
+DEBUG [12.23 s]: modelerfour/emitter - START inputs = 2
+DEBUG [12.23 s]: modelerfour/notags/emitter - START inputs = 2
+DEBUG [12.23 s]: modelerfour/emitter - END [0 s][133 MB]
+DEBUG [12.23 s]: modelerfour/notags/emitter - END [0 s][134 MB]
 INFORMATION: autorest.bicep took 1ms
+DEBUG [12.27 s]: bicep - END [0.04 s][134 MB]
+DEBUG [12.27 s]: bicep/emitter - START inputs = 2
+DEBUG [12.27 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2019-09-16/types.json
+DEBUG [12.27 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2019-09-16/types.md
+DEBUG [12.27 s]: bicep/emitter - END [0 s][134 MB]
 Processing batch task - {"tag":"microsoft.healthcareapis-2018-08-20-preview"} .
+VERBOSE [12.28 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.bicep.md'
+VERBOSE [12.29 s]: > Initial configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [12.29 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/readme.md'
+VERBOSE [12.3 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/default-configuration.md'
+VERBOSE [12.3 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/inspect.md'
+VERBOSE [12.31 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/directives.md'
+VERBOSE [12.32 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/pipeline.md'
+VERBOSE [12.33 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/loader-openapi.md'
+VERBOSE [12.34 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/miscellaneous.md'
+VERBOSE [12.35 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-powershell.md'
+VERBOSE [12.36 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azureresourceschema.md'
+VERBOSE [12.37 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-csharp.md'
+VERBOSE [12.39 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-go.md'
+VERBOSE [12.4 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-java.md'
+VERBOSE [12.42 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-nodejs.md'
+VERBOSE [12.43 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-php.md'
+VERBOSE [12.45 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-python.md'
+VERBOSE [12.46 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-ruby.md'
+VERBOSE [12.48 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-typescript.md'
+VERBOSE [12.5 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-validators.md'
+VERBOSE [12.52 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-az.md'
+VERBOSE [12.53 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-terraform.md'
+VERBOSE [12.55 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/plugin-azure-functions.md'
+VERBOSE [12.57 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/graphs.md'
+VERBOSE [12.6 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_core@3.5.0-ci.b8e3f92c0/node_modules/@autorest/core/dist/resources/help-configuration.md'
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (4.19.2->4.19.2)
+VERBOSE [12.67 s]: > Including extension configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+VERBOSE [12.67 s]: > Including configuration file 'file:///home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep/README.md'
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (https://tinyurl.com/yhlkz69y->4.20.0-ci.b8e3f92c0)
+VERBOSE [13.23 s]: > Including extension configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+VERBOSE [13.23 s]: > Including configuration file 'file:///home/runner/.autorest/@autorest_modelerfour@4.20.0-ci.b8e3f92c0/node_modules/@autorest/modelerfour/readme.md'
+DEBUG [13.51 s]: swagger-document/loader-swagger - START inputs = 0
+DEBUG [13.51 s]: openapi-document/loader-openapi - START inputs = 0
+DEBUG [13.51 s]: pipeline-emitter - START inputs = 0
+DEBUG [13.51 s]: configuration-emitter - START inputs = 0
+DEBUG [13.51 s]: pipeline-emitter - END [0.03 s][148 MB]
+DEBUG [13.51 s]: configuration-emitter - END [0.03 s][148 MB]
+VERBOSE [13.51 s]: Reading OpenAPI 2.0 file file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/preview/2018-08-20-preview/healthcare-apis.json
+DEBUG [13.51 s]: openapi-document/loader-openapi - END [0.03 s][151 MB]
+DEBUG [13.54 s]: openapi-document/individual/transform - SKIPPING
+DEBUG [13.54 s]: openapi-document/individual/schema-validator-openapi - SKIPPING
+DEBUG [13.54 s]: openapi-document/individual/identity - SKIPPING
+DEBUG [13.56 s]: swagger-document/loader-swagger - END [0.07 s][157 MB]
+DEBUG [13.56 s]: swagger-document/individual/transform - START inputs = 1
+DEBUG [13.61 s]: swagger-document/individual/transform - END [0.05 s][157 MB]
+DEBUG [13.61 s]: swagger-document/individual/schema-validator-swagger - START inputs = 1
+DEBUG [13.61 s]: swagger-document/individual/schema-validator-swagger - END [0 s][157 MB]
+DEBUG [13.61 s]: swagger-document/identity - START inputs = 1
+DEBUG [13.61 s]: swagger-document/individual/identity - START inputs = 1
+DEBUG [13.61 s]: swagger-document/identity - END [0 s][157 MB]
+DEBUG [13.61 s]: swagger-document/individual/identity - END [0 s][157 MB]
+DEBUG [13.61 s]: openapi-document/openapi-document-converter - START inputs = 1
+DEBUG [13.63 s]: openapi-document/openapi-document-converter - END [0.01 s][168 MB]
+DEBUG [13.64 s]: openapi-document/transform - START inputs = 1
+DEBUG [13.64 s]: openapi-document/transform - END [0 s][158 MB]
+DEBUG [13.64 s]: openapi-document/semantic-validator - START inputs = 1
 WARNING: Semantic validation was skipped.
+DEBUG [13.64 s]: openapi-document/semantic-validator - END [0 s][158 MB]
+DEBUG [13.64 s]: openapi-document/allof-cleaner - START inputs = 1
+DEBUG [13.65 s]: openapi-document/allof-cleaner - END [0 s][159 MB]
+DEBUG [13.65 s]: openapi-document/tree-shaker - START inputs = 1
+DEBUG [13.68 s]: openapi-document/tree-shaker - END [0.03 s][162 MB]
+DEBUG [13.68 s]: openapi-document/multi-api-merger - START inputs = 1
+DEBUG [13.72 s]: openapi-document/multi-api-merger - END [0.04 s][175 MB]
+DEBUG [13.72 s]: openapi-document/components-cleaner - START inputs = 1
+DEBUG [13.77 s]: openapi-document/components-cleaner - END [0.04 s][183 MB]
+DEBUG [13.78 s]: openapi-document/component-modifiers - START inputs = 1
+DEBUG [13.78 s]: openapi-document/component-modifiers - END [0 s][178 MB]
+DEBUG [13.78 s]: openapi-document/api-version-parameter-handler - START inputs = 1
+DEBUG [13.78 s]: openapi-document/api-version-parameter-handler - END [0 s][178 MB]
+DEBUG [13.78 s]: openapi-document/profile-filter - START inputs = 1
+DEBUG [13.78 s]: openapi-document/profile-filter - END [0 s][178 MB]
+DEBUG [13.78 s]: openapi-document/model-deduplicator - START inputs = 1
+DEBUG [13.78 s]: openapi-document/emitter - START inputs = 1
+DEBUG [13.78 s]: openapi-document/model-deduplicator - END [0 s][178 MB]
+DEBUG [13.79 s]: openapi-document/emitter - END [0 s][178 MB]
+DEBUG [13.79 s]: openapi-document/enum-deduplicator - START inputs = 1
+DEBUG [13.85 s]: openapi-document/enum-deduplicator - END [0.06 s][193 MB]
+DEBUG [13.85 s]: openapi-document/subset-reducer - START inputs = 1
+DEBUG [13.85 s]: openapi-document/subset-reducer - END [0 s][179 MB]
+DEBUG [13.85 s]: openapi-document/quick-check - START inputs = 1
+DEBUG [13.85 s]: openapi-document/multi-api/reset-identity - START inputs = 1
+DEBUG [13.86 s]: openapi-document/quick-check - END [0 s][185 MB]
+DEBUG [13.86 s]: openapi-document/multi-api/reset-identity - END [0 s][185 MB]
+DEBUG [13.86 s]: openapi-document/multi-api/identity - START inputs = 1
+DEBUG [13.86 s]: openapi-document/multi-api/identity - END [0 s][185 MB]
+DEBUG [13.86 s]: openapi-document/multi-api/emitter - START inputs = 1
+DEBUG [13.86 s]: prechecker - START inputs = 1
+DEBUG [13.86 s]: openapi-document/multi-api/emitter - END [0 s][185 MB]
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ServiceAccessPolicyEntry' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+VERBOSE [13.87 s]: Found and removed 0 duplicate schema
+DEBUG [13.89 s]: prechecker - END [0.02 s][187 MB]
+DEBUG [13.89 s]: modelerfour - START inputs = 2
+VERBOSE [13.91 s]:   ModelerFour/api-version-mode:client
+VERBOSE [13.91 s]:   ModelerFour/api-version-parameter:constant
+VERBOSE [13.91 s]:   ModelerFour/use-model-namespace:false
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/healthcareapis/resource-manager/Microsoft.HealthcareApis/preview/2018-08-20-preview/healthcare-apis.json#/components/schemas/OperationResultsDescription-properties
+DEBUG [13.97 s]: modelerfour - END [0.07 s][188 MB]
+DEBUG [13.97 s]: modelerfour/new-transform - START inputs = 2
+DEBUG [13.97 s]: modelerfour/new-transform - END [0 s][189 MB]
+DEBUG [13.97 s]: modelerfour/flattener - START inputs = 2
+DEBUG [14.01 s]: modelerfour/flattener - END [0.03 s][190 MB]
+DEBUG [14.01 s]: modelerfour/flattener/new-transform - START inputs = 2
+DEBUG [14.01 s]: modelerfour/flattener/new-transform - END [0 s][190 MB]
+DEBUG [14.01 s]: modelerfour/grouper - START inputs = 2
+DEBUG [14.04 s]: modelerfour/grouper - END [0.03 s][192 MB]
+DEBUG [14.04 s]: modelerfour/grouper/new-transform - START inputs = 2
+DEBUG [14.04 s]: modelerfour/grouper/new-transform - END [0 s][192 MB]
+DEBUG [14.04 s]: modelerfour/pre-namer - START inputs = 2
+DEBUG [14.09 s]: modelerfour/pre-namer - END [0.04 s][193 MB]
+DEBUG [14.09 s]: modelerfour/pre-namer/new-transform - START inputs = 2
+DEBUG [14.09 s]: modelerfour/pre-namer/new-transform - END [0 s][193 MB]
+DEBUG [14.09 s]: modelerfour/checker - START inputs = 4
+DEBUG [14.13 s]: modelerfour/checker - END [0.04 s][184 MB]
+DEBUG [14.13 s]: modelerfour/identity - START inputs = 2
+DEBUG [14.13 s]: modelerfour/identity - END [0 s][184 MB]
+DEBUG [14.13 s]: bicep - START inputs = 2
+DEBUG [14.13 s]: modelerfour/emitter - START inputs = 2
+DEBUG [14.13 s]: modelerfour/notags/emitter - START inputs = 2
+DEBUG [14.13 s]: modelerfour/emitter - END [0 s][184 MB]
+DEBUG [14.13 s]: modelerfour/notags/emitter - END [0 s][184 MB]
 INFORMATION: autorest.bicep took 1ms
-[13.28 s] Generation Complete
+DEBUG [14.15 s]: bicep - END [0.02 s][185 MB]
+DEBUG [14.15 s]: bicep/emitter - START inputs = 2
+DEBUG [14.15 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2018-08-20-preview/types.json
+DEBUG [14.15 s]: Emitting 'bicep-files' at file:///tmp/_bcp_1625795651387/healthcareapis/microsoft.healthcareapis/2018-08-20-preview/types.md
+DEBUG [14.15 s]: bicep/emitter - END [0 s][185 MB]
+[14.16 s] Clearing Folders.
+[14.16 s] Writing Outputs.
+[14.16 s] Generation Complete
+[14.16 s] Shutting Down.
+[14.16 s] Exiting.

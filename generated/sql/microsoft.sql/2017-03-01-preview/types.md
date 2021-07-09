@@ -65,6 +65,19 @@
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Sql/servers/databases@2017-03-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of database. This is metadata used for the Azure portal experience.
+* **location**: string (Required): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties): The database's properties.
+* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Sql/servers/databases/auditingSettings@2017-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -332,6 +345,58 @@ Prerequisites for using managed identity authentication:
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
+
+## DatabaseProperties
+### Properties
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
+* **collation**: string: The collation of the database.
+* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary': Specifies the mode of database creation.
+
+Default: regular database creation.
+
+Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
+
+Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
+
+PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+
+Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
+
+Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
+
+RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+
+Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
+* **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
+* **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
+* **databaseId**: string (ReadOnly): The ID of the database.
+* **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
+* **elasticPoolId**: string: The resource identifier of the elastic pool containing this database.
+* **failoverGroupId**: string (ReadOnly): Failover Group resource identifier that this database belongs to.
+* **longTermRetentionBackupResourceId**: string: The resource identifier of the long term retention backup associated with create operation of this database.
+* **maxSizeBytes**: int: The max size of the database expressed in bytes.
+* **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
+* **recoveryServicesRecoveryPointId**: string: The resource identifier of the recovery point associated with create operation of this database.
+* **restorableDroppedDatabaseId**: string: The resource identifier of the restorable dropped database associated with create operation of this database.
+* **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database.
+* **sourceDatabaseDeletionDate**: string: Specifies the time that the database was deleted.
+* **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
+* **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+
+## Sku
+### Properties
+* **capacity**: int: Capacity of the particular SKU.
+* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
+* **size**: string: Size of the particular SKU
+* **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## DatabaseBlobAuditingPolicyProperties
 ### Properties
@@ -632,14 +697,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **databaseId**: string (Required): Resource ID of the database to store job metadata in.
 * **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly): The state of the job agent.
-
-## Sku
-### Properties
-* **capacity**: int: Capacity of the particular SKU.
-* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
-* **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
-* **size**: string: Size of the particular SKU
-* **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
 
 ## TrackedResourceTags
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties): Properties of a registration assignment.
+* **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties): The properties of the registration assignment.
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedServices/registrationDefinitions@2020-02-01-preview
@@ -15,75 +15,75 @@
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): Plan details for the managed services.
-* **properties**: [RegistrationDefinitionProperties](#registrationdefinitionproperties): Properties of a registration definition.
+* **plan**: [Plan](#plan): The details for the Managed Services offer’s plan in Azure Marketplace.
+* **properties**: [RegistrationDefinitionProperties](#registrationdefinitionproperties): The properties of a registration definition.
 * **type**: 'Microsoft.ManagedServices/registrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
-* **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): Registration definition inside registration assignment.
-* **registrationDefinitionId**: string (Required): Fully qualified path of the registration definition.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the registration definition.
+* **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): The registration definition associated with the registration assignment.
+* **registrationDefinitionId**: string (Required): The fully qualified path of the registration definition.
 
 ## RegistrationAssignmentPropertiesRegistrationDefinition
 ### Properties
-* **id**: string (ReadOnly): Fully qualified path of the registration definition.
-* **name**: string (ReadOnly): Name of the registration definition.
-* **plan**: [Plan](#plan): Plan details for the managed services.
-* **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties): Properties of registration definition inside registration assignment.
-* **type**: string (ReadOnly): Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
+* **id**: string (ReadOnly): The fully qualified path of the registration definition.
+* **name**: string (ReadOnly): The name of the registration definition.
+* **plan**: [Plan](#plan): The details for the Managed Services offer’s plan in Azure Marketplace.
+* **properties**: [RegistrationAssignmentPropertiesRegistrationDefinitionProperties](#registrationassignmentpropertiesregistrationdefinitionproperties): The properties of the registration definition associated with the registration assignment.
+* **type**: string (ReadOnly): The type of the Azure resource (Microsoft.ManagedServices/registrationDefinitions).
 
 ## Plan
 ### Properties
-* **name**: string (Required): The plan name.
-* **product**: string (Required): The product code.
-* **publisher**: string (Required): The publisher ID.
-* **version**: string (Required): The plan's version.
+* **name**: string (Required): Azure Marketplace plan name.
+* **product**: string (Required): Azure Marketplace product code.
+* **publisher**: string (Required): Azure Marketplace publisher ID.
+* **version**: string (Required): Azure Marketplace plan's version.
 
 ## RegistrationAssignmentPropertiesRegistrationDefinitionProperties
 ### Properties
-* **authorizations**: [Authorization](#authorization)[]: Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
-* **description**: string: Description of the registration definition.
-* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: Eligible PIM authorization tuple containing principal id of the user/security group or service principal, id of the built-in role, and just-in-time access policy setting
-* **managedByTenantId**: string: Id of the managedBy tenant.
-* **managedByTenantName**: string: Name of the managedBy tenant.
-* **manageeTenantId**: string: Id of the home tenant.
-* **manageeTenantName**: string: Name of the home tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': Current state of the registration definition.
-* **registrationDefinitionName**: string: Name of the registration definition.
+* **authorizations**: [Authorization](#authorization)[]: The collection of authorization objects describing the access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
+* **description**: string: The description of the registration definition.
+* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: The collection of eligible authorization objects describing the just-in-time access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
+* **managedByTenantId**: string: The identifier of the managedBy tenant.
+* **managedByTenantName**: string: The name of the managedBy tenant.
+* **manageeTenantId**: string: The identifier of the managed tenant.
+* **manageeTenantName**: string: The name of the managed tenant.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': The current provisioning state of the registration definition.
+* **registrationDefinitionName**: string: The name of the registration definition.
 
 ## Authorization
 ### Properties
-* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
-* **principalId**: string (Required): Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
-* **principalIdDisplayName**: string: Display name of the principal Id.
-* **roleDefinitionId**: string (Required): The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other principals.
+* **principalId**: string (Required): The identifier of the Azure Active Directory principal.
+* **principalIdDisplayName**: string: The display name of the Azure Active Directory principal.
+* **roleDefinitionId**: string (Required): The identifier of the Azure built-in role that defines the permissions that the Azure Active Directory principal will have on the projected scope.
 
 ## EligibleAuthorization
 ### Properties
 * **justInTimeAccessPolicy**: [JustInTimeAccessPolicy](#justintimeaccesspolicy): Just-in-time access policy setting.
-* **principalId**: string (Required): Principal Id of the security group/service principal/user that would be delegated permissions to the projected subscription
-* **principalIdDisplayName**: string: Display name of the principal Id.
-* **roleDefinitionId**: string (Required): The role definition identifier. This role will delegate all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+* **principalId**: string (Required): The identifier of the Azure Active Directory principal.
+* **principalIdDisplayName**: string: The display name of the Azure Active Directory principal.
+* **roleDefinitionId**: string (Required): The identifier of the Azure built-in role that defines the permissions that the Azure Active Directory principal will have on the projected scope.
 
 ## JustInTimeAccessPolicy
 ### Properties
 * **managedByTenantApprovers**: [EligibleApprover](#eligibleapprover)[]: The list of managedByTenant approvers for the eligible authorization.
-* **maximumActivationDuration**: string: Maximum access duration in ISO 8601 format.
-* **multiFactorAuthProvider**: 'Azure' | 'None' (Required): MFA provider.
+* **maximumActivationDuration**: string: The maximum access duration in ISO 8601 format for just-in-time access requests.
+* **multiFactorAuthProvider**: 'Azure' | 'None' (Required): The multi-factor authorization provider to be used for just-in-time access requests.
 
 ## EligibleApprover
 ### Properties
-* **principalId**: string (Required): Principal Id of the user or security group that will approve JIT activation requests for the eligible authorization.
-* **principalIdDisplayName**: string: Display name of the principal Id.
+* **principalId**: string (Required): The identifier of the Azure Active Directory principal.
+* **principalIdDisplayName**: string: The display name of the Azure Active Directory principal.
 
 ## RegistrationDefinitionProperties
 ### Properties
-* **authorizations**: [Authorization](#authorization)[] (Required): Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
-* **description**: string: Description of the registration definition.
-* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: Eligible PIM authorization tuple containing principal id of the user/security group or service principal, id of the built-in role, and just-in-time access policy setting
-* **managedByTenantId**: string (Required): Id of the managedBy tenant.
-* **managedByTenantName**: string (ReadOnly): Name of the managedBy tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Current state of the registration definition.
-* **registrationDefinitionName**: string: Name of the registration definition.
+* **authorizations**: [Authorization](#authorization)[] (Required): The collection of authorization objects describing the access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
+* **description**: string: The description of the registration definition.
+* **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: The collection of eligible authorization objects describing the just-in-time access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
+* **managedByTenantId**: string (Required): The identifier of the managedBy tenant.
+* **managedByTenantName**: string (ReadOnly): The name of the managedBy tenant.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the registration definition.
+* **registrationDefinitionName**: string: The name of the registration definition.
 

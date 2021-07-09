@@ -1,6 +1,6 @@
-# microsoft.insights @ 2018-04-16
+# Microsoft.Insights @ 2018-04-16
 
-## Resource microsoft.insights/scheduledQueryRules@2018-04-16
+## Resource Microsoft.Insights/scheduledQueryRules@2018-04-16
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-16' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LogSearchRule](#logsearchrule) (Required): Log Search Rule Definition
 * **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'microsoft.insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LogSearchRule
 ### Properties

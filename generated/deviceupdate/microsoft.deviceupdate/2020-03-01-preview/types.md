@@ -53,6 +53,7 @@
 ## InstanceProperties
 ### Properties
 * **accountName**: string (ReadOnly): Parent Device Update Account name which Instance belongs to.
+* **enableDiagnostics**: bool: Enables or Disables the diagnostic logs collection
 * **iotHubs**: [IotHubSettings](#iothubsettings)[]: List of IoT Hubs associated with the account.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state.
 

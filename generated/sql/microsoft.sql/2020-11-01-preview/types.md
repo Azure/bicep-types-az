@@ -1068,7 +1068,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **readScale**: 'Disabled' | 'Enabled': The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
 * **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
 * **recoveryServicesRecoveryPointId**: string: The resource identifier of the recovery point associated with create operation of this database.
-* **requestedBackupStorageRedundancy**: 'Geo' | 'Local' | 'Zone': The storage account type to be used to store backups for this database.
+* **requestedBackupStorageRedundancy**: 'Geo' | 'Local' | 'Zone': The storage redundancy type of the copied backup
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the database.
 * **restorableDroppedDatabaseId**: string: The resource identifier of the restorable dropped database associated with create operation of this database.
 * **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.

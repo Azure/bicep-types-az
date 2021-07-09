@@ -1,6 +1,6 @@
-# Microsoft.DBForPostgreSQL @ 2017-12-01-preview
+# Microsoft.DBforPostgreSQL @ 2017-12-01-preview
 
-## Resource Microsoft.DBForPostgreSQL/servers@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,61 +11,61 @@
 * **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties of a server.
 * **sku**: [Sku](#sku): Billing information related properties of a server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Resource tags.
-* **type**: 'Microsoft.DBForPostgreSQL/servers' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSQL/servers/administrators@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers/administrators@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'activeDirectory' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties): The properties of an server Administrator.
-* **type**: 'Microsoft.DBForPostgreSQL/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSQL/servers/configurations@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers/configurations@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
-* **type**: 'Microsoft.DBForPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSQL/servers/databases@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers/databases@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
-* **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSQL/servers/firewallRules@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers/firewallRules@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
-* **type**: 'Microsoft.DBForPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSQL/servers/securityAlertPolicies@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers/securityAlertPolicies@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
-* **type**: 'Microsoft.DBForPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSQL/servers/virtualNetworkRules@2017-12-01-preview
+## Resource Microsoft.DBforPostgreSQL/servers/virtualNetworkRules@2017-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
-* **type**: 'Microsoft.DBForPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceIdentity
 ### Properties

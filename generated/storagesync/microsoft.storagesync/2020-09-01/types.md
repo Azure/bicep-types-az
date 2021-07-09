@@ -124,6 +124,7 @@
 ### Properties
 * **azureFileShareName**: string: Azure file share name
 * **backupEnabled**: string (ReadOnly): Backup Enabled
+* **changeEnumerationStatus**: [CloudEndpointChangeEnumerationStatus](#cloudendpointchangeenumerationstatus) (ReadOnly): Cloud endpoint change enumeration status object
 * **friendlyName**: string: Friendly Name
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): CloudEndpoint lastWorkflowId
@@ -132,12 +133,44 @@
 * **storageAccountResourceId**: string: Storage Account Resource Id
 * **storageAccountTenantId**: string: Storage Account Tenant Id
 
+## CloudEndpointChangeEnumerationStatus
+### Properties
+* **activity**: [CloudEndpointChangeEnumerationActivity](#cloudendpointchangeenumerationactivity) (ReadOnly): Cloud endpoint change enumeration activity object
+* **lastEnumerationStatus**: [CloudEndpointLastChangeEnumerationStatus](#cloudendpointlastchangeenumerationstatus) (ReadOnly): Cloud endpoint change enumeration status object
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+
+## CloudEndpointChangeEnumerationActivity
+### Properties
+* **deletesProgressPercent**: int (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
+* **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
+* **minutesRemaining**: int (ReadOnly): Estimate of time remaining for the enumeration run
+* **operationState**: 'EnumerationInProgress' | 'InitialEnumerationInProgress' (ReadOnly): State of change enumeration activity
+* **processedDirectoriesCount**: int (ReadOnly): Count of directories processed
+* **processedFilesCount**: int (ReadOnly): Count of files processed
+* **progressPercent**: int (ReadOnly): Progress percentage for change enumeration run, excluding processing of deletes
+* **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
+* **statusCode**: int (ReadOnly): When non-zero, indicates an issue that is delaying change enumeration
+* **totalCountsState**: 'Calculating' | 'Final' (ReadOnly): State of the total counts of change enumeration activity
+* **totalDirectoriesCount**: int (ReadOnly): Total count of directories enumerated
+* **totalFilesCount**: int (ReadOnly): Total count of files enumerated
+* **totalSizeBytes**: int (ReadOnly): Total enumerated size in bytes
+
+## CloudEndpointLastChangeEnumerationStatus
+### Properties
+* **completedTimestamp**: string (ReadOnly): Timestamp when change enumeration completed
+* **namespaceDirectoriesCount**: int (ReadOnly): Count of directories in the namespace
+* **namespaceFilesCount**: int (ReadOnly): Count of files in the namespace
+* **namespaceSizeBytes**: int (ReadOnly): Namespace size in bytes
+* **nextRunTimestamp**: string (ReadOnly): Timestamp of when change enumeration is expected to run again
+* **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
+
 ## ServerEndpointCreateParametersProperties
 ### Properties
 * **cloudTiering**: 'off' | 'on': Type of the Feature Status
 * **cloudTieringStatus**: [ServerEndpointCloudTieringStatus](#serverendpointcloudtieringstatus) (ReadOnly): Server endpoint cloud tiering status object.
 * **friendlyName**: string: Friendly Name
 * **initialDownloadPolicy**: 'AvoidTieredFiles' | 'NamespaceOnly' | 'NamespaceThenModifiedFiles': Policy for how namespace and files are recalled during FastDr
+* **initialUploadPolicy**: 'Merge' | 'ServerAuthoritative': Policy for how the initial upload sync session is performed.
 * **lastOperationName**: string (ReadOnly): Resource Last Operation Name
 * **lastWorkflowId**: string (ReadOnly): ServerEndpoint lastWorkflowId
 * **localCacheMode**: 'DownloadNewAndModifiedFiles' | 'UpdateLocallyCachedFiles': Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
@@ -235,6 +268,7 @@
 ### Properties
 * **downloadedBytes**: int (ReadOnly): Running count of bytes downloaded
 * **percentProgress**: int (ReadOnly): Progress percentage
+* **startedTimestamp**: string (ReadOnly): Timestamp when the operation started
 * **timestamp**: string (ReadOnly): Timestamp when properties were updated
 
 ## ServerEndpointSyncActivityStatus
@@ -242,6 +276,7 @@
 * **appliedBytes**: int (ReadOnly): Applied bytes
 * **appliedItemCount**: int (ReadOnly): Applied item count.
 * **perItemErrorCount**: int (ReadOnly): Per item error count
+* **sessionMinutesRemaining**: int (ReadOnly): Session minutes remaining (if available)
 * **syncMode**: 'InitialFullDownload' | 'InitialUpload' | 'NamespaceDownload' | 'Regular' | 'SnapshotUpload' (ReadOnly): Sync mode for the server endpoint.
 * **timestamp**: string (ReadOnly): Timestamp when properties were updated
 * **totalBytes**: int (ReadOnly): Total bytes (if available)
