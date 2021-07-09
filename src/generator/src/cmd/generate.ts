@@ -284,7 +284,12 @@ function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string,
     });
 
     child.stdout.on('data', data => logger.out(chalk.grey(data.toString())));
-    child.stderr.on('data', data => logger.err(chalk.red(data.toString())));
+    child.stderr.on('data', data => {
+      logger.err(chalk.red(data.toString()));
+      if (data.indexOf('FATAL ERROR') > -1 && data.indexOf('Allocation failed - JavaScript heap out of memory') > -1) {
+        reject('Child process has run out of memory');
+      }
+    });
 
     child.on('error', err => {
       reject(err);
