@@ -23,9 +23,9 @@
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **metadata**: any: The policy assignment metadata.
+* **metadata**: any: Any object
 * **notScopes**: string[]: The policy's excluded scopes.
-* **parameters**: any: Required if a parameter is used in policy rule.
+* **parameters**: any: Any object
 * **policyDefinitionId**: string: The ID of the policy definition.
 * **scope**: string: The scope for the policy assignment.
 
@@ -38,13 +38,13 @@
 ### Properties
 * **description**: string: The policy set definition description.
 * **displayName**: string: The display name of the policy set definition.
-* **metadata**: any: The policy set definition metadata.
-* **parameters**: any: The policy set definition parameters that can be used in policy definition references.
+* **metadata**: any: Any object
+* **parameters**: any: Any object
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
 * **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicyDefinitionReference
 ### Properties
-* **parameters**: any: Required if a parameter is used in policy rule.
+* **parameters**: any: Any object
 * **policyDefinitionId**: string: The ID of the policy definition or policy set definition.
 

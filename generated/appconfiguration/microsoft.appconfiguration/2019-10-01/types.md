@@ -10,17 +10,17 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
 * **sku**: [Sku](#sku) (Required): Describes a configuration store SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
-* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+* **userAssignedIdentities**: [ResourceIdentityUserAssignedIdentities](#resourceidentityuserassignedidentities): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,UserIdentity>
+## ResourceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentity](#useridentity)
@@ -40,7 +40,7 @@
 ### Properties
 * **name**: string (Required): The SKU name of the configuration store.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

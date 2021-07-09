@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): The properties of a server.
 * **sku**: [Sku](#sku): Sku information related properties of a server.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2020-02-14-preview
@@ -35,25 +35,25 @@
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
 * **createMode**: 'Default' | 'PointInTimeRestore': The mode to create a new PostgreSQL server.
-* **delegatedSubnetArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments)
+* **delegatedSubnetArguments**: [ServerPropertiesDelegatedSubnetArguments](#serverpropertiesdelegatedsubnetarguments)
 * **displayName**: string: The display name of a server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled.
+* **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
-* **privateDnsZoneArguments**: [schemas:11_delegatedSubnetArguments](#schemas11delegatedsubnetarguments)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not.
+* **privateDnsZoneArguments**: [ServerPropertiesPrivateDnsZoneArguments](#serverpropertiesprivatednszonearguments)
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not
 * **sourceResourceGroupName**: string: The resource group name of source serve PostgreSQL server name to restore from.
 * **sourceServerName**: string: The source PostgreSQL server name to restore from.
 * **sourceSubscriptionId**: string: The subscription id of source serve PostgreSQL server name to restore from.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Application-specific metadata in the form of key-value pairs.
-* **version**: '11' | '12': PostgreSQL Server version.
+* **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
+* **version**: '11' | '12': The version of a server.
 
-## schemas:11_delegatedSubnetArguments
+## ServerPropertiesDelegatedSubnetArguments
 ### Properties
 * **subnetArmResourceId**: string: delegated subnet arm resource id.
 
@@ -64,12 +64,16 @@
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
 
+## ServerPropertiesPrivateDnsZoneArguments
+### Properties
+* **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
+
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **storageMB**: int: Max storage allowed for a server.
 
-## Dictionary<string,String>
+## ServerPropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -79,7 +83,7 @@
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. Burstable.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -18,10 +18,10 @@
 * **effectiveDateTime**: string (ReadOnly): This is the DateTime when the promotion would come in effect
 * **expiryDate**: string (ReadOnly): This is the date when the Reservation will expire.
 * **lastUpdatedDateTime**: string (ReadOnly): Last update time of the promotion resource.
-* **orderId**: string (WriteOnly): Unique Id for the promotion order.
+* **orderId**: string (WriteOnly)
 * **provisioningState**: string (ReadOnly): Current state of the promotion.
 
 ## PromotionCreateSkuNameRequestProperties
 ### Properties
-* **name**: string (WriteOnly): SKU Name of the promotion to activate
+* **name**: string (WriteOnly)
 

@@ -10,14 +10,14 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required): the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope
 * **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required): List of possible provisioning service SKUs.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/provisioningServices/certificates@2018-01-22
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-22' (ReadOnly, DeployTimeConstant): The resource api version
-* **certificate**: string (WriteOnly): Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
+* **certificate**: string (WriteOnly)
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -27,7 +27,7 @@
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service.
-* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: List of authorization keys for a provisioning service.
+* **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: List of authorization keys for a provisioning service.
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
 * **iotHubs**: [IotHubDefinitionDescription](#iothubdefinitiondescription)[]: List of IoT hubs associated with this provisioning service.
@@ -35,7 +35,7 @@
 * **serviceOperationsHostName**: string (ReadOnly): Service endpoint for provisioning service.
 * **state**: 'Activating' | 'ActivationFailed' | 'Active' | 'Deleted' | 'Deleting' | 'DeletionFailed' | 'FailingOver' | 'FailoverFailed' | 'Resuming' | 'Suspended' | 'Suspending' | 'Transitioning': Current state of the provisioning service.
 
-## SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
+## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 ### Properties
 * **keyName**: string (Required): Name of the key.
 * **primaryKey**: string: Primary SAS key value.
@@ -56,7 +56,7 @@
 * **name**: 'S1': Sku name.
 * **tier**: string (ReadOnly): Pricing tier name of the provisioning service.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

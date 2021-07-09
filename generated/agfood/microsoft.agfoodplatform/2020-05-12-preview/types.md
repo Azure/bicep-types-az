@@ -8,8 +8,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FarmBeatsProperties](#farmbeatsproperties): FarmBeats ARM Resource properties.
-* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AgFoodPlatform/farmBeats/extensions@2020-05-12-preview
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionProperties](#extensionproperties) (ReadOnly): Extension resource properties.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## FarmBeatsProperties
@@ -28,16 +28,16 @@
 * **instanceUri**: string (ReadOnly): Uri of the FarmBeats instance.
 * **provisioningState**: 'Failed' | 'Succeeded' (ReadOnly): FarmBeats instance provisioning state.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

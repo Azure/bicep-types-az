@@ -1,14 +1,387 @@
-AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.hdinsight-2018-06-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
-WARNING: Skipping resource type Microsoft.HDInsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClientGroupInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KafkaRestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SecurityProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleTimeAndCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Autoscale' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleConfigurationUpdateParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HardwareProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataDisksGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SshPublicKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SshProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'LinuxOperatingSystemProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Role' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputeProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ExcludedServicesConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NetworkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputeIsolationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateParametersExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterPatchParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QuotaInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Errors' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ConnectivityEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterGetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuntimeScriptAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ExecuteScriptActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListPersistedScriptActionsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionExecutionSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuntimeScriptActionDetail' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListRuntimeScriptActionDetailResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterResizeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterDiskEncryptionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DiskEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EncryptionInTransitProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateGatewaySettingsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GatewaySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VersionSpec' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VersionsCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RegionsCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VmSizesCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VmSizeCompatibilityFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RegionalQuotaCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QuotaCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CapabilitiesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'LocalizedName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateRequestValidationParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterConfigurations' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Extension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterMonitoringResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterMonitoringRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorSelectedConfigurations' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorTableConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionExecutionHistoryList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListRuntimeScriptActionDetailResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionPersistedGetResponseSpec' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HostInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ClusterListRuntimeScriptActionDetailResult' (1 differences):
+  - properties.value.description: <none> => "The list of persisted script action details for the cluster."
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ClusterListRuntimeScriptActionDetailResult' -> 'ClusterListRuntimeScriptActionDetailResultAutoGenerated'
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Skipping resource type microsoft.hdinsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
+INFORMATION: autorest.bicep took 12ms
 Processing batch task - {"tag":"microsoft.hdinsight-2015-03-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
-WARNING: Skipping resource type Microsoft.HDInsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
-[20.52 s] Generation Complete
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClientGroupInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'KafkaRestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SecurityProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleTimeAndCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Autoscale' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AutoscaleConfigurationUpdateParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HardwareProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VirtualNetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DataDisksGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SshPublicKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'SshProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'LinuxOperatingSystemProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Role' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputeProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ExcludedServicesConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'NetworkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComputeIsolationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateParametersExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterPatchParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QuotaInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Errors' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ConnectivityEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterGetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuntimeScriptAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ExecuteScriptActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListPersistedScriptActionsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionExecutionSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RuntimeScriptActionDetail' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListRuntimeScriptActionDetailResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterResizeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterDiskEncryptionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'DiskEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'EncryptionInTransitProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UpdateGatewaySettingsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'GatewaySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VersionSpec' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VersionsCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RegionsCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VmSizesCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'VmSizeCompatibilityFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'RegionalQuotaCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'QuotaCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CapabilitiesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'LocalizedName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'UsagesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterCreateRequestValidationParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterConfigurations' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Extension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterMonitoringResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterMonitoringRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorSelectedConfigurations' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AzureMonitorTableConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionExecutionHistoryList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ClusterListRuntimeScriptActionDetailResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionPersistedGetResponseSpec' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ScriptActionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'HostInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ClusterListRuntimeScriptActionDetailResult' (1 differences):
+  - properties.value.description: <none> => "The list of persisted script action details for the cluster."
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ClusterListRuntimeScriptActionDetailResult' -> 'ClusterListRuntimeScriptActionDetailResultAutoGenerated'
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Skipping resource type microsoft.hdinsight/clusters/extensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/clustermonitoring': Found multiple definitions for the same type
+INFORMATION: autorest.bicep took 6ms
+[16.83 s] Generation Complete

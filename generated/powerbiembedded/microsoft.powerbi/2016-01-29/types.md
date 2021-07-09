@@ -7,17 +7,17 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (ReadOnly): Properties
+* **properties**: any (ReadOnly): Any object
 * **sku**: [AzureSku](#azuresku)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring)
+* **tags**: [CreateWorkspaceCollectionRequestTags](#createworkspacecollectionrequesttags): Dictionary of <string>
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureSku
 ### Properties
-* **name**: string (Required): SKU name
-* **tier**: string (Required): SKU tier
+* **name**: 'S1' (Required): SKU name
+* **tier**: 'Standard' (Required): SKU tier
 
-## Dictionary<string,String>
+## CreateWorkspaceCollectionRequestTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

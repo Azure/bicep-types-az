@@ -9,8 +9,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineProperties](#machineproperties): Describes the properties of a hybrid machine.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/machines/extensions@2021-01-28-preview
@@ -21,8 +21,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineExtensionProperties](#machineextensionproperties): Describes the properties of a Machine Extension.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes@2021-01-28-preview
@@ -33,8 +33,8 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridComputePrivateLinkScopeProperties](#hybridcomputeprivatelinkscopeproperties): Properties that define a Azure Arc PrivateLinkScope resource.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2021-01-28-preview
@@ -44,7 +44,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -64,10 +64,10 @@
 * **errorDetails**: [ErrorDetail](#errordetail)[] (ReadOnly): Details about the error state.
 * **extensions**: [MachineExtensionInstanceView](#machineextensioninstanceview)[]: Machine Extensions information
 * **lastStatusChange**: string (ReadOnly): The time of the last status change.
-* **locationData**: [locationData](#locationdata): Metadata pertaining to the geographic location of the resource.
+* **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
 * **machineFqdn**: string (ReadOnly): Specifies the hybrid machine FQDN.
 * **osName**: string (ReadOnly): The Operating System running on the hybrid machine.
-* **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the hybrid machine.
+* **osProfile**: [OSProfile](#osprofile) (ReadOnly): Specifies the operating system settings for the hybrid machine.
 * **osSku**: string (ReadOnly): Specifies the Operating System product SKU.
 * **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
 * **privateLinkScopeResourceId**: string: The resource id of the private link scope this machine is assigned to, if any.
@@ -86,17 +86,17 @@
 
 ## ErrorAdditionalInfo
 ### Properties
-* **info**: any (ReadOnly): The additional info.
+* **info**: any (ReadOnly): Any object
 * **type**: string (ReadOnly): The additional info type.
 
 ## MachineExtensionInstanceView
 ### Properties
 * **name**: string: The machine extension name.
-* **status**: [schemas:14_status](#schemas14status): Instance view status.
+* **status**: [MachineExtensionInstanceViewStatus](#machineextensioninstanceviewstatus): Instance view status.
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
-## schemas:14_status
+## MachineExtensionInstanceViewStatus
 ### Properties
 * **code**: string: The status code.
 * **displayStatus**: string: The short localizable label for the status.
@@ -104,7 +104,7 @@
 * **message**: string: The detailed status message, including for alerts and error messages.
 * **time**: string: The time of the status.
 
-## locationData
+## LocationData
 ### Properties
 * **city**: string: The city or locality where the resource is located.
 * **countryOrRegion**: string: The country or region where the resource is located
@@ -115,16 +115,16 @@
 ### Properties
 * **computerName**: string (ReadOnly): Specifies the host OS name of the hybrid machine.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -134,14 +134,14 @@
 * **autoUpgradeMinorVersion**: bool: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
 * **forceUpdateTag**: string: How the extension handler should be forced to update even if the extension configuration has not changed.
 * **instanceView**: [MachineExtensionInstanceView](#machineextensioninstanceview): Describes the Machine Extension Instance View.
-* **protectedSettings**: any: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+* **protectedSettings**: any: Any object
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **publisher**: string: The name of the extension handler publisher.
-* **settings**: any: Json formatted public settings for the extension.
+* **settings**: any: Any object
 * **type**: string: Specifies the type of the extension; an example is "CustomScriptExtension".
 * **typeHandlerVersion**: string: Specifies the version of the script handler.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -150,9 +150,9 @@
 ### Properties
 * **privateLinkScopeId**: string (ReadOnly): The Guid id of the private link scope.
 * **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': The network access policy to determine if Azure Arc agents can use public Azure Arc service endpoints. Defaults to disabled (access to Azure Arc services only via private link).
 
-## Dictionary<string,String>
+## PrivateLinkScopesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

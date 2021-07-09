@@ -17,7 +17,7 @@
 * **location**: string (Required): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicProperties](#topicproperties): Properties of the Topic
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Tags of the resource
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## EventSubscriptionProperties
@@ -33,16 +33,17 @@
 
 ## DeadLetterDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### StorageBlob
+### StorageBlobDeadLetterDestination
 #### Properties
-* **endpointType**: 'StorageBlob' (Required): Information about the storage blob based dead letter destination.
+* **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
 
 
-## StorageBlob
+## StorageBlobDeadLetterDestination
 ### Properties
-* **endpointType**: 'StorageBlob' (Required): Information about the storage blob based dead letter destination.
+* **endpointType**: 'StorageBlob' (Required): Type of the endpoint for the dead letter destination
 * **properties**: [StorageBlobDeadLetterDestinationProperties](#storageblobdeadletterdestinationproperties): Properties of the storage blob based dead letter destination.
 
 ## StorageBlobDeadLetterDestinationProperties
@@ -52,49 +53,50 @@
 
 ## EventSubscriptionDestination
 * **Discriminator**: endpointType
+
 ### Base Properties
-### EventHub
+### EventHubEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'EventHub' (Required): Information about the event hub destination for an event subscription
+* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
 
-### HybridConnection
+### HybridConnectionEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'HybridConnection' (Required): Information about the HybridConnection destination for an event subscription.
+* **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
 
-### StorageQueue
+### StorageQueueEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'StorageQueue' (Required): Information about the storage queue destination for an event subscription.
+* **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
 
-### WebHook
+### WebHookEventSubscriptionDestination
 #### Properties
-* **endpointType**: 'WebHook' (Required): Information about the webhook destination for an event subscription
+* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
 
 
-## EventHub
+## EventHubEventSubscriptionDestination
 ### Properties
-* **endpointType**: 'EventHub' (Required): Information about the event hub destination for an event subscription
+* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
 
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
 * **resourceId**: string: The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
 
-## HybridConnection
+## HybridConnectionEventSubscriptionDestination
 ### Properties
-* **endpointType**: 'HybridConnection' (Required): Information about the HybridConnection destination for an event subscription.
+* **endpointType**: 'HybridConnection' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [HybridConnectionEventSubscriptionDestinationProperties](#hybridconnectioneventsubscriptiondestinationproperties): The properties for a hybrid connection destination.
 
 ## HybridConnectionEventSubscriptionDestinationProperties
 ### Properties
 * **resourceId**: string: The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
 
-## StorageQueue
+## StorageQueueEventSubscriptionDestination
 ### Properties
-* **endpointType**: 'StorageQueue' (Required): Information about the storage queue destination for an event subscription.
+* **endpointType**: 'StorageQueue' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [StorageQueueEventSubscriptionDestinationProperties](#storagequeueeventsubscriptiondestinationproperties): The properties for a storage queue destination.
 
 ## StorageQueueEventSubscriptionDestinationProperties
@@ -102,9 +104,9 @@
 * **queueName**: string: The name of the Storage queue under a storage account that is the destination of an event subscription.
 * **resourceId**: string: The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
 
-## WebHook
+## WebHookEventSubscriptionDestination
 ### Properties
-* **endpointType**: 'WebHook' (Required): Information about the webhook destination for an event subscription
+* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription.
 
 ## WebHookEventSubscriptionDestinationProperties
@@ -114,12 +116,12 @@
 
 ## EventSubscriptionFilter
 ### Properties
-* **includedEventTypes**: string[]: A list of applicable event types that need to be part of the event subscription.
+* **includedEventTypes**: string[]: A list of applicable event types that need to be part of the event subscription. 
 If it is desired to subscribe to all event types, the string "all" needs to be specified as an element in this list.
-* **isSubjectCaseSensitive**: bool: Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+* **isSubjectCaseSensitive**: bool: Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter 
 should be compared in a case sensitive manner.
 * **subjectBeginsWith**: string: An optional string to filter events for an event subscription based on a resource path prefix.
-The format of this depends on the publisher of the events.
+The format of this depends on the publisher of the events. 
 Wildcard characters are not supported in this path.
 * **subjectEndsWith**: string: An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.
@@ -138,16 +140,17 @@ Wildcard characters are not supported in this path.
 
 ## InputSchemaMapping
 * **Discriminator**: inputSchemaMappingType
+
 ### Base Properties
-### Json
+### JsonInputSchemaMapping
 #### Properties
-* **inputSchemaMappingType**: 'Json' (Required): This enables publishing to Event Grid using a custom input schema. This can be used to map properties from a custom input JSON schema to the Event Grid event schema.
+* **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
 
 
-## Json
+## JsonInputSchemaMapping
 ### Properties
-* **inputSchemaMappingType**: 'Json' (Required): This enables publishing to Event Grid using a custom input schema. This can be used to map properties from a custom input JSON schema to the Event Grid event schema.
+* **inputSchemaMappingType**: 'Json' (Required): Type of the custom mapping
 * **properties**: [JsonInputSchemaMappingProperties](#jsoninputschemamappingproperties): This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.
 
 ## JsonInputSchemaMappingProperties
@@ -168,7 +171,7 @@ Wildcard characters are not supported in this path.
 ### Properties
 * **sourceField**: string: Name of a field in the input event schema that's to be used as the source of a mapping.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

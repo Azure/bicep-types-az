@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataBoxEdgeDeviceProperties](#databoxedgedeviceproperties): The properties of the Data Box Edge/Gateway device.
 * **sku**: [Sku](#sku): The SKU type.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+* **tags**: [DataBoxEdgeDeviceTags](#databoxedgedevicetags): The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2019-07-01
@@ -34,14 +34,15 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2019-07-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles' (ReadOnly, DeployTimeConstant): The resource type
-### IOT
+### IoTRole
 #### Properties
-* **kind**: 'IOT' (Required): Compute role.
+* **kind**: 'IOT' (Required): Role type.
 * **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
 
 
@@ -66,19 +67,20 @@
 ## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2019-07-01
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers' (ReadOnly, DeployTimeConstant): The resource type
-### FileEvent
+### FileEventTrigger
 #### Properties
-* **kind**: 'FileEvent' (Required): Trigger details.
+* **kind**: 'FileEvent' (Required): Trigger Kind.
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required): File trigger properties.
 
-### PeriodicTimerEvent
+### PeriodicTimerEventTrigger
 #### Properties
-* **kind**: 'PeriodicTimerEvent' (Required): Trigger details.
+* **kind**: 'PeriodicTimerEvent' (Required): Trigger Kind.
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 
@@ -113,7 +115,7 @@
 * **name**: 'Edge' | 'Gateway': SKU name.
 * **tier**: 'Standard': The SKU tier. This is based on the SKU name.
 
-## Dictionary<string,String>
+## DataBoxEdgeDeviceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -165,9 +167,9 @@
 * **postalCode**: string (Required): The postal code.
 * **state**: string (Required): The state name.
 
-## IOT
+## IoTRole
 ### Properties
-* **kind**: 'IOT' (Required): Compute role.
+* **kind**: 'IOT' (Required): Role type.
 * **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
 
 ## IoTRoleProperties
@@ -203,7 +205,7 @@
 ### Properties
 * **mountPoint**: string (ReadOnly): Mount point for the share.
 * **roleId**: string (ReadOnly): ID of the role to which share is mounted.
-* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' (ReadOnly): Role type.
+* **roleType**: 'ASA' | 'Cognitive' | 'Functions' | 'IOT' (ReadOnly)
 * **shareId**: string (Required): ID of the share mounted to the role VM.
 
 ## ShareProperties
@@ -216,7 +218,7 @@
 * **monitoringStatus**: 'Disabled' | 'Enabled' (Required): Current monitoring status of the share.
 * **refreshDetails**: [RefreshDetails](#refreshdetails): Fields for tracking refresh job on the share.
 * **shareMappings**: [MountPointMap](#mountpointmap)[] (ReadOnly): Share mount point to the role.
-* **shareStatus**: 'NeedsAttention' | 'Offline' | 'OK' | 'Unknown' | 'Updating' (Required): Current status of the share.
+* **shareStatus**: 'NeedsAttention' | 'OK' | 'Offline' | 'Unknown' | 'Updating' (Required): Current status of the share.
 * **userAccessRights**: [UserAccessRight](#useraccessright)[]: Mapping of users and corresponding access rights on the share (required for SMB protocol).
 
 ## AzureContainerInfo
@@ -239,7 +241,7 @@
 
 ## UserAccessRight
 ### Properties
-* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed for the user.
+* **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed on the share for this user.
 * **userId**: string (Required): User ID (already existing in the device).
 
 ## StorageAccountCredentialProperties
@@ -253,9 +255,9 @@
 * **storageAccountId**: string: Id of the storage account.
 * **userName**: string: Username for the storage account.
 
-## FileEvent
+## FileEventTrigger
 ### Properties
-* **kind**: 'FileEvent' (Required): Trigger details.
+* **kind**: 'FileEvent' (Required): Trigger Kind.
 * **properties**: [FileTriggerProperties](#filetriggerproperties) (Required): File trigger properties.
 
 ## FileTriggerProperties
@@ -272,9 +274,9 @@
 ### Properties
 * **shareId**: string (Required): File share ID.
 
-## PeriodicTimerEvent
+## PeriodicTimerEventTrigger
 ### Properties
-* **kind**: 'PeriodicTimerEvent' (Required): Trigger details.
+* **kind**: 'PeriodicTimerEvent' (Required): Trigger Kind.
 * **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 ## PeriodicTimerProperties

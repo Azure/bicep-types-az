@@ -7,9 +7,9 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Properties for Disk pool create or update request.
+* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Disk pool response properties.
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Resource metadata required by ARM RPC.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StoragePool/diskPools/iscsiTargets@2020-03-15-preview
@@ -18,18 +18,18 @@
 * **apiVersion**: '2020-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Properties for iSCSI target create or update request.
+* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Response properties for iSCSI target operations.
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DiskPoolCreateProperties
 ### Properties
-* **additionalCapabilities**: string[]: List of additional capabilities for a Disk pool.
+* **additionalCapabilities**: string[]: List of additional capabilities for Disk pool.
 * **availabilityZones**: string[] (Required): Logical zone for Disk pool resource; example: ["1"].
 * **disks**: [Disk](#disk)[]: List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): State of the operation on the resource.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly): Operational status of the Disk pool.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly): Operational status of the resource.
 * **subnetId**: string (Required): Azure Resource ID of a Subnet for the Disk pool.
-* **tier**: 'Basic' | 'Premium' | 'Standard' (Required): Determines the SKU of VM deployed for Disk pool.
+* **tier**: 'Basic' | 'Premium' | 'Standard' (Required): SKU of the VM host part of the Disk pool deployment
 
 ## Disk
 ### Properties
@@ -44,15 +44,15 @@
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
 * **lastModifiedByType**: string (ReadOnly): The type of identity that last modified the resource: user, application, managedIdentity.
 
-## Dictionary<string,String>
+## DiskPoolCreateTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
 ## IscsiTargetCreateProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): State of the operation on the resource.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly): Operational status of the iSCSI target.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly): Operational status of the resource.
 * **targetIqn**: string: iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
 * **tpgs**: [TargetPortalGroupCreate](#targetportalgroupcreate)[] (Required): List of iSCSI target portal groups. Can have 1 portal group at most.
 
@@ -61,7 +61,7 @@
 * **acls**: [Acl](#acl)[] (Required): Access Control List (ACL) for an iSCSI target portal group.
 * **attributes**: [Attributes](#attributes) (Required): Attributes of a iSCSI target portal group.
 * **endpoints**: string[] (ReadOnly): List of private IPv4 addresses to connect to the iSCSI target.
-* **luns**: [IscsiLun](#iscsilun)[] (Required): List of LUNs to be exposed through the iSCSI target portal group.
+* **luns**: [IscsiLun](#iscsilun)[] (Required): List of LUNs to be exposed through iSCSI target portal group.
 * **port**: int (ReadOnly): The port used by iSCSI target portal group.
 * **tag**: int (ReadOnly): The tag associated with the iSCSI target portal group.
 

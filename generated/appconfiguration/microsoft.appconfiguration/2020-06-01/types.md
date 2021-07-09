@@ -10,7 +10,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
 * **sku**: [Sku](#sku) (Required): Describes a configuration store SKU.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2020-06-01
@@ -26,10 +26,10 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
-* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+* **userAssignedIdentities**: [ResourceIdentityUserAssignedIdentities](#resourceidentityuserassignedidentities): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,UserIdentity>
+## ResourceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentity](#useridentity)
@@ -68,7 +68,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning status of the private endpoint connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the configuration store.
 
 ## PrivateEndpoint
 ### Properties
@@ -76,7 +76,7 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: 'None' | 'Recreate' (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect).
+* **actionsRequired**: 'None' | 'Recreate' (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
 
@@ -84,7 +84,7 @@
 ### Properties
 * **name**: string (Required): The SKU name of the configuration store.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

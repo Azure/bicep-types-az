@@ -8,7 +8,7 @@
 * **location**: string: The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertRuleProperties](#alertruleproperties): An Azure Activity Log Alert rule.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The tags of the resource.
+* **tags**: [AzureResourceTags](#azureresourcetags): The tags of the resource.
 * **type**: 'Microsoft.Insights/activityLogAlerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertRuleProperties
@@ -26,9 +26,9 @@
 ## ActionGroup
 ### Properties
 * **actionGroupId**: string (Required): The resource ID of the Action Group. This cannot be null or empty.
-* **webhookProperties**: [Dictionary<string,String>](#dictionarystringstring): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+* **webhookProperties**: [ActionGroupWebhookProperties](#actiongroupwebhookproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
 
-## Dictionary<string,String>
+## ActionGroupWebhookProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -52,7 +52,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 * **field**: string: The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
 
-## Dictionary<string,String>
+## AzureResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

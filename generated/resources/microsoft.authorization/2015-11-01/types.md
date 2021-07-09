@@ -28,5 +28,5 @@
 ### Properties
 * **description**: string: Gets or sets the policy definition description.
 * **displayName**: string: Gets or sets the policy definition display name.
-* **policyRule**: any: The policy rule json.
+* **policyRule**: any: Any object
 

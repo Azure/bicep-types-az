@@ -11,7 +11,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required): The managed application definition properties.
 * **sku**: [Sku](#sku): SKU for the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Solutions/applications@2018-06-01
@@ -27,7 +27,7 @@
 * **plan**: [Plan](#plan): Plan for the managed application.
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): The managed application properties.
 * **sku**: [Sku](#sku): SKU for the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity
@@ -40,12 +40,12 @@
 ### Properties
 * **artifacts**: [ApplicationArtifact](#applicationartifact)[]: The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
 * **authorizations**: [ApplicationProviderAuthorization](#applicationproviderauthorization)[] (Required): The managed application provider authorizations.
-* **createUiDefinition**: any: The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
+* **createUiDefinition**: any: Any object
 * **description**: string: The managed application definition description.
 * **displayName**: string: The managed application definition display name.
 * **isEnabled**: string: A value indicating whether the package is enabled or not.
 * **lockLevel**: 'CanNotDelete' | 'None' | 'ReadOnly' (Required): The managed application lock level.
-* **mainTemplate**: any: The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
+* **mainTemplate**: any: Any object
 * **packageFileUri**: string: The managed application definition package file Uri. Use this element
 
 ## ApplicationArtifact
@@ -68,7 +68,7 @@
 * **size**: string: The SKU size.
 * **tier**: string: The SKU tier.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -85,11 +85,11 @@
 ### Properties
 * **applicationDefinitionId**: string: The fully qualified path of managed application definition Id.
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
-* **outputs**: any (ReadOnly): Name and value pairs that define the managed application outputs.
-* **parameters**: any: Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The managed application provisioning state.
+* **outputs**: any (ReadOnly): Any object
+* **parameters**: any: Any object
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the managed application.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -8,7 +8,7 @@
 * **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProfileProperties
@@ -35,7 +35,7 @@
 
 ## EndpointProperties
 ### Properties
-* **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]: List of custom headers.
+* **customHeaders**: [EndpointPropertiesCustomHeadersItem](#endpointpropertiescustomheadersitem)[]: List of custom headers.
 * **endpointLocation**: string: Specifies the location of the external or nested endpoints when using the ‘Performance’ traffic routing method.
 * **endpointMonitorStatus**: 'CheckingEndpoint' | 'Degraded' | 'Disabled' | 'Inactive' | 'Online' | 'Stopped': The monitoring status of the endpoint.
 * **endpointStatus**: 'Disabled' | 'Enabled': The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
@@ -46,15 +46,15 @@
 * **targetResourceId**: string: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
 * **weight**: int: The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
 
-## schemas:1_customHeadersItem
+## EndpointPropertiesCustomHeadersItem
 ### Properties
 * **name**: string: Header name.
 * **value**: string: Header value.
 
 ## MonitorConfig
 ### Properties
-* **customHeaders**: [schemas:1_customHeadersItem](#schemas1customheadersitem)[]: List of custom headers.
-* **expectedStatusCodeRanges**: [schemas:10_expectedStatusCodeRangesItem](#schemas10expectedstatuscoderangesitem)[]: List of expected status code ranges.
+* **customHeaders**: [MonitorConfigCustomHeadersItem](#monitorconfigcustomheadersitem)[]: List of custom headers.
+* **expectedStatusCodeRanges**: [MonitorConfigExpectedStatusCodeRangesItem](#monitorconfigexpectedstatuscoderangesitem)[]: List of expected status code ranges.
 * **intervalInSeconds**: int: The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
 * **path**: string: The path relative to the endpoint domain name used to probe for endpoint health.
 * **port**: int: The TCP port used to probe for endpoint health.
@@ -63,12 +63,17 @@
 * **timeoutInSeconds**: int: The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
 * **toleratedNumberOfFailures**: int: The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
 
-## schemas:10_expectedStatusCodeRangesItem
+## MonitorConfigCustomHeadersItem
+### Properties
+* **name**: string: Header name.
+* **value**: string: Header value.
+
+## MonitorConfigExpectedStatusCodeRangesItem
 ### Properties
 * **max**: int: Max status code.
 * **min**: int: Min status code.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -1,13 +1,13 @@
 # Microsoft.PolicyInsights @ 2021-01-01
 
 ## Resource Microsoft.PolicyInsights/attestations@2021-01-01
-* **Valid Scope(s)**: Unknown
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AttestationProperties](#attestationproperties) (Required): The properties of an attestation resource.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.PolicyInsights/attestations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AttestationProperties
@@ -27,12 +27,12 @@
 * **description**: string: The description for this piece of evidence.
 * **sourceUri**: string: The URI location of the evidence.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 

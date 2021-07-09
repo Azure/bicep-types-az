@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlDatabaseProperties](#sqldatabaseproperties): The sql database's properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview
@@ -23,7 +23,7 @@
 * **properties**: [SqlPoolProperties](#sqlpoolproperties): The sql pool's properties.
 * **sku**: [Sku](#sku): An ARM Resource SKU.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SqlDatabaseProperties
@@ -37,12 +37,12 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>
 * **lastModifiedAt**: string (ReadOnly): The timestamp of last modification (UTC).
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -62,7 +62,7 @@
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

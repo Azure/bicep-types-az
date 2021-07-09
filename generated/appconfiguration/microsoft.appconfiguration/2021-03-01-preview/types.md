@@ -10,8 +10,8 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
 * **sku**: [Sku](#sku) (Required): Describes a configuration store SKU.
-* **systemData**: [systemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppConfiguration/configurationStores/keyValues@2021-03-01-preview
@@ -36,10 +36,10 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
-* **type**: 'None' | 'SystemAssigned, UserAssigned' | 'SystemAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
-* **userAssignedIdentities**: [Dictionary<string,UserIdentity>](#dictionarystringuseridentity): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+* **userAssignedIdentities**: [ResourceIdentityUserAssignedIdentities](#resourceidentityuserassignedidentities): The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## Dictionary<string,UserIdentity>
+## ResourceIdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentity](#useridentity)
@@ -79,7 +79,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The state of a private link service connection.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning status of the private endpoint connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the configuration store.
 
 ## PrivateEndpoint
 ### Properties
@@ -87,7 +87,7 @@
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionsRequired**: 'None' | 'Recreate' (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect).
+* **actionsRequired**: 'None' | 'Recreate' (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
 
@@ -95,16 +95,16 @@
 ### Properties
 * **name**: string (Required): The SKU name of the configuration store.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -121,10 +121,10 @@ The label is used in unison with the key to uniquely identify a key-value.
 * **lastModified**: string (ReadOnly): The last time a modifying operation was performed on the given key-value.
 * **locked**: bool (ReadOnly): A value indicating whether the key-value is locked.
 A locked key-value may not be modified until it is unlocked.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): A dictionary of tags that can help identify what a key-value may be applicable for.
+* **tags**: [KeyValuePropertiesTags](#keyvaluepropertiestags): A dictionary of tags that can help identify what a key-value may be applicable for.
 * **value**: string: The value of the key-value.
 
-## Dictionary<string,String>
+## KeyValuePropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
