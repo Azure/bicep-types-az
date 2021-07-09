@@ -10,13 +10,13 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): scheduled query rule Definition
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: [Action](#action)[]: Actions to invoke when the alert fires.
+* **actions**: any: Any object
 * **autoMitigate**: bool: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert.
 * **checkWorkspaceAlertsStorageConfigured**: bool: The flag which indicates whether this scheduled query rule should be stored in the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
@@ -35,16 +35,6 @@
 * **targetResourceTypes**: string[]: List of resource type of the target resource(s) on which the alert is created/updated. For example if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of the kind LogAlert
 * **windowSize**: string: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size). Relevant and required only for rules of the kind LogAlert.
 
-## Action
-### Properties
-* **actionGroupId**: string: Action Group resource Id to invoke when the alert fires.
-* **webHookProperties**: [Dictionary<string,String>](#dictionarystringstring): The properties of a webhook object.
-
-## Dictionary<string,String>
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ScheduledQueryRuleCriteria
 ### Properties
 * **allOf**: [Condition](#condition)[]: A list of conditions to evaluate against the specified scopes
@@ -52,36 +42,36 @@
 ## Condition
 ### Properties
 * **dimensions**: [Dimension](#dimension)[]: List of Dimensions conditions
-* **failingPeriods**: [schemas:6_failingPeriods](#schemas6failingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.
+* **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.
 * **metricMeasureColumn**: string: The column containing the metric measure number. Relevant only for rules of the kind LogAlert.
 * **metricName**: string: The name of the metric to be sent. Relevant and required only for rules of the kind LogToMetric.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): The criteria operator. Relevant and required only for rules of the kind LogAlert.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': The criteria operator. Relevant and required only for rules of the kind LogAlert.
 * **query**: string: Log query alert
 * **resourceIdColumn**: string: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.
-* **threshold**: int (Required): the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): Aggregation type. Relevant and required only for rules of the kind LogAlert.
+* **threshold**: int: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total': Aggregation type. Relevant and required only for rules of the kind LogAlert.
 
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values.
+* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
 
-## schemas:6_failingPeriods
+## ConditionFailingPeriods
 ### Properties
 * **minFailingPeriodsToAlert**: int: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods. Default value is 1
 * **numberOfEvaluationPeriods**: int: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

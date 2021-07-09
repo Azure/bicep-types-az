@@ -39,7 +39,8 @@
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required): Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.
-* **onboardingKind**: 'Default' | 'MigratedToAzure' (Required): The kind of onboarding for the subscription
+* **evaluationEndTime**: string (ReadOnly): End time of the evaluation period, if such exist
+* **onboardingKind**: 'Default' | 'Evaluation' | 'MigratedToAzure' | 'Purchased' (Required): The kind of onboarding for the subscription
 * **sentinelWorkspaceResourceIds**: string[] (Required): Sentinel Workspace Resource Ids
 
 ## IotSensorProperties

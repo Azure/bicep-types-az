@@ -1,50 +1,544 @@
-AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.insights-2021-03-08"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource-etag' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'InnerErrorTrace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookManagedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookUserAssignedIdentities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource-etag' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Workbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'InnerErrorTrace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookManagedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookUserAssignedIdentities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (Modeler/MissingType): The schema 'ErrorDefinition-innererror' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2021-03-08/myworkbooks_API.json#/components/schemas/ErrorDefinition-innererror
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2021-03-08/workbooks_API.json#/components/schemas/ErrorDefinition-innererror
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.insights-2021-03-03-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.insights-2020-11-20"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplatesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateGallery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateLocalizedGallery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.insights-2020-10-20"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource-etag' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'InnerErrorTrace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookManagedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookUserAssignedIdentities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource-etag' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Workbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'InnerErrorTrace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookManagedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookUserAssignedIdentities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (Modeler/MissingType): The schema 'ErrorDefinition-innererror' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2020-10-20/myworkbooks_API.json#/components/schemas/ErrorDefinition-innererror
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2020-10-20/workbooks_API.json#/components/schemas/ErrorDefinition-innererror
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.insights-2020-10-05-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebtestsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebtestsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'webTestListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebTest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebTestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2020-06-02-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.insights-2015-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations': Found mismatch betwen type segments (2) and name segments (1)
-WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures': Found mismatch betwen type segments (2) and name segments (1)
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'AnnotationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentAPIKeyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkItemConfigurationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentFavorite' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsWebTestLocationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebtestsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebtestsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'webTestListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebTest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WebTestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Workbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'LinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'MyWorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (Modeler/MissingType): The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2015-05-01/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
+WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/Annotations': Found mismatch between type segments (2) and name segments (1)
+WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures': Found mismatch between type segments (2) and name segments (1)
+WARNING: Skipping resource type microsoft.insights/components/proactivedetectionconfigs under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/ProactiveDetectionConfigs/{ConfigurationId}': Unable to locate parameter with name 'ConfigurationId'
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.insights-2018-05-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (Modeler/MissingType): The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/preview/2018-05-01-preview/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
+WARNING: Skipping resource type microsoft.insights/components/proactivedetectionconfigs under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/ProactiveDetectionConfigs/{ConfigurationId}': Unable to locate parameter with name 'ConfigurationId'
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2020-03-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.insights-2020-02-10-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.insights-2020-02-02-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (Modeler/MissingType): The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/preview/2020-02-02-preview/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
+INFORMATION: autorest.bicep took 1ms
+Processing batch task - {"tag":"microsoft.insights-2020-02-02"} .
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ApplicationInsightsComponentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ComponentPurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (Modeler/MissingType): The schema 'ComponentPurgeBodyFilters-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json#/components/schemas/ComponentPurgeBodyFilters-value
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.insights-2019-10-17-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplatesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateGallery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateLocalizedGallery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookTemplateUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.insights-2018-06-17-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbooksListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Workbook' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'WorkbookError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.insights-2017-10-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
-[34.59 s] Generation Complete
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+INFORMATION: autorest.bicep took 1ms
+[30.5 s] Generation Complete

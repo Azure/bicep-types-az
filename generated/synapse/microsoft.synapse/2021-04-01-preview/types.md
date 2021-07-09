@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkHubProperties](#privatelinkhubproperties): PrivateLinkHub properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/privateLinkHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces@2021-04-01-preview
@@ -20,7 +20,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/administrators@2021-04-01-preview
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -49,7 +49,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BigDataPoolResourceProperties](#bigdatapoolresourceproperties): Properties of a Big Data pool powered by Apache Spark
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/bigDataPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/encryptionProtector@2021-04-01-preview
@@ -59,7 +59,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Synapse/workspaces/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,7 +68,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -110,49 +110,51 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [KustoPoolProperties](#kustopoolproperties): Class representing the Kusto pool properties.
 * **sku**: [AzureSku](#azuresku) (Required): Azure SKU definition.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/databases@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases' (ReadOnly, DeployTimeConstant): The resource type
-### ReadWrite
+### ReadWriteDatabase
 #### Properties
-* **kind**: 'ReadWrite' (Required): Class representing a read write database.
+* **kind**: 'ReadWrite' (Required): Kind of the database
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
+
 ### Base Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
-### EventGrid
+### EventGridDataConnection
 #### Properties
-* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
+* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
-### EventHub
+### EventHubDataConnection
 #### Properties
-* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
+* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
-### IotHub
+### IotHubDataConnection
 #### Properties
-* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
+* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 
@@ -163,7 +165,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): A class representing database principal property.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/kustoPools/principalAssignments@2021-04-01-preview
@@ -173,7 +175,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): A class representing cluster principal property.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2021-04-01-preview
@@ -182,7 +184,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:225_properties](#schemas225properties): Sql Control Settings for workspace managed identity
+* **properties**: [ManagedIdentitySqlControlSettingsModelProperties](#managedidentitysqlcontrolsettingsmodelproperties): Sql Control Settings for workspace managed identity
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2021-04-01-preview
@@ -199,7 +201,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerSecurityAlertPolicyProperties](#serversecurityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Synapse/workspaces/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -221,7 +223,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolResourceProperties](#sqlpoolresourceproperties): Properties of a SQL Analytics pool
 * **sku**: [Sku](#sku): SQL pool SKU
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/auditingSettings@2021-04-01-preview
@@ -230,7 +232,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolBlobAuditingPolicyProperties](#sqlpoolblobauditingpolicyproperties): Properties of a Sql pool blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -242,7 +244,7 @@
 * **kind**: string (ReadOnly): The kind of data masking policy. Metadata, used for Azure portal.
 * **location**: string (ReadOnly): The location of the data masking policy.
 * **managedBy**: string (ReadOnly): Fully qualified resource ID of the sql pool
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DataMaskingPolicyProperties](#datamaskingpolicyproperties): The properties of a database data masking policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -262,7 +264,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedSqlPoolBlobAuditingPolicyProperties](#extendedsqlpoolblobauditingpolicyproperties): Properties of an extended Sql pool blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -273,7 +275,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of geo backup policy.  This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Backup policy location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -292,7 +294,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'config' (Required, DeployTimeConstant): The resource name
-* **properties**: [schemas:105_properties](#schemas105properties): Metadata Sync Config properties
+* **properties**: [MetadataSyncConfigProperties](#metadatasyncconfigproperties): Metadata Sync Config properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-04-01-preview
@@ -301,7 +303,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **managedBy**: string (ReadOnly): managed by
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [SensitivityLabelProperties](#sensitivitylabelproperties): Properties of a sensitivity label.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -310,7 +312,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -320,7 +322,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -329,7 +331,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolVulnerabilityAssessmentProperties](#sqlpoolvulnerabilityassessmentproperties): Properties of a Sql pool Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -365,7 +367,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -395,7 +397,7 @@
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -404,21 +406,21 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the workspace managed identity
 * **tenantId**: string (ReadOnly): The tenant ID of the workspace managed identity
-* **type**: 'None' | 'SystemAssigned': The type of managed identity for the workspace.
+* **type**: 'None' | 'SystemAssigned': The type of managed identity for the workspace
 
 ## WorkspaceProperties
 ### Properties
 * **adlaResourceId**: string (ReadOnly): The ADLA resource ID.
-* **connectivityEndpoints**: [Dictionary<string,String>](#dictionarystringstring): Connectivity endpoints
+* **connectivityEndpoints**: [WorkspacePropertiesConnectivityEndpoints](#workspacepropertiesconnectivityendpoints): Connectivity endpoints
 * **defaultDataLakeStorage**: [DataLakeStorageAccountDetails](#datalakestorageaccountdetails): Details of the data lake storage account associated with the workspace
 * **encryption**: [EncryptionDetails](#encryptiondetails): Details of the encryption associated with the workspace
-* **extraProperties**: [Dictionary<string,Object>](#dictionarystringobject) (ReadOnly): Workspace level configs and feature flags
+* **extraProperties**: [WorkspacePropertiesExtraProperties](#workspacepropertiesextraproperties) (ReadOnly): Workspace level configs and feature flags
 * **managedResourceGroupName**: string: Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
 * **managedVirtualNetwork**: string: Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
 * **managedVirtualNetworkSettings**: [ManagedVirtualNetworkSettings](#managedvirtualnetworksettings): Managed Virtual Network Settings
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: Private endpoint connections to the workspace
 * **provisioningState**: string (ReadOnly): Resource provisioning state
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enable or Disable public network access to workspace.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enable or Disable public network access to workspace
 * **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview Configuration
 * **sqlAdministratorLogin**: string: Login for workspace SQL active directory administrator
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password
@@ -426,7 +428,7 @@
 * **workspaceRepositoryConfiguration**: [WorkspaceRepositoryConfiguration](#workspacerepositoryconfiguration): Git integration settings
 * **workspaceUID**: string (ReadOnly): The workspace unique identifier
 
-## Dictionary<string,String>
+## WorkspacePropertiesConnectivityEndpoints
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -451,7 +453,7 @@
 * **keyVaultUrl**: string: Workspace Key sub-resource key vault url
 * **name**: string: Workspace Key sub-resource name
 
-## Dictionary<string,Object>
+## WorkspacePropertiesExtraProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -489,7 +491,7 @@
 * **tenantId**: string: The VSTS tenant ID
 * **type**: string: Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -560,7 +562,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'state' as 'Enabled' and 'isAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -576,7 +578,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -599,7 +601,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
 * **nodeCount**: int: The number of nodes in the Big Data pool.
 * **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge': The level of compute power that each node in the Big Data pool has.
-* **nodeSizeFamily**: 'MemoryOptimized' | 'None': The kind of nodes that the Big Data pool provides.
+* **nodeSizeFamily**: 'HardwareAcceleratedFPGA' | 'HardwareAcceleratedGPU' | 'MemoryOptimized' | 'None': The kind of nodes that the Big Data pool provides.
 * **provisioningState**: string: The state of the Big Data pool.
 * **sessionLevelPackagesEnabled**: bool: Whether session level packages enabled.
 * **sparkConfigProperties**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
@@ -637,7 +639,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **filename**: string: The filename of the library requirements file.
 * **time**: string (ReadOnly): The last update time of the library requirements file.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -709,7 +711,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'state' as 'Enabled' and 'isAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -726,7 +728,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -738,29 +740,30 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## IpFirewallRuleProperties
 ### Properties
 * **endIpAddress**: string: The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-* **provisioningState**: 'DeleteError' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Resource provisioning state.
+* **provisioningState**: 'DeleteError' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Resource provisioning state
 * **startIpAddress**: string: The start IP address of the firewall rule. Must be IPv4 format
 
 ## IntegrationRuntime
 * **Discriminator**: type
+
 ### Base Properties
 * **description**: string: Integration runtime description.
-### Managed
+### ManagedIntegrationRuntime
 #### Properties
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
-* **type**: 'Managed' (Required): Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
+* **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
-### SelfHosted
+### SelfHostedIntegrationRuntime
 #### Properties
-* **type**: 'SelfHosted' (Required): Self-hosted integration runtime.
+* **type**: 'SelfHosted' (Required): Type of integration runtime.
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
 
 
-## Managed
+## ManagedIntegrationRuntime
 ### Properties
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Integration runtime state, only valid for managed dedicated integration runtime.
-* **type**: 'Managed' (Required): Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
+* **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
 ## ManagedIntegrationRuntimeTypeProperties
@@ -776,48 +779,38 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **nodeSize**: string: The node size requirement to managed integration runtime.
 * **numberOfNodes**: int: The required number of nodes for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **publicIPs**: string[]: Resource IDs of the public IP addresses that this integration runtime will use.
 * **subnet**: string: The name of the subnet this integration runtime will join.
 * **vNetId**: string: The ID of the VNet that this integration runtime will join.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
 * **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo): Catalog information for managed dedicated integration runtime.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
-* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime.
+* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
-* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/.
+* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
-### Additional Properties
-* **Additional Properties Type**: any
 
 ## SecureString
 ### Properties
-* **type**: 'SecureString' (Required): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **type**: 'SecureString' (Required): Type of the secret.
 * **value**: string (Required): Value of secure string.
 
 ## IntegrationRuntimeCustomSetupScriptProperties
@@ -838,46 +831,48 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## CustomSetupBase
 * **Discriminator**: type
+
 ### Base Properties
 ### CmdkeySetup
 #### Properties
-* **type**: 'CmdkeySetup' (Required): The custom setup of running cmdkey commands.
+* **type**: 'CmdkeySetup' (Required): The type of custom setup.
 * **typeProperties**: [CmdkeySetupTypeProperties](#cmdkeysetuptypeproperties) (Required): Cmdkey command custom setup type properties.
 
 ### ComponentSetup
 #### Properties
-* **type**: 'ComponentSetup' (Required): The custom setup of installing 3rd party components.
+* **type**: 'ComponentSetup' (Required): The type of custom setup.
 * **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required): Installation of licensed component setup type properties.
 
 ### EnvironmentVariableSetup
 #### Properties
-* **type**: 'EnvironmentVariableSetup' (Required): The custom setup of setting environment variable.
+* **type**: 'EnvironmentVariableSetup' (Required): The type of custom setup.
 * **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Environment variable custom setup type properties.
 
 
 ## CmdkeySetup
 ### Properties
-* **type**: 'CmdkeySetup' (Required): The custom setup of running cmdkey commands.
+* **type**: 'CmdkeySetup' (Required): The type of custom setup.
 * **typeProperties**: [CmdkeySetupTypeProperties](#cmdkeysetuptypeproperties) (Required): Cmdkey command custom setup type properties.
 
 ## CmdkeySetupTypeProperties
 ### Properties
 * **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
-* **targetName**: any (Required): The server name of data source access.
-* **userName**: any (Required): The user name of data source access.
+* **targetName**: any (Required): Any object
+* **userName**: any (Required): Any object
 
 ## SecretBase
 * **Discriminator**: type
+
 ### Base Properties
 ### SecureString
 #### Properties
-* **type**: 'SecureString' (Required): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+* **type**: 'SecureString' (Required): Type of the secret.
 * **value**: string (Required): Value of secure string.
 
 
 ## ComponentSetup
 ### Properties
-* **type**: 'ComponentSetup' (Required): The custom setup of installing 3rd party components.
+* **type**: 'ComponentSetup' (Required): The type of custom setup.
 * **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required): Installation of licensed component setup type properties.
 
 ## LicensedComponentSetupTypeProperties
@@ -887,7 +882,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## EnvironmentVariableSetup
 ### Properties
-* **type**: 'EnvironmentVariableSetup' (Required): The custom setup of setting environment variable.
+* **type**: 'EnvironmentVariableSetup' (Required): The type of custom setup.
 * **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Environment variable custom setup type properties.
 
 ## EnvironmentVariableSetupTypeProperties
@@ -895,9 +890,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **variableName**: string (Required): The name of the environment variable.
 * **variableValue**: string (Required): The value of the environment variable.
 
-## SelfHosted
+## SelfHostedIntegrationRuntime
 ### Properties
-* **type**: 'SelfHosted' (Required): Self-hosted integration runtime.
+* **type**: 'SelfHosted' (Required): Type of integration runtime.
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
 
 ## SelfHostedIntegrationRuntimeTypeProperties
@@ -906,26 +901,27 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## LinkedIntegrationRuntimeType
 * **Discriminator**: authorizationType
+
 ### Base Properties
-### Key
+### LinkedIntegrationRuntimeKeyAuthorization
 #### Properties
-* **authorizationType**: 'Key' (Required): The key authorization type integration runtime.
+* **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
 * **key**: [SecureString](#securestring) (Required): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 
-### RBAC
+### LinkedIntegrationRuntimeRbacAuthorization
 #### Properties
-* **authorizationType**: 'RBAC' (Required): The role based access control (RBAC) authorization type integration runtime.
+* **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
 * **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
 
-## Key
+## LinkedIntegrationRuntimeKeyAuthorization
 ### Properties
-* **authorizationType**: 'Key' (Required): The key authorization type integration runtime.
+* **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
 * **key**: [SecureString](#securestring) (Required): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 
-## RBAC
+## LinkedIntegrationRuntimeRbacAuthorization
 ### Properties
-* **authorizationType**: 'RBAC' (Required): The role based access control (RBAC) authorization type integration runtime.
+* **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
 * **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
 ## KeyProperties
@@ -936,8 +932,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## KustoPoolProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The Kusto Pool data ingestion URI.
-* **engineType**: 'V2' | 'V3': The engine type.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **engineType**: 'V2' | 'V3': The engine type
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **state**: 'Creating' | 'Deleted' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | 'Unavailable' | 'Updating' (ReadOnly): The state of the resource.
 * **stateReason**: string (ReadOnly): The reason for the Kusto Pool's current state.
 * **uri**: string (ReadOnly): The Kusto Pool URI.
@@ -946,43 +942,43 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## AzureSku
 ### Properties
 * **capacity**: int: The number of instances of the cluster.
-* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E64i_v3' | 'Standard_E80ids_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s_v2' | 'Standard_L16s' | 'Standard_L4s' | 'Standard_L8s_v2' | 'Standard_L8s' (Required): SKU name.
+* **name**: 'Dev(No SLA)_Standard_D11_v2' | 'Dev(No SLA)_Standard_E2a_v4' | 'Standard_D11_v2' | 'Standard_D12_v2' | 'Standard_D13_v2' | 'Standard_D14_v2' | 'Standard_DS13_v2+1TB_PS' | 'Standard_DS13_v2+2TB_PS' | 'Standard_DS14_v2+3TB_PS' | 'Standard_DS14_v2+4TB_PS' | 'Standard_E16a_v4' | 'Standard_E16as_v4+3TB_PS' | 'Standard_E16as_v4+4TB_PS' | 'Standard_E2a_v4' | 'Standard_E4a_v4' | 'Standard_E64i_v3' | 'Standard_E80ids_v4' | 'Standard_E8a_v4' | 'Standard_E8as_v4+1TB_PS' | 'Standard_E8as_v4+2TB_PS' | 'Standard_L16s' | 'Standard_L16s_v2' | 'Standard_L4s' | 'Standard_L8s' | 'Standard_L8s_v2' (Required): SKU name.
 * **tier**: 'Basic' | 'Standard' (Required): SKU tier.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ReadWrite
+## ReadWriteDatabase
 ### Properties
-* **kind**: 'ReadWrite' (Required): Class representing a read write database.
+* **kind**: 'ReadWrite' (Required): Kind of the database
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 ## ReadWriteDatabaseProperties
 ### Properties
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
 * **isFollowed**: bool (ReadOnly): Indicates whether the database is followed.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
-* **statistics**: [DatabaseStatistics](#databasestatistics): A class that contains database statistics information.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
 
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## EventGrid
+## EventGridDataConnection
 ### Properties
-* **kind**: 'EventGrid' (Required): Class representing an Event Grid data connection.
+* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
 * **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ## EventGridConnectionProperties
@@ -993,29 +989,29 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **eventHubResourceId**: string (Required): The resource ID where the event grid is configured to send events.
 * **ignoreFirstRecord**: bool: A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## EventHub
+## EventHubDataConnection
 ### Properties
-* **kind**: 'EventHub' (Required): Class representing an event hub data connection.
+* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
 * **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
 
 ## EventHubConnectionProperties
 ### Properties
-* **compression**: 'GZip' | 'None': The event hub messages compression type.
+* **compression**: 'GZip' | 'None': The compression type
 * **consumerGroup**: string (Required): The event hub consumer group.
 * **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE': The data format of the message. Optionally the data format can be added to each message.
 * **eventHubResourceId**: string (Required): The resource ID of the event hub to be used to create a data connection.
 * **eventSystemProperties**: string[]: System properties of the event hub
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## IotHub
+## IotHubDataConnection
 ### Properties
-* **kind**: 'IotHub' (Required): Class representing an iot hub data connection.
+* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 ## IotHubConnectionProperties
@@ -1025,7 +1021,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **eventSystemProperties**: string[]: System properties of the iot hub
 * **iotHubResourceId**: string (Required): The resource ID of the Iot hub to be used to create a data connection.
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **sharedAccessPolicyName**: string (Required): The name of the share access policy
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
@@ -1034,7 +1030,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **principalId**: string (Required): The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
 * **principalName**: string (ReadOnly): The principal name
 * **principalType**: 'App' | 'Group' | 'User' (Required): Principal type.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' (Required): Database principal role.
 * **tenantId**: string: The tenant id of the principal
 * **tenantName**: string (ReadOnly): The tenant name of the principal
@@ -1044,19 +1040,19 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **principalId**: string (Required): The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
 * **principalName**: string (ReadOnly): The principal name
 * **principalType**: 'App' | 'Group' | 'User' (Required): Principal type.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded': The provisioned state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required): Cluster principal role.
 * **tenantId**: string: The tenant id of the principal
 * **tenantName**: string (ReadOnly): The tenant name of the principal
 
-## schemas:225_properties
+## ManagedIdentitySqlControlSettingsModelProperties
 ### Properties
-* **grantSqlControlToManagedIdentity**: [schemas:225_properties_grantSqlControlToManagedIdentity](#schemas225propertiesgrantsqlcontroltomanagedidentity): Grant sql control to managed identity
+* **grantSqlControlToManagedIdentity**: [ManagedIdentitySqlControlSettingsModelPropertiesGrantSqlControlToManagedIdentity](#managedidentitysqlcontrolsettingsmodelpropertiesgrantsqlcontroltomanagedidentity): Grant sql control to managed identity
 
-## schemas:225_properties_grantSqlControlToManagedIdentity
+## ManagedIdentitySqlControlSettingsModelPropertiesGrantSqlControlToManagedIdentity
 ### Properties
-* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state.
-* **desiredState**: 'Disabled' | 'Enabled': Desired state.
+* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state
+* **desiredState**: 'Disabled' | 'Enabled': Desired state
 
 ## ServerSecurityAlertPolicyProperties
 ### Properties
@@ -1065,7 +1061,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **emailAccountAdmins**: bool: Specifies that the alert is sent to the account administrators.
 * **emailAddresses**: string[]: Specifies an array of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
-* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific server.
+* **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific Sql pool.
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
@@ -1088,7 +1084,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **name**: string: The SKU name
 * **tier**: string: The service tier
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -1152,7 +1148,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'state' as 'Enabled' and 'isAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1251,7 +1247,7 @@ SELECT on DATABASE::myDatabase by public
 SELECT on SCHEMA::mySchema by public
 
 For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor.
+* **isAzureMonitorTargetEnabled**: bool: Specifies whether audit events are sent to Azure Monitor. 
 In order to send the events to Azure Monitor, specify 'state' as 'Enabled' and 'isAzureMonitorTargetEnabled' as true.
 
 When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -1268,7 +1264,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account.
+* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1284,7 +1280,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## MaintenanceWindowsProperties
 ### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]
+* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Array of MaintenanceWindowTimeRange
 
 ## MaintenanceWindowTimeRange
 ### Properties
@@ -1292,7 +1288,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **duration**: string: Duration of maintenance window in minutes.
 * **startTime**: string: Start time minutes offset from 12am.
 
-## schemas:105_properties
+## MetadataSyncConfigProperties
 ### Properties
 * **enabled**: bool: Indicates whether the metadata sync is enabled or disabled
 * **syncIntervalInMinutes**: int: The Sync Interval in minutes.

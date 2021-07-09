@@ -24,11 +24,12 @@
 
 ## GuestConfigurationNavigation
 ### Properties
+* **assignmentType**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'Audit' | 'DeployAndAutoCorrect': Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
 * **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]: The configuration parameters for the guest configuration.
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
-* **contentHash**: string (ReadOnly): Combined hash of the guest configuration package and configuration parameters.
-* **contentUri**: string (ReadOnly): Uri of the storage where guest configuration package is uploaded.
-* **kind**: 'DSC': Kind of the guest configuration. For example:DSC.
+* **contentHash**: string: Combined hash of the guest configuration package and configuration parameters.
+* **contentUri**: string: Uri of the storage where guest configuration package is uploaded.
+* **kind**: 'DSC': Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
 * **version**: string: Version of the guest configuration.
 
@@ -39,7 +40,7 @@
 
 ## ConfigurationSetting
 ### Properties
-* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration.
+* **actionAfterReboot**: 'ContinueConfiguration' | 'StopConfiguration': Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
 * **allowModuleOverwrite**: bool: If true - new configurations downloaded from the pull service are allowed to overwrite the old ones on the target node. Otherwise, false
 * **configurationMode**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'ApplyOnly': Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
 * **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
@@ -52,7 +53,7 @@
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
 * **endTime**: string (ReadOnly): End date and time of the guest configuration assignment compliance status check.
 * **id**: string (ReadOnly): ARM resource id of the report for the guest configuration assignment.
-* **operationType**: 'Consistency' | 'Initial' (ReadOnly): Type of report, Consistency or Initial.
+* **operationType**: 'Consistency' | 'Initial' (ReadOnly): Type of report, Consistency or Initial
 * **reportId**: string (ReadOnly): GUID that identifies the guest configuration assignment report under a subscription, resource group.
 * **resources**: [AssignmentReportResource](#assignmentreportresource)[]: The list of resources for which guest configuration assignment compliance is checked.
 * **startTime**: string (ReadOnly): Start date and time of the guest configuration assignment compliance status check.
@@ -71,7 +72,7 @@
 ## AssignmentReportResource
 ### Properties
 * **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
-* **properties**: any (ReadOnly): Properties of a guest configuration assignment resource.
+* **properties**: any (ReadOnly): Any object
 * **reasons**: [AssignmentReportResourceComplianceReason](#assignmentreportresourcecompliancereason)[]: Compliance reason and reason code for a resource.
 * **resourceId**: string (ReadOnly): Name of the guest configuration assignment resource setting.
 

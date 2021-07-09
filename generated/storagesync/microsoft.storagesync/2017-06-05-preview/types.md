@@ -8,7 +8,7 @@
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageSyncServiceProperties](#storagesyncserviceproperties): Storage Sync Service Properties object.
-* **tags**: any: The tags of the resource.
+* **tags**: any: Any object
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2017-06-05-preview
@@ -89,8 +89,8 @@
 ### Properties
 * **byteProgress**: int: Bytes in progress
 * **byteTotal**: int: Bytes total
-* **cloudTiering**: 'off' | 'on': Cloud Tiering.
-* **currentProgressType**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': current progress type.
+* **cloudTiering**: 'off' | 'on': Type of the Feature Status
+* **currentProgressType**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': Type of the ProgressType
 * **friendlyName**: string: Friendly Name
 * **itemDownloadErrorCount**: int: Item download error count.
 * **itemProgressCount**: int: Item Progress Count
@@ -102,7 +102,7 @@
 * **serverLocalPath**: string: Server folder used for data synchronization
 * **serverResourceId**: string: Arm resource identifier.
 * **syncErrorContext**: string: sync error context.
-* **syncErrorDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': Sync Error Direction.
+* **syncErrorDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload': Type of the ProgressType
 * **syncErrorState**: string: Sync Error State
 * **syncErrorStateTimestamp**: string: Sync Error State Timestamp
 * **totalProgress**: int: Total progress

@@ -1,13 +1,13 @@
-# microsoft.insights @ 2017-05-01-preview
+# Microsoft.Insights @ 2017-05-01-preview
 
-## Resource microsoft.insights/diagnosticSettings@2017-05-01-preview
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Insights/diagnosticSettings@2017-05-01-preview
+* **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticSettings](#diagnosticsettings): The diagnostic settings.
-* **type**: 'microsoft.insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.Insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DiagnosticSettings
 ### Properties

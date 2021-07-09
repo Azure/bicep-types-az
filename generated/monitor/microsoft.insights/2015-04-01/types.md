@@ -1,6 +1,6 @@
-# microsoft.insights @ 2015-04-01
+# Microsoft.Insights @ 2015-04-01
 
-## Resource microsoft.insights/autoscalesettings@2015-04-01
+## Resource Microsoft.Insights/autoscalesettings@2015-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -8,8 +8,8 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutoscaleSetting](#autoscalesetting) (Required): A setting that contains all of the configuration for the automatic scaling of a resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
-* **type**: 'microsoft.insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoscaleSetting
 ### Properties
@@ -17,12 +17,13 @@
 * **name**: string: the name of the autoscale setting.
 * **notifications**: [AutoscaleNotification](#autoscalenotification)[]: the collection of notifications.
 * **profiles**: [AutoscaleProfile](#autoscaleprofile)[] (Required): the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+* **targetResourceLocation**: string: the location of the resource that the autoscale setting should be added to.
 * **targetResourceUri**: string: the resource identifier of the resource that the autoscale setting should be added to.
 
 ## AutoscaleNotification
 ### Properties
 * **email**: [EmailNotification](#emailnotification): Email notification of an autoscale event.
-* **operation**: string (Required): the operation associated with the notification and its value must be "scale"
+* **operation**: 'Scale' (Required): the operation associated with the notification and its value must be "scale"
 * **webhooks**: [WebhookNotification](#webhooknotification)[]: the collection of webhook notifications.
 
 ## EmailNotification
@@ -33,10 +34,10 @@
 
 ## WebhookNotification
 ### Properties
-* **properties**: [Dictionary<string,String>](#dictionarystringstring): a property bag of settings. This value can be empty.
+* **properties**: [WebhookNotificationProperties](#webhooknotificationproperties): a property bag of settings. This value can be empty.
 * **serviceUri**: string: the service address to receive the notification.
 
-## Dictionary<string,String>
+## WebhookNotificationProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -84,9 +85,10 @@
 * **dividePerInstance**: bool: a value indicating whether metric should divide per instance.
 * **metricName**: string (Required): the name of the metric that defines what the rule monitors.
 * **metricNamespace**: string: the namespace of the metric that defines what the rule monitors.
+* **metricResourceLocation**: string: the location of the resource the rule monitors.
 * **metricResourceUri**: string (Required): the resource identifier of the resource the rule monitors.
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the operator that is used to compare the metric data and the threshold.
-* **statistic**: 'Average' | 'Max' | 'Min' | 'Sum' (Required): the metric statistic type. How the metrics from multiple instances are combined.
+* **statistic**: 'Average' | 'Count' | 'Max' | 'Min' | 'Sum' (Required): the metric statistic type. How the metrics from multiple instances are combined.
 * **threshold**: int (Required): the threshold of the metric that triggers the scale action.
 * **timeAggregation**: 'Average' | 'Count' | 'Last' | 'Maximum' | 'Minimum' | 'Total' (Required): time aggregation type. How the data that is collected should be combined over time. The default value is Average.
 * **timeGrain**: string (Required): the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
@@ -95,17 +97,17 @@
 ## ScaleRuleMetricDimension
 ### Properties
 * **DimensionName**: string (Required): Name of the dimension.
-* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values.
+* **Operator**: 'Equals' | 'NotEquals' (Required): the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
 * **Values**: string[] (Required): list of dimension values. For example: ["App1","App2"].
 
 ## ScaleAction
 ### Properties
 * **cooldown**: string (Required): the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
 * **direction**: 'Decrease' | 'Increase' | 'None' (Required): the scale direction. Whether the scaling action increases or decreases the number of instances.
-* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required): the type of action that should occur when the scale rule fires.
+* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' | 'ServiceAllowedNextValue' (Required): the type of action that should occur when the scale rule fires.
 * **value**: string: the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

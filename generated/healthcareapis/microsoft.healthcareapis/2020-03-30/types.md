@@ -6,12 +6,12 @@
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:12_identity](#schemas12identity): Setting indicating whether the service has a managed identity associated with it.
-* **kind**: 'fhir-R4' | 'fhir-Stu3' | 'fhir' (Required): The kind of the service.
+* **identity**: [ServicesResourceIdentity](#servicesresourceidentity): Setting indicating whether the service has a managed identity associated with it.
+* **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required): The kind of the service.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServicesProperties](#servicesproperties): The properties of a service instance.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **tags**: [ServicesResourceTags](#servicesresourcetags): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2020-03-30
@@ -23,7 +23,7 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:12_identity
+## ServicesResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource.
@@ -78,7 +78,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -88,9 +88,9 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
 
-## Dictionary<string,String>
+## ServicesResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

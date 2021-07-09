@@ -8,8 +8,8 @@
 * **identity**: [EncryptionIdentity](#encryptionidentity): The encryption identity properties.
 * **location**: string (Required): The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): The resource tags.
+* **properties**: [CreateDataLakeStoreAccountProperties](#createdatalakestoreaccountproperties): Data Lake Store account properties information.
+* **tags**: [CreateDataLakeStoreAccountParametersTags](#createdatalakestoreaccountparameterstags): The resource tags.
 * **type**: 'Microsoft.DataLakeStore/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeStore/accounts/firewallRules@2016-11-01
@@ -18,7 +18,7 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties to use when creating a new firewall rule.
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties.
 * **type**: 'Microsoft.DataLakeStore/accounts/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeStore/accounts/trustedIdProviders@2016-11-01
@@ -27,7 +27,7 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateOrUpdateTrustedIdProviderProperties](#createorupdatetrustedidproviderproperties) (Required): The trusted identity provider properties to use when creating a new trusted identity provider.
+* **properties**: [CreateOrUpdateTrustedIdProviderProperties](#createorupdatetrustedidproviderproperties) (Required): The trusted identity provider properties.
 * **type**: 'Microsoft.DataLakeStore/accounts/trustedIdProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataLakeStore/accounts/virtualNetworkRules@2016-11-01
@@ -36,20 +36,20 @@
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateOrUpdateVirtualNetworkRuleProperties](#createorupdatevirtualnetworkruleproperties) (Required): The virtual network rule properties to use when creating a new virtual network rule.
+* **properties**: [CreateOrUpdateVirtualNetworkRuleProperties](#createorupdatevirtualnetworkruleproperties) (Required): The virtual network rule properties.
 * **type**: 'Microsoft.DataLakeStore/accounts/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## EncryptionIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
 * **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
-* **type**: string (Required): The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+* **type**: 'SystemAssigned' (Required): The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
 
 ## CreateDataLakeStoreAccountProperties
 ### Properties
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Store account.
 * **creationTime**: string (ReadOnly): The account creation time.
-* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
+* **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier to use for next month.
 * **defaultGroup**: string: The default owner group for all new folders and files created in the Data Lake Store account.
 * **encryptionConfig**: [EncryptionConfig](#encryptionconfig): The encryption configuration for the account.
 * **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake Store account.
@@ -80,8 +80,8 @@
 ## CreateFirewallRuleWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the firewall rule to create.
-* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties to use when creating a new firewall rule.
+* **name**: string (Required): The resource name.
+* **properties**: [CreateOrUpdateFirewallRuleProperties](#createorupdatefirewallruleproperties) (Required): The firewall rule properties.
 * **type**: string (ReadOnly): The resource type.
 
 ## CreateOrUpdateFirewallRuleProperties
@@ -92,8 +92,8 @@
 ## CreateTrustedIdProviderWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the trusted identity provider to create.
-* **properties**: [CreateOrUpdateTrustedIdProviderProperties](#createorupdatetrustedidproviderproperties) (Required): The trusted identity provider properties to use when creating a new trusted identity provider.
+* **name**: string (Required): The resource name.
+* **properties**: [CreateOrUpdateTrustedIdProviderProperties](#createorupdatetrustedidproviderproperties) (Required): The trusted identity provider properties.
 * **type**: string (ReadOnly): The resource type.
 
 ## CreateOrUpdateTrustedIdProviderProperties
@@ -103,15 +103,15 @@
 ## CreateVirtualNetworkRuleWithAccountParameters
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (Required): The unique name of the virtual network rule to create.
-* **properties**: [CreateOrUpdateVirtualNetworkRuleProperties](#createorupdatevirtualnetworkruleproperties) (Required): The virtual network rule properties to use when creating a new virtual network rule.
+* **name**: string (Required): The resource name.
+* **properties**: [CreateOrUpdateVirtualNetworkRuleProperties](#createorupdatevirtualnetworkruleproperties) (Required): The virtual network rule properties.
 * **type**: string (ReadOnly): The resource type.
 
 ## CreateOrUpdateVirtualNetworkRuleProperties
 ### Properties
 * **subnetId**: string (Required): The resource identifier for the subnet.
 
-## Dictionary<string,String>
+## CreateDataLakeStoreAccountParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

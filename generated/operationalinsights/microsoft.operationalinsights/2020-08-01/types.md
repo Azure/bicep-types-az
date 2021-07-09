@@ -69,7 +69,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: The ETag of the saved search.
+* **etag**: string: The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SavedSearchProperties](#savedsearchproperties) (Required): Value object for saved search results.

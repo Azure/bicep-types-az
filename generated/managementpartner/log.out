@@ -1,10 +1,15 @@
-AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.managementpartner-2018-02-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
+INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
-INFORMATION: Resource type Microsoft.ManagementPartner/partners under path '/providers/Microsoft.ManagementPartner/partners/{partnerId}' has no body defined.
-[4.75 s] Generation Complete
+
+WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+INFORMATION: Resource type microsoft.managementpartner/partners under path '/providers/Microsoft.ManagementPartner/partners/{partnerId}' has no body defined.
+INFORMATION: autorest.bicep took 13ms
+[3.69 s] Generation Complete

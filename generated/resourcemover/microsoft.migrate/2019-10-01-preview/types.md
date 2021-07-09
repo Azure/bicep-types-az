@@ -10,7 +10,7 @@
 * **location**: string: The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MoveCollectionProperties](#movecollectionproperties): Defines the move collection properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [MoveCollectionTags](#movecollectiontags): Resource tags.
 * **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/moveCollections/moveResources@2019-10-01-preview
@@ -26,16 +26,16 @@
 ### Properties
 * **principalId**: string: Gets or sets the principal id.
 * **tenantId**: string: Gets or sets the tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the resource mover service.
 
 ## MoveCollectionProperties
 ### Properties
-* **errors**: [schemas:18_errors](#schemas18errors) (ReadOnly): Defines the move collection errors.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
+* **errors**: [MoveCollectionPropertiesErrors](#movecollectionpropertieserrors) (ReadOnly): Defines the move collection errors.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Defines the provisioning states.
 * **sourceRegion**: string (Required): Gets or sets the source region.
 * **targetRegion**: string (Required): Gets or sets the target region.
 
-## schemas:18_errors
+## MoveCollectionPropertiesErrors
 ### Properties
 * **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): An error response from the Azure Migrate service.
 
@@ -46,7 +46,7 @@
 * **message**: string (ReadOnly): A message describing the error, intended to be suitable for display in a user interface.
 * **target**: string (ReadOnly): The target of the particular error. For example, the name of the property in error.
 
-## Dictionary<string,String>
+## MoveCollectionTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -55,11 +55,11 @@
 ### Properties
 * **dependsOn**: [MoveResourceDependency](#moveresourcedependency)[] (ReadOnly): Gets or sets the move resource dependencies.
 * **dependsOnOverrides**: [MoveResourceDependencyOverride](#moveresourcedependencyoverride)[]: Gets or sets the move resource dependencies overrides.
-* **errors**: [schemas:14_errors](#schemas14errors) (ReadOnly): Defines the move resource errors.
+* **errors**: [MoveResourcePropertiesErrors](#moveresourcepropertieserrors) (ReadOnly): Defines the move resource errors.
 * **existingTargetId**: string: Gets or sets the existing target ARM Id of the resource.
 * **isResolveRequired**: bool (ReadOnly): Gets a value indicating whether the resolve action is required over the move collection.
-* **moveStatus**: [schemas:14_moveStatus](#schemas14movestatus) (ReadOnly): Defines the move resource status.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating'
+* **moveStatus**: [MoveResourcePropertiesMoveStatus](#moveresourcepropertiesmovestatus) (ReadOnly): Defines the move resource status.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Defines the provisioning states.
 * **resourceSettings**: [ResourceSettings](#resourcesettings): Gets or sets the resource settings.
 * **sourceId**: string (Required): Gets or sets the Source ARM Id of the resource.
 * **sourceResourceSettings**: [ResourceSettings](#resourcesettings) (ReadOnly): Gets or sets the resource settings.
@@ -68,12 +68,12 @@
 ## MoveResourceDependency
 ### Properties
 * **automaticResolution**: [AutomaticResolutionProperties](#automaticresolutionproperties): Defines the properties for automatic resolution.
-* **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare'
+* **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare': Defines the dependency type.
 * **id**: string: Gets the source ARM ID of the dependent resource.
 * **isOptional**: string: Gets or sets a value indicating whether the dependency is optional.
 * **manualResolution**: [ManualResolutionProperties](#manualresolutionproperties): Defines the properties for manual resolution.
 * **resolutionStatus**: string: Gets the dependency resolution status.
-* **resolutionType**: 'Automatic' | 'Manual'
+* **resolutionType**: 'Automatic' | 'Manual': Defines the resolution type.
 
 ## AutomaticResolutionProperties
 ### Properties
@@ -90,15 +90,15 @@ the dependent resource if the resolution type is Automatic.
 * **targetId**: string: Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
 the dependent resource.
 
-## schemas:14_errors
+## MoveResourcePropertiesErrors
 ### Properties
 * **properties**: [MoveResourceErrorBody](#moveresourceerrorbody): An error response from the Azure Migrate service.
 
-## schemas:14_moveStatus
+## MoveResourcePropertiesMoveStatus
 ### Properties
 * **errors**: [MoveResourceError](#moveresourceerror): An error response from the azure resource mover service.
 * **jobStatus**: [JobStatus](#jobstatus): Defines the job status.
-* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted'
+* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted' (ReadOnly): Defines the MoveResource states.
 
 ## MoveResourceError
 ### Properties
@@ -106,118 +106,119 @@ the dependent resource.
 
 ## JobStatus
 ### Properties
-* **jobName**: 'InitialSync'
+* **jobName**: 'InitialSync' (ReadOnly): Defines the job name.
 * **jobProgress**: string (ReadOnly): Gets or sets the monitoring job percentage.
 
 ## ResourceSettings
 * **Discriminator**: resourceType
+
 ### Base Properties
 * **targetResourceName**: string (Required): Gets or sets the target Resource name.
-### Microsoft.Compute/availabilitySets
+### AvailabilitySetResourceSettings
 #### Properties
 * **faultDomain**: int: Gets or sets the target fault domain.
-* **resourceType**: 'Microsoft.Compute/availabilitySets' (Required): Gets or sets the availability set resource settings.
+* **resourceType**: 'Microsoft.Compute/availabilitySets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **updateDomain**: int: Gets or sets the target update domain.
 
-### Microsoft.Compute/diskEncryptionSets
+### DiskEncryptionSetResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required): Defines the disk encryption set resource settings.
+* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-### Microsoft.Compute/virtualMachines
+### VirtualMachineResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.Compute/virtualMachines' (Required): Gets or sets the virtual machine resource settings.
+* **resourceType**: 'Microsoft.Compute/virtualMachines' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **targetAvailabilitySetId**: string: Gets or sets the target availability set id for virtual machines not in an availability set at source.
 * **targetAvailabilityZone**: '1' | '2' | '3' | 'NA': Gets or sets the target availability zone.
 * **targetVmSize**: string: Gets or sets the target virtual machine size.
 
-### Microsoft.KeyVault/vaults
+### KeyVaultResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.KeyVault/vaults' (Required): Defines the key vault resource settings.
+* **resourceType**: 'Microsoft.KeyVault/vaults' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-### Microsoft.Network/loadBalancers
+### LoadBalancerResourceSettings
 #### Properties
 * **backendAddressPools**: [LBBackendAddressPoolResourceSettings](#lbbackendaddresspoolresourcesettings)[]: Gets or sets the backend address pools of the load balancer.
 * **frontendIPConfigurations**: [LBFrontendIPConfigurationResourceSettings](#lbfrontendipconfigurationresourcesettings)[]: Gets or sets the frontend IP configurations of the load balancer.
-* **resourceType**: 'Microsoft.Network/loadBalancers' (Required): Defines the load balancer resource settings.
+* **resourceType**: 'Microsoft.Network/loadBalancers' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **sku**: string: Gets or sets load balancer sku (Basic/Standard).
 * **zones**: string: Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
  precedence only if frontend IP configurations settings are not present.
 
-### Microsoft.Network/networkInterfaces
+### NetworkInterfaceResourceSettings
 #### Properties
 * **enableAcceleratedNetworking**: bool: Gets or sets a value indicating whether accelerated networking is enabled.
 * **ipConfigurations**: [NicIpConfigurationResourceSettings](#nicipconfigurationresourcesettings)[]: Gets or sets the IP configurations of the NIC.
-* **resourceType**: 'Microsoft.Network/networkInterfaces' (Required): Defines the network interface resource settings.
+* **resourceType**: 'Microsoft.Network/networkInterfaces' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-### Microsoft.Network/networkSecurityGroups
+### NetworkSecurityGroupResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required): Defines the NSG resource settings.
+* **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **securityRules**: [NsgSecurityRule](#nsgsecurityrule)[]: Gets or sets Security rules of network security group.
 
-### Microsoft.Network/publicIPAddresses
+### PublicIPAddressResourceSettings
 #### Properties
 * **domainNameLabel**: string: Gets or sets the domain name label.
 * **fqdn**: string: Gets or sets the fully qualified domain name.
 * **publicIpAllocationMethod**: string: Gets or sets public IP allocation method.
-* **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required): Defines the public IP address resource settings.
+* **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **sku**: string: Gets or sets public IP sku.
 * **zones**: string: Gets or sets public IP zones.
 
-### Microsoft.Network/virtualNetworks
+### VirtualNetworkResourceSettings
 #### Properties
 * **addressSpace**: string[]: Gets or sets the address prefixes for the virtual network.
 * **dnsServers**: string[]: Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.
 * **enableDdosProtection**: bool: Gets or sets a value indicating whether gets or sets whether the
 DDOS protection should be switched on.
-* **resourceType**: 'Microsoft.Network/virtualNetworks' (Required): Defines the virtual network resource settings.
+* **resourceType**: 'Microsoft.Network/virtualNetworks' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **subnets**: [SubnetResourceSettings](#subnetresourcesettings)[]: Gets or sets List of subnets in a VirtualNetwork.
 
-### Microsoft.Sql/servers
+### SqlServerResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.Sql/servers' (Required): Defines the SQL Server resource settings.
+* **resourceType**: 'Microsoft.Sql/servers' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-### Microsoft.Sql/servers/databases
+### SqlDatabaseResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.Sql/servers/databases' (Required): Defines the Sql Database resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable'
+* **resourceType**: 'Microsoft.Sql/servers/databases' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
 
-### Microsoft.Sql/servers/elasticPools
+### SqlElasticPoolResourceSettings
 #### Properties
-* **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): Defines the Sql ElasticPool resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable'
+* **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
 
-### resourceGroups
+### ResourceGroupResourceSettings
 #### Properties
-* **resourceType**: 'resourceGroups' (Required): Defines the resource group resource settings.
+* **resourceType**: 'resourceGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
 
-## Microsoft.Compute/availabilitySets
+## AvailabilitySetResourceSettings
 ### Properties
 * **faultDomain**: int: Gets or sets the target fault domain.
-* **resourceType**: 'Microsoft.Compute/availabilitySets' (Required): Gets or sets the availability set resource settings.
+* **resourceType**: 'Microsoft.Compute/availabilitySets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **updateDomain**: int: Gets or sets the target update domain.
 
-## Microsoft.Compute/diskEncryptionSets
+## DiskEncryptionSetResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required): Defines the disk encryption set resource settings.
+* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-## Microsoft.Compute/virtualMachines
+## VirtualMachineResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.Compute/virtualMachines' (Required): Gets or sets the virtual machine resource settings.
+* **resourceType**: 'Microsoft.Compute/virtualMachines' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **targetAvailabilitySetId**: string: Gets or sets the target availability set id for virtual machines not in an availability set at source.
 * **targetAvailabilityZone**: '1' | '2' | '3' | 'NA': Gets or sets the target availability zone.
 * **targetVmSize**: string: Gets or sets the target virtual machine size.
 
-## Microsoft.KeyVault/vaults
+## KeyVaultResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.KeyVault/vaults' (Required): Defines the key vault resource settings.
+* **resourceType**: 'Microsoft.KeyVault/vaults' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-## Microsoft.Network/loadBalancers
+## LoadBalancerResourceSettings
 ### Properties
 * **backendAddressPools**: [LBBackendAddressPoolResourceSettings](#lbbackendaddresspoolresourcesettings)[]: Gets or sets the backend address pools of the load balancer.
 * **frontendIPConfigurations**: [LBFrontendIPConfigurationResourceSettings](#lbfrontendipconfigurationresourcesettings)[]: Gets or sets the frontend IP configurations of the load balancer.
-* **resourceType**: 'Microsoft.Network/loadBalancers' (Required): Defines the load balancer resource settings.
+* **resourceType**: 'Microsoft.Network/loadBalancers' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **sku**: string: Gets or sets load balancer sku (Basic/Standard).
 * **zones**: string: Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
  precedence only if frontend IP configurations settings are not present.
@@ -240,11 +241,11 @@ private IP address shall be allocated from the subnet specified in subnetRef.
 * **name**: string: Gets the name of the proxy resource on the target side.
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
 
-## Microsoft.Network/networkInterfaces
+## NetworkInterfaceResourceSettings
 ### Properties
 * **enableAcceleratedNetworking**: bool: Gets or sets a value indicating whether accelerated networking is enabled.
 * **ipConfigurations**: [NicIpConfigurationResourceSettings](#nicipconfigurationresourcesettings)[]: Gets or sets the IP configurations of the NIC.
-* **resourceType**: 'Microsoft.Network/networkInterfaces' (Required): Defines the network interface resource settings.
+* **resourceType**: 'Microsoft.Network/networkInterfaces' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
 ## NicIpConfigurationResourceSettings
 ### Properties
@@ -271,9 +272,9 @@ private IP address shall be allocated from the subnet specified in subnetRef.
 ### Properties
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
 
-## Microsoft.Network/networkSecurityGroups
+## NetworkSecurityGroupResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required): Defines the NSG resource settings.
+* **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **securityRules**: [NsgSecurityRule](#nsgsecurityrule)[]: Gets or sets Security rules of network security group.
 
 ## NsgSecurityRule
@@ -300,23 +301,23 @@ rule, specifies where network traffic originates from.
 * **sourcePortRange**: string: Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.
 
-## Microsoft.Network/publicIPAddresses
+## PublicIPAddressResourceSettings
 ### Properties
 * **domainNameLabel**: string: Gets or sets the domain name label.
 * **fqdn**: string: Gets or sets the fully qualified domain name.
 * **publicIpAllocationMethod**: string: Gets or sets public IP allocation method.
-* **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required): Defines the public IP address resource settings.
+* **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **sku**: string: Gets or sets public IP sku.
 * **zones**: string: Gets or sets public IP zones.
 
-## Microsoft.Network/virtualNetworks
+## VirtualNetworkResourceSettings
 ### Properties
 * **addressSpace**: string[]: Gets or sets the address prefixes for the virtual network.
 * **dnsServers**: string[]: Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.
 * **enableDdosProtection**: bool: Gets or sets a value indicating whether gets or sets whether the
 DDOS protection should be switched on.
-* **resourceType**: 'Microsoft.Network/virtualNetworks' (Required): Defines the virtual network resource settings.
+* **resourceType**: 'Microsoft.Network/virtualNetworks' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **subnets**: [SubnetResourceSettings](#subnetresourcesettings)[]: Gets or sets List of subnets in a VirtualNetwork.
 
 ## SubnetResourceSettings
@@ -329,21 +330,21 @@ DDOS protection should be switched on.
 ### Properties
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
 
-## Microsoft.Sql/servers
+## SqlServerResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.Sql/servers' (Required): Defines the SQL Server resource settings.
+* **resourceType**: 'Microsoft.Sql/servers' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
-## Microsoft.Sql/servers/databases
+## SqlDatabaseResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.Sql/servers/databases' (Required): Defines the Sql Database resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable'
+* **resourceType**: 'Microsoft.Sql/servers/databases' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
 
-## Microsoft.Sql/servers/elasticPools
+## SqlElasticPoolResourceSettings
 ### Properties
-* **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): Defines the Sql ElasticPool resource settings.
-* **zoneRedundant**: 'Disable' | 'Enable'
+* **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
 
-## resourceGroups
+## ResourceGroupResourceSettings
 ### Properties
-* **resourceType**: 'resourceGroups' (Required): Defines the resource group resource settings.
+* **resourceType**: 'resourceGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 

@@ -6,15 +6,15 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:73_identity](#schemas73identity)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:73_identity](#schemas73identity)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Schema for ApplicationGroup properties.
-* **sku**: [schemas:73_identity](#schemas73identity)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2021-04-01-preview
@@ -32,15 +32,15 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:73_identity](#schemas73identity)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:73_identity](#schemas73identity)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Properties of HostPool.
-* **sku**: [schemas:73_identity](#schemas73identity)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2021-04-01-preview
@@ -49,7 +49,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MSIXPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
+* **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2021-04-01-preview
@@ -59,7 +59,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-04-01-preview
@@ -68,15 +68,15 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:73_identity](#schemas73identity)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:73_identity](#schemas73identity)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [ScalingPlanProperties](#scalingplanproperties): Scaling plan properties.
-* **sku**: [schemas:73_identity](#schemas73identity)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/workspaces@2021-04-01-preview
@@ -85,15 +85,15 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [schemas:73_identity](#schemas73identity)
+* **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string: The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [schemas:73_identity](#schemas73identity)
+* **plan**: [ResourceModelWithAllowedPropertySetPlan](#resourcemodelwithallowedpropertysetplan)
 * **properties**: [WorkspaceProperties](#workspaceproperties): Schema for Workspace properties.
-* **sku**: [schemas:73_identity](#schemas73identity)
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **sku**: [ResourceModelWithAllowedPropertySetSku](#resourcemodelwithallowedpropertysetsku)
+* **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2021-04-01-preview
@@ -103,14 +103,22 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## schemas:73_identity
+## ResourceModelWithAllowedPropertySetIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
 * **type**: 'SystemAssigned': The identity type.
+
+## ResourceModelWithAllowedPropertySetPlan
+### Properties
+* **name**: string (Required): A user defined name of the 3rd Party Artifact that is being procured.
+* **product**: string (Required): The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+* **promotionCode**: string: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+* **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+* **version**: string: The version of the desired product/artifact.
 
 ## ApplicationGroupProperties
 ### Properties
@@ -128,7 +136,15 @@
 * **migrationPath**: string: The path to the legacy object to migrate.
 * **operation**: 'Complete' | 'Hide' | 'Revoke' | 'Start' | 'Unhide': The type of operation for migration.
 
-## Dictionary<string,String>
+## ResourceModelWithAllowedPropertySetSku
+### Properties
+* **capacity**: int: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+* **family**: string: If the service has different generations of hardware, for the same SKU, then that can be captured here.
+* **name**: string (Required): The name of the SKU. Ex - P3. It is typically a letter+number code
+* **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -141,7 +157,7 @@
 * **description**: string: Description of Application.
 * **filePath**: string: Specifies a path for the executable file for the application.
 * **friendlyName**: string: Friendly name of Application.
-* **iconContent**: array (ReadOnly): the icon a 64 bit string as a byte array.
+* **iconContent**: any (ReadOnly): the icon a 64 bit string as a byte array.
 * **iconHash**: string (ReadOnly): Hash of the icon.
 * **iconIndex**: int: Index of the icon.
 * **iconPath**: string: Path to icon.
@@ -163,8 +179,8 @@
 * **migrationRequest**: [MigrationRequestProperties](#migrationrequestproperties): Properties for arm migration.
 * **objectId**: string (ReadOnly): ObjectId of HostPool. (internal use)
 * **personalDesktopAssignmentType**: 'Automatic' | 'Direct': PersonalDesktopAssignment type for HostPool.
-* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints.
+* **preferredAppGroupType**: 'Desktop' | 'None' | 'RailApplications' (Required): The type of preferred application group type, default to Desktop Application Group
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints
 * **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
@@ -181,12 +197,12 @@
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
 
-## Dictionary<string,String>
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## MSIXPackageProperties
+## MsixPackageProperties
 ### Properties
 * **displayName**: string: User friendly Name to be displayed in the portal.
 * **imagePath**: string: VHD/CIM image path on Network Share.
@@ -207,8 +223,8 @@
 * **description**: string: Description of Package Application.
 * **friendlyName**: string: User friendly name.
 * **iconImageName**: string: User friendly name.
-* **rawIcon**: array: the icon a 64 bit string as a byte array.
-* **rawPng**: array: the icon a 64 bit string as a byte array.
+* **rawIcon**: any: the icon a 64 bit string as a byte array.
+* **rawPng**: any: the icon a 64 bit string as a byte array.
 
 ## MsixPackageDependencies
 ### Properties
@@ -220,7 +236,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The provisioning state of the private endpoint connection resource.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -230,16 +246,16 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
 
 ## ScalingPlanProperties
 ### Properties
@@ -261,13 +277,13 @@
 ### Properties
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
-* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for off-peak period.
+* **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **offPeakStartTime**: string: Starting time for off-peak period.
-* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for peak period.
+* **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **peakStartTime**: string: Starting time for peak period.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
-* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp down period.
+* **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
 * **rampDownStartTime**: string: Starting time for ramp down period.
@@ -278,7 +294,7 @@
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
 * **rampUpStartTime**: string: Starting time for ramp up period.
 
-## Dictionary<string,String>
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -290,9 +306,9 @@
 * **description**: string: Description of Workspace.
 * **friendlyName**: string: Friendly name of Workspace.
 * **objectId**: string (ReadOnly): ObjectId of Workspace. (internal use)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints
 
-## Dictionary<string,String>
+## ResourceModelWithAllowedPropertySetTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

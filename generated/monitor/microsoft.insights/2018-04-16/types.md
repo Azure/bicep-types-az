@@ -1,6 +1,6 @@
-# microsoft.insights @ 2018-04-16
+# Microsoft.Insights @ 2018-04-16
 
-## Resource microsoft.insights/scheduledQueryRules@2018-04-16
+## Resource Microsoft.Insights/scheduledQueryRules@2018-04-16
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-16' (ReadOnly, DeployTimeConstant): The resource api version
@@ -10,8 +10,8 @@
 * **location**: string (Required): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LogSearchRule](#logsearchrule) (Required): Log Search Rule Definition
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
-* **type**: 'microsoft.insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: 'Microsoft.Insights/scheduledQueryRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## LogSearchRule
 ### Properties
@@ -20,35 +20,36 @@
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **description**: string: The description of the Log Search rule.
 * **displayName**: string: The display name of the alert rule
-* **enabled**: 'false' | 'true': The flag which indicates whether the Log Search rule is enabled. Value should be true or false.
+* **enabled**: 'false' | 'true': The flag which indicates whether the Log Search rule is enabled. Value should be true or false
 * **isLegacyLogAnalyticsRule**: bool (ReadOnly): True if alert rule is legacy Log Analytic rule
 * **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in IS08601 format.
-* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the scheduled query rule.
+* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the scheduled query rule
 * **schedule**: [Schedule](#schedule): Defines how often to run the search and the time interval.
 * **source**: [Source](#source) (Required): Specifies the log search query.
 
 ## Action
 * **Discriminator**: odata.type
+
 ### Base Properties
-### Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction
+### AlertingAction
 #### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group
-* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specify action need to be taken when rule type is Alert
-* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity of the alert.
+* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
+* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity Level of Alert
 * **throttlingInMin**: int: time (in minutes) for which Alerts should be throttled or suppressed.
 * **trigger**: [TriggerCondition](#triggercondition) (Required): The condition that results in the Log Search rule.
 
-### Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction
+### LogToMetricAction
 #### Properties
 * **criteria**: [Criteria](#criteria)[] (Required): Criteria of Metric
-* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required): Specify action need to be taken when rule type is converting log to metric
+* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
 
 
-## Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction
+## AlertingAction
 ### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group
-* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specify action need to be taken when rule type is Alert
-* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity of the alert.
+* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
+* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity Level of Alert
 * **throttlingInMin**: int: time (in minutes) for which Alerts should be throttled or suppressed.
 * **trigger**: [TriggerCondition](#triggercondition) (Required): The condition that results in the Log Search rule.
 
@@ -62,19 +63,19 @@
 ### Properties
 * **metricTrigger**: [LogMetricTrigger](#logmetrictrigger): A log metrics trigger descriptor.
 * **threshold**: int (Required): Result or count threshold based on which rule should be triggered.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Result Condition Evaluation criteria. Supported Values - 'GreaterThan' or 'LessThan' or 'Equal'.
 
 ## LogMetricTrigger
 ### Properties
 * **metricColumn**: string: Evaluation of metric on a particular column
-* **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Type - 'Consecutive' or 'Total'.
+* **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Evaluation Type
 * **threshold**: int: The threshold of the metric trigger.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Result Condition Evaluation criteria. Supported Values - 'GreaterThan' or 'LessThan' or 'Equal'.
 
-## Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction
+## LogToMetricAction
 ### Properties
 * **criteria**: [Criteria](#criteria)[] (Required): Criteria of Metric
-* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required): Specify action need to be taken when rule type is converting log to metric
+* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
 
 ## Criteria
 ### Properties
@@ -84,7 +85,7 @@
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: string (Required): Operator for dimension values
+* **operator**: 'Include' (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
 
 ## Schedule
@@ -97,9 +98,9 @@
 * **authorizedResources**: string[]: List of  Resource referred into query
 * **dataSourceId**: string (Required): The resource uri over which log search query is to be run.
 * **query**: string: Log search query. Required for action type - AlertingAction
-* **queryType**: 'ResultCount': Set value to 'ResultCount'.
+* **queryType**: 'ResultCount': Set value to 'ResultAccount'
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

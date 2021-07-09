@@ -9,24 +9,24 @@
 * **location**: string: Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainServiceProperties](#domainserviceproperties): Properties of the Domain Service.
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Aad/domainServices/ouContainer@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **accountName**: string (WriteOnly): The account name
+* **accountName**: string (WriteOnly)
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **password**: string (WriteOnly): The account password
+* **password**: string (WriteOnly)
 * **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): Properties of the OuContainer.
-* **spn**: string (WriteOnly): The account spn
-* **systemData**: [systemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring) (ReadOnly): Resource tags
+* **spn**: string (WriteOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DomainServiceProperties
@@ -35,7 +35,7 @@
 * **domainConfigurationType**: string: Domain Configuration Type
 * **domainName**: string: The name of the Azure domain that the user would like to deploy Domain Services to.
 * **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): Domain Security Settings
-* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync.
+* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync
 * **ldapsSettings**: [LdapsSettings](#ldapssettings): Secure LDAP Settings
 * **migrationProperties**: [MigrationProperties](#migrationproperties) (ReadOnly): Migration Properties
 * **notificationSettings**: [NotificationSettings](#notificationsettings): Settings for notification
@@ -81,8 +81,8 @@
 ## NotificationSettings
 ### Properties
 * **additionalRecipients**: string[]: The list of additional recipients
-* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified.
-* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified.
+* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified
+* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified
 
 ## ReplicaSet
 ### Properties
@@ -126,16 +126,16 @@
 * **trustedDomainFqdn**: string: Trusted Domain FQDN
 * **trustPassword**: string: Trust Password
 
-## systemData
+## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
 * **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -157,7 +157,7 @@
 * **password**: string (ReadOnly): The account password
 * **spn**: string (ReadOnly): The account spn
 
-## Dictionary<string,String>
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

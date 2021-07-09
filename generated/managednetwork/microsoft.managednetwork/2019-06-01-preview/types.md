@@ -8,7 +8,7 @@
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedNetworkProperties](#managednetworkproperties): Properties of Managed Network
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
 * **type**: 'Microsoft.ManagedNetwork/managedNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetwork/managedNetworks/managedNetworkGroups@2019-06-01-preview
@@ -16,7 +16,7 @@
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Connectivity': Responsibility role under which this Managed Network Group will be created.
+* **kind**: 'Connectivity': Responsibility role under which this Managed Network Group will be created
 * **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedNetworkGroupProperties](#managednetworkgroupproperties): Properties of a Managed Network Group
@@ -57,7 +57,7 @@
 ## ManagedNetworkGroup
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **kind**: 'Connectivity': Responsibility role under which this Managed Network Group will be created.
+* **kind**: 'Connectivity': Responsibility role under which this Managed Network Group will be created
 * **location**: string: The geo-location where the resource lives
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [ManagedNetworkGroupProperties](#managednetworkgroupproperties): Properties of a Managed Network Group
@@ -91,7 +91,7 @@
 * **mesh**: [ResourceId](#resourceid)[]: Gets or sets the mesh group IDs
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the ManagedNetwork resource.
 * **spokes**: [ResourceId](#resourceid)[]: Gets or sets the spokes group IDs
-* **type**: 'HubAndSpokeTopology' | 'MeshTopology' (Required): Gets or sets the connectivity type of a network structure policy.
+* **type**: 'HubAndSpokeTopology' | 'MeshTopology' (Required): Gets or sets the connectivity type of a network structure policy
 
 ## Scope
 ### Properties
@@ -100,7 +100,7 @@
 * **subscriptions**: [ResourceId](#resourceid)[]: The collection of subscriptions covered by the Managed Network
 * **virtualNetworks**: [ResourceId](#resourceid)[]: The collection of virtual nets covered by the Managed Network
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

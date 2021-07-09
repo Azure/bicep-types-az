@@ -8,7 +8,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Cluster properties.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureStackHCI/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ClusterProperties
@@ -45,7 +45,7 @@
 * **osVersion**: string (ReadOnly): Version of the operating system running on the cluster node.
 * **serialNumber**: string (ReadOnly): Immutable id of the cluster node.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

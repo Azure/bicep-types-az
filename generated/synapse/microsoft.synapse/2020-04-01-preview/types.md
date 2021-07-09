@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlDatabaseProperties](#sqldatabaseproperties): The sql database's properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview
@@ -21,28 +21,28 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolProperties](#sqlpoolproperties): The sql pool's properties.
-* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **sku**: [SkuV3](#skuv3): An ARM Resource SKU.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
-* **tags**: [Dictionary<string,String>](#dictionarystringstring): Resource tags.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SqlDatabaseProperties
 ### Properties
 * **collation**: string: The collation of the database.
 * **databaseGuid**: string (ReadOnly): The Guid of the database.
-* **maxSizeBytes**: int: The max size of the database expressed in bytes.
 * **status**: string (ReadOnly): Status of the database.
+* **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone': Storage redundancy of the database.
 
 ## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): A string identifier for the identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource: <User|Application|ManagedIdentity|Key>
 * **lastModifiedAt**: string (ReadOnly): The timestamp of last modification (UTC).
 * **lastModifiedBy**: string (ReadOnly): A string identifier for the identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -57,12 +57,12 @@
 * **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
 * **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' (ReadOnly): The status of the sql pool.
 
-## Sku
+## SkuV3
 ### Properties
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.
 
-## Dictionary<string,String>
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
