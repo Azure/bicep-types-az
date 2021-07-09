@@ -195,6 +195,7 @@ ${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
 
 async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, verbose: boolean, waitForDebugger: boolean) {
   let autoRestParams = [
+    `--use=@autorest/modelerfour`,
     `--use=${extensionDir}`,
     '--bicep',
     `--output-folder=${outputBaseDir}`,

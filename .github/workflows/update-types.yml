@@ -6,7 +6,7 @@ on:
       api_specs_ref:
         description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs.'
         required: true
-        default: 'master'
+        default: 'main'
       single_path:
         description: 'The path to generate types for (e.g. "compute", or "keyvault"). Leave blank to generate all types.'
         required: false
