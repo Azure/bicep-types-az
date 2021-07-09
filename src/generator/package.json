@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "The Azure Bicep extension for classic generators in AutoRest.",
   "scripts": {
-    "generate": "ts-node cmd/generate",
-    "start": "dotnet ./src/Bicep.TypeGen.Autorest/bin/net5.0/Bicep.TypeGen.Autorest.dll --server"
+    "build": "tsc -p .",
+    "generate": "ts-node src/cmd/generate"
   },
   "repository": {
     "type": "git",
@@ -13,17 +13,17 @@
   "readme": "https://github.com/Azure/bicep-types-az/readme.md",
   "keywords": [
     "autorest",
-    "classic-generators",
     "bicep"
   ],
   "author": "Microsoft Corporation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Azure/autorest/issues"
+    "url": "https://github.com/Azure/bicep-types-az/issues"
   },
   "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
-    "@autorest/core": "^3.4.5",
+    "@autorest/core": "3.5.0-dev.5",
+    "@autorest/modelerfour": "^4.19.3",
     "@ts-common/commonmark-to-markdown": "^2.0.0",
     "@types/async": "^3.2.7",
     "@types/js-yaml": "^4.0.2",
