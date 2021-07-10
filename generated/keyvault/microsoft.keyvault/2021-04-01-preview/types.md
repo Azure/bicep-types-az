@@ -49,6 +49,17 @@
 * **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the vault access policy
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.KeyVault/vaults/keys@2021-04-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Azure location of the key vault resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [KeyProperties](#keyproperties) (Required): The properties of the key.
+* **tags**: [KeyCreateParametersTags](#keycreateparameterstags): Tags assigned to the key vault resource.
+* **type**: 'Microsoft.KeyVault/vaults/keys' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -176,7 +187,7 @@
 ## Permissions
 ### Properties
 * **certificates**: 'backup' | 'create' | 'delete' | 'deleteissuers' | 'get' | 'getissuers' | 'import' | 'list' | 'listissuers' | 'managecontacts' | 'manageissuers' | 'purge' | 'recover' | 'restore' | 'setissuers' | 'update'[]: Permissions to certificates
-* **keys**: 'backup' | 'create' | 'decrypt' | 'delete' | 'encrypt' | 'get' | 'import' | 'list' | 'purge' | 'recover' | 'restore' | 'sign' | 'unwrapKey' | 'update' | 'verify' | 'wrapKey'[]: Permissions to keys
+* **keys**: 'backup' | 'create' | 'decrypt' | 'delete' | 'encrypt' | 'get' | 'import' | 'list' | 'purge' | 'recover' | 'release' | 'restore' | 'sign' | 'unwrapKey' | 'update' | 'verify' | 'wrapKey'[]: Permissions to keys
 * **secrets**: 'backup' | 'delete' | 'get' | 'list' | 'purge' | 'recover' | 'restore' | 'set'[]: Permissions to secrets
 * **storage**: 'backup' | 'delete' | 'deletesas' | 'get' | 'getsas' | 'list' | 'listsas' | 'purge' | 'recover' | 'regeneratekey' | 'restore' | 'set' | 'setsas' | 'update'[]: Permissions to storage accounts
 
@@ -231,6 +242,56 @@
 ## VaultAccessPolicyProperties
 ### Properties
 * **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+
+## KeyProperties
+### Properties
+* **attributes**: [KeyAttributes](#keyattributes): The object attributes managed by the Azure Key Vault service.
+* **curveName**: 'P-256' | 'P-256K' | 'P-384' | 'P-521': The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+* **keyOps**: 'decrypt' | 'encrypt' | 'import' | 'sign' | 'unwrapKey' | 'verify' | 'wrapKey'[]: Array of JsonWebKeyOperation
+* **keySize**: int: The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+* **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
+* **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
+* **kty**: 'EC' | 'EC-HSM' | 'RSA' | 'RSA-HSM': The type of the key. For valid values, see JsonWebKeyType.
+* **rotationPolicy**: [RotationPolicy](#rotationpolicy)
+
+## KeyAttributes
+### Properties
+* **created**: int (ReadOnly): Creation time in seconds since 1970-01-01T00:00:00Z.
+* **enabled**: bool: Determines whether or not the object is enabled.
+* **exp**: int: Expiry date in seconds since 1970-01-01T00:00:00Z.
+* **nbf**: int: Not before date in seconds since 1970-01-01T00:00:00Z.
+* **recoveryLevel**: 'Purgeable' | 'Recoverable' | 'Recoverable+ProtectedSubscription' | 'Recoverable+Purgeable' (ReadOnly): The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
+* **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
+
+## RotationPolicy
+### Properties
+* **attributes**: [KeyRotationPolicyAttributes](#keyrotationpolicyattributes)
+* **lifetimeActions**: [LifetimeAction](#lifetimeaction)[]: The lifetimeActions for key rotation action.
+
+## KeyRotationPolicyAttributes
+### Properties
+* **created**: int (ReadOnly): Creation time in seconds since 1970-01-01T00:00:00Z.
+* **expiryTime**: string: The expiration time for the new key version. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
+* **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
+
+## LifetimeAction
+### Properties
+* **action**: [Action](#action)
+* **trigger**: [Trigger](#trigger)
+
+## Action
+### Properties
+* **type**: 'notify' | 'rotate': The type of action.
+
+## Trigger
+### Properties
+* **timeAfterCreate**: string: The time duration after key creation to rotate the key. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
+* **timeBeforeExpiry**: string: The time duration before key expiring to rotate the key. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
+
+## KeyCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

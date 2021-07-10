@@ -61,6 +61,7 @@
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): The state of a HA server.
 * **infrastructureEncryption**: 'Disabled' | 'Enabled': Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
+* **privateDnsZoneArguments**: [PrivateDnsZoneArguments](#privatednszonearguments): Private DNS zone arguments of a server
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: string: The replication role.
@@ -83,6 +84,10 @@
 * **dayOfWeek**: int: day of week for maintenance window
 * **startHour**: int: start hour for maintenance window
 * **startMinute**: int: start minute for maintenance window
+
+## PrivateDnsZoneArguments
+### Properties
+* **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
 
 ## StorageProfile
 ### Properties

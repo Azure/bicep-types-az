@@ -72,6 +72,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2021-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: 'vaultstorageconfig' (Required, DeployTimeConstant): The resource name
+* **properties**: [BackupResourceConfig](#backupresourceconfig): The resource storage details.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/backupstorageconfig' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -88,8 +100,8 @@
 ### Properties
 * **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid': Enabled or Disabled.
 * **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid': Soft Delete feature state
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type.
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type.
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ResourceTags
@@ -794,6 +806,18 @@ will be deprecated once clients upgrade to consider this flag.
 * **backupManagementType**: 'MAB' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BackupResourceConfig
+### Properties
+* **crossRegionRestoreFlag**: bool: Opt in details of Cross Region Restore feature.
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ResourceTags
 ### Properties

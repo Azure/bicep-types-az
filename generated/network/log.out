@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.network-2021-02-01"} .
@@ -1516,7 +1516,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 181ms
+INFORMATION: autorest.bicep took 174ms
 Processing batch task - {"tag":"microsoft.network-2020-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -3015,7 +3015,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 119ms
+INFORMATION: autorest.bicep took 116ms
 Processing batch task - {"tag":"microsoft.network-2021-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -3165,7 +3165,7 @@ WARNING (Modeler/MissingType): The schema 'paths·p83cm0·subscriptions-subscrip
 
 WARNING (Modeler/MissingType): The schema 'paths·k2s1x6·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-virtualnetworks-virtualnetworkname-subnets-subnetname-listnetworkmanagereffectiveconfigurations·parameters·5·schema' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/network/resource-manager/Microsoft.Network/preview/2021-02-01-preview/networkManagerEffectiveConfiguration.json#/components/schemas/paths·k2s1x6·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-network-virtualnetworks-virtualnetworkname-subnets-subnetname-listnetworkmanagereffectiveconfigurations·parameters·5·schema
-INFORMATION: autorest.bicep took 3ms
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.network-2020-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -4658,7 +4658,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 148ms
+INFORMATION: autorest.bicep took 119ms
 Processing batch task - {"tag":"microsoft.network-2020-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -6141,7 +6141,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 154ms
+INFORMATION: autorest.bicep took 131ms
 Processing batch task - {"tag":"microsoft.network-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -7596,7 +7596,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 150ms
+INFORMATION: autorest.bicep took 139ms
 Processing batch task - {"tag":"microsoft.network-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -8989,7 +8989,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 141ms
+INFORMATION: autorest.bicep took 152ms
 Processing batch task - {"tag":"microsoft.network-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -10318,7 +10318,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 135ms
+INFORMATION: autorest.bicep took 130ms
 Processing batch task - {"tag":"microsoft.network-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -11625,7 +11625,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 149ms
+INFORMATION: autorest.bicep took 117ms
 Processing batch task - {"tag":"microsoft.network-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -12902,7 +12902,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 127ms
+INFORMATION: autorest.bicep took 90ms
 Processing batch task - {"tag":"microsoft.network-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -14161,7 +14161,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 135ms
+INFORMATION: autorest.bicep took 126ms
 Processing batch task - {"tag":"microsoft.network-2019-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -15388,7 +15388,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 106ms
+INFORMATION: autorest.bicep took 107ms
 Processing batch task - {"tag":"microsoft.network-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -16579,7 +16579,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 81ms
+INFORMATION: autorest.bicep took 92ms
 Processing batch task - {"tag":"microsoft.network-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -17744,7 +17744,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 93ms
+INFORMATION: autorest.bicep took 106ms
 Processing batch task - {"tag":"microsoft.network-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -18885,7 +18885,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 83ms
+INFORMATION: autorest.bicep took 71ms
 Processing batch task - {"tag":"microsoft.network-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -19970,7 +19970,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 94ms
+INFORMATION: autorest.bicep took 72ms
 Processing batch task - {"tag":"microsoft.network-2019-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -20991,7 +20991,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 81ms
+INFORMATION: autorest.bicep took 88ms
 Processing batch task - {"tag":"microsoft.network-2018-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -21994,7 +21994,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 73ms
+INFORMATION: autorest.bicep took 67ms
 Processing batch task - {"tag":"microsoft.network-2018-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -22967,7 +22967,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 68ms
+INFORMATION: autorest.bicep took 79ms
 Processing batch task - {"tag":"microsoft.network-2018-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -23926,7 +23926,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 87ms
+INFORMATION: autorest.bicep took 63ms
 Processing batch task - {"tag":"microsoft.network-2018-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -24869,7 +24869,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 72ms
+INFORMATION: autorest.bicep took 62ms
 Processing batch task - {"tag":"microsoft.network-2018-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -25638,7 +25638,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 57ms
+INFORMATION: autorest.bicep took 42ms
 Processing batch task - {"tag":"microsoft.network-2018-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -26381,7 +26381,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 44ms
+INFORMATION: autorest.bicep took 37ms
 Processing batch task - {"tag":"microsoft.network-2018-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -27106,7 +27106,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
 WARNING: Skipping resource type microsoft.network/virtualwans under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualWans/{VirtualWANName}': Unable to locate parameter with name 'VirtualWANName'
-INFORMATION: autorest.bicep took 43ms
+INFORMATION: autorest.bicep took 42ms
 Processing batch task - {"tag":"microsoft.network-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -27747,7 +27747,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 47ms
+INFORMATION: autorest.bicep took 37ms
 Processing batch task - {"tag":"microsoft.network-2018-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -28358,7 +28358,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 37ms
+INFORMATION: autorest.bicep took 35ms
 Processing batch task - {"tag":"microsoft.network-2017-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -28959,7 +28959,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 40ms
+INFORMATION: autorest.bicep took 45ms
 Processing batch task - {"tag":"microsoft.network-2017-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -29558,7 +29558,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 40ms
+INFORMATION: autorest.bicep took 35ms
 Processing batch task - {"tag":"microsoft.network-2017-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -30139,7 +30139,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 45ms
+INFORMATION: autorest.bicep took 48ms
 Processing batch task - {"tag":"microsoft.network-2017-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -30670,7 +30670,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 44ms
+INFORMATION: autorest.bicep took 33ms
 Processing batch task - {"tag":"microsoft.network-2017-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -31197,7 +31197,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 41ms
+INFORMATION: autorest.bicep took 32ms
 Processing batch task - {"tag":"microsoft.network-2017-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -31678,7 +31678,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 26ms
+INFORMATION: autorest.bicep took 23ms
 Processing batch task - {"tag":"microsoft.network-2016-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -32122,7 +32122,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 12ms
+INFORMATION: autorest.bicep took 10ms
 Processing batch task - {"tag":"microsoft.network-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -33398,7 +33398,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 11ms
+INFORMATION: autorest.bicep took 14ms
 Processing batch task - {"tag":"microsoft.network-2015-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -33632,5 +33632,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/connections/{virtualNetworkGatewayConnectionName}/sharedkey': Found mismatch between type segments (2) and name segments (1)
-INFORMATION: autorest.bicep took 10ms
-[1688.85 s] Generation Complete
+INFORMATION: autorest.bicep took 25ms
+[1609.53 s] Generation Complete

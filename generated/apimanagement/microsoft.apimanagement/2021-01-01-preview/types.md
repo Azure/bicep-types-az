@@ -771,12 +771,7 @@ dictionary key references will be ARM resource ids in the form:
 ## SchemaContractProperties
 ### Properties
 * **contentType**: string (Required): Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
-* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Schema Document Properties.
-
-## SchemaDocumentProperties
-### Properties
-* **definitions**: any: Any object
-* **value**: string: Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
+* **document**: any: Any object
 
 ## TagDescriptionBaseProperties
 ### Properties
