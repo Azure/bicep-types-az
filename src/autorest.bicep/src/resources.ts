@@ -103,8 +103,8 @@ export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: Http
     // strip the enclosing braces
     resNameParam = trimParamBraces(resNameParam);
 
-    // look up the type
-    var param = parameters.filter(p => p.language.default.name === resNameParam)[0];
+    // Raised https://github.com/Azure/autorest/issues/4211 for this, as I don't understand why the case-insensitive comparison below is necessary
+    var param = parameters.filter(p => p.language.default.name.toLowerCase() === resNameParam.toLowerCase())[0];
     if (!param) {
       return failure(`Unable to locate parameter with name '${resNameParam}'`);
     }
