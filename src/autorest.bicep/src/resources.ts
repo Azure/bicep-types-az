@@ -3,7 +3,7 @@
 
 import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
-import { keys, Dictionary, values } from 'lodash';
+import { keys, Dictionary, values, groupBy, uniqBy } from 'lodash';
 import { success, failure, Result } from './utils';
 
 export enum ScopeType {
@@ -27,6 +27,7 @@ export interface ProviderDefinition {
   namespace: string;
   apiVersion: string;
   resourcesByType: Dictionary<ResourceDefinition[]>;
+  resourceActions: ResourceListActionDefinition[];
 }
 
 export interface ResourceDefinition {
@@ -35,6 +36,14 @@ export interface ResourceDefinition {
   putParameters: Parameter[];
   putSchema?: ObjectSchema;
   getSchema?: ObjectSchema;
+}
+
+export interface ResourceListActionDefinition {
+  actionName: string;
+  descriptor: ResourceDescriptor;
+  postRequest: HttpRequest;
+  requestSchema?: ObjectSchema;
+  responseSchema?: ObjectSchema;
 }
 
 const parentScopePrefix = /^.*\/providers\//ig;
@@ -56,8 +65,21 @@ function trimParamBraces(pathSegment: string) {
   return pathSegment.substr(1, pathSegment.length - 2);
 }
 
+function normalizeListActionName(actionName: string) {
+  if (actionName.toLowerCase().startsWith('list')) {
+    // force lower-case on the 'list' prefix for consistency
+    return `list${actionName.substr(4)}`;
+  }
+
+  return actionName;
+}
+
 export function getFullyQualifiedType(descriptor: ResourceDescriptor) {
   return [descriptor.namespace, ...descriptor.typeSegments].join('/');
+}
+
+function groupByType<T extends { descriptor: ResourceDescriptor }>(items: T[]) {
+  return groupBy(items, x => getFullyQualifiedType(x.descriptor).toLowerCase());
 }
 
 export function isRootType(descriptor: ResourceDescriptor) {
@@ -86,7 +108,7 @@ function getNormalizedMethodPath(path: string) {
   return path;
 }
 
-export function parseNameSchema<T>(descriptor: ResourceDescriptor, request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
+export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
   const path = getNormalizedMethodPath(request.path);
 
   const finalProvidersMatch = path.match(parentScopePrefix)?.last;
@@ -142,6 +164,20 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
 
     const getOperationsByPath: Dictionary<Operation> = {};
     const putOperationsByPath: Dictionary<Operation> = {};
+    const postListOperationsByPath: Dictionary<Operation> = {};
+
+    function addProviderDefinition(namespace: string) {
+      const lcNamespace = namespace.toLowerCase();
+      if (!providerDefinitions[lcNamespace]) {
+        providerDefinitions[lcNamespace] = {
+          namespace,
+          apiVersion,
+          resourcesByType: {},
+          resourceActions: [],
+        };
+      }
+    }
+
     operations.forEach(operation => {
       const requests = getHttpRequests(operation.requests);
       const getRequest = requests.filter(r => r.method === HttpMethod.Get)[0];
@@ -151,6 +187,23 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
       const putRequest = requests.filter(r => r.method === HttpMethod.Put)[0];
       if (putRequest) {
         putOperationsByPath[putRequest.path.toLowerCase()] = operation;
+      }
+      const postListRequest = requests.filter(r => { 
+        if (r.method !== HttpMethod.Post) {
+          return false;
+        }
+
+        const parseResult = parseResourceScopes(r.path);
+        if (!parseResult.success) {
+          return false;
+        }
+
+        const { routingScope: actionRoutingScope } = parseResult.value;
+        const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
+        return actionName.toLowerCase().startsWith('list');
+      })[0];
+      if (postListRequest) {
+        postListOperationsByPath[postListRequest.path.toLowerCase()] = operation;
       }
     });
 
@@ -165,22 +218,14 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
         continue;
       }
 
-      const parseResult = parseMethod(putData.request.path, putData.parameters, apiVersion);
+      const parseResult = parseResourceMethod(putData.request.path, putData.parameters, apiVersion);
       if (!parseResult.success) {
         logWarning(`Skipping path '${putData.request.path}': ${parseResult.error}`);
         continue;
       }
 
       for (const descriptor of parseResult.value) {
-        const namespace = descriptor.namespace.toLowerCase();
-
-        if (!providerDefinitions[namespace]) {
-          providerDefinitions[namespace] = {
-            namespace: descriptor.namespace,
-            apiVersion,
-            resourcesByType: {},
-          };
-        }
+        addProviderDefinition(descriptor.namespace);
 
         const resource: ResourceDefinition = {
           descriptor,
@@ -190,21 +235,82 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
           getSchema: getData?.schema,
         };
 
-        resourcesByProvider[namespace] = [
-          ...(resourcesByProvider[namespace] || []),
+        const lcNamespace = descriptor.namespace.toLowerCase();
+        resourcesByProvider[lcNamespace] = [
+          ...(resourcesByProvider[lcNamespace] || []),
           resource
+        ];
+      }
+    }
+
+    const actionsByProvider: Dictionary<ResourceListActionDefinition[]> = {};
+    for (const lcPath in postListOperationsByPath) {
+      const listOperation = postListOperationsByPath[lcPath];
+
+      const listData = getPostSchema(listOperation);
+      if (!listData) {
+        continue;
+      }
+
+      const parseResult = parseResourceActionMethod(listData.request.path, listData.parameters, apiVersion);
+      if (!parseResult.success) {
+        logWarning(`Skipping resource POST action path '${listData.request.path}': ${parseResult.error}`);
+        continue;
+      }
+
+      const { descriptors, actionName } = parseResult.value;
+
+      for (const descriptor of descriptors) {
+        addProviderDefinition(descriptor.namespace);
+
+        const action: ResourceListActionDefinition = {
+          actionName,
+          descriptor,
+          postRequest: listData.request,
+          requestSchema: listData.requestSchema,
+          responseSchema: listData.responseSchema,
+        };
+
+        const lcNamespace = descriptor.namespace.toLowerCase();
+        actionsByProvider[lcNamespace] = [
+          ...(actionsByProvider[lcNamespace] || []),
+          action
         ];
       }
     }
 
     for (const namespace of keys(providerDefinitions)) {
       providerDefinitions[namespace].resourcesByType = collapseDefinitions(resourcesByProvider[namespace]);
+      providerDefinitions[namespace].resourceActions = collapseActions(actionsByProvider[namespace]);
     }
 
     return values(providerDefinitions);
   }
+  
+  function getRequestSchema(operation: Operation | undefined, requests: Request[]) {
+    if (!operation || requests.length === 0) {
+      return;
+    }
 
-  function getGetSchema(operation?: Operation) {
+    for (const request of requests) {
+      const parameters = combineParameters(operation, request);
+      const bodyParameters = parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body);
+      if (bodyParameters.length > 0) {
+        return {
+          request: (request.protocol.http as HttpRequest),
+          parameters: combineParameters(operation, request),
+          schema: bodyParameters[0].schema as ObjectSchema,
+        };
+      }
+    }
+
+    return {
+      request: (requests[0].protocol.http as HttpRequest),
+      parameters: combineParameters(operation, requests[0]),
+    };
+  }
+
+  function getResponseSchema(operation?: Operation) {
     const responses = operation?.responses ?? [];
     const validResponses = [
       // order 200 responses before default
@@ -235,33 +341,37 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     return [...(operation.parameters || []), ...(request.parameters || [])];
   }
 
+  function getGetSchema(operation?: Operation) {
+    return getResponseSchema(operation);
+  }
+
   function getPutSchema(operation?: Operation) {
     const requests = operation?.requests ?? [];
     const validRequests = requests.filter(r => (r.protocol.http as HttpRequest)?.method === HttpMethod.Put);
 
-    if (!operation || validRequests.length === 0) {
+    return getRequestSchema(operation, validRequests);
+  }
+
+  function getPostSchema(operation?: Operation) {
+    const requests = operation?.requests ?? [];
+    const validRequests = requests.filter(r => (r.protocol.http as HttpRequest)?.method === HttpMethod.Post);
+
+    const response = getResponseSchema(operation);
+    const request = getRequestSchema(operation, validRequests);
+
+    if (!request || !response) {
       return;
     }
 
-    for (const request of validRequests) {
-      const parameters = combineParameters(operation, request);
-      const bodyParameters = parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body);
-      if (bodyParameters.length > 0) {
-        return {
-          request: (request.protocol.http as HttpRequest),
-          parameters,
-          schema: bodyParameters[0].schema as ObjectSchema,
-        };
-      }
-    }
-
     return {
-      request: (validRequests[0].protocol.http as HttpRequest),
-      parameters: combineParameters(operation, validRequests[0]),
+      request: request.request,
+      parameters: request.parameters,
+      requestSchema: request.schema,
+      responseSchema: response.schema,
     };
   }
 
-  function parseMethod(path: string, parameters: Parameter[], apiVersion: string): Result<ResourceDescriptor[], string> {
+  function parseResourceScopes(path: string): Result<{scopeType: ScopeType, routingScope: string}, string> {
     path = getNormalizedMethodPath(path);
 
     const finalProvidersMatch = path.match(parentScopePrefix)?.last;
@@ -272,6 +382,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     const parentScope = path.substr(0, finalProvidersMatch.length - "providers/".length);
     const routingScope = trimScope(path.substr(finalProvidersMatch.length));
 
+    const scopeType = getScopeTypeFromParentScope(parentScope);
+
+    return success({ scopeType, routingScope });
+  }
+
+  function parseResourceDescriptors(parameters: Parameter[], apiVersion: string, scopeType: ScopeType, routingScope: string): Result<ResourceDescriptor[], string> {
     const namespace = routingScope.substr(0, routingScope.indexOf('/'));
     if (isPathVariable(namespace)) {
       return failure(`Unable to process parameterized provider namespace "${namespace}"`);
@@ -285,8 +401,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     const resNameParam = routingScope.substr(routingScope.lastIndexOf('/') + 1);
     const constantName = isPathVariable(resNameParam) ? undefined : resNameParam;
 
-    const scopeType = getScopeTypeFromParentScope(parentScope);
-
     const descriptors: ResourceDescriptor[] = parseResult.value.map(type => ({
       scopeType,
       namespace,
@@ -296,6 +410,41 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     }));
 
     return success(descriptors);
+  }
+
+  function parseResourceMethod(path: string, parameters: Parameter[], apiVersion: string) {
+    const resourceScopeResult = parseResourceScopes(path);
+
+    if (!resourceScopeResult.success) {
+      return failure(resourceScopeResult.error);
+    }
+
+    const { scopeType, routingScope } = resourceScopeResult.value;
+
+    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope);
+  }
+
+  function parseResourceActionMethod(path: string, parameters: Parameter[], apiVersion: string) {
+    const resourceScopeResult = parseResourceScopes(path);
+
+    if (!resourceScopeResult.success) {
+      return failure(resourceScopeResult.error);
+    }
+
+    const { routingScope: actionRoutingScope, scopeType } = resourceScopeResult.value;
+
+    const routingScope = actionRoutingScope.substr(0, actionRoutingScope.lastIndexOf('/'));
+    const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
+
+    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope);
+    if (!resourceDescriptorsResult.success) {
+      return failure(resourceDescriptorsResult.error);
+    }
+
+    return success({ 
+      descriptors: resourceDescriptorsResult.value,
+      actionName: actionName,
+    });
   }
 
   function parseResourceTypes(parameters: Parameter[], routingScope: string): Result<string[][], string> {
@@ -365,6 +514,11 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     return ScopeType.Unknown;
   }
 
+  function collapseDescriptors(resources: ResourceDefinition[]) {
+    const output: Dictionary<ResourceDefinition> = {};
+
+  }
+
   function collapseDefinitionScopes(resources: ResourceDefinition[]) {
     const definitionsByName: Dictionary<ResourceDefinition> = {};
     for (const resource of resources) {
@@ -388,20 +542,17 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     return Object.values(definitionsByName);
   }
 
-  function groupByType(resources: ResourceDefinition[]) {
-    return resources.reduce((prev, cur) => {
-      const key = getFullyQualifiedType(cur.descriptor).toLowerCase();
-      prev[key] = [...(prev[key] ?? []), cur];
-
-      return prev;
-    }, {} as Dictionary<ResourceDefinition[]>);
-  }
-
   function collapseDefinitions(resources: ResourceDefinition[]) {
     const resourcesByType = groupByType(resources);
     const collapsedResources = Object.values(resourcesByType).flatMap(collapseDefinitionScopes);
 
     return groupByType(collapsedResources);
+  }
+
+  function collapseActions(actions: ResourceListActionDefinition[]) {
+    const actionsByType = groupByType(actions);
+
+    return Object.values(actionsByType).flatMap(actions => uniqBy(actions, x => x.actionName.toLowerCase()));
   }
 
   return getProviderDefinitions();

@@ -363,6 +363,7 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
 
 interface TypeIndex {
   Types: Dictionary<TypeIndexEntry>;
+  Functions: Dictionary<TypeIndexEntry[]>;
 }
 
 interface TypeIndexEntry {
@@ -403,6 +404,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   
   const resourceTypes = new Set<string>();
   const typeDictionary: Dictionary<TypeIndexEntry> = {};
+  const funcDictionary: Dictionary<TypeIndexEntry[]> = {};
 
   // Use a consistent sort order so that file system differences don't generate changes
   for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
@@ -411,24 +413,39 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
     const types = JSON.parse(content) as any[];
     for (const type of types) {
       const resource = type[TypeBaseKind.ResourceType];
-      if (!resource) {
-        continue;
+      if (resource) {
+        if (resourceTypes.has(resource.Name.toLowerCase())) {
+          logOut(logger, `WARNING: Found duplicate type \"${resource.Name}\"`);
+          continue;
+        }
+        resourceTypes.add(resource.Name.toLowerCase());
+  
+        typeDictionary[resource.Name] = {
+          RelativePath: path.relative(baseDir, typeFilePath),
+          Index: types.indexOf(type),
+        };
+        
+         continue;
       }
 
-      if (resourceTypes.has(resource.Name.toLowerCase())) {
-        logOut(logger, `WARNING: Found duplicate type \"${resource.Name}\"`);
-        continue;
-      }
-      resourceTypes.add(resource.Name.toLowerCase());
+      const resourceFunction = type[TypeBaseKind.ResourceFunctionType];
+      if (resourceFunction) {
+        if (!funcDictionary[resourceFunction.ResourceType]) {
+          funcDictionary[resourceFunction.ResourceType] = [];
+        }
 
-      typeDictionary[resource.Name] = {
-        RelativePath: path.relative(baseDir, typeFilePath),
-        Index: types.indexOf(type),
-      };
+        funcDictionary[resourceFunction.ResourceType].push({
+          RelativePath: path.relative(baseDir, typeFilePath),
+          Index: types.indexOf(type),
+        });
+
+         continue;
+      } 
     }
   }
 
   return {
     Types: typeDictionary,
+    Functions: funcDictionary,
   }
 }

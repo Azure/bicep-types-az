@@ -1,5 +1,5 @@
 import { Dictionary, keys, orderBy } from 'lodash';
-import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
+import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
 
 export function writeMarkdown(provider: string, apiVersion: string, types: TypeBase[]) {
   let output = '';
@@ -15,6 +15,9 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         return `${getTypeName(types, (type as ArrayType).ItemType)}[]`;
       case TypeBaseKind.ResourceType:
         return (type as ResourceType).Name;
+      case TypeBaseKind.ResourceFunctionType:
+        const functionType = type as ResourceFunctionType;
+        return `${functionType.Name} (${functionType.ResourceType}@${functionType.ApiVersion})`;
       case TypeBaseKind.UnionType:
         const elements = (type as UnionType).Elements.map(x => getTypeName(types, x));
         return elements.sort().join(' | ');
@@ -79,6 +82,13 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         }
 
         return;
+      case TypeBaseKind.ResourceFunctionType:
+        const resourceFunctionType = type as ResourceFunctionType;
+        if (resourceFunctionType.Input) {
+          addToOrderedTypes(resourceFunctionType.Input);
+        }
+        addToOrderedTypes(resourceFunctionType.Output);
+        return;
       case TypeBaseKind.DiscriminatedObjectType:
         const discriminatedObjectType = type as DiscriminatedObjectType;
 
@@ -106,6 +116,17 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         writeHeading(nesting, `Resource ${resourceType.Name}`);
         writeBullet("Valid Scope(s)", `${getScopeTypeLabels(resourceType.ScopeType).join(', ') || 'Unknown'}`);
         writeComplexType(types, types[resourceType.Body.Index], nesting, false);
+
+        return;
+      case TypeBaseKind.ResourceFunctionType:
+        const resourceFunctionType = type as ResourceFunctionType;
+        writeHeading(nesting, `Function ${resourceFunctionType.Name} (${resourceFunctionType.ResourceType}@${resourceFunctionType.ApiVersion})`);
+        writeBullet("Resource", resourceFunctionType.ResourceType);
+        writeBullet("ApiVersion", resourceFunctionType.ApiVersion);
+        if (resourceFunctionType.Input) {
+          writeBullet("Input", getTypeName(types, resourceFunctionType.Input));
+        }
+        writeBullet("Output", getTypeName(types, resourceFunctionType.Output));
 
         return;
       case TypeBaseKind.ObjectType:
