@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.portal-2018-10-01"} .
@@ -21,5 +21,5 @@ WARNING: Skipping resource type microsoft.portal/locations/usersettings under pa
 WARNING: Skipping resource type microsoft.portal/locations/consoles under path '/providers/Microsoft.Portal/locations/{location}/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
 WARNING: Skipping resource type microsoft.portal/usersettings under path '/providers/Microsoft.Portal/userSettings/{userSettingsName}': Unable to locate parameter with name 'userSettingsName'
 WARNING: Skipping resource type microsoft.portal/consoles under path '/providers/Microsoft.Portal/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
-INFORMATION: autorest.bicep took 4ms
-[4.85 s] Generation Complete
+INFORMATION: autorest.bicep took 5ms
+[4 s] Generation Complete

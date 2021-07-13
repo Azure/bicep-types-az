@@ -1,6 +1,6 @@
-# Microsoft.DBForMariaDB @ 2018-06-01
+# Microsoft.DBforMariaDB @ 2018-06-01
 
-## Resource Microsoft.DBForMariaDB/servers@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -10,34 +10,34 @@
 * **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties of a server.
 * **sku**: [Sku](#sku): Billing information related properties of a server.
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Resource tags.
-* **type**: 'Microsoft.DBForMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMariaDB/servers/configurations@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/configurations@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
-* **type**: 'Microsoft.DBForMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMariaDB/servers/databases@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/databases@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
-* **type**: 'Microsoft.DBForMariaDB/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforMariaDB/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMariaDB/servers/firewallRules@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
-* **type**: 'Microsoft.DBForMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
@@ -57,14 +57,14 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMariaDB/servers/virtualNetworkRules@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
-* **type**: 'Microsoft.DBForMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode

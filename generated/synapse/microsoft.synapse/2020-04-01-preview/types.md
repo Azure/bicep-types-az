@@ -21,7 +21,7 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolProperties](#sqlpoolproperties): The sql pool's properties.
-* **sku**: [Sku](#sku): An ARM Resource SKU.
+* **sku**: [SkuV3](#skuv3): An ARM Resource SKU.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): ARM System Data.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,8 +30,8 @@
 ### Properties
 * **collation**: string: The collation of the database.
 * **databaseGuid**: string (ReadOnly): The Guid of the database.
-* **maxSizeBytes**: int: The max size of the database expressed in bytes.
 * **status**: string (ReadOnly): Status of the database.
+* **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone': Storage redundancy of the database.
 
 ## SystemData
 ### Properties
@@ -57,7 +57,7 @@
 * **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
 * **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' (ReadOnly): The status of the sql pool.
 
-## Sku
+## SkuV3
 ### Properties
 * **name**: string (Required): The name of the SKU, typically, a letter + Number code, e.g. P3.
 * **tier**: string: The tier or edition of the particular SKU, e.g. Basic, Premium.

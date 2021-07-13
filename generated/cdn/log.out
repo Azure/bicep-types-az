@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.cdn-2020-09-01"} .
@@ -287,7 +287,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: Resource type microsoft.cdn/profiles/rulesets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}' has no body defined.
-INFORMATION: autorest.bicep took 28ms
+INFORMATION: autorest.bicep took 21ms
 Processing batch task - {"tag":"microsoft.cdn-2020-04-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -488,7 +488,7 @@ WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 13ms
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.cdn-2019-12-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -651,7 +651,7 @@ WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' 
   - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 14ms
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.cdn-2019-06-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1009,7 +1009,7 @@ WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 10ms
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.cdn-2019-04-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1156,7 +1156,7 @@ WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'DeliveryRuleAction' 
   - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 19ms
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.cdn-2017-10-12"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1229,7 +1229,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 4ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.cdn-2017-04-02"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1358,7 +1358,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.cdn-2015-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1400,4 +1400,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: autorest.bicep took 2ms
-[63.28 s] Generation Complete
+[50.64 s] Generation Complete

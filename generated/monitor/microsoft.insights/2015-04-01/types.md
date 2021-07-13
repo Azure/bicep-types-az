@@ -1,6 +1,6 @@
-# microsoft.insights @ 2015-04-01
+# Microsoft.Insights @ 2015-04-01
 
-## Resource microsoft.insights/autoscalesettings@2015-04-01
+## Resource Microsoft.Insights/autoscalesettings@2015-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -9,7 +9,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AutoscaleSetting](#autoscalesetting) (Required): A setting that contains all of the configuration for the automatic scaling of a resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'microsoft.insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AutoscaleSetting
 ### Properties
@@ -17,6 +17,7 @@
 * **name**: string: the name of the autoscale setting.
 * **notifications**: [AutoscaleNotification](#autoscalenotification)[]: the collection of notifications.
 * **profiles**: [AutoscaleProfile](#autoscaleprofile)[] (Required): the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+* **targetResourceLocation**: string: the location of the resource that the autoscale setting should be added to.
 * **targetResourceUri**: string: the resource identifier of the resource that the autoscale setting should be added to.
 
 ## AutoscaleNotification
@@ -84,9 +85,10 @@
 * **dividePerInstance**: bool: a value indicating whether metric should divide per instance.
 * **metricName**: string (Required): the name of the metric that defines what the rule monitors.
 * **metricNamespace**: string: the namespace of the metric that defines what the rule monitors.
+* **metricResourceLocation**: string: the location of the resource the rule monitors.
 * **metricResourceUri**: string (Required): the resource identifier of the resource the rule monitors.
 * **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the operator that is used to compare the metric data and the threshold.
-* **statistic**: 'Average' | 'Max' | 'Min' | 'Sum' (Required): the metric statistic type. How the metrics from multiple instances are combined.
+* **statistic**: 'Average' | 'Count' | 'Max' | 'Min' | 'Sum' (Required): the metric statistic type. How the metrics from multiple instances are combined.
 * **threshold**: int (Required): the threshold of the metric that triggers the scale action.
 * **timeAggregation**: 'Average' | 'Count' | 'Last' | 'Maximum' | 'Minimum' | 'Total' (Required): time aggregation type. How the data that is collected should be combined over time. The default value is Average.
 * **timeGrain**: string (Required): the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
@@ -102,7 +104,7 @@
 ### Properties
 * **cooldown**: string (Required): the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
 * **direction**: 'Decrease' | 'Increase' | 'None' (Required): the scale direction. Whether the scaling action increases or decreases the number of instances.
-* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' (Required): the type of action that should occur when the scale rule fires.
+* **type**: 'ChangeCount' | 'ExactCount' | 'PercentChangeCount' | 'ServiceAllowedNextValue' (Required): the type of action that should occur when the scale rule fires.
 * **value**: string: the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
 
 ## ResourceTags

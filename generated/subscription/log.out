@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.subscription-2016-06-01"} .
@@ -53,7 +53,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PutAliasListResult' with an un
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 6ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.subscription-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -138,7 +138,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an und
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 0ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.subscription-2018-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -208,4 +208,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: autorest.bicep took 1ms
-[14.31 s] Generation Complete
+[11.43 s] Generation Complete
