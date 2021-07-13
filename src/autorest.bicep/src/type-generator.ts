@@ -5,7 +5,7 @@ import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema,
 import { Channel, Host } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap, groupBy } from 'lodash';
-import { getFullyQualifiedType, isRootType, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
+import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
 export function generateTypes(host: Host, definition: ProviderDefinition) {
   const factory = new TypeFactory();
@@ -213,7 +213,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       const value = schema.discriminator.all[key];
 
       if (!(value instanceof ObjectSchema)) {
-        throw `Unable to flatten discriminated properties - schema '${schema.language.default.name}' has non-object discriminated value '${value.language.default.name}'.`;
+        throw `Unable to flatten discriminated properties - schema '${getSerializedName(schema)}' has non-object discriminated value '${getSerializedName(value)}'.`;
       }
 
       if (!value.discriminator) {
@@ -222,7 +222,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       }
 
       if (schema.discriminator.property.serializedName !== value.discriminator.property.serializedName) {
-        throw `Unable to flatten discriminated properties - schemas '${schema.language.default.name}' and '${value.language.default.name}' have conflicting discriminators '${schema.discriminator.property.serializedName}' and '${value.discriminator.property.serializedName}'`;
+        throw `Unable to flatten discriminated properties - schemas '${getSerializedName(schema)}' and '${getSerializedName(value)}' have conflicting discriminators '${schema.discriminator.property.serializedName}' and '${value.discriminator.property.serializedName}'`;
       }
 
       const subTypes = flattenDiscriminatorSubTypes(value);
@@ -369,7 +369,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
 
   function parseObjectType(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
-    const definitionName = combinedSchema.language.default.name;
+    const definitionName = getSerializedName(combinedSchema);
 
     if (includeBaseProperties && namedDefinitions[definitionName]) {
       // if we're building a discriminated subtype, we're going to be missing the base properties
@@ -444,7 +444,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
     const additionalPropertiesType = parseType(putSchema?.elementType, getSchema?.elementType);
 
-    return factory.addType(new ObjectType(combinedSchema.language.default.name, {}, additionalPropertiesType));
+    return factory.addType(new ObjectType(getSerializedName(combinedSchema), {}, additionalPropertiesType));
   }
 
   function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {
