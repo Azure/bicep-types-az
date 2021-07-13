@@ -12,7 +12,7 @@ WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Resource type microsoft.addons/supportproviders/supportplantypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}' has no body defined.
-INFORMATION: autorest.bicep took 7ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.addons-2017-05-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -22,5 +22,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CanonicalSupportPlanStatusItem
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Resource type microsoft.addons/supportproviders/supportplantypes under path '/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/{providerName}/supportPlanTypes/{planTypeName}' has no body defined.
-INFORMATION: autorest.bicep took 1ms
-[6.43 s] Generation Complete
+INFORMATION: autorest.bicep took 2ms
+[6.63 s] Generation Complete

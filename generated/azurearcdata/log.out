@@ -14,4 +14,4 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 8ms
-[4.67 s] Generation Complete
+[4.88 s] Generation Complete

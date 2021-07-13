@@ -217,7 +217,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (?): Operation 'TopQueryStatistics/ListByServer' really should not have a media type (because there should be no body)
 
 WARNING (?): Operation 'WaitStatistics/ListByServer' really should not have a media type (because there should be no body)
-INFORMATION: autorest.bicep took 4ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.dbformariadb-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -227,4 +227,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 0ms
-[10.59 s] Generation Complete
+[11.33 s] Generation Complete

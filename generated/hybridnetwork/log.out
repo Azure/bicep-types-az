@@ -127,5 +127,5 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 11ms
-[6.12 s] Generation Complete
+INFORMATION: autorest.bicep took 9ms
+[5.9 s] Generation Complete

@@ -20,4 +20,4 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}': Unable to locate "/providers/" segment
 INFORMATION: autorest.bicep took 1ms
-[3.67 s] Generation Complete
+[3.91 s] Generation Complete

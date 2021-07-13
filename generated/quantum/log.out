@@ -22,5 +22,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'operation' with an undefined t
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 6ms
-[4.42 s] Generation Complete
+INFORMATION: autorest.bicep took 7ms
+[4.47 s] Generation Complete

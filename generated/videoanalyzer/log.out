@@ -13,4 +13,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'VideoAnalyzerProperties' with 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 8ms
-[5.79 s] Generation Complete
+[5.56 s] Generation Complete

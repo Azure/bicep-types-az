@@ -21,5 +21,5 @@ WARNING: Skipping resource type microsoft.portal/locations/usersettings under pa
 WARNING: Skipping resource type microsoft.portal/locations/consoles under path '/providers/Microsoft.Portal/locations/{location}/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
 WARNING: Skipping resource type microsoft.portal/usersettings under path '/providers/Microsoft.Portal/userSettings/{userSettingsName}': Unable to locate parameter with name 'userSettingsName'
 WARNING: Skipping resource type microsoft.portal/consoles under path '/providers/Microsoft.Portal/consoles/{consoleName}': Unable to locate parameter with name 'consoleName'
-INFORMATION: autorest.bicep took 5ms
-[4 s] Generation Complete
+INFORMATION: autorest.bicep took 3ms
+[3.76 s] Generation Complete
