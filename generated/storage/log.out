@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.storage-2021-04-01"} .
@@ -293,14 +293,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TableProperties' with an undef
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ListTableResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -357,7 +349,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'TableServiceProp
 WARNING: Skipping resource type microsoft.storage/storageaccounts/blobservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}': Unable to locate parameter with name 'BlobServicesName'
 WARNING: Skipping resource type microsoft.storage/storageaccounts/fileservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/{FileServicesName}': Unable to locate parameter with name 'FileServicesName'
 INFORMATION: Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-INFORMATION: autorest.bicep took 23ms
+INFORMATION: autorest.bicep took 19ms
 Processing batch task - {"tag":"microsoft.storage-2021-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -633,14 +625,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TableProperties' with an undef
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ListTableResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -687,7 +671,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'TableServiceProp
 WARNING: Skipping resource type microsoft.storage/storageaccounts/blobservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}': Unable to locate parameter with name 'BlobServicesName'
 WARNING: Skipping resource type microsoft.storage/storageaccounts/fileservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/{FileServicesName}': Unable to locate parameter with name 'FileServicesName'
 INFORMATION: Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-INFORMATION: autorest.bicep took 16ms
+INFORMATION: autorest.bicep took 12ms
 Processing batch task - {"tag":"microsoft.storage-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -957,14 +941,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TableProperties' with an undef
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ListTableResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1011,7 +987,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'TableServiceProp
 WARNING: Skipping resource type microsoft.storage/storageaccounts/blobservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}': Unable to locate parameter with name 'BlobServicesName'
 WARNING: Skipping resource type microsoft.storage/storageaccounts/fileservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/{FileServicesName}': Unable to locate parameter with name 'FileServicesName'
 INFORMATION: Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-INFORMATION: autorest.bicep took 15ms
+INFORMATION: autorest.bicep took 11ms
 Processing batch task - {"tag":"microsoft.storage-2020-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1277,14 +1253,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TableProperties' with an undef
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ListTableResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1331,7 +1299,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'TableServiceProp
 WARNING: Skipping resource type microsoft.storage/storageaccounts/blobservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}': Unable to locate parameter with name 'BlobServicesName'
 WARNING: Skipping resource type microsoft.storage/storageaccounts/fileservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/{FileServicesName}': Unable to locate parameter with name 'FileServicesName'
 INFORMATION: Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-INFORMATION: autorest.bicep took 15ms
+INFORMATION: autorest.bicep took 10ms
 Processing batch task - {"tag":"microsoft.storage-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1581,12 +1549,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'TableProperties' with an undef
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ListTableResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CorsRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1633,7 +1595,7 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'TableServiceProp
 WARNING: Skipping resource type microsoft.storage/storageaccounts/blobservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}': Unable to locate parameter with name 'BlobServicesName'
 WARNING: Skipping resource type microsoft.storage/storageaccounts/fileservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/{FileServicesName}': Unable to locate parameter with name 'FileServicesName'
 INFORMATION: Resource type microsoft.storage/storageaccounts/tableservices/tables under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}' has no body defined.
-INFORMATION: autorest.bicep took 11ms
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.storage-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1803,12 +1765,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudError' with an undefined 
 
 WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
@@ -1966,12 +1922,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerRequest' with an
 
 WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
@@ -2102,12 +2052,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerRequest' with an
 
 WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
@@ -2116,7 +2060,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'BlobServiceProperties' -> 'BlobServicePropertiesAutoGenerated'
 WARNING: Skipping resource type microsoft.storage/storageaccounts/blobservices under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/{BlobServicesName}': Unable to locate parameter with name 'BlobServicesName'
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.storage-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2242,12 +2186,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerRequest' with an
 
 WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
@@ -2256,7 +2194,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 5ms
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.storage-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2366,18 +2304,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerRequest' with an
 
 WARNING (PreCheck/SchemaMissingType): The schema 'LeaseContainerResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AzureEntityResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 4ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.storage-2017-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2466,7 +2398,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ListServiceSasResponse' with a
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.storage-2017-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2614,7 +2546,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ServiceSasParameters' with an 
 WARNING (PreCheck/SchemaMissingType): The schema 'ListServiceSasResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.storage-2016-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2724,7 +2656,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'UsageListResult' with an undef
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.storage-2015-06-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2813,4 +2745,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: autorest.bicep took 1ms
-[110.38 s] Generation Complete
+[89.31 s] Generation Complete

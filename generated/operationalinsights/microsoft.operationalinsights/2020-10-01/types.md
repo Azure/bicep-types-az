@@ -65,7 +65,6 @@
 ## CapacityReservationProperties
 ### Properties
 * **lastSkuUpdate**: string (ReadOnly): The last time Sku was updated.
-* **maxCapacity**: int (ReadOnly): Maximum CapacityReservation value in GB.
 * **minCapacity**: int (ReadOnly): Minimum CapacityReservation value in GB.
 
 ## KeyVaultProperties
@@ -103,6 +102,7 @@
 ## WorkspaceFeatures
 ### Properties
 * **clusterResourceId**: string: Dedicated LA cluster resourceId that is linked to the workspaces.
+* **disableLocalAuth**: bool: Disable Non-AAD based Auth.
 * **enableDataExport**: bool: Flag that indicate if data should be exported.
 * **enableLogAccessUsingOnlyResourcePermissions**: bool: Flag that indicate which permission to use - resource or workspace or both.
 * **immediatePurgeDataOn30Days**: bool: Flag that describes if we want to remove the data after 30 days.

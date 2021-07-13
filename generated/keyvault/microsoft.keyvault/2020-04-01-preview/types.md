@@ -140,6 +140,7 @@
 
 ## PrivateEndpointConnectionItem
 ### Properties
+* **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
 * **id**: string: Id of private endpoint connection.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 

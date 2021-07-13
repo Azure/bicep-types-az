@@ -59,7 +59,7 @@
 
 ## QueryAggregation
 ### Properties
-* **function**: 'Sum' (Required): The name of the aggregation function to use.
+* **function**: 'Avg' | 'Max' | 'Min' | 'Sum' (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## QueryDatasetConfiguration
@@ -175,7 +175,7 @@
 
 ## ReportConfigAggregation
 ### Properties
-* **function**: 'Sum' (Required): The name of the aggregation function to use.
+* **function**: 'Avg' | 'Max' | 'Min' | 'Sum' (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## ReportConfigDatasetConfiguration

@@ -20,6 +20,7 @@
 * **certificate**: string (WriteOnly)
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **isVerified**: bool (WriteOnly)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type

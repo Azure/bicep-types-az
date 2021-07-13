@@ -85,7 +85,7 @@
 ## PeeringPropertiesDirect
 ### Properties
 * **connections**: [DirectConnection](#directconnection)[]: The set of connections that constitute a direct peering.
-* **directPeeringType**: 'Cdn' | 'Edge' | 'Internal' | 'Ix' | 'IxRs' | 'Transit': The type of direct peering.
+* **directPeeringType**: 'Cdn' | 'Edge' | 'Internal' | 'Ix' | 'IxRs' | 'Transit' | 'Voice': The type of direct peering.
 * **peerAsn**: [SubResource](#subresource): The sub resource.
 * **useForPeeringService**: bool (ReadOnly): The flag that indicates whether or not the peering is used for peering service.
 

@@ -1,11 +1,24 @@
 # Microsoft.PowerPlatform @ 2020-10-30-preview
 
+## Resource Microsoft.PowerPlatform/accounts@2020-10-30-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccountProperties](#accountproperties): The properties that define configuration for the account.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.PowerPlatform/accounts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.PowerPlatform/enterprisePolicies@2020-10-30-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [EnterprisePolicyIdentity](#enterprisepolicyidentity): The identity of the EnterprisePolicy.
+* **kind**: 'Encryption' | 'Lockbox' | 'NetworkInjection' | 'PrivateEndpoint' (Required): The Kind (type) of Enterprise Policy
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Properties](#properties): The properties that define configuration for the enterprise policy.
@@ -22,6 +35,24 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.PowerPlatform/enterprisePolicies/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## AccountProperties
+### Properties
+* **description**: string: The description of the account.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## EnterprisePolicyIdentity
 ### Properties
@@ -60,6 +91,7 @@
 
 ## VirtualNetworkPropertiesList
 ### Properties
+* **nextLink**: string: Next page link if any.
 * **value**: [VirtualNetworkProperties](#virtualnetworkproperties)[]: Array of virtual networks.
 
 ## VirtualNetworkProperties
@@ -70,15 +102,6 @@
 ## SubnetProperties
 ### Properties
 * **name**: string: Subnet name.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
