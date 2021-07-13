@@ -60,7 +60,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 17ms
+INFORMATION: autorest.bicep took 15ms
 Processing batch task - {"tag":"microsoft.databoxedge-2021-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -121,7 +121,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 10ms
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.databoxedge-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -182,7 +182,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 10ms
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.databoxedge-2020-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -243,7 +243,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 9ms
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.databoxedge-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -335,7 +335,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 4ms
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.databoxedge-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -366,7 +366,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.databoxedge-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -397,7 +397,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.databoxedge-2019-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -428,5 +428,5 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigg
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'PeriodicTimerEventTrigger' has a property 'type' that is already declared the parent schema 'ARMBaseModel' but isn't significantly different. The property has been removed from PeriodicTimerEventTrigger
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 7ms
-[57.05 s] Generation Complete
+INFORMATION: autorest.bicep took 4ms
+[56.4 s] Generation Complete

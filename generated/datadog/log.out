@@ -12,12 +12,12 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 7ms
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.datadog-2020-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 2ms
-[7.04 s] Generation Complete
+INFORMATION: autorest.bicep took 3ms
+[6.88 s] Generation Complete

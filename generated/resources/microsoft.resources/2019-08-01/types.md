@@ -1,7 +1,7 @@
 # Microsoft.Resources @ 2019-08-01
 
 ## Resource Microsoft.Resources/deployments@2019-08-01
-* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

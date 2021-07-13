@@ -113,7 +113,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-INFORMATION: autorest.bicep took 3ms
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.network-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -169,4 +169,4 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a proper
 
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 INFORMATION: autorest.bicep took 3ms
-[9.74 s] Generation Complete
+[9.6 s] Generation Complete

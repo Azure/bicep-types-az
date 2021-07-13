@@ -117,5 +117,5 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'GroupIdInformation' has
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 3ms
-[6.48 s] Generation Complete
+INFORMATION: autorest.bicep took 4ms
+[6.35 s] Generation Complete

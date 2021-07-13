@@ -374,4 +374,4 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 7ms
-[11.59 s] Generation Complete
+[11.69 s] Generation Complete

@@ -22,4 +22,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Principals' with an undefined 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping resource type microsoft.datacatalog/catalogs under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataCatalog/catalogs/{catalogName}': Unable to locate parameter with name 'catalogName'
 INFORMATION: autorest.bicep took 3ms
-[3.67 s] Generation Complete
+[3.72 s] Generation Complete

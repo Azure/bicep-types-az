@@ -26,4 +26,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorBody' with an undefined t
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 5ms
-[3.52 s] Generation Complete
+[3.56 s] Generation Complete

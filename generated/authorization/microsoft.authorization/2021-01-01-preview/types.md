@@ -1,7 +1,7 @@
 # Microsoft.Authorization @ 2021-01-01-preview
 
 ## Resource Microsoft.Authorization/roleAssignmentApprovals/stages@2021-01-01-preview
-* **Valid Scope(s)**: Tenant
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **assignedToMe**: bool (ReadOnly, WriteOnly)

@@ -116,5 +116,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ExportClusterParameters' with 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
-[9.36 s] Generation Complete
+INFORMATION: autorest.bicep took 3ms
+[9.39 s] Generation Complete

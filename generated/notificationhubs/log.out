@@ -234,5 +234,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
-[9.37 s] Generation Complete
+INFORMATION: autorest.bicep took 2ms
+[8.95 s] Generation Complete

@@ -10,7 +10,7 @@ INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 6ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.communication-2020-08-20-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -20,4 +20,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse-error' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 1ms
-[5.49 s] Generation Complete
+[5.65 s] Generation Complete

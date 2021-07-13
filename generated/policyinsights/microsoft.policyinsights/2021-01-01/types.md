@@ -1,7 +1,7 @@
 # Microsoft.PolicyInsights @ 2021-01-01
 
 ## Resource Microsoft.PolicyInsights/attestations@2021-01-01
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
