@@ -93,13 +93,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **consistencyMode**: 'ApplicationConsistent' | 'CrashConsistent' | 'FileSystemConsistent' (ReadOnly): Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-* **excludeDisks**: [ApiEntityReference](#apientityreference)[]: List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **provisioningDetails**: [RestorePointProvisioningDetails](#restorepointprovisioningdetails) (ReadOnly): Restore Point Provisioning details.
-* **provisioningState**: string (ReadOnly): Gets the provisioning state of the restore point.
-* **sourceMetadata**: [RestorePointSourceMetadata](#restorepointsourcemetadata) (ReadOnly): Describes the properties of the Virtual Machine for which the restore point was created. The properties provided are a subset and the snapshot of the overall Virtual Machine properties captured at the time of the restore point creation.
+* **properties**: [RestorePointProperties](#restorepointproperties): The restore point properties.
 * **type**: 'Microsoft.Compute/restorePointCollections/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/sshPublicKeys@2021-03-01
@@ -439,7 +435,7 @@ it is up to handler implementation whether to re-run it or not
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
 * **managedDisk**: [SubResource](#subresource)
 * **snapshot**: [SubResource](#subresource)
-* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
 
 ## DiskEncryptionSetParameters
 ### Properties
@@ -455,7 +451,7 @@ it is up to handler implementation whether to re-run it or not
 * **osState**: 'Generalized' | 'Specialized' (Required): The OS State.
 * **osType**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
 * **snapshot**: [SubResource](#subresource)
-* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
 
 ## ResourceTags
 ### Properties
@@ -489,14 +485,18 @@ it is up to handler implementation whether to re-run it or not
 
 ## RestorePoint
 ### Properties
-* **consistencyMode**: 'ApplicationConsistent' | 'CrashConsistent' | 'FileSystemConsistent' (ReadOnly): Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-* **excludeDisks**: [ApiEntityReference](#apientityreference)[]: List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
 * **id**: string (ReadOnly): Resource Id
 * **name**: string (ReadOnly): Resource name
+* **properties**: [RestorePointProperties](#restorepointproperties): The restore point properties.
+* **type**: string (ReadOnly): Resource type
+
+## RestorePointProperties
+### Properties
+* **consistencyMode**: 'ApplicationConsistent' | 'CrashConsistent' | 'FileSystemConsistent' (ReadOnly): Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
+* **excludeDisks**: [ApiEntityReference](#apientityreference)[]: List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
 * **provisioningDetails**: [RestorePointProvisioningDetails](#restorepointprovisioningdetails) (ReadOnly): Restore Point Provisioning details.
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the restore point.
 * **sourceMetadata**: [RestorePointSourceMetadata](#restorepointsourcemetadata) (ReadOnly): Describes the properties of the Virtual Machine for which the restore point was created. The properties provided are a subset and the snapshot of the overall Virtual Machine properties captured at the time of the restore point creation.
-* **type**: string (ReadOnly): Resource type
 
 ## ApiEntityReference
 ### Properties
@@ -514,6 +514,7 @@ it is up to handler implementation whether to re-run it or not
 * **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile): Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the virtual machine.
 * **licenseType**: string: Gets the license type, which is for bring your own license scenario.
+* **location**: string: Location of the VM from which the restore point was created.
 * **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the virtual machine. Some of the settings cannot be changed once VM is provisioned.
 * **securityProfile**: [SecurityProfile](#securityprofile): Specifies the Security profile settings for the virtual machine or virtual machine scale set.
 * **storageProfile**: [RestorePointSourceVMStorageProfile](#restorepointsourcevmstorageprofile): Describes the storage profile.
@@ -635,7 +636,7 @@ it is up to handler implementation whether to re-run it or not
 ### Properties
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. <br><br> NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
 * **id**: string: Resource Id
-* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
 
 ## RestorePointSourceVmosDisk
 ### Properties
@@ -924,8 +925,8 @@ it is up to handler implementation whether to re-run it or not
 
 ## PublicIPAddressSku
 ### Properties
-* **publicIPAddressSkuName**: 'Basic' | 'Standard' (Required): Specify public IP sku name
-* **publicIPAddressSkuTier**: 'Global' | 'Regional': Specify public IP sku tier
+* **name**: 'Basic' | 'Standard': Specify public IP sku name
+* **tier**: 'Global' | 'Regional': Specify public IP sku tier
 
 ## NetworkInterfaceReference
 ### Properties
@@ -1283,7 +1284,7 @@ it is up to handler implementation whether to re-run it or not
 ## VirtualMachineScaleSetManagedDiskParameters
 ### Properties
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. <br><br> NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
-* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
+* **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
 
 ## VirtualMachineScaleSetOSDisk
 ### Properties

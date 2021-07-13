@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.5)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.managednetwork-2019-06-01-preview"} .
@@ -60,5 +60,5 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'HubAndSpokePeeringPolic
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'MeshPeeringPolicyProperties' has a property 'mesh' that is already declared the parent schema 'ManagedNetworkPeeringPolicyProperties' but isn't significantly different. The property has been removed from MeshPeeringPolicyProperties
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 9ms
-[5.43 s] Generation Complete
+INFORMATION: autorest.bicep took 8ms
+[4.55 s] Generation Complete

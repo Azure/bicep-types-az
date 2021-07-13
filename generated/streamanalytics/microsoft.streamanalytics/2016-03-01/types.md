@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location. Required on PUT (CreateOrReplace) requests.
+* **location**: string: The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [StreamingJobProperties](#streamingjobproperties): The properties that are associated with a streaming job.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StreamAnalytics/streamingjobs/functions@2016-03-01
@@ -544,7 +544,7 @@
 * **query**: string: Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
 * **streamingUnits**: int: Specifies the number of streaming units that the streaming job uses.
 
-## ResourceTags
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -514,9 +514,14 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     return ScopeType.Unknown;
   }
 
-  function collapseDescriptors(resources: ResourceDefinition[]) {
-    const output: Dictionary<ResourceDefinition> = {};
+  function mergeScopes(scopeA: ScopeType, scopeB: ScopeType) {
+    // We have to assume any (unknown) scope if either scope is unknown
+    // Bitwise OR will not handle this case correctly as 'unknown' is 0.
+    if (scopeA == ScopeType.Unknown || scopeB == ScopeType.Unknown) {
+      return ScopeType.Unknown;
+    }
 
+    return scopeA | scopeB;
   }
 
   function collapseDefinitionScopes(resources: ResourceDefinition[]) {
@@ -531,7 +536,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
           ...definitionsByName[name],
           descriptor: {
             ...curDescriptor,
-            scopeType: curDescriptor.scopeType | newDescriptor.scopeType,
+            scopeType: mergeScopes(curDescriptor.scopeType, newDescriptor.scopeType),
           },
         };
       } else {

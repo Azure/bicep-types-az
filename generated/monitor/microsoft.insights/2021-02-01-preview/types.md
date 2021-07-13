@@ -16,7 +16,7 @@
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: [Action](#action)[]: Actions to invoke when the alert fires.
+* **actions**: any: Any object
 * **autoMitigate**: bool: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert.
 * **checkWorkspaceAlertsStorageConfigured**: bool: The flag which indicates whether this scheduled query rule should be stored in the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
@@ -35,16 +35,6 @@
 * **targetResourceTypes**: string[]: List of resource type of the target resource(s) on which the alert is created/updated. For example if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of the kind LogAlert
 * **windowSize**: string: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size). Relevant and required only for rules of the kind LogAlert.
 
-## Action
-### Properties
-* **actionGroupId**: string: Action Group resource Id to invoke when the alert fires.
-* **webHookProperties**: [ActionWebHookProperties](#actionwebhookproperties): The properties of a webhook object.
-
-## ActionWebHookProperties
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ScheduledQueryRuleCriteria
 ### Properties
 * **allOf**: [Condition](#condition)[]: A list of conditions to evaluate against the specified scopes
@@ -55,11 +45,11 @@
 * **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.
 * **metricMeasureColumn**: string: The column containing the metric measure number. Relevant only for rules of the kind LogAlert.
 * **metricName**: string: The name of the metric to be sent. Relevant and required only for rules of the kind LogToMetric.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): The criteria operator. Relevant and required only for rules of the kind LogAlert.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': The criteria operator. Relevant and required only for rules of the kind LogAlert.
 * **query**: string: Log query alert
 * **resourceIdColumn**: string: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.
-* **threshold**: int (Required): the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): Aggregation type. Relevant and required only for rules of the kind LogAlert.
+* **threshold**: int: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total': Aggregation type. Relevant and required only for rules of the kind LogAlert.
 
 ## Dimension
 ### Properties

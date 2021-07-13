@@ -13,6 +13,16 @@
 * **tags**: [Tags](#tags): Resource tags.
 * **type**: 'Microsoft.TestBase/testBaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CustomerEventProperties](#customereventproperties): A notification events subscribed to be received by customer.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.TestBase/testBaseAccounts/customerEvents' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -48,7 +58,7 @@
 * **locations**: string[]: The locations that the SKU is available.
 * **name**: string (Required): The name of the SKU. This is typically a letter + number code, such as B0 or S0.
 * **resourceType**: string: The type of resource the SKU applies to.
-* **tier**: 'Basic' | 'Standard' (Required): The tier of this particular SKU.
+* **tier**: 'Standard' (Required): The tier of this particular SKU.
 
 ## TestBaseAccountSKUCapability
 ### Properties
@@ -68,6 +78,36 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CustomerEventProperties
+### Properties
+* **eventName**: string (Required): The name of the event subscribed to.
+* **receivers**: [NotificationEventReceiver](#notificationeventreceiver)[] (Required): The notification event receivers.
+
+## NotificationEventReceiver
+### Properties
+* **receiverType**: string: The type of the notification event receiver.
+* **receiverValue**: [NotificationReceiverValue](#notificationreceivervalue): A notification event receiver value.
+
+## NotificationReceiverValue
+### Properties
+* **distributionGroupListReceiverValue**: [DistributionGroupListReceiverValue](#distributiongrouplistreceivervalue): The user object receiver value.
+* **subscriptionReceiverValue**: [SubscriptionReceiverValue](#subscriptionreceivervalue): The subscription role receiver value.
+* **userObjectReceiverValue**: [UserObjectReceiverValue](#userobjectreceivervalue): The user object receiver value.
+
+## DistributionGroupListReceiverValue
+### Properties
+* **distributionGroups**: string[]: The list of distribution groups.
+
+## SubscriptionReceiverValue
+### Properties
+* **role**: string: The role of the notification receiver.
+* **subscriptionId**: string: The subscription id of the notification receiver.
+* **subscriptionName**: string: The subscription name of the notification receiver.
+
+## UserObjectReceiverValue
+### Properties
+* **userObjectIds**: string[]: user object ids.
 
 ## PackageProperties
 ### Properties

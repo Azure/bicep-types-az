@@ -140,6 +140,7 @@
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
 * **provisioningState**: string (ReadOnly): Provisioning state of the Namespace.
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
+* **status**: string (ReadOnly): Status of the Namespace.
 * **updatedAt**: string (ReadOnly): The time the Namespace was updated.
 * **zoneRedundant**: bool: Enabling this property creates a Standard Event Hubs Namespace in regions supported availability zones.
 

@@ -11,7 +11,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource microsoft.insights/logprofiles@2016-03-01
+## Resource Microsoft.Insights/logprofiles@2016-03-01
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LogProfileProperties](#logprofileproperties) (Required): The log profile properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'microsoft.insights/logprofiles' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.Insights/logprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AlertRule
 ### Properties

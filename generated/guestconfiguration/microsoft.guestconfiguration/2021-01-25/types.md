@@ -27,10 +27,11 @@
 
 ## GuestConfigurationNavigation
 ### Properties
+* **assignmentType**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'Audit' | 'DeployAndAutoCorrect': Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
 * **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]: The configuration parameters for the guest configuration.
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
-* **contentHash**: string (ReadOnly): Combined hash of the guest configuration package and configuration parameters.
-* **contentUri**: string (ReadOnly): Uri of the storage where guest configuration package is uploaded.
+* **contentHash**: string: Combined hash of the guest configuration package and configuration parameters.
+* **contentUri**: string: Uri of the storage where guest configuration package is uploaded.
 * **kind**: 'DSC': Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
 * **version**: string: Version of the guest configuration.

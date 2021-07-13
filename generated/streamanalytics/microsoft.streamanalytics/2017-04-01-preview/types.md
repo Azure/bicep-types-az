@@ -364,7 +364,7 @@
 ### Base Properties
 ### AzureSqlReferenceInputDataSource
 #### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
+* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties): Describes Azure SQL database reference input data source properties.
 * **type**: 'Microsoft.Sql/Server/Database' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
 ### BlobReferenceInputDataSource
@@ -372,10 +372,15 @@
 * **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties): The properties that are associated with a blob input containing reference data.
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
+### RawReferenceInputDataSource
+#### Properties
+* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input.
+* **type**: 'Raw' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
+
 
 ## AzureSqlReferenceInputDataSource
 ### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties)
+* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties): Describes Azure SQL database reference input data source properties.
 * **type**: 'Microsoft.Sql/Server/Database' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
 ## AzureSqlReferenceInputDataSourceProperties
@@ -402,6 +407,16 @@
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
+
+## RawReferenceInputDataSource
+### Properties
+* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input.
+* **type**: 'Raw' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
+
+## RawInputDatasourceProperties
+### Properties
+* **payload**: string: The JSON serialized content of the input data. Either payload or payloadUri must be set, but not both.
+* **payloadUri**: string: The SAS URL to a blob containing the JSON serialized content of the input data. Either payload or payloadUri must be set, but not both.
 
 ## StreamInputProperties
 ### Properties
@@ -431,6 +446,11 @@
 #### Properties
 * **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties): The properties that are associated with a blob input containing stream data.
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+
+### RawStreamInputDataSource
+#### Properties
+* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input.
+* **type**: 'Raw' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 
 ## IoTHubStreamInputDataSource
@@ -478,6 +498,11 @@
 * **sourcePartitionCount**: int: The partition count of the blob input data source. Range 1 - 256.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
+
+## RawStreamInputDataSource
+### Properties
+* **properties**: [RawInputDatasourceProperties](#rawinputdatasourceproperties): The properties that are associated with a raw input.
+* **type**: 'Raw' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ## JobStorageAccount
 ### Properties
@@ -564,6 +589,11 @@
 #### Properties
 * **properties**: [PowerBIOutputDataSourceProperties](#powerbioutputdatasourceproperties): The properties that are associated with a Power BI output.
 * **type**: 'PowerBI' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+
+### RawOutputDatasource
+#### Properties
+* **properties**: [RawOutputDatasourceProperties](#rawoutputdatasourceproperties): The properties that are associated with a raw output.
+* **type**: 'Raw' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 
 ## AzureFunctionOutputDataSource
@@ -743,6 +773,15 @@
 * **table**: string: The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
 * **tokenUserDisplayName**: string: The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 * **tokenUserPrincipalName**: string: The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+
+## RawOutputDatasource
+### Properties
+* **properties**: [RawOutputDatasourceProperties](#rawoutputdatasourceproperties): The properties that are associated with a raw output.
+* **type**: 'Raw' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+
+## RawOutputDatasourceProperties
+### Properties
+* **payloadUri**: string: The SAS URL to a blob where the output should be written. If this property is not set, output data will be written into a temporary storage, and a SAS URL to that temporary storage will be included in the result.
 
 ## StreamingJobSku
 ### Properties

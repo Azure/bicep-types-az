@@ -47,8 +47,17 @@
 
 ## StorageProfile
 ### Properties
+* **hanaSids**: [SAPSystemID](#sapsystemid)[]: Specifies information related to SAP system IDs for the hana instance.
 * **nfsIpAddress**: string: IP Address to connect to storage.
 * **osDisks**: [Disk](#disk)[]: Specifies information about the operating system disk used by the hana instance.
+
+## SAPSystemID
+### Properties
+* **gid**: string: Group ID of the HANA database user.
+* **memoryAllocation**: string: Percent of memory to allocate to this SID.
+* **sid**: string: SAP system ID as database identifier.
+* **uid**: string: User ID of the HANA database user.
+* **username**: string: Name of the HANA database user.
 
 ## Disk
 ### Properties
