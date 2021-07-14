@@ -24,7 +24,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 7ms
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.storagepool-2020-03-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -43,5 +43,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
-[6.71 s] Generation Complete
+INFORMATION: autorest.bicep took 3ms
+[7.66 s] Generation Complete

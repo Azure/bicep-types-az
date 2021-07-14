@@ -229,21 +229,6 @@
 * **vrsCount**: int (Required): The vSphere Replication Server (VRS) count
 
 
-## AddonHcxProperties
-### Properties
-* **addonType**: 'HCX' (Required): The type of private cloud addon
-* **offer**: string (Required): The HCX offer, example VMware MaaS Cloud Provider (Enterprise)
-
-## AddonSrmProperties
-### Properties
-* **addonType**: 'SRM' (Required): The type of private cloud addon
-* **licenseKey**: string (Required): The Site Recovery Manager (SRM) license
-
-## AddonVrProperties
-### Properties
-* **addonType**: 'VR' (Required): The type of private cloud addon
-* **vrsCount**: int (Required): The vSphere Replication Server (VRS) count
-
 ## ExpressRouteAuthorizationProperties
 ### Properties
 * **expressRouteAuthorizationId**: string (ReadOnly): The ID of the ExpressRoute Circuit Authorization
@@ -332,22 +317,6 @@
 * **value**: string: The value for the passed parameter
 
 
-## PSCredentialExecutionParameter
-### Properties
-* **password**: string: password for login
-* **type**: 'Credential' (Required): The type of execution parameter
-* **username**: string: username for login
-
-## ScriptSecureStringExecutionParameter
-### Properties
-* **secureValue**: string: A secure value for the passed parameter, not to be stored in logs
-* **type**: 'SecureValue' (Required): The type of execution parameter
-
-## ScriptStringExecutionParameter
-### Properties
-* **type**: 'Value' (Required): The type of execution parameter
-* **value**: string: The value for the passed parameter
-
 ## ScriptExecutionPropertiesNamedOutputs
 ### Properties
 ### Additional Properties
@@ -372,17 +341,6 @@
 * **leaseTime**: int: DHCP Server Lease Time.
 * **serverAddress**: string: DHCP Server Address.
 
-
-## WorkloadNetworkDhcpRelay
-### Properties
-* **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
-* **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
-
-## WorkloadNetworkDhcpServer
-### Properties
-* **dhcpType**: 'SERVER' (Required): Type of DHCP: SERVER or RELAY.
-* **leaseTime**: int: DHCP Server Lease Time.
-* **serverAddress**: string: DHCP Server Address.
 
 ## WorkloadNetworkDnsServiceProperties
 ### Properties

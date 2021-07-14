@@ -380,6 +380,18 @@
 * **properties**: [VirtualNetworkPeeringPropertiesFormat](#virtualnetworkpeeringpropertiesformat): Properties of the virtual network peering.
 * **type**: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/virtualWans@2018-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualWanProperties](#virtualwanproperties): Parameters for VirtualWAN
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/virtualWans' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/vpnGateways@2018-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -1805,6 +1817,18 @@
 * **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **remoteVirtualNetwork**: [SubResource](#subresource): Reference to another subresource.
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualWanProperties
+### Properties
+* **disableVpnEncryption**: bool: Vpn encryption to be disabled or not.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current provisioning state.
+* **virtualHubs**: [SubResource](#subresource)[] (ReadOnly): List of VirtualHubs in the VirtualWAN.
+* **vpnSites**: [SubResource](#subresource)[] (ReadOnly): Array of SubResource
 
 ## ResourceTags
 ### Properties

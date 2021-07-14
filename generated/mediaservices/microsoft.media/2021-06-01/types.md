@@ -278,30 +278,10 @@
 * **widevineTemplate**: string (Required): The Widevine template.
 
 
-## ContentKeyPolicyClearKeyConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyFairPlayConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration' (Required): The discriminator for derived types.
-* **ask**: any (Required): The key that must be used as FairPlay Application Secret key.
-* **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-* **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-* **offlineRentalConfiguration**: [ContentKeyPolicyFairPlayOfflineRentalConfiguration](#contentkeypolicyfairplayofflinerentalconfiguration)
-* **rentalAndLeaseKeyType**: 'DualExpiry' | 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
-* **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
-
 ## ContentKeyPolicyFairPlayOfflineRentalConfiguration
 ### Properties
 * **playbackDurationSeconds**: int (Required): Playback duration
 * **storageDurationSeconds**: int (Required): Storage duration
-
-## ContentKeyPolicyPlayReadyConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration' (Required): The discriminator for derived types.
-* **licenses**: [ContentKeyPolicyPlayReadyLicense](#contentkeypolicyplayreadylicense)[] (Required): The PlayReady licenses.
-* **responseCustomData**: string: The custom response data.
 
 ## ContentKeyPolicyPlayReadyLicense
 ### Properties
@@ -330,15 +310,6 @@
 * **keyId**: string (Required): The content key ID.
 
 
-## ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required): The discriminator for derived types.
-* **keyId**: string (Required): The content key ID.
-
 ## ContentKeyPolicyPlayReadyPlayRight
 ### Properties
 * **agcAndColorStripeRestriction**: int: Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
@@ -359,15 +330,6 @@
 ### Properties
 * **bestEffort**: bool (Required): Indicates whether this restriction is enforced on a Best Effort basis.
 * **configurationData**: int (Required): Configures the restriction control bits. Must be between 0 and 3 inclusive.
-
-## ContentKeyPolicyUnknownConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyWidevineConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration' (Required): The discriminator for derived types.
-* **widevineTemplate**: string (Required): The Widevine template.
 
 ## ContentKeyPolicyRestriction
 * **Discriminator**: @odata.type
@@ -393,21 +355,6 @@
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required): The discriminator for derived types.
 
 
-## ContentKeyPolicyOpenRestriction
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyOpenRestriction' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyTokenRestriction
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyTokenRestriction' (Required): The discriminator for derived types.
-* **alternateVerificationKeys**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey)[]: A list of alternative verification keys.
-* **audience**: string (Required): The audience for the token.
-* **issuer**: string (Required): The token issuer.
-* **openIdConnectDiscoveryDocument**: string: The OpenID connect discovery document.
-* **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required): Base class for Content Key Policy key for token validation. A derived class must be used to create a token key.
-* **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]: A list of required token claims.
-* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token.
-
 ## ContentKeyPolicyRestrictionTokenKey
 * **Discriminator**: @odata.type
 
@@ -429,30 +376,10 @@
 * **rawBody**: any (Required): The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
 
 
-## ContentKeyPolicyRsaTokenKey
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey' (Required): The discriminator for derived types.
-* **exponent**: any (Required): The RSA Parameter exponent
-* **modulus**: any (Required): The RSA Parameter modulus
-
-## ContentKeyPolicySymmetricTokenKey
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey' (Required): The discriminator for derived types.
-* **keyValue**: any (Required): The key value of the key
-
-## ContentKeyPolicyX509CertificateTokenKey
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey' (Required): The discriminator for derived types.
-* **rawBody**: any (Required): The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
-
 ## ContentKeyPolicyTokenClaim
 ### Properties
 * **claimType**: string: Token claim type.
 * **claimValue**: string: Token claim value.
-
-## ContentKeyPolicyUnknownRestriction
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required): The discriminator for derived types.
 
 ## LiveEventProperties
 ### Properties

@@ -28,11 +28,6 @@
 ### Properties
 * **isEnabled**: bool: Indicates whether Advanced Threat Protection is enabled.
 
-## DataExportSettings
-### Properties
-* **kind**: 'DataExportSettings' (Required): the kind of the settings string (DataExportSettings)
-* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
-
 ## DataExportSettingProperties
 ### Properties
 * **enabled**: bool (Required): Is the data export setting is enabled

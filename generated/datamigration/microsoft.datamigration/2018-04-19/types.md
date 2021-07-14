@@ -77,26 +77,20 @@
 ### MiSqlConnectionInfo
 #### Properties
 * **managedInstanceResourceId**: string (Required): Resource id for Azure SQL database Managed instance
-* **password**: string: Password credential.
 * **type**: 'MiSqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
 ### MySqlConnectionInfo
 #### Properties
-* **password**: string: Password credential.
 * **port**: int (Required): Port for Server
 * **serverName**: string (Required): Name of the server
 * **type**: 'MySqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
 ### PostgreSqlConnectionInfo
 #### Properties
 * **databaseName**: string: Name of the database
-* **password**: string: Password credential.
 * **port**: int (Required): Port for Server
 * **serverName**: string (Required): Name of the server
 * **type**: 'PostgreSqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
 ### SqlConnectionInfo
 #### Properties
@@ -104,48 +98,10 @@
 * **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
-* **password**: string: Password credential.
 * **platform**: 'SqlOnPrem': An enumeration of source platform types
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: 'SqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
-
-## MiSqlConnectionInfo
-### Properties
-* **managedInstanceResourceId**: string (Required): Resource id for Azure SQL database Managed instance
-* **password**: string: Password credential.
-* **type**: 'MiSqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
-
-## MySqlConnectionInfo
-### Properties
-* **password**: string: Password credential.
-* **port**: int (Required): Port for Server
-* **serverName**: string (Required): Name of the server
-* **type**: 'MySqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
-
-## PostgreSqlConnectionInfo
-### Properties
-* **databaseName**: string: Name of the database
-* **password**: string: Password credential.
-* **port**: int (Required): Port for Server
-* **serverName**: string (Required): Name of the server
-* **type**: 'PostgreSqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
-
-## SqlConnectionInfo
-### Properties
-* **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
-* **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
-* **encryptConnection**: bool: Whether to encrypt the connection
-* **password**: string: Password credential.
-* **platform**: 'SqlOnPrem': An enumeration of source platform types
-* **trustServerCertificate**: bool: Whether to trust the server certificate
-* **type**: 'SqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
 ## TrackedResourceTags
 ### Properties
@@ -317,12 +273,6 @@
 * **details**: [ODataError](#odataerror)[] (ReadOnly): Inner errors that caused this error
 * **message**: string (ReadOnly): The human-readable description of the error
 
-## MigrateMISyncCompleteCommandProperties
-### Properties
-* **commandType**: 'Migrate.SqlServer.AzureDbSqlMi.Complete' (Required): Command type.
-* **input**: [MigrateMISyncCompleteCommandInput](#migratemisynccompletecommandinput): Input for command that completes online migration for an Azure SQL Database Managed Instance.
-* **output**: [MigrateMISyncCompleteCommandOutput](#migratemisynccompletecommandoutput) (ReadOnly): Output for command that completes online migration for an Azure SQL Database Managed Instance.
-
 ## MigrateMISyncCompleteCommandInput
 ### Properties
 * **sourceDatabaseName**: string (Required): Name of managed instance database
@@ -340,12 +290,6 @@
 * **message**: string (ReadOnly): Error message
 * **stackTrace**: string (ReadOnly): Stack trace
 
-## MigrateSyncCompleteCommandProperties
-### Properties
-* **commandType**: 'Migrate.Sync.Complete.Database' (Required): Command type.
-* **input**: [MigrateSyncCompleteCommandInput](#migratesynccompletecommandinput): Input for command that completes sync migration for a database.
-* **output**: [MigrateSyncCompleteCommandOutput](#migratesynccompletecommandoutput) (ReadOnly): Output for command that completes sync migration for a database.
-
 ## MigrateSyncCompleteCommandInput
 ### Properties
 * **commitTimeStamp**: string: Time stamp to complete
@@ -356,17 +300,19 @@
 * **errors**: [ReportableException](#reportableexception)[] (ReadOnly): List of errors that happened during the command execution
 * **id**: string (ReadOnly): Result identifier
 
-## ConnectToSourceMySqlTaskProperties
-### Properties
-* **input**: [ConnectToSourceMySqlTaskInput](#connecttosourcemysqltaskinput): Input for the task that validates MySQL database connection
-* **output**: [ConnectToSourceNonSqlTaskOutput](#connecttosourcenonsqltaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToSource.MySql' (Required): Task type.
-
 ## ConnectToSourceMySqlTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. These groups will run a set of permissions for validating user activity. Select the permission group for the activity that you are performing.
 * **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required): Information for connecting to MySQL server
 * **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer': An enumeration of possible target types when migrating from MySQL
+
+## MySqlConnectionInfo
+### Properties
+* **password**: string: Password credential.
+* **port**: int (Required): Port for Server
+* **serverName**: string (Required): Name of the server
+* **type**: string (Required): Type of connection info
+* **userName**: string: User name
 
 ## ConnectToSourceNonSqlTaskOutput
 ### Properties
@@ -385,15 +331,18 @@
 * **serverPlatform**: string (ReadOnly): Name of the server platform
 * **serverVersion**: string (ReadOnly): Version of the database server
 
-## ConnectToSourcePostgreSqlSyncTaskProperties
-### Properties
-* **input**: [ConnectToSourcePostgreSqlSyncTaskInput](#connecttosourcepostgresqlsynctaskinput): Input for the task that validates connection to PostgreSQL and source server requirements
-* **output**: [ConnectToSourcePostgreSqlSyncTaskOutput](#connecttosourcepostgresqlsynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToSource.PostgreSql.Sync' (Required): Task type.
-
 ## ConnectToSourcePostgreSqlSyncTaskInput
 ### Properties
 * **sourceConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required): Information for connecting to PostgreSQL server
+
+## PostgreSqlConnectionInfo
+### Properties
+* **databaseName**: string: Name of the database
+* **password**: string: Password credential.
+* **port**: int (Required): Port for Server
+* **serverName**: string (Required): Name of the server
+* **type**: string (Required): Type of connection info
+* **userName**: string: User name
 
 ## ConnectToSourcePostgreSqlSyncTaskOutput
 ### Properties
@@ -403,18 +352,24 @@
 * **sourceServerVersion**: string (ReadOnly): Version of the source server
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors associated with the task
 
-## ConnectToSourceSqlServerTaskProperties
-### Properties
-* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Input for the task that validates connection to SQL Server and also validates source server requirements
-* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToSource.SqlServer' (Required): Task type.
-
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. These groups will run a set of permissions for validating user activity. Select the permission group for the activity that you are performing.
 * **collectAgentJobs**: bool: Flag for whether to collect agent jobs from source server.
 * **collectLogins**: bool: Flag for whether to collect logins from source server.
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
+
+## SqlConnectionInfo
+### Properties
+* **additionalSettings**: string: Additional connection settings
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
+* **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+* **encryptConnection**: bool: Whether to encrypt the connection
+* **password**: string: Password credential.
+* **platform**: 'SqlOnPrem': An enumeration of source platform types
+* **trustServerCertificate**: bool: Whether to trust the server certificate
+* **type**: string (Required): Type of connection info
+* **userName**: string: User name
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -460,29 +415,10 @@
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
 
-## ConnectToSourceSqlServerTaskOutputAgentJobLevel
-### Properties
-* **isEnabled**: bool (ReadOnly): The state of the original AgentJob.
-* **jobCategory**: string (ReadOnly): The type of AgentJob.
-* **jobOwner**: string (ReadOnly): The owner of the AgentJob
-* **lastExecutedOn**: string (ReadOnly): UTC Date and time when the AgentJob was last executed.
-* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
-* **name**: string (ReadOnly): AgentJob name
-* **resultType**: 'AgentJobLevelOutput' (Required): Type of result - database level or task level
-
 ## MigrationEligibilityInfo
 ### Properties
 * **isEligibleForMigration**: bool (ReadOnly): Whether object is eligible for migration or not.
 * **validationMessages**: string[] (ReadOnly): Information about eligibility failure for the server object.
-
-## ConnectToSourceSqlServerTaskOutputDatabaseLevel
-### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): An enumeration of SQL Server database compatibility levels
-* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): An enumeration of SQL Server Database states
-* **name**: string (ReadOnly): Database name
-* **resultType**: 'DatabaseLevelOutput' (Required): Type of result - database level or task level
-* **sizeMB**: int (ReadOnly): Size of the file in megabytes
 
 ## DatabaseFileInfo
 ### Properties
@@ -493,37 +429,6 @@
 * **physicalFullName**: string: Operating-system full path of the file
 * **restoreFullName**: string: Suggested full path of the file for restoring
 * **sizeMB**: int: Size of the file in megabytes
-
-## ConnectToSourceSqlServerTaskOutputLoginLevel
-### Properties
-* **defaultDatabase**: string (ReadOnly): The default database for the login.
-* **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): Enum mapping of SMO LoginType.
-* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
-* **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required): Type of result - database level or task level
-
-## ConnectToSourceSqlServerTaskOutputTaskLevel
-### Properties
-* **agentJobs**: string (ReadOnly): Source agent jobs as a map from agent job name to id.
-* **databases**: string (ReadOnly): Source databases as a map from database name to database id
-* **logins**: string (ReadOnly): Source logins as a map from login name to login id.
-* **resultType**: 'TaskLevelOutput' (Required): Type of result - database level or task level
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
-
-## ConnectToSourceSqlServerSyncTaskProperties
-### Properties
-* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Input for the task that validates connection to SQL Server and also validates source server requirements
-* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToSource.SqlServer.Sync' (Required): Task type.
-
-## ConnectToTargetAzureDbForMySqlTaskProperties
-### Properties
-* **input**: [ConnectToTargetAzureDbForMySqlTaskInput](#connecttotargetazuredbformysqltaskinput): Input for the task that validates connection to Azure Database for MySQL and target server requirements
-* **output**: [ConnectToTargetAzureDbForMySqlTaskOutput](#connecttotargetazuredbformysqltaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.AzureDbForMySql' (Required): Task type.
 
 ## ConnectToTargetAzureDbForMySqlTaskInput
 ### Properties
@@ -538,12 +443,6 @@
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors associated with the task
 
-## ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties
-### Properties
-* **input**: [ConnectToTargetAzureDbForPostgreSqlSyncTaskInput](#connecttotargetazuredbforpostgresqlsynctaskinput): Input for the task that validates connection to Azure Database for PostgreSQL and target server requirements
-* **output**: [ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput](#connecttotargetazuredbforpostgresqlsynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.AzureDbForPostgreSql.Sync' (Required): Task type.
-
 ## ConnectToTargetAzureDbForPostgreSqlSyncTaskInput
 ### Properties
 * **sourceConnectionInfo**: [PostgreSqlConnectionInfo](#postgresqlconnectioninfo) (Required): Information for connecting to PostgreSQL server
@@ -556,12 +455,6 @@
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Version of the target server
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors associated with the task
-
-## ConnectToTargetSqlMITaskProperties
-### Properties
-* **input**: [ConnectToTargetSqlMITaskInput](#connecttotargetsqlmitaskinput): Input for the task that validates connection to Azure SQL Database Managed Instance.
-* **output**: [ConnectToTargetSqlMITaskOutput](#connecttotargetsqlmitaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.AzureSqlDbMI' (Required): Task type.
 
 ## ConnectToTargetSqlMITaskInput
 ### Properties
@@ -576,12 +469,6 @@
 * **targetServerVersion**: string (ReadOnly): Target server version
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
-## ConnectToTargetSqlMISyncTaskProperties
-### Properties
-* **input**: [ConnectToTargetSqlMISyncTaskInput](#connecttotargetsqlmisynctaskinput): Input for the task that validates connection to Azure SQL Database Managed Instance online scenario.
-* **output**: [ConnectToTargetSqlMISyncTaskOutput](#connecttotargetsqlmisynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.AzureSqlDbMI.Sync.LRS' (Required): Task type.
-
 ## ConnectToTargetSqlMISyncTaskInput
 ### Properties
 * **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application
@@ -593,17 +480,18 @@
 * **applicationId**: string (Required): Application ID of the Azure Active Directory Application
 * **tenantId**: string (Required): Tenant id of the customer
 
+## MiSqlConnectionInfo
+### Properties
+* **managedInstanceResourceId**: string (Required): Resource id for Azure SQL database Managed instance
+* **password**: string: Password credential.
+* **type**: string (Required): Type of connection info
+* **userName**: string: User name
+
 ## ConnectToTargetSqlMISyncTaskOutput
 ### Properties
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
-
-## ConnectToTargetSqlDbTaskProperties
-### Properties
-* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput): Input for the task that validates connection to SQL DB and target server requirements
-* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.SqlDb' (Required): Task type.
 
 ## ConnectToTargetSqlDbTaskInput
 ### Properties
@@ -616,22 +504,10 @@
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Version of the target server
 
-## ConnectToTargetSqlDbSyncTaskProperties
-### Properties
-* **input**: [ConnectToTargetSqlDbSyncTaskInput](#connecttotargetsqldbsynctaskinput): Input for the task that validates connection to Azure SQL DB and target server requirements
-* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.SqlDb.Sync' (Required): Task type.
-
 ## ConnectToTargetSqlDbSyncTaskInput
 ### Properties
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
 * **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
-
-## GetTdeCertificatesSqlTaskProperties
-### Properties
-* **input**: [GetTdeCertificatesSqlTaskInput](#gettdecertificatessqltaskinput): Input for the task that gets TDE certificates in Base64 encoded format.
-* **output**: [GetTdeCertificatesSqlTaskOutput](#gettdecertificatessqltaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'GetTDECertificates.Sql' (Required): Task type.
 
 ## GetTdeCertificatesSqlTaskInput
 ### Properties
@@ -655,12 +531,6 @@
 * **base64EncodedCertificates**: string (ReadOnly): Mapping from certificate name to base 64 encoded format.
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
-## GetUserTablesSqlSyncTaskProperties
-### Properties
-* **input**: [GetUserTablesSqlSyncTaskInput](#getusertablessqlsynctaskinput): Input for the task that collects user tables for the given list of databases
-* **output**: [GetUserTablesSqlSyncTaskOutput](#getusertablessqlsynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'GetUserTables.AzureSqlDb.Sync' (Required): Task type.
-
 ## GetUserTablesSqlSyncTaskInput
 ### Properties
 * **selectedSourceDatabases**: string[] (Required): List of source database names to collect tables for
@@ -675,12 +545,6 @@
 * **tableValidationErrors**: string (ReadOnly): Mapping from database name to list of validation errors
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
-## GetUserTablesSqlTaskProperties
-### Properties
-* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput): Input for the task that collects user tables for the given list of databases
-* **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'GetUserTables.Sql' (Required): Task type.
-
 ## GetUserTablesSqlTaskInput
 ### Properties
 * **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -691,12 +555,6 @@
 * **databasesToTables**: string (ReadOnly): Mapping from database name to list of tables
 * **id**: string (ReadOnly): Result identifier
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
-
-## MigrateMySqlAzureDbForMySqlSyncTaskProperties
-### Properties
-* **input**: [MigrateMySqlAzureDbForMySqlSyncTaskInput](#migratemysqlazuredbformysqlsynctaskinput): Input for the task that migrates MySQL databases to Azure Database for MySQL for online migrations
-* **output**: [MigrateMySqlAzureDbForMySqlSyncTaskOutput](#migratemysqlazuredbformysqlsynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.MySql.AzureDbForMySql.Sync' (Required): Task type.
 
 ## MigrateMySqlAzureDbForMySqlSyncTaskInput
 ### Properties
@@ -790,74 +648,11 @@
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
 
-## MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseError
-### Properties
-* **errorMessage**: string: Error message
-* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required): Result type
-
 ## SyncMigrationDatabaseErrorEvent
 ### Properties
 * **eventText**: string (ReadOnly): Event text.
 * **eventTypeString**: string (ReadOnly): Event type.
 * **timestampString**: string (ReadOnly): String value of timestamp.
-
-## MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevel
-### Properties
-* **appliedChanges**: int (ReadOnly): Number of applied changes
-* **cdcDeleteCounter**: int (ReadOnly): Number of cdc deletes
-* **cdcInsertCounter**: int (ReadOnly): Number of cdc inserts
-* **cdcUpdateCounter**: int (ReadOnly): Number of cdc updates
-* **databaseName**: string (ReadOnly): Name of the database
-* **endedOn**: string (ReadOnly): Migration end time
-* **fullLoadCompletedTables**: int (ReadOnly): Number of tables completed in full load
-* **fullLoadErroredTables**: int (ReadOnly): Number of tables errored in full load
-* **fullLoadLoadingTables**: int (ReadOnly): Number of tables loading in full load
-* **fullLoadQueuedTables**: int (ReadOnly): Number of tables queued in full load
-* **incomingChanges**: int (ReadOnly): Number of incoming changes
-* **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
-* **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RUNNING' | 'STARTING' | 'UNDEFINED' (ReadOnly): Enum of the different state of database level online migration.
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-
-## MigrateMySqlAzureDbForMySqlSyncTaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevel
-### Properties
-* **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **sourceServer**: string (ReadOnly): Source server name
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **targetServer**: string (ReadOnly): Target server name
-* **targetServerVersion**: string (ReadOnly): Target server version
-
-## MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevel
-### Properties
-* **cdcDeleteCounter**: string (ReadOnly): Number of applied deletes
-* **cdcInsertCounter**: string (ReadOnly): Number of applied inserts
-* **cdcUpdateCounter**: string (ReadOnly): Number of applied updates
-* **databaseName**: string (ReadOnly): Name of the database
-* **dataErrorsCounter**: int (ReadOnly): Number of data errors occurred
-* **fullLoadEndedOn**: string (ReadOnly): Full load end time
-* **fullLoadEstFinishTime**: string (ReadOnly): Estimate to finish full load
-* **fullLoadStartedOn**: string (ReadOnly): Full load start time
-* **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
-* **lastModifiedTime**: string (ReadOnly): Last modified time on target
-* **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
-* **tableName**: string (ReadOnly): Name of the table
-* **totalChangesApplied**: int (ReadOnly): Total number of applied changes
-
-## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties
-### Properties
-* **input**: [MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput](#migratepostgresqlazuredbforpostgresqlsynctaskinput): Input for the task that migrates PostgreSQL databases to Azure Database for PostgreSQL for online migrations
-* **output**: [MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutput](#migratepostgresqlazuredbforpostgresqlsynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync' (Required): Task type.
 
 ## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput
 ### Properties
@@ -950,69 +745,6 @@
 * **tableName**: string (ReadOnly): Name of the table
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
-
-## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseError
-### Properties
-* **errorMessage**: string: Error message
-* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required): Result type
-
-## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevel
-### Properties
-* **appliedChanges**: int (ReadOnly): Number of applied changes
-* **cdcDeleteCounter**: int (ReadOnly): Number of cdc deletes
-* **cdcInsertCounter**: int (ReadOnly): Number of cdc inserts
-* **cdcUpdateCounter**: int (ReadOnly): Number of cdc updates
-* **databaseName**: string (ReadOnly): Name of the database
-* **endedOn**: string (ReadOnly): Migration end time
-* **fullLoadCompletedTables**: int (ReadOnly): Number of tables completed in full load
-* **fullLoadErroredTables**: int (ReadOnly): Number of tables errored in full load
-* **fullLoadLoadingTables**: int (ReadOnly): Number of tables loading in full load
-* **fullLoadQueuedTables**: int (ReadOnly): Number of tables queued in full load
-* **incomingChanges**: int (ReadOnly): Number of incoming changes
-* **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
-* **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RUNNING' | 'STARTING' | 'UNDEFINED' (ReadOnly): Enum of the different state of database level online migration.
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-
-## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevel
-### Properties
-* **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **sourceServer**: string (ReadOnly): Source server name
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **targetServer**: string (ReadOnly): Target server name
-* **targetServerVersion**: string (ReadOnly): Target server version
-
-## MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
-### Properties
-* **cdcDeleteCounter**: int (ReadOnly): Number of applied deletes
-* **cdcInsertCounter**: int (ReadOnly): Number of applied inserts
-* **cdcUpdateCounter**: int (ReadOnly): Number of applied updates
-* **databaseName**: string (ReadOnly): Name of the database
-* **dataErrorsCounter**: int (ReadOnly): Number of data errors occurred
-* **fullLoadEndedOn**: string (ReadOnly): Full load end time
-* **fullLoadEstFinishTime**: string (ReadOnly): Estimate to finish full load
-* **fullLoadStartedOn**: string (ReadOnly): Full load start time
-* **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
-* **lastModifiedTime**: string (ReadOnly): Last modified time on target
-* **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
-* **tableName**: string (ReadOnly): Name of the table
-* **totalChangesApplied**: int (ReadOnly): Total number of applied changes
-
-## MigrateSqlServerSqlDbSyncTaskProperties
-### Properties
-* **input**: [MigrateSqlServerSqlDbSyncTaskInput](#migratesqlserversqldbsynctaskinput): Input for the task that migrates on-prem SQL Server databases to Azure SQL Database for online migrations
-* **output**: [MigrateSqlServerSqlDbSyncTaskOutput](#migratesqlserversqldbsynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.SqlServer.AzureSqlDb.Sync' (Required): Task type.
 
 ## MigrateSqlServerSqlDbSyncTaskInput
 ### Properties
@@ -1122,70 +854,6 @@
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
 
-## MigrateSqlServerSqlDbSyncTaskOutputDatabaseError
-### Properties
-* **errorMessage**: string: Error message
-* **events**: [SyncMigrationDatabaseErrorEvent](#syncmigrationdatabaseerrorevent)[]: List of error events.
-* **resultType**: 'DatabaseLevelErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevel
-### Properties
-* **appliedChanges**: int (ReadOnly): Number of applied changes
-* **cdcDeleteCounter**: int (ReadOnly): Number of cdc deletes
-* **cdcInsertCounter**: int (ReadOnly): Number of cdc inserts
-* **cdcUpdateCounter**: int (ReadOnly): Number of cdc updates
-* **databaseName**: string (ReadOnly): Name of the database
-* **endedOn**: string (ReadOnly): Migration end time
-* **fullLoadCompletedTables**: int (ReadOnly): Number of tables completed in full load
-* **fullLoadErroredTables**: int (ReadOnly): Number of tables errored in full load
-* **fullLoadLoadingTables**: int (ReadOnly): Number of tables loading in full load
-* **fullLoadQueuedTables**: int (ReadOnly): Number of tables queued in full load
-* **incomingChanges**: int (ReadOnly): Number of incoming changes
-* **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
-* **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RUNNING' | 'STARTING' | 'UNDEFINED' (ReadOnly): Enum of the different state of database level online migration.
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-
-## MigrateSqlServerSqlDbSyncTaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlDbSyncTaskOutputMigrationLevel
-### Properties
-* **databaseCount**: int (ReadOnly): Count of databases
-* **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **sourceServer**: string (ReadOnly): Source server name
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **targetServer**: string (ReadOnly): Target server name
-* **targetServerVersion**: string (ReadOnly): Target server version
-
-## MigrateSqlServerSqlDbSyncTaskOutputTableLevel
-### Properties
-* **cdcDeleteCounter**: int (ReadOnly): Number of applied deletes
-* **cdcInsertCounter**: int (ReadOnly): Number of applied inserts
-* **cdcUpdateCounter**: int (ReadOnly): Number of applied updates
-* **databaseName**: string (ReadOnly): Name of the database
-* **dataErrorsCounter**: int (ReadOnly): Number of data errors occurred
-* **fullLoadEndedOn**: string (ReadOnly): Full load end time
-* **fullLoadEstFinishTime**: string (ReadOnly): Estimate to finish full load
-* **fullLoadStartedOn**: string (ReadOnly): Full load start time
-* **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
-* **lastModifiedTime**: string (ReadOnly): Last modified time on target
-* **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
-* **tableName**: string (ReadOnly): Name of the table
-* **totalChangesApplied**: int (ReadOnly): Total number of applied changes
-
-## MigrateSqlServerSqlMITaskProperties
-### Properties
-* **input**: [MigrateSqlServerSqlMITaskInput](#migratesqlserversqlmitaskinput): Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance.
-* **output**: [MigrateSqlServerSqlMITaskOutput](#migratesqlserversqlmitaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.SqlServer.AzureSqlDbMI' (Required): Task type.
-
 ## MigrateSqlServerSqlMITaskInput
 ### Properties
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
@@ -1272,74 +940,10 @@
 * **targetServerVersion**: string (ReadOnly): Target server version
 
 
-## MigrateSqlServerSqlMITaskOutputAgentJobLevel
-### Properties
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration errors and warnings per job
-* **isEnabled**: bool (ReadOnly): The state of the original Agent Job.
-* **message**: string (ReadOnly): Migration progress message
-* **name**: string (ReadOnly): Agent Job name.
-* **resultType**: 'AgentJobLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-
-## MigrateSqlServerSqlMITaskOutputDatabaseLevel
-### Properties
-* **databaseName**: string (ReadOnly): Name of the database
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings
-* **message**: string (ReadOnly): Migration progress message
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **sizeMB**: int (ReadOnly): Size of the database in megabytes
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-
-## MigrateSqlServerSqlMITaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlMITaskOutputLoginLevel
-### Properties
-* **endedOn**: string (ReadOnly): Login migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Login migration errors and warnings per login
-* **loginName**: string (ReadOnly): Login name.
-* **message**: string (ReadOnly): Login migration progress message
-* **resultType**: 'LoginLevelOutput' (Required): Result type
-* **stage**: 'AssignRoleMembership' | 'AssignRoleOwnership' | 'Completed' | 'EstablishObjectPermissions' | 'EstablishServerPermissions' | 'EstablishUserMapping' | 'Initialize' | 'LoginMigration' | 'None' (ReadOnly): Enum of the different stage of login migration.
-* **startedOn**: string (ReadOnly): Login migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-
-## MigrateSqlServerSqlMITaskOutputMigrationLevel
-### Properties
-* **agentJobs**: string (ReadOnly): Selected agent jobs as a map from name to id
-* **databases**: string (ReadOnly): Selected databases as a map from database name to database id
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
-* **logins**: string (ReadOnly): Selected logins as a map from name to id
-* **message**: string (ReadOnly): Migration progress message
-* **orphanedUsersInfo**: [OrphanedUserInfo](#orphaneduserinfo)[] (ReadOnly): List of orphaned users.
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **serverRoleResults**: string (ReadOnly): Map of server role migration results.
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
-* **targetServerBrandVersion**: string (ReadOnly): Target server brand version
-* **targetServerVersion**: string (ReadOnly): Target server version
-
 ## OrphanedUserInfo
 ### Properties
 * **databaseName**: string: Parent database of the user
 * **name**: string: Name of the orphaned user
-
-## MigrateSqlServerSqlMISyncTaskProperties
-### Properties
-* **input**: [MigrateSqlServerSqlMISyncTaskInput](#migratesqlserversqlmisynctaskinput): Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance online scenario.
-* **output**: [MigrateSqlServerSqlMISyncTaskOutput](#migratesqlserversqlmisynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS' (Required): Task type.
 
 ## MigrateSqlServerSqlMISyncTaskInput
 ### Properties
@@ -1391,21 +995,6 @@
 * **targetServerVersion**: string (ReadOnly): Target server version
 
 
-## MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel
-### Properties
-* **activeBackupSets**: [BackupSetInfo](#backupsetinfo)[] (ReadOnly): Backup sets that are currently active (Either being uploaded or getting restored)
-* **containerName**: string (ReadOnly): Name of container created in the Azure Storage account where backups are copied to
-* **endedOn**: string (ReadOnly): Database migration end time
-* **errorPrefix**: string (ReadOnly): prefix string to use for querying errors for this database
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings
-* **fullBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly): Information of backup set
-* **isFullBackupRestored**: bool (ReadOnly): Whether full backup has been applied to the target database or not
-* **lastRestoredBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly): Information of backup set
-* **migrationState**: 'CANCELLED' | 'COMPLETED' | 'CUTOVER_START' | 'FAILED' | 'FULL_BACKUP_UPLOAD_START' | 'INITIAL' | 'LOG_SHIPPING_START' | 'POST_CUTOVER_COMPLETE' | 'UNDEFINED' | 'UPLOAD_LOG_FILES_START' (ReadOnly): Database level migration state.
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **sourceDatabaseName**: string (ReadOnly): Name of the database
-* **startedOn**: string (ReadOnly): Database migration start time
-
 ## BackupSetInfo
 ### Properties
 * **backupFinishedDate**: string: Date and time that the backup operation finished
@@ -1424,32 +1013,6 @@
 * **familySequenceNumber**: int: Sequence number of the backup file in the backup set
 * **fileLocation**: string: Location of the backup file in shared folder
 * **status**: 'Arrived' | 'Cancelled' | 'Queued' | 'Restored' | 'Restoring' | 'Uploaded' | 'Uploading': An enumeration of Status of the log backup file.
-
-## MigrateSqlServerSqlMISyncTaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlMISyncTaskOutputMigrationLevel
-### Properties
-* **databaseCount**: int (ReadOnly): Count of databases
-* **databaseErrorCount**: int (ReadOnly): Number of database level errors
-* **endedOn**: string (ReadOnly): Migration end time
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerName**: string (ReadOnly): Source server name
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **targetServerBrandVersion**: string (ReadOnly): Target server brand version
-* **targetServerName**: string (ReadOnly): Target server name
-* **targetServerVersion**: string (ReadOnly): Target server version
-
-## MigrateSqlServerSqlDbTaskProperties
-### Properties
-* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput): Input for the task that migrates on-prem SQL Server databases to Azure SQL Database
-* **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.SqlServer.SqlDb' (Required): Task type.
 
 ## MigrateSqlServerSqlDbTaskInput
 ### Properties
@@ -1550,42 +1113,6 @@
 * **statusMessage**: string (ReadOnly): Status message
 
 
-## MigrateSqlServerSqlDbTaskOutputDatabaseLevel
-### Properties
-* **databaseName**: string (ReadOnly): Name of the item
-* **endedOn**: string (ReadOnly): Migration end time
-* **errorCount**: int (ReadOnly): Number of database/object errors.
-* **errorPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all errors of the item
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
-* **message**: string (ReadOnly): Migration progress message
-* **numberOfObjects**: int (ReadOnly): Number of objects
-* **numberOfObjectsCompleted**: int (ReadOnly): Number of successfully completed objects
-* **objectSummary**: string (ReadOnly): Summary of object results in the migration
-* **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **statusMessage**: string (ReadOnly): Status message
-
-## MigrateSqlServerSqlDbTaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResult
-### Properties
-* **dataIntegrityValidationResult**: [DataIntegrityValidationResult](#dataintegrityvalidationresult) (ReadOnly): Results for checksum based Data Integrity validation results
-* **endedOn**: string (ReadOnly): Validation end time
-* **migrationId**: string (ReadOnly): Migration Identifier
-* **queryAnalysisValidationResult**: [QueryAnalysisValidationResult](#queryanalysisvalidationresult) (ReadOnly): Results for query analysis comparison between the source and target
-* **resultType**: 'MigrationDatabaseLevelValidationOutput' (Required): Result type
-* **schemaValidationResult**: [SchemaComparisonValidationResult](#schemacomparisonvalidationresult) (ReadOnly): Results for schema comparison between the source and target
-* **sourceDatabaseName**: string (ReadOnly): Name of the source database
-* **startedOn**: string (ReadOnly): Validation start time
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of the validation
-* **targetDatabaseName**: string (ReadOnly): Name of the target database
-
 ## DataIntegrityValidationResult
 ### Properties
 * **failedObjects**: [DataIntegrityValidationResultFailedObjects](#dataintegrityvalidationresultfailedobjects) (ReadOnly): List of failed table names of source and target pair
@@ -1656,35 +1183,10 @@
 ### Additional Properties
 * **Additional Properties Type**: int
 
-## MigrateSqlServerSqlDbTaskOutputMigrationLevel
-### Properties
-* **databases**: string (ReadOnly): Selected databases as a map from database name to database id
-* **databaseSummary**: string (ReadOnly): Summary of database results in the migration
-* **durationInSeconds**: int (ReadOnly): Duration of task execution in seconds.
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
-* **message**: string (ReadOnly): Migration progress message
-* **migrationReport**: [MigrationReportResult](#migrationreportresult) (ReadOnly): Migration validation report result, contains the url for downloading the generated report.
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
-* **statusMessage**: string (ReadOnly): Migration status message
-* **targetServerBrandVersion**: string (ReadOnly): Target server brand version
-* **targetServerVersion**: string (ReadOnly): Target server version
-
 ## MigrationReportResult
 ### Properties
 * **id**: string (ReadOnly): Migration validation result identifier
 * **reportUrl**: string (ReadOnly): The url of the report.
-
-## MigrateSqlServerSqlDbTaskOutputValidationResult
-### Properties
-* **migrationId**: string (ReadOnly): Migration Identifier
-* **resultType**: 'MigrationValidationOutput' (Required): Result type
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of the validation
-* **summaryResults**: [MigrateSqlServerSqlDbTaskOutputValidationResultSummaryResults](#migratesqlserversqldbtaskoutputvalidationresultsummaryresults): Validation summary results for each database
 
 ## MigrateSqlServerSqlDbTaskOutputValidationResultSummaryResults
 ### Properties
@@ -1700,25 +1202,6 @@
 * **startedOn**: string (ReadOnly): Validation start time
 * **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of the validation
 * **targetDatabaseName**: string (ReadOnly): Name of the target database
-
-## MigrateSqlServerSqlDbTaskOutputTableLevel
-### Properties
-* **endedOn**: string (ReadOnly): Migration end time
-* **errorPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all errors of the item
-* **itemsCompletedCount**: int (ReadOnly): Number of successfully completed items
-* **itemsCount**: int (ReadOnly): Number of items
-* **objectName**: string (ReadOnly): Name of the item
-* **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **statusMessage**: string (ReadOnly): Status message
-
-## ValidateMigrationInputSqlServerSqlMITaskProperties
-### Properties
-* **input**: [ValidateMigrationInputSqlServerSqlMITaskInput](#validatemigrationinputsqlserversqlmitaskinput): Input for task that validates migration input for SQL to Azure SQL Managed Instance
-* **output**: [ValidateMigrationInputSqlServerSqlMITaskOutput](#validatemigrationinputsqlserversqlmitaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI' (Required): Task type.
 
 ## ValidateMigrationInputSqlServerSqlMITaskInput
 ### Properties
@@ -1752,12 +1235,6 @@
 * **isDamaged**: bool (ReadOnly): Database was damaged when backed up, but the backup operation was requested to continue despite errors.
 * **position**: int (ReadOnly): Position of current database backup in the file.
 
-## ValidateMigrationInputSqlServerSqlMISyncTaskProperties
-### Properties
-* **input**: [ValidateMigrationInputSqlServerSqlMISyncTaskInput](#validatemigrationinputsqlserversqlmisynctaskinput): Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance online scenario.
-* **output**: [ValidateMigrationInputSqlServerSqlMISyncTaskOutput](#validatemigrationinputsqlserversqlmisynctaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI.Sync.LRS' (Required): Task type.
-
 ## ValidateMigrationInputSqlServerSqlMISyncTaskInput
 ### Properties
 * **azureApp**: [AzureActiveDirectoryApp](#azureactivedirectoryapp) (Required): Azure Active Directory Application
@@ -1772,12 +1249,6 @@
 * **id**: string (ReadOnly): Database identifier
 * **name**: string (ReadOnly): Name of database
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Errors associated with a selected database object
-
-## ValidateMigrationInputSqlServerSqlDbSyncTaskProperties
-### Properties
-* **input**: [ValidateSyncMigrationInputSqlServerTaskInput](#validatesyncmigrationinputsqlservertaskinput): Input for task that validates migration input for SQL sync migrations
-* **output**: [ValidateSyncMigrationInputSqlServerTaskOutput](#validatesyncmigrationinputsqlservertaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ValidateMigrationInput.SqlServer.SqlDb.Sync' (Required): Task type.
 
 ## ValidateSyncMigrationInputSqlServerTaskInput
 ### Properties

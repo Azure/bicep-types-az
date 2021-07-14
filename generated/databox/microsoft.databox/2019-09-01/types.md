@@ -105,25 +105,6 @@
 * **copyLogLink**: string[] (ReadOnly): Link for copy logs.
 
 
-## DataBoxAccountCopyLogDetails
-### Properties
-* **accountName**: string (ReadOnly): Destination account name.
-* **copyLogDetailsType**: 'DataBox' (Required): Indicates the type of job details.
-* **copyLogLink**: string (ReadOnly): Link for copy logs.
-
-## DataBoxDiskCopyLogDetails
-### Properties
-* **copyLogDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
-* **diskSerialNumber**: string (ReadOnly): Disk Serial Number.
-* **errorLogLink**: string (ReadOnly): Link for copy error logs.
-* **verboseLogLink**: string (ReadOnly): Link for copy verbose logs.
-
-## DataBoxHeavyAccountCopyLogDetails
-### Properties
-* **accountName**: string (ReadOnly): Destination account name.
-* **copyLogDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
-* **copyLogLink**: string[] (ReadOnly): Link for copy logs.
-
 ## PackageShippingDetails
 ### Properties
 * **carrierName**: string (ReadOnly): Name of the carrier.
@@ -147,17 +128,6 @@
 * **dataDestinationType**: 'StorageAccount' (Required): Data Destination Type.
 * **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
-
-## DestinationManagedDiskDetails
-### Properties
-* **dataDestinationType**: 'ManagedDisk' (Required): Data Destination Type.
-* **resourceGroupId**: string (Required): Destination Resource Group Id where the Compute disks should be created.
-* **stagingStorageAccountId**: string (Required): Arm Id of the storage account that can be used to copy the vhd for staging.
-
-## DestinationStorageAccountDetails
-### Properties
-* **dataDestinationType**: 'StorageAccount' (Required): Data Destination Type.
-* **storageAccountId**: string (Required): Destination Storage Account Arm Id.
 
 ## JobErrorDetails
 ### Properties
@@ -197,12 +167,6 @@
 * **streetAddress3**: string: Street Address line 3.
 * **zipExtendedCode**: string: Extended Zip Code.
 
-## DataBoxJobDetails
-### Properties
-* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per storage account.
-* **devicePassword**: string: Set Device password for unlocking Databox
-* **jobDetailsType**: 'DataBox' (Required): Indicates the type of job details.
-
 ## CopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
@@ -216,14 +180,6 @@
 * **storageAccountName**: string (ReadOnly): Name of the storage account where the data needs to be uploaded.
 * **totalBytesToProcess**: int (ReadOnly): Total amount of data to be processed by the job.
 * **totalFilesToProcess**: int (ReadOnly): Total number of files to be processed by the job.
-
-## DataBoxDiskJobDetails
-### Properties
-* **copyProgress**: [DataBoxDiskCopyProgress](#databoxdiskcopyprogress)[] (ReadOnly): Copy progress per disk.
-* **disksAndSizeDetails**: [DataBoxDiskJobDetailsDisksAndSizeDetails](#databoxdiskjobdetailsdisksandsizedetails) (ReadOnly): Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
-* **jobDetailsType**: 'DataBoxDisk' (Required): Indicates the type of job details.
-* **passkey**: string: User entered passkey for DataBox Disk job.
-* **preferredDisks**: [DataBoxDiskJobDetailsPreferredDisks](#databoxdiskjobdetailspreferreddisks): User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
 
 ## DataBoxDiskCopyProgress
 ### Properties
@@ -241,12 +197,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: int
-
-## DataBoxHeavyJobDetails
-### Properties
-* **copyProgress**: [CopyProgress](#copyprogress)[] (ReadOnly): Copy progress per account.
-* **devicePassword**: string: Set Device password for unlocking Databox Heavy
-* **jobDetailsType**: 'DataBoxHeavy' (Required): Indicates the type of job details.
 
 ## Error
 ### Properties

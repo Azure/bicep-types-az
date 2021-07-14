@@ -5,7 +5,7 @@ import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema,
 import { Channel, Host } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap, groupBy } from 'lodash';
-import { getFullyQualifiedType, isRootType, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
+import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
 export function generateTypes(host: Host, definition: ProviderDefinition) {
   const factory = new TypeFactory();
@@ -175,7 +175,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     };
   }
 
-  function createObject(definitionName: string, schema: ObjectSchema, properties: Dictionary<ObjectProperty>) {
+  function createObject(definitionName: string, schema: ObjectSchema, properties: Dictionary<ObjectProperty>, additionalProperties?: TypeReference) {
     if (schema.discriminator) {
       return factory.addType(new DiscriminatedObjectType(
         definitionName,
@@ -184,7 +184,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         {}));
     }
 
-    return factory.addType(new ObjectType(definitionName, properties));
+    return factory.addType(new ObjectType(definitionName, properties, additionalProperties));
   }
 
   function combineAndThrowIfNull<TSchema extends Schema>(putSchema: TSchema | undefined, getSchema: TSchema | undefined) {
@@ -196,9 +196,9 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     return output;
   }
 
-  function getSchemaProperties(schema: ObjectSchema, includeParents: boolean): Dictionary<Property> {
+  function getSchemaProperties(schema: ObjectSchema, includeBaseProperties: boolean): Dictionary<Property> {
     const objects = [schema];
-    if (includeParents) {
+    if (includeBaseProperties) {
       for (const parent of schema.parents?.all || []) {
         if (parent instanceof ObjectSchema) {
           objects.push(parent);
@@ -209,9 +209,9 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     return keyBy(flatMap(objects, o => o.properties || []), p => p.serializedName);
   }
 
-  function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeParents: boolean) {
-    const putProperties = putSchema ? getSchemaProperties(putSchema, includeParents) : {};
-    const getProperties = getSchema ? getSchemaProperties(getSchema, includeParents) : {};
+  function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
+    const putProperties = putSchema ? getSchemaProperties(putSchema, includeBaseProperties) : {};
+    const getProperties = getSchema ? getSchemaProperties(getSchema, includeBaseProperties) : {};
 
     for (const propertyName of uniq([...keys(putProperties), ...keys(getProperties)])) {
       if ((putSchema?.discriminator?.property && putSchema.discriminator.property === putProperties[propertyName]) ||
@@ -236,7 +236,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       const value = schema.discriminator.all[key];
 
       if (!(value instanceof ObjectSchema)) {
-        throw `Unable to flatten discriminated properties - schema '${schema.language.default.name}' has non-object discriminated value '${value.language.default.name}'.`;
+        throw `Unable to flatten discriminated properties - schema '${getSerializedName(schema)}' has non-object discriminated value '${getSerializedName(value)}'.`;
       }
 
       if (!value.discriminator) {
@@ -245,7 +245,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       }
 
       if (schema.discriminator.property.serializedName !== value.discriminator.property.serializedName) {
-        throw `Unable to flatten discriminated properties - schemas '${schema.language.default.name}' and '${value.language.default.name}' have conflicting discriminators '${schema.discriminator.property.serializedName}' and '${value.discriminator.property.serializedName}'`;
+        throw `Unable to flatten discriminated properties - schemas '${getSerializedName(schema)}' and '${getSerializedName(value)}' have conflicting discriminators '${schema.discriminator.property.serializedName}' and '${value.discriminator.property.serializedName}'`;
       }
 
       const subTypes = flattenDiscriminatorSubTypes(value);
@@ -390,41 +390,49 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     }
   }
 
-  function parseObjectType(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeParents: boolean) {
+  function parseObjectType(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
-    const definitionName = combinedSchema.language.default.name;
+    const definitionName = getSerializedName(combinedSchema);
 
-    if (!namedDefinitions[definitionName]) {
-      const definitionProperties: Dictionary<ObjectProperty> = {};
-      const definition = createObject(definitionName, combinedSchema, definitionProperties);
-      namedDefinitions[definitionName] = definition;
+    if (includeBaseProperties && namedDefinitions[definitionName]) {
+      // if we're building a discriminated subtype, we're going to be missing the base properties
+      // so construct the type on-the-fly, and don't cache it globally
+      return namedDefinitions[definitionName];
+    }
+    
+    let additionalProperties: TypeReference | undefined;
+    if (includeBaseProperties) {
+      const putParentDictionary = (putSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
+      const getParentDictionary = (getSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
 
-      for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeParents)) {
-        const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
-        if (propertyDefinition) {
-          const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
-          const flags = parsePropertyFlags(putProperty, getProperty);
-          definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
-        }
-      }
-
-      /*
-  var (putAdditionalType, getAdditionalType) = getObjectTypeAdditionalProperties(putSchema, getSchema, includeParents);
-  if ((putAdditionalType ?? getAdditionalType) != null && definition is ObjectType definitionObjectType)
-  {
-      var additionalPropertiesType = ParseType(putAdditionalType?.ValueType, getAdditionalType?.ValueType);
-      definitionObjectType.AdditionalProperties = factory.GetReference(additionalPropertiesType);
-  }
-  */
-
-      if (combinedSchema.discriminator) {
-        const discriminatedObjectType = factory.lookupType(definition) as DiscriminatedObjectType;
-
-        handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
+      if (putParentDictionary || getParentDictionary) {
+        additionalProperties = parseType(putParentDictionary?.elementType, putParentDictionary?.elementType);
       }
     }
 
-    return namedDefinitions[definitionName];
+    const definitionProperties: Dictionary<ObjectProperty> = {};
+    const definition = createObject(definitionName, combinedSchema, definitionProperties, additionalProperties);
+    if (includeBaseProperties) {
+      // cache the definition so that it can be re-used
+      namedDefinitions[definitionName] = definition;
+    }
+
+    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeBaseProperties)) {
+      const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
+      if (propertyDefinition) {
+        const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
+        const flags = parsePropertyFlags(putProperty, getProperty);
+        definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
+      }
+    }
+
+    if (combinedSchema.discriminator) {
+      const discriminatedObjectType = factory.lookupType(definition) as DiscriminatedObjectType;
+
+      handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
+    }
+
+    return definition;
   }
 
   function parseEnumType(putSchema: ChoiceSchema | SealedChoiceSchema | undefined, getSchema: ChoiceSchema | SealedChoiceSchema | undefined) {
@@ -459,7 +467,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
     const additionalPropertiesType = parseType(putSchema?.elementType, getSchema?.elementType);
 
-    return factory.addType(new ObjectType(combinedSchema.language.default.name, {}, additionalPropertiesType));
+    return factory.addType(new ObjectType(getSerializedName(combinedSchema), {}, additionalPropertiesType));
   }
 
   function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {

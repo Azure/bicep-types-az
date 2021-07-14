@@ -192,11 +192,6 @@ by the already existing properties
 * **postalCode**: string (Required): The postal code.
 * **state**: string (Required): The state name.
 
-## IoTRole
-### Properties
-* **kind**: 'IOT' (Required): Role type.
-* **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
-
 ## IoTRoleProperties
 ### Properties
 * **hostPlatform**: 'Linux' | 'Windows' (Required): Host OS supported by the IoT role.
@@ -296,11 +291,6 @@ by the already existing properties
 * **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required): Storage format used for the file represented by the share.
 * **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
 
-## FileEventTrigger
-### Properties
-* **kind**: 'FileEvent' (Required): Trigger Kind.
-* **properties**: [FileTriggerProperties](#filetriggerproperties) (Required): File trigger properties.
-
 ## FileTriggerProperties
 ### Properties
 * **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
@@ -314,11 +304,6 @@ by the already existing properties
 ## FileSourceInfo
 ### Properties
 * **shareId**: string (Required): File share ID.
-
-## PeriodicTimerEventTrigger
-### Properties
-* **kind**: 'PeriodicTimerEvent' (Required): Trigger Kind.
-* **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 ## PeriodicTimerProperties
 ### Properties

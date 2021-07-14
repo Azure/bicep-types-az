@@ -336,24 +336,6 @@ should be split between the partition ‘Count’
 * **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
 
 
-## NamedPartitionScheme
-### Properties
-* **names**: string[] (Required): Array for the names of the partitions.
-* **partitionScheme**: 'Named' (Required): Specifies how the service is partitioned.
-
-## SingletonPartitionScheme
-### Properties
-* **partitionScheme**: 'Singleton' (Required): Specifies how the service is partitioned.
-
-## UniformInt64RangePartitionScheme
-### Properties
-* **count**: int (Required): The number of partitions.
-* **highKey**: int (Required): The upper bound of the partition key range that
-should be split between the partition ‘Count’
-* **lowKey**: int (Required): The lower bound of the partition key range that
-should be split between the partition ‘Count’
-* **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
-
 ## ScalingPolicy
 ### Properties
 * **scalingMechanism**: [ScalingMechanism](#scalingmechanism) (Required): Describes the mechanism for performing a scaling operation.
@@ -378,20 +360,6 @@ should be split between the partition ‘Count’
 * **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
 
 
-## AddRemoveIncrementalNamedPartitionScalingMechanism
-### Properties
-* **kind**: 'AddRemoveIncrementalNamedPartition' (Required): Specifies the mechanism associated with this scaling policy.
-* **maxPartitionCount**: int (Required): Maximum number of named partitions of the service.
-* **minPartitionCount**: int (Required): Minimum number of named partitions of the service.
-* **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
-
-## PartitionInstanceCountScaleMechanism
-### Properties
-* **kind**: 'ScalePartitionInstanceCount' (Required): Specifies the mechanism associated with this scaling policy.
-* **maxInstanceCount**: int (Required): Maximum number of instances of the partition.
-* **minInstanceCount**: int (Required): Minimum number of instances of the partition.
-* **scaleIncrement**: int (Required): The number of instances to add or remove during a scaling operation.
-
 ## ScalingTrigger
 * **Discriminator**: kind
 
@@ -413,23 +381,6 @@ should be split between the partition ‘Count’
 * **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
 * **useOnlyPrimaryLoad**: bool (Required): Flag determines whether only the load of primary replica should be considered for scaling. If set to true, then trigger will only consider the load of primary replicas of stateful service. If set to false, trigger will consider load of all replicas. This parameter cannot be set to true for stateless service.
 
-
-## AveragePartitionLoadScalingTrigger
-### Properties
-* **kind**: 'AveragePartitionLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
-* **lowerLoadThreshold**: int (Required): The lower limit of the load below which a scale in operation should be performed.
-* **metricName**: string (Required): The name of the metric for which usage should be tracked.
-* **scaleInterval**: string (Required): The period in seconds on which a decision is made whether to scale or not. This property should come in ISO 8601 format "hh:mm:ss".
-* **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
-
-## AverageServiceLoadScalingTrigger
-### Properties
-* **kind**: 'AverageServiceLoadTrigger' (Required): Specifies the trigger associated with this scaling policy.
-* **lowerLoadThreshold**: int (Required): The lower limit of the load below which a scale in operation should be performed.
-* **metricName**: string (Required): The name of the metric for which usage should be tracked.
-* **scaleInterval**: string (Required): The period in seconds on which a decision is made whether to scale or not. This property should come in ISO 8601 format "hh:mm:ss".
-* **upperLoadThreshold**: int (Required): The upper limit of the load beyond which a scale out operation should be performed.
-* **useOnlyPrimaryLoad**: bool (Required): Flag determines whether only the load of primary replica should be considered for scaling. If set to true, then trigger will only consider the load of primary replicas of stateful service. If set to false, trigger will consider load of all replicas. This parameter cannot be set to true for stateless service.
 
 ## ServiceLoadMetric
 ### Properties
@@ -467,48 +418,6 @@ should be split between the partition ‘Count’
 * **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
 * **type**: 'RequiredDomainDistribution' (Required): The type of placement policy for a service fabric service. Following are the possible values.
 
-
-## ServicePlacementInvalidDomainPolicy
-### Properties
-* **domainName**: string (Required): The name of the domain that should not be used for placement.
-* **type**: 'InvalidDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
-
-## ServicePlacementNonPartiallyPlaceServicePolicy
-### Properties
-* **type**: 'NonPartiallyPlaceService' (Required): The type of placement policy for a service fabric service. Following are the possible values.
-
-## ServicePlacementPreferPrimaryDomainPolicy
-### Properties
-* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'PreferredPrimaryDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
-
-## ServicePlacementRequiredDomainPolicy
-### Properties
-* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'RequiredDomain' (Required): The type of placement policy for a service fabric service. Following are the possible values.
-
-## ServicePlacementRequireDomainDistributionPolicy
-### Properties
-* **domainName**: string (Required): The name of the domain that should used for placement as per this policy.
-* **type**: 'RequiredDomainDistribution' (Required): The type of placement policy for a service fabric service. Following are the possible values.
-
-## StatefulServiceProperties
-### Properties
-* **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
-* **minReplicaSetSize**: int: The minimum replica set size as a number.
-* **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format "hh:mm:ss".
-* **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format "hh:mm:ss".
-* **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
-* **servicePlacementTimeLimit**: string: The duration for which replicas can stay InBuild before reporting that build is stuck, represented in ISO 8601 format "hh:mm:ss".
-* **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format "hh:mm:ss".
-* **targetReplicaSetSize**: int: The target replica set size as a number.
-
-## StatelessServiceProperties
-### Properties
-* **instanceCount**: int (Required): The instance count.
-* **minInstanceCount**: int: MinInstanceCount is the minimum number of instances that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstanceCount computation -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
-* **minInstancePercentage**: int: MinInstancePercentage is the minimum percentage of InstanceCount that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstancePercentage computation, -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
-* **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
 
 ## ProxyResourceTags
 ### Properties

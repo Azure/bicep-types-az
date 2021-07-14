@@ -45,7 +45,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityandcompliance/resource-manager/Microsoft.SecurityAndCompliance/stable/2021-01-11/common-types.json#/components/schemas/OperationResultsDescription-properties
-INFORMATION: autorest.bicep took 9ms
+INFORMATION: autorest.bicep took 10ms
 Processing batch task - {"tag":"microsoft.securityandcompliance-2021-03-08"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -90,4 +90,4 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (Modeler/MissingType): The schema 'OperationResultsDescription-properties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityandcompliance/resource-manager/Microsoft.SecurityAndCompliance/stable/2021-03-08/common-types.json#/components/schemas/OperationResultsDescription-properties
 INFORMATION: autorest.bicep took 4ms
-[11.62 s] Generation Complete
+[13.29 s] Generation Complete

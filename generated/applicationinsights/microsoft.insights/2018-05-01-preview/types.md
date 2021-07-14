@@ -12,6 +12,16 @@
 * **tags**: [ComponentsResourceTags](#componentsresourcetags): Resource tags
 * **type**: 'Microsoft.Insights/components' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2018-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApplicationInsightsComponentProactiveDetectionConfigurationProperties](#applicationinsightscomponentproactivedetectionconfigurationproperties): Properties that define a ProactiveDetection configuration.
+* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ApplicationInsightsComponentProperties
 ### Properties
 * **AppId**: string (ReadOnly): Application Insights Unique ID for your Application.
@@ -44,4 +54,24 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
+### Properties
+* **CustomEmails**: string[]: Custom email addresses for this rule notifications
+* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
+* **LastUpdatedTime**: string (ReadOnly): The last time this rule was updated
+* **Name**: string (ReadOnly): The rule name
+* **RuleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationpropertiesruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+
+## ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions
+### Properties
+* **Description**: string: The rule description
+* **DisplayName**: string: The rule name as it is displayed in UI
+* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
+* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
+* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
+* **IsInPreview**: bool: A flag indicating whether the rule is in preview
+* **Name**: string: The rule name
+* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
 

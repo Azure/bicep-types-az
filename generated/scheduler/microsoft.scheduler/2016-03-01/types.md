@@ -116,29 +116,6 @@
 * **type**: 'ClientCertificate' (Required): Gets or sets the HTTP authentication type.
 
 
-## OAuthAuthentication
-### Properties
-* **audience**: string: Gets or sets the audience.
-* **clientId**: string: Gets or sets the client identifier.
-* **secret**: string: Gets or sets the secret, return value will always be empty.
-* **tenant**: string: Gets or sets the tenant.
-* **type**: 'ActiveDirectoryOAuth' (Required): Gets or sets the HTTP authentication type.
-
-## BasicAuthentication
-### Properties
-* **password**: string: Gets or sets the password, return value will always be empty.
-* **type**: 'Basic' (Required): Gets or sets the HTTP authentication type.
-* **username**: string: Gets or sets the username.
-
-## ClientCertAuthentication
-### Properties
-* **certificateExpirationDate**: string: Gets or sets the certificate expiration date.
-* **certificateSubjectName**: string: Gets or sets the certificate subject name.
-* **certificateThumbprint**: string: Gets or sets the certificate thumbprint.
-* **password**: string: Gets or sets the certificate password, return value will always be empty.
-* **pfx**: string: Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
-* **type**: 'ClientCertificate' (Required): Gets or sets the HTTP authentication type.
-
 ## HttpRequestHeaders
 ### Properties
 ### Additional Properties

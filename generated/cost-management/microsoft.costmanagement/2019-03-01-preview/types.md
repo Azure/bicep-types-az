@@ -88,19 +88,9 @@
 * **name**: string: Scope name
 * **type**: string: Scope type
 
-## CostAllocationDetailsKind
-### Properties
-* **details**: [CostAllocationDetails](#costallocationdetails): Represents CostAllocation showback rule model
-* **ruleType**: 'CostAllocation' (Required): The rule type of the showback rule solution.
-
 ## CostAllocationDetails
 ### Properties
 * **policy**: 'Evenly' | 'Fixed' | 'Proportional': Cost allocation policy.
-
-## CustomPriceDetailsKind
-### Properties
-* **details**: [CustomPriceDetails](#custompricedetails): Represents Custom price showback rule model
-* **ruleType**: 'CustomPrice' (Required): The rule type of the showback rule solution.
 
 ## CustomPriceDetails
 ### Properties

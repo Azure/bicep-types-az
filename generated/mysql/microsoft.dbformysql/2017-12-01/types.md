@@ -143,28 +143,6 @@
 * **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
 * **storageMB**: int: Max storage allowed for a server.
 
-## ServerPropertiesForDefaultCreate
-### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
-* **createMode**: 'Default' (Required): The mode to create a new server.
-
-## ServerPropertiesForGeoRestore
-### Properties
-* **createMode**: 'GeoRestore' (Required): The mode to create a new server.
-* **sourceServerId**: string (Required, WriteOnly)
-
-## ServerPropertiesForRestore
-### Properties
-* **createMode**: 'PointInTimeRestore' (Required): The mode to create a new server.
-* **restorePointInTime**: string (Required, WriteOnly)
-* **sourceServerId**: string (Required, WriteOnly)
-
-## ServerPropertiesForReplica
-### Properties
-* **createMode**: 'Replica' (Required): The mode to create a new server.
-* **sourceServerId**: string (Required, WriteOnly)
-
 ## Sku
 ### Properties
 * **capacity**: int: The scale up/out capacity, representing server's compute units.

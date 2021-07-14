@@ -87,6 +87,8 @@
 ### Properties
 * **description**: string: The description of the parameter.
 * **displayName**: string: The display name for the parameter.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PolicySetDefinitionProperties
 ### Properties

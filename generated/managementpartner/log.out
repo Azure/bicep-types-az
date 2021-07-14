@@ -12,4 +12,4 @@ WARNING: Semantic validation was skipped.
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: Resource type microsoft.managementpartner/partners under path '/providers/Microsoft.ManagementPartner/partners/{partnerId}' has no body defined.
 INFORMATION: autorest.bicep took 6ms
-[3.42 s] Generation Complete
+[4.03 s] Generation Complete

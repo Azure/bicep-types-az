@@ -68,12 +68,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AzurePipelineProperties
-### Properties
-* **organization**: [OrganizationReference](#organizationreference) (Required): Reference to an Azure DevOps Organization.
-* **pipelineType**: 'azurePipeline' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-* **project**: [ProjectReference](#projectreference) (Required): Reference to an Azure DevOps Project.
-
 ## OrganizationReference
 ### Properties
 * **id**: string (ReadOnly): Unique immutable identifier for the Azure DevOps Organization.
@@ -83,11 +77,6 @@
 ### Properties
 * **id**: string (ReadOnly): Unique immutable identifier of the Azure DevOps Project.
 * **name**: string (Required): Name of the Azure DevOps Project.
-
-## GithubWorkflowProperties
-### Properties
-* **pipelineType**: 'githubWorkflow' (Required): Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-* **repository**: [CodeRepository](#coderepository) (Required): Repository containing the source code for a pipeline.
 
 ## SystemData
 ### Properties

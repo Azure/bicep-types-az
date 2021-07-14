@@ -52,7 +52,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: Resource type microsoft.logic/integrationserviceenvironments/managedapis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Logic/integrationServiceEnvironments/{integrationServiceEnvironmentName}/managedApis/{apiName}' has no body defined.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 29ms
+INFORMATION: autorest.bicep took 37ms
 Processing batch task - {"tag":"microsoft.logic-2018-07-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -144,7 +144,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 15ms
+INFORMATION: autorest.bicep took 18ms
 Processing batch task - {"tag":"microsoft.logic-2015-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -179,5 +179,5 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 1ms
-[41.71 s] Generation Complete
+INFORMATION: autorest.bicep took 2ms
+[48.36 s] Generation Complete

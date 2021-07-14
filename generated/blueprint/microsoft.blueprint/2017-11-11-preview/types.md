@@ -145,11 +145,6 @@
 * **lastModified**: string (ReadOnly): Last modified time of this blueprint.
 * **timeCreated**: string (ReadOnly): Creation time of this blueprint.
 
-## PolicyAssignmentArtifact
-### Properties
-* **kind**: 'policyAssignment' (Required): Specifies the kind of Blueprint artifact.
-* **properties**: [PolicyAssignmentArtifactProperties](#policyassignmentartifactproperties) (Required): PolicyAssignment properties
-
 ## PolicyAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
@@ -164,11 +159,6 @@
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
 
-## RoleAssignmentArtifact
-### Properties
-* **kind**: 'roleAssignment' (Required): Specifies the kind of Blueprint artifact.
-* **properties**: [RoleAssignmentArtifactProperties](#roleassignmentartifactproperties) (Required): Properties of the Role assignment artifact.
-
 ## RoleAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
@@ -177,11 +167,6 @@
 * **principalIds**: any (Required): Anything
 * **resourceGroup**: string: RoleAssignment will be scope to this resourceGroup, if left empty, it would scope to the subscription.
 * **roleDefinitionId**: string (Required): Azure resource ID of the RoleDefinition.
-
-## TemplateArtifact
-### Properties
-* **kind**: 'template' (Required): Specifies the kind of Blueprint artifact.
-* **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required): Properties of a Template Artifact.
 
 ## TemplateArtifactProperties
 ### Properties

@@ -196,11 +196,6 @@
 * **tablesToExclude**: string[]: List of tables to exclude from the follower database
 * **tablesToInclude**: string[]: List of tables to include in the follower database
 
-## ReadOnlyFollowingDatabase
-### Properties
-* **kind**: 'ReadOnlyFollowing' (Required): Kind of the database
-* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
-
 ## ReadOnlyFollowingDatabaseProperties
 ### Properties
 * **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
@@ -215,11 +210,6 @@
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## ReadWriteDatabase
-### Properties
-* **kind**: 'ReadWrite' (Required): Kind of the database
-* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
-
 ## ReadWriteDatabaseProperties
 ### Properties
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
@@ -227,11 +217,6 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
 * **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
-
-## EventGridDataConnection
-### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ## EventGridConnectionProperties
 ### Properties
@@ -245,11 +230,6 @@
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## EventHubDataConnection
-### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
-
 ## EventHubConnectionProperties
 ### Properties
 * **compression**: 'GZip' | 'None': The compression type
@@ -261,11 +241,6 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
-
-## IotHubDataConnection
-### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 ## IotHubConnectionProperties
 ### Properties

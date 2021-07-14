@@ -28,5 +28,5 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (SecurityDefinedSpecAndConfig): OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-INFORMATION: autorest.bicep took 6ms
-[3.89 s] Generation Complete
+INFORMATION: autorest.bicep took 5ms
+[4.32 s] Generation Complete

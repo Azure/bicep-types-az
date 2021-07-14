@@ -194,11 +194,6 @@
 * **actionType**: 'RunPlaybook' (Required): The type of the automation rule action
 
 
-## AutomationRuleModifyPropertiesAction
-### Properties
-* **actionConfiguration**: [AutomationRuleModifyPropertiesActionConfiguration](#automationrulemodifypropertiesactionconfiguration) (Required): The configuration of the modify properties automation rule action
-* **actionType**: 'ModifyProperties' (Required): The type of the automation rule action
-
 ## AutomationRuleModifyPropertiesActionConfiguration
 ### Properties
 * **classification**: 'BenignPositive' | 'FalsePositive' | 'TruePositive' | 'Undetermined': The reason the incident was closed
@@ -220,11 +215,6 @@
 * **email**: string: The email of the user the incident is assigned to.
 * **objectId**: string: The object id of the user the incident is assigned to.
 * **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
-
-## AutomationRuleRunPlaybookAction
-### Properties
-* **actionConfiguration**: [AutomationRuleRunPlaybookActionConfiguration](#automationrulerunplaybookactionconfiguration) (Required): The configuration of the run playbook automation rule action
-* **actionType**: 'RunPlaybook' (Required): The type of the automation rule action
 
 ## AutomationRuleRunPlaybookActionConfiguration
 ### Properties
@@ -255,11 +245,6 @@
 * **conditionProperties**: [AutomationRulePropertyValuesConditionProperties](#automationrulepropertyvaluesconditionproperties) (Required): The configuration of the automation rule condition
 * **conditionType**: 'Property' (Required): The type of the automation rule condition
 
-
-## AutomationRulePropertyValuesCondition
-### Properties
-* **conditionProperties**: [AutomationRulePropertyValuesConditionProperties](#automationrulepropertyvaluesconditionproperties) (Required): The configuration of the automation rule condition
-* **conditionType**: 'Property' (Required): The type of the automation rule condition
 
 ## AutomationRulePropertyValuesConditionProperties
 ### Properties

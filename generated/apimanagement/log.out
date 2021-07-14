@@ -723,7 +723,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 34ms
+INFORMATION: autorest.bicep took 49ms
 Processing batch task - {"tag":"microsoft.apimanagement-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1445,7 +1445,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 30ms
+INFORMATION: autorest.bicep took 49ms
 Processing batch task - {"tag":"microsoft.apimanagement-2020-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2163,7 +2163,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 30ms
+INFORMATION: autorest.bicep took 27ms
 Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2801,7 +2801,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 34ms
+INFORMATION: autorest.bicep took 37ms
 Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -3420,7 +3420,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 21ms
+INFORMATION: autorest.bicep took 33ms
 Processing batch task - {"tag":"microsoft.apimanagement-2019-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -3994,7 +3994,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 29ms
+INFORMATION: autorest.bicep took 26ms
 Processing batch task - {"tag":"microsoft.apimanagement-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -4562,7 +4562,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipie
 INFORMATION: Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 19ms
+INFORMATION: autorest.bicep took 21ms
 Processing batch task - {"tag":"microsoft.apimanagement-2018-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -5100,7 +5100,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/products/groups under
 INFORMATION: Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-INFORMATION: autorest.bicep took 15ms
+INFORMATION: autorest.bicep took 32ms
 Processing batch task - {"tag":"microsoft.apimanagement-2017-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -5620,7 +5620,7 @@ INFORMATION: Resource type microsoft.apimanagement/service/products/groups under
 INFORMATION: Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-INFORMATION: autorest.bicep took 21ms
+INFORMATION: autorest.bicep took 19ms
 Processing batch task - {"tag":"microsoft.apimanagement-2016-10-10"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -5888,7 +5888,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-INFORMATION: autorest.bicep took 7ms
+INFORMATION: autorest.bicep took 10ms
 Processing batch task - {"tag":"microsoft.apimanagement-2016-07-07"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -6084,4 +6084,4 @@ INFORMATION: Resource type microsoft.apimanagement/service/products/apis under p
 INFORMATION: Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 INFORMATION: Resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}' has no body defined.
 INFORMATION: autorest.bicep took 7ms
-[240.81 s] Generation Complete
+[291.29 s] Generation Complete

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema } from "@autorest/codemodel";
+import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy } from 'lodash';
 import { success, failure, Result } from './utils';
@@ -108,6 +108,10 @@ function getNormalizedMethodPath(path: string) {
   return path;
 }
 
+export function getSerializedName(metadata: Metadata) { 
+  return metadata.language.default.serializedName ?? metadata.language.default.name;
+}
+
 export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
   const path = getNormalizedMethodPath(request.path);
 
@@ -125,8 +129,7 @@ export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[]
     // strip the enclosing braces
     resNameParam = trimParamBraces(resNameParam);
 
-    // look up the type
-    var param = parameters.filter(p => p.language.default.name === resNameParam)[0];
+    var param = parameters.filter(p => getSerializedName(p) === resNameParam)[0];
     if (!param) {
       return failure(`Unable to locate parameter with name '${resNameParam}'`);
     }
@@ -465,7 +468,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
         const parameterName = trimParamBraces(typeSegment);
         const parameter = parameters.filter(p =>
           p.implementation === ImplementationLocation.Method &&
-          p.language.default.name === parameterName)[0];
+          getSerializedName(p) === parameterName)[0];
 
         if (!parameter) {
           return failure(`Found undefined parameter reference ${typeSegment}`);

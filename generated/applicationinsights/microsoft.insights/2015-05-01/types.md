@@ -95,6 +95,20 @@
 * **Type**: 'folder' | 'function' | 'query' | 'recent': Enum indicating the type of the Analytics item.
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
 
+## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2015-05-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **CustomEmails**: string[]: Custom email addresses for this rule notifications
+* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **LastUpdatedTime**: string: The last time this rule was updated
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **Name**: string: The rule name
+* **RuleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+* **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -165,6 +179,17 @@
 ## ApplicationInsightsComponentAnalyticsItemProperties
 ### Properties
 * **functionAlias**: string: A function alias, used when the type of the item is Function
+
+## ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions
+### Properties
+* **Description**: string: The rule description
+* **DisplayName**: string: The rule name as it is displayed in UI
+* **HelpUrl**: string: URL which displays additional info about the proactive detection rule
+* **IsEnabledByDefault**: bool: A flag indicating whether the rule is enabled by default
+* **IsHidden**: bool: A flag indicating whether the rule is hidden (from the UI)
+* **IsInPreview**: bool: A flag indicating whether the rule is in preview
+* **Name**: string: The rule name
+* **SupportsEmailNotifications**: bool: A flag indicating whether email notifications are supported for detections for this rule
 
 ## MyWorkbookProperties
 ### Properties

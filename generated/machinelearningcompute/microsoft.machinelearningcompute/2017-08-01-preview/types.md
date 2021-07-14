@@ -64,6 +64,8 @@
 * **etag**: string: The configuration ETag for updates.
 * **serviceAuth**: [ServiceAuthConfiguration](#serviceauthconfiguration): Global service auth configuration properties. These are the data-plane authorization keys and are used if a service doesn't define it's own.
 * **ssl**: [SslConfiguration](#sslconfiguration): SSL configuration. If configured data-plane calls to user services will be exposed over SSL only.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## AutoScaleConfiguration
 ### Properties
