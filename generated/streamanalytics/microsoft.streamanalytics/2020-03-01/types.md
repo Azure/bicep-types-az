@@ -102,11 +102,6 @@
 * **type**: 'Scalar' (Required): Indicates the type of function.
 
 
-## ScalarFunctionProperties
-### Properties
-* **properties**: [ScalarFunctionConfiguration](#scalarfunctionconfiguration): Describes the configuration of the scalar function.
-* **type**: 'Scalar' (Required): Indicates the type of function.
-
 ## ScalarFunctionConfiguration
 ### Properties
 * **binding**: [FunctionBinding](#functionbinding): The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
@@ -127,11 +122,6 @@
 * **properties**: [JavaScriptFunctionBindingProperties](#javascriptfunctionbindingproperties): The binding properties associated with a JavaScript function.
 * **type**: 'Microsoft.StreamAnalytics/JavascriptUdf' (Required): Indicates the function binding type.
 
-
-## AzureMachineLearningWebServiceFunctionBinding
-### Properties
-* **properties**: [AzureMachineLearningWebServiceFunctionBindingProperties](#azuremachinelearningwebservicefunctionbindingproperties): The binding properties associated with an Azure Machine learning web service.
-* **type**: 'Microsoft.MachineLearning/WebService' (Required): Indicates the function binding type.
 
 ## AzureMachineLearningWebServiceFunctionBindingProperties
 ### Properties
@@ -156,11 +146,6 @@
 ### Properties
 * **dataType**: string: The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
 * **name**: string: The name of the output column.
-
-## JavaScriptFunctionBinding
-### Properties
-* **properties**: [JavaScriptFunctionBindingProperties](#javascriptfunctionbindingproperties): The binding properties associated with a JavaScript function.
-* **type**: 'Microsoft.StreamAnalytics/JavascriptUdf' (Required): Indicates the function binding type.
 
 ## JavaScriptFunctionBindingProperties
 ### Properties
@@ -241,40 +226,15 @@
 * **type**: 'Parquet' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
 
 
-## AvroSerialization
-### Properties
-* **properties**: any: Any object
-* **type**: 'Avro' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-
-## CsvSerialization
-### Properties
-* **properties**: [CsvSerializationProperties](#csvserializationproperties): The properties that are associated with the CSV serialization type.
-* **type**: 'Csv' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-
 ## CsvSerializationProperties
 ### Properties
 * **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output.
 * **fieldDelimiter**: string: Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
 
-## JsonSerialization
-### Properties
-* **properties**: [JsonSerializationProperties](#jsonserializationproperties): The properties that are associated with the JSON serialization type.
-* **type**: 'Json' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-
 ## JsonSerializationProperties
 ### Properties
 * **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output.
 * **format**: 'Array' | 'LineSeparated': Specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects.
-
-## ParquetSerialization
-### Properties
-* **properties**: any: Any object
-* **type**: 'Parquet' (Required): Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-
-## ReferenceInputProperties
-### Properties
-* **datasource**: [ReferenceInputDataSource](#referenceinputdatasource): Describes an input data source that contains reference data.
-* **type**: 'Reference' (Required): Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
 
 ## ReferenceInputDataSource
 * **Discriminator**: type
@@ -291,11 +251,6 @@
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
 
-## AzureSqlReferenceInputDataSource
-### Properties
-* **properties**: [AzureSqlReferenceInputDataSourceProperties](#azuresqlreferenceinputdatasourceproperties): The properties that are associated with SQL DB input containing reference data. Required on PUT (CreateOrReplace) requests.
-* **type**: 'Microsoft.Sql/Server/Database' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
-
 ## AzureSqlReferenceInputDataSourceProperties
 ### Properties
 * **database**: string: This element is associated with the datasource element. This is the name of the database that output will be written to.
@@ -307,11 +262,6 @@
 * **server**: string: This element is associated with the datasource element. This is the name of the server that contains the database that will be written to.
 * **table**: string: This element is associated with the datasource element. The name of the table in the Azure SQL database..
 * **user**: string: This element is associated with the datasource element. This is the user name that will be used to connect to the SQL Database instance.
-
-## BlobReferenceInputDataSource
-### Properties
-* **properties**: [BlobReferenceInputDataSourceProperties](#blobreferenceinputdatasourceproperties): The properties that are associated with a blob input containing reference data.
-* **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
 
 ## BlobReferenceInputDataSourceProperties
 ### Properties
@@ -325,11 +275,6 @@
 ### Properties
 * **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
-
-## StreamInputProperties
-### Properties
-* **datasource**: [StreamInputDataSource](#streaminputdatasource): Describes an input data source that contains stream data.
-* **type**: 'Stream' (Required): Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
 
 ## StreamInputDataSource
 * **Discriminator**: type
@@ -356,11 +301,6 @@
 * **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 
-## IoTHubStreamInputDataSource
-### Properties
-* **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties): The properties that are associated with a IoT Hub input containing stream data.
-* **type**: 'Microsoft.Devices/IotHubs' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-
 ## IoTHubStreamInputDataSourceProperties
 ### Properties
 * **consumerGroupName**: string: The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
@@ -368,11 +308,6 @@
 * **iotHubNamespace**: string: The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
-
-## EventHubV2StreamInputDataSource
-### Properties
-* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with a Event Hub input containing stream data.
-* **type**: 'Microsoft.EventHub/EventHub' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ## EventHubStreamInputDataSourceProperties
 ### Properties
@@ -382,16 +317,6 @@
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-
-## EventHubStreamInputDataSource
-### Properties
-* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with a Event Hub input containing stream data.
-* **type**: 'Microsoft.ServiceBus/EventHub' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-
-## BlobStreamInputDataSource
-### Properties
-* **properties**: [BlobStreamInputDataSourceProperties](#blobstreaminputdatasourceproperties): The properties that are associated with a blob input containing stream data.
-* **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ## BlobStreamInputDataSourceProperties
 ### Properties
@@ -484,11 +409,6 @@
 * **type**: 'PowerBI' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 
-## AzureDataLakeStoreOutputDataSource
-### Properties
-* **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties): The properties that are associated with an Azure Data Lake Store.
-* **type**: 'Microsoft.DataLake/Accounts' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
 ## AzureDataLakeStoreOutputDataSourceProperties
 ### Properties
 * **accountName**: string: The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
@@ -501,11 +421,6 @@
 * **tokenUserDisplayName**: string: The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 * **tokenUserPrincipalName**: string: The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 
-## EventHubV2OutputDataSource
-### Properties
-* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output.
-* **type**: 'Microsoft.EventHub/EventHub' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
 ## EventHubOutputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
@@ -516,16 +431,6 @@
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 
-## EventHubOutputDataSource
-### Properties
-* **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output.
-* **type**: 'Microsoft.ServiceBus/EventHub' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
-## ServiceBusQueueOutputDataSource
-### Properties
-* **properties**: [ServiceBusQueueOutputDataSourceProperties](#servicebusqueueoutputdatasourceproperties): The properties that are associated with a Service Bus Queue output.
-* **type**: 'Microsoft.ServiceBus/Queue' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
 ## ServiceBusQueueOutputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
@@ -535,11 +440,6 @@
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **systemPropertyColumns**: any: Any object
-
-## ServiceBusTopicOutputDataSource
-### Properties
-* **properties**: [ServiceBusTopicOutputDataSourceProperties](#servicebustopicoutputdatasourceproperties): The properties that are associated with a Service Bus Topic output.
-* **type**: 'Microsoft.ServiceBus/Topic' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ## ServiceBusTopicOutputDataSourceProperties
 ### Properties
@@ -556,11 +456,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AzureSqlDatabaseOutputDataSource
-### Properties
-* **properties**: [AzureSqlDatabaseOutputDataSourceProperties](#azuresqldatabaseoutputdatasourceproperties): The properties that are associated with an Azure SQL database output.
-* **type**: 'Microsoft.Sql/Server/Database' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
 ## AzureSqlDatabaseOutputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
@@ -572,11 +467,6 @@
 * **table**: string: The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **user**: string: The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 
-## AzureSynapseOutputDataSource
-### Properties
-* **properties**: [AzureSynapseOutputDataSourceProperties](#azuresynapseoutputdatasourceproperties): The properties that are associated with an Azure Synapse output.
-* **type**: 'Microsoft.Sql/Server/DataWarehouse' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
 ## AzureSynapseOutputDataSourceProperties
 ### Properties
 * **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
@@ -584,11 +474,6 @@
 * **server**: string: The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **table**: string: The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **user**: string: The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-
-## BlobOutputDataSource
-### Properties
-* **properties**: [BlobOutputDataSourceProperties](#bloboutputdatasourceproperties): The properties that are associated with a blob output.
-* **type**: 'Microsoft.Storage/Blob' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ## BlobOutputDataSourceProperties
 ### Properties
@@ -599,11 +484,6 @@
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
 
-## DocumentDbOutputDataSource
-### Properties
-* **properties**: [DocumentDbOutputDataSourceProperties](#documentdboutputdatasourceproperties): The properties that are associated with a DocumentDB output.
-* **type**: 'Microsoft.Storage/DocumentDB' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-
 ## DocumentDbOutputDataSourceProperties
 ### Properties
 * **accountId**: string: The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
@@ -612,11 +492,6 @@
 * **database**: string: The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
 * **documentId**: string: The name of the field in output events used to specify the primary key which insert or update operations are based on.
 * **partitionKey**: string: The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
-
-## AzureTableOutputDataSource
-### Properties
-* **properties**: [AzureTableOutputDataSourceProperties](#azuretableoutputdatasourceproperties): The properties that are associated with an Azure Table output.
-* **type**: 'Microsoft.Storage/Table' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ## AzureTableOutputDataSourceProperties
 ### Properties
@@ -627,11 +502,6 @@
 * **partitionKey**: string: This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
 * **rowKey**: string: This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
 * **table**: string: The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
-
-## PowerBIOutputDataSource
-### Properties
-* **properties**: [PowerBIOutputDataSourceProperties](#powerbioutputdatasourceproperties): The properties that are associated with a Power BI output.
-* **type**: 'PowerBI' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ## PowerBIOutputDataSourceProperties
 ### Properties

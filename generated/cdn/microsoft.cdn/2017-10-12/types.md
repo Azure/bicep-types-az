@@ -85,11 +85,6 @@
 * **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
 
 
-## DeliveryRuleCacheExpirationAction
-### Properties
-* **name**: 'CacheExpiration' (Required): The name of the action for the delivery rule.
-* **parameters**: [CacheExpirationActionParameters](#cacheexpirationactionparameters) (Required): Defines the parameters for the cache expiration action.
-
 ## CacheExpirationActionParameters
 ### Properties
 * **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters' (Required)
@@ -112,20 +107,10 @@
 * **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required): Defines the parameters for the URL path condition.
 
 
-## DeliveryRuleUrlFileExtensionCondition
-### Properties
-* **name**: 'UrlFileExtension' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlFileExtensionConditionParameters](#urlfileextensionconditionparameters) (Required): Defines the parameters for the URL file extension condition.
-
 ## UrlFileExtensionConditionParameters
 ### Properties
 * **@odata.type**: 'Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionConditionParameters' (Required)
 * **extensions**: string[] (Required): A list of extensions for the condition of the delivery rule.
-
-## DeliveryRuleUrlPathCondition
-### Properties
-* **name**: 'UrlPath' (Required): The name of the condition for the delivery rule.
-* **parameters**: [UrlPathConditionParameters](#urlpathconditionparameters) (Required): Defines the parameters for the URL path condition.
 
 ## UrlPathConditionParameters
 ### Properties

@@ -62,14 +62,6 @@
 * **tenantId**: string: The tenantId associated with the provider.
 
 
-## OpenShiftManagedClusterAADIdentityProvider
-### Properties
-* **clientId**: string: The clientId password associated with the provider.
-* **customerAdminGroupId**: string: The groupId to be granted cluster admin role.
-* **kind**: 'AADIdentityProvider' (Required): The kind of the provider.
-* **secret**: string: The secret password associated with the provider.
-* **tenantId**: string: The tenantId associated with the provider.
-
 ## OpenShiftManagedClusterMasterPoolProfile
 ### Properties
 * **count**: int (Required): Number of masters (VMs) to host docker containers. The default value is 3.

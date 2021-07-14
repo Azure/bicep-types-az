@@ -142,22 +142,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
 * **type**: 'TaskRunRequest' (Required): The type of the run request.
 
 
-## DockerBuildRequest
-### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing the run.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
-* **dockerFilePath**: string (Required): The Docker file path relative to the source location.
-* **imageNames**: string[]: The fully qualified image names including the repository and tag.
-* **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
-* **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
-* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
-If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-* **target**: string: The name of the target build stage for the docker build.
-* **timeout**: int: Run timeout in seconds.
-* **type**: 'DockerBuildRequest' (Required): The type of the run request.
-
 ## AgentProperties
 ### Properties
 * **cpu**: int: The CPU configuration in terms of number of cores required for the run.
@@ -210,43 +194,11 @@ the source registry during the run.
 * **os**: 'Linux' | 'Windows' (Required): The OS of agent machine
 * **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU.
 
-## EncodedTaskRunRequest
-### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
-* **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
-* **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
-If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-* **timeout**: int: Run timeout in seconds.
-* **type**: 'EncodedTaskRunRequest' (Required): The type of the run request.
-* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
-
 ## SetValue
 ### Properties
 * **isSecret**: bool: Flag to indicate whether the value represents a secret or not.
 * **name**: string (Required): The name of the overridable value.
 * **value**: string (Required): The overridable value.
-
-## FileTaskRunRequest
-### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **credentials**: [Credentials](#credentials): The parameters that describes a set of credentials that will be used when a run is invoked.
-* **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
-* **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
-If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-* **taskFilePath**: string (Required): The template/definition file path relative to the source.
-* **timeout**: int: Run timeout in seconds.
-* **type**: 'FileTaskRunRequest' (Required): The type of the run request.
-* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
-* **valuesFilePath**: string: The values/parameters file path relative to the source.
-
-## TaskRunRequest
-### Properties
-* **overrideTaskStepProperties**: [OverrideTaskStepProperties](#overridetaskstepproperties)
-* **taskId**: string (Required): The resource ID of task against which run has to be queued.
-* **type**: 'TaskRunRequest' (Required): The type of the run request.
 
 ## OverrideTaskStepProperties
 ### Properties
@@ -373,30 +325,6 @@ executing a build step.
 * **repository**: string: The repository name.
 * **tag**: string: The tag name.
 * **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
-
-## DockerBuildStep
-### Properties
-* **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
-* **dockerFilePath**: string (Required): The Docker file path relative to the source context.
-* **imageNames**: string[]: The fully qualified image names including the repository and tag.
-* **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
-* **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
-* **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
-
-## EncodedTaskStep
-### Properties
-* **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
-* **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
-* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
-
-## FileTaskStep
-### Properties
-* **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
-* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
-* **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
 ## TriggerProperties
 ### Properties

@@ -193,36 +193,6 @@ DDOS protection should be switched on.
 * **resourceType**: 'resourceGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
 
-## AvailabilitySetResourceSettings
-### Properties
-* **faultDomain**: int: Gets or sets the target fault domain.
-* **resourceType**: 'Microsoft.Compute/availabilitySets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **updateDomain**: int: Gets or sets the target update domain.
-
-## DiskEncryptionSetResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.Compute/diskEncryptionSets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-
-## VirtualMachineResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.Compute/virtualMachines' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **targetAvailabilitySetId**: string: Gets or sets the target availability set id for virtual machines not in an availability set at source.
-* **targetAvailabilityZone**: '1' | '2' | '3' | 'NA': Gets or sets the target availability zone.
-* **targetVmSize**: string: Gets or sets the target virtual machine size.
-
-## KeyVaultResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.KeyVault/vaults' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-
-## LoadBalancerResourceSettings
-### Properties
-* **backendAddressPools**: [LBBackendAddressPoolResourceSettings](#lbbackendaddresspoolresourcesettings)[]: Gets or sets the backend address pools of the load balancer.
-* **frontendIPConfigurations**: [LBFrontendIPConfigurationResourceSettings](#lbfrontendipconfigurationresourcesettings)[]: Gets or sets the frontend IP configurations of the load balancer.
-* **resourceType**: 'Microsoft.Network/loadBalancers' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **sku**: string: Gets or sets load balancer sku (Basic/Standard).
-* **zones**: string: Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
- precedence only if frontend IP configurations settings are not present.
-
 ## LBBackendAddressPoolResourceSettings
 ### Properties
 * **name**: string: Gets or sets the backend address pool name.
@@ -240,12 +210,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.
 ### Properties
 * **name**: string: Gets the name of the proxy resource on the target side.
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
-
-## NetworkInterfaceResourceSettings
-### Properties
-* **enableAcceleratedNetworking**: bool: Gets or sets a value indicating whether accelerated networking is enabled.
-* **ipConfigurations**: [NicIpConfigurationResourceSettings](#nicipconfigurationresourcesettings)[]: Gets or sets the IP configurations of the NIC.
-* **resourceType**: 'Microsoft.Network/networkInterfaces' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 
 ## NicIpConfigurationResourceSettings
 ### Properties
@@ -272,11 +236,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.
 ### Properties
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
 
-## NetworkSecurityGroupResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.Network/networkSecurityGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **securityRules**: [NsgSecurityRule](#nsgsecurityrule)[]: Gets or sets Security rules of network security group.
-
 ## NsgSecurityRule
 ### Properties
 * **access**: string: Gets or sets whether network traffic is allowed or denied.
@@ -301,25 +260,6 @@ rule, specifies where network traffic originates from.
 * **sourcePortRange**: string: Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.
 
-## PublicIPAddressResourceSettings
-### Properties
-* **domainNameLabel**: string: Gets or sets the domain name label.
-* **fqdn**: string: Gets or sets the fully qualified domain name.
-* **publicIpAllocationMethod**: string: Gets or sets public IP allocation method.
-* **resourceType**: 'Microsoft.Network/publicIPAddresses' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **sku**: string: Gets or sets public IP sku.
-* **zones**: string: Gets or sets public IP zones.
-
-## VirtualNetworkResourceSettings
-### Properties
-* **addressSpace**: string[]: Gets or sets the address prefixes for the virtual network.
-* **dnsServers**: string[]: Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
-deployed in the virtual network.
-* **enableDdosProtection**: bool: Gets or sets a value indicating whether gets or sets whether the
-DDOS protection should be switched on.
-* **resourceType**: 'Microsoft.Network/virtualNetworks' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **subnets**: [SubnetResourceSettings](#subnetresourcesettings)[]: Gets or sets List of subnets in a VirtualNetwork.
-
 ## SubnetResourceSettings
 ### Properties
 * **addressPrefix**: string: Gets or sets address prefix for the subnet.
@@ -329,22 +269,4 @@ DDOS protection should be switched on.
 ## NsgReference
 ### Properties
 * **sourceArmResourceId**: string (Required): Gets the ARM resource ID of the tracked resource being referenced.
-
-## SqlServerResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.Sql/servers' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-
-## SqlDatabaseResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.Sql/servers/databases' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
-
-## SqlElasticPoolResourceSettings
-### Properties
-* **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
-
-## ResourceGroupResourceSettings
-### Properties
-* **resourceType**: 'resourceGroups' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 

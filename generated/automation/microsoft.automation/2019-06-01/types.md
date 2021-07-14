@@ -526,31 +526,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Automation/automationAccounts/runbooks/draft
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'content' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
-
-## Microsoft.Automation/automationAccounts/runbooks/draft
-### Properties
-* **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **creationTime**: string (ReadOnly): Gets or sets the creation time of the test job.
-* **endTime**: string (ReadOnly): Gets or sets the end time of the test job.
-* **exception**: string (ReadOnly): Gets or sets the exception of the test job.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the test job.
-* **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the test job.
-* **logActivityTrace**: int (ReadOnly): The activity-level tracing options of the runbook.
-* **name**: 'testJob' (Required, DeployTimeConstant): The resource name
-* **parameters**: [TestJobCreateParameters](#testjobcreateparameters): Gets or sets the parameters of the test job.
-* **runOn**: string: Gets or sets the runOn which specifies the group name where the job is to be executed.
-* **startTime**: string (ReadOnly): Gets or sets the start time of the test job.
-* **status**: string (ReadOnly): Gets or sets the status of the test job.
-* **statusDetails**: string (ReadOnly): Gets or sets the status details of the test job.
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
-
 ## TestJobCreateParameters
 ### Properties
 ### Additional Properties

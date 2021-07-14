@@ -26,7 +26,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 6ms
+INFORMATION: autorest.bicep took 7ms
 Processing batch task - {"tag":"microsoft.delegatednetwork-2020-08-08-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -50,4 +50,4 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: autorest.bicep took 2ms
-[6.38 s] Generation Complete
+[7.45 s] Generation Complete

@@ -30,11 +30,6 @@
 * **assetName**: string (Required): Asset name.
 
 
-## MediaGraphAssetSink
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
-* **assetName**: string (Required): Asset name.
-
 ## MediaGraphSource
 * **Discriminator**: @odata.type
 
@@ -46,12 +41,6 @@
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
 * **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
-
-## MediaGraphRtspSource
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
-* **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
-* **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 ## MediaGraphEndpoint
 * **Discriminator**: @odata.type
@@ -81,22 +70,6 @@
 * **username**: string (Required): Username for a username/password pair.
 
 
-## MediaGraphUsernamePasswordCredentials
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphUsernamePasswordCredentials' (Required): The discriminator for derived types.
-* **password**: string (Required): Password for a username/password pair.
-* **username**: string (Required): Username for a username/password pair.
-
-## MediaGraphClearEndpoint
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphClearEndpoint' (Required): The discriminator for derived types.
-
-## MediaGraphTlsEndpoint
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphTlsEndpoint' (Required): The discriminator for derived types.
-* **trustedCertificates**: [MediaGraphCertificateSource](#mediagraphcertificatesource): Base class for certificate sources.
-* **validationOptions**: [MediaGraphTlsValidationOptions](#mediagraphtlsvalidationoptions): Options for controlling the authentication of TLS endpoints.
-
 ## MediaGraphCertificateSource
 * **Discriminator**: @odata.type
 
@@ -106,11 +79,6 @@
 * **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): The discriminator for derived types.
 * **certificates**: string[] (Required): PEM formatted public certificates, one per entry.
 
-
-## MediaGraphPemCertificateList
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphPemCertificateList' (Required): The discriminator for derived types.
-* **certificates**: string[] (Required): PEM formatted public certificates, one per entry.
 
 ## MediaGraphTlsValidationOptions
 ### Properties

@@ -72,11 +72,6 @@
 * **template**: any (Required): Any object
 
 
-## TemplateSpecTemplateArtifact
-### Properties
-* **kind**: 'template' (Required): The kind of artifact.
-* **template**: any (Required): Any object
-
 ## TemplateSpecVersionTags
 ### Properties
 ### Additional Properties

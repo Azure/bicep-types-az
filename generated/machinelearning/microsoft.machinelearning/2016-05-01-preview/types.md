@@ -229,11 +229,6 @@
 * **key**: string: Specifies the key used to access the storage account.
 * **name**: string: Specifies the name of the storage account.
 
-## WebServicePropertiesForGraph
-### Properties
-* **package**: [GraphPackage](#graphpackage): Defines the graph of modules making up the machine learning solution.
-* **packageType**: 'Graph' (Required): Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
-
 ## GraphPackage
 ### Properties
 * **edges**: [GraphEdge](#graphedge)[]: The list of edges making up the graph.

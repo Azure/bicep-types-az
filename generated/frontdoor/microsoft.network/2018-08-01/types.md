@@ -212,11 +212,6 @@
 * **ruleSetType**: 'AzureManagedRuleSet' (Required): RuleSetType - AzureManagedRuleSet or OWASP RuleSets.
 
 
-## AzureManagedRuleSet
-### Properties
-* **ruleGroupOverrides**: [AzureManagedOverrideRuleGroup](#azuremanagedoverriderulegroup)[]: List of azure managed provider override configuration (optional)
-* **ruleSetType**: 'AzureManagedRuleSet' (Required): RuleSetType - AzureManagedRuleSet or OWASP RuleSets.
-
 ## AzureManagedOverrideRuleGroup
 ### Properties
 * **action**: 'Allow' | 'Block' | 'Log' (Required): Type of Actions

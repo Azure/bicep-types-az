@@ -83,11 +83,6 @@
 * **type**: 'Sas' (Required): The authentication type
 
 
-## SasAuthentication
-### Properties
-* **properties**: [SasProperties](#sasproperties): The properties that define SAS authentication.
-* **type**: 'Sas' (Required): The authentication type
-
 ## SasProperties
 ### Properties
 * **sasUri**: string (Required): The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
@@ -244,11 +239,6 @@
 * **stepType**: 'Wait' (Required): The type of step.
 
 
-## HealthCheckStepProperties
-### Properties
-* **attributes**: [HealthCheckStepAttributes](#healthcheckstepattributes) (Required): The attributes for the health check step.
-* **stepType**: 'HealthCheck' (Required): The type of step.
-
 ## HealthCheckStepAttributes
 * **Discriminator**: type
 
@@ -261,11 +251,6 @@
 * **properties**: [RestParameters](#restparameters): The parameters for the REST health check.
 * **type**: 'REST' (Required): The type of health check.
 
-
-## RestHealthCheckStepAttributes
-### Properties
-* **properties**: [RestParameters](#restparameters): The parameters for the REST health check.
-* **type**: 'REST' (Required): The type of health check.
 
 ## RestParameters
 ### Properties
@@ -299,17 +284,6 @@
 * **type**: 'RolloutIdentity' (Required): The authentication type.
 
 
-## ApiKeyAuthentication
-### Properties
-* **in**: 'Header' | 'Query' (Required): The location of the authentication key/value pair in the request.
-* **name**: string (Required): The key name of the authentication key/value pair.
-* **type**: 'ApiKey' (Required): The authentication type.
-* **value**: string (Required): The value of the authentication key/value pair.
-
-## RolloutIdentityAuthentication
-### Properties
-* **type**: 'RolloutIdentity' (Required): The authentication type.
-
 ## RestResponse
 ### Properties
 * **regex**: [RestResponseRegex](#restresponseregex): The regular expressions to match the response content with.
@@ -319,11 +293,6 @@
 ### Properties
 * **matches**: string[]: The list of regular expressions.
 * **matchQuantifier**: 'All' | 'Any': Indicates whether any or all of the expressions should match with the response content.
-
-## WaitStepProperties
-### Properties
-* **attributes**: [WaitStepAttributes](#waitstepattributes) (Required): The parameters for the wait step.
-* **stepType**: 'Wait' (Required): The type of step.
 
 ## WaitStepAttributes
 ### Properties

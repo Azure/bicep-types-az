@@ -14,5 +14,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (Modeler/MissingType): The enum schema 'AccountResourceRequestOperationType' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
-INFORMATION: autorest.bicep took 7ms
-[4.13 s] Generation Complete
+INFORMATION: autorest.bicep took 8ms
+[4.8 s] Generation Complete

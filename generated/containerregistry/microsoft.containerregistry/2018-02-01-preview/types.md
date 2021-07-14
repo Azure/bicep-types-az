@@ -74,19 +74,6 @@
 * **type**: 'Docker' (Required): The type of the step.
 
 
-## DockerBuildStep
-### Properties
-* **baseImageDependencies**: [BaseImageDependency](#baseimagedependency)[] (ReadOnly): List of base image dependencies for a step.
-* **baseImageTrigger**: 'All' | 'None' | 'Runtime': The type of the auto trigger for base image dependency updates.
-* **branch**: string: The repository branch name.
-* **buildArguments**: [BuildArgument](#buildargument)[]: The custom arguments for building this build step.
-* **contextPath**: string: The relative context path for a docker build in the source.
-* **dockerFilePath**: string: The Docker file path relative to the source control root.
-* **imageNames**: string[]: The fully qualified image names including the repository and tag.
-* **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
-* **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
-* **type**: 'Docker' (Required): The type of the step.
-
 ## BaseImageDependency
 ### Properties
 * **digest**: string: The sha256-based digest of the image manifest.

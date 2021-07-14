@@ -31,11 +31,6 @@
 * **type**: 'shell' (Required): The type of customization tool you want to use on the Image. For example, "shell" can be shellCustomizer
 
 
-## ImageTemplateShellCustomizer
-### Properties
-* **script**: string: The shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
-* **type**: 'shell' (Required): The type of customization tool you want to use on the Image. For example, "shell" can be shellCustomizer
-
 ## ImageTemplateDistributor
 * **Discriminator**: type
 
@@ -59,18 +54,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ImageTemplateManagedImageDistributor
-### Properties
-* **imageId**: string (Required): Resource Id of the Managed Disk Image
-* **location**: string (Required): Azure location for the image, should match if image already exists
-* **type**: 'managedImage' (Required): Type of distribution.
-
-## ImageTemplateSharedImageDistributor
-### Properties
-* **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
-* **replicationRegions**: string[] (Required): Array of ImageTemplateSharedImageDistributorReplicationRegionsItem
-* **type**: 'sharedImage' (Required): Type of distribution.
 
 ## ImageTemplateLastRunStatus
 ### Properties
@@ -103,20 +86,6 @@
 * **type**: 'PlatformImage' (Required): Specifies the type of source image you want to start with.
 * **version**: string: Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
-
-## ImageTemplateIsoSource
-### Properties
-* **sha256Checksum**: string (Required): SHA256 Checksum of the ISO image.
-* **sourceURI**: string (Required): URL to get the ISO image. This URL has to be accessible to the resource provider at the time of the imageTemplate creation.
-* **type**: 'ISO' (Required): Specifies the type of source image you want to start with.
-
-## ImageTemplatePlatformImageSource
-### Properties
-* **offer**: string: Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-* **publisher**: string: Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-* **sku**: string: Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
-* **type**: 'PlatformImage' (Required): Specifies the type of source image you want to start with.
-* **version**: string: Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
 ## ResourceTags
 ### Properties

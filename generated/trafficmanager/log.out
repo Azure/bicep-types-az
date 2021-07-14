@@ -60,7 +60,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
 INFORMATION: Resource type microsoft.network/trafficmanagerusermetricskeys under path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default' has no body defined.
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 11ms
 Processing batch task - {"tag":"microsoft.network-2018-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -169,7 +169,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.network-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -289,7 +289,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.network-2017-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -357,5 +357,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-INFORMATION: autorest.bicep took 1ms
-[16.17 s] Generation Complete
+INFORMATION: autorest.bicep took 2ms
+[19.04 s] Generation Complete

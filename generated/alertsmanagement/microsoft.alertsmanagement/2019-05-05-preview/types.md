@@ -58,20 +58,6 @@
 * **scopeType**: 'Resource' | 'ResourceGroup' | 'Subscription': type of target scope
 * **values**: string[]: list of ARM IDs of the given scope type which will be the target of the given action rule.
 
-## ActionGroup
-### Properties
-* **actionGroupId**: string (Required): Action group to trigger if action rule matches
-* **type**: 'ActionGroup' (Required): Indicates type of action rule
-
-## Diagnostics
-### Properties
-* **type**: 'Diagnostics' (Required): Indicates type of action rule
-
-## Suppression
-### Properties
-* **suppressionConfig**: [SuppressionConfig](#suppressionconfig) (Required): Suppression logic for a given action rule
-* **type**: 'Suppression' (Required): Indicates type of action rule
-
 ## SuppressionConfig
 ### Properties
 * **recurrenceType**: 'Always' | 'Daily' | 'Monthly' | 'Once' | 'Weekly' (Required): Specifies when the suppression should be applied

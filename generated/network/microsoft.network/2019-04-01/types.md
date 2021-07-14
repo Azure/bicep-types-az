@@ -545,6 +545,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkTaps' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/virtualWans@2019-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualWanProperties](#virtualwanproperties): Parameters for VirtualWAN.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/virtualWans' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/virtualWans/p2sVpnServerConfigurations@2019-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -2620,6 +2632,25 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## VirtualWanProperties
+### Properties
+* **allowBranchToBranchTraffic**: bool: True if branch to branch traffic is allowed.
+* **allowVnetToVnetTraffic**: bool: True if Vnet to Vnet traffic is allowed.
+* **disableVpnEncryption**: bool: Vpn encryption to be disabled or not.
+* **office365LocalBreakoutCategory**: 'All' | 'None' | 'Optimize' | 'OptimizeAndAllow' (ReadOnly): The office traffic category.
+* **p2SVpnServerConfigurations**: [P2SVpnServerConfiguration](#p2svpnserverconfiguration)[]: List of all P2SVpnServerConfigurations associated with the virtual wan.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **securityProviderName**: string: The Security Provider name.
+* **virtualHubs**: [SubResource](#subresource)[] (ReadOnly): List of VirtualHubs in the VirtualWAN.
+* **vpnSites**: [SubResource](#subresource)[] (ReadOnly): List of VpnSites in the VirtualWAN.
+
+## P2SVpnServerConfiguration
+### Properties
+* **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated.
+* **id**: string: Resource ID.
+* **name**: string: The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **properties**: [P2SVpnServerConfigurationProperties](#p2svpnserverconfigurationproperties): Parameters for P2SVpnServerConfiguration.
+
 ## P2SVpnServerConfigurationProperties
 ### Properties
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -2682,6 +2713,11 @@
 ### Properties
 * **provisioningState**: string (ReadOnly): The provisioning state of the P2SVpnServerConfiguration VPN client root certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
 * **publicCertData**: string (Required): The certificate public data.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VpnGatewayProperties
 ### Properties

@@ -46,13 +46,6 @@
 * **namespace**: 'GuestVmHealth' (Required): specifies the type of the alert criterion.
 
 
-## VmGuestHealthAlertCriterion
-### Properties
-* **healthStates**: [HealthState](#healthstate)[] (Required): Health states to alert on
-* **monitorNames**: string[]: Names of health monitor on which to define alert
-* **monitorTypes**: string[]: Names of health monitor type on which to define alert
-* **namespace**: 'GuestVmHealth' (Required): specifies the type of the alert criterion.
-
 ## HealthState
 ### Properties
 * **healthStateName**: 'Critical' | 'Warning' (Required): Health state name

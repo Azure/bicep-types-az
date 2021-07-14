@@ -89,6 +89,8 @@
 * **description**: string: The description of the parameter.
 * **displayName**: string: The display name for the parameter.
 * **strongType**: string: Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PolicySetDefinitionProperties
 ### Properties

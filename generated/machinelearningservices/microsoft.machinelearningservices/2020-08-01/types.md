@@ -217,11 +217,6 @@
 * **code**: string (Required): Error code.
 * **message**: string (Required): Error message.
 
-## AKS
-### Properties
-* **computeType**: 'AKS' (Required): The type of compute
-* **properties**: [AKSProperties](#aksproperties): AKS properties
-
 ## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
@@ -250,11 +245,6 @@
 * **publicIpAddress**: string (ReadOnly): Public IP address
 * **systemServiceType**: string (ReadOnly): The type of this system service.
 * **version**: string (ReadOnly): The version for this type.
-
-## AmlCompute
-### Properties
-* **computeType**: 'AmlCompute' (Required): The type of compute
-* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
 ## AmlComputeProperties
 ### Properties
@@ -296,11 +286,6 @@
 * **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
 * **adminUserPassword**: string: Password of the administrator user account.
 * **adminUserSshPublicKey**: string: SSH public key of the administrator user account.
-
-## ComputeInstance
-### Properties
-* **computeType**: 'ComputeInstance' (Required): The type of compute
-* **properties**: [ComputeInstanceProperties](#computeinstanceproperties): Compute Instance properties
 
 ## ComputeInstanceProperties
 ### Properties
@@ -355,32 +340,13 @@
 * **sshPort**: int (ReadOnly): Describes the port for connecting through SSH.
 * **sshPublicAccess**: 'Disabled' | 'Enabled': State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
 
-## Databricks
-### Properties
-* **computeType**: 'Databricks' (Required): The type of compute
-* **properties**: [DatabricksProperties](#databricksproperties)
-
 ## DatabricksProperties
 ### Properties
 * **databricksAccessToken**: string: Databricks access token
 
-## DataFactory
-### Properties
-* **computeType**: 'DataFactory' (Required): The type of compute
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
-* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
-
 ## DataLakeAnalyticsProperties
 ### Properties
 * **dataLakeStoreAccountName**: string: DataLake Store Account Name
-
-## HDInsight
-### Properties
-* **computeType**: 'HDInsight' (Required): The type of compute
-* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ## HDInsightProperties
 ### Properties
@@ -394,11 +360,6 @@
 * **privateKeyData**: string: Private key data
 * **publicKeyData**: string: Public key data
 * **username**: string: Username of admin account
-
-## VirtualMachine
-### Properties
-* **computeType**: 'VirtualMachine' (Required): The type of compute
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 ## VirtualMachineProperties
 ### Properties

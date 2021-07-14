@@ -45,14 +45,6 @@
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
 
 
-## AlertingAction
-### Properties
-* **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group
-* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
-* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity Level of Alert
-* **throttlingInMin**: int: time (in minutes) for which Alerts should be throttled or suppressed.
-* **trigger**: [TriggerCondition](#triggercondition) (Required): The condition that results in the Log Search rule.
-
 ## AzNsActionGroup
 ### Properties
 * **actionGroup**: string[]: Azure Action Group reference.
@@ -71,11 +63,6 @@
 * **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Evaluation Type
 * **threshold**: int: The threshold of the metric trigger.
 * **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Result Condition Evaluation criteria. Supported Values - 'GreaterThan' or 'LessThan' or 'Equal'.
-
-## LogToMetricAction
-### Properties
-* **criteria**: [Criteria](#criteria)[] (Required): Criteria of Metric
-* **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
 
 ## Criteria
 ### Properties

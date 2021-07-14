@@ -339,6 +339,8 @@
 ## CreateUpdateOptions
 ### Properties
 * **throughput**: string: Value of the Cosmos DB resource throughput. Use the ThroughputSetting resource when retrieving offer details.
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## CassandraKeyspaceResource
 ### Properties

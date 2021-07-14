@@ -265,11 +265,6 @@
 * **code**: string (Required): Error code.
 * **message**: string (Required): Error message.
 
-## AKS
-### Properties
-* **computeType**: 'AKS' (Required): The type of compute
-* **properties**: [AKSProperties](#aksproperties): AKS properties
-
 ## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
@@ -298,11 +293,6 @@
 * **publicIpAddress**: string (ReadOnly): Public IP address
 * **systemServiceType**: string (ReadOnly): The type of this system service.
 * **version**: string (ReadOnly): The version for this type.
-
-## AmlCompute
-### Properties
-* **computeType**: 'AmlCompute' (Required): The type of compute
-* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
 ## AmlComputeProperties
 ### Properties
@@ -352,32 +342,13 @@
 ### Properties
 * **id**: string (Required): Virtual Machine image path
 
-## Databricks
-### Properties
-* **computeType**: 'Databricks' (Required): The type of compute
-* **properties**: [DatabricksProperties](#databricksproperties)
-
 ## DatabricksProperties
 ### Properties
 * **databricksAccessToken**: string: Databricks access token
 
-## DataFactory
-### Properties
-* **computeType**: 'DataFactory' (Required): The type of compute
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
-* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
-
 ## DataLakeAnalyticsProperties
 ### Properties
 * **dataLakeStoreAccountName**: string: DataLake Store Account Name
-
-## HDInsight
-### Properties
-* **computeType**: 'HDInsight' (Required): The type of compute
-* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ## HDInsightProperties
 ### Properties
@@ -391,11 +362,6 @@
 * **privateKeyData**: string: Private key data
 * **publicKeyData**: string: Public key data
 * **username**: string: Username of admin account
-
-## VirtualMachine
-### Properties
-* **computeType**: 'VirtualMachine' (Required): The type of compute
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 ## VirtualMachineProperties
 ### Properties
@@ -574,21 +540,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ACIServiceCreateRequest
-### Properties
-* **appInsightsEnabled**: bool (WriteOnly)
-* **authEnabled**: bool (WriteOnly)
-* **cname**: string (WriteOnly)
-* **computeType**: 'ACI' (Required): The compute environment type for the service.
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
-* **dataCollection**: [ACIServiceCreateRequestDataCollection](#aciservicecreaterequestdatacollection) (WriteOnly)
-* **dnsNameLabel**: string (WriteOnly)
-* **encryptionProperties**: [ACIServiceCreateRequestEncryptionProperties](#aciservicecreaterequestencryptionproperties) (WriteOnly)
-* **sslCertificate**: string (WriteOnly)
-* **sslEnabled**: bool (WriteOnly)
-* **sslKey**: string (WriteOnly)
-* **vnetConfiguration**: [ACIServiceCreateRequestVnetConfiguration](#aciservicecreaterequestvnetconfiguration) (WriteOnly)
-
 ## ACIServiceCreateRequestDataCollection
 ### Properties
 * **eventHubEnabled**: bool (WriteOnly)
@@ -604,23 +555,6 @@
 ### Properties
 * **subnetName**: string (WriteOnly)
 * **vnetName**: string (WriteOnly)
-
-## AKSServiceCreateRequest
-### Properties
-* **aadAuthEnabled**: bool (WriteOnly)
-* **appInsightsEnabled**: bool (WriteOnly)
-* **authEnabled**: bool (WriteOnly)
-* **autoScaler**: [AKSServiceCreateRequestAutoScaler](#aksservicecreaterequestautoscaler) (WriteOnly)
-* **computeName**: string (WriteOnly)
-* **computeType**: 'AKS' (Required): The compute environment type for the service.
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
-* **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly)
-* **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly)
-* **maxConcurrentRequestsPerContainer**: int (WriteOnly)
-* **maxQueueWaitMs**: int (WriteOnly)
-* **namespace**: string (WriteOnly)
-* **numReplicas**: int (WriteOnly)
-* **scoringTimeoutMs**: int (WriteOnly)
 
 ## AKSServiceCreateRequestAutoScaler
 ### Properties

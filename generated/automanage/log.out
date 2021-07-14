@@ -47,5 +47,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 7ms
-[4.48 s] Generation Complete
+INFORMATION: autorest.bicep took 8ms
+[5.26 s] Generation Complete
