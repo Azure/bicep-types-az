@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.7)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.insights-2015-04-01"} .
@@ -84,7 +84,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 9ms
+INFORMATION: autorest.bicep took 12ms
 Processing batch task - {"tag":"microsoft.insights-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -141,7 +141,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.insights-2017-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -198,7 +198,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -393,7 +393,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 7ms
 Processing batch task - {"tag":"microsoft.insights-2018-04-16"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -402,7 +402,7 @@ WARNING: Semantic validation was skipped.
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.insights-2017-12-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -457,7 +457,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorAdditionalInfo' with an u
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2017-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -524,7 +524,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.insights-2021-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -562,7 +562,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 4ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.insights-2021-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -577,7 +577,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2021-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -587,7 +587,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -612,7 +612,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'AlertRulePatchProperties' with
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2020-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -627,7 +627,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ScheduledQueryRuleResourceColl
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2020-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -644,7 +644,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupDiagnosticSetti
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2019-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -722,7 +722,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.insights-2017-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -811,7 +811,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.insights-2017-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -844,7 +844,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ActivityLogAlertPatch' with an
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.insights-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -879,7 +879,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.insights-2016-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -911,7 +911,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ServiceDiagnosticSettings' wit
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.insights-2014-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -974,5 +974,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
-[74.64 s] Generation Complete
+INFORMATION: autorest.bicep took 8ms
+[107.1 s] Generation Complete

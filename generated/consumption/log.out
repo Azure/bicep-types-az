@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.7)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.consumption-2021-05-01"} .
@@ -120,7 +120,7 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ReservationRecommendati
 WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 7ms
+INFORMATION: autorest.bicep took 12ms
 Processing batch task - {"tag":"microsoft.consumption-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -484,7 +484,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.consumption-2019-05-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -614,7 +614,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.consumption-2018-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -675,7 +675,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (Modeler): Integer schema 'schemas:49' with unknown format: 'date-time' is not valid.  Treating it as 'int32'.
-INFORMATION: autorest.bicep took 0ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.consumption-2019-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -816,7 +816,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PriceSheetProperties' with an 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.consumption-2018-03-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -880,7 +880,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 WARNING: Skipping path '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Consumption/costTags': Found mismatch between type segments (1) and name segments (0)
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.consumption-2018-05-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1032,7 +1032,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.consumption-2018-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1097,7 +1097,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.consumption-2017-04-24-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1147,5 +1147,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefin
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
-[76.71 s] Generation Complete
+INFORMATION: autorest.bicep took 2ms
+[115.06 s] Generation Complete

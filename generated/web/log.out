@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.7)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.certificateregistration-2021-01-15"} .
@@ -16,7 +16,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.domainregistration-2021-01-15"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -73,7 +73,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-INFORMATION: autorest.bicep took 71ms
+INFORMATION: autorest.bicep took 76ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -106,7 +106,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.domainregistration-2021-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -451,7 +451,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-INFORMATION: autorest.bicep took 63ms
+INFORMATION: autorest.bicep took 65ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -823,7 +823,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-INFORMATION: autorest.bicep took 56ms
+INFORMATION: autorest.bicep took 64ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -852,7 +852,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.domainregistration-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1166,7 +1166,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-INFORMATION: autorest.bicep took 55ms
+INFORMATION: autorest.bicep took 61ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1195,7 +1195,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.domainregistration-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1505,7 +1505,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-INFORMATION: autorest.bicep took 53ms
+INFORMATION: autorest.bicep took 67ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1561,7 +1561,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.web-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1844,7 +1844,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-INFORMATION: autorest.bicep took 40ms
+INFORMATION: autorest.bicep took 57ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -1873,7 +1873,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.domainregistration-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2119,7 +2119,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/staticsites/customdomains under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/staticSites/{name}/customDomains/{domainName}' has no body defined.
-INFORMATION: autorest.bicep took 44ms
+INFORMATION: autorest.bicep took 47ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2175,7 +2175,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.web-2018-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2305,7 +2305,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
-INFORMATION: autorest.bicep took 25ms
+INFORMATION: autorest.bicep took 34ms
 Processing batch task - {"tag":"microsoft.web-2018-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2499,7 +2499,7 @@ INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subsc
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 28ms
+INFORMATION: autorest.bicep took 27ms
 Processing batch task - {"tag":"microsoft.certificateregistration-2015-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2553,7 +2553,7 @@ WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will n
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.web-2016-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2759,7 +2759,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: Resource type microsoft.web/sites/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/siteextensions/{siteExtensionId}' has no body defined.
 INFORMATION: Resource type microsoft.web/sites/slots/siteextensions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId}' has no body defined.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 27ms
+INFORMATION: autorest.bicep took 26ms
 Processing batch task - {"tag":"microsoft.web-2016-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2832,7 +2832,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 5ms
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.web-2015-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2932,7 +2932,7 @@ WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resource
 WARNING: Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/snapshots': Found mismatch between type segments (3) and name segments (2)
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 29ms
+INFORMATION: autorest.bicep took 34ms
 Processing batch task - {"tag":"microsoft.web-2015-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -2979,5 +2979,5 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 9ms
-[572.15 s] Generation Complete
+INFORMATION: autorest.bicep took 6ms
+[1163.16 s] Generation Complete

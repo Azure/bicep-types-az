@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.7)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 Processing batch task - {"tag":"microsoft.management-2021-04-01"} .
@@ -69,7 +69,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 11ms
 Processing batch task - {"tag":"microsoft.management-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -317,7 +317,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.management-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -413,7 +413,7 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.management-2017-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -475,4 +475,4 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
 INFORMATION: autorest.bicep took 0ms
-[22.2 s] Generation Complete
+[30.21 s] Generation Complete
