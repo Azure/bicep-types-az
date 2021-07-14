@@ -1,7 +1,7 @@
 # Microsoft.Insights @ 2021-05-01-preview
 
 ## Resource Microsoft.Insights/diagnosticSettings@2021-05-01-preview
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
