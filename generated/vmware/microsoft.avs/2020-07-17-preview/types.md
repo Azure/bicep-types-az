@@ -223,17 +223,6 @@
 * **serverAddress**: string: DHCP Server Address.
 
 
-## WorkloadNetworkDhcpRelay
-### Properties
-* **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
-* **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
-
-## WorkloadNetworkDhcpServer
-### Properties
-* **dhcpType**: 'SERVER' (Required): Type of DHCP: SERVER or RELAY.
-* **leaseTime**: int: DHCP Server Lease Time.
-* **serverAddress**: string: DHCP Server Address.
-
 ## WorkloadNetworkDnsServiceProperties
 ### Properties
 * **defaultDnsZone**: string: Default DNS zone of the DNS Service.

@@ -137,15 +137,3 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ClfsTargetProperties
-### Properties
-* **targetType**: 'clfs' (Required): Type of the Storage Target.
-
-## Nfs3TargetProperties
-### Properties
-* **targetType**: 'nfs3' (Required): Type of the Storage Target.
-
-## UnknownTargetProperties
-### Properties
-* **targetType**: 'unknown' (Required): Type of the Storage Target.
-

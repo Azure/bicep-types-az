@@ -201,11 +201,6 @@
 ### Properties
 * **networkGroupId**: string: Network manager group Id.
 
-## AdminRule
-### Properties
-* **kind**: 'Custom' (Required): Whether the rule is custom or default.
-* **properties**: [AdminPropertiesFormat](#adminpropertiesformat): Security admin rule resource.
-
 ## AdminPropertiesFormat
 ### Properties
 * **access**: 'Allow' | 'AlwaysAllow' | 'Deny' (Required): Whether network traffic is allowed or denied.
@@ -225,11 +220,6 @@
 * **addressPrefix**: string: Address prefix.
 * **addressPrefixType**: 'IPPrefix' | 'ServiceTag': Address prefix type.
 
-## DefaultAdminRule
-### Properties
-* **kind**: 'Default' (Required): Whether the rule is custom or default.
-* **properties**: [DefaultAdminPropertiesFormat](#defaultadminpropertiesformat): Security default admin rule resource.
-
 ## DefaultAdminPropertiesFormat
 ### Properties
 * **access**: 'Allow' | 'AlwaysAllow' | 'Deny' (ReadOnly): Whether network traffic is allowed or denied.
@@ -245,11 +235,6 @@
 * **sourcePortRanges**: string[] (ReadOnly): The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[] (ReadOnly): The CIDR or source IP ranges.
 
-## UserRule
-### Properties
-* **kind**: 'Custom' (Required): Whether the rule is custom or default.
-* **properties**: [UserRulePropertiesFormat](#userrulepropertiesformat): Security rule resource.
-
 ## UserRulePropertiesFormat
 ### Properties
 * **description**: string: A description for this rule.
@@ -261,11 +246,6 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **sourcePortRanges**: string[]: The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[]: The CIDR or source IP ranges.
-
-## DefaultUserRule
-### Properties
-* **kind**: 'Default' (Required): Whether the rule is custom or default.
-* **properties**: [DefaultUserRulePropertiesFormat](#defaultuserrulepropertiesformat): Security default user rule resource.
 
 ## DefaultUserRulePropertiesFormat
 ### Properties

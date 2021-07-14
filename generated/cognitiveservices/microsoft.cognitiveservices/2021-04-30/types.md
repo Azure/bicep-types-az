@@ -82,6 +82,8 @@
 * **storageAccountConnectionString**: string: (Personalization Only) The storage account connection string.
 * **superUser**: string: (Metrics Advisor Only) The super user of Metrics Advisor.
 * **websiteName**: string: (Metrics Advisor Only) The website name of Metrics Advisor.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## CallRateLimit
 ### Properties

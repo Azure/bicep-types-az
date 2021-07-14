@@ -57,6 +57,8 @@
 ## ScopeElement
 ### Properties
 * **field**: string: The alert entity type to suppress by.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
@@ -105,17 +107,6 @@
 * **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
 
 
-## AzureResourceDetails
-### Properties
-* **id**: string (ReadOnly): Azure resource Id of the assessed resource
-* **source**: 'Azure' (Required): The platform where the assessed resource resides
-
-## OnPremiseSqlResourceDetails
-### Properties
-* **databaseName**: string (Required): The Sql database name installed on the machine
-* **serverName**: string (Required): The Sql server name installed on the machine
-* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
-
 ## AssessmentStatus
 ### Properties
 * **cause**: string: Programmatic code for the cause of the assessment status
@@ -152,24 +143,6 @@
 * **actionType**: 'Workspace' (Required): The type of the action that will be triggered by the Automation
 * **workspaceResourceId**: string: The fully qualified Log Analytics Workspace Azure Resource ID.
 
-
-## AutomationActionEventHub
-### Properties
-* **actionType**: 'EventHub' (Required): The type of the action that will be triggered by the Automation
-* **connectionString**: string: The target Event Hub connection string (it will not be included in any response).
-* **eventHubResourceId**: string: The target Event Hub Azure Resource ID.
-* **sasPolicyName**: string (ReadOnly): The target Event Hub SAS policy name.
-
-## AutomationActionLogicApp
-### Properties
-* **actionType**: 'LogicApp' (Required): The type of the action that will be triggered by the Automation
-* **logicAppResourceId**: string: The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
-* **uri**: string: The Logic App trigger URI endpoint (it will not be included in any response).
-
-## AutomationActionWorkspace
-### Properties
-* **actionType**: 'Workspace' (Required): The type of the action that will be triggered by the Automation
-* **workspaceResourceId**: string: The fully qualified Log Analytics Workspace Azure Resource ID.
 
 ## AutomationScope
 ### Properties

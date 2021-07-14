@@ -14,5 +14,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse-error' with an u
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 0ms
-[3.68 s] Generation Complete
+INFORMATION: autorest.bicep took 1ms
+[4.2 s] Generation Complete

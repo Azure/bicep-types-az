@@ -100,11 +100,6 @@
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
 
-## EventGridDataConnection
-### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
-
 ## EventGridConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The event hub consumer group.
@@ -114,11 +109,6 @@
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
 * **tableName**: string (Required): The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## EventHubDataConnection
-### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
-
 ## EventHubConnectionProperties
 ### Properties
 * **consumerGroup**: string (Required): The event hub consumer group.
@@ -127,11 +117,6 @@
 * **eventSystemProperties**: string[]: System properties of the event hub
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
-
-## IotHubDataConnection
-### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto iot hub connection properties.
 
 ## IotHubConnectionProperties
 ### Properties

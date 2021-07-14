@@ -134,17 +134,6 @@
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
 
 
-## AzureFileshareProtectedItem
-### Properties
-* **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information about Azure File Share backup item.
-* **friendlyName**: string: Friendly name of the fileshare represented by this backup item.
-* **kpisHealths**: [AzureFileshareProtectedItemKpisHealths](#azurefileshareprotecteditemkpishealths): Health details of different KPIs
-* **lastBackupStatus**: string: Last backup operation status. Possible values: Healthy, Unhealthy.
-* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
-* **protectedItemType**: 'AzureFileShareProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
-* **protectionStatus**: string: Backup status of this backup item.
-
 ## AzureFileshareProtectedItemExtendedInfo
 ### Properties
 * **oldestRecoveryPoint**: string: The oldest backup copy available for this item in the service.
@@ -170,26 +159,6 @@
 * **recommendations**: string[] (ReadOnly): Health Recommended Actions
 * **title**: string (ReadOnly): Health Title
 
-## AzureVmWorkloadSAPAseDatabaseProtectedItem
-### Properties
-* **protectedItemType**: 'AzureVmWorkloadSAPAseDatabase' (Required): backup item type.
-
-## AzureVmWorkloadSAPHanaDatabaseProtectedItem
-### Properties
-* **protectedItemType**: 'AzureVmWorkloadSAPHanaDatabase' (Required): backup item type.
-
-## AzureVmWorkloadSQLDatabaseProtectedItem
-### Properties
-* **protectedItemType**: 'AzureVmWorkloadSQLDatabase' (Required): backup item type.
-
-## DPMProtectedItem
-### Properties
-* **backupEngineName**: string: Backup Management server protecting this backup item
-* **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo): Additional information of DPM Protected item.
-* **friendlyName**: string: Friendly name of the managed item
-* **protectedItemType**: 'DPMProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
-
 ## DPMProtectedItemExtendedInfo
 ### Properties
 * **diskStorageUsedInBytes**: string: Used Disk storage in bytes.
@@ -212,52 +181,16 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## GenericProtectedItem
-### Properties
-* **fabricName**: string: Name of this backup item's fabric.
-* **friendlyName**: string: Friendly name of the container.
-* **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
-* **protectedItemId**: int: Data Plane Service ID of the protected item.
-* **protectedItemType**: 'GenericProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
-* **sourceAssociations**: [GenericProtectedItemSourceAssociations](#genericprotecteditemsourceassociations): Loosely coupled (type, value) associations (example - parent of a protected item)
-
 ## GenericProtectedItemSourceAssociations
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## MabFileFolderProtectedItem
-### Properties
-* **computerName**: string: Name of the computer associated with this backup item.
-* **deferredDeleteSyncTimeInUTC**: int: Sync time for deferred deletion in UTC
-* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo): Additional information on the backed up item.
-* **friendlyName**: string: Friendly name of this backup item.
-* **lastBackupStatus**: string: Status of last backup operation.
-* **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
-* **protectedItemType**: 'MabFileFolderProtectedItem' (Required): backup item type.
-* **protectionState**: string: Protected, ProtectionStopped, IRPending or ProtectionError
 
 ## MabFileFolderProtectedItemExtendedInfo
 ### Properties
 * **lastRefreshedAt**: string: Last time when the agent data synced to service.
 * **oldestRecoveryPoint**: string: The oldest backup copy available.
 * **recoveryPointCount**: int: Number of backup copies associated with the backup item.
-
-## AzureIaaSClassicComputeVMProtectedItem
-### Properties
-* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): backup item type.
-
-## AzureIaaSComputeVMProtectedItem
-### Properties
-* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required): backup item type.
-
-## AzureSqlProtectedItem
-### Properties
-* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information on Azure Sql specific protected item.
-* **protectedItemDataId**: string: Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
-* **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -319,15 +252,6 @@
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 
 
-## AzureIaaSVMProtectionPolicy
-### Properties
-* **backupManagementType**: 'AzureIaasVM' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
-* **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
-* **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-
 ## InstantRPAdditionalDetails
 ### Properties
 * **azureBackupRGNamePrefix**: string
@@ -350,14 +274,6 @@
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
-
-## LongTermRetentionPolicy
-### Properties
-* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule.
-* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule): Monthly retention schedule.
-* **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule): Weekly retention schedule.
-* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule): Yearly retention schedule.
 
 ## DailyRetentionSchedule
 ### Properties
@@ -407,11 +323,6 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
-## SimpleRetentionPolicy
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
 
@@ -434,44 +345,6 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **scheduleWeeklyFrequency**: int: At every number weeks this schedule has to be run.
 
 
-## LogSchedulePolicy
-### Properties
-* **scheduleFrequencyInMins**: int: Frequency of the log schedule operation of this policy in minutes.
-* **schedulePolicyType**: 'LogSchedulePolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-
-## LongTermSchedulePolicy
-### Properties
-* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-
-## SimpleSchedulePolicy
-### Properties
-* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week this schedule has to be run.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy.
-* **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
-* **scheduleWeeklyFrequency**: int: At every number weeks this schedule has to be run.
-
-## AzureSqlProtectionPolicy
-### Properties
-* **backupManagementType**: 'AzureSql' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-
-## AzureFileShareProtectionPolicy
-### Properties
-* **backupManagementType**: 'AzureStorage' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
-* **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management
-
-## AzureVmWorkloadProtectionPolicy
-### Properties
-* **backupManagementType**: 'AzureWorkload' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **makePolicyConsistent**: bool: Fix the policy inconsistency
-* **settings**: [Settings](#settings): Common settings field for backup management
-* **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]: List of sub-protection policies which includes schedule and retention
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management
-
 ## Settings
 ### Properties
 * **isCompression**: bool: Workload compression flag. This has been added so that 'isSqlCompression'
@@ -482,19 +355,6 @@ will be deprecated once clients upgrade to consider this flag.
 ## SubProtectionPolicy
 ### Properties
 * **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Invalid' | 'Log': Type of backup policy type
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
-
-## GenericProtectionPolicy
-### Properties
-* **backupManagementType**: 'GenericProtectionPolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **fabricName**: string: Name of this policy's fabric.
-* **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]: List of sub-protection policies which includes schedule and retention
-* **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-
-## MabProtectionPolicy
-### Properties
-* **backupManagementType**: 'MAB' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 

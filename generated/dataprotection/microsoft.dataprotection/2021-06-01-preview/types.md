@@ -87,11 +87,6 @@
 * **secretStoreResource**: [SecretStoreResource](#secretstoreresource): Class representing a secret store resource.
 
 
-## SecretStoreBasedAuthCredentials
-### Properties
-* **objectType**: 'SecretStoreBasedAuthCredentials' (Required): Type of the specific object - used for deserializing
-* **secretStoreResource**: [SecretStoreResource](#secretstoreresource): Class representing a secret store resource.
-
 ## SecretStoreResource
 ### Properties
 * **secretStoreType**: 'AzureKeyVault' | 'Invalid' (Required): Gets or sets the type of secret store
@@ -138,11 +133,6 @@
 * **resourceGroupId**: string: Gets or sets the Snapshot Resource Group Uri.
 
 
-## AzureOperationalStoreParameters
-### Properties
-* **objectType**: 'AzureOperationalStoreParameters' (Required): Type of the specific object - used for deserializing
-* **resourceGroupId**: string: Gets or sets the Snapshot Resource Group Uri.
-
 ## UserFacingError
 ### Properties
 * **code**: string: Unique code for this error
@@ -187,11 +177,6 @@
 * **policyRules**: [BasePolicyRule](#basepolicyrule)[] (Required): Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
 
 
-## BackupPolicy
-### Properties
-* **objectType**: 'BackupPolicy' (Required)
-* **policyRules**: [BasePolicyRule](#basepolicyrule)[] (Required): Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
-
 ## BasePolicyRule
 * **Discriminator**: objectType
 
@@ -211,13 +196,6 @@
 * **objectType**: 'AzureRetentionRule' (Required)
 
 
-## AzureBackupRule
-### Properties
-* **backupParameters**: [BackupParameters](#backupparameters): BackupParameters base
-* **dataStore**: [DataStoreInfoBase](#datastoreinfobase) (Required): DataStoreInfo base
-* **objectType**: 'AzureBackupRule' (Required)
-* **trigger**: [TriggerContext](#triggercontext) (Required): Trigger context
-
 ## BackupParameters
 * **Discriminator**: objectType
 
@@ -227,11 +205,6 @@
 * **backupType**: string (Required): BackupType ; Full/Incremental etc
 * **objectType**: 'AzureBackupParams' (Required): Type of the specific object - used for deserializing
 
-
-## AzureBackupParams
-### Properties
-* **backupType**: string (Required): BackupType ; Full/Incremental etc
-* **objectType**: 'AzureBackupParams' (Required): Type of the specific object - used for deserializing
 
 ## DataStoreInfoBase
 ### Properties
@@ -254,11 +227,6 @@
 * **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required): List of tags that can be applicable for given schedule.
 
 
-## AdhocBasedTriggerContext
-### Properties
-* **objectType**: 'AdhocBasedTriggerContext' (Required): Type of the specific object - used for deserializing
-* **taggingCriteria**: [AdhocBasedTaggingCriteria](#adhocbasedtaggingcriteria) (Required): Adhoc backup tagging criteria
-
 ## AdhocBasedTaggingCriteria
 ### Properties
 * **tagInfo**: [RetentionTag](#retentiontag): Retention tag
@@ -268,12 +236,6 @@
 * **eTag**: string (ReadOnly): Retention Tag version.
 * **id**: string (ReadOnly): Retention Tag version.
 * **tagName**: string (Required): Retention Tag Name to relate it to retention rule.
-
-## ScheduleBasedTriggerContext
-### Properties
-* **objectType**: 'ScheduleBasedTriggerContext' (Required): Type of the specific object - used for deserializing
-* **schedule**: [BackupSchedule](#backupschedule) (Required): Schedule for backup
-* **taggingCriteria**: [TaggingCriteria](#taggingcriteria)[] (Required): List of tags that can be applicable for given schedule.
 
 ## BackupSchedule
 ### Properties
@@ -302,27 +264,10 @@ and should be part of AbsoluteMarker enum
 * **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third'[]: It should be First/Second/Third/Fourth/Last
 
 
-## ScheduleBasedBackupCriteria
-### Properties
-* **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear'[]: it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
-and should be part of AbsoluteMarker enum
-* **daysOfMonth**: [Day](#day)[]: This is day of the month from 1 to 28 other wise last of month
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: It should be Sunday/Monday/T..../Saturday
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: It should be January/February/....../December
-* **objectType**: 'ScheduleBasedBackupCriteria' (Required): Type of the specific object - used for deserializing
-* **scheduleTimes**: string[]: List of schedule times for backup
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third'[]: It should be First/Second/Third/Fourth/Last
-
 ## Day
 ### Properties
 * **date**: int: Date of the month
 * **isLast**: bool: Whether Date is last date of month
-
-## AzureRetentionRule
-### Properties
-* **isDefault**: bool
-* **lifecycles**: [SourceLifeCycle](#sourcelifecycle)[] (Required): Array of SourceLifeCycle
-* **objectType**: 'AzureRetentionRule' (Required)
 
 ## SourceLifeCycle
 ### Properties
@@ -339,10 +284,6 @@ and should be part of AbsoluteMarker enum
 #### Properties
 * **objectType**: 'AbsoluteDeleteOption' (Required): Type of the specific object - used for deserializing
 
-
-## AbsoluteDeleteOption
-### Properties
-* **objectType**: 'AbsoluteDeleteOption' (Required): Type of the specific object - used for deserializing
 
 ## TargetCopySetting
 ### Properties
@@ -366,17 +307,4 @@ and should be part of AbsoluteMarker enum
 #### Properties
 * **objectType**: 'ImmediateCopyOption' (Required): Type of the specific object - used for deserializing
 
-
-## CopyOnExpiryOption
-### Properties
-* **objectType**: 'CopyOnExpiryOption' (Required): Type of the specific object - used for deserializing
-
-## CustomCopyOption
-### Properties
-* **duration**: string: Data copied after given timespan
-* **objectType**: 'CustomCopyOption' (Required): Type of the specific object - used for deserializing
-
-## ImmediateCopyOption
-### Properties
-* **objectType**: 'ImmediateCopyOption' (Required): Type of the specific object - used for deserializing
 

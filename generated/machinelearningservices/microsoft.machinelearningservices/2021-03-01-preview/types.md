@@ -477,23 +477,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **referenceType**: 'OutputPath' (Required): Specifies the type of asset reference.
 
 
-## DataPathAssetReference
-### Properties
-* **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
-* **path**: string: The path of the file/directory in the datastore.
-* **referenceType**: 'DataPath' (Required): Specifies the type of asset reference.
-
-## IdAssetReference
-### Properties
-* **assetId**: string (Required): ARM resource ID of the asset.
-* **referenceType**: 'Id' (Required): Specifies the type of asset reference.
-
-## OutputPathAssetReference
-### Properties
-* **jobId**: string: ARM resource ID of the job.
-* **path**: string: The path of the file/directory in the job output.
-* **referenceType**: 'OutputPath' (Required): Specifies the type of asset reference.
-
 ## BatchOutputConfiguration
 ### Properties
 * **appendRowFileName**: string: Customized output file name for append_row output action.
@@ -623,11 +606,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **info**: any (ReadOnly): Any object
 * **type**: string (ReadOnly): The additional info type.
 
-## AKS
-### Properties
-* **computeType**: 'AKS' (Required): The type of compute
-* **properties**: [AKSProperties](#aksproperties): AKS properties
-
 ## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
@@ -661,11 +639,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **publicIpAddress**: string (ReadOnly): Public IP address
 * **systemServiceType**: string (ReadOnly): The type of this system service.
 * **version**: string (ReadOnly): The version for this type.
-
-## AmlCompute
-### Properties
-* **computeType**: 'AmlCompute' (Required): The type of compute
-* **properties**: [AmlComputeProperties](#amlcomputeproperties): AML Compute properties
 
 ## AmlComputeProperties
 ### Properties
@@ -714,11 +687,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 ## VirtualMachineImage
 ### Properties
 * **id**: string (Required): Virtual Machine image path
-
-## ComputeInstance
-### Properties
-* **computeType**: 'ComputeInstance' (Required): The type of compute
-* **properties**: [ComputeInstanceProperties](#computeinstanceproperties): Compute Instance properties
 
 ## ComputeInstanceProperties
 ### Properties
@@ -825,33 +793,14 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **sshPort**: int (ReadOnly): Describes the port for connecting through SSH.
 * **sshPublicAccess**: 'Disabled' | 'Enabled': State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
 
-## Databricks
-### Properties
-* **computeType**: 'Databricks' (Required): The type of compute
-* **properties**: [DatabricksProperties](#databricksproperties)
-
 ## DatabricksProperties
 ### Properties
 * **databricksAccessToken**: string: Databricks access token
 * **workspaceUrl**: string: Workspace Url
 
-## DataFactory
-### Properties
-* **computeType**: 'DataFactory' (Required): The type of compute
-
-## DataLakeAnalytics
-### Properties
-* **computeType**: 'DataLakeAnalytics' (Required): The type of compute
-* **properties**: [DataLakeAnalyticsProperties](#datalakeanalyticsproperties)
-
 ## DataLakeAnalyticsProperties
 ### Properties
 * **dataLakeStoreAccountName**: string: DataLake Store Account Name
-
-## HDInsight
-### Properties
-* **computeType**: 'HDInsight' (Required): The type of compute
-* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ## HDInsightProperties
 ### Properties
@@ -865,15 +814,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **privateKeyData**: string: Private key data
 * **publicKeyData**: string: Public key data
 * **username**: string: Username of admin account
-
-## SynapseSpark
-### Properties
-* **computeType**: 'SynapseSpark' (Required): The type of compute
-
-## VirtualMachine
-### Properties
-* **computeType**: 'VirtualMachine' (Required): The type of compute
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 ## VirtualMachineProperties
 ### Properties
@@ -1005,15 +945,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **volumeName**: string (Required): GlusterFS volume name.
 
 
-## AzureBlobContents
-### Properties
-* **accountName**: string (Required): Storage account name.
-* **containerName**: string (Required): Storage account container name.
-* **contentsType**: 'AzureBlob' (Required): Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
-* **endpoint**: string (Required): Azure cloud endpoint for the storage account.
-* **protocol**: string (Required): Protocol used to communicate with the storage account.
-
 ## DatastoreCredentials
 * **Discriminator**: credentialsType
 
@@ -1059,123 +990,34 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **userId**: string (Required): SQL database user name.
 
 
-## AccountKeyDatastoreCredentials
-### Properties
-* **credentialsType**: 'AccountKey' (Required): Credential type used to authentication with storage.
-* **secrets**: [AccountKeyDatastoreSecrets](#accountkeydatastoresecrets): Datastore account key secrets.
-
 ## AccountKeyDatastoreSecrets
 ### Properties
 * **key**: string: Storage account key.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' (Required): Enum to determine the datastore secrets type.
-
-## CertificateDatastoreCredentials
-### Properties
-* **authorityUrl**: string: Authority URL used for authentication.
-* **clientId**: string (Required): Service principal client ID.
-* **credentialsType**: 'Certificate' (Required): Credential type used to authentication with storage.
-* **resourceUri**: string: Resource the service principal has access to.
-* **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets): Datastore certificate secrets.
-* **tenantId**: string (Required): ID of the tenant to which the service principal belongs.
-* **thumbprint**: string (Required): Thumbprint of the certificate used for authentication.
 
 ## CertificateDatastoreSecrets
 ### Properties
 * **certificate**: string: Service principal certificate.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' (Required): Enum to determine the datastore secrets type.
 
-## NoneDatastoreCredentials
-### Properties
-* **credentialsType**: 'None' (Required): Credential type used to authentication with storage.
-* **secrets**: [NoneDatastoreSecrets](#nonedatastoresecrets): Empty/none datastore secret.
-
 ## NoneDatastoreSecrets
 ### Properties
 * **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' (Required): Enum to determine the datastore secrets type.
-
-## SasDatastoreCredentials
-### Properties
-* **credentialsType**: 'Sas' (Required): Credential type used to authentication with storage.
-* **secrets**: [SasDatastoreSecrets](#sasdatastoresecrets): Datastore SAS secrets.
 
 ## SasDatastoreSecrets
 ### Properties
 * **sasToken**: string: Storage container SAS token.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' (Required): Enum to determine the datastore secrets type.
 
-## ServicePrincipalDatastoreCredentials
-### Properties
-* **authorityUrl**: string: Authority URL used for authentication.
-* **clientId**: string (Required): Service principal client ID.
-* **credentialsType**: 'ServicePrincipal' (Required): Credential type used to authentication with storage.
-* **resourceUri**: string: Resource the service principal has access to.
-* **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets): Datastore Service Principal secrets.
-* **tenantId**: string (Required): ID of the tenant to which the service principal belongs.
-
 ## ServicePrincipalDatastoreSecrets
 ### Properties
 * **clientSecret**: string: Service principal secret.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' (Required): Enum to determine the datastore secrets type.
 
-## SqlAdminDatastoreCredentials
-### Properties
-* **credentialsType**: 'SqlAdmin' (Required): Credential type used to authentication with storage.
-* **secrets**: [SqlAdminDatastoreSecrets](#sqladmindatastoresecrets): Datastore SQL Admin secrets.
-* **userId**: string (Required): SQL database user name.
-
 ## SqlAdminDatastoreSecrets
 ### Properties
 * **password**: string: SQL database password.
 * **secretsType**: 'AccountKey' | 'Certificate' | 'None' | 'Sas' | 'ServicePrincipal' | 'SqlAdmin' (Required): Enum to determine the datastore secrets type.
-
-## AzureDataLakeGen1Contents
-### Properties
-* **contentsType**: 'AzureDataLakeGen1' (Required): Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
-* **storeName**: string (Required): Azure Data Lake store name.
-
-## AzureDataLakeGen2Contents
-### Properties
-* **accountName**: string (Required): Storage account name.
-* **containerName**: string (Required): Storage account container name.
-* **contentsType**: 'AzureDataLakeGen2' (Required): Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
-* **endpoint**: string (Required): Azure cloud endpoint for the storage account.
-* **protocol**: string (Required): Protocol used to communicate with the storage account.
-
-## AzureFileContents
-### Properties
-* **accountName**: string (Required): Storage account name.
-* **containerName**: string (Required): Storage account container name.
-* **contentsType**: 'AzureFile' (Required): Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
-* **endpoint**: string (Required): Azure cloud endpoint for the storage account.
-* **protocol**: string (Required): Protocol used to communicate with the storage account.
-
-## AzurePostgreSqlContents
-### Properties
-* **contentsType**: 'AzurePostgreSql' (Required): Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
-* **databaseName**: string (Required): Azure SQL database name.
-* **enableSSL**: bool: Whether the Azure PostgreSQL server requires SSL.
-* **endpoint**: string (Required): Azure cloud endpoint for the database.
-* **portNumber**: int (Required): Azure SQL server port.
-* **serverName**: string (Required): Azure SQL server name.
-
-## AzureSqlDatabaseContents
-### Properties
-* **contentsType**: 'AzureSqlDatabase' (Required): Storage type backing the datastore.
-* **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): Base definition for datastore credentials.
-* **databaseName**: string (Required): Azure SQL database name.
-* **endpoint**: string (Required): Azure cloud endpoint for the database.
-* **portNumber**: int (Required): Azure SQL server port.
-* **serverName**: string (Required): Azure SQL server name.
-
-## GlusterFsContents
-### Properties
-* **contentsType**: 'GlusterFs' (Required): Storage type backing the datastore.
-* **serverAddress**: string (Required): GlusterFS server address (can be the IP address or server name).
-* **volumeName**: string (Required): GlusterFS volume name.
 
 ## LinkedInfo
 ### Properties
@@ -1245,21 +1087,6 @@ The path is relative to the asset path which must contain a single Blob URI valu
 ## DockerImagePlatform
 ### Properties
 * **operatingSystemType**: 'Linux' | 'Windows': The type of operating system.
-
-## DockerBuild
-### Properties
-* **context**: string: Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
-The path is relative to the asset path which must contain a single Blob URI value.
-<seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
-* **dockerfile**: string (Required): Docker command line instructions to assemble an image.
-<seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
-* **dockerSpecificationType**: 'Build' (Required): Docker specification must be either Build or Image
-
-## DockerImage
-### Properties
-* **dockerImageUri**: string (Required): Image name of a custom base image.
-<seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
-* **dockerSpecificationType**: 'Image' (Required): Docker specification must be either Build or Image
 
 ## InferenceContainerProperties
 ### Properties
@@ -1359,26 +1186,6 @@ Private preview feature and only available to users on the allow list.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## CommandJob
-### Properties
-* **codeId**: string: ARM resource ID of the code asset.
-* **command**: string (Required): The command to execute on startup of the job. eg. "python train.py"
-* **compute**: [ComputeConfiguration](#computeconfiguration) (Required): Configuration for compute binding.
-* **distribution**: [DistributionConfiguration](#distributionconfiguration): Base definition for job distribution configuration.
-* **environmentId**: string: The ARM resource ID of the Environment specification for the job.
-* **environmentVariables**: [CommandJobEnvironmentVariables](#commandjobenvironmentvariables): Environment variables included in the job.
-* **experimentName**: string: The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-* **identity**: [IdentityConfiguration](#identityconfiguration): Base definition for identity configuration.
-* **inputDataBindings**: [CommandJobInputDataBindings](#commandjobinputdatabindings): Mapping of input data bindings used in the job.
-* **jobType**: 'Command' (Required): Specifies the type of job.
-* **output**: [JobOutput](#joboutput) (ReadOnly): Job output definition container information on where to find job output/logs.
-* **outputDataBindings**: [CommandJobOutputDataBindings](#commandjoboutputdatabindings): Mapping of output data bindings used in the job.
-* **parameters**: [CommandJobParameters](#commandjobparameters) (ReadOnly): Input parameters.
-* **priority**: int: Job priority for scheduling policy. Only applies to AMLCompute.
-Private preview feature and only available to users on the allow list.
-* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' (ReadOnly): The status of a job.
-* **timeout**: string: The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
-
 ## DistributionConfiguration
 * **Discriminator**: distributionType
 
@@ -1400,22 +1207,6 @@ Private preview feature and only available to users on the allow list.
 * **workerCount**: int: Number of workers. Overwrites the node count in compute binding.
 
 
-## Mpi
-### Properties
-* **distributionType**: 'Mpi' (Required): Specifies the type of distribution framework.
-* **processCountPerInstance**: int
-
-## PyTorch
-### Properties
-* **distributionType**: 'PyTorch' (Required): Specifies the type of distribution framework.
-* **processCount**: int: Total process count for the distributed job.
-
-## TensorFlow
-### Properties
-* **distributionType**: 'TensorFlow' (Required): Specifies the type of distribution framework.
-* **parameterServerCount**: int
-* **workerCount**: int: Number of workers. Overwrites the node count in compute binding.
-
 ## CommandJobEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -1436,17 +1227,6 @@ Private preview feature and only available to users on the allow list.
 * **objectId**: string: Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
 * **resourceId**: string: Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
 
-
-## AmlToken
-### Properties
-* **identityType**: 'AMLToken' (Required): Specifies the type of identity framework.
-
-## ManagedIdentity
-### Properties
-* **clientId**: string: Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
-* **identityType**: 'Managed' (Required): Specifies the type of identity framework.
-* **objectId**: string: Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
-* **resourceId**: string: Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
 
 ## CommandJobInputDataBindings
 ### Properties
@@ -1481,25 +1261,6 @@ Private preview feature and only available to users on the allow list.
 ### Additional Properties
 * **Additional Properties Type**: any
 
-## SweepJob
-### Properties
-* **algorithm**: 'Bayesian' | 'Grid' | 'Random' (Required)
-* **compute**: [ComputeConfiguration](#computeconfiguration) (Required): Configuration for compute binding.
-* **earlyTermination**: [EarlyTerminationPolicy](#earlyterminationpolicy): Early termination policies enable canceling poor-performing runs before they complete
-* **experimentName**: string: The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-* **identity**: [IdentityConfiguration](#identityconfiguration): Base definition for identity configuration.
-* **jobType**: 'Sweep' (Required): Specifies the type of job.
-* **maxConcurrentTrials**: int
-* **maxTotalTrials**: int
-* **objective**: [Objective](#objective) (Required)
-* **output**: [JobOutput](#joboutput) (ReadOnly): Job output definition container information on where to find job output/logs.
-* **priority**: int: Job priority for scheduling policy. Only applies to AMLCompute.
-Private preview feature and only available to users on the allow list.
-* **searchSpace**: [SweepJobSearchSpace](#sweepjobsearchspace) (Required): A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
-* **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' (ReadOnly): The status of a job.
-* **timeout**: string: The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
-* **trial**: [TrialComponent](#trialcomponent): Trial component definition.
-
 ## EarlyTerminationPolicy
 * **Discriminator**: policyType
 
@@ -1521,21 +1282,6 @@ Private preview feature and only available to users on the allow list.
 * **policyType**: 'TruncationSelection' (Required): Name of policy configuration
 * **truncationPercentage**: int
 
-
-## BanditPolicy
-### Properties
-* **policyType**: 'Bandit' (Required): Name of policy configuration
-* **slackAmount**: int
-* **slackFactor**: int
-
-## MedianStoppingPolicy
-### Properties
-* **policyType**: 'MedianStopping' (Required): Name of policy configuration
-
-## TruncationSelectionPolicy
-### Properties
-* **policyType**: 'TruncationSelection' (Required): Name of policy configuration
-* **truncationPercentage**: int
 
 ## Objective
 ### Properties
@@ -1649,16 +1395,6 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **annotationType**: 'Classification': Annotation type of text data.
 * **mediaType**: 'Text' (Required): Media type of the job.
 
-
-## LabelingJobImageProperties
-### Properties
-* **annotationType**: 'BoundingBox' | 'Classification' | 'InstanceSegmentation': Annotation type of image data.
-* **mediaType**: 'Image' (Required): Media type of the job.
-
-## LabelingJobTextProperties
-### Properties
-* **annotationType**: 'Classification': Annotation type of text data.
-* **mediaType**: 'Text' (Required): Media type of the job.
 
 ## MLAssistConfiguration
 ### Properties
@@ -1837,22 +1573,6 @@ optional
 * **scaleType**: 'Manual' (Required)
 
 
-## AutoScaleSettings
-### Properties
-* **pollingInterval**: string: The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
-* **scaleType**: 'Auto' (Required)
-* **targetUtilizationPercentage**: int
-
-## ManualScaleSettings
-### Properties
-* **instanceCount**: int
-* **scaleType**: 'Manual' (Required)
-
-## K8SOnlineDeployment
-### Properties
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): The resource requirements for the container (cpu and memory).
-* **endpointComputeType**: 'K8S' (Required): The compute type of the endpoint.
-
 ## ContainerResourceRequirements
 ### Properties
 * **cpu**: int: The minimum amount of CPU cores to be used by the container. More info:
@@ -1865,12 +1585,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
 * **memoryInGBLimit**: int: The maximum amount of memory (in GB) allowed to be used by the container. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-
-## ManagedOnlineDeployment
-### Properties
-* **endpointComputeType**: 'Managed' (Required): The compute type of the endpoint.
-* **instanceType**: string
-* **readinessProbe**: [ProbeSettings](#probesettings)
 
 ## TrackedResourceTags
 ### Properties

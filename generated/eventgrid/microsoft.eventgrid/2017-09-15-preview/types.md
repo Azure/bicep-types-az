@@ -43,19 +43,9 @@
 * **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription
 
 
-## EventHubEventSubscriptionDestination
-### Properties
-* **endpointType**: 'EventHub' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [EventHubEventSubscriptionDestinationProperties](#eventhubeventsubscriptiondestinationproperties): The properties for a event hub destination.
-
 ## EventHubEventSubscriptionDestinationProperties
 ### Properties
 * **resourceId**: string: The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
-
-## WebHookEventSubscriptionDestination
-### Properties
-* **endpointType**: 'WebHook' (Required): Type of the endpoint for the event subscription destination
-* **properties**: [WebHookEventSubscriptionDestinationProperties](#webhookeventsubscriptiondestinationproperties): Information about the webhook destination properties for an event subscription
 
 ## WebHookEventSubscriptionDestinationProperties
 ### Properties

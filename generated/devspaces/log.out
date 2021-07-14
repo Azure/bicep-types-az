@@ -51,4 +51,4 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ErrorDetails' with an undefine
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 6ms
-[3.8 s] Generation Complete
+[4.38 s] Generation Complete

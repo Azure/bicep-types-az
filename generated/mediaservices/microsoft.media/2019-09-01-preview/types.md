@@ -30,11 +30,6 @@
 * **assetName**: string (Required): Asset name
 
 
-## MediaGraphAssetSink
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphAssetSink' (Required): The discriminator for derived types.
-* **assetName**: string (Required): Asset name
-
 ## MediaGraphSource
 * **Discriminator**: @odata.type
 
@@ -46,12 +41,6 @@
 * **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials): Credentials to authenticate to Media Graph sources
 * **rtspUrl**: string (Required): RTSP URL
 
-
-## MediaGraphRtspSource
-### Properties
-* **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
-* **credentials**: [MediaGraphUserCredentials](#mediagraphusercredentials): Credentials to authenticate to Media Graph sources
-* **rtspUrl**: string (Required): RTSP URL
 
 ## MediaGraphUserCredentials
 ### Properties

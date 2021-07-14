@@ -170,25 +170,6 @@
 * **widevineTemplate**: string (Required): The Widevine template.
 
 
-## ContentKeyPolicyClearKeyConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyFairPlayConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration' (Required): The discriminator for derived types.
-* **ask**: any (Required): The key that must be used as FairPlay ASk.
-* **fairPlayPfx**: string (Required): The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-* **fairPlayPfxPassword**: string (Required): The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-* **rentalAndLeaseKeyType**: 'PersistentLimited' | 'PersistentUnlimited' | 'Undefined' | 'Unknown' (Required): The rental and lease key type.
-* **rentalDuration**: int (Required): The rental duration. Must be greater than or equal to 0.
-
-## ContentKeyPolicyPlayReadyConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration' (Required): The discriminator for derived types.
-* **licenses**: [ContentKeyPolicyPlayReadyLicense](#contentkeypolicyplayreadylicense)[] (Required): The PlayReady licenses.
-* **responseCustomData**: string: The custom response data.
-
 ## ContentKeyPolicyPlayReadyLicense
 ### Properties
 * **allowTestDevices**: bool (Required): A flag indicating whether test devices can use the license.
@@ -216,15 +197,6 @@
 * **keyId**: string (Required): The content key ID.
 
 
-## ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required): The discriminator for derived types.
-* **keyId**: string (Required): The content key ID.
-
 ## ContentKeyPolicyPlayReadyPlayRight
 ### Properties
 * **agcAndColorStripeRestriction**: int: Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
@@ -245,15 +217,6 @@
 ### Properties
 * **bestEffort**: bool (Required): Indicates whether this restriction is enforced on a Best Effort basis.
 * **configurationData**: int (Required): Configures the restriction control bits. Must be between 0 and 3 inclusive.
-
-## ContentKeyPolicyUnknownConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyWidevineConfiguration
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration' (Required): The discriminator for derived types.
-* **widevineTemplate**: string (Required): The Widevine template.
 
 ## ContentKeyPolicyRestriction
 * **Discriminator**: @odata.type
@@ -279,21 +242,6 @@
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required): The discriminator for derived types.
 
 
-## ContentKeyPolicyOpenRestriction
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyOpenRestriction' (Required): The discriminator for derived types.
-
-## ContentKeyPolicyTokenRestriction
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyTokenRestriction' (Required): The discriminator for derived types.
-* **alternateVerificationKeys**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey)[]: A list of alternative verification keys.
-* **audience**: string (Required): The audience for the token.
-* **issuer**: string (Required): The token issuer.
-* **openIdConnectDiscoveryDocument**: string: The OpenID connect discovery document.
-* **primaryVerificationKey**: [ContentKeyPolicyRestrictionTokenKey](#contentkeypolicyrestrictiontokenkey) (Required): Base class for Content Key Policy key for token validation. A derived class must be used to create a token key.
-* **requiredClaims**: [ContentKeyPolicyTokenClaim](#contentkeypolicytokenclaim)[]: A list of required token claims.
-* **restrictionTokenType**: 'Jwt' | 'Swt' | 'Unknown' (Required): The type of token.
-
 ## ContentKeyPolicyRestrictionTokenKey
 * **Discriminator**: @odata.type
 
@@ -315,30 +263,10 @@
 * **rawBody**: any (Required): The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
 
 
-## ContentKeyPolicyRsaTokenKey
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey' (Required): The discriminator for derived types.
-* **exponent**: any (Required): The RSA Parameter exponent
-* **modulus**: any (Required): The RSA Parameter modulus
-
-## ContentKeyPolicySymmetricTokenKey
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey' (Required): The discriminator for derived types.
-* **keyValue**: any (Required): The key value of the key
-
-## ContentKeyPolicyX509CertificateTokenKey
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey' (Required): The discriminator for derived types.
-* **rawBody**: any (Required): The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
-
 ## ContentKeyPolicyTokenClaim
 ### Properties
 * **claimType**: string: Token claim type.
 * **claimValue**: string: Token claim value.
-
-## ContentKeyPolicyUnknownRestriction
-### Properties
-* **@odata.type**: '#Microsoft.Media.ContentKeyPolicyUnknownRestriction' (Required): The discriminator for derived types.
 
 ## LiveEventProperties
 ### Properties
@@ -607,18 +535,6 @@
 * **audioInsightsOnly**: bool: Whether to only extract audio insights when processing a video file.
 
 
-## BuiltInStandardEncoderPreset
-### Properties
-* **@odata.type**: '#Microsoft.Media.BuiltInStandardEncoderPreset' (Required): The discriminator for derived types.
-* **presetName**: 'AACGoodQualityAudio' | 'AdaptiveStreaming' | 'H264MultipleBitrate1080p' | 'H264MultipleBitrate720p' | 'H264MultipleBitrateSD' (Required): The built-in preset to be used for encoding videos.
-
-## StandardEncoderPreset
-### Properties
-* **@odata.type**: '#Microsoft.Media.StandardEncoderPreset' (Required): The discriminator for derived types.
-* **codecs**: [Codec](#codec)[]: The list of codecs to be used when encoding the input video.
-* **filters**: [Filters](#filters): Describes all the filtering operations, such as de-interlacing, rotation etc. that are to be applied to the input media before encoding.
-* **formats**: [Format](#format)[]: The list of outputs to be produced by the encoder.
-
 ## Codec
 * **Discriminator**: @odata.type
 
@@ -655,26 +571,6 @@
 * **layers**: [PngLayer](#pnglayer)[]: A collection of output PNG image layers to be produced by the encoder.
 
 
-## AacAudio
-### Properties
-* **@odata.type**: '#Microsoft.Media.AacAudio' (Required): The discriminator for derived types.
-* **profile**: 'AacLc' | 'HeAacV1' | 'HeAacV2': The encoding profile to be used when encoding audio with AAC.
-
-## CopyAudio
-### Properties
-* **@odata.type**: '#Microsoft.Media.CopyAudio' (Required): The discriminator for derived types.
-
-## CopyVideo
-### Properties
-* **@odata.type**: '#Microsoft.Media.CopyVideo' (Required): The discriminator for derived types.
-
-## H264Video
-### Properties
-* **@odata.type**: '#Microsoft.Media.H264Video' (Required): The discriminator for derived types.
-* **complexity**: 'Balanced' | 'Quality' | 'Speed': Tells the encoder how to choose its encoding settings. The default value is Balanced.
-* **layers**: [H264Layer](#h264layer)[]: The collection of output H.264 layers to be produced by the encoder.
-* **sceneChangeDetection**: bool: Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
-
 ## H264Layer
 ### Properties
 * **@odata.type**: string (Required): The discriminator for derived types.
@@ -693,11 +589,6 @@
 * **slices**: int: The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
 * **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
 
-## JpgImage
-### Properties
-* **@odata.type**: '#Microsoft.Media.JpgImage' (Required): The discriminator for derived types.
-* **layers**: [JpgLayer](#jpglayer)[]: A collection of output JPEG image layers to be produced by the encoder.
-
 ## JpgLayer
 ### Properties
 * **@odata.type**: string (Required): The discriminator for derived types.
@@ -705,11 +596,6 @@
 * **label**: string: The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
 * **quality**: int: The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
 * **width**: string: The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
-
-## PngImage
-### Properties
-* **@odata.type**: '#Microsoft.Media.PngImage' (Required): The discriminator for derived types.
-* **layers**: [PngLayer](#pnglayer)[]: A collection of output PNG image layers to be produced by the encoder.
 
 ## PngLayer
 ### Properties
@@ -759,17 +645,6 @@
 * **position**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
 
 
-## AudioOverlay
-### Properties
-* **@odata.type**: '#Microsoft.Media.AudioOverlay' (Required): The discriminator for derived types.
-
-## VideoOverlay
-### Properties
-* **@odata.type**: '#Microsoft.Media.VideoOverlay' (Required): The discriminator for derived types.
-* **cropRectangle**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
-* **opacity**: int: The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
-* **position**: [Rectangle](#rectangle): Describes the properties of a rectangular window applied to the input media before processing it.
-
 ## Format
 * **Discriminator**: @odata.type
 
@@ -791,27 +666,6 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required): The discriminator for derived types.
 
-
-## JpgFormat
-### Properties
-* **@odata.type**: '#Microsoft.Media.JpgFormat' (Required): The discriminator for derived types.
-
-## Mp4Format
-### Properties
-* **@odata.type**: '#Microsoft.Media.Mp4Format' (Required): The discriminator for derived types.
-
-## PngFormat
-### Properties
-* **@odata.type**: '#Microsoft.Media.PngFormat' (Required): The discriminator for derived types.
-
-## TransportStreamFormat
-### Properties
-* **@odata.type**: '#Microsoft.Media.TransportStreamFormat' (Required): The discriminator for derived types.
-
-## VideoAnalyzerPreset
-### Properties
-* **@odata.type**: '#Microsoft.Media.VideoAnalyzerPreset' (Required): The discriminator for derived types.
-* **audioInsightsOnly**: bool: Whether to only extract audio insights when processing a video file.
 
 ## JobProperties
 ### Properties
@@ -850,21 +704,6 @@
 * **inputs**: [JobInput](#jobinput)[]: List of inputs to a Job.
 
 
-## JobInputAsset
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputAsset' (Required): The discriminator for derived types.
-* **assetName**: string (Required): The name of the input Asset.
-
-## JobInputHttp
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputHttp' (Required): The discriminator for derived types.
-* **baseUri**: string: Base URI for HTTPS job input. It will be concatenated with provided file names.   If no base uri is given, then the provided file list is assumed to be fully qualified uris.
-
-## JobInputs
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobInputs' (Required): The discriminator for derived types.
-* **inputs**: [JobInput](#jobinput)[]: List of inputs to a Job.
-
 ## JobOutput
 * **Discriminator**: @odata.type
 
@@ -890,9 +729,4 @@
 ### Properties
 * **code**: string (ReadOnly): Code describing the error detail.
 * **message**: string (ReadOnly): A human-readable representation of the error.
-
-## JobOutputAsset
-### Properties
-* **@odata.type**: '#Microsoft.Media.JobOutputAsset' (Required): The discriminator for derived types.
-* **assetName**: string (Required): The name of the output Asset.
 

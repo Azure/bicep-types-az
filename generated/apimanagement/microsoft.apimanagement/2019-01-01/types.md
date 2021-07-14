@@ -817,14 +817,6 @@ Instrumentation key for applicationInsights logger.
 * **displayName**: string (Required): User-friendly OpenID Connect Provider name.
 * **metadataEndpoint**: string (Required): Metadata endpoint URI.
 
-## Microsoft.ApiManagement/service/portalsettings
-### Properties
-* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'delegation' (Required, DeployTimeConstant): The resource name
-* **properties**: [PortalDelegationSettingsProperties](#portaldelegationsettingsproperties): Delegation settings contract properties.
-* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant): The resource type
-
 ## PortalDelegationSettingsProperties
 ### Properties
 * **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings properties.
@@ -840,25 +832,9 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **enabled**: bool: Enable or disable delegation for user registration.
 
-## Microsoft.ApiManagement/service/portalsettings
-### Properties
-* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'signin' (Required, DeployTimeConstant): The resource name
-* **properties**: [PortalSigninSettingProperties](#portalsigninsettingproperties): Sign-in settings contract properties.
-* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant): The resource type
-
 ## PortalSigninSettingProperties
 ### Properties
 * **enabled**: bool: Redirect Anonymous users to the Sign-In page.
-
-## Microsoft.ApiManagement/service/portalsettings
-### Properties
-* **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'signup' (Required, DeployTimeConstant): The resource name
-* **properties**: [PortalSignupSettingsProperties](#portalsignupsettingsproperties): Sign-up settings contract properties.
-* **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## PortalSignupSettingsProperties
 ### Properties

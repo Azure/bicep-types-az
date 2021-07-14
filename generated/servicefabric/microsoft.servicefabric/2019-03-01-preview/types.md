@@ -438,25 +438,6 @@ should be split between the partition ‘Count’
 * **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
 
 
-## NamedPartitionSchemeDescription
-### Properties
-* **Count**: int (Required): The number of partitions.
-* **Names**: string[] (Required): Array of size specified by the ‘Count’ parameter, for the names of the partitions.
-* **partitionScheme**: 'Named' (Required): Specifies how the service is partitioned.
-
-## SingletonPartitionSchemeDescription
-### Properties
-* **partitionScheme**: 'Singleton' (Required): Specifies how the service is partitioned.
-
-## UniformInt64RangePartitionSchemeDescription
-### Properties
-* **Count**: int (Required): The number of partitions.
-* **HighKey**: string (Required): String indicating the upper bound of the partition key range that
-should be split between the partition ‘Count’
-* **LowKey**: string (Required): String indicating the lower bound of the partition key range that
-should be split between the partition ‘Count’
-* **partitionScheme**: 'UniformInt64Range' (Required): Specifies how the service is partitioned.
-
 ## ServiceLoadMetricDescription
 ### Properties
 * **defaultLoad**: int: Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
@@ -469,21 +450,6 @@ should be split between the partition ‘Count’
 * **Discriminator**: Type
 
 ### Base Properties
-
-## StatefulServiceProperties
-### Properties
-* **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
-* **minReplicaSetSize**: int: The minimum replica set size as a number.
-* **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format (hh:mm:ss.s).
-* **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format (hh:mm:ss.s).
-* **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
-* **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format (hh:mm:ss.s).
-* **targetReplicaSetSize**: int: The target replica set size as a number.
-
-## StatelessServiceProperties
-### Properties
-* **instanceCount**: int: The instance count.
-* **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
 
 ## ProxyResourceTags
 ### Properties

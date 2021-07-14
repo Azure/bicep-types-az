@@ -107,26 +107,3 @@
 * **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 
 
-## EventGrid
-### Properties
-* **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
-* **accessKey2**: string: EventGrid secondary accesskey. Will be obfuscated during read.
-* **endpointType**: 'EventGrid' (Required): The type of Digital Twins endpoint
-* **TopicEndpoint**: string (Required): EventGrid Topic Endpoint
-
-## EventHub
-### Properties
-* **connectionStringPrimaryKey**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-* **connectionStringSecondaryKey**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-* **endpointType**: 'EventHub' (Required): The type of Digital Twins endpoint
-* **endpointUri**: string: The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
-* **entityPath**: string: The EventHub name in the EventHub namespace for identity-based authentication.
-
-## ServiceBus
-### Properties
-* **endpointType**: 'ServiceBus' (Required): The type of Digital Twins endpoint
-* **endpointUri**: string: The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
-* **entityPath**: string: The ServiceBus Topic name for identity-based authentication
-* **primaryConnectionString**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-* **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-

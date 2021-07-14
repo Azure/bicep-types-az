@@ -52,10 +52,13 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
   }
 
   function findTypesToWrite(types: TypeBase[], typesToWrite: TypeBase[], typeReference: TypeReference) {
-    function addToOrderedTypes(typeReference: TypeReference) {
+    function processTypeLinks(typeReference: TypeReference, skipParent: boolean) {
       // this is needed to avoid circular type references causing stack overflows
       if (typesToWrite.indexOf(types[typeReference.Index]) === -1) {
-        typesToWrite.push(types[typeReference.Index]);
+        if (!skipParent) {
+          typesToWrite.push(types[typeReference.Index]);
+        }
+
         findTypesToWrite(types, typesToWrite, typeReference);
       }
     }
@@ -64,18 +67,18 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
     switch (type.Type) {
       case TypeBaseKind.ArrayType:
         const arrayType = type as ArrayType;
-        addToOrderedTypes(arrayType.ItemType);
+        processTypeLinks(arrayType.ItemType, false);
 
         return;
       case TypeBaseKind.ObjectType:
         const objectType = type as ObjectType;
 
         for (const key of sortedKeys(objectType.Properties)) {
-          addToOrderedTypes(objectType.Properties[key].Type);
+          processTypeLinks(objectType.Properties[key].Type, false);
         }
 
         if (objectType.AdditionalProperties) {
-          addToOrderedTypes(objectType.AdditionalProperties);
+          processTypeLinks(objectType.AdditionalProperties, false);
         }
 
         return;
@@ -83,12 +86,13 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         const discriminatedObjectType = type as DiscriminatedObjectType;
 
         for (const key of sortedKeys(discriminatedObjectType.BaseProperties)) {
-          addToOrderedTypes(discriminatedObjectType.BaseProperties[key].Type);
+          processTypeLinks(discriminatedObjectType.BaseProperties[key].Type, false);
         }
 
         for (const key of sortedKeys(discriminatedObjectType.Elements)) {
           const element = discriminatedObjectType.Elements[key];
-          addToOrderedTypes(element);
+          // Don't display discriminated object elements as individual types
+          processTypeLinks(element, true);
         }
 
         return;

@@ -61,19 +61,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DatabaseProjectSummary
-### Properties
-* **instanceType**: 'Databases' (Required): Gets the Instance type.
-
-## ServersProjectSummary
-### Properties
-* **assessedCount**: int: Gets or sets the count of entities assessed.
-* **discoveredCount**: int: Gets or sets the count of entities discovered.
-* **instanceType**: 'Servers' (Required): Gets the Instance type.
-* **migratedCount**: int: Gets or sets the count of entities migrated.
-* **replicatingCount**: int: Gets or sets the count of entities being replicated.
-* **testMigratedCount**: int: Gets or sets the count of entities test migrated.
-
 ## MigrateProjectTags
 ### Properties
 * **additionalProperties**: string
@@ -119,20 +106,4 @@
 * **replicatingCount**: int: Gets or sets the count of servers being replicated.
 * **testMigratedCount**: int: Gets or sets the count of servers test migrated.
 
-
-## DatabasesSolutionSummary
-### Properties
-* **databaseInstancesAssessedCount**: int: Gets or sets the count of database instances assessed.
-* **databasesAssessedCount**: int: Gets or sets the count of databases assessed.
-* **instanceType**: 'Databases' (Required): Gets the Instance type.
-* **migrationReadyCount**: int: Gets or sets the count of databases ready for migration.
-
-## ServersSolutionSummary
-### Properties
-* **assessedCount**: int: Gets or sets the count of servers assessed.
-* **discoveredCount**: int: Gets or sets the count of servers discovered.
-* **instanceType**: 'Servers' (Required): Gets the Instance type.
-* **migratedCount**: int: Gets or sets the count of servers migrated.
-* **replicatingCount**: int: Gets or sets the count of servers being replicated.
-* **testMigratedCount**: int: Gets or sets the count of servers test migrated.
 

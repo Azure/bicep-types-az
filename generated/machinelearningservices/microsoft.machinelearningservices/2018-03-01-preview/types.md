@@ -100,11 +100,6 @@
 * **code**: string (Required): Error code.
 * **message**: string (Required): Error message.
 
-## AKS
-### Properties
-* **computeType**: 'AKS' (Required): The type of compute
-* **properties**: [AKSProperties](#aksproperties): AKS properties
-
 ## AKSProperties
 ### Properties
 * **agentCount**: int: Number of agents
@@ -126,11 +121,6 @@
 * **systemServiceType**: string (ReadOnly): The type of this system service.
 * **version**: string (ReadOnly): The version for this type.
 
-## BatchAI
-### Properties
-* **computeType**: 'BatchAI' (Required): The type of compute
-* **properties**: [BatchAIProperties](#batchaiproperties): BatchAI properties
-
 ## BatchAIProperties
 ### Properties
 * **scaleSettings**: [ScaleSettings](#scalesettings): scale settings for BatchAI Compute
@@ -142,15 +132,6 @@
 * **autoScaleEnabled**: bool: Enable or disable auto scale
 * **maxNodeCount**: int: Max number of nodes to use
 * **minNodeCount**: int: Min number of nodes to use
-
-## DataFactory
-### Properties
-* **computeType**: 'DataFactory' (Required): The type of compute
-
-## HDInsight
-### Properties
-* **computeType**: 'HDInsight' (Required): The type of compute
-* **properties**: [HDInsightProperties](#hdinsightproperties)
 
 ## HDInsightProperties
 ### Properties
@@ -164,11 +145,6 @@
 * **privateKeyData**: string: Private key data
 * **publicKeyData**: string: Public key data
 * **username**: string: Username of admin account
-
-## VirtualMachine
-### Properties
-* **computeType**: 'VirtualMachine' (Required): The type of compute
-* **properties**: [VirtualMachineProperties](#virtualmachineproperties)
 
 ## VirtualMachineProperties
 ### Properties

@@ -300,21 +300,11 @@ by the already existing properties
 * **postalCode**: string: The postal code.
 * **state**: string: The state name.
 
-## CloudEdgeManagementRole
-### Properties
-* **kind**: 'CloudEdgeManagement' (Required): Role type.
-* **properties**: [CloudEdgeManagementRoleProperties](#cloudedgemanagementroleproperties): CloudEdgeManagement Role properties.
-
 ## CloudEdgeManagementRoleProperties
 ### Properties
 * **edgeProfile**: [EdgeProfile](#edgeprofile) (ReadOnly): Details about Edge Profile for the resource
 * **localManagementStatus**: 'Disabled' | 'Enabled' (ReadOnly): Local Edge Management Status
 * **roleStatus**: 'Disabled' | 'Enabled' (Required): Local Edge Management Status
-
-## IoTRole
-### Properties
-* **kind**: 'IOT' (Required): Role type.
-* **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
 
 ## IoTRoleProperties
 ### Properties
@@ -372,11 +362,6 @@ by the already existing properties
 * **roleId**: string (ReadOnly): ID of the role to which share is mounted.
 * **roleType**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' (ReadOnly)
 * **shareId**: string (Required): ID of the share mounted to the role VM.
-
-## KubernetesRole
-### Properties
-* **kind**: 'Kubernetes' (Required): Role type.
-* **properties**: [KubernetesRoleProperties](#kubernetesroleproperties): Kubernetes role properties.
 
 ## KubernetesRoleProperties
 ### Properties
@@ -449,22 +434,12 @@ by the already existing properties
 * **posixCompliant**: 'Disabled' | 'Enabled' | 'Invalid' (ReadOnly): If provisioned storage is posix compliant.
 * **type**: string (ReadOnly): Storage class type.
 
-## MECRole
-### Properties
-* **kind**: 'MEC' (Required): Role type.
-* **properties**: [MECRoleProperties](#mecroleproperties): MEC role properties.
-
 ## MECRoleProperties
 ### Properties
 * **connectionString**: [AsymmetricEncryptedSecret](#asymmetricencryptedsecret): Represent the secrets intended for encryption with asymmetric key pair.
 * **controllerEndpoint**: string: Controller Endpoint.
 * **resourceUniqueId**: string: Unique Id of the Resource.
 * **roleStatus**: 'Disabled' | 'Enabled' (Required): Local Edge Management Status
-
-## ArcAddon
-### Properties
-* **kind**: 'ArcForKubernetes' (Required): Addon type.
-* **properties**: [ArcAddonProperties](#arcaddonproperties) (Required): Arc addon properties.
 
 ## ArcAddonProperties
 ### Properties
@@ -476,11 +451,6 @@ by the already existing properties
 * **resourceName**: string (Required): Arc resource Name
 * **subscriptionId**: string (Required): Arc resource subscription Id
 * **version**: string (ReadOnly): Arc resource version
-
-## IoTAddon
-### Properties
-* **kind**: 'IotEdge' (Required): Addon type.
-* **properties**: [IoTAddonProperties](#iotaddonproperties) (Required): IoT addon properties.
 
 ## IoTAddonProperties
 ### Properties
@@ -581,11 +551,6 @@ by the already existing properties
 * **dataFormat**: 'AzureFile' | 'BlockBlob' | 'PageBlob' (Required): Storage format used for the file represented by the share.
 * **refreshDetails**: [RefreshDetails](#refreshdetails) (ReadOnly): Fields for tracking refresh job on the share or container.
 
-## FileEventTrigger
-### Properties
-* **kind**: 'FileEvent' (Required): Trigger Kind.
-* **properties**: [FileTriggerProperties](#filetriggerproperties) (Required): File trigger properties.
-
 ## FileTriggerProperties
 ### Properties
 * **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
@@ -599,11 +564,6 @@ by the already existing properties
 ## FileSourceInfo
 ### Properties
 * **shareId**: string (Required): File share ID.
-
-## PeriodicTimerEventTrigger
-### Properties
-* **kind**: 'PeriodicTimerEvent' (Required): Trigger Kind.
-* **properties**: [PeriodicTimerProperties](#periodictimerproperties) (Required): Periodic timer trigger properties.
 
 ## PeriodicTimerProperties
 ### Properties

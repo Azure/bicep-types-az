@@ -52,12 +52,6 @@
 * **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): The type of dashboard part.
 
 
-## MarkdownPartMetadata
-### Properties
-* **inputs**: any[]: Input to dashboard part.
-* **settings**: [MarkdownPartMetadataSettings](#markdownpartmetadatasettings): Markdown part settings.
-* **type**: 'Extension/HubsExtension/PartType/MarkdownPart' (Required): The type of dashboard part.
-
 ## MarkdownPartMetadataSettings
 ### Properties
 * **content**: [MarkdownPartMetadataSettingsContent](#markdownpartmetadatasettingscontent): The content of markdown part.

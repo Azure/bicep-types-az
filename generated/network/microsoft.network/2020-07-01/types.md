@@ -783,6 +783,18 @@
 * **properties**: [VirtualRouterPeeringProperties](#virtualrouterpeeringproperties): Properties of the rule group.
 * **type**: 'Microsoft.Network/virtualRouters/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/virtualWans@2020-07-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualWanProperties](#virtualwanproperties): Parameters for VirtualWAN.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/virtualWans' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/vpnGateways@2020-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -2946,12 +2958,6 @@
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 
-## FirewallPolicyFilterRuleCollection
-### Properties
-* **action**: [FirewallPolicyFilterRuleCollectionAction](#firewallpolicyfilterrulecollectionaction): Properties of the FirewallPolicyFilterRuleCollectionAction.
-* **ruleCollectionType**: 'FirewallPolicyFilterRuleCollection' (Required): The type of the rule collection.
-* **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
-
 ## FirewallPolicyFilterRuleCollectionAction
 ### Properties
 * **type**: 'Allow' | 'Deny': The action type of a rule.
@@ -2999,52 +3005,10 @@
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 
 
-## ApplicationRule
-### Properties
-* **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
-* **fqdnTags**: string[]: List of FQDN Tags for this rule.
-* **protocols**: [FirewallPolicyRuleApplicationProtocol](#firewallpolicyruleapplicationprotocol)[]: Array of Application Protocols.
-* **ruleType**: 'ApplicationRule' (Required): Rule Type.
-* **sourceAddresses**: string[]: List of source IP addresses for this rule.
-* **sourceIpGroups**: string[]: List of source IpGroups for this rule.
-* **targetFqdns**: string[]: List of FQDNs for this rule.
-* **targetUrls**: string[]: List of Urls for this rule condition.
-* **terminateTLS**: bool: Terminate TLS connections for this rule.
-* **webCategories**: string[]: List of destination azure web categories.
-
 ## FirewallPolicyRuleApplicationProtocol
 ### Properties
 * **port**: int: Port number for the protocol, cannot be greater than 64000.
 * **protocolType**: 'Http' | 'Https': The application protocol type of a Rule.
-
-## NatRule
-### Properties
-* **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
-* **destinationPorts**: string[]: List of destination ports.
-* **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of FirewallPolicyRuleNetworkProtocols.
-* **ruleType**: 'NatRule' (Required): Rule Type.
-* **sourceAddresses**: string[]: List of source IP addresses for this rule.
-* **sourceIpGroups**: string[]: List of source IpGroups for this rule.
-* **translatedAddress**: string: The translated address for this NAT rule.
-* **translatedFqdn**: string: The translated FQDN for this NAT rule.
-* **translatedPort**: string: The translated port for this NAT rule.
-
-## NetworkRule
-### Properties
-* **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
-* **destinationFqdns**: string[]: List of destination FQDNs.
-* **destinationIpGroups**: string[]: List of destination IpGroups for this rule.
-* **destinationPorts**: string[]: List of destination ports.
-* **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP'[]: Array of FirewallPolicyRuleNetworkProtocols.
-* **ruleType**: 'NetworkRule' (Required): Rule Type.
-* **sourceAddresses**: string[]: List of source IP addresses for this rule.
-* **sourceIpGroups**: string[]: List of source IpGroups for this rule.
-
-## FirewallPolicyNatRuleCollection
-### Properties
-* **action**: [FirewallPolicyNatRuleCollectionAction](#firewallpolicynatrulecollectionaction): Properties of the FirewallPolicyNatRuleCollectionAction.
-* **ruleCollectionType**: 'FirewallPolicyNatRuleCollection' (Required): The type of the rule collection.
-* **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: List of rules included in a rule collection.
 
 ## FirewallPolicyNatRuleCollectionAction
 ### Properties
@@ -3799,6 +3763,22 @@
 * **peerAsn**: int: Peer ASN.
 * **peerIp**: string: Peer IP.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+
+## VirtualWanProperties
+### Properties
+* **allowBranchToBranchTraffic**: bool: True if branch to branch traffic is allowed.
+* **allowVnetToVnetTraffic**: bool: True if Vnet to Vnet traffic is allowed.
+* **disableVpnEncryption**: bool: Vpn encryption to be disabled or not.
+* **office365LocalBreakoutCategory**: 'All' | 'None' | 'Optimize' | 'OptimizeAndAllow' (ReadOnly): The office traffic category.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **type**: string: The type of the VirtualWAN.
+* **virtualHubs**: [SubResource](#subresource)[] (ReadOnly): List of VirtualHubs in the VirtualWAN.
+* **vpnSites**: [SubResource](#subresource)[] (ReadOnly): List of VpnSites in the VirtualWAN.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## VpnGatewayProperties
 ### Properties

@@ -59,36 +59,11 @@
 * **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
 
-## MabFileFolderProtectedItem
-### Properties
-* **computerName**: string: The name of the computer associated with this backup item.
-* **extendedInfo**: [MabFileFolderProtectedItemExtendedInfo](#mabfilefolderprotecteditemextendedinfo): Additional information for the backup item.
-* **friendlyName**: string: The friendly name of this backup item.
-* **isScheduledForDeferredDelete**: bool
-* **lastBackupStatus**: string: The status of last backup operation.
-* **protectedItemType**: 'MabFileFolderProtectedItem' (Required): The backup item type.
-* **protectionState**: string: The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError.
-
 ## MabFileFolderProtectedItemExtendedInfo
 ### Properties
 * **lastRefreshedAt**: string: The last day and time the agent synced with the service.
 * **oldestRecoveryPoint**: string: The oldest backup copy available.
 * **recoveryPointCount**: int: The number of backup copies associated with the backup item.
-
-## AzureIaaSClassicComputeVMProtectedItem
-### Properties
-* **protectedItemType**: 'Microsoft.ClassicCompute/virtualMachines' (Required): The backup item type.
-
-## AzureIaaSComputeVMProtectedItem
-### Properties
-* **protectedItemType**: 'Microsoft.Compute/virtualMachines' (Required): The backup item type.
-
-## AzureSqlProtectedItem
-### Properties
-* **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information for the Azure SQL specific backup item.
-* **protectedItemDataId**: string: The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services.
-* **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): The backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': The backup state of the backup item.
 
 ## AzureSqlProtectedItemExtendedInfo
 ### Properties
@@ -124,12 +99,6 @@
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
 
-## AzureIaaSVMProtectionPolicy
-### Properties
-* **backupManagementType**: 'AzureIaasVM' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
-
 ## RetentionPolicy
 * **Discriminator**: retentionPolicyType
 
@@ -147,14 +116,6 @@
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
 
-
-## LongTermRetentionPolicy
-### Properties
-* **dailySchedule**: [DailyRetentionSchedule](#dailyretentionschedule): Daily retention schedule.
-* **monthlySchedule**: [MonthlyRetentionSchedule](#monthlyretentionschedule): The monthly retention schedule.
-* **retentionPolicyType**: 'LongTermRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **weeklySchedule**: [WeeklyRetentionSchedule](#weeklyretentionschedule): Weekly retention schedule.
-* **yearlySchedule**: [YearlyRetentionSchedule](#yearlyretentionschedule): Yearly retention schedule.
 
 ## DailyRetentionSchedule
 ### Properties
@@ -204,11 +165,6 @@
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times for the retention policy.
 
-## SimpleRetentionPolicy
-### Properties
-* **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
-* **retentionPolicyType**: 'SimpleRetentionPolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-
 ## SchedulePolicy
 * **Discriminator**: schedulePolicyType
 
@@ -225,29 +181,6 @@
 * **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
 * **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
 
-
-## LongTermSchedulePolicy
-### Properties
-* **schedulePolicyType**: 'LongTermSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-
-## SimpleSchedulePolicy
-### Properties
-* **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
-* **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
-* **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
-* **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
-
-## AzureSqlProtectionPolicy
-### Properties
-* **backupManagementType**: 'AzureSql' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
-
-## MabProtectionPolicy
-### Properties
-* **backupManagementType**: 'MAB' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **retentionPolicy**: [RetentionPolicy](#retentionpolicy): The base class for retention policy.
-* **schedulePolicy**: [SchedulePolicy](#schedulepolicy): The base class for backup schedules.
 
 ## ResourceTags
 ### Properties

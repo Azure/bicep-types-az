@@ -369,15 +369,6 @@
 * **type**: 'Periodic' (Required): Describes the mode of backups.
 
 
-## ContinuousModeBackupPolicy
-### Properties
-* **type**: 'Continuous' (Required): Describes the mode of backups.
-
-## PeriodicModeBackupPolicy
-### Properties
-* **periodicModeProperties**: [PeriodicModeProperties](#periodicmodeproperties): Configuration values for periodic mode backup
-* **type**: 'Periodic' (Required): Describes the mode of backups.
-
 ## PeriodicModeProperties
 ### Properties
 * **backupIntervalInMinutes**: int: An integer representing the interval in minutes between two backups
@@ -458,15 +449,6 @@
 ### Properties
 * **id**: string: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
 * **ignoreMissingVNetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
-
-## DefaultRequestDatabaseAccountCreateUpdateProperties
-### Properties
-* **createMode**: 'Default' (Required): Enum to indicate the mode of account creation.
-
-## RestoreReqeustDatabaseAccountCreateUpdateProperties
-### Properties
-* **createMode**: 'Restore' (Required): Enum to indicate the mode of account creation.
-* **restoreParameters**: [RestoreParameters](#restoreparameters) (WriteOnly)
 
 ## SystemData
 ### Properties

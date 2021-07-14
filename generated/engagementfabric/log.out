@@ -11,4 +11,4 @@ WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 6ms
-[4.11 s] Generation Complete
+[4.76 s] Generation Complete
