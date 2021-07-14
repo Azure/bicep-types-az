@@ -5,8 +5,14 @@ namespace Azure.Bicep.Types.Az
 {
     public class TypeLocation
     {
-        public string? RelativePath { get; set; }
+        public TypeLocation(string relativePath, int index)
+        {
+            RelativePath = relativePath;
+            Index = index;
+        }
 
-        public int? Index { get; set; }
+        public string RelativePath { get; set; }
+
+        public int Index { get; set; }
     }
 }

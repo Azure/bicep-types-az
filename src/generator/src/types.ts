@@ -7,4 +7,5 @@ export enum TypeBaseKind {
   UnionType = 5,
   StringLiteralType = 6,
   DiscriminatedObj = 7,
+  ResourceFunctionType = 8,
 }
