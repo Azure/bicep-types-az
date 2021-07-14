@@ -363,15 +363,6 @@
 * **status**: 'Completed' | 'Failed' | 'InProgress' | 'Invalid': Describes the status of migration between backup policy types.
 * **targetType**: 'Continuous' | 'Periodic': Describes the mode of backups.
 
-## ContinuousModeBackupPolicy
-### Properties
-* **type**: 'Continuous' (Required): Describes the mode of backups.
-
-## PeriodicModeBackupPolicy
-### Properties
-* **periodicModeProperties**: [PeriodicModeProperties](#periodicmodeproperties): Configuration values for periodic mode backup
-* **type**: 'Periodic' (Required): Describes the mode of backups.
-
 ## PeriodicModeProperties
 ### Properties
 * **backupIntervalInMinutes**: int: An integer representing the interval in minutes between two backups

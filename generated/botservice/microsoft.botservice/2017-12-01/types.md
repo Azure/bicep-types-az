@@ -123,11 +123,6 @@
 * **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
 
 
-## DirectLineChannel
-### Properties
-* **channelName**: 'DirectLineChannel' (Required): The channel name
-* **properties**: [DirectLineChannelProperties](#directlinechannelproperties): The parameters to provide for the Direct Line channel.
-
 ## DirectLineChannelProperties
 ### Properties
 * **sites**: [DirectLineSite](#directlinesite)[]: The list of Direct Line sites
@@ -142,21 +137,11 @@
 * **siteId**: string (ReadOnly): Site Id
 * **siteName**: string (Required): Site name
 
-## EmailChannel
-### Properties
-* **channelName**: 'EmailChannel' (Required): The channel name
-* **properties**: [EmailChannelProperties](#emailchannelproperties): The parameters to provide for the Email channel.
-
 ## EmailChannelProperties
 ### Properties
 * **emailAddress**: string (Required): The email address
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **password**: string (Required): The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
-
-## FacebookChannel
-### Properties
-* **channelName**: 'FacebookChannel' (Required): The channel name
-* **properties**: [FacebookChannelProperties](#facebookchannelproperties): The parameters to provide for the Facebook channel.
 
 ## FacebookChannelProperties
 ### Properties
@@ -172,22 +157,12 @@
 * **accessToken**: string (Required): Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
 * **id**: string (Required): Page id
 
-## KikChannel
-### Properties
-* **channelName**: 'KikChannel' (Required): The channel name
-* **properties**: [KikChannelProperties](#kikchannelproperties): The parameters to provide for the Kik channel.
-
 ## KikChannelProperties
 ### Properties
 * **apiKey**: string (Required): Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **isValidated**: bool: Whether this channel is validated for the bot
 * **userName**: string (Required): The Kik user name
-
-## MsTeamsChannel
-### Properties
-* **channelName**: 'MsTeamsChannel' (Required): The channel name
-* **properties**: [MsTeamsChannelProperties](#msteamschannelproperties): The parameters to provide for the Microsoft Teams channel.
 
 ## MsTeamsChannelProperties
 ### Properties
@@ -197,11 +172,6 @@
 * **enableMessaging**: bool: Enable messaging for Microsoft Teams channel
 * **enableVideo**: bool: Enable video for Microsoft Teams channel
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
-
-## SkypeChannel
-### Properties
-* **channelName**: 'SkypeChannel' (Required): The channel name
-* **properties**: [SkypeChannelProperties](#skypechannelproperties): The parameters to provide for the Microsoft Teams channel.
 
 ## SkypeChannelProperties
 ### Properties
@@ -215,11 +185,6 @@
 * **groupsMode**: string: Group mode for Skype channel
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 
-## SlackChannel
-### Properties
-* **channelName**: 'SlackChannel' (Required): The channel name
-* **properties**: [SlackChannelProperties](#slackchannelproperties): The parameters to provide for the Slack channel.
-
 ## SlackChannelProperties
 ### Properties
 * **clientId**: string (Required): The Slack client id
@@ -232,11 +197,6 @@
 * **registerBeforeOAuthFlow**: bool (ReadOnly): Whether to register the settings before OAuth validation is performed. Recommended to True.
 * **verificationToken**: string (Required): The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
 
-## SmsChannel
-### Properties
-* **channelName**: 'SmsChannel' (Required): The channel name
-* **properties**: [SmsChannelProperties](#smschannelproperties): The parameters to provide for the Sms channel.
-
 ## SmsChannelProperties
 ### Properties
 * **accountSID**: string (Required): The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
@@ -245,21 +205,11 @@
 * **isValidated**: bool: Whether this channel is validated for the bot
 * **phone**: string (Required): The Sms phone
 
-## TelegramChannel
-### Properties
-* **channelName**: 'TelegramChannel' (Required): The channel name
-* **properties**: [TelegramChannelProperties](#telegramchannelproperties): The parameters to provide for the Telegram channel.
-
 ## TelegramChannelProperties
 ### Properties
 * **accessToken**: string (Required): The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **isValidated**: bool: Whether this channel is validated for the bot
-
-## WebChatChannel
-### Properties
-* **channelName**: 'WebChatChannel' (Required): The channel name
-* **properties**: [WebChatChannelProperties](#webchatchannelproperties): The parameters to provide for the Web Chat channel.
 
 ## WebChatChannelProperties
 ### Properties

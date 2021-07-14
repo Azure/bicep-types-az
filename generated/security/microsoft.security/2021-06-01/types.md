@@ -20,19 +20,9 @@
 * **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
 
 
-## AlertSyncSettings
-### Properties
-* **kind**: 'AlertSyncSettings' (Required): the kind of the settings string
-* **properties**: [AlertSyncSettingProperties](#alertsyncsettingproperties): The alert sync setting properties
-
 ## AlertSyncSettingProperties
 ### Properties
 * **enabled**: bool (Required): Is the alert sync setting enabled
-
-## DataExportSettings
-### Properties
-* **kind**: 'DataExportSettings' (Required): the kind of the settings string
-* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
 
 ## DataExportSettingProperties
 ### Properties

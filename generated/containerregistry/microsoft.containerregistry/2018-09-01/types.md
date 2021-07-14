@@ -104,41 +104,17 @@ the source registry during the run.
 * **tag**: string: The tag name.
 * **type**: 'BuildTime' | 'RunTime': The type of the base image dependency.
 
-## DockerBuildStep
-### Properties
-* **arguments**: [Argument](#argument)[]: The collection of override arguments to be used when executing this build step.
-* **dockerFilePath**: string (Required): The Docker file path relative to the source context.
-* **imageNames**: string[]: The fully qualified image names including the repository and tag.
-* **isPushEnabled**: bool: The value of this property indicates whether the image built should be pushed to the registry or not.
-* **noCache**: bool: The value of this property indicates whether the image cache is enabled or not.
-* **target**: string: The name of the target build stage for the docker build.
-* **type**: 'Docker' (Required): The type of the step.
-
 ## Argument
 ### Properties
 * **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
 * **name**: string (Required): The name of the argument.
 * **value**: string (Required): The value of the argument.
 
-## EncodedTaskStep
-### Properties
-* **encodedTaskContent**: string (Required): Base64 encoded value of the template/definition file content.
-* **encodedValuesContent**: string: Base64 encoded value of the parameters/values file content.
-* **type**: 'EncodedTask' (Required): The type of the step.
-* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
-
 ## SetValue
 ### Properties
 * **isSecret**: bool: Flag to indicate whether the value represents a secret or not.
 * **name**: string (Required): The name of the overridable value.
 * **value**: string (Required): The overridable value.
-
-## FileTaskStep
-### Properties
-* **taskFilePath**: string (Required): The task template/definition file path relative to the source context.
-* **type**: 'FileTask' (Required): The type of the step.
-* **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
-* **valuesFilePath**: string: The task values/parameters file path relative to the source context.
 
 ## TriggerProperties
 ### Properties

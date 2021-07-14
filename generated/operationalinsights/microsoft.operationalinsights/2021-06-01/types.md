@@ -107,6 +107,8 @@
 * **enableDataExport**: bool: Flag that indicate if data should be exported.
 * **enableLogAccessUsingOnlyResourcePermissions**: bool: Flag that indicate which permission to use - resource or workspace or both.
 * **immediatePurgeDataOn30Days**: bool: Flag that describes if we want to remove the data after 30 days.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PrivateLinkScopedResource
 ### Properties

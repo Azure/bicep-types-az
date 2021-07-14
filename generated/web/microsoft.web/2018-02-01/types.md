@@ -1183,28 +1183,10 @@ Validation should be performed at the PushRequestHandler.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SiteAuthSettingsProperties
 ### Properties
@@ -1276,28 +1258,10 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 * **unauthenticatedClientAction**: 'AllowAnonymous' | 'RedirectToLoginPage': The action to take when an unauthenticated client attempts to access the app.
 * **validateIssuer**: bool: Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
 
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
-* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## AzureStoragePropertyDictionaryResourceProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
-
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## BackupRequestProperties
 ### Properties
@@ -1324,15 +1288,6 @@ This is used during restore with overwrite connection strings options.
 * **databaseType**: 'LocalMySql' | 'MySql' | 'PostgreSql' | 'SqlAzure' (Required): Database type (e.g. SqlAzure / MySql).
 * **name**: string
 
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## ConnectionStringDictionaryProperties
 ### Properties
 ### Additional Properties
@@ -1342,15 +1297,6 @@ This is used during restore with overwrite connection strings options.
 ### Properties
 * **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'SQLAzure' | 'SQLServer' | 'ServiceBus' (Required): Type of database.
 * **value**: string (Required): Value of pair.
-
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SiteLogsConfigProperties
 ### Properties
@@ -1409,54 +1355,16 @@ Remove files older than X days.
 When reached old log files will be removed to make space for new ones.
 Value can range between 25 and 100.
 
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
-
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'slotConfigNames' (Required, DeployTimeConstant): The resource name
-* **properties**: [SlotConfigNames](#slotconfignames): Names for connection strings, application settings, and external Azure storage account configuration
-identifiers to be marked as sticky to the deployment slot and not moved during a swap operation.
-This is valid for all deployment slots in an app.
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SlotConfigNames
 ### Properties
 * **appSettingNames**: string[]: List of application settings names.
 * **azureStorageConfigNames**: string[]: List of external Azure storage account identifiers.
 * **connectionStringNames**: string[]: List of connection string names.
-
-## Microsoft.Web/sites/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **type**: 'Microsoft.Web/sites/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DeploymentProperties
 ### Properties
@@ -1618,106 +1526,25 @@ normally, use the POST /listKeys API instead.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'appsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'authsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteAuthSettingsProperties](#siteauthsettingsproperties): SiteAuthSettings resource specific properties
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'azurestorageaccounts' (Required, DeployTimeConstant): The resource name
-* **properties**: [AzureStoragePropertyDictionaryResourceProperties](#azurestoragepropertydictionaryresourceproperties): Azure storage accounts.
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AzureStoragePropertyDictionaryResourceProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [AzureStorageInfoValue](#azurestorageinfovalue)
 
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'backup' (Required, DeployTimeConstant): The resource name
-* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'connectionstrings' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionStringDictionaryProperties](#connectionstringdictionaryproperties): Connection strings.
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## ConnectionStringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ConnStringValueTypePair](#connstringvaluetypepair)
 
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'logs' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteLogsConfigProperties](#sitelogsconfigproperties): SiteLogsConfig resource specific properties
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'metadata' (Required, DeployTimeConstant): The resource name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
 ## StringDictionaryProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'pushsettings' (Required, DeployTimeConstant): The resource name
-* **properties**: [PushSettingsProperties](#pushsettingsproperties): PushSettings resource specific properties
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
-
-## Microsoft.Web/sites/slots/config
-### Properties
-* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource.
-* **name**: 'web' (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteConfig](#siteconfig): Configuration of an App Service app.
-* **type**: 'Microsoft.Web/sites/slots/config' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ResourceTags
 ### Properties

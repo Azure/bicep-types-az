@@ -126,18 +126,6 @@
 * **ruleType**: 'ProcessNotAllowed' (Required): The type of the custom alert rule.
 
 
-## ConnectionToIpNotAllowed
-### Properties
-* **ruleType**: 'ConnectionToIpNotAllowed' (Required): The type of the custom alert rule.
-
-## LocalUserNotAllowed
-### Properties
-* **ruleType**: 'LocalUserNotAllowed' (Required): The type of the custom alert rule.
-
-## ProcessNotAllowed
-### Properties
-* **ruleType**: 'ProcessNotAllowed' (Required): The type of the custom alert rule.
-
 ## DenylistCustomAlertRule
 ### Properties
 * **denylistValues**: string[] (Required): The values to deny. The format of the values depends on the rule type.
@@ -220,70 +208,6 @@
 #### Properties
 * **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
 
-
-## ActiveConnectionsNotInAllowedRange
-### Properties
-* **ruleType**: 'ActiveConnectionsNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## AmqpC2DMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'AmqpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## AmqpC2DRejectedMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'AmqpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## AmqpD2CMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'AmqpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## DirectMethodInvokesNotInAllowedRange
-### Properties
-* **ruleType**: 'DirectMethodInvokesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## FailedLocalLoginsNotInAllowedRange
-### Properties
-* **ruleType**: 'FailedLocalLoginsNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## FileUploadsNotInAllowedRange
-### Properties
-* **ruleType**: 'FileUploadsNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## HttpC2DMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'HttpC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## HttpC2DRejectedMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'HttpC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## HttpD2CMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'HttpD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## MqttC2DMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'MqttC2DMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## MqttC2DRejectedMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'MqttC2DRejectedMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## MqttD2CMessagesNotInAllowedRange
-### Properties
-* **ruleType**: 'MqttD2CMessagesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## QueuePurgesNotInAllowedRange
-### Properties
-* **ruleType**: 'QueuePurgesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## TwinUpdatesNotInAllowedRange
-### Properties
-* **ruleType**: 'TwinUpdatesNotInAllowedRange' (Required): The type of the custom alert rule.
-
-## UnauthorizedOperationsNotInAllowedRange
-### Properties
-* **ruleType**: 'UnauthorizedOperationsNotInAllowedRange' (Required): The type of the custom alert rule.
 
 ## TimeWindowCustomAlertRule
 * **Discriminator**: ruleType
@@ -440,11 +364,6 @@
 * **alertsToAdmins**: 'Off' | 'On' (Required): Whether to send security alerts notifications to subscription admins
 * **email**: string (Required): The email of this security contact
 * **phone**: string: The phone number of this security contact
-
-## DataExportSetting
-### Properties
-* **kind**: 'DataExportSetting' (Required): the kind of the settings string (DataExportSetting)
-* **properties**: [DataExportSettingProperties](#dataexportsettingproperties): The data export setting properties
 
 ## DataExportSettingProperties
 ### Properties

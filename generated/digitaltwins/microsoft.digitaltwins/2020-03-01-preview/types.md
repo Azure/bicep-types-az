@@ -69,22 +69,3 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## EventGrid
-### Properties
-* **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read
-* **accessKey2**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read
-* **endpointType**: 'EventGrid' (Required): The type of Digital Twins endpoint
-* **TopicEndpoint**: string: EventGrid Topic Endpoint
-
-## EventHub
-### Properties
-* **connectionString-PrimaryKey**: string (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read
-* **connectionString-SecondaryKey**: string (Required): SecondaryConnectionString of the endpoint. Will be obfuscated during read
-* **endpointType**: 'EventHub' (Required): The type of Digital Twins endpoint
-
-## ServiceBus
-### Properties
-* **endpointType**: 'ServiceBus' (Required): The type of Digital Twins endpoint
-* **primaryConnectionString**: string (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read
-* **secondaryConnectionString**: string (Required): SecondaryConnectionString of the endpoint. Will be obfuscated during read
-

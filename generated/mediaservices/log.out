@@ -15,7 +15,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 18ms
+INFORMATION: autorest.bicep took 20ms
 Processing batch task - {"tag":"microsoft.media-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -81,7 +81,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 18ms
+INFORMATION: autorest.bicep took 22ms
 Processing batch task - {"tag":"microsoft.media-2021-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -215,7 +215,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 15ms
+INFORMATION: autorest.bicep took 22ms
 Processing batch task - {"tag":"microsoft.media-2020-02-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -226,7 +226,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined ty
 WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.media-2019-09-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -375,7 +375,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 23ms
+INFORMATION: autorest.bicep took 29ms
 Processing batch task - {"tag":"microsoft.media-2015-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -414,7 +414,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an und
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.media-2018-03-30-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -478,7 +478,7 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 10ms
 Processing batch task - {"tag":"microsoft.media-2018-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -593,4 +593,4 @@ WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 WARNING: Unrecognized property type: byte-array. Returning 'any'.
 INFORMATION: autorest.bicep took 11ms
-[55.46 s] Generation Complete
+[68.71 s] Generation Complete

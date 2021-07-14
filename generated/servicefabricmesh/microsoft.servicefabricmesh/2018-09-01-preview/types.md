@@ -101,15 +101,6 @@
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
 
-## AzureInternalMonitoringPipelineSinkDescription
-### Properties
-* **accountName**: string: Azure Internal monitoring pipeline account.
-* **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Anything
-* **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
-* **maConfigUrl**: string: Azure Internal monitoring agent configuration.
-* **namespace**: string: Azure Internal monitoring pipeline account namespace.
-
 ## ServiceResourceDescription
 ### Properties
 * **id**: string (ReadOnly): Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -150,13 +141,6 @@
 * **scaleIncrement**: int (Required): Each time auto scaling is performed, this number of containers will be added or removed.
 
 
-## AddRemoveReplicaScalingMechanism
-### Properties
-* **kind**: 'AddRemoveReplica' (Required): The type of auto scaling mechanism.
-* **maxCount**: int (Required): Maximum number of containers (scale up won't be performed above this number).
-* **minCount**: int (Required): Minimum number of containers (scale down won't be performed below this number).
-* **scaleIncrement**: int (Required): Each time auto scaling is performed, this number of containers will be added or removed.
-
 ## AutoScalingTrigger
 * **Discriminator**: kind
 
@@ -170,14 +154,6 @@
 * **upperLoadThreshold**: int (Required): Upper load threshold (if average load is above this threshold, service will scale up).
 
 
-## AverageLoadScalingTrigger
-### Properties
-* **kind**: 'AverageLoad' (Required): The type of auto scaling trigger
-* **lowerLoadThreshold**: int (Required): Lower load threshold (if average load is below this threshold, service will scale down).
-* **metric**: [AutoScalingMetric](#autoscalingmetric) (Required): Describes the metric that is used for triggering auto scaling operation. Derived classes will describe resources or metrics.
-* **scaleIntervalInSeconds**: int (Required): Scale interval that indicates how often will this trigger be checked.
-* **upperLoadThreshold**: int (Required): Upper load threshold (if average load is above this threshold, service will scale up).
-
 ## AutoScalingMetric
 * **Discriminator**: kind
 
@@ -187,11 +163,6 @@
 * **kind**: 'Resource' (Required): The type of auto scaling metric
 * **name**: 'cpu' | 'memoryInGB' (Required): Enumerates the resources that are used for triggering auto scaling.
 
-
-## AutoScalingResourceMetric
-### Properties
-* **kind**: 'Resource' (Required): The type of auto scaling metric
-* **name**: 'cpu' | 'memoryInGB' (Required): Enumerates the resources that are used for triggering auto scaling.
 
 ## ContainerCodePackageProperties
 ### Properties
@@ -310,11 +281,6 @@
 * **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size
 
 
-## ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
-### Properties
-* **kind**: 'ServiceFabricVolumeDisk' (Required): Specifies the application-scoped volume kind.
-* **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size
-
 ## NetworkRef
 ### Properties
 * **endpointRefs**: [EndpointRef](#endpointref)[]: A list of endpoints that are exposed on this network.
@@ -406,11 +372,6 @@
 * **networkAddressPrefix**: string: Address space for a container network. This is expressed in CIDR notation.
 
 
-## LocalNetworkResourceProperties
-### Properties
-* **kind**: 'Local' (Required): The type of a Service Fabric container network.
-* **networkAddressPrefix**: string: Address space for a container network. This is expressed in CIDR notation.
-
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
@@ -429,10 +390,6 @@
 #### Properties
 * **kind**: 'inlinedValue' (Required): Describes the kind of secret.
 
-
-## InlinedValueSecretResourceProperties
-### Properties
-* **kind**: 'inlinedValue' (Required): Describes the kind of secret.
 
 ## TrackedResourceTags
 ### Properties

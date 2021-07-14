@@ -37,7 +37,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: Resource type microsoft.blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}' has no body defined.
-INFORMATION: autorest.bicep took 9ms
+INFORMATION: autorest.bicep took 12ms
 Processing batch task - {"tag":"microsoft.blueprint-2018-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -74,4 +74,4 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 5ms
-[7.65 s] Generation Complete
+[9.2 s] Generation Complete

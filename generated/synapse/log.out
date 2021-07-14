@@ -107,7 +107,13 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 26ms
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 35ms
 Processing batch task - {"tag":"microsoft.synapse-2021-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -211,7 +217,13 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 21ms
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 26ms
 Processing batch task - {"tag":"microsoft.synapse-2021-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -354,7 +366,13 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 20ms
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 23ms
 Processing batch task - {"tag":"microsoft.synapse-2021-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -453,7 +471,13 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 23ms
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 25ms
 Processing batch task - {"tag":"microsoft.synapse-2019-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -560,14 +584,20 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudErrorBody' 
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 16ms
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 17ms
 Processing batch task - {"tag":"microsoft.synapse-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.synapse-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
@@ -666,5 +696,11 @@ WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointC
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 17ms
-[110.77 s] Generation Complete
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+WARNING: Unrecognized property type: any-object. Returning 'any'.
+INFORMATION: autorest.bicep took 20ms
+[127.36 s] Generation Complete

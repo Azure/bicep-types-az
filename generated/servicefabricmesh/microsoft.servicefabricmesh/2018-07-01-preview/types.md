@@ -68,15 +68,6 @@
 * **namespace**: string: Azure Internal monitoring pipeline account namespace.
 
 
-## AzureInternalMonitoringPipelineSinkDescription
-### Properties
-* **accountName**: string: Azure Internal monitoring pipeline account.
-* **autoKeyConfigUrl**: string: Azure Internal monitoring pipeline autokey associated with the certificate.
-* **fluentdConfigUrl**: any: Anything
-* **kind**: 'AzureInternalMonitoringPipeline' (Required): The kind of DiagnosticsSink.
-* **maConfigUrl**: string: Azure Internal monitoring agent configuration.
-* **namespace**: string: Azure Internal monitoring pipeline account namespace.
-
 ## ServiceResourceDescription
 ### Properties
 * **id**: string (ReadOnly): Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}

@@ -760,12 +760,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
 
 
-## ManagedIntegrationRuntime
-### Properties
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
-* **type**: 'Managed' (Required): Type of integration runtime.
-* **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
-
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
 * **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource properties for managed integration runtime.
@@ -779,18 +773,24 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **nodeSize**: string: The node size requirement to managed integration runtime.
 * **numberOfNodes**: int: The required number of nodes for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeVNetProperties
 ### Properties
 * **publicIPs**: string[]: Resource IDs of the public IP addresses that this integration runtime will use.
 * **subnet**: string: The name of the subnet this integration runtime will join.
 * **vNetId**: string: The ID of the VNet that this integration runtime will join.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
@@ -800,6 +800,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
@@ -807,10 +809,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SecureString
 ### Properties
-* **type**: 'SecureString' (Required): Type of the secret.
+* **type**: string (Required): Type of the secret.
 * **value**: string (Required): Value of secure string.
 
 ## IntegrationRuntimeCustomSetupScriptProperties
@@ -849,11 +853,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Environment variable custom setup type properties.
 
 
-## CmdkeySetup
-### Properties
-* **type**: 'CmdkeySetup' (Required): The type of custom setup.
-* **typeProperties**: [CmdkeySetupTypeProperties](#cmdkeysetuptypeproperties) (Required): Cmdkey command custom setup type properties.
-
 ## CmdkeySetupTypeProperties
 ### Properties
 * **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
@@ -870,30 +869,15 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **value**: string (Required): Value of secure string.
 
 
-## ComponentSetup
-### Properties
-* **type**: 'ComponentSetup' (Required): The type of custom setup.
-* **typeProperties**: [LicensedComponentSetupTypeProperties](#licensedcomponentsetuptypeproperties) (Required): Installation of licensed component setup type properties.
-
 ## LicensedComponentSetupTypeProperties
 ### Properties
 * **componentName**: string (Required): The name of the 3rd party component.
 * **licenseKey**: [SecretBase](#secretbase): The base definition of a secret type.
 
-## EnvironmentVariableSetup
-### Properties
-* **type**: 'EnvironmentVariableSetup' (Required): The type of custom setup.
-* **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Environment variable custom setup type properties.
-
 ## EnvironmentVariableSetupTypeProperties
 ### Properties
 * **variableName**: string (Required): The name of the environment variable.
 * **variableValue**: string (Required): The value of the environment variable.
-
-## SelfHostedIntegrationRuntime
-### Properties
-* **type**: 'SelfHosted' (Required): Type of integration runtime.
-* **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
 
 ## SelfHostedIntegrationRuntimeTypeProperties
 ### Properties
@@ -913,16 +897,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
 * **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
-
-## LinkedIntegrationRuntimeKeyAuthorization
-### Properties
-* **authorizationType**: 'Key' (Required): The authorization type for integration runtime sharing.
-* **key**: [SecureString](#securestring) (Required): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
-
-## LinkedIntegrationRuntimeRbacAuthorization
-### Properties
-* **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
-* **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
 ## KeyProperties
 ### Properties
@@ -959,11 +933,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ReadWriteDatabase
-### Properties
-* **kind**: 'ReadWrite' (Required): Kind of the database
-* **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
-
 ## ReadWriteDatabaseProperties
 ### Properties
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
@@ -975,11 +944,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## DatabaseStatistics
 ### Properties
 * **size**: int: The database size - the total size of compressed data and index in bytes.
-
-## EventGridDataConnection
-### Properties
-* **kind**: 'EventGrid' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventGridConnectionProperties](#eventgridconnectionproperties): Class representing the Kusto event grid connection properties.
 
 ## EventGridConnectionProperties
 ### Properties
@@ -993,11 +957,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
 
-## EventHubDataConnection
-### Properties
-* **kind**: 'EventHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [EventHubConnectionProperties](#eventhubconnectionproperties): Class representing the Kusto event hub connection properties.
-
 ## EventHubConnectionProperties
 ### Properties
 * **compression**: 'GZip' | 'None': The compression type
@@ -1008,11 +967,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
-
-## IotHubDataConnection
-### Properties
-* **kind**: 'IotHub' (Required): Kind of the endpoint for the data connection
-* **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 ## IotHubConnectionProperties
 ### Properties

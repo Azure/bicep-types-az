@@ -12,5 +12,5 @@ WARNING: Semantic validation was skipped.
 WARNING (PreCheck/SchemaMissingType): The schema 'VideoAnalyzerProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 8ms
-[5.79 s] Generation Complete
+INFORMATION: autorest.bicep took 10ms
+[6.72 s] Generation Complete

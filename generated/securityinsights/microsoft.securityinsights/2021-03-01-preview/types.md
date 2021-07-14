@@ -276,11 +276,6 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
-## FusionAlertRule
-### Properties
-* **kind**: 'Fusion' (Required): The kind of the alert rule
-* **properties**: [FusionAlertRuleProperties](#fusionalertruleproperties): Fusion alert rule base property bag.
-
 ## FusionAlertRuleProperties
 ### Properties
 * **alertRuleTemplateName**: string (Required): The Name of the alert rule template used to create this rule.
@@ -290,11 +285,6 @@
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity of the alert
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
-
-## MicrosoftSecurityIncidentCreationAlertRule
-### Properties
-* **kind**: 'MicrosoftSecurityIncidentCreation' (Required): The kind of the alert rule
-* **properties**: [MicrosoftSecurityIncidentCreationAlertRuleProperties](#microsoftsecurityincidentcreationalertruleproperties): MicrosoftSecurityIncidentCreation rule property bag.
 
 ## MicrosoftSecurityIncidentCreationAlertRuleProperties
 ### Properties
@@ -308,11 +298,6 @@
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' (Required): The alerts' productName on which the cases will be generated
 * **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium'[]: the alerts' severities on which the cases will be generated
 
-## MLBehaviorAnalyticsAlertRule
-### Properties
-* **kind**: 'MLBehaviorAnalytics' (Required): The kind of the alert rule
-* **properties**: [MLBehaviorAnalyticsAlertRuleProperties](#mlbehavioranalyticsalertruleproperties): MLBehaviorAnalytics alert rule base property bag.
-
 ## MLBehaviorAnalyticsAlertRuleProperties
 ### Properties
 * **alertRuleTemplateName**: string (Required): The Name of the alert rule template used to create this rule.
@@ -322,11 +307,6 @@
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert rule has been modified.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (ReadOnly): The severity of the alert
 * **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation'[] (ReadOnly): The tactics of the alert rule
-
-## ScheduledAlertRule
-### Properties
-* **kind**: 'Scheduled' (Required): The kind of the alert rule
-* **properties**: [ScheduledAlertRuleProperties](#scheduledalertruleproperties): Scheduled alert rule base property bag.
 
 ## ScheduledAlertRuleProperties
 ### Properties
@@ -391,11 +371,6 @@
 * **matchingMethod**: 'AllEntities' | 'AnyAlert' | 'Selected' (Required): Grouping matching method. When method is Selected at least one of groupByEntities, groupByAlertDetails, groupByCustomDetails must be provided and not empty.
 * **reopenClosedIncident**: bool (Required): Re-open closed matching incidents
 
-## ThreatIntelligenceAlertRule
-### Properties
-* **kind**: 'ThreatIntelligence' (Required): The kind of the alert rule
-* **properties**: [ThreatIntelligenceAlertRuleProperties](#threatintelligencealertruleproperties): Threat Intelligence alert rule base property bag.
-
 ## ThreatIntelligenceAlertRuleProperties
 ### Properties
 * **alertRuleTemplateName**: string (Required): The Name of the alert rule template used to create this rule.
@@ -412,11 +387,6 @@
 * **triggerUri**: string (Required, WriteOnly)
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
-## AwsCloudTrailDataConnector
-### Properties
-* **kind**: 'AmazonWebServicesCloudTrail' (Required): The data connector kind
-* **properties**: [AwsCloudTrailDataConnectorProperties](#awscloudtraildataconnectorproperties): Amazon Web Services CloudTrail data connector properties.
-
 ## AwsCloudTrailDataConnectorProperties
 ### Properties
 * **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
@@ -429,11 +399,6 @@
 ## AwsCloudTrailDataConnectorDataTypesLogs
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
-
-## AADDataConnector
-### Properties
-* **kind**: 'AzureActiveDirectory' (Required): The data connector kind
-* **properties**: [AADDataConnectorProperties](#aaddataconnectorproperties): AAD (Azure Active Directory) data connector properties.
 
 ## AADDataConnectorProperties
 ### Properties
@@ -448,30 +413,15 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## AatpDataConnector
-### Properties
-* **kind**: 'AzureAdvancedThreatProtection' (Required): The data connector kind
-* **properties**: [AatpDataConnectorProperties](#aatpdataconnectorproperties): AATP (Azure Advanced Threat Protection) data connector properties.
-
 ## AatpDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
 
-## ASCDataConnector
-### Properties
-* **kind**: 'AzureSecurityCenter' (Required): The data connector kind
-* **properties**: [ASCDataConnectorProperties](#ascdataconnectorproperties): ASC (Azure Security Center) data connector properties.
-
 ## ASCDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **subscriptionId**: string: The subscription id to connect to, and get the data from.
-
-## Dynamics365DataConnector
-### Properties
-* **kind**: 'Dynamics365' (Required): The data connector kind
-* **properties**: [Dynamics365DataConnectorProperties](#dynamics365dataconnectorproperties): Dynamics365 data connector properties.
 
 ## Dynamics365DataConnectorProperties
 ### Properties
@@ -485,11 +435,6 @@
 ## Dynamics365DataConnectorDataTypesDynamics365CdsActivities
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
-
-## CodelessUiDataConnector
-### Properties
-* **kind**: 'GenericUI' (Required): The data connector kind
-* **properties**: [CodelessParameters](#codelessparameters): Represents Codeless UI data connector
 
 ## CodelessParameters
 ### Properties
@@ -572,11 +517,6 @@
 * **description**: string: The sample query description
 * **query**: string: the sample query
 
-## McasDataConnector
-### Properties
-* **kind**: 'MicrosoftCloudAppSecurity' (Required): The data connector kind
-* **properties**: [McasDataConnectorProperties](#mcasdataconnectorproperties): MCAS (Microsoft Cloud App Security) data connector properties.
-
 ## McasDataConnectorProperties
 ### Properties
 * **dataTypes**: [McasDataConnectorDataTypes](#mcasdataconnectordatatypes) (Required): The available data types for MCAS (Microsoft Cloud App Security) data connector.
@@ -587,20 +527,10 @@
 * **alerts**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon) (Required): Common field for data type in data connectors.
 * **discoveryLogs**: [DataConnectorDataTypeCommon](#dataconnectordatatypecommon): Common field for data type in data connectors.
 
-## MdatpDataConnector
-### Properties
-* **kind**: 'MicrosoftDefenderAdvancedThreatProtection' (Required): The data connector kind
-* **properties**: [MdatpDataConnectorProperties](#mdatpdataconnectorproperties): MDATP (Microsoft Defender Advanced Threat Protection) data connector properties.
-
 ## MdatpDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
-
-## MstiDataConnector
-### Properties
-* **kind**: 'MicrosoftThreatIntelligence' (Required): The data connector kind
-* **properties**: [MstiDataConnectorProperties](#mstidataconnectorproperties): Microsoft Threat Intelligence data connector properties.
 
 ## MstiDataConnectorProperties
 ### Properties
@@ -622,11 +552,6 @@
 * **lookbackPeriod**: string (Required): lookback period
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## MTPDataConnector
-### Properties
-* **kind**: 'MicrosoftThreatProtection' (Required): The data connector kind
-* **properties**: [MTPDataConnectorProperties](#mtpdataconnectorproperties): MTP (Microsoft Threat Protection) data connector properties.
-
 ## MTPDataConnectorProperties
 ### Properties
 * **dataTypes**: [MTPDataConnectorDataTypes](#mtpdataconnectordatatypes) (Required): The available data types for Microsoft Threat Protection Platforms data connector.
@@ -639,11 +564,6 @@
 ## MTPDataConnectorDataTypesIncidents
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
-
-## OfficeDataConnector
-### Properties
-* **kind**: 'Office365' (Required): The data connector kind
-* **properties**: [OfficeDataConnectorProperties](#officedataconnectorproperties): Office data connector properties.
 
 ## OfficeDataConnectorProperties
 ### Properties
@@ -668,20 +588,10 @@
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
 
-## OfficeATPDataConnector
-### Properties
-* **kind**: 'OfficeATP' (Required): The data connector kind
-* **properties**: [OfficeATPDataConnectorProperties](#officeatpdataconnectorproperties): OfficeATP (Office 365 Advanced Threat Protection) data connector properties.
-
 ## OfficeATPDataConnectorProperties
 ### Properties
 * **dataTypes**: [AlertsDataTypeOfDataConnector](#alertsdatatypeofdataconnector): Alerts data type for data connectors.
 * **tenantId**: string (Required): The tenant id to connect to, and get the data from.
-
-## TIDataConnector
-### Properties
-* **kind**: 'ThreatIntelligence' (Required): The data connector kind
-* **properties**: [TIDataConnectorProperties](#tidataconnectorproperties): TI (Threat Intelligence) data connector properties.
 
 ## TIDataConnectorProperties
 ### Properties
@@ -696,11 +606,6 @@
 ## TIDataConnectorDataTypesIndicators
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
-
-## TiTaxiiDataConnector
-### Properties
-* **kind**: 'ThreatIntelligenceTaxii' (Required): The data connector kind
-* **properties**: [TiTaxiiDataConnectorProperties](#titaxiidataconnectorproperties): Threat Intelligence TAXII data connector properties.
 
 ## TiTaxiiDataConnectorProperties
 ### Properties
@@ -722,11 +627,6 @@
 ## TiTaxiiDataConnectorDataTypesTaxiiClient
 ### Properties
 * **state**: 'Disabled' | 'Enabled' (Required): Describe whether this data type connection is enabled or not.
-
-## ActivityCustomEntityQuery
-### Properties
-* **kind**: 'Activity' (Required): the entity query kind
-* **properties**: [ActivityEntityQueriesProperties](#activityentityqueriesproperties): Describes activity entity query properties
 
 ## ActivityEntityQueriesProperties
 ### Properties
@@ -750,11 +650,6 @@
 ## ActivityEntityQueriesPropertiesQueryDefinitions
 ### Properties
 * **query**: string: The Activity query to run on a given entity
-
-## ExpansionEntityQuery
-### Properties
-* **kind**: 'Expansion' (Required): the entity query kind
-* **properties**: [ExpansionEntityQueriesProperties](#expansionentityqueriesproperties) (ReadOnly): Describes expansion entity query properties
 
 ## ExpansionEntityQueriesProperties
 ### Properties
@@ -872,28 +767,13 @@
 ### Properties
 * **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
 
-## EntityAnalytics
-### Properties
-* **kind**: 'EntityAnalytics' (Required): The kind of the setting
-* **properties**: [EntityAnalyticsProperties](#entityanalyticsproperties): EntityAnalytics property bag.
-
 ## EntityAnalyticsProperties
 ### Properties
 * **isEnabled**: bool (ReadOnly): Determines whether the setting is enable or disabled.
 
-## EyesOn
-### Properties
-* **kind**: 'EyesOn' (Required): The kind of the setting
-* **properties**: [EyesOnSettingsProperties](#eyesonsettingsproperties): EyesOn property bag.
-
 ## EyesOnSettingsProperties
 ### Properties
 * **isEnabled**: bool (ReadOnly): Determines whether the setting is enable or disabled.
-
-## Ueba
-### Properties
-* **kind**: 'Ueba' (Required): The kind of the setting
-* **properties**: [UebaProperties](#uebaproperties): Ueba property bag.
 
 ## UebaProperties
 ### Properties

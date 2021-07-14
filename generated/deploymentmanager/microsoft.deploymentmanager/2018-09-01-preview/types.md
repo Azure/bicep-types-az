@@ -83,11 +83,6 @@
 * **type**: 'Sas' (Required): The authentication type
 
 
-## SasAuthentication
-### Properties
-* **properties**: [SasProperties](#sasproperties): The properties that define SAS authentication.
-* **type**: 'Sas' (Required): The authentication type
-
 ## SasProperties
 ### Properties
 * **sasUri**: string (Required): The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
@@ -238,11 +233,6 @@
 * **attributes**: [WaitStepAttributes](#waitstepattributes): The parameters for the wait step.
 * **stepType**: 'Wait' (Required): The type of step.
 
-
-## WaitStepProperties
-### Properties
-* **attributes**: [WaitStepAttributes](#waitstepattributes): The parameters for the wait step.
-* **stepType**: 'Wait' (Required): The type of step.
 
 ## WaitStepAttributes
 ### Properties

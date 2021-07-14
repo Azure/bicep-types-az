@@ -80,22 +80,9 @@
 * **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
-* **password**: string: Password credential.
 * **trustServerCertificate**: bool: Whether to trust the server certificate
 * **type**: 'SqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
-
-## SqlConnectionInfo
-### Properties
-* **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
-* **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
-* **encryptConnection**: bool: Whether to encrypt the connection
-* **password**: string: Password credential.
-* **trustServerCertificate**: bool: Whether to trust the server certificate
-* **type**: 'SqlConnectionInfo' (Required): Type of connection info
-* **userName**: string: User name
 
 ## TrackedResourceTags
 ### Properties
@@ -157,18 +144,23 @@
 * **details**: [ODataError](#odataerror)[]: Inner errors that caused this error
 * **message**: string: The human-readable description of the error
 
-## ConnectToSourceSqlServerTaskProperties
-### Properties
-* **input**: [ConnectToSourceSqlServerTaskInput](#connecttosourcesqlservertaskinput): Input for the task that validates connection to SQL Server and also validates source server requirements
-* **output**: [ConnectToSourceSqlServerTaskOutput](#connecttosourcesqlservertaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToSource.SqlServer' (Required): Task type.
-
 ## ConnectToSourceSqlServerTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromSqlServerToAzureDB': Permission group for validations. These groups will run a set of permissions for validating user activity. Select the permission group for the activity that you are performing.
 * **CollectAgentJobs**: bool: Flag for whether to collect agent jobs from source server.
 * **CollectLogins**: bool: Flag for whether to collect logins from source server.
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
+
+## SqlConnectionInfo
+### Properties
+* **additionalSettings**: string: Additional connection settings
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
+* **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+* **encryptConnection**: bool: Whether to encrypt the connection
+* **password**: string: Password credential.
+* **trustServerCertificate**: bool: Whether to trust the server certificate
+* **type**: string (Required): Type of connection info
+* **userName**: string: User name
 
 ## ConnectToSourceSqlServerTaskOutput
 * **Discriminator**: resultType
@@ -214,29 +206,10 @@
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
 
-## ConnectToSourceSqlServerTaskOutputAgentJobLevel
-### Properties
-* **isEnabled**: bool (ReadOnly): The state of the original AgentJob.
-* **jobCategory**: string (ReadOnly): The type of AgentJob.
-* **jobOwner**: string (ReadOnly): The owner of the AgentJob
-* **lastExecutedOn**: string (ReadOnly): UTC Date and time when the AgentJob was last executed.
-* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
-* **name**: string (ReadOnly): AgentJob name
-* **resultType**: 'AgentJobLevelOutput' (Required): Type of result - database level or task level
-
 ## MigrationEligibilityInfo
 ### Properties
 * **isEligibleForMigration**: bool (ReadOnly): Whether object is eligible for migration or not.
 * **validationMessages**: string[] (ReadOnly): Information about eligibility failure for the server object.
-
-## ConnectToSourceSqlServerTaskOutputDatabaseLevel
-### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): An enumeration of SQL Server database compatibility levels
-* **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): An enumeration of SQL Server Database states
-* **name**: string (ReadOnly): Database name
-* **resultType**: 'DatabaseLevelOutput' (Required): Type of result - database level or task level
-* **sizeMB**: int (ReadOnly): Size of the file in megabytes
 
 ## DatabaseFileInfo
 ### Properties
@@ -248,25 +221,6 @@
 * **restoreFullName**: string: Suggested full path of the file for restoring
 * **sizeMB**: int: Size of the file in megabytes
 
-## ConnectToSourceSqlServerTaskOutputLoginLevel
-### Properties
-* **defaultDatabase**: string (ReadOnly): The default database for the login.
-* **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): Enum mapping of SMO LoginType.
-* **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
-* **name**: string (ReadOnly): Login name.
-* **resultType**: 'LoginLevelOutput' (Required): Type of result - database level or task level
-
-## ConnectToSourceSqlServerTaskOutputTaskLevel
-### Properties
-* **AgentJobs**: string (ReadOnly): Source agent jobs as a map from agent job name to id.
-* **databases**: string (ReadOnly): Source databases as a map from database name to database id
-* **Logins**: string (ReadOnly): Source logins as a map from login name to login id.
-* **resultType**: 'TaskLevelOutput' (Required): Type of result - database level or task level
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
-
 ## ReportableException
 ### Properties
 * **filePath**: string: The path to the file where exception occurred
@@ -274,12 +228,6 @@
 * **lineNumber**: string: The line number where exception occurred
 * **message**: string: Error message
 * **stackTrace**: string: Stack trace
-
-## ConnectToTargetSqlMITaskProperties
-### Properties
-* **input**: [ConnectToTargetSqlMITaskInput](#connecttotargetsqlmitaskinput): Input for the task that validates connection to Azure SQL Database Managed Instance.
-* **output**: [ConnectToTargetSqlMITaskOutput](#connecttotargetsqlmitaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.AzureSqlDbMI' (Required): Task type.
 
 ## ConnectToTargetSqlMITaskInput
 ### Properties
@@ -294,12 +242,6 @@
 * **targetServerVersion**: string (ReadOnly): Target server version
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
 
-## ConnectToTargetSqlDbTaskProperties
-### Properties
-* **input**: [ConnectToTargetSqlDbTaskInput](#connecttotargetsqldbtaskinput): Input for the task that validates connection to SQL DB and target server requirements
-* **output**: [ConnectToTargetSqlDbTaskOutput](#connecttotargetsqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ConnectToTarget.SqlDb' (Required): Task type.
-
 ## ConnectToTargetSqlDbTaskInput
 ### Properties
 * **targetConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -311,12 +253,6 @@
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Version of the target server
 
-## GetUserTablesSqlTaskProperties
-### Properties
-* **input**: [GetUserTablesSqlTaskInput](#getusertablessqltaskinput): Input for the task that collects user tables for the given list of databases
-* **output**: [GetUserTablesSqlTaskOutput](#getusertablessqltaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'GetUserTables.Sql' (Required): Task type.
-
 ## GetUserTablesSqlTaskInput
 ### Properties
 * **connectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -327,12 +263,6 @@
 * **databasesToTables**: string (ReadOnly): Mapping from database name to list of tables
 * **id**: string (ReadOnly): Result identifier
 * **validationErrors**: [ReportableException](#reportableexception)[] (ReadOnly): Validation errors
-
-## MigrateSqlServerSqlMITaskProperties
-### Properties
-* **input**: [MigrateSqlServerSqlMITaskInput](#migratesqlserversqlmitaskinput): Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance.
-* **output**: [MigrateSqlServerSqlMITaskOutput](#migratesqlserversqlmitaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.SqlServer.AzureSqlDbMI' (Required): Task type.
 
 ## MigrateSqlServerSqlMITaskInput
 ### Properties
@@ -424,70 +354,6 @@
 * **targetServerVersion**: string (ReadOnly): Target server version
 
 
-## MigrateSqlServerSqlMITaskOutputAgentJobLevel
-### Properties
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration errors and warnings per job
-* **isEnabled**: bool (ReadOnly): The state of the original AgentJob.
-* **message**: string (ReadOnly): Migration progress message
-* **name**: string (ReadOnly): AgentJob name.
-* **resultType**: 'AgentJobLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-
-## MigrateSqlServerSqlMITaskOutputDatabaseLevel
-### Properties
-* **databaseName**: string (ReadOnly): Name of the database
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings
-* **message**: string (ReadOnly): Migration progress message
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **sizeMB**: int (ReadOnly): Size of the database in megabytes
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-
-## MigrateSqlServerSqlMITaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlMITaskOutputLoginLevel
-### Properties
-* **endedOn**: string (ReadOnly): Login migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Login migration errors and warnings per login
-* **loginName**: string (ReadOnly): Login name.
-* **message**: string (ReadOnly): Login migration progress message
-* **resultType**: 'LoginLevelOutput' (Required): Result type
-* **stage**: 'AssignRoleMembership' | 'AssignRoleOwnership' | 'Completed' | 'EstablishObjectPermissions' | 'EstablishServerPermissions' | 'EstablishUserMapping' | 'Initialize' | 'LoginMigration' | 'None' (ReadOnly): Enum of the different stage of login migration.
-* **startedOn**: string (ReadOnly): Login migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-
-## MigrateSqlServerSqlMITaskOutputMigrationLevel
-### Properties
-* **agentJobs**: string (ReadOnly): Selected agent jobs as a map from name to id
-* **databases**: string (ReadOnly): Selected databases as a map from database name to database id
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
-* **logins**: string (ReadOnly): Selected logins as a map from name to id
-* **message**: string (ReadOnly): Migration progress message
-* **orphanedUsers**: string (ReadOnly): Map of users to database name of orphaned users.
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **serverRoleResults**: string (ReadOnly): Map of server role migration results.
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
-* **targetServerBrandVersion**: string (ReadOnly): Target server brand version
-* **targetServerVersion**: string (ReadOnly): Target server version
-
-## MigrateSqlServerSqlDbTaskProperties
-### Properties
-* **input**: [MigrateSqlServerSqlDbTaskInput](#migratesqlserversqldbtaskinput): Input for the task that migrates on-prem SQL Server databases to Azure SQL Database
-* **output**: [MigrateSqlServerSqlDbTaskOutput](#migratesqlserversqldbtaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'Migrate.SqlServer.SqlDb' (Required): Task type.
-
 ## MigrateSqlServerSqlDbTaskInput
 ### Properties
 * **selectedDatabases**: [MigrateSqlServerSqlDbDatabaseInput](#migratesqlserversqldbdatabaseinput)[] (Required): Databases to migrate
@@ -573,70 +439,10 @@
 * **statusMessage**: string (ReadOnly): Status message
 
 
-## MigrateSqlServerSqlDbTaskOutputDatabaseLevel
-### Properties
-* **databaseName**: string (ReadOnly): Name of the item
-* **endedOn**: string (ReadOnly): Migration end time
-* **errorCount**: int (ReadOnly): Number of database/object errors.
-* **errorPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all errors of the item
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
-* **message**: string (ReadOnly): Migration progress message
-* **numberOfObjects**: int (ReadOnly): Number of objects
-* **numberOfObjectsCompleted**: int (ReadOnly): Number of successfully completed objects
-* **objectSummary**: string (ReadOnly): Summary of object results in the migration
-* **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **statusMessage**: string (ReadOnly): Status message
-
-## MigrateSqlServerSqlDbTaskOutputError
-### Properties
-* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
-* **resultType**: 'ErrorOutput' (Required): Result type
-
-## MigrateSqlServerSqlDbTaskOutputMigrationLevel
-### Properties
-* **databases**: string (ReadOnly): Selected databases as a map from database name to database id
-* **databaseSummary**: string (ReadOnly): Summary of database results in the migration
-* **durationInSeconds**: int (ReadOnly): Duration of task execution in seconds.
-* **endedOn**: string (ReadOnly): Migration end time
-* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
-* **message**: string (ReadOnly): Migration progress message
-* **migrationReportResult**: [MigrationReportResult](#migrationreportresult): Migration validation report result, contains the url for downloading the generated report.
-* **resultType**: 'MigrationLevelOutput' (Required): Result type
-* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
-* **sourceServerVersion**: string (ReadOnly): Source server version
-* **startedOn**: string (ReadOnly): Migration start time
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
-* **statusMessage**: string (ReadOnly): Migration status message
-* **targetServerBrandVersion**: string (ReadOnly): Target server brand version
-* **targetServerVersion**: string (ReadOnly): Target server version
-
 ## MigrationReportResult
 ### Properties
 * **id**: string: Migration validation result identifier
 * **reportUrl**: string: The url of the report.
-
-## MigrateSqlServerSqlDbTaskOutputTableLevel
-### Properties
-* **endedOn**: string (ReadOnly): Migration end time
-* **errorPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all errors of the item
-* **itemsCompletedCount**: int (ReadOnly): Number of successfully completed items
-* **itemsCount**: int (ReadOnly): Number of items
-* **objectName**: string (ReadOnly): Name of the item
-* **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
-* **resultType**: 'TableLevelOutput' (Required): Result type
-* **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **statusMessage**: string (ReadOnly): Status message
-
-## ValidateMigrationInputSqlServerSqlMITaskProperties
-### Properties
-* **input**: [ValidateMigrationInputSqlServerSqlMITaskInput](#validatemigrationinputsqlserversqlmitaskinput): Input for task that validates migration input for SQL to Azure SQL Managed Instance
-* **output**: [ValidateMigrationInputSqlServerSqlMITaskOutput](#validatemigrationinputsqlserversqlmitaskoutput)[] (ReadOnly): Task output. This is ignored if submitted.
-* **taskType**: 'ValidateMigrationInput.SqlServer.AzureSqlDbMI' (Required): Task type.
 
 ## ValidateMigrationInputSqlServerSqlMITaskInput
 ### Properties

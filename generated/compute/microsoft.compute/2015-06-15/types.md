@@ -1,5 +1,16 @@
 # Microsoft.Compute @ 2015-06-15
 
+## Resource Microsoft.Compute/availabilitySets@2015-06-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AvailabilitySetProperties](#availabilitysetproperties): The instance view of a resource.
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Compute/virtualMachines@2015-06-15
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -24,6 +35,42 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/virtualMachineScaleSets@2015-06-15
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineScaleSetProperties](#virtualmachinescalesetproperties): Describes the properties of a Virtual Machine Scale Set.
+* **sku**: [Sku](#sku): Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.
+* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
+
+## AvailabilitySetProperties
+### Properties
+* **platformFaultDomainCount**: int: Fault Domain count.
+* **platformUpdateDomainCount**: int: Update Domain count.
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[] (ReadOnly): The resource status information.
+* **virtualMachines**: [SubResource](#subresource)[]: A list of references to all virtual machines in the availability set.
+
+## InstanceViewStatus
+### Properties
+* **code**: string: The status code.
+* **displayStatus**: string: The short localizable label for the status.
+* **level**: 'Error' | 'Info' | 'Warning': The level code.
+* **message**: string: The detailed status message, including for alerts and error messages.
+* **time**: string: The time of the status.
+
+## SubResource
+### Properties
+* **id**: string: Resource Id
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Plan
 ### Properties
 * **name**: string: The plan ID.
@@ -42,10 +89,6 @@
 * **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the virtual machine.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the virtual machine disks.
-
-## SubResource
-### Properties
-* **id**: string: Resource Id
 
 ## DiagnosticsProfile
 ### Properties
@@ -80,14 +123,6 @@
 ### Properties
 * **name**: string: The disk name.
 * **statuses**: [InstanceViewStatus](#instanceviewstatus)[]: The resource status information.
-
-## InstanceViewStatus
-### Properties
-* **code**: string: The status code.
-* **displayStatus**: string: The short localizable label for the status.
-* **level**: 'Error' | 'Info' | 'Warning': The level code.
-* **message**: string: The detailed status message, including for alerts and error messages.
-* **time**: string: The time of the status.
 
 ## VirtualMachineExtensionInstanceView
 ### Properties
@@ -264,6 +299,110 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineScaleSetProperties
+### Properties
+* **overProvision**: bool: Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+* **provisioningState**: string: The provisioning state, which only appears in the response.
+* **upgradePolicy**: [UpgradePolicy](#upgradepolicy): Describes an upgrade policy - automatic or manual.
+* **virtualMachineProfile**: [VirtualMachineScaleSetVMProfile](#virtualmachinescalesetvmprofile): Describes a virtual machine scale set virtual machine profile.
+
+## UpgradePolicy
+### Properties
+* **mode**: 'Automatic' | 'Manual': Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+
+## VirtualMachineScaleSetVMProfile
+### Properties
+* **extensionProfile**: [VirtualMachineScaleSetExtensionProfile](#virtualmachinescalesetextensionprofile): Describes a virtual machine scale set extension profile.
+* **networkProfile**: [VirtualMachineScaleSetNetworkProfile](#virtualmachinescalesetnetworkprofile): Describes a virtual machine scale set network profile.
+* **osProfile**: [VirtualMachineScaleSetOSProfile](#virtualmachinescalesetosprofile): Describes a virtual machine scale set OS profile.
+* **storageProfile**: [VirtualMachineScaleSetStorageProfile](#virtualmachinescalesetstorageprofile): Describes a virtual machine scale set storage profile.
+
+## VirtualMachineScaleSetExtensionProfile
+### Properties
+* **extensions**: [VirtualMachineScaleSetExtension](#virtualmachinescalesetextension)[]: The virtual machine scale set child extension resources.
+
+## VirtualMachineScaleSetExtension
+### Properties
+* **id**: string: Resource Id
+* **name**: string: The name of the extension.
+* **properties**: [VirtualMachineScaleSetExtensionProperties](#virtualmachinescalesetextensionproperties): Describes the properties of a Virtual Machine Scale Set Extension.
+
+## VirtualMachineScaleSetExtensionProperties
+### Properties
+* **autoUpgradeMinorVersion**: bool: Whether the extension handler should be automatically upgraded across minor versions.
+* **protectedSettings**: any: Any object
+* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
+* **publisher**: string: The name of the extension handler publisher.
+* **settings**: any: Any object
+* **type**: string: The type of the extension handler.
+* **typeHandlerVersion**: string: The type version of the extension handler.
+
+## VirtualMachineScaleSetNetworkProfile
+### Properties
+* **networkInterfaceConfigurations**: [VirtualMachineScaleSetNetworkConfiguration](#virtualmachinescalesetnetworkconfiguration)[]: The list of network configurations.
+
+## VirtualMachineScaleSetNetworkConfiguration
+### Properties
+* **id**: string: Resource Id
+* **name**: string (Required): The network configuration name.
+* **properties**: [VirtualMachineScaleSetNetworkConfigurationProperties](#virtualmachinescalesetnetworkconfigurationproperties): Describes a virtual machine scale set network profile's IP configuration.
+
+## VirtualMachineScaleSetNetworkConfigurationProperties
+### Properties
+* **ipConfigurations**: [VirtualMachineScaleSetIPConfiguration](#virtualmachinescalesetipconfiguration)[] (Required): The virtual machine scale set IP Configuration.
+* **primary**: bool: Whether this is a primary NIC on a virtual machine.
+
+## VirtualMachineScaleSetIPConfiguration
+### Properties
+* **id**: string: Resource Id
+* **name**: string (Required): The IP configuration name.
+* **properties**: [VirtualMachineScaleSetIPConfigurationProperties](#virtualmachinescalesetipconfigurationproperties): Describes a virtual machine scale set network profile's IP configuration properties.
+
+## VirtualMachineScaleSetIPConfigurationProperties
+### Properties
+* **loadBalancerBackendAddressPools**: [SubResource](#subresource)[]: The load balancer backend address pools.
+* **loadBalancerInboundNatPools**: [SubResource](#subresource)[]: The load balancer inbound nat pools.
+* **subnet**: [ApiEntityReference](#apientityreference) (Required): The API entity reference.
+
+## ApiEntityReference
+### Properties
+* **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+
+## VirtualMachineScaleSetOSProfile
+### Properties
+* **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+* **adminUsername**: string: Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+* **computerNamePrefix**: string: Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 15 characters long.
+* **customData**: string: A base-64 encoded string of custom data.
+* **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+* **secrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The List of certificates for addition to the VM.
+* **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Specifies Windows operating system settings on the virtual machine.
+
+## VirtualMachineScaleSetStorageProfile
+### Properties
+* **imageReference**: [ImageReference](#imagereference): Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.
+* **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): Describes a virtual machine scale set operating system disk.
+
+## VirtualMachineScaleSetOSDisk
+### Properties
+* **caching**: 'None' | 'ReadOnly' | 'ReadWrite': Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+* **createOption**: 'Attach' | 'Empty' | 'FromImage' (Required): Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+* **image**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
+* **name**: string (Required): The disk name.
+* **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
+* **vhdContainers**: string[]: The list of virtual hard disk container uris.
+
+## Sku
+### Properties
+* **capacity**: int: Specifies the number of virtual machines in the scale set.
+* **name**: string: The sku name.
+* **tier**: string: Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
 
 ## ResourceTags
 ### Properties

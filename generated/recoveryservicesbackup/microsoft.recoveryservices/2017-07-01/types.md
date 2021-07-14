@@ -32,16 +32,6 @@
 * **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance': Workload item type of the item for which intent is to be set
 
 
-## AzureResourceProtectionIntent
-### Properties
-* **friendlyName**: string: Friendly name of the VM represented by this backup item.
-* **protectionIntentItemType**: 'AzureResourceItem' (Required): backup protectionIntent type.
-
-## AzureWorkloadSQLAutoProtectionIntent
-### Properties
-* **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
-* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance': Workload item type of the item for which intent is to be set
-
 ## ResourceTags
 ### Properties
 ### Additional Properties

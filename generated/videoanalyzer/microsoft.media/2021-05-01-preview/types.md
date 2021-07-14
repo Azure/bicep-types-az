@@ -123,14 +123,6 @@
 * **keys**: [TokenKey](#tokenkey)[]: List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
 
 
-## JwtAuthentication
-### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.JwtAuthentication' (Required): The discriminator for derived types.
-* **audiences**: string[]: List of expected token audiences. Token audience is valid if it matches at least one of the given values.
-* **claims**: [TokenClaim](#tokenclaim)[]: List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
-* **issuers**: string[]: List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
-* **keys**: [TokenKey](#tokenkey)[]: List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
-
 ## TokenClaim
 ### Properties
 * **name**: string (Required): Name of the claim which must be present on the token.
@@ -155,20 +147,6 @@
 * **e**: string (Required): RSA public key exponent.
 * **n**: string (Required): RSA public key modulus.
 
-
-## EccTokenKey
-### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.
-* **alg**: 'ES256' | 'ES384' | 'ES512' (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
-* **x**: string (Required): X coordinate.
-* **y**: string (Required): Y coordinate.
-
-## RsaTokenKey
-### Properties
-* **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): The discriminator for derived types.
-* **alg**: 'RS256' | 'RS384' | 'RS512' (Required): RSA algorithm to be used: RS256, RS384 or RS512.
-* **e**: string (Required): RSA public key exponent.
-* **n**: string (Required): RSA public key modulus.
 
 ## EdgeModuleProperties
 ### Properties

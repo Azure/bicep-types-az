@@ -54,11 +54,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## AzureCliScript
-### Properties
-* **kind**: 'AzureCLI' (Required): Type of the script.
-* **properties**: [AzureCliScriptProperties](#azurecliscriptproperties) (Required): Properties of the Azure CLI script object.
-
 ## AzureCliScriptProperties
 ### Properties
 * **arguments**: string: Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
@@ -118,11 +113,6 @@
 ### Properties
 * **storageAccountKey**: string: The storage account access key.
 * **storageAccountName**: string: The storage account name.
-
-## AzurePowerShellScript
-### Properties
-* **kind**: 'AzurePowerShell' (Required): Type of the script.
-* **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 ## AzurePowerShellScriptProperties
 ### Properties

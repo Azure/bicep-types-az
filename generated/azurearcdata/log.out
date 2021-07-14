@@ -13,5 +13,5 @@ WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this c
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 8ms
-[4.67 s] Generation Complete
+INFORMATION: autorest.bicep took 11ms
+[5.77 s] Generation Complete
