@@ -13,16 +13,21 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
 1. Merge the PR. Type differences can be reviewed by looking at the Markdown files in [/generated](./generated).
 
 ## Running generation locally
+### Initial setup
 1. Ensure you have a copy of the [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) repo checked out locally.
-1. Build the dotnet generator code:
+1. Build the autorest extension code:
     ```sh
-    dotnet build
+    cd src/autorest.bicep
+    npm ci
+    npm run build
     ```
 1. Change to the generator directory, and install dependencies:
     ```sh
-    cd src/generator
-    npm i
+    cd ../../src/generator
+    npm ci
     ```
+
+### Running
 1. To run generation across the entire specs repo:
     ```sh
     npm run generate -- --specs-dir {path to azure-rest-api-specs}
@@ -35,6 +40,15 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
     ```sh
     npm run generate -- --help
     ```
+
+### Debugging in VSCode
+1. Ensure you have cloned the [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) repo into the same directory that you have cloned this repo - e.g. so you have the following folder structure:
+    ```
+    .
+    ./bicep-types-az
+    ./azure-rest-api-specs
+    ```
+1. Use the `Generate Single` VSCode action, and specify a 'base path' from the `specifications` folder in the [azure-rest-api-specs](https://github.com/Azure/azure-rest-api-specs) repo - e.g. `compute` or `automation`. You should now be able to step through the `src/generator` and `src/autorest.bicep` extension code with the VSCode debugger.
 
 ## Contributing
 
