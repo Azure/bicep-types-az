@@ -9,14 +9,6 @@
 * **properties**: [CreateManagementGroupProperties](#createmanagementgroupproperties): The generic properties of a management group.
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Management/managementGroups/subscriptions@2018-01-01-preview
-* **Valid Scope(s)**: Tenant
-### Properties
-* **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## CreateManagementGroupProperties
 ### Properties
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.

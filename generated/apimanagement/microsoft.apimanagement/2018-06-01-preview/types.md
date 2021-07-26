@@ -30,6 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **link**: string (ReadOnly): Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2018-06-01-preview
@@ -86,15 +87,6 @@
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/operations/tags@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
-* **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/apis/policies@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -130,15 +122,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties): TagDescription contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/apis/tags@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
-* **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -194,14 +177,6 @@
 * **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Group contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/identityProviders@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -219,31 +194,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LoggerContractProperties](#loggercontractproperties): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/notifications@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' (Required, DeployTimeConstant): The resource name
-* **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
-* **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -302,22 +252,6 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product profile.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/groups@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/products/policies@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -326,15 +260,6 @@
 * **name**: 'policy' (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/tags@2018-06-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
-* **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/properties@2018-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -471,6 +396,64 @@
 * **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
+## ApiCreateOrUpdateProperties
+### Properties
+* **apiRevision**: string (WriteOnly)
+* **apiRevisionDescription**: string (WriteOnly)
+* **apiType**: 'http' | 'soap' (WriteOnly)
+* **apiVersion**: string (WriteOnly)
+* **apiVersionDescription**: string (WriteOnly)
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly)
+* **apiVersionSetId**: string (WriteOnly)
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
+* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly)
+* **contentValue**: string (WriteOnly)
+* **description**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **isCurrent**: bool (ReadOnly, WriteOnly)
+* **isOnline**: bool (ReadOnly, WriteOnly)
+* **path**: string (Required, WriteOnly)
+* **protocols**: 'http' | 'https'[] (WriteOnly)
+* **serviceUrl**: string (WriteOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
+* **subscriptionRequired**: bool (WriteOnly)
+* **type**: 'http' | 'soap' (WriteOnly)
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly)
+
+## ApiVersionSetContractDetails
+### Properties
+* **description**: string (WriteOnly)
+* **id**: string (WriteOnly)
+* **versionHeaderName**: string (WriteOnly)
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly)
+* **versionQueryName**: string (WriteOnly)
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly)
+* **subscriptionKeyRequired**: bool (WriteOnly)
+
+## OAuth2AuthenticationSettingsContract
+### Properties
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
+
+## OpenIdAuthenticationSettingsContract
+### Properties
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly)
+* **openidProviderId**: string (WriteOnly)
+
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
+
+## ApiCreateOrUpdatePropertiesWsdlSelector
+### Properties
+* **wsdlEndpointName**: string (WriteOnly)
+* **wsdlServiceName**: string (WriteOnly)
+
 ## DiagnosticContractProperties
 ### Properties
 * **alwaysLog**: 'allErrors': Specifies for what type of messages sampling settings should not apply.
@@ -566,10 +549,6 @@
 ### Properties
 * **contentFormat**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link': Format of the policyContent.
 * **policyContent**: string (Required): Json escaped Xml Encoded contents of the Policy.
-
-## TagContractProperties
-### Properties
-* **displayName**: string (ReadOnly): Tag name.
 
 ## ApiReleaseContractProperties
 ### Properties
@@ -728,17 +707,6 @@ Instrumentation key for applicationInsights logger.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## NotificationContractProperties
-### Properties
-* **description**: string (ReadOnly): Description of the Notification.
-* **recipients**: [RecipientsContractProperties](#recipientscontractproperties) (ReadOnly): Notification Parameter contract.
-* **title**: string (ReadOnly): Title of the Notification.
-
-## RecipientsContractProperties
-### Properties
-* **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
-* **users**: string[] (ReadOnly): List of Users subscribed for the notification.
-
 ## OpenidConnectProviderContractProperties
 ### Properties
 * **clientId**: string (Required): Client ID of developer console which is the client application.
@@ -809,6 +777,10 @@ Instrumentation key for applicationInsights logger.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
+
+## TagContractProperties
+### Properties
+* **displayName**: string (Required): Tag name.
 
 ## EmailTemplateUpdateParameterProperties
 ### Properties

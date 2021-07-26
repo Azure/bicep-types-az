@@ -26,15 +26,6 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2017-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2017-07-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **tags**: [EventHubConsumerGroupInfoTags](#eventhubconsumergroupinfotags) (ReadOnly): The tags.
-* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The shared access policies you can use to secure a connection to the IoT hub.
@@ -200,9 +191,4 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
-
-## EventHubConsumerGroupInfoTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 

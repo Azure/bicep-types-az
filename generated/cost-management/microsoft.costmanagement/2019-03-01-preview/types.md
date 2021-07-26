@@ -10,14 +10,6 @@
 * **properties**: [ConnectorProperties](#connectorproperties): The properties of a Connector
 * **type**: 'Microsoft.CostManagement/cloudConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview
-* **Valid Scope(s)**: ManagementGroup
-### Properties
-* **apiVersion**: '2019-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.CostManagement/externalSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.CostManagement/showbackRules@2019-03-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties

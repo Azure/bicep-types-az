@@ -1,12 +1,12 @@
-AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.3.2; node: v14.17.3]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.1)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 Processing batch task - {"tag":"microsoft.management-2021-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -67,12 +67,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 8ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.management-2020-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -133,12 +133,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 3ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.management-2020-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -199,12 +199,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 2ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.management-2020-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -261,12 +261,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
 INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.management-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -315,12 +315,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
 INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.management-2018-03-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -367,12 +367,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
 INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.management-2018-01-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -411,12 +411,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CreateParentGroupInfo' with an
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
 INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.management-2017-11-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -439,12 +439,12 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ParentGroupInfo' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: Resource type microsoft.management/managementgroups/subscriptions under path '/providers/Microsoft.Management/managementGroups/{groupId}/subscriptions/{subscriptionId}' has no body defined.
-INFORMATION: autorest.bicep took 2ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+WARNING: Skipping path '/providers/microsoft.management/managementgroups/{groupid}/subscriptions/{subscriptionid}': Failed to find JSON PUT schema
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.management-2017-08-31-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -473,6 +473,6 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagementGroupRecursiveChildI
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 0ms
-[22.2 s] Generation Complete
+[26.27 s] Generation Complete

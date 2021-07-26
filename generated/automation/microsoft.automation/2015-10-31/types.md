@@ -38,10 +38,10 @@
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The Azure Region where the resource lives
+* **location**: string: The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DscConfigurationProperties](#dscconfigurationproperties) (ReadOnly): Definition of the configuration property type.
-* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **properties**: [DscConfigurationCreateOrUpdateProperties](#dscconfigurationcreateorupdateproperties) (Required): Definition of the configuration property type.
+* **tags**: [DscConfigurationCreateOrUpdateParametersTags](#dscconfigurationcreateorupdateparameterstags): Resource tags.
 * **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2015-10-31
@@ -128,18 +128,7 @@
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
-* **Discriminator**: name
-
-### Base Properties
-### Microsoft.Automation/automationAccounts/runbooks/draft
-#### Properties
-* **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'content' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
-
-### Microsoft.Automation/automationAccounts/runbooks/draft
-#### Properties
+### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **creationTime**: string (ReadOnly): Gets or sets the creation time of the test job.
 * **endTime**: string (ReadOnly): Gets or sets the end time of the test job.
@@ -155,7 +144,6 @@
 * **status**: string (ReadOnly): Gets or sets the status of the test job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the test job.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
-
 
 ## Resource Microsoft.Automation/automationAccounts/schedules@2015-10-31
 * **Valid Scope(s)**: ResourceGroup
@@ -258,44 +246,45 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscConfigurationProperties
+## DscConfigurationCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
-* **description**: string (ReadOnly): Gets or sets the description.
+* **description**: string: Gets or sets the description.
 * **jobCount**: int (ReadOnly): Gets or sets the job count of the configuration.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **logVerbose**: bool (ReadOnly): Gets or sets verbose log option.
+* **logProgress**: bool (WriteOnly)
+* **logVerbose**: bool: Gets or sets verbose log option.
 * **nodeConfigurationCount**: int (ReadOnly): Gets the number of compiled node configurations.
-* **parameters**: [DscConfigurationPropertiesParameters](#dscconfigurationpropertiesparameters) (ReadOnly): Gets or sets the configuration parameters.
+* **parameters**: [DscConfigurationCreateOrUpdatePropertiesParameters](#dscconfigurationcreateorupdatepropertiesparameters): Gets or sets the configuration parameters.
 * **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the configuration.
-* **source**: [ContentSource](#contentsource) (ReadOnly): Definition of the content source.
+* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the configuration.
 
-## DscConfigurationPropertiesParameters
+## DscConfigurationCreateOrUpdatePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DscConfigurationParameter](#dscconfigurationparameter)
 
 ## DscConfigurationParameter
 ### Properties
-* **defaultValue**: string (ReadOnly): Gets or sets the default value of parameter.
-* **isMandatory**: bool (ReadOnly): Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
-* **position**: int (ReadOnly): Get or sets the position of the parameter.
-* **type**: string (ReadOnly): Gets or sets the type of the parameter.
+* **defaultValue**: string: Gets or sets the default value of parameter.
+* **isMandatory**: bool: Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+* **position**: int: Get or sets the position of the parameter.
+* **type**: string: Gets or sets the type of the parameter.
 
 ## ContentSource
 ### Properties
-* **hash**: [ContentHash](#contenthash) (ReadOnly): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri' (ReadOnly): Gets or sets the content source type.
-* **value**: string (ReadOnly): Gets or sets the value of the content. This is based on the content source type.
-* **version**: string (ReadOnly): Gets or sets the version of the content.
+* **hash**: [ContentHash](#contenthash): Definition of the runbook property type.
+* **type**: 'embeddedContent' | 'uri': Gets or sets the content source type.
+* **value**: string: Gets or sets the value of the content. This is based on the content source type.
+* **version**: string: Gets or sets the version of the content.
 
 ## ContentHash
 ### Properties
-* **algorithm**: string (ReadOnly): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (ReadOnly): Gets or sets expected hash value of the content.
+* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (Required): Gets or sets expected hash value of the content.
 
-## TrackedResourceTags
+## DscConfigurationCreateOrUpdateParametersTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

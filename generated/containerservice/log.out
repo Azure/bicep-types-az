@@ -1,12 +1,12 @@
-AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.3.2; node: v14.17.3]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.1)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 Processing batch task - {"tag":"microsoft.containerservice-2021-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -149,11 +149,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OSOptionProfile' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 17ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 16ms
 Processing batch task - {"tag":"microsoft.containerservice-2021-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -296,11 +296,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OSOptionProfile' with an undef
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 9ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 13ms
 Processing batch task - {"tag":"microsoft.containerservice-2021-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -429,11 +429,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 13ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 12ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -562,11 +562,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 9ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 17ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -685,11 +685,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 9ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 16ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-04-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -726,11 +726,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OpenShiftManagedClusterListRes
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.containerservice-2017-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -767,11 +767,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ContainerServiceProperties' wi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-08-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OrchestratorProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -872,13 +872,13 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-09-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -987,11 +987,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-07-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1098,11 +1098,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 5ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 10ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1209,11 +1209,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 6ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1320,11 +1320,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 4ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 7ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1429,11 +1429,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterSKU' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1534,11 +1534,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 5ms
 Processing batch task - {"tag":"microsoft.containerservice-2020-01-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1639,11 +1639,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 7ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 6ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1744,11 +1744,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 8ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-10-27-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1789,11 +1789,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OpenShiftManagedClusterListRes
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-09-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1832,11 +1832,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OpenShiftManagedClusterListRes
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-10-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1929,11 +1929,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OrchestratorProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2022,13 +2022,13 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 4ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 8ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2109,13 +2109,13 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OrchestratorVersionProfileList
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.containerservice-2018-09-30-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2152,11 +2152,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OpenShiftManagedClusterListRes
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 2ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.containerservice-2019-02-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2229,11 +2229,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.containerservice-2017-09-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OrchestratorProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2246,11 +2246,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'OrchestratorVersionProfileList
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.containerservice-2018-08-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2315,11 +2315,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CloudErrorBody' with an undefi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 3ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 4ms
 Processing batch task - {"tag":"microsoft.containerservice-2018-03-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2380,11 +2380,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'CredentialResults' with an und
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.containerservice-2017-08-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2427,11 +2427,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ManagedClusterUpgradeProfile' 
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.containerservice-2017-01-31"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2466,11 +2466,11 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ContainerServiceProperties' wi
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
-INFORMATION: autorest.bicep took 1ms
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.containerservice-2016-09-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2504,10 +2504,10 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ContainerServiceListResult' wi
 WARNING (PreCheck/SchemaMissingType): The schema 'ContainerServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 1ms
+INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.containerservice-2016-03-30"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2537,5 +2537,5 @@ WARNING (PreCheck/SchemaMissingType): The schema 'ContainerServiceListResult' wi
 WARNING (PreCheck/SchemaMissingType): The schema 'ContainerServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 1ms
-[95.28 s] Generation Complete
+INFORMATION: autorest.bicep took 2ms
+[119.69 s] Generation Complete

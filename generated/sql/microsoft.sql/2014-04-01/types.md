@@ -173,16 +173,6 @@
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Location of the server that contains this disaster recovery configuration.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DisasterRecoveryConfigurationProperties](#disasterrecoveryconfigurationproperties) (ReadOnly): Represents the properties of a disaster recovery configuration.
-* **type**: 'Microsoft.Sql/servers/disasterRecoveryConfiguration' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Sql/servers/elasticPools@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -468,16 +458,6 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
 * **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
-
-## DisasterRecoveryConfigurationProperties
-### Properties
-* **autoFailover**: 'Off' | 'On' (ReadOnly): Whether or not failover can be done automatically.
-* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly): How aggressive the automatic failover should be.
-* **logicalServerName**: string (ReadOnly): Logical name of the server.
-* **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
-* **partnerServerId**: string (ReadOnly): Id of the partner server.
-* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly): The role of the current server in the disaster recovery configuration.
-* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly): The status of the disaster recovery configuration.
 
 ## ElasticPoolProperties
 ### Properties

@@ -23,20 +23,6 @@
 * **packages**: [ApplicationPackage](#applicationpackage)[] (ReadOnly): The list of packages under this application.
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Batch/batchAccounts/applications/versions@2015-12-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2015-12-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **format**: string (ReadOnly): The format of the application package, if the package is active.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **lastActivationTime**: string (ReadOnly): The time at which the package was last activated, if the package is active.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **state**: 'active' | 'pending' | 'unmapped' (ReadOnly): The current state of the application package.
-* **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
-* **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
-* **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
-* **version**: string (ReadOnly): The version of the application package.
-
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.

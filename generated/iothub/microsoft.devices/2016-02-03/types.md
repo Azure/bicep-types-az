@@ -15,15 +15,6 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2016-02-03
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-02-03' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **tags**: [EventHubConsumerGroupInfoTags](#eventhubconsumergroupinfotags) (ReadOnly): The tags.
-* **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The shared access policies you can use to secure a connection to the IoT hub.
@@ -115,11 +106,6 @@
 * **tier**: 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub.
 
 ## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## EventHubConsumerGroupInfoTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

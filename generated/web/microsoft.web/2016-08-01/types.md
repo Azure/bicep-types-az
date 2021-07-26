@@ -213,16 +213,6 @@ This is valid for all deployment slots in an app.
 * **properties**: [PublicCertificateProperties](#publiccertificateproperties): PublicCertificate resource specific properties
 * **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/siteextensions@2016-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
-* **type**: 'Microsoft.Web/sites/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Web/sites/slots@2016-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -425,16 +415,6 @@ This is valid for all deployment slots in an app.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PublicCertificateProperties](#publiccertificateproperties): PublicCertificate resource specific properties
 * **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Web/sites/slots/siteextensions@2016-08-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
-* **type**: 'Microsoft.Web/sites/slots/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2016-08-01
 * **Valid Scope(s)**: ResourceGroup
@@ -1104,29 +1084,6 @@ normally, use the POST /listKeys API instead.
 * **blob**: any: Public Certificate byte array
 * **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
-
-## SiteExtensionInfoProperties
-### Properties
-* **authors**: string[] (ReadOnly): List of authors.
-* **comment**: string (ReadOnly): Site Extension comment.
-* **description**: string (ReadOnly): Detailed description.
-* **downloadCount**: int (ReadOnly): Count of downloads.
-* **extensionUrl**: string (ReadOnly): Extension URL.
-* **feedUrl**: string (ReadOnly): Feed URL.
-* **iconUrl**: string (ReadOnly): Icon URL.
-* **id**: string (ReadOnly): Site extension ID.
-* **installationArgs**: string (ReadOnly): Installer command line parameters.
-* **installedDateTime**: string (ReadOnly): Installed timestamp.
-* **licenseUrl**: string (ReadOnly): License URL.
-* **localIsLatestVersion**: bool (ReadOnly): <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
-* **localPath**: string (ReadOnly): Local path.
-* **projectUrl**: string (ReadOnly): Project URL.
-* **provisioningState**: string (ReadOnly): Provisioning state.
-* **publishedDateTime**: string (ReadOnly): Published timestamp.
-* **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly): Site extension title.
-* **type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type.
-* **version**: string (ReadOnly): Version information.
 
 ## ResourceTags
 ### Properties

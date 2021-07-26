@@ -112,17 +112,6 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/integrationServiceEnvironments/managedApis@2019-05-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiResourceProperties](#apiresourceproperties) (ReadOnly): The API resource properties.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
-* **type**: 'Microsoft.Logic/integrationServiceEnvironments/managedApis' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Logic/workflows@2019-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -836,91 +825,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ApiResourceProperties
-### Properties
-* **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions) (ReadOnly): The Api resource definition.
-* **apiDefinitionUrl**: string (ReadOnly): The API definition.
-* **backendService**: [ApiResourceBackendService](#apiresourcebackendservice) (ReadOnly): The API backend service.
-* **capabilities**: string[] (ReadOnly): The capabilities.
-* **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
-* **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters) (ReadOnly): The connection parameters.
-* **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation) (ReadOnly): The API general information.
-* **integrationServiceEnvironment**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
-* **metadata**: [ApiResourceMetadata](#apiresourcemetadata) (ReadOnly): The api resource metadata.
-* **name**: string (ReadOnly): The name
-* **policies**: [ApiResourcePolicies](#apiresourcepolicies) (ReadOnly): The API resource policies.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
-* **runtimeUrls**: string[] (ReadOnly): The runtime urls.
-
-## ApiResourceDefinitions
-### Properties
-* **modifiedSwaggerUrl**: string (ReadOnly): The modified swagger url.
-* **originalSwaggerUrl**: string (ReadOnly): The original swagger url.
-
-## ApiResourceBackendService
-### Properties
-* **serviceUrl**: string (ReadOnly): The service URL.
-
-## ApiResourcePropertiesConnectionParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ApiResourceGeneralInformation
-### Properties
-* **description**: string (ReadOnly): The description.
-* **displayName**: string (ReadOnly): The display name.
-* **iconUrl**: string (ReadOnly): The icon url.
-* **releaseTag**: string (ReadOnly): The release tag.
-* **termsOfUseUrl**: string (ReadOnly): The terms of use url.
-* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
-
-## ApiResourceMetadata
-### Properties
-* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' (ReadOnly)
-* **brandColor**: string (ReadOnly): The brand color.
-* **connectionType**: string (ReadOnly): The connection type.
-* **deploymentParameters**: [ApiDeploymentParameterMetadataSet](#apideploymentparametermetadataset) (ReadOnly): The API deployment parameters metadata.
-* **hideKey**: string (ReadOnly): The hide key.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
-* **source**: string (ReadOnly): The source.
-* **tags**: [ApiResourceMetadataTags](#apiresourcemetadatatags) (ReadOnly): The tags.
-* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' (ReadOnly): The WSDL import method.
-* **wsdlService**: [WsdlService](#wsdlservice) (ReadOnly): The WSDL service.
-
-## ApiDeploymentParameterMetadataSet
-### Properties
-* **packageContentLink**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata) (ReadOnly): The API deployment parameter metadata.
-* **redisCacheConnectionString**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata) (ReadOnly): The API deployment parameter metadata.
-
-## ApiDeploymentParameterMetadata
-### Properties
-* **description**: string (ReadOnly): The description.
-* **displayName**: string (ReadOnly): The display name.
-* **isRequired**: bool (ReadOnly): Indicates whether its required.
-* **type**: string (ReadOnly): The type.
-* **visibility**: 'Default' | 'Internal' | 'NotSpecified' (ReadOnly): The Api deployment parameter visibility.
-
-## ApiResourceMetadataTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## WsdlService
-### Properties
-* **EndpointQualifiedNames**: string[] (ReadOnly): The list of endpoints' qualified names.
-* **qualifiedName**: string (ReadOnly): The qualified name.
-
-## ApiResourcePolicies
-### Properties
-* **content**: string (ReadOnly): The API level only policies XML as embedded content.
-* **contentLink**: string (ReadOnly): The content link to the policies.
 
 ## ResourceTags
 ### Properties

@@ -26,18 +26,7 @@
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30
 * **Valid Scope(s)**: ResourceGroup
-* **Discriminator**: name
-
-### Base Properties
-### Microsoft.Automation/automationAccounts/runbooks/draft
-#### Properties
-* **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'content' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
-
-### Microsoft.Automation/automationAccounts/runbooks/draft
-#### Properties
+### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **creationTime**: string (ReadOnly): Gets or sets the creation time of the test job.
 * **endTime**: string (ReadOnly): Gets or sets the end time of the test job.
@@ -53,7 +42,6 @@
 * **status**: string (ReadOnly): Gets or sets the status of the test job.
 * **statusDetails**: string (ReadOnly): Gets or sets the status details of the test job.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks/draft' (ReadOnly, DeployTimeConstant): The resource type
-
 
 ## PythonPackageCreateProperties
 ### Properties

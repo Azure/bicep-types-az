@@ -72,18 +72,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/backupResourceGuardProxies@2021-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Optional ETag.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase) (ReadOnly)
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
-* **type**: 'Microsoft.RecoveryServices/vaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -579,22 +567,6 @@ will be deprecated once clients upgrade to consider this flag.
 * **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log': Type of backup policy type
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceGuardProxyBase
-### Properties
-* **lastUpdatedTime**: string (ReadOnly)
-* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly): Array of ResourceGuardOperationDetail
-* **resourceGuardResourceId**: string (ReadOnly)
-
-## ResourceGuardOperationDetail
-### Properties
-* **defaultResourceRequest**: string (ReadOnly)
-* **vaultCriticalOperation**: string (ReadOnly)
 
 ## ResourceTags
 ### Properties

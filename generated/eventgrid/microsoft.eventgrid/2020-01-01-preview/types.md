@@ -11,15 +11,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/topics@2020-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly): Properties of the Domain Topic
-* **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.EventGrid/eventSubscriptions@2020-01-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -89,10 +80,6 @@ along with a default value to be used, and at least one of these two properties 
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## DomainTopicProperties
-### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain topic.
 
 ## EventSubscriptionProperties
 ### Properties

@@ -45,15 +45,6 @@
 * **properties**: [TemplateArtifactProperties](#templateartifactproperties) (Required): Properties of a Template Artifact.
 
 
-## Resource Microsoft.Blueprint/blueprints/versions@2017-11-11-preview
-* **Valid Scope(s)**: ManagementGroup
-### Properties
-* **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (ReadOnly): Schema for published Blueprint properties.
-* **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string: Azure Active Directory principal ID associated with this Identity.
@@ -181,25 +172,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [ParameterValueBase](#parametervaluebase)
-
-## PublishedBlueprintProperties
-### Properties
-* **blueprintName**: string (ReadOnly): Name of the Blueprint definition.
-* **changeNotes**: string (ReadOnly): Version-specific change notes
-* **description**: string (ReadOnly): Multi-line explain this resource.
-* **displayName**: string (ReadOnly): One-liner string explain this resource.
-* **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection) (ReadOnly): A dictionary hold parameter name and it's metadata.
-* **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection) (ReadOnly): A dictionary which maps resource group placeholders to the resource groups which will be created.
-* **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): The status of the blueprint. This field is readonly.
-* **targetScope**: 'managementGroup' | 'subscription' (ReadOnly): The scope where this Blueprint can be applied.
-
-## ParameterDefinitionCollection
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ParameterDefinition](#parameterdefinition)
-
-## ResourceGroupDefinitionCollection
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [ResourceGroupDefinition](#resourcegroupdefinition)
 

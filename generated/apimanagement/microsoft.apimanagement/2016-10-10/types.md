@@ -112,14 +112,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2016-10-10
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/identityProviders@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -168,22 +160,6 @@
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2016-10-10
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/groups@2016-10-10
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/properties@2016-10-10
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -213,14 +189,6 @@
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 * **userId**: string (Required): The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{uid} where {uid} is a user identifier.
-
-## Resource Microsoft.ApiManagement/service/tenant@2016-10-10
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-10-10' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'policy' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/tenant' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/users@2016-10-10
 * **Valid Scope(s)**: ResourceGroup

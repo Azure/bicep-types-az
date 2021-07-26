@@ -409,17 +409,6 @@ This is valid for all deployment slots in an app.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Web/sites/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/siteextensions@2020-09-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.Web/sites/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Web/sites/slots@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -683,17 +672,6 @@ This is valid for all deployment slots in an app.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Web/sites/slots/publicCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/sites/slots/siteextensions@2020-09-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SiteExtensionInfoProperties](#siteextensioninfoproperties) (ReadOnly): SiteExtensionInfo resource specific properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.Web/sites/slots/siteextensions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2020-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -806,14 +784,6 @@ This is valid for all deployment slots in an app.
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Web/staticSites/config' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Web/staticSites/customDomains@2020-09-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## CertificateProperties
 ### Properties
@@ -2229,29 +2199,6 @@ normally, use the POST /listKeys API instead.
 * **blob**: any: Public Certificate byte array
 * **publicCertificateLocation**: 'CurrentUserMy' | 'LocalMachineMy' | 'Unknown': Public Certificate Location
 * **thumbprint**: string (ReadOnly): Certificate Thumbprint
-
-## SiteExtensionInfoProperties
-### Properties
-* **authors**: string[] (ReadOnly): List of authors.
-* **comment**: string (ReadOnly): Site Extension comment.
-* **description**: string (ReadOnly): Detailed description.
-* **download_count**: int (ReadOnly): Count of downloads.
-* **extension_id**: string (ReadOnly): Site extension ID.
-* **extension_type**: 'Gallery' | 'WebRoot' (ReadOnly): Site extension type.
-* **extension_url**: string (ReadOnly): Extension URL.
-* **feed_url**: string (ReadOnly): Feed URL.
-* **icon_url**: string (ReadOnly): Icon URL.
-* **installed_date_time**: string (ReadOnly): Installed timestamp.
-* **installer_command_line_params**: string (ReadOnly): Installer command line parameters.
-* **license_url**: string (ReadOnly): License URL.
-* **local_is_latest_version**: bool (ReadOnly): <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
-* **local_path**: string (ReadOnly): Local path.
-* **project_url**: string (ReadOnly): Project URL.
-* **provisioningState**: string (ReadOnly): Provisioning state.
-* **published_date_time**: string (ReadOnly): Published timestamp.
-* **summary**: string (ReadOnly): Summary description.
-* **title**: string (ReadOnly)
-* **version**: string (ReadOnly): Version information.
 
 ## ResourceTags
 ### Properties

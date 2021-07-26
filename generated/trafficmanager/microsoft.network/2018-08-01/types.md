@@ -11,15 +11,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-08-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [UserMetricsProperties](#usermetricsproperties) (ReadOnly): Class representing a Traffic Manager Real User Metrics key response.
-* **type**: 'Microsoft.Network/trafficManagerUserMetricsKeys' (ReadOnly, DeployTimeConstant): The resource type
-
 ## ProfileProperties
 ### Properties
 * **allowedEndpointRecordTypes**: 'Any' | 'DomainName' | 'IPv4Address' | 'IPv6Address'[]: The list of allowed endpoint record types.
@@ -97,8 +88,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## UserMetricsProperties
-### Properties
-* **key**: string (ReadOnly): The key returned by the User Metrics operation.
 

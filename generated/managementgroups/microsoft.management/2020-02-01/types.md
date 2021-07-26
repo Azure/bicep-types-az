@@ -18,14 +18,6 @@
 * **properties**: [CreateOrUpdateSettingsProperties](#createorupdatesettingsproperties): The generic properties of hierarchy settings.
 * **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Management/managementGroups/subscriptions@2020-02-01
-* **Valid Scope(s)**: Tenant
-### Properties
-* **apiVersion**: '2020-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Management/managementGroups/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## CreateManagementGroupProperties
 ### Properties
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.

@@ -42,14 +42,6 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/diagnostics/loggers@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/apis/diagnostics/loggers' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/apis/issues@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -95,15 +87,6 @@
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/operations/tags@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
-* **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/apis/policies@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -139,15 +122,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties): TagDescription contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/apis/tags@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
-* **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -185,14 +159,6 @@
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic Entity Properties
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/diagnostics/loggers@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/diagnostics/loggers' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/groups@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -201,14 +167,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Group contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/groups/users@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -227,31 +185,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LoggerContractProperties](#loggercontractproperties): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/notifications@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'AccountClosedPublisher' | 'BCC' | 'NewApplicationNotificationMessage' | 'NewIssuePublisherNotificationMessage' | 'PurchasePublisherNotificationMessage' | 'QuotaLimitApproachingPublisherNotificationMessage' | 'RequestPublisherNotificationMessage' (Required, DeployTimeConstant): The resource name
-* **properties**: [NotificationContractProperties](#notificationcontractproperties) (ReadOnly): Notification Contract properties.
-* **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -310,22 +243,6 @@
 * **properties**: [ProductContractProperties](#productcontractproperties): Product profile.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/products/apis@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/groups@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/products/policies@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -334,15 +251,6 @@
 * **name**: 'policy' (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/tags@2018-01-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
-* **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/properties@2018-01-01
 * **Valid Scope(s)**: ResourceGroup
@@ -608,10 +516,6 @@
 * **contentFormat**: 'rawxml' | 'rawxml-link' | 'xml' | 'xml-link': Format of the policyContent.
 * **policyContent**: string (Required): Json escaped Xml Encoded contents of the Policy.
 
-## TagContractProperties
-### Properties
-* **displayName**: string (Required): Tag name.
-
 ## ApiReleaseContractProperties
 ### Properties
 * **apiId**: string: Identifier of the API the release belongs to.
@@ -761,17 +665,6 @@ Instrumentation key for applicationInsights logger.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## NotificationContractProperties
-### Properties
-* **description**: string (ReadOnly): Description of the Notification.
-* **recipients**: [RecipientsContractProperties](#recipientscontractproperties) (ReadOnly): Notification Parameter contract.
-* **title**: string (ReadOnly): Title of the Notification.
-
-## RecipientsContractProperties
-### Properties
-* **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
-* **users**: string[] (ReadOnly): List of Users subscribed for the notification.
-
 ## OpenidConnectProviderContractProperties
 ### Properties
 * **clientId**: string (Required): Client ID of developer console which is the client application.
@@ -841,6 +734,10 @@ Instrumentation key for applicationInsights logger.
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
 * **userId**: string (Required): The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{uid} where {uid} is a user identifier.
+
+## TagContractProperties
+### Properties
+* **displayName**: string (Required): Tag name.
 
 ## EmailTemplateUpdateParameterProperties
 ### Properties

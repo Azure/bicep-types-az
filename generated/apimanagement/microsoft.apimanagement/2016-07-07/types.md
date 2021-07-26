@@ -101,14 +101,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/groups/users@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.ApiManagement/service/identityProviders@2016-07-07
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -156,22 +148,6 @@
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of true.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/apis@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.ApiManagement/service/products/groups@2016-07-07
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/properties@2016-07-07
 * **Valid Scope(s)**: ResourceGroup

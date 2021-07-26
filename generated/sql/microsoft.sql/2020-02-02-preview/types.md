@@ -396,15 +396,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/devOpsAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/dnsAliases@2020-02-02-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerDnsAliasProperties](#serverdnsaliasproperties) (ReadOnly): Properties of a server DNS alias.
-* **type**: 'Microsoft.Sql/servers/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Sql/servers/elasticPools@2020-02-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -487,15 +478,6 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties): Properties of a job.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2020-02-02-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2020-02-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Properties for an Azure SQL Database Elastic job execution.
-* **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/jobAgents/jobs/steps@2020-02-02-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -1308,10 +1290,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
-## ServerDnsAliasProperties
-### Properties
-* **azureDnsRecord**: string (ReadOnly): The fully qualified DNS record for alias
-
 ## ElasticPoolProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of the elastic pool (ISO8601 format).
@@ -1496,28 +1474,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **interval**: string: Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
 * **startTime**: string: Schedule start time.
 * **type**: 'Once' | 'Recurring': Schedule interval type
-
-## JobExecutionProperties
-### Properties
-* **createTime**: string (ReadOnly): The time that the job execution was created.
-* **currentAttempts**: int (ReadOnly): Number of times the job execution has been attempted.
-* **currentAttemptStartTime**: string (ReadOnly): Start time of the current attempt.
-* **endTime**: string (ReadOnly): The time that the job execution completed.
-* **jobExecutionId**: string (ReadOnly): The unique identifier of the job execution.
-* **jobVersion**: int (ReadOnly): The job version number.
-* **lastMessage**: string (ReadOnly): The last status or error message.
-* **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' (ReadOnly): The detailed state of the job execution.
-* **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The ARM provisioning state of the job execution.
-* **startTime**: string (ReadOnly): The time that the job execution started.
-* **stepId**: int (ReadOnly): The job step id.
-* **stepName**: string (ReadOnly): The job step name.
-* **target**: [JobExecutionTarget](#jobexecutiontarget) (ReadOnly): The target that a job execution is executed on.
-
-## JobExecutionTarget
-### Properties
-* **databaseName**: string (ReadOnly): The database name.
-* **serverName**: string (ReadOnly): The server name.
-* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (ReadOnly): The type of the target.
 
 ## JobStepProperties
 ### Properties

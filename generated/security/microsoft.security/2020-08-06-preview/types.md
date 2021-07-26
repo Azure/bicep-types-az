@@ -27,15 +27,6 @@
 * **properties**: [IotSiteProperties](#iotsiteproperties): IoT site properties
 * **type**: 'Microsoft.Security/iotSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/onPremiseIotSensors@2020-08-06-preview
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (ReadOnly): Any object
-* **type**: 'Microsoft.Security/onPremiseIotSensors' (ReadOnly, DeployTimeConstant): The resource type
-
 ## IotDefenderSettingsProperties
 ### Properties
 * **deviceQuota**: int (Required): Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.

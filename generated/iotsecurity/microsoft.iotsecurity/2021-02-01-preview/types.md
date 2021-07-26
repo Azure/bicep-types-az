@@ -19,16 +19,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.IoTSecurity/locations/deviceGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.IoTSecurity/onPremiseSensors@2021-02-01-preview
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: any (ReadOnly): Any object
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.IoTSecurity/onPremiseSensors' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.IoTSecurity/sensors@2021-02-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
