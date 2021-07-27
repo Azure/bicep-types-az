@@ -165,7 +165,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
       const putData = getPutSchema(putOperation);
       const getData = getGetSchema(getOperation) ?? putData;
       if (!putData) {
-        logWarning(`Skipping path '${lcPath}': Failed to find JSON PUT schema`);
         continue;
       }
 
@@ -259,7 +258,10 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
       }
     }
 
-    return;
+    return {
+      request: (validRequests[0].protocol.http as HttpRequest),
+      parameters: combineParameters(operation, validRequests[0]),
+    };
   }
 
   function parseMethod(path: string, parameters: Parameter[], apiVersion: string): Result<ResourceDescriptor[], string> {
