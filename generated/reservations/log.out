@@ -1,19 +1,19 @@
-AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.3.2; node: v14.17.3]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.1)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 Processing batch task - {"tag":"microsoft.capacity-2020-10-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 8ms
+INFORMATION: autorest.bicep took 9ms
 Processing batch task - {"tag":"microsoft.capacity-2020-10-25"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ResourceName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -24,16 +24,16 @@ WARNING (PreCheck/SchemaMissingType): The schema 'QuotaLimitsResponse' with an u
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (Modeler/MissingType): The enum schema 'ResourceType' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
 
 WARNING (Modeler/MissingType): The enum schema 'QuotaRequestState' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 1ms
 Processing batch task - {"tag":"microsoft.capacity-2019-07-19"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'ResourceName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -46,7 +46,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'EmailActions' with an undefine
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey
+WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 
 WARNING (Modeler/MissingType): The enum schema 'ResourceType' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
 
@@ -64,30 +64,30 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 2ms
 Processing batch task - {"tag":"microsoft.capacity-2020-11-15-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.capacity-2019-04-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 4ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.capacity-2018-06-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 0ms
 Processing batch task - {"tag":"microsoft.capacity-2017-11-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 INFORMATION: autorest.bicep took 0ms
-[16.94 s] Generation Complete
+[20.26 s] Generation Complete

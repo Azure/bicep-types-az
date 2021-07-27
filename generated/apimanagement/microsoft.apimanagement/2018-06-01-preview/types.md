@@ -30,6 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **link**: string (ReadOnly): Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly)
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2018-06-01-preview
@@ -470,6 +471,64 @@
 * **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
 * **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+
+## ApiCreateOrUpdateProperties
+### Properties
+* **apiRevision**: string (WriteOnly)
+* **apiRevisionDescription**: string (WriteOnly)
+* **apiType**: 'http' | 'soap' (WriteOnly)
+* **apiVersion**: string (WriteOnly)
+* **apiVersionDescription**: string (WriteOnly)
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly)
+* **apiVersionSetId**: string (WriteOnly)
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
+* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly)
+* **contentValue**: string (WriteOnly)
+* **description**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **isCurrent**: bool (ReadOnly, WriteOnly)
+* **isOnline**: bool (ReadOnly, WriteOnly)
+* **path**: string (Required, WriteOnly)
+* **protocols**: 'http' | 'https'[] (WriteOnly)
+* **serviceUrl**: string (WriteOnly)
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
+* **subscriptionRequired**: bool (WriteOnly)
+* **type**: 'http' | 'soap' (WriteOnly)
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly)
+
+## ApiVersionSetContractDetails
+### Properties
+* **description**: string (WriteOnly)
+* **id**: string (WriteOnly)
+* **versionHeaderName**: string (WriteOnly)
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly)
+* **versionQueryName**: string (WriteOnly)
+
+## AuthenticationSettingsContract
+### Properties
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly)
+* **subscriptionKeyRequired**: bool (WriteOnly)
+
+## OAuth2AuthenticationSettingsContract
+### Properties
+* **authorizationServerId**: string (WriteOnly)
+* **scope**: string (WriteOnly)
+
+## OpenIdAuthenticationSettingsContract
+### Properties
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly)
+* **openidProviderId**: string (WriteOnly)
+
+## SubscriptionKeyParameterNamesContract
+### Properties
+* **header**: string (WriteOnly)
+* **query**: string (WriteOnly)
+
+## ApiCreateOrUpdatePropertiesWsdlSelector
+### Properties
+* **wsdlEndpointName**: string (WriteOnly)
+* **wsdlServiceName**: string (WriteOnly)
 
 ## DiagnosticContractProperties
 ### Properties
