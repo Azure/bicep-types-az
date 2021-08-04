@@ -9,7 +9,7 @@
   "dependencies": {
     "@autorest/codemodel": "^4.16.0",
     "@autorest/extension-base": "^3.3.0",
-    "@types/lodash": "^4.14.171",
+    "@types/lodash": "^4.14.172",
     "autorest": "^3.3.2",
     "lodash": "^4.17.21"
   },
