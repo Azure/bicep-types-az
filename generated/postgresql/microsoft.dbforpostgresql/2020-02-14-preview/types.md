@@ -40,7 +40,9 @@
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
+* **logBackupStorageSku**: string: The log backup storage sku of the server.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
+* **minorVersion**: string (ReadOnly): The minor version of the server.
 * **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **privateDnsZoneArguments**: [ServerPropertiesPrivateDnsZoneArguments](#serverpropertiesprivatednszonearguments)
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not
@@ -48,6 +50,7 @@
 * **sourceServerName**: string: The source PostgreSQL server name to restore from.
 * **sourceSubscriptionId**: string: The subscription id of source serve PostgreSQL server name to restore from.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
+* **standbyCount**: int: The number of standbys.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
@@ -71,6 +74,8 @@
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled': A value indicating whether Geo-Redundant backup is enabled on the server.
 * **storageMB**: int: Max storage allowed for a server.
 
 ## ServerPropertiesTags

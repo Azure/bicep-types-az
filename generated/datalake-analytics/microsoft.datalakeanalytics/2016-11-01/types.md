@@ -60,11 +60,16 @@
 * **firewallAllowAzureIps**: 'Disabled' | 'Enabled': The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
 * **firewallRules**: [CreateFirewallRuleWithAccountParameters](#createfirewallrulewithaccountparameters)[]: The list of firewall rules associated with this account.
 * **firewallState**: 'Disabled' | 'Enabled': The current state of the IP address firewall for this account.
+* **hierarchicalQueue**: [DataLakeAnalyticsAccountPropertiesHierarchicalQueue](#datalakeanalyticsaccountpropertieshierarchicalqueue) (ReadOnly): The hierarchical queue associated with this account.
+* **hierarchicalQueueState**: string (ReadOnly): The hierarchical queue state associated with this account.
 * **hiveMetastores**: [HiveMetastore](#hivemetastore)[] (ReadOnly): The list of hiveMetastores associated with this account.
 * **lastModifiedTime**: string (ReadOnly): The account last modified time.
+* **maxActiveJobCountPerUser**: int (ReadOnly): The maximum supported active jobs under the account at the same time.
 * **maxDegreeOfParallelism**: int: The maximum supported degree of parallelism for this account.
 * **maxDegreeOfParallelismPerJob**: int: The maximum supported degree of parallelism per job for this account.
 * **maxJobCount**: int: The maximum supported jobs running under the account at the same time.
+* **maxJobRunningTimeInMin**: int (ReadOnly): The maximum supported active jobs under the account at the same time.
+* **maxQueuedJobCountPerUser**: int (ReadOnly): The maximum supported jobs queued under the account at the same time.
 * **minPriorityPerJob**: int: The minimum supported priority per job for this account.
 * **newTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption': The commitment tier for the next month.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' | 'Undeleting' (ReadOnly): The provisioning status of the Data Lake Analytics account.
@@ -112,6 +117,10 @@
 ### Properties
 * **endIpAddress**: string (Required): The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
 * **startIpAddress**: string (Required): The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+
+## DataLakeAnalyticsAccountPropertiesHierarchicalQueue
+### Properties
+* **root**: any (ReadOnly): Any object
 
 ## HiveMetastore
 ### Properties

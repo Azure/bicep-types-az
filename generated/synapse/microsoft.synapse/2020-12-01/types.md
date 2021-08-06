@@ -709,6 +709,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **publicIPs**: string[]: Resource IDs of the public IP addresses that this integration runtime will use.
 * **subnet**: string: The name of the subnet this integration runtime will join.
+* **subnetId**: string: The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
 * **vNetId**: string: The ID of the VNet that this integration runtime will join.
 ### Additional Properties
 * **Additional Properties Type**: any

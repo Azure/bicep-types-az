@@ -57,7 +57,7 @@ Only be used in response
 ## SignalRProperties
 ### Properties
 * **cors**: [SignalRCorsSettings](#signalrcorssettings): Cross-Origin Resource Sharing (CORS) settings.
-* **disableAadAuth**: bool: disableAadAuth
+* **disableAadAuth**: bool: DisableLocalAuth
 Enable or disable aad auth
 When set as true, connection with AuthType=aad won't work.
 * **disableLocalAuth**: bool: DisableLocalAuth
