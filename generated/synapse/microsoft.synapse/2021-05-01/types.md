@@ -328,7 +328,18 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the workspace managed identity
 * **tenantId**: string (ReadOnly): The tenant ID of the workspace managed identity
-* **type**: 'None' | 'SystemAssigned': The type of managed identity for the workspace
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned': The type of managed identity for the workspace
+* **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The User Assigned Managed Identities.
+
+## UserAssignedManagedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedManagedIdentity](#userassignedmanagedidentity)
+
+## UserAssignedManagedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The client ID.
+* **principalId**: string (ReadOnly): The principal ID.
 
 ## WorkspaceProperties
 ### Properties
@@ -721,6 +732,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **publicIPs**: string[]: Resource IDs of the public IP addresses that this integration runtime will use.
 * **subnet**: string: The name of the subnet this integration runtime will join.
+* **subnetId**: string: The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
 * **vNetId**: string: The ID of the VNet that this integration runtime will join.
 ### Additional Properties
 * **Additional Properties Type**: any

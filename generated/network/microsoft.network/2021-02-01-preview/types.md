@@ -127,7 +127,7 @@
 ### Properties
 * **description**: string: A description of the network manager.
 * **displayName**: string: A friendly name for the network manager.
-* **networkManagerScopeAccesses**: 'AdminSecurity' | 'Connectivity' | 'UserSecurity'[]: Scope Access.
+* **networkManagerScopeAccesses**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser'[]: Scope Access.
 * **networkManagerScopes**: [NetworkManagerPropertiesNetworkManagerScopes](#networkmanagerpropertiesnetworkmanagerscopes): Scope of Network Manager.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
