@@ -85,13 +85,6 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         }
 
         return;
-      case TypeBaseKind.ResourceFunctionType:
-        const resourceFunctionType = type as ResourceFunctionType;
-        if (resourceFunctionType.Input) {
-          processTypeLinks(resourceFunctionType.Input, false);
-        }
-        processTypeLinks(resourceFunctionType.Output, false);
-        return;
       case TypeBaseKind.DiscriminatedObjectType:
         const discriminatedObjectType = type as DiscriminatedObjectType;
 
@@ -132,6 +125,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         }
         writeBullet("Output", getTypeName(types, resourceFunctionType.Output));
 
+        writeNewLine();
         return;
       case TypeBaseKind.ObjectType:
         const objectType = type as ObjectType;
@@ -180,10 +174,19 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
     writeNewLine();
 
     const resourceTypes = orderBy(types.filter(t => t instanceof ResourceType) as ResourceType[], x => x.Name.split('@')[0].toLowerCase());
-    const typesToWrite = [...resourceTypes];
+    const resourceFunctionTypes = orderBy(types.filter(t => t instanceof ResourceFunctionType) as ResourceFunctionType[], x => x.Name.split('@')[0].toLowerCase());
+    const typesToWrite = [...resourceTypes, ...resourceFunctionTypes];
 
     for (const resourceType of resourceTypes) {
       findTypesToWrite(types, typesToWrite, resourceType.Body);
+    }
+
+    for (const resourceFunctionType of resourceFunctionTypes) {
+      if (resourceFunctionType.Input)
+      {
+        findTypesToWrite(types, typesToWrite, resourceFunctionType.Input);
+      }
+      findTypesToWrite(types, typesToWrite, resourceFunctionType.Output);
     }
 
     for (const type of typesToWrite) {

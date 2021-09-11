@@ -218,6 +218,11 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityInsights/settings' (ReadOnly, DeployTimeConstant): The resource type
+### Anomalies
+#### Properties
+* **kind**: 'Anomalies' (Required): The kind of the setting
+* **properties**: [AnomaliesSettingsProperties](#anomaliessettingsproperties): Anomalies property bag.
+
 ### EntityAnalytics
 #### Properties
 * **kind**: 'EntityAnalytics' (Required): The kind of the setting
@@ -766,6 +771,10 @@
 ## SentinelOnboardingStateProperties
 ### Properties
 * **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
+
+## AnomaliesSettingsProperties
+### Properties
+* **isEnabled**: bool (ReadOnly): Determines whether the setting is enable or disabled.
 
 ## EntityAnalyticsProperties
 ### Properties

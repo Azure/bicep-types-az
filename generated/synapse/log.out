@@ -1,12 +1,12 @@
-AutoRest code generation utility [cli version: 3.2.3; node: v14.17.1, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.3.2; node: v14.17.4]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.0-dev.6)
+   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.1)
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 Processing batch task - {"tag":"microsoft.synapse-2021-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -90,7 +90,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:571" => "#/components/schemas/schemas:1468"
+  - properties.id.$ref: "#/components/schemas/schemas:397" => "#/components/schemas/schemas:1488"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>
@@ -116,7 +116,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 35ms
 Processing batch task - {"tag":"microsoft.synapse-2021-05-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -200,7 +200,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:381" => "#/components/schemas/schemas:1278"
+  - properties.id.$ref: "#/components/schemas/schemas:392" => "#/components/schemas/schemas:1293"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>
@@ -223,10 +223,10 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 26ms
+INFORMATION: autorest.bicep took 33ms
 Processing batch task - {"tag":"microsoft.synapse-2021-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -372,10 +372,10 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 23ms
+INFORMATION: autorest.bicep took 25ms
 Processing batch task - {"tag":"microsoft.synapse-2021-03-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -457,7 +457,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:381" => "#/components/schemas/schemas:1272"
+  - properties.id.$ref: "#/components/schemas/schemas:392" => "#/components/schemas/schemas:1283"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>
@@ -480,7 +480,7 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 INFORMATION: autorest.bicep took 25ms
 Processing batch task - {"tag":"microsoft.synapse-2019-06-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -560,13 +560,13 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'CloudError' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:425" => "#/components/schemas/schemas:868"
+  - properties.error.$ref: "#/components/schemas/schemas:425" => "#/components/schemas/schemas:872"
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'CloudErrorBody' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:429" => "#/components/schemas/schemas:872"
+  - properties.details.$ref: "#/components/schemas/schemas:429" => "#/components/schemas/schemas:876"
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:924" => "#/components/schemas/schemas:1171"
+  - properties.id.$ref: "#/components/schemas/schemas:928" => "#/components/schemas/schemas:1175"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>
@@ -576,11 +576,11 @@ WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'ReplicationLink' has a 
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointConnectionForPrivateLinkHubBasic' -> 'PrivateEndpointConnectionForPrivateLinkHubBasicAutoGenerated'
-
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 
 WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
+
+WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'PrivateEndpointConnectionForPrivateLinkHubBasic' -> 'PrivateEndpointConnectionForPrivateLinkHubBasicAutoGenerated'
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
@@ -590,17 +590,17 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 17ms
+INFORMATION: autorest.bicep took 26ms
 Processing batch task - {"tag":"microsoft.synapse-2020-04-01-preview"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 2ms
+INFORMATION: autorest.bicep took 3ms
 Processing batch task - {"tag":"microsoft.synapse-2020-12-01"} .
 INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.19.3)
+INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
 WARNING: Semantic validation was skipped.
 
 WARNING (PreCheck/SchemaMissingType): The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -682,7 +682,7 @@ WARNING (PreCheck/SchemaMissingType): The schema 'PrivateEndpointConnectionForPr
 WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 
 WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:912" => "#/components/schemas/schemas:1270"
+  - properties.id.$ref: "#/components/schemas/schemas:923" => "#/components/schemas/schemas:1281"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>
@@ -702,5 +702,5 @@ WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
 WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 20ms
-[127.36 s] Generation Complete
+INFORMATION: autorest.bicep took 18ms
+[210.47 s] Generation Complete

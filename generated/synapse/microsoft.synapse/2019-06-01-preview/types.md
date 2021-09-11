@@ -392,6 +392,8 @@
 ## WorkspaceRepositoryConfiguration
 ### Properties
 * **accountName**: string: Account name
+* **clientId**: string: GitHub bring your own app client id
+* **clientSecret**: [GitHubClientSecret](#githubclientsecret): Client secret information for factory's bring your own app repository configuration
 * **collaborationBranch**: string: Collaboration branch
 * **hostName**: string: GitHub Enterprise host name. For example: https://github.mydomain.com
 * **lastCommitId**: string: The last commit ID
@@ -400,6 +402,11 @@
 * **rootFolder**: string: Root folder to use in the repository
 * **tenantId**: string: The VSTS tenant ID
 * **type**: string: Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
+
+## GitHubClientSecret
+### Properties
+* **byoaSecretAkvUrl**: string: Bring your own app client secret AKV URL
+* **byoaSecretName**: string: Bring your own app client secret name in AKV
 
 ## TrackedResourceTags
 ### Properties

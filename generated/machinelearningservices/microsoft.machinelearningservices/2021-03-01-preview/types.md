@@ -20,7 +20,7 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
-* **kind**: string
+* **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchEndpoint](#batchendpoint) (Required): Batch endpoint configuration.
@@ -34,7 +34,7 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
-* **kind**: string
+* **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchDeployment](#batchdeployment) (Required): Batch inference settings per deployment.
@@ -182,7 +182,7 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
-* **kind**: string
+* **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OnlineEndpoint](#onlineendpoint) (Required): Online endpoint configuration
@@ -196,7 +196,7 @@
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
-* **kind**: string
+* **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OnlineDeployment](#onlinedeployment) (Required)
@@ -1143,13 +1143,13 @@ Private preview feature and only available to users on the allow list.
 #### Properties
 * **algorithm**: 'Bayesian' | 'Grid' | 'Random' (Required)
 * **compute**: [ComputeConfiguration](#computeconfiguration) (Required): Configuration for compute binding.
-* **earlyTermination**: [EarlyTerminationPolicy](#earlyterminationpolicy): Early termination policies enable canceling poor-performing runs before they complete
+* **earlyTermination**: [EarlyTerminationPolicy](#earlyterminationpolicy): Early termination policies enable canceling poor-performing runs before they complete.
 * **experimentName**: string: The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
 * **identity**: [IdentityConfiguration](#identityconfiguration): Base definition for identity configuration.
 * **jobType**: 'Sweep' (Required): Specifies the type of job.
-* **maxConcurrentTrials**: int
-* **maxTotalTrials**: int
-* **objective**: [Objective](#objective) (Required)
+* **maxConcurrentTrials**: int: An upper bound on the number of trials performed in parallel.
+* **maxTotalTrials**: int: An upper bound on the number of trials to perform.
+* **objective**: [Objective](#objective) (Required): Optimization objective.
 * **output**: [JobOutput](#joboutput) (ReadOnly): Job output definition container information on where to find job output/logs.
 * **priority**: int: Job priority for scheduling policy. Only applies to AMLCompute.
 Private preview feature and only available to users on the allow list.
@@ -1169,7 +1169,7 @@ Private preview feature and only available to users on the allow list.
 * **endpoint**: string: Url for endpoint.
 * **jobEndpointType**: string: Endpoint type.
 * **port**: int: Port for endpoint.
-* **properties**: [JobEndpointProperties](#jobendpointproperties): Dictionary of <string>
+* **properties**: [JobEndpointProperties](#jobendpointproperties): Additional properties to set on the endpoint.
 
 ## JobEndpointProperties
 ### Properties
@@ -1193,7 +1193,7 @@ Private preview feature and only available to users on the allow list.
 ### Mpi
 #### Properties
 * **distributionType**: 'Mpi' (Required): Specifies the type of distribution framework.
-* **processCountPerInstance**: int
+* **processCountPerInstance**: int: Number of processes per MPI node.
 
 ### PyTorch
 #### Properties
@@ -1203,7 +1203,7 @@ Private preview feature and only available to users on the allow list.
 ### TensorFlow
 #### Properties
 * **distributionType**: 'TensorFlow' (Required): Specifies the type of distribution framework.
-* **parameterServerCount**: int
+* **parameterServerCount**: int: Number of parameter server tasks.
 * **workerCount**: int: Number of workers. Overwrites the node count in compute binding.
 
 
@@ -1265,13 +1265,13 @@ Private preview feature and only available to users on the allow list.
 * **Discriminator**: policyType
 
 ### Base Properties
-* **delayEvaluation**: int
-* **evaluationInterval**: int
+* **delayEvaluation**: int: Number of intervals by which to delay the first evaluation.
+* **evaluationInterval**: int: Interval (number of runs) between policy evaluations.
 ### BanditPolicy
 #### Properties
 * **policyType**: 'Bandit' (Required): Name of policy configuration
-* **slackAmount**: int
-* **slackFactor**: int
+* **slackAmount**: int: Absolute distance allowed from the best performing run.
+* **slackFactor**: int: Ratio of the allowed distance from the best performing run.
 
 ### MedianStoppingPolicy
 #### Properties
@@ -1280,13 +1280,13 @@ Private preview feature and only available to users on the allow list.
 ### TruncationSelectionPolicy
 #### Properties
 * **policyType**: 'TruncationSelection' (Required): Name of policy configuration
-* **truncationPercentage**: int
+* **truncationPercentage**: int: The percentage of runs to cancel at each evaluation interval.
 
 
 ## Objective
 ### Properties
 * **goal**: 'Maximize' | 'Minimize' (Required): Defines supported metric goals for hyperparameter tuning
-* **primaryMetric**: string (Required)
+* **primaryMetric**: string (Required): Name of the metric to optimize.
 
 ## SweepJobSearchSpace
 ### Properties
@@ -1459,7 +1459,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## FlavorData
 ### Properties
-* **data**: [FlavorData](#flavordata): Dictionary of <string>
+* **data**: [FlavorData](#flavordata): Model flavor-specific data.
 
 ## FlavorData
 ### Properties
@@ -1513,12 +1513,12 @@ optional
 * **description**: string: Description of the endpoint deployment.
 * **environmentId**: string: ARM resource ID of the environment specification for the endpoint deployment.
 * **environmentVariables**: [OnlineDeploymentEnvironmentVariables](#onlinedeploymentenvironmentvariables): Environment variables configuration for the deployment.
-* **livenessProbe**: [ProbeSettings](#probesettings)
+* **livenessProbe**: [ProbeSettings](#probesettings): Deployment container liveness/readiness probe configuration.
 * **model**: [AssetReferenceBase](#assetreferencebase): Base definition for asset references.
 * **properties**: [OnlineDeploymentProperties](#onlinedeploymentproperties): Property dictionary. Properties can be added, but not removed or altered.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Scaling' | 'Succeeded' | 'Updating' (ReadOnly)
-* **requestSettings**: [OnlineRequestSettings](#onlinerequestsettings)
-* **scaleSettings**: [OnlineScaleSettings](#onlinescalesettings)
+* **requestSettings**: [OnlineRequestSettings](#onlinerequestsettings): Online deployment scoring requests configuration.
+* **scaleSettings**: [OnlineScaleSettings](#onlinescalesettings): Online deployment scaling configuration.
 ### K8SOnlineDeployment
 #### Properties
 * **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements): The resource requirements for the container (cpu and memory).
@@ -1527,8 +1527,8 @@ optional
 ### ManagedOnlineDeployment
 #### Properties
 * **endpointComputeType**: 'Managed' (Required): The compute type of the endpoint.
-* **instanceType**: string
-* **readinessProbe**: [ProbeSettings](#probesettings)
+* **instanceType**: string: Compute instance type.
+* **readinessProbe**: [ProbeSettings](#probesettings): Deployment container liveness/readiness probe configuration.
 
 
 ## OnlineDeploymentEnvironmentVariables
@@ -1551,7 +1551,7 @@ optional
 
 ## OnlineRequestSettings
 ### Properties
-* **maxConcurrentRequestsPerInstance**: int
+* **maxConcurrentRequestsPerInstance**: int: The number of requests allowed to queue at once for this deployment.
 * **maxQueueWait**: string: The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
 * **requestTimeout**: string: The request timeout in ISO 8601 format. Supports millisecond precision.
 
@@ -1559,18 +1559,18 @@ optional
 * **Discriminator**: scaleType
 
 ### Base Properties
-* **maxInstances**: int
-* **minInstances**: int
+* **maxInstances**: int: Maximum number of instances for this deployment.
+* **minInstances**: int: Minimum number of instances for this deployment.
 ### AutoScaleSettings
 #### Properties
 * **pollingInterval**: string: The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
-* **scaleType**: 'Auto' (Required)
-* **targetUtilizationPercentage**: int
+* **scaleType**: 'Auto' (Required): Type of deployment scaling algorithm
+* **targetUtilizationPercentage**: int: Target CPU usage for the autoscaler.
 
 ### ManualScaleSettings
 #### Properties
-* **instanceCount**: int
-* **scaleType**: 'Manual' (Required)
+* **instanceCount**: int: Fixed number of instances for this deployment.
+* **scaleType**: 'Manual' (Required): Type of deployment scaling algorithm
 
 
 ## ContainerResourceRequirements
