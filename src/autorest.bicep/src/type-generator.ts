@@ -55,7 +55,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
 
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
+        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
         const flags = parsePropertyFlags(putProperty, getProperty);
         resourceProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
@@ -397,7 +397,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeBaseProperties)) {
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
+        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
         const flags = parsePropertyFlags(putProperty, getProperty);
         definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
