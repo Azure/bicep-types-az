@@ -17,10 +17,10 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **certificate**: string (WriteOnly)
+* **certificate**: string (WriteOnly): Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **isVerified**: bool (WriteOnly)
+* **isVerified**: bool (WriteOnly): True indicates that the certificate will be created in verified state and proof of possession will not be required.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type

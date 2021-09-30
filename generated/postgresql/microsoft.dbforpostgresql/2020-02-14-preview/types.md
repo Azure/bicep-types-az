@@ -31,10 +31,10 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string: The administrator login password (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
-* **createMode**: 'Default' | 'PointInTimeRestore': The mode to create a new PostgreSQL server.
+* **createMode**: 'Default' | 'PointInTimeRestore' (WriteOnly): The mode to create a new PostgreSQL server.
 * **delegatedSubnetArguments**: [ServerPropertiesDelegatedSubnetArguments](#serverpropertiesdelegatedsubnetarguments)
 * **displayName**: string: The display name of a server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.

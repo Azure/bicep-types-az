@@ -7,10 +7,10 @@
 * **etag**: string (ReadOnly): The ETag for the resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ClusterIdentity](#clusteridentity): Identity for the cluster.
-* **location**: string: The Azure Region where the resource lives
+* **location**: string: The location of the cluster.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterCreateProperties](#clustercreateproperties): The properties of cluster.
-* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): Resource tags.
+* **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
+* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): The resource tags.
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HDInsight/clusters/applications@2018-06-01-preview

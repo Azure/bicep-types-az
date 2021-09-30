@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-05-10' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties with additional details.
+* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2017-05-10

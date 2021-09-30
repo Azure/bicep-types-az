@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2018-02-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Azure location of the key vault resource.
+* **location**: string (Required): The supported Azure location where the key vault should be created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultProperties](#vaultproperties) (Required): Properties of the vault
-* **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): Tags assigned to the key vault resource.
+* **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/accessPolicies@2018-02-14
@@ -40,7 +40,7 @@
 * **location**: string (ReadOnly): Azure location of the key vault resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretProperties](#secretproperties) (Required): Properties of the secret
-* **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): Tags assigned to the key vault resource.
+* **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): The tags that will be assigned to the secret.
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## VaultProperties

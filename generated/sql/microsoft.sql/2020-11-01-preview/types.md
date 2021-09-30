@@ -299,7 +299,7 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly)
+* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly): Contains the database information after successful export.
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/maintenanceWindows@2020-11-01-preview
@@ -657,17 +657,17 @@
 ## ManagedInstanceProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-* **administratorLoginPassword**: string: The administrator login password (required for managed instance creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for managed instance creation).
 * **administrators**: [ManagedInstanceExternalAdministrator](#managedinstanceexternaladministrator): Properties of a active directory administrator.
 * **collation**: string: Collation of the managed instance.
 * **dnsZone**: string (ReadOnly): The Dns Zone that the managed instance is in.
-* **dnsZonePartner**: string: The resource id of another managed instance whose DNS zone this managed instance will share after creation.
+* **dnsZonePartner**: string (WriteOnly): The resource id of another managed instance whose DNS zone this managed instance will share after creation.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
 * **instancePoolId**: string: The Id of the instance pool this managed server belongs to.
 * **keyId**: string: A CMK URI of the key to use for encryption.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
 * **maintenanceConfigurationId**: string: Specifies maintenance configuration id to apply to this managed instance.
-* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore': Specifies the mode of database creation.
+* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore' (WriteOnly): Specifies the mode of database creation.
 
 Default: Regular instance creation.
 
@@ -678,8 +678,8 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly)
 * **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance.
 * **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
-* **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sourceManagedInstanceId**: string: The resource identifier of the source managed instance associated with create operation of this instance.
+* **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sourceManagedInstanceId**: string (WriteOnly): The resource identifier of the source managed instance associated with create operation of this instance.
 * **state**: string (ReadOnly): The state of the managed instance.
 * **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
 * **storageSizeInGB**: int: Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
@@ -741,23 +741,23 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## ManagedDatabaseProperties
 ### Properties
-* **autoCompleteRestore**: bool: Whether to auto complete restore of this managed database.
+* **autoCompleteRestore**: bool (WriteOnly): Whether to auto complete restore of this managed database.
 * **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup': Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup' (WriteOnly): Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
 * **creationDate**: string (ReadOnly): Creation date of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
 * **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
 * **failoverGroupId**: string (ReadOnly): Instance Failover Group resource identifier that this managed database belongs to.
-* **lastBackupName**: string: Last backup file name for restore of this managed database.
-* **longTermRetentionBackupResourceId**: string: The name of the Long Term Retention backup to be used for restore of this managed database.
-* **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
-* **restorableDroppedDatabaseId**: string: The restorable dropped database resource id to restore when creating this database.
-* **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
+* **lastBackupName**: string (WriteOnly): Last backup file name for restore of this managed database.
+* **longTermRetentionBackupResourceId**: string (WriteOnly): The name of the Long Term Retention backup to be used for restore of this managed database.
+* **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
+* **restorableDroppedDatabaseId**: string (WriteOnly): The restorable dropped database resource id to restore when creating this database.
+* **restorePointInTime**: string (WriteOnly): Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
 * **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
-* **storageContainerSasToken**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
-* **storageContainerUri**: string: Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
+* **storageContainerSasToken**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
+* **storageContainerUri**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
 ## TrackedResourceTags
 ### Properties
@@ -805,9 +805,9 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
 * **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
-* **storageContainerPath**: string: A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
-* **storageContainerSasKey**: string: A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
+* **storageContainerPath**: string (WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
+* **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
 
 ## VulnerabilityAssessmentRecurringScansProperties
 ### Properties
@@ -835,9 +835,9 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 * **autoRotationEnabled**: bool (ReadOnly): Key auto rotation opt-in flag. Either true or false.
 * **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the key.
-* **uri**: string: The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+* **uri**: string (WriteOnly): The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
 
 ## SecurityAlertsPolicyProperties
 ### Properties
@@ -866,14 +866,14 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## ManagedInstanceVulnerabilityAssessmentProperties
 ### Properties
 * **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required. Applies only if the storage account is not behind a Vnet or a firewall
-* **storageContainerPath**: string (Required): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
-* **storageContainerSasKey**: string: A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required. Applies only if the storage account is not behind a Vnet or a firewall
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required. Applies only if the storage account is not behind a Vnet or a firewall
+* **storageContainerPath**: string (Required, WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
+* **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required. Applies only if the storage account is not behind a Vnet or a firewall
 
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
-* **administratorLoginPassword**: string: The administrator login password (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **administrators**: [ServerExternalAdministrator](#serverexternaladministrator): Properties of a active directory administrator.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **keyId**: string: A CMK URI of the key to use for encryption.
@@ -1013,7 +1013,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1031,7 +1031,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **autoPauseDelay**: int: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
 * **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: The collation of the database.
-* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary': Specifies the mode of database creation.
+* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary' (WriteOnly): Specifies the mode of database creation.
 
 Default: regular database creation.
 
@@ -1059,24 +1059,24 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **failoverGroupId**: string (ReadOnly): Failover Group resource identifier that this database belongs to.
 * **highAvailabilityReplicaCount**: int: The number of secondary replicas associated with the database that are used to provide high availability.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
-* **longTermRetentionBackupResourceId**: string: The resource identifier of the long term retention backup associated with create operation of this database.
+* **longTermRetentionBackupResourceId**: string (WriteOnly): The resource identifier of the long term retention backup associated with create operation of this database.
 * **maintenanceConfigurationId**: string: Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
 * **maxLogSizeBytes**: int (ReadOnly): The max log size for this database.
 * **maxSizeBytes**: int: The max size of the database expressed in bytes.
 * **minCapacity**: int: Minimal capacity that database will always have allocated, if not paused
 * **pausedDate**: string (ReadOnly): The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
 * **readScale**: 'Disabled' | 'Enabled': The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
-* **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
-* **recoveryServicesRecoveryPointId**: string: The resource identifier of the recovery point associated with create operation of this database.
+* **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
+* **recoveryServicesRecoveryPointId**: string (WriteOnly): The resource identifier of the recovery point associated with create operation of this database.
 * **requestedBackupStorageRedundancy**: 'Geo' | 'Local' | 'Zone': The storage redundancy type of the copied backup
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the database.
-* **restorableDroppedDatabaseId**: string: The resource identifier of the restorable dropped database associated with create operation of this database.
-* **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **restorableDroppedDatabaseId**: string (WriteOnly): The resource identifier of the restorable dropped database associated with create operation of this database.
+* **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **resumedDate**: string (ReadOnly): The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
-* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database.
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd' (WriteOnly): The name of the sample schema to apply when creating this database.
 * **secondaryType**: 'Geo' | 'Named': The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
-* **sourceDatabaseDeletionDate**: string: Specifies the time that the database was deleted.
-* **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
+* **sourceDatabaseDeletionDate**: string (WriteOnly): Specifies the time that the database was deleted.
+* **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
 * **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
@@ -1160,7 +1160,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1249,7 +1249,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1260,10 +1260,10 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## DatabaseExtensionsProperties
 ### Properties
-* **operationMode**: 'PolybaseImport' (Required, WriteOnly)
-* **storageKey**: string (Required, WriteOnly)
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
-* **storageUri**: string (Required, WriteOnly)
+* **operationMode**: 'PolybaseImport' (Required, WriteOnly): Operation Mode.
+* **storageKey**: string (Required, WriteOnly): Storage key.
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): Storage key type.
+* **storageUri**: string (Required, WriteOnly): Storage Uri.
 
 ## MaintenanceWindowsProperties
 ### Properties
@@ -1280,7 +1280,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **conflictLoggingRetentionInDays**: int: Conflict logging retention period.
 * **conflictResolutionPolicy**: 'HubWin' | 'MemberWin': Conflict resolution policy of the sync group.
 * **enableConflictLogging**: bool: If conflict logging is enabled.
-* **hubDatabasePassword**: string: Password for the sync group hub database credential.
+* **hubDatabasePassword**: string (WriteOnly): Password for the sync group hub database credential.
 * **hubDatabaseUserName**: string: User name for the sync group hub database credential.
 * **interval**: int: Sync interval of the sync group.
 * **lastSyncTime**: string (ReadOnly): Last sync time of the sync group.
@@ -1310,7 +1310,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **databaseName**: string: Database name of the member database in the sync member.
 * **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Type of the sync agent linked database.
-* **password**: string: Password of the member database in the sync member.
+* **password**: string (WriteOnly): Password of the member database in the sync member.
 * **privateEndpointName**: string (ReadOnly): Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
 * **serverName**: string: Server name of the member database in the sync member
 * **sqlServerDatabaseId**: string: SQL Server database id of the sync member.
@@ -1356,7 +1356,7 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1484,7 +1484,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1539,7 +1539,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## JobCredentialProperties
 ### Properties
-* **password**: string (Required): The credential password.
+* **password**: string (Required, WriteOnly): The credential password.
 * **username**: string (Required): The credential user name.
 
 ## JobProperties
@@ -1630,10 +1630,10 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **autoRotationEnabled**: bool (ReadOnly): Key auto rotation opt-in flag. Either true or false.
 * **creationDate**: string (ReadOnly): The server key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the server key.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
-* **uri**: string: The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+* **uri**: string (WriteOnly): The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.
 
 ## SyncAgentProperties
 ### Properties
@@ -1654,7 +1654,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ServerVulnerabilityAssessmentProperties
 ### Properties
 * **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required. Applies only if the storage account is not behind a Vnet or a firewall
-* **storageContainerPath**: string (Required): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
-* **storageContainerSasKey**: string: A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required. Applies only if the storage account is not behind a Vnet or a firewall
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required. Applies only if the storage account is not behind a Vnet or a firewall
+* **storageContainerPath**: string (Required, WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
+* **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required. Applies only if the storage account is not behind a Vnet or a firewall
 

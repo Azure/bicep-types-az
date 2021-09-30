@@ -114,9 +114,9 @@
 ## DatabaseVulnerabilityAssessmentProperties
 ### Properties
 * **recurringScans**: [VulnerabilityAssessmentRecurringScansProperties](#vulnerabilityassessmentrecurringscansproperties): Properties of a Vulnerability Assessment recurring scans.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
-* **storageContainerPath**: string: A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
-* **storageContainerSasKey**: string: A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
+* **storageContainerPath**: string (WriteOnly): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).  It is required if server level vulnerability assessment policy doesn't set
+* **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
 
 ## VulnerabilityAssessmentRecurringScansProperties
 ### Properties
@@ -142,16 +142,16 @@
 ## ManagedInstanceKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The key type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The key type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the key.
-* **uri**: string: The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+* **uri**: string (WriteOnly): The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
 
 ## DatabaseProperties
 ### Properties
 * **autoPauseDelay**: int: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
 * **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
 * **collation**: string: The collation of the database.
-* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary': Specifies the mode of database creation.
+* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary' (WriteOnly): Specifies the mode of database creation.
 
 Default: regular database creation.
 
@@ -177,22 +177,22 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **elasticPoolId**: string: The resource identifier of the elastic pool containing this database.
 * **failoverGroupId**: string (ReadOnly): Failover Group resource identifier that this database belongs to.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
-* **longTermRetentionBackupResourceId**: string: The resource identifier of the long term retention backup associated with create operation of this database.
+* **longTermRetentionBackupResourceId**: string (WriteOnly): The resource identifier of the long term retention backup associated with create operation of this database.
 * **maxLogSizeBytes**: int (ReadOnly): The max log size for this database.
 * **maxSizeBytes**: int: The max size of the database expressed in bytes.
 * **minCapacity**: int: Minimal capacity that database will always have allocated, if not paused
 * **pausedDate**: string (ReadOnly): The date when database was paused by user configuration or action (ISO8601 format). Null if the database is ready.
 * **readReplicaCount**: int: The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
 * **readScale**: 'Disabled' | 'Enabled': If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
-* **recoverableDatabaseId**: string: The resource identifier of the recoverable database associated with create operation of this database.
-* **recoveryServicesRecoveryPointId**: string: The resource identifier of the recovery point associated with create operation of this database.
+* **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
+* **recoveryServicesRecoveryPointId**: string (WriteOnly): The resource identifier of the recovery point associated with create operation of this database.
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the database.
-* **restorableDroppedDatabaseId**: string: The resource identifier of the restorable dropped database associated with create operation of this database.
-* **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **restorableDroppedDatabaseId**: string (WriteOnly): The resource identifier of the restorable dropped database associated with create operation of this database.
+* **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **resumedDate**: string (ReadOnly): The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
-* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd': The name of the sample schema to apply when creating this database.
-* **sourceDatabaseDeletionDate**: string: Specifies the time that the database was deleted.
-* **sourceDatabaseId**: string: The resource identifier of the source database associated with create operation of this database.
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd' (WriteOnly): The name of the sample schema to apply when creating this database.
+* **sourceDatabaseDeletionDate**: string (WriteOnly): Specifies the time that the database was deleted.
+* **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
 * **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 

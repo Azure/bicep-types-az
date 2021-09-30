@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateTenantRequestBodyProperties](#createtenantrequestbodyproperties) (Required): Properties of the Azure AD B2C tenant Azure resource.
+* **properties**: [CreateTenantRequestBodyProperties](#createtenantrequestbodyproperties) (Required)
 * **sku**: [B2CResourceSKU](#b2cresourcesku) (Required): SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
 * **tags**: [CreateTenantRequestBodyTags](#createtenantrequestbodytags): Resource Tags
 * **type**: 'Microsoft.AzureActiveDirectory/b2cDirectories' (ReadOnly, DeployTimeConstant): The resource type
@@ -15,7 +15,7 @@
 ## CreateTenantRequestBodyProperties
 ### Properties
 * **billingConfig**: [B2CTenantResourcePropertiesBillingConfig](#b2ctenantresourcepropertiesbillingconfig) (ReadOnly): The billing configuration for the tenant.
-* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly)
+* **createTenantProperties**: [CreateTenantProperties](#createtenantproperties) (WriteOnly): These properties are used to create the Azure AD B2C tenant. These properties are not part of the Azure resource.
 * **tenantId**: string (ReadOnly): An identifier of the B2C tenant.
 
 ## B2CTenantResourcePropertiesBillingConfig
@@ -25,8 +25,8 @@
 
 ## CreateTenantProperties
 ### Properties
-* **countryCode**: string (WriteOnly)
-* **displayName**: string (WriteOnly)
+* **countryCode**: string (WriteOnly): Country code of Azure tenant (e.g. 'US'). Refer to [aka.ms/B2CDataResidency](https://aka.ms/B2CDataResidency) to see valid country codes and corresponding data residency locations. If you do not see a country code in an valid data residency location, choose one from the list.
+* **displayName**: string (WriteOnly): The display name of the B2C tenant.
 
 ## B2CResourceSKU
 ### Properties

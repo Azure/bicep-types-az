@@ -43,17 +43,17 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string: The password of the administrator login (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **backup**: [Backup](#backup): Storage Profile properties of a server
-* **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica': The mode to create a new MySQL server.
+* **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' (WriteOnly): The mode to create a new MySQL server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **highAvailability**: [HighAvailability](#highavailability): Network related properties of a server
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **network**: [Network](#network): Network related properties of a server
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: 'None' | 'Replica' | 'Source': The replication role.
-* **restorePointInTime**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **restorePointInTime**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **sourceServerResourceId**: string: The source MySQL server id.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): The state of a server.
 * **storage**: [Storage](#storage): Storage Profile properties of a server

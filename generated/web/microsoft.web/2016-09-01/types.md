@@ -62,9 +62,9 @@
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly)
+* **kind**: string (WriteOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AppServiceEnvironment
@@ -223,12 +223,17 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
-* **vpnPackageUri**: string (Required): The URI where the VPN package can be downloaded.
+* **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly)
-* **startAddress**: string (WriteOnly)
+* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **name**: string (WriteOnly): The name of this route. This is only returned by the server and does not need to be set by the client.
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly): The type of route this is:
+DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+INHERITED - Routes inherited from the real Virtual Network routes
+STATIC - Static route set on the app only
+
+These values will be used for syncing an app's routes with those from a Virtual Network.
+* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 

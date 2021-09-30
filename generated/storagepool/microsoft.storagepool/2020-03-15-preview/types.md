@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Disk pool response properties.
+* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Properties for Disk pool create or update request.
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Resource metadata required by ARM RPC.
 * **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,12 +18,12 @@
 * **apiVersion**: '2020-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Response properties for iSCSI target operations.
+* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Properties for iSCSI target create or update request.
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DiskPoolCreateProperties
 ### Properties
-* **additionalCapabilities**: string[]: List of additional capabilities for Disk pool.
+* **additionalCapabilities**: string[]: List of additional capabilities for a Disk pool.
 * **availabilityZones**: string[] (Required): Logical zone for Disk pool resource; example: ["1"].
 * **disks**: [Disk](#disk)[]: List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI target.
@@ -61,13 +61,13 @@
 * **acls**: [Acl](#acl)[] (Required): Access Control List (ACL) for an iSCSI target portal group.
 * **attributes**: [Attributes](#attributes) (Required): Attributes of a iSCSI target portal group.
 * **endpoints**: string[] (ReadOnly): List of private IPv4 addresses to connect to the iSCSI target.
-* **luns**: [IscsiLun](#iscsilun)[] (Required): List of LUNs to be exposed through iSCSI target portal group.
+* **luns**: [IscsiLun](#iscsilun)[] (Required): List of LUNs to be exposed through the iSCSI target portal group.
 * **port**: int (ReadOnly): The port used by iSCSI target portal group.
 * **tag**: int (ReadOnly): The tag associated with the iSCSI target portal group.
 
 ## Acl
 ### Properties
-* **credentials**: [IscsiTargetCredentials](#iscsitargetcredentials): Challenge Handshake Authentication Protocol (CHAP) credentials for an iSCSI target ACL.
+* **credentials**: [IscsiTargetCredentials](#iscsitargetcredentials) (WriteOnly): Challenge Handshake Authentication Protocol (CHAP) credentials for an iSCSI target ACL.
 * **initiatorIqn**: string (Required): iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
 * **mappedLuns**: string[] (Required): List of LUN names mapped to the ACL.
 

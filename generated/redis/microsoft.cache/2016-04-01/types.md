@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Parameters describing a Redis instance.
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties supplied to Create Redis operation.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 

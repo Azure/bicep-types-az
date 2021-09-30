@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/hostingEnvironments/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/workerPools@2020-12-01
@@ -104,9 +104,9 @@
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly)
+* **kind**: string (WriteOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2020-12-01
@@ -280,7 +280,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2020-12-01
@@ -339,7 +339,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2020-12-01
@@ -381,7 +381,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/publicCertificates@2020-12-01
@@ -564,7 +564,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2020-12-01
@@ -623,7 +623,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2020-12-01
@@ -655,7 +655,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/sites/slots/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/publicCertificates@2020-12-01
@@ -827,7 +827,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StaticSiteCustomDomainRequestPropertiesARMResourceProperties](#staticsitecustomdomainrequestpropertiesarmresourceproperties): StaticSiteCustomDomainOverviewARMResource resource specific properties
+* **properties**: [StaticSiteCustomDomainRequestPropertiesARMResourceProperties](#staticsitecustomdomainrequestpropertiesarmresourceproperties): StaticSiteCustomDomainRequestPropertiesARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/privateEndpointConnections@2020-12-01
@@ -837,7 +837,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/staticSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/userProvidedFunctionApps@2020-12-01
@@ -864,7 +864,7 @@ This is valid for all deployment slots in an app.
 * **keyVaultId**: string: Key Vault Csm resource Id.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
-* **password**: string: Certificate password.
+* **password**: string (WriteOnly): Certificate password.
 * **pfxBlob**: any: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
@@ -1023,7 +1023,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
-* **vpnPackageUri**: string (Required): The URI where the VPN package can be downloaded.
+* **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
 
 ## VnetRouteProperties
 ### Properties
@@ -1063,7 +1063,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-* **cloningInfo**: [CloningInfo](#cloninginfo): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
 * **containerSize**: int: Size of the function container.
 * **customDomainVerificationId**: string: Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
@@ -2192,17 +2192,21 @@ Value can range between 25 and 100.
 
 ## MSDeployCore
 ### Properties
-* **appOffline**: bool (WriteOnly)
+* **appOffline**: bool (WriteOnly): Sets the AppOffline rule while the MSDeploy operation executes.
+Setting is <code>false</code> by default.
 * **complete**: bool (ReadOnly): Whether the deployment operation has completed
-* **connectionString**: string (WriteOnly)
-* **dbType**: string (WriteOnly)
+* **connectionString**: string (WriteOnly): SQL Connection String
+* **dbType**: string (WriteOnly): Database Type
 * **deployer**: string (ReadOnly): Username of deployer
 * **endTime**: string (ReadOnly): End time of deploy operation
-* **packageUri**: string (WriteOnly)
+* **packageUri**: string (WriteOnly): Package URI
 * **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state
-* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly)
-* **setParametersXmlFileUri**: string (WriteOnly)
-* **skipAppData**: bool (WriteOnly)
+* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly): MSDeploy Parameters. Must not be set if SetParametersXmlFileUri is used.
+* **setParametersXmlFileUri**: string (WriteOnly): URI of MSDeploy Parameters file. Must not be set if SetParameters is used.
+* **skipAppData**: bool (WriteOnly): Controls whether the MSDeploy operation skips the App_Data directory.
+If set to <code>true</code>, the existing App_Data directory on the destination
+will not be deleted, and any App_Data directory in the source will be ignored.
+Setting is <code>false</code> by default.
 * **startTime**: string (ReadOnly): Start time of deploy operation
 
 ## MSDeployCoreSetParameters
@@ -2555,6 +2559,6 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 * **domainName**: string (ReadOnly): The domain name for the static site custom domain.
 * **errorMessage**: string (ReadOnly)
 * **status**: 'Adding' | 'Deleting' | 'Failed' | 'Ready' | 'RetrievingValidationToken' | 'Validating' (ReadOnly): The status of the custom domain
-* **validationMethod**: string (WriteOnly)
+* **validationMethod**: string (WriteOnly): Validation method for adding a custom domain
 * **validationToken**: string (ReadOnly): The TXT record validation token
 

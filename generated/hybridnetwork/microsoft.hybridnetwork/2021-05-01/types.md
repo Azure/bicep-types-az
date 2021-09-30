@@ -238,7 +238,7 @@
 
 ## VirtualHardDisk
 ### Properties
-* **uri**: string: Specifies the virtual hard disk's uri.
+* **uri**: string (WriteOnly): Specifies the virtual hard disk's uri.
 
 ## PreviewSubscriptionProperties
 ### Properties

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties of the redis cache.
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties supplied to Create Redis operation.
 * **tags**: [RedisCreateParametersTags](#rediscreateparameterstags): Resource tags.
 * **type**: 'Microsoft.Cache/redis' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Properties of a linked server to be returned in get/put response
+* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Create properties for a linked server
 * **type**: 'Microsoft.Cache/redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/redis/patchSchedules@2020-06-01

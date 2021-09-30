@@ -50,7 +50,7 @@
 * **fileShareWitnessPath**: string: Optional path for fileshare witness.
 * **ouPath**: string: Organizational Unit path in which the nodes and cluster will be present.
 * **sqlServiceAccount**: string: Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
-* **storageAccountPrimaryKey**: string: Primary key of the witness storage account.
+* **storageAccountPrimaryKey**: string (WriteOnly): Primary key of the witness storage account.
 * **storageAccountUrl**: string: Fully qualified ARM resource id of the witness storage account.
 
 ## TrackedResourceTags
@@ -111,9 +111,9 @@
 * **fullBackupStartTime**: int: Start time of a given day during which full backups can take place. 0-23 hours.
 * **fullBackupWindowHours**: int: Duration of the time window of a given day during which full backups can take place. 1-23 hours.
 * **logBackupFrequency**: int: Frequency of log backups. 5-60 minutes.
-* **password**: string: Password for encryption on backup.
+* **password**: string (WriteOnly): Password for encryption on backup.
 * **retentionPeriod**: int: Retention period of backup: 1-30 days.
-* **storageAccessKey**: string: Storage account key where backup will be taken to.
+* **storageAccessKey**: string (WriteOnly): Storage account key where backup will be taken to.
 * **storageAccountUrl**: string: Storage account url where backup will be taken to.
 
 ## AutoPatchingSettings
@@ -129,7 +129,7 @@
 * **credentialName**: string: Credential name.
 * **enable**: bool: Enable or disable key vault credential setting.
 * **servicePrincipalName**: string: Service principal name to access key vault.
-* **servicePrincipalSecret**: string: Service principal name secret to access key vault.
+* **servicePrincipalSecret**: string (WriteOnly): Service principal name secret to access key vault.
 
 ## ServerConfigurationsManagementSettings
 ### Properties
@@ -146,8 +146,8 @@
 ### Properties
 * **connectivityType**: 'LOCAL' | 'PRIVATE' | 'PUBLIC': SQL Server connectivity option.
 * **port**: int: SQL Server port.
-* **sqlAuthUpdatePassword**: string: SQL Server sysadmin login password.
-* **sqlAuthUpdateUserName**: string: SQL Server sysadmin login to create.
+* **sqlAuthUpdatePassword**: string (WriteOnly): SQL Server sysadmin login password.
+* **sqlAuthUpdateUserName**: string (WriteOnly): SQL Server sysadmin login to create.
 
 ## SqlStorageUpdateSettings
 ### Properties

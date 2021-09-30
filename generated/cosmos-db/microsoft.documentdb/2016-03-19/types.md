@@ -8,7 +8,7 @@
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required): Properties for the database account.
+* **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlDatabaseCreateUpdateProperties](#sqldatabasecreateupdateproperties) (Required): The properties of an Azure Cosmos DB SQL database
+* **properties**: [SqlDatabaseCreateUpdateProperties](#sqldatabasecreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB SQL database.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [MongoDBCollectionCreateUpdateProperties](#mongodbcollectioncreateupdateproperties) (Required): The properties of an Azure Cosmos DB MongoDB collection
+* **properties**: [MongoDBCollectionCreateUpdateProperties](#mongodbcollectioncreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB MongoDB collection.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/collections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -41,7 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/collections/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SqlContainerCreateUpdateProperties](#sqlcontainercreateupdateproperties) (Required): The properties of an Azure Cosmos DB container
+* **properties**: [SqlContainerCreateUpdateProperties](#sqlcontainercreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB container.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/containers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -63,7 +63,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/containers/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -74,7 +74,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GremlinGraphCreateUpdateProperties](#gremlingraphcreateupdateproperties) (Required): The properties of an Azure Cosmos DB Gremlin graph
+* **properties**: [GremlinGraphCreateUpdateProperties](#gremlingraphcreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB Gremlin graph.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -85,7 +85,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -96,7 +96,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/databases/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -107,7 +107,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CassandraKeyspaceCreateUpdateProperties](#cassandrakeyspacecreateupdateproperties) (Required): The properties of an Azure Cosmos DB Cassandra keyspace
+* **properties**: [CassandraKeyspaceCreateUpdateProperties](#cassandrakeyspacecreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB Cassandra keyspace.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/keyspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -118,7 +118,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/keyspaces/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -129,7 +129,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CassandraTableCreateUpdateProperties](#cassandratablecreateupdateproperties) (Required): The properties of an Azure Cosmos DB Cassandra table
+* **properties**: [CassandraTableCreateUpdateProperties](#cassandratablecreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB Cassandra table.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/keyspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -140,7 +140,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/keyspaces/tables/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -151,7 +151,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TableCreateUpdateProperties](#tablecreateupdateproperties) (Required): The properties of an Azure Cosmos Table
+* **properties**: [TableCreateUpdateProperties](#tablecreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB Table.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/tables' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -162,7 +162,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The location of the resource group to which the resource belongs.
 * **name**: 'throughput' (Required, DeployTimeConstant): The resource name
-* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): The properties of an Azure Cosmos DB resource throughput
+* **properties**: [ThroughputUpdateProperties](#throughputupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/tables/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -179,7 +179,7 @@
 * **failoverPolicies**: [FailoverPolicy](#failoverpolicy)[] (ReadOnly): An array that contains the regions ordered by their failover priorities.
 * **ipRangeFilter**: string: Cosmos DB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 * **isVirtualNetworkFilterEnabled**: bool: Flag to indicate whether to enable/disable Virtual Network ACL rules.
-* **locations**: [Location](#location)[] (Required, WriteOnly)
+* **locations**: [Location](#location)[] (Required, WriteOnly): An array that contains the georeplication locations enabled for the Cosmos DB account.
 * **provisioningState**: string (ReadOnly): The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'Offline' - the Cosmos DB account is not active. 'DeletionFailed' – the Cosmos DB account deletion failed.
 * **readLocations**: [Location](#location)[] (ReadOnly): An array that contains of the read locations enabled for the Cosmos DB account.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: List of Virtual Network ACL rules configured for the Cosmos DB account.
@@ -203,12 +203,12 @@
 
 ## Location
 ### Properties
-* **documentEndpoint**: string (ReadOnly, WriteOnly)
-* **failoverPriority**: int (WriteOnly)
-* **id**: string (ReadOnly, WriteOnly)
-* **isZoneRedundant**: bool (WriteOnly)
-* **locationName**: string (WriteOnly)
-* **provisioningState**: string (ReadOnly, WriteOnly)
+* **documentEndpoint**: string (ReadOnly, WriteOnly): The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
+* **failoverPriority**: int (WriteOnly): The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+* **id**: string (ReadOnly, WriteOnly): The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+* **isZoneRedundant**: bool (WriteOnly): Flag to indicate whether or not this region is an AvailabilityZone region
+* **locationName**: string (WriteOnly): The name of the region.
+* **provisioningState**: string (ReadOnly, WriteOnly): The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'Offline' - the Cosmos DB account is not active. 'DeletionFailed' – the Cosmos DB account deletion failed.
 
 ## VirtualNetworkRule
 ### Properties
@@ -228,8 +228,8 @@
 * **_ts**: any (ReadOnly): Anything
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL database
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
-* **resource**: [SqlDatabaseResource](#sqldatabaseresource) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **resource**: [SqlDatabaseResource](#sqldatabaseresource) (Required, WriteOnly): Cosmos DB SQL database id object
 
 ## CreateUpdateOptions
 ### Properties
@@ -238,7 +238,7 @@
 
 ## SqlDatabaseResource
 ### Properties
-* **id**: string (Required, WriteOnly)
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB SQL database
 
 ## Tags
 ### Properties
@@ -249,23 +249,23 @@
 ### Properties
 * **id**: string (ReadOnly): Name of the Cosmos DB MongoDB collection
 * **indexes**: [MongoIndex](#mongoindex)[] (ReadOnly): List of index keys
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
-* **resource**: [MongoDBCollectionResource](#mongodbcollectionresource) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **resource**: [MongoDBCollectionResource](#mongodbcollectionresource) (Required, WriteOnly): Cosmos DB MongoDB collection resource object
 * **shardKey**: [ShardKeys](#shardkeys) (ReadOnly): The shard key and partition kind pair, only support "Hash" partition kind
 
 ## MongoIndex
 ### Properties
-* **key**: [MongoIndexKeys](#mongoindexkeys) (WriteOnly)
-* **options**: [MongoIndexOptions](#mongoindexoptions) (WriteOnly)
+* **key**: [MongoIndexKeys](#mongoindexkeys) (WriteOnly): Cosmos DB MongoDB collection resource object
+* **options**: [MongoIndexOptions](#mongoindexoptions) (WriteOnly): Cosmos DB MongoDB collection index options
 
 ## MongoIndexKeys
 ### Properties
-* **keys**: string[] (WriteOnly)
+* **keys**: string[] (WriteOnly): List of keys for each MongoDB collection in the Azure Cosmos DB service
 
 ## MongoIndexOptions
 ### Properties
-* **expireAfterSeconds**: int (WriteOnly)
-* **unique**: bool (WriteOnly)
+* **expireAfterSeconds**: int (WriteOnly): Expire after seconds
+* **unique**: bool (WriteOnly): Is unique or not
 
 ## CreateUpdateOptions
 ### Properties
@@ -274,9 +274,9 @@
 
 ## MongoDBCollectionResource
 ### Properties
-* **id**: string (Required, WriteOnly)
-* **indexes**: [MongoIndex](#mongoindex)[] (WriteOnly)
-* **shardKey**: [ShardKeys](#shardkeys) (WriteOnly)
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB MongoDB collection
+* **indexes**: [MongoIndex](#mongoindex)[] (WriteOnly): List of index keys
+* **shardKey**: [ShardKeys](#shardkeys) (WriteOnly): The shard key and partition kind pair, only support "Hash" partition kind
 
 ## ShardKeys
 ### Properties
@@ -295,12 +295,12 @@
 
 ## ThroughputUpdateProperties
 ### Properties
-* **resource**: [ThroughputResource](#throughputresource) (Required, WriteOnly)
+* **resource**: [ThroughputResource](#throughputresource) (Required, WriteOnly): Cosmos DB resource throughput object
 * **throughput**: int (ReadOnly): Value of the Cosmos DB resource throughput
 
 ## ThroughputResource
 ### Properties
-* **throughput**: int (Required, WriteOnly)
+* **throughput**: int (Required, WriteOnly): Value of the Cosmos DB resource throughput
 
 ## Tags
 ### Properties
@@ -316,38 +316,38 @@
 * **defaultTtl**: int (ReadOnly): Default time to live
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL container
 * **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (ReadOnly): Cosmos DB indexing policy
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
 * **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (ReadOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
-* **resource**: [SqlContainerResource](#sqlcontainerresource) (Required, WriteOnly)
+* **resource**: [SqlContainerResource](#sqlcontainerresource) (Required, WriteOnly): Cosmos DB SQL container resource object
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (ReadOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
 ## ConflictResolutionPolicy
 ### Properties
-* **conflictResolutionPath**: string (WriteOnly)
-* **conflictResolutionProcedure**: string (WriteOnly)
-* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly)
+* **conflictResolutionPath**: string (WriteOnly): The conflict resolution path in the case of LastWriterWins mode.
+* **conflictResolutionProcedure**: string (WriteOnly): The procedure to resolve conflicts in the case of custom mode.
+* **mode**: 'Custom' | 'LastWriterWins' (WriteOnly): Indicates the conflict resolution mode.
 
 ## IndexingPolicy
 ### Properties
-* **automatic**: bool (WriteOnly)
-* **excludedPaths**: [ExcludedPath](#excludedpath)[] (WriteOnly)
-* **includedPaths**: [IncludedPath](#includedpath)[] (WriteOnly)
-* **indexingMode**: 'Consistent' | 'Lazy' | 'None' (WriteOnly)
+* **automatic**: bool (WriteOnly): Indicates if the indexing policy is automatic
+* **excludedPaths**: [ExcludedPath](#excludedpath)[] (WriteOnly): List of paths to exclude from indexing
+* **includedPaths**: [IncludedPath](#includedpath)[] (WriteOnly): List of paths to include in the indexing
+* **indexingMode**: 'Consistent' | 'Lazy' | 'None' (WriteOnly): Indicates the indexing mode.
 
 ## ExcludedPath
 ### Properties
-* **path**: string (WriteOnly)
+* **path**: string (WriteOnly): The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 
 ## IncludedPath
 ### Properties
-* **indexes**: [Indexes](#indexes)[] (WriteOnly)
-* **path**: string (WriteOnly)
+* **indexes**: [Indexes](#indexes)[] (WriteOnly): List of indexes for this path
+* **path**: string (WriteOnly): The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 
 ## Indexes
 ### Properties
-* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly)
-* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly)
-* **precision**: int (WriteOnly)
+* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' (WriteOnly): The datatype for which the indexing behavior is applied to.
+* **kind**: 'Hash' | 'Range' | 'Spatial' (WriteOnly): Indicates the type of index.
+* **precision**: int (WriteOnly): The precision of the index. -1 is maximum precision.
 
 ## CreateUpdateOptions
 ### Properties
@@ -356,25 +356,25 @@
 
 ## ContainerPartitionKey
 ### Properties
-* **kind**: 'Hash' | 'Range' (WriteOnly)
-* **paths**: string[] (WriteOnly)
+* **kind**: 'Hash' | 'Range' (WriteOnly): Indicates the kind of algorithm used for partitioning
+* **paths**: string[] (WriteOnly): List of paths using which data within the container can be partitioned
 
 ## SqlContainerResource
 ### Properties
-* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly)
-* **defaultTtl**: int (WriteOnly)
-* **id**: string (Required, WriteOnly)
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly)
-* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly)
-* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly)
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly): The conflict resolution policy for the container.
+* **defaultTtl**: int (WriteOnly): Default time to live
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB SQL container
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly): Cosmos DB indexing policy
+* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
+* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
 ## UniqueKeyPolicy
 ### Properties
-* **uniqueKeys**: [UniqueKey](#uniquekey)[] (WriteOnly)
+* **uniqueKeys**: [UniqueKey](#uniquekey)[] (WriteOnly): List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
 
 ## UniqueKey
 ### Properties
-* **paths**: string[] (WriteOnly)
+* **paths**: string[] (WriteOnly): List of paths must be unique for each document in the Azure Cosmos DB service
 
 ## Tags
 ### Properties
@@ -395,9 +395,9 @@
 * **defaultTtl**: int (ReadOnly): Default time to live
 * **id**: string (ReadOnly): Name of the Cosmos DB Gremlin graph
 * **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (ReadOnly): Cosmos DB indexing policy
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
 * **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (ReadOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
-* **resource**: [GremlinGraphResource](#gremlingraphresource) (Required, WriteOnly)
+* **resource**: [GremlinGraphResource](#gremlingraphresource) (Required, WriteOnly): Cosmos DB Gremlin graph resource object
 * **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (ReadOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
 ## CreateUpdateOptions
@@ -407,12 +407,12 @@
 
 ## GremlinGraphResource
 ### Properties
-* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly)
-* **defaultTtl**: int (WriteOnly)
-* **id**: string (Required, WriteOnly)
-* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly)
-* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly)
-* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly)
+* **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (WriteOnly): The conflict resolution policy for the container.
+* **defaultTtl**: int (WriteOnly): Default time to live
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB Gremlin graph
+* **indexingPolicy**: [IndexingPolicy](#indexingpolicy) (WriteOnly): Cosmos DB indexing policy
+* **partitionKey**: [ContainerPartitionKey](#containerpartitionkey) (WriteOnly): The configuration of the partition key to be used for partitioning data into multiple partitions
+* **uniqueKeyPolicy**: [UniqueKeyPolicy](#uniquekeypolicy) (WriteOnly): The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
 
 ## Tags
 ### Properties
@@ -432,8 +432,8 @@
 ## CassandraKeyspaceCreateUpdateProperties
 ### Properties
 * **id**: string (ReadOnly): Name of the Cosmos DB Cassandra keyspace
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
-* **resource**: [CassandraKeyspaceResource](#cassandrakeyspaceresource) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **resource**: [CassandraKeyspaceResource](#cassandrakeyspaceresource) (Required, WriteOnly): Cosmos DB Cassandra keyspace id object
 
 ## CreateUpdateOptions
 ### Properties
@@ -442,7 +442,7 @@
 
 ## CassandraKeyspaceResource
 ### Properties
-* **id**: string (Required, WriteOnly)
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB Cassandra keyspace
 
 ## Tags
 ### Properties
@@ -458,8 +458,8 @@
 ### Properties
 * **defaultTtl**: int (ReadOnly): Time to live of the Cosmos DB Cassandra table
 * **id**: string (ReadOnly): Name of the Cosmos DB Cassandra table
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
-* **resource**: [CassandraTableResource](#cassandratableresource) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **resource**: [CassandraTableResource](#cassandratableresource) (Required, WriteOnly): Cosmos DB Cassandra table id object
 * **schema**: [CassandraSchema](#cassandraschema) (ReadOnly): Cosmos DB Cassandra table schema
 
 ## CreateUpdateOptions
@@ -469,29 +469,29 @@
 
 ## CassandraTableResource
 ### Properties
-* **defaultTtl**: int (WriteOnly)
-* **id**: string (Required, WriteOnly)
-* **schema**: [CassandraSchema](#cassandraschema) (WriteOnly)
+* **defaultTtl**: int (WriteOnly): Time to live of the Cosmos DB Cassandra table
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB Cassandra table
+* **schema**: [CassandraSchema](#cassandraschema) (WriteOnly): Cosmos DB Cassandra table schema
 
 ## CassandraSchema
 ### Properties
-* **clusterKeys**: [ClusterKey](#clusterkey)[] (WriteOnly)
-* **columns**: [Column](#column)[] (WriteOnly)
-* **partitionKeys**: [CassandraPartitionKey](#cassandrapartitionkey)[] (WriteOnly)
+* **clusterKeys**: [ClusterKey](#clusterkey)[] (WriteOnly): List of cluster key.
+* **columns**: [Column](#column)[] (WriteOnly): List of Cassandra table columns.
+* **partitionKeys**: [CassandraPartitionKey](#cassandrapartitionkey)[] (WriteOnly): List of partition key.
 
 ## ClusterKey
 ### Properties
-* **name**: string (WriteOnly)
-* **orderBy**: string (WriteOnly)
+* **name**: string (WriteOnly): Name of the Cosmos DB Cassandra table cluster key
+* **orderBy**: string (WriteOnly): Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
 
 ## Column
 ### Properties
-* **name**: string (WriteOnly)
-* **type**: string (WriteOnly)
+* **name**: string (WriteOnly): Name of the Cosmos DB Cassandra table column
+* **type**: string (WriteOnly): Type of the Cosmos DB Cassandra table column
 
 ## CassandraPartitionKey
 ### Properties
-* **name**: string (WriteOnly)
+* **name**: string (WriteOnly): Name of the Cosmos DB Cassandra table partition key
 
 ## Tags
 ### Properties
@@ -506,8 +506,8 @@
 ## TableCreateUpdateProperties
 ### Properties
 * **id**: string (ReadOnly): Name of the Cosmos DB table
-* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly)
-* **resource**: [TableResource](#tableresource) (Required, WriteOnly)
+* **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
+* **resource**: [TableResource](#tableresource) (Required, WriteOnly): Cosmos DB table id object
 
 ## CreateUpdateOptions
 ### Properties
@@ -516,7 +516,7 @@
 
 ## TableResource
 ### Properties
-* **id**: string (Required, WriteOnly)
+* **id**: string (Required, WriteOnly): Name of the Cosmos DB table
 
 ## Tags
 ### Properties

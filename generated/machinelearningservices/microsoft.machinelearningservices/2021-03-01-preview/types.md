@@ -381,7 +381,7 @@
 ### Properties
 * **authMode**: 'AADToken' | 'AMLToken' | 'Key': Enum to determine endpoint authentication mode.
 * **description**: string: Description of the inference endpoint.
-* **keys**: [EndpointAuthKeys](#endpointauthkeys): Keys for endpoint authentication.
+* **keys**: [EndpointAuthKeys](#endpointauthkeys) (WriteOnly): Keys for endpoint authentication.
 * **properties**: [BatchEndpointProperties](#batchendpointproperties): Property dictionary. Properties can be added, but not removed or altered.
 * **scoringUri**: string (ReadOnly): Endpoint URI.
 * **swaggerUri**: string (ReadOnly): Endpoint Swagger URI.
@@ -952,7 +952,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 ### AccountKeyDatastoreCredentials
 #### Properties
 * **credentialsType**: 'AccountKey' (Required): Credential type used to authentication with storage.
-* **secrets**: [AccountKeyDatastoreSecrets](#accountkeydatastoresecrets): Datastore account key secrets.
+* **secrets**: [AccountKeyDatastoreSecrets](#accountkeydatastoresecrets) (WriteOnly): Datastore account key secrets.
 
 ### CertificateDatastoreCredentials
 #### Properties
@@ -960,19 +960,19 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **clientId**: string (Required): Service principal client ID.
 * **credentialsType**: 'Certificate' (Required): Credential type used to authentication with storage.
 * **resourceUri**: string: Resource the service principal has access to.
-* **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets): Datastore certificate secrets.
+* **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets) (WriteOnly): Datastore certificate secrets.
 * **tenantId**: string (Required): ID of the tenant to which the service principal belongs.
 * **thumbprint**: string (Required): Thumbprint of the certificate used for authentication.
 
 ### NoneDatastoreCredentials
 #### Properties
 * **credentialsType**: 'None' (Required): Credential type used to authentication with storage.
-* **secrets**: [NoneDatastoreSecrets](#nonedatastoresecrets): Empty/none datastore secret.
+* **secrets**: [NoneDatastoreSecrets](#nonedatastoresecrets) (WriteOnly): Empty/none datastore secret.
 
 ### SasDatastoreCredentials
 #### Properties
 * **credentialsType**: 'Sas' (Required): Credential type used to authentication with storage.
-* **secrets**: [SasDatastoreSecrets](#sasdatastoresecrets): Datastore SAS secrets.
+* **secrets**: [SasDatastoreSecrets](#sasdatastoresecrets) (WriteOnly): Datastore SAS secrets.
 
 ### ServicePrincipalDatastoreCredentials
 #### Properties
@@ -980,13 +980,13 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
 * **clientId**: string (Required): Service principal client ID.
 * **credentialsType**: 'ServicePrincipal' (Required): Credential type used to authentication with storage.
 * **resourceUri**: string: Resource the service principal has access to.
-* **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets): Datastore Service Principal secrets.
+* **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets) (WriteOnly): Datastore Service Principal secrets.
 * **tenantId**: string (Required): ID of the tenant to which the service principal belongs.
 
 ### SqlAdminDatastoreCredentials
 #### Properties
 * **credentialsType**: 'SqlAdmin' (Required): Credential type used to authentication with storage.
-* **secrets**: [SqlAdminDatastoreSecrets](#sqladmindatastoresecrets): Datastore SQL Admin secrets.
+* **secrets**: [SqlAdminDatastoreSecrets](#sqladmindatastoresecrets) (WriteOnly): Datastore SQL Admin secrets.
 * **userId**: string (Required): SQL database user name.
 
 
@@ -1480,7 +1480,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### Properties
 * **authMode**: 'AADToken' | 'AMLToken' | 'Key' (Required): Enum to determine endpoint authentication mode.
 * **description**: string: Description of the inference endpoint.
-* **keys**: [EndpointAuthKeys](#endpointauthkeys): Keys for endpoint authentication.
+* **keys**: [EndpointAuthKeys](#endpointauthkeys) (WriteOnly): Keys for endpoint authentication.
 * **properties**: [OnlineEndpointProperties](#onlineendpointproperties): Property dictionary. Properties can be added, but not removed or altered.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of endpoint provisioning.
 * **scoringUri**: string (ReadOnly): Endpoint URI.
