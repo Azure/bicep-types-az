@@ -8,8 +8,8 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): Definition of the module property type.
-* **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags): Resource tags.
+* **properties**: [PythonPackageCreateProperties](#pythonpackagecreateproperties) (Required): The parameters supplied to the create or update module properties.
+* **tags**: [PythonPackageCreateParametersTags](#pythonpackagecreateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2018-06-30
@@ -18,10 +18,10 @@
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The Azure Region where the resource lives
+* **location**: string: Gets or sets the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required): Definition of the runbook property type.
-* **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Resource tags.
+* **properties**: [RunbookCreateOrUpdateProperties](#runbookcreateorupdateproperties) (Required): The parameters supplied to the create or update runbook properties.
+* **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30
@@ -93,12 +93,12 @@
 ## RunbookCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
-* **description**: string: Gets or sets the description.
+* **description**: string: Gets or sets the description of the runbook.
 * **draft**: [RunbookDraft](#runbookdraft)
 * **jobCount**: int (ReadOnly): Gets or sets the job count of the runbook.
 * **lastModifiedBy**: string (ReadOnly): Gets or sets the last modified by.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **logActivityTrace**: int: Gets or sets the option to log activity trace of the runbook.
+* **logActivityTrace**: int: Gets or sets the activity-level tracing options of the runbook.
 * **logProgress**: bool: Gets or sets progress log option.
 * **logVerbose**: bool: Gets or sets verbose log option.
 * **outputTypes**: string[] (ReadOnly): Gets or sets the runbook output types.

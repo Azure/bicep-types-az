@@ -30,7 +30,7 @@
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the action.
+* **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
@@ -158,7 +158,7 @@
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly)
+* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## BookmarkProperties

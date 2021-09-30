@@ -15,7 +15,7 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: the region of the rmpl
+* **location**: string: the region to create private link association.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceManagementPrivateLinkEndpointConnections](#resourcemanagementprivatelinkendpointconnections) (ReadOnly)
 * **type**: 'Microsoft.Authorization/resourceManagementPrivateLinks' (ReadOnly, DeployTimeConstant): The resource type

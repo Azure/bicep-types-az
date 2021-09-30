@@ -19,7 +19,7 @@
 * **identity**: [Identity](#identity) (Required): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): The properties that define a rollout.
+* **properties**: [RolloutRequestProperties](#rolloutrequestproperties) (Required): The properties for defining a rollout.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeploymentManager/rollouts' (ReadOnly, DeployTimeConstant): The resource type
 

@@ -31,7 +31,7 @@
 * **etag**: string (ReadOnly): The etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventHubConsumerGroupName](#eventhubconsumergroupname) (Required): The tags.
+* **properties**: [EventHubConsumerGroupName](#eventhubconsumergroupname) (Required): The EventHub consumer group name.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2021-07-01-preview
@@ -318,5 +318,5 @@
 
 ## EventHubConsumerGroupName
 ### Properties
-* **name**: string (Required, WriteOnly)
+* **name**: string (Required, WriteOnly): EventHub consumer group name
 

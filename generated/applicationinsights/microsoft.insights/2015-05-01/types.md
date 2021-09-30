@@ -35,25 +35,25 @@
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **ApplicationName**: string (ReadOnly): The name of the Application Insights component.
 * **ContainerName**: string (ReadOnly): The name of the destination storage container.
-* **DestinationAccountId**: string: The name of destination account.
-* **DestinationAddress**: string (WriteOnly)
-* **DestinationStorageLocationId**: string: The destination account location ID.
-* **DestinationStorageSubscriptionId**: string: The destination storage account subscription ID.
-* **DestinationType**: string: The destination type.
+* **DestinationAccountId**: string: The name of destination storage account.
+* **DestinationAddress**: string (WriteOnly): The SAS URL for the destination storage container. It must grant write permission.
+* **DestinationStorageLocationId**: string: The location ID of the destination storage container.
+* **DestinationStorageSubscriptionId**: string: The subscription ID of the destination storage container.
+* **DestinationType**: string: The Continuous Export destination type. This has to be 'Blob'.
 * **ExportId**: string (ReadOnly): The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
 * **ExportStatus**: string (ReadOnly): This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **InstrumentationKey**: string (ReadOnly): The instrumentation key of the Application Insights component.
-* **IsEnabled**: string (WriteOnly)
+* **IsEnabled**: string (WriteOnly): Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.
 * **IsUserEnabled**: string (ReadOnly): This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
 * **LastGapTime**: string (ReadOnly): The last time the Continuous Export configuration started failing.
 * **LastSuccessTime**: string (ReadOnly): The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
 * **LastUserUpdate**: string (ReadOnly): Last time the Continuous Export configuration was updated.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **NotificationQueueEnabled**: string: Deprecated
-* **NotificationQueueUri**: string (WriteOnly)
+* **NotificationQueueUri**: string (WriteOnly): Deprecated
 * **PermanentErrorReason**: string (ReadOnly): This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
-* **RecordTypes**: string: This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
+* **RecordTypes**: string: The document types to be exported, as comma separated values. Allowed values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
 * **ResourceGroup**: string (ReadOnly): The resource group of the Application Insights component.
 * **StorageName**: string (ReadOnly): The name of the destination storage account.
 * **SubscriptionId**: string (ReadOnly): The subscription of the Application Insights component.

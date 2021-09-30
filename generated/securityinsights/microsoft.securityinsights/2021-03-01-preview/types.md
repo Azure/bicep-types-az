@@ -389,7 +389,7 @@
 ## ActionRequestProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly)
+* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## AwsCloudTrailDataConnectorProperties

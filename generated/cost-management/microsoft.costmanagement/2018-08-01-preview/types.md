@@ -27,7 +27,7 @@
 * **collection**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
 * **createdOn**: string (ReadOnly): Connector definition creation datetime
 * **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
-* **credentialsSecret**: string: Credentials secret (eg AWS ExternalId)
+* **credentialsSecret**: string (WriteOnly): Credentials secret (eg AWS ExternalId)
 * **displayName**: string: Connector DisplayName (defaults to Name)
 * **modifiedOn**: string (ReadOnly): Connector last modified datetime
 * **providerAccountId**: string (ReadOnly): Connector providerAccountId (determined from credentials)

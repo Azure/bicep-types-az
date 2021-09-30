@@ -6,11 +6,11 @@
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity) (ReadOnly): Azure Active Directory identity configuration for a resource.
-* **location**: string (Required): The geo-location where the resource lives
+* **location**: string (Required): The location the resource resides in.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties of a server.
+* **properties**: [ServerPropertiesForCreate](#serverpropertiesforcreate) (Required): The properties used to create a new server.
 * **sku**: [Sku](#sku): Billing information related properties of a server.
-* **tags**: [ServerForCreateTags](#serverforcreatetags): Resource tags.
+* **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DBforMariaDB/servers/configurations@2018-06-01-preview
@@ -81,25 +81,25 @@
 * **version**: '10.2' | '10.3': The version of a server.
 ### ServerPropertiesForDefaultCreate
 #### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
+* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
 * **createMode**: 'Default' (Required): The mode to create a new server.
 
 ### ServerPropertiesForGeoRestore
 #### Properties
 * **createMode**: 'GeoRestore' (Required): The mode to create a new server.
-* **sourceServerId**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
 
 ### ServerPropertiesForRestore
 #### Properties
 * **createMode**: 'PointInTimeRestore' (Required): The mode to create a new server.
-* **restorePointInTime**: string (Required, WriteOnly)
-* **sourceServerId**: string (Required, WriteOnly)
+* **restorePointInTime**: string (Required, WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **sourceServerId**: string (Required, WriteOnly): The source server id to restore from.
 
 ### ServerPropertiesForReplica
 #### Properties
 * **createMode**: 'Replica' (Required): The mode to create a new server.
-* **sourceServerId**: string (Required, WriteOnly)
+* **sourceServerId**: string (Required, WriteOnly): The master server id to create replica from.
 
 
 ## StorageProfile

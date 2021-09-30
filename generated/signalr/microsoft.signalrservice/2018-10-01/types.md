@@ -5,11 +5,12 @@
 ### Properties
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+* **location**: string (Required): Azure GEO region: e.g. West US | East US | North Central US | South Central US | West Europe | North Europe | East Asia | Southeast Asia | etc. 
+The geo region of a resource never changes after it is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): A class that describes the properties of the SignalR service that should contain more read-only properties than AzSignalR.Models.SignalRCreateOrUpdateProperties
+* **properties**: [SignalRCreateOrUpdateProperties](#signalrcreateorupdateproperties): Settings used to provision or configure the resource.
 * **sku**: [ResourceSku](#resourcesku): The billing information of the SignalR resource.
-* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): Tags of the service which is a list of key value pairs that describe the resource.
+* **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## SignalRCreateOrUpdateProperties

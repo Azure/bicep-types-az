@@ -123,15 +123,15 @@
 ## ManagedInstanceProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-* **administratorLoginPassword**: string: The administrator login password (required for managed instance creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for managed instance creation).
 * **collation**: string: Collation of the managed instance.
 * **dnsZone**: string (ReadOnly): The Dns Zone that the managed instance is in.
-* **dnsZonePartner**: string: The resource id of another managed instance whose DNS zone this managed instance will share after creation.
+* **dnsZonePartner**: string (WriteOnly): The resource id of another managed instance whose DNS zone this managed instance will share after creation.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
 * **instancePoolId**: string: The Id of the instance pool this managed server belongs to.
 * **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
 * **maintenanceConfigurationId**: string: Specifies maintenance configuration id to apply to this managed instance.
-* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore': Specifies the mode of database creation.
+* **managedInstanceCreateMode**: 'Default' | 'PointInTimeRestore' (WriteOnly): Specifies the mode of database creation.
 
 Default: Regular instance creation.
 
@@ -139,8 +139,8 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 * **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
 * **proxyOverride**: 'Default' | 'Proxy' | 'Redirect': Connection type used for connecting to the instance.
 * **publicDataEndpointEnabled**: bool: Whether or not the public data endpoint is enabled.
-* **restorePointInTime**: string: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sourceManagedInstanceId**: string: The resource identifier of the source managed instance associated with create operation of this instance.
+* **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+* **sourceManagedInstanceId**: string (WriteOnly): The resource identifier of the source managed instance associated with create operation of this instance.
 * **state**: string (ReadOnly): The state of the managed instance.
 * **storageSizeInGB**: int: Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
 * **subnetId**: string: Subnet resource ID for the managed instance.
@@ -168,7 +168,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
-* **administratorLoginPassword**: string: The administrator login password (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **state**: string (ReadOnly): The state of the server.
 * **version**: string: The version of the server.
@@ -253,7 +253,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -265,7 +265,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SyncGroupProperties
 ### Properties
 * **conflictResolutionPolicy**: 'HubWin' | 'MemberWin': Conflict resolution policy of the sync group.
-* **hubDatabasePassword**: string: Password for the sync group hub database credential.
+* **hubDatabasePassword**: string (WriteOnly): Password for the sync group hub database credential.
 * **hubDatabaseUserName**: string: User name for the sync group hub database credential.
 * **interval**: int: Sync interval of the sync group.
 * **lastSyncTime**: string (ReadOnly): Last sync time of the sync group.
@@ -293,7 +293,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **databaseName**: string: Database name of the member database in the sync member.
 * **databaseType**: 'AzureSqlDatabase' | 'SqlServerDatabase': Type of the sync agent linked database.
-* **password**: string: Password of the member database in the sync member.
+* **password**: string (WriteOnly): Password of the member database in the sync member.
 * **serverName**: string: Server name of the member database in the sync member
 * **sqlServerDatabaseId**: string: SQL Server database id of the sync member.
 * **syncAgentId**: string: ARM resource id of the sync agent in the sync member.

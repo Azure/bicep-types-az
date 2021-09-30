@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Disk Pool response properties.
+* **properties**: [DiskPoolCreateProperties](#diskpoolcreateproperties) (Required): Properties for Disk Pool create or update request.
 * **sku**: [Sku](#sku) (Required): Sku for ARM resource
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
@@ -19,13 +19,13 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Response properties for iSCSI Target operations.
+* **properties**: [IscsiTargetCreateProperties](#iscsitargetcreateproperties) (Required): Properties for iSCSI Target create or update request.
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.StoragePool/diskPools/iscsiTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## DiskPoolCreateProperties
 ### Properties
-* **additionalCapabilities**: string[]: List of additional capabilities for Disk Pool.
+* **additionalCapabilities**: string[]: List of additional capabilities for a Disk Pool.
 * **availabilityZones**: string[]: Logical zone for Disk Pool resource; example: ["1"].
 * **disks**: [Disk](#disk)[]: List of Azure Managed Disks to attach to a Disk Pool.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI Target.

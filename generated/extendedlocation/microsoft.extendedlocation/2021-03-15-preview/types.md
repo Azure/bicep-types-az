@@ -25,7 +25,7 @@
 ## CustomLocationPropertiesAuthentication
 ### Properties
 * **type**: string: The type of the Custom Locations authentication
-* **value**: string: The kubeconfig value.
+* **value**: string (WriteOnly): The kubeconfig value.
 
 ## SystemData
 ### Properties

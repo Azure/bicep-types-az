@@ -60,12 +60,12 @@
 
 ## BasicLoginInformation
 ### Properties
-* **password**: string: Login password.
+* **password**: string (WriteOnly): Login password.
 * **username**: string: Login username.
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
-* **primaryKey**: string: Primary key of the workspace
+* **primaryKey**: string (WriteOnly): Primary key of the workspace
 * **workspaceId**: string: Azure Log Analytics workspace ID
 
 ## OnPremiseProperty
@@ -78,7 +78,7 @@
 ### Properties
 * **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
 * **clientId**: string: Client ID of the service principal for uploading data.
-* **clientSecret**: string: Secret of the service principal
+* **clientSecret**: string (WriteOnly): Secret of the service principal
 * **tenantId**: string: Tenant ID of the service principal.
 
 ## UploadWatermark

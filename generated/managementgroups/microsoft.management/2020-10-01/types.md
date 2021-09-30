@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateManagementGroupProperties](#createmanagementgroupproperties): The generic properties of a management group.
+* **properties**: [CreateManagementGroupProperties](#createmanagementgroupproperties): The generic properties of a management group used during creation.
 * **type**: 'Microsoft.Management/managementGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Management/managementGroups/settings@2020-10-01
@@ -15,7 +15,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateOrUpdateSettingsProperties](#createorupdatesettingsproperties): The generic properties of hierarchy settings.
+* **properties**: [CreateOrUpdateSettingsProperties](#createorupdatesettingsproperties): The properties of the request to create or update Management Group settings
 * **type**: 'Microsoft.Management/managementGroups/settings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Management/managementGroups/subscriptions@2020-10-01
@@ -30,8 +30,8 @@
 ## CreateManagementGroupProperties
 ### Properties
 * **children**: [CreateManagementGroupChildInfo](#createmanagementgroupchildinfo)[] (ReadOnly): The list of children.
-* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group.
-* **displayName**: string: The friendly name of the management group.
+* **details**: [CreateManagementGroupDetails](#createmanagementgroupdetails): The details of a management group used during creation.
+* **displayName**: string: The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
 * **tenantId**: string (ReadOnly): The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
 
 ## CreateManagementGroupChildInfo
@@ -45,7 +45,7 @@
 ## CreateManagementGroupDetails
 ### Properties
 * **managementGroupAncestors**: string[] (ReadOnly): The ancestors of the management group.
-* **parent**: [CreateParentGroupInfo](#createparentgroupinfo): (Optional) The ID of the parent management group.
+* **parent**: [CreateParentGroupInfo](#createparentgroupinfo): (Optional) The ID of the parent management group used during creation.
 * **path**: [ManagementGroupPathElement](#managementgrouppathelement)[] (ReadOnly): The path from the root to the current group.
 * **updatedBy**: string (ReadOnly): The identity of the principal or process that updated the object.
 * **updatedTime**: string (ReadOnly): The date and time when this object was last updated.
