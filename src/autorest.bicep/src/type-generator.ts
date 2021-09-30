@@ -294,11 +294,35 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     return factory.lookupBuiltInType(BuiltInTypeKind.Any);
   }
 
+  function getMutabilityFlags(property: Property | undefined) {
+    const mutability = property?.extensions?.["x-ms-mutability"] as string[];
+    if (!mutability) {
+      return ObjectPropertyFlags.None;
+    }
+
+    const writable = mutability.includes('create') || mutability.includes('update');
+    const readable = mutability.includes('read');
+
+    if (writable && !readable) {
+      return ObjectPropertyFlags.WriteOnly;
+    }
+
+    if (readable && !writable) {
+      return ObjectPropertyFlags.ReadOnly;
+    }
+
+    return ObjectPropertyFlags.None;
+  }
+
   function parsePropertyFlags(putProperty: Property | undefined, getProperty: Property | undefined) {
     let flags = ObjectPropertyFlags.None;
 
     if (putProperty && putProperty.required) {
       flags |= ObjectPropertyFlags.Required;
+    }
+
+    if (putProperty && getProperty) {
+      flags |= getMutabilityFlags(putProperty);
     }
 
     if (!putProperty || putProperty.readOnly) {
