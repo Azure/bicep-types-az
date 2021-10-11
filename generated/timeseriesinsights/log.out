@@ -1,18 +1,209 @@
-AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-Processing batch task - {"tag":"microsoft.timeseriesinsights-2020-05-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-WARNING: Semantic validation was skipped.
-Processing batch task - {"tag":"microsoft.timeseriesinsights-2018-08-15-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-WARNING: Semantic validation was skipped.
-Processing batch task - {"tag":"microsoft.timeseriesinsights-2017-11-15"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-WARNING: Semantic validation was skipped.
-Processing batch task - {"tag":"microsoft.timeseriesinsights-2017-02-28-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-WARNING: Semantic validation was skipped.
-[16.75 s] Generation Complete
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2021-03-31-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CreateOrUpdateTrackedResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TimeSeriesIdProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureEventSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetKeyProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+info    | autorest.bicep took 12ms
+info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2021-06-30-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CreateOrUpdateTrackedResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TimeSeriesIdProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureEventSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetKeyProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+info    | autorest.bicep took 6ms
+info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2020-05-15"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CreateOrUpdateTrackedResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen1EnvironmentResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Gen2EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TimeSeriesIdProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureEventSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetKeyProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+info    | autorest.bicep took 4ms
+info    | Processing batch task - {"tag":"microsoft.timeseriesinsights-2018-08-15-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CreateOrUpdateTrackedResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StandardEnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LongTermEnvironmentCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StandardEnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LongTermEnvironmentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StandardEnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LongTermEnvironmentCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StandardEnvironmentResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LongTermEnvironmentResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TimeSeriesIdProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureEventSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'EventHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCommonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IoTHubEventSourceResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetCreationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetResourceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ReferenceDataSetKeyProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+error   | PreCheck/DuplicateInheritance | Schema 'StandardEnvironmentResourceProperties' inherits 'EnvironmentResourceProperties' via an allOf that is already coming from parent 'ResourceProperties'
+error   | PreCheck/DuplicateInheritance | Schema 'LongTermEnvironmentResourceProperties' inherits 'EnvironmentResourceProperties' via an allOf that is already coming from parent 'ResourceProperties'
+fatal   | Error: 2 errors occured -- cannot continue.
+fatal   | Process() cancelled due to failure 
+error   | Batch/Error | Failure during batch task - {"tag":"microsoft.timeseriesinsights-2018-08-15-preview"}  -- Error: Plugin prechecker reported failure.
+error   |   Error: Plugin prechecker reported failure.

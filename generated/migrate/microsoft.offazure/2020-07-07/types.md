@@ -9,6 +9,7 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Class for site properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [HyperVSiteTags](#hypervsitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/HyperVSites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,7 +40,19 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MasterSiteProperties](#mastersiteproperties): Class for site properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OffAzure/MasterSites' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.OffAzure/masterSites/privateEndpointConnections@2020-07-07
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-07-07' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Gets the tag for optimistic concurrency control.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.OffAzure/masterSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OffAzure/VMwareSites@2020-07-07
 * **Valid Scope(s)**: ResourceGroup
@@ -50,6 +63,7 @@
 * **location**: string: Azure location in which Sites is created.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SiteProperties](#siteproperties): Class for site properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [VMwareSiteTags](#vmwaresitetags): Dictionary of <string>
 * **type**: 'Microsoft.OffAzure/VMwareSites' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -86,6 +100,15 @@
 * **objectId**: string: Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
 * **rawCertData**: string: Raw certificate data for building certificate expiry flows.
 * **tenantId**: string: Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
 ## HyperVSiteTags
 ### Properties
@@ -132,8 +155,35 @@
 ## MasterSiteProperties
 ### Properties
 * **allowMultipleSites**: bool: Value indicating whether multiple sites per site type are allowed.
-* **publicNetworkAccess**: string: State of public network access.
+* **customerStorageAccountArmId**: string: Gets or sets a value for customer storage account ARM id.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Gets the private endpoint connections.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'NotSpecified': Gets or sets the state of public network access.
 * **sites**: string[]: List of sites that are a part of Master Site.
+
+## PrivateEndpointConnection
+### Properties
+* **eTag**: string (ReadOnly): Gets the tag for optimistic concurrency control.
+* **id**: string (ReadOnly): Relative URL to get this Sites.
+* **name**: string (ReadOnly): Gets the name of the resource.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): Gets the resource type.
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [ResourceId](#resourceid) (ReadOnly)
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate)
+* **provisioningState**: 'Accepted' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly)
+
+## ResourceId
+### Properties
+* **id**: string (ReadOnly)
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string
+* **description**: string
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected'
 
 ## VMwareSiteTags
 ### Properties

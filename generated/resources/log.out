@@ -1,17 +1,141 @@
-AutoRest code generation utility [cli version: 3.4.0; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    | Processing batch task - {"tag":"microsoft.authorization-2020-09-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DataManifestCustomResourceFunctionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DataManifestResourceFunctionsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DataEffect' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeAliases' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'NonComplianceMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 11ms
+info    | Processing batch task - {"tag":"microsoft.authorization-2021-06-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'NonComplianceMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 7ms
+info    | Processing batch task - {"tag":"microsoft.authorization-2021-07-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 1ms
+info    | Processing batch task - {"tag":"microsoft.authorization-2020-07-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyExemptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyExemption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyExemptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):
+  - title: "Error Response" => "Error response"
+  - properties.code: {"$ref":"#/components/schemas/schemas:143","description":"The error code.","readOnly":true} => <none>
+  - properties.message: {"$ref":"#/components/schemas/schemas:144","description":"The error message.","readOnly":true} => <none>
+  - properties.target: {"$ref":"#/components/schemas/schemas:145","description":"The error target.","readOnly":true} => <none>
+  - properties.details: {"$ref":"#/components/schemas/schemas:146","description":"The error details.","readOnly":true} => <none>
+  - properties.additionalInfo: {"$ref":"#/components/schemas/schemas:147","description":"The error additional info.","readOnly":true} => <none>
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:223"}
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 8ms
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -96,67 +220,19 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 10ms
-info    | Processing batch task - {"tag":"microsoft.authorization-2020-09-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DataManifestCustomResourceFunctionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DataManifestResourceFunctionsDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DataEffect' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeAliases' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DataPolicyManifestListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'NonComplianceMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 5ms
-info    | Processing batch task - {"tag":"microsoft.authorization-2020-07-01-preview"} .
+info    | Processing batch task - {"tag":"microsoft.authorization-2017-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyExemptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyExemption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyExemptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ManagementLockListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2020-08-21-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -208,7 +284,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -308,7 +384,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -398,7 +474,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-10-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -411,7 +487,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.features-2021-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -490,7 +566,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -526,7 +602,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -556,7 +632,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -586,7 +662,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -616,7 +692,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -645,7 +721,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2017-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -686,7 +762,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -701,7 +777,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-03-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -716,7 +792,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -728,7 +804,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2016-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -758,7 +834,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -923,7 +999,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1076,7 +1152,7 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1149,7 +1225,7 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-05-10"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1350,7 +1426,7 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2018-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1417,7 +1493,7 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2018-02-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1547,7 +1623,7 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1619,7 +1695,7 @@ warning | Skipping path '/{linkId}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1682,7 +1758,7 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-02-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1828,7 +1904,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1851,7 +1927,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-11-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -1985,7 +2061,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2018-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -2015,7 +2091,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2017-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -2073,5 +2149,5 @@ warning | Skipping path '/{applianceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/{applianceDefinitionId}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-[150.55 s] Generation Complete
+info    | autorest.bicep took 3ms
+info    | Generation Complete

@@ -295,7 +295,7 @@
 * **certificate**: string: The certificate content
 * **created**: string (ReadOnly): The certificate's create date and time.
 * **expiry**: string (ReadOnly): The certificate's expiration date and time.
-* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **isVerified**: bool: Determines whether certificate has been verified.
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.

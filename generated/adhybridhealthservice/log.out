@@ -1,9 +1,16 @@
-AutoRest code generation utility [cli version: 3.2.1; node: v14.17.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.4.3)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-Processing batch task - {"tag":"microsoft.adhybridhealthservice-2014-01-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-WARNING: Semantic validation was skipped.
-[10.66 s] Generation Complete
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    | Processing batch task - {"tag":"microsoft.adhybridhealthservice-2014-01-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+fatal   | Error: Enum 'nextPartitionKey' cannot have a value ' ' that result in an empty name. Use x-ms-enum.values to specify the name of the values.
+fatal   | Process() cancelled due to failure 
+error   | Batch/Error | Failure during batch task - {"tag":"microsoft.adhybridhealthservice-2014-01-01"}  -- Error: Plugin pre-namer reported failure.
+error   |   Error: Plugin pre-namer reported failure.

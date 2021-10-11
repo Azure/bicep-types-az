@@ -105,7 +105,7 @@
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -335,7 +335,7 @@
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertsPolicyProperties](#securityalertspolicyproperties): Properties of a security alert policy.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type

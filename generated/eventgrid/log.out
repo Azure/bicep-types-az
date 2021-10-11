@@ -1,7 +1,7 @@
-AutoRest code generation utility [cli version: 3.4.0; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2021-06-01-preview"} .
@@ -10,7 +10,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | Resource type microsoft.eventgrid/domains/topics under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}' has no body defined.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 19ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2020-10-15-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -24,21 +24,21 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | Resource type microsoft.eventgrid/domains/topics under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}' has no body defined.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2020-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | Resource type microsoft.eventgrid/domains/topics under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}' has no body defined.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2020-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | Resource type microsoft.eventgrid/domains/topics under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}' has no body defined.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2019-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -58,25 +58,25 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2018-09-15-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2018-05-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2018-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.eventgrid-2017-09-15-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -89,4 +89,4 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
-[45.28 s] Generation Complete
+info    | Generation Complete

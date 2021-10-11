@@ -1,7 +1,7 @@
-AutoRest code generation utility [cli version: 3.4.0; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 info    | Processing batch task - {"tag":"microsoft.batch-2021-06-01"} .
@@ -12,7 +12,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 18ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.batch-2021-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -209,7 +209,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CIFSMountConfiguration' with 
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileShareConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.batch-2020-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -305,7 +305,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CIFSMountConfiguration' with 
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileShareConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.batch-2020-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -400,7 +400,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CIFSMountConfiguration' with 
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileShareConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.batch-2019-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -483,7 +483,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CIFSMountConfiguration' with 
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileShareConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.batch-2019-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -561,7 +561,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParamete
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.batch-2018-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -638,7 +638,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityParamete
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.batch-2017-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -712,7 +712,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | Resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}' has no body defined.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.batch-2017-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -746,7 +746,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | Resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}' has no body defined.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.batch-2017-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -775,7 +775,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | Resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}' has no body defined.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.batch-2015-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -803,4 +803,4 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | Resource type microsoft.batch/batchaccounts/applications/versions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}/applications/{applicationId}/versions/{version}' has no body defined.
 info    | autorest.bicep took 2ms
-[41.9 s] Generation Complete
+info    | Generation Complete

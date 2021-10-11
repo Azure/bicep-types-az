@@ -1,7 +1,7 @@
-AutoRest code generation utility [cli version: 3.4.0; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 info    | Processing batch task - {"tag":"microsoft.botservice-2021-05-01-preview"} .
@@ -49,7 +49,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.botservice-2021-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -86,7 +86,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderProperties' wi
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.botservice-2020-06-02"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -193,5 +193,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | ? | Operation 'Bots/GetCheckNameAvailability' really should not have a media type (because there should be no body)
-info    | autorest.bicep took 6ms
-[15.7 s] Generation Complete
+info    | autorest.bicep took 7ms
+info    | Generation Complete

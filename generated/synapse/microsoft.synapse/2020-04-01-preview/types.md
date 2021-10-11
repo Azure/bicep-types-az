@@ -30,8 +30,14 @@
 ### Properties
 * **collation**: string: The collation of the database.
 * **databaseGuid**: string (ReadOnly): The Guid of the database.
-* **status**: string (ReadOnly): Status of the database.
-* **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone': Storage redundancy of the database.
+* **dataRetention**: [SqlDatabaseDataRetention](#sqldatabasedataretention): Sql database data retention.
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
+* **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone': The storage redundancy of the database.
+
+## SqlDatabaseDataRetention
+### Properties
+* **dropRetentionPeriod**: string: Specifies the dropped database retention period (ISO8601 format).
+* **retentionPeriod**: string: Specifies the data retention period (ISO8601 format).
 
 ## SystemData
 ### Properties

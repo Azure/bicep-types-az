@@ -44,6 +44,7 @@
 
 ## BotProperties
 ### Properties
+* **appPasswordHint**: string: The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
 * **cmekKeyVaultUrl**: string: The CMK Url
 * **configuredChannels**: string[] (ReadOnly): Collection of channels for which the bot is configured
 * **description**: string: The description of the bot
@@ -60,6 +61,7 @@
 * **luisAppIds**: string[]: Collection of LUIS App Ids
 * **luisKey**: string: The LUIS Key
 * **msaAppId**: string (Required): Microsoft App Id for the bot
+* **openWithHint**: string: The hint to browser (e.g. protocol handler) on how to open the bot for authoring
 * **schemaTransformationVersion**: string: The channel schema transformation version for the bot
 
 ## Sku

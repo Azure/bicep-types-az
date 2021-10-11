@@ -60,9 +60,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly): Array of SkuSetting
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-05-01-preview
@@ -71,9 +69,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly): Array of SkuSetting
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-05-01-preview
@@ -82,9 +78,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly): Array of SkuSetting
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus@2021-05-01-preview
@@ -93,9 +87,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly): Array of SkuSetting
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ProviderRegistrationProperties
@@ -510,52 +502,52 @@
 
 ## SkuResourceProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (ReadOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (ReadOnly): Array of SkuSetting
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **skuSettings**: [SkuSetting](#skusetting)[] (Required): Array of SkuSetting
 
 ## SkuSetting
 ### Properties
-* **capabilities**: [SkuCapability](#skucapability)[] (WriteOnly): Array of SkuCapability
-* **capacity**: [SkuSettingCapacity](#skusettingcapacity) (WriteOnly)
-* **costs**: [SkuCost](#skucost)[] (WriteOnly): Array of SkuCost
-* **family**: string (WriteOnly)
-* **kind**: string (WriteOnly)
-* **locationInfo**: [SkuLocationInfo](#skulocationinfo)[] (WriteOnly): Array of SkuLocationInfo
-* **locations**: string[] (WriteOnly): Array of SkuSettingLocationsItem
-* **name**: string (Required, WriteOnly)
-* **requiredFeatures**: string[] (WriteOnly): Array of SkuSettingRequiredFeaturesItem
-* **requiredQuotaIds**: string[] (WriteOnly): Array of SkuSettingRequiredQuotaIdsItem
-* **size**: string (WriteOnly)
-* **tier**: string (WriteOnly)
+* **capabilities**: [SkuCapability](#skucapability)[]: Array of SkuCapability
+* **capacity**: [SkuSettingCapacity](#skusettingcapacity)
+* **costs**: [SkuCost](#skucost)[]: Array of SkuCost
+* **family**: string
+* **kind**: string
+* **locationInfo**: [SkuLocationInfo](#skulocationinfo)[]: Array of SkuLocationInfo
+* **locations**: string[]: Array of SkuSettingLocationsItem
+* **name**: string (Required)
+* **requiredFeatures**: string[]: Array of SkuSettingRequiredFeaturesItem
+* **requiredQuotaIds**: string[]: Array of SkuSettingRequiredQuotaIdsItem
+* **size**: string
+* **tier**: string
 
 ## SkuCapability
 ### Properties
-* **name**: string (Required, WriteOnly)
-* **value**: string (Required, WriteOnly)
+* **name**: string (Required)
+* **value**: string (Required)
 
 ## SkuSettingCapacity
 ### Properties
-* **default**: int (WriteOnly)
-* **maximum**: int (WriteOnly)
-* **minimum**: int (Required, WriteOnly)
-* **scaleType**: 'Automatic' | 'Manual' | 'None' (WriteOnly)
+* **default**: int
+* **maximum**: int
+* **minimum**: int (Required)
+* **scaleType**: 'Automatic' | 'Manual' | 'None'
 
 ## SkuCost
 ### Properties
-* **extendedUnit**: string (WriteOnly)
-* **meterId**: string (Required, WriteOnly)
-* **quantity**: int (WriteOnly)
+* **extendedUnit**: string
+* **meterId**: string (Required)
+* **quantity**: int
 
 ## SkuLocationInfo
 ### Properties
-* **extendedLocations**: string[] (WriteOnly): Array of SkuLocationInfoExtendedLocationsItem
-* **location**: string (Required, WriteOnly)
-* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' (WriteOnly)
-* **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[] (WriteOnly): Array of SkuZoneDetail
-* **zones**: string[] (WriteOnly): Array of SkuLocationInfoZonesItem
+* **extendedLocations**: string[]: Array of SkuLocationInfoExtendedLocationsItem
+* **location**: string (Required)
+* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified'
+* **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[]: Array of SkuZoneDetail
+* **zones**: string[]: Array of SkuLocationInfoZonesItem
 
 ## SkuZoneDetail
 ### Properties
-* **capabilities**: [SkuCapability](#skucapability)[] (WriteOnly): Array of SkuCapability
-* **name**: string[] (WriteOnly): Array of SkuZoneDetailNameItem
+* **capabilities**: [SkuCapability](#skucapability)[]: Array of SkuCapability
+* **name**: string[]: Array of SkuZoneDetailNameItem
 

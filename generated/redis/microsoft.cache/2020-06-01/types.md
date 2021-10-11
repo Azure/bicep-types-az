@@ -66,7 +66,7 @@
 * **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
 * **sku**: [Sku](#sku) (Required): SKU parameters supplied to the create Redis operation.
 * **sslPort**: int (ReadOnly): Redis SSL port.
-* **staticIP**: string: Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.
+* **staticIP**: string: Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
 * **tenantSettings**: [RedisCommonPropertiesTenantSettings](#rediscommonpropertiestenantsettings): A dictionary of tenant settings
 
@@ -112,6 +112,17 @@
 
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
+* **aof-storage-connection-string-0**: string: First storage account connection string
+* **aof-storage-connection-string-1**: string: Second storage account connection string
+* **maxclients**: string (ReadOnly): The max clients config
+* **maxfragmentationmemory-reserved**: string: Value in megabytes reserved for fragmentation per shard
+* **maxmemory-delta**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **maxmemory-policy**: string: The eviction strategy used when your data won't fit within its memory limit.
+* **maxmemory-reserved**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **rdb-backup-enabled**: string: Specifies whether the rdb backup is enabled
+* **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup
+* **rdb-backup-max-snapshot-count**: string: Specifies the maximum number of snapshots for rdb backup
+* **rdb-storage-connection-string**: string: The storage account connection string for storing rdb file
 ### Additional Properties
 * **Additional Properties Type**: string
 

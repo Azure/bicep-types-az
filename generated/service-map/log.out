@@ -1,102 +1,113 @@
-
-Executing: autorest --use=/home/runner/work/bicep-types-az/bicep-types-az/src/generator --azureresourceschema --output-folder=/home/runner/work/bicep-types-az/bicep-types-az/generated/service-map --multiapi /home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/readme.md
-AutoRest code generation utility [cli version: 3.1.3; node: v14.16.0, max-memory: 2048 MB]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.2.1)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
-INFORMATION: > Installing AutoRest extension 'oav' (~0.4.20)
-INFORMATION: > Installed AutoRest extension 'oav' (~0.4.20->0.4.70)
-INFORMATION: > Installing AutoRest extension '@microsoft.azure/classic-openapi-validator' (~1.1.5)
-INFORMATION: > Installed AutoRest extension '@microsoft.azure/classic-openapi-validator' (~1.1.5->1.1.6)
-INFORMATION: > Installing AutoRest extension '@microsoft.azure/openapi-validator' (~1.7.0)
-INFORMATION: > Installed AutoRest extension '@microsoft.azure/openapi-validator' (~1.7.0->1.7.0)
-Processing batch task - {"tag":"schema-operationalinsights-2015-11-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/generator)
-INFORMATION: > Loading AutoRest extension '@autorest/azureresourceschema' (~3.0.45->3.0.92)
-INFORMATION: > Loading AutoRest extension 'oav' (~0.4.20->0.4.70)
-INFORMATION: > Loading AutoRest extension '@microsoft.azure/classic-openapi-validator' (~1.1.5->1.1.6)
-INFORMATION: > Loading AutoRest extension '@microsoft.azure/openapi-validator' (~1.7.0->1.7.0)
-FATAL: Failed validating: 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json', error encountered: TypeError: Cannot read property 'properties' of undefined
-FATAL: [object Object]
-(node:23235) UnhandledPromiseRejectionWarning: Error: Plugin model-validator reported failure.
-    at /home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist/src_lib_autorest-core_ts.js:3060:19
-    at runNextTicks (internal/process/task_queues.js:58:5)
-    at processImmediate (internal/timers.js:434:9)
-    at ScheduleNode (/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist/src_lib_autorest-core_ts.js:1823:33)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:23235) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 91)
-(node:23235) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-
-WARNING (PostOperationIdContainsUrlVerb/R2066/SDKViolation): OperationId should contain the verb: 'generatemap' in:'Maps_Generate'. Consider updating the operationId
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:4591:4
-
-WARNING (PostOperationIdContainsUrlVerb/R2066/SDKViolation): OperationId should contain the verb: 'machinegroups' in:'MachineGroups_Create'. Consider updating the operationId
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:6557:4
-
-ERROR (DeleteOperationResponses/R4011/ARMViolation): The delete operation is defined without a 200 or 204 error response implementation,please add it.'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:6869:4
-
-WARNING (EnumInsteadOfBoolean/R3018/ARMViolation): Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: live
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:58:6
-
-WARNING (EnumInsteadOfBoolean/R3018/ARMViolation): Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: live
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:2097:6
-
-WARNING (OperationIdNounVerb/R1001/SDKViolation): Per the Noun_Verb convention for Operation Ids, the noun 'Machines' should not appear after the underscore. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:3618:4
-
-WARNING (PutInOperationName/R1006/SDKViolation): 'PUT' operation 'MachineGroups_Update' should use method name 'Create'. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:6750:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:6937:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:7070:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:7434:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: provider
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8039:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8046:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: provider
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8306:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8313:4
-
-WARNING (XmsEnumValidation/R2018/SDKViolation): The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8450:4
-
-WARNING (PreviewVersionOverOneYear/R4024/SDKViolation): The API version:2015-11-01-preview having been in a preview state over one year , please move it to GA or retire.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:6:2
-
-WARNING (DescriptionAndTitleMissing/R4021/SDKViolation): 'properties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:7419:4
-
-WARNING (DescriptionAndTitleMissing/R4021/SDKViolation): 'properties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:7456:4
-
-WARNING (DescriptionAndTitleMissing/R4021/SDKViolation): 'properties' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:7471:4
-
-WARNING (DescriptionAndTitleMissing/R4021/SDKViolation): 'nodes' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8398:4
-
-WARNING (DescriptionAndTitleMissing/R4021/SDKViolation): 'edges' model/property lacks 'description' and 'title' property. Consider adding a 'description'/'title' element. Accurate description/title is essential for maintaining reference documentation.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8401:4
-
-WARNING (EnumInsteadOfBoolean/R3018/ARMViolation): Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: live
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8424:4
-
-WARNING (EnumInsteadOfBoolean/R3018/ARMViolation): Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: filterProcesses
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:8490:4
-Failure during batch task - {"tag":"schema-operationalinsights-2015-11-01-preview"} -- Error: Plugin model-validator reported failure..
-  Error: Plugin model-validator reported failure.
-Exited with code 1
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.4)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Installing AutoRest extension '@microsoft.azure/classic-openapi-validator' (~1.1.5)
+info    |    Installed AutoRest extension '@microsoft.azure/classic-openapi-validator' (~1.1.5->1.1.12)
+info    |    Installing AutoRest extension '@microsoft.azure/openapi-validator' (~1.7.0)
+info    |    Installed AutoRest extension '@microsoft.azure/openapi-validator' (~1.7.0->1.7.0)
+info    |    Installing AutoRest extension 'oav' (~0.4.20)
+info    |    Installed AutoRest extension 'oav' (~0.4.20->0.4.70)
+info    | Processing batch task - {"tag":"microsoft.operationalinsights-2015-11-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@microsoft.azure/classic-openapi-validator' (~1.1.5->1.1.12)
+info    |    Loading AutoRest extension '@microsoft.azure/openapi-validator' (~1.7.0->1.7.0)
+info    |    Loading AutoRest extension 'oav' (~0.4.20->0.4.70)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+fatal   | [object Object]
+fatal   | Failed validating: 'file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json', error encountered: TypeError: Cannot read property 'properties' of undefined
+warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'generatemap' in:'Maps_Generate'. Consider updating the operationId
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:1231:9
+warning | PostOperationIdContainsUrlVerb/R2066/SDKViolation | OperationId should contain the verb: 'machinegroups' in:'MachineGroups_Create'. Consider updating the operationId
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:1405:9
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachineReference' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProcessReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PortReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachineReferenceWithHints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ClientGroupReference' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CoreResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Machine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Process' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Port' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ClientGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ClientGroupMember' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachineGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Summary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachinesSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Relationship' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Connection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Acceptor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'RelationshipProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AcceptorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Ipv4NetworkInterface' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Ipv6NetworkInterface' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'NetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AgentConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Timezone' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperatingSystemConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachineResourcesConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'HypervisorConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'HostingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureHostingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureCloudServiceConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureVmScaleSetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureServiceFabricClusterConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ImageConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProcessUser' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProcessDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProcessHostedService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProcessHostingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AzureProcessHostingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SingleMachineDependencyMapRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MultipleMachinesMapRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachineListMapRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MachineGroupMapRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'MachineGroup' has a property 'etag' that is already declared the parent schema 'CoreResource' but isn't significantly different. The property has been removed from MachineGroup
+error   | DeleteOperationResponses/R4011/ARMViolation | The delete operation is defined without a 200 or 204 error response implementation,please add it.'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:1591:9
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+error   | OperationsAPIImplementation/R3023/ARMViolation | Operations API must be implemented for '/providers/Microsoft.OperationalInsights/operations'.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:36:3
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: live
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:63:13
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: live
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:332:13
+warning | OperationIdNounVerb/R1001/SDKViolation | Per the Noun_Verb convention for Operation Ids, the noun 'Machines' should not appear after the underscore. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:971:9
+warning | PutInOperationName/R1006/SDKViolation | 'PUT' operation 'MachineGroups_Update' should use method name 'Create'. Note: If you have already shipped an SDK on top of this spec, fixing this warning may introduce a breaking change.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:1515:9
+warning | PreviewVersionOverOneYear/R4024/SDKViolation | The API version:2015-11-01-preview having been in a preview state over one year , please move it to GA or retire.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:6:5
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:1645:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:1778:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:2142:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: provider
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:2747:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:2754:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: provider
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:3014:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:3021:9
+warning | XmsEnumValidation/R2018/SDKViolation | The enum types should have x-ms-enum type extension set with appropriate options. Property name: kind
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:3158:9
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: live
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:3132:9
+warning | EnumInsteadOfBoolean/R3018/ARMViolation | Booleans are not descriptive and make them hard to use. Consider using string enums with allowed set of values defined. Property: filterProcesses
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/service-map/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/arm-service-map.json:3198:9
+info    | autorest.bicep took 6ms
+fatal   | Process() cancelled due to failure 
+error   | Batch/Error | Failure during batch task - {"tag":"microsoft.operationalinsights-2015-11-01-preview"}  -- Error: Plugin model-validator reported failure.
+error   |   Error: Plugin model-validator reported failure.

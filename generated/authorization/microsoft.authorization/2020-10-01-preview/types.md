@@ -45,7 +45,7 @@
 * **delegatedManagedIdentityResourceId**: string: Id of the delegated managed identity resource
 * **description**: string: Description of role assignment
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Application' | 'Device' | 'DirectoryObjectOrGroup' | 'DirectoryRoleTemplate' | 'Everyone' | 'ForeignGroup' | 'Group' | 'MSI' | 'ServicePrincipal' | 'Unknown' | 'User': The principal type of the assigned principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User': The principal type of the assigned principal ID.
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scope**: string (ReadOnly): The role assignment scope.
 * **updatedBy**: string (ReadOnly): Id of the user who updated the assignment
@@ -61,7 +61,7 @@
 * **justification**: string: Justification for the role assignment
 * **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Application' | 'Device' | 'DirectoryObjectOrGroup' | 'DirectoryRoleTemplate' | 'Everyone' | 'ForeignGroup' | 'Group' | 'MSI' | 'ServicePrincipal' | 'Unknown' | 'User' (ReadOnly): The principal type of the assigned principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID.
 * **requestorId**: string (ReadOnly): Id of the user who created this request
 * **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
 * **roleDefinitionId**: string (Required): The role definition ID.
@@ -122,7 +122,7 @@
 * **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly)
 * **justification**: string: Justification for the role eligibility
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Application' | 'Device' | 'DirectoryObjectOrGroup' | 'DirectoryRoleTemplate' | 'Everyone' | 'ForeignGroup' | 'Group' | 'MSI' | 'ServicePrincipal' | 'Unknown' | 'User' (ReadOnly): The principal type of the assigned principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID.
 * **requestorId**: string (ReadOnly): Id of the user who created this request
 * **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
 * **roleDefinitionId**: string (Required): The role definition ID.
