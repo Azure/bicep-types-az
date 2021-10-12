@@ -169,7 +169,7 @@
 ### MetricCriteria
 #### Properties
 * **criterionType**: 'StaticThresholdCriterion' (Required): Specifies the type of threshold criteria
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the criteria operator.
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
 
 
@@ -191,7 +191,7 @@
 * **metricName**: string (Required): Name of the metric.
 * **metricNamespace**: string: Namespace of the metric.
 * **name**: string (Required): Name of the criteria.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'NotEquals' (Required): the criteria operator.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the criteria operator.
 * **skipMetricValidation**: bool: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
 * **threshold**: int (Required): the criteria threshold value that activates the alert.
 * **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' (Required): the criteria time aggregation types.

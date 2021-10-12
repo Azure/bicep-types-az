@@ -64,7 +64,6 @@
 
 ## CapacityReservationProperties
 ### Properties
-* **capacityReservationLevel**: int (ReadOnly): The capacity reservation level for this cluster in GB
 * **lastSkuUpdate**: string (ReadOnly): The last time Sku was updated.
 * **minCapacity**: int (ReadOnly): Minimum CapacityReservation value in GB.
 

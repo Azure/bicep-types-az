@@ -203,7 +203,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServiceResourceProperties](#serviceresourceproperties): Services response resource.
+* **properties**: [ServiceResourceCreateUpdateProperties](#serviceresourcecreateupdateproperties): Properties in ServiceResourceCreateUpdateParameters.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-04-01-preview
@@ -829,38 +829,14 @@
 * **notebookServerEndpoint**: string (ReadOnly): Specifies the endpoint of Notebook server.
 * **status**: string (ReadOnly): Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
 
-## ServiceResourceProperties
-* **Discriminator**: serviceType
-
-### Base Properties
+## ServiceResourceCreateUpdateProperties
+### Properties
 * **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
 * **instanceCount**: int: Instance count for the service.
 * **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s': Instance type for the service.
 * **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' (ReadOnly): Describes the status of a service.
-### DataTransferServiceResourceProperties
-#### Properties
-* **locations**: [DataTransferRegionalServiceResource](#datatransferregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
-* **serviceType**: 'DataTransferServiceResourceProperties' (Required): ServiceType for the service.
-
-### SqlDedicatedGatewayServiceResourceProperties
-#### Properties
-* **locations**: [SqlDedicatedGatewayRegionalServiceResource](#sqldedicatedgatewayregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
-* **serviceType**: 'SqlDedicatedGatewayServiceResourceProperties' (Required): ServiceType for the service.
-* **sqlDedicatedGatewayEndpoint**: string: SqlDedicatedGateway endpoint for the service.
-
-
-## DataTransferRegionalServiceResource
-### Properties
-* **location**: string (ReadOnly): The location name.
-* **name**: string (ReadOnly): The regional service name.
-* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' (ReadOnly): Describes the status of a service.
-
-## SqlDedicatedGatewayRegionalServiceResource
-### Properties
-* **location**: string (ReadOnly): The location name.
-* **name**: string (ReadOnly): The regional service name.
-* **sqlDedicatedGatewayEndpoint**: string (ReadOnly): The regional endpoint for SqlDedicatedGateway.
-* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' (ReadOnly): Describes the status of a service.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SqlDatabaseCreateUpdateProperties
 ### Properties

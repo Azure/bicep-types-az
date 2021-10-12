@@ -272,7 +272,7 @@ async function findRecursive(basePath: string, filter: (name: string) => boolean
   return results;
 }
 
-function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string, args: string[]) : Promise<number> {
+function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string, args: string[]) : Promise<void> {
   return new Promise((resolve, reject) => {
     if (verbose) {
       logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
@@ -286,8 +286,9 @@ function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string,
 
     child.stdout.on('data', data => logger.out(chalk.grey(data.toString())));
     child.stderr.on('data', data => {
-      logger.err(chalk.red(data.toString()));
-      if (data.indexOf('FATAL ERROR') > -1 && data.indexOf('Allocation failed - JavaScript heap out of memory') > -1) {
+      const message = data.toString();
+      logger.err(chalk.red(message));
+      if (message.indexOf('FATAL ERROR') > -1 && message.indexOf('Allocation failed - JavaScript heap out of memory') > -1) {
         reject('Child process has run out of memory');
       }
     });
@@ -298,8 +299,9 @@ function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string,
     child.on('exit', code => {
       if (code !== 0) {
         reject(`Exited with code ${code}`);
+      } else {
+        resolve();
       }
-      resolve(code ? code : 0);
     });
   });
 }
@@ -329,7 +331,7 @@ function logOut(logger: ILogger, line: string) {
   logger.out(`${line}\n`);
 }
 
-function logErr(logger: ILogger, line: string) {
+function logErr(logger: ILogger, line: any) {
   logger.err(`${line}\n`);
 }
 

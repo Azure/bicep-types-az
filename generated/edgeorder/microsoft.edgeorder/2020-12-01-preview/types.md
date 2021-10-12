@@ -79,20 +79,21 @@
 ## OrderItemDetails
 ### Properties
 * **cancellationReason**: string (ReadOnly): Cancellation reason.
-* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the orderItem is cancellable or not.
+* **cancellationStatus**: 'Cancellable' | 'CancellableWithFee' | 'NotCancellable' (ReadOnly): Describes whether the order item is cancellable or not.
 * **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Resource stage details.
 * **deletionStatus**: 'Allowed' | 'NotAllowed' (ReadOnly): Describes whether the order item is deletable or not.
 * **error**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
-* **forwardShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
-* **managementRpDetails**: any (ReadOnly): Any object
+* **forwardShippingDetails**: [ForwardShippingDetails](#forwardshippingdetails) (ReadOnly): Forward shipment details.
+* **managementRpDetails**: [ResourceProviderDetails](#resourceproviderdetails) (ReadOnly): Management RP details
+* **managementRpDetailsList**: [ResourceProviderDetails](#resourceproviderdetails)[] (ReadOnly): List of parent RP details supported for configuration.
 * **notificationEmailList**: string[]: Additional notification email list
 * **orderItemStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order item status history
 * **orderItemType**: 'Purchase' | 'Rental' (Required): Order item type.
 * **preferences**: [Preferences](#preferences): Preferences related to the order
 * **productDetails**: [ProductDetails](#productdetails) (Required): Represents product details
 * **returnReason**: string (ReadOnly): Return reason.
-* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the orderItem is returnable or not.
-* **reverseShippingDetails**: [ShippingDetails](#shippingdetails) (ReadOnly): Package shipping details
+* **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order item is returnable or not.
+* **reverseShippingDetails**: [ReverseShippingDetails](#reverseshippingdetails) (ReadOnly): Reverse shipment details.
 
 ## StageDetails
 ### Properties
@@ -114,12 +115,16 @@
 * **info**: any (ReadOnly): Any object
 * **type**: string (ReadOnly): The additional info type.
 
-## ShippingDetails
+## ForwardShippingDetails
 ### Properties
 * **carrierDisplayName**: string (ReadOnly): Carrier Name for display purpose. Not to be used for any processing.
 * **carrierName**: string (ReadOnly): Name of the carrier.
 * **trackingId**: string (ReadOnly): TrackingId of the package
 * **trackingUrl**: string (ReadOnly): TrackingUrl of the package.
+
+## ResourceProviderDetails
+### Properties
+* **resourceProviderNamespace**: string (ReadOnly): Resource provider namespace
 
 ## Preferences
 ### Properties
@@ -130,7 +135,7 @@
 
 ## EncryptionPreferences
 ### Properties
-* **doubleEncryptionStatus**: 'Disabled' | 'Enabled': Defines secondary layer of software-based encryption enablement.
+* **doubleEncryptionStatus**: 'Disabled' | 'Enabled': Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
 
 ## ManagementResourcePreferences
 ### Properties
@@ -147,14 +152,16 @@
 
 ## ProductDetails
 ### Properties
-* **count**: int: Quantity of the product
+* **count**: int (ReadOnly): Quantity of the product
 * **deviceDetails**: [DeviceDetails](#devicedetails)[] (ReadOnly): list of device details
 * **displayInfo**: [DisplayInfo](#displayinfo): Describes product display information
 * **hierarchyInformation**: [HierarchyInformation](#hierarchyinformation) (Required): Holds details about product hierarchy information
+* **productDoubleEncryptionStatus**: 'Disabled' | 'Enabled' (ReadOnly): Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
 
 ## DeviceDetails
 ### Properties
 * **managementResourceId**: string (ReadOnly): Management Resource Id
+* **managementResourceTenantId**: string (ReadOnly): Management Resource Tenant ID
 * **serialNumber**: string (ReadOnly): device serial number
 
 ## DisplayInfo
@@ -168,6 +175,14 @@
 * **productFamilyName**: string: Represents product family name that uniquely identifies product family
 * **productLineName**: string: Represents product line name that uniquely identifies product line
 * **productName**: string: Represents product name that uniquely identifies product
+
+## ReverseShippingDetails
+### Properties
+* **carrierDisplayName**: string (ReadOnly): Carrier Name for display purpose. Not to be used for any processing.
+* **carrierName**: string (ReadOnly): Name of the carrier.
+* **sasKeyForLabel**: string (ReadOnly): SAS key to download the reverse shipment label of the package.
+* **trackingId**: string (ReadOnly): TrackingId of the package
+* **trackingUrl**: string (ReadOnly): TrackingUrl of the package.
 
 ## TrackedResourceTags
 ### Properties

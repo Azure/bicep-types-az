@@ -111,9 +111,15 @@
 * **labels**: [InvoiceSectionPropertiesLabels](#invoicesectionpropertieslabels): Dictionary of metadata associated with the invoice section.
 * **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
+* **tags**: [InvoiceSectionPropertiesTags](#invoicesectionpropertiestags): Dictionary of metadata associated with the invoice section. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Possible cloud environments.
 
 ## InvoiceSectionPropertiesLabels
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## InvoiceSectionPropertiesTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

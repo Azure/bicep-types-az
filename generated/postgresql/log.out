@@ -6,32 +6,10 @@ WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-02
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-01-01-privatepreview/DataEncryptionKeys.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2018-06-01-privatepreview/PrivateEndpointConnections.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2020-11-05-preview/Databases.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2020-02-14-privatepreview/postgresql.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2021-04-10-privatepreview/postgresql.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2020-01-01-privatepreview/DataEncryptionKeys.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2021-03-31-privatepreview/PrivateDnsZone.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/IntelligentPerformance.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/QueryPerformanceInsights.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2017-12-01/ServerSecurityAlertPolicies.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2018-06-01/PrivateEndpointConnections.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2018-06-01/PrivateLinkResources.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2020-01-01/DataEncryptionKeys.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2021-06-01/Databases.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/stable/2021-06-01/PrivateDnsZone.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2018-06-01-privatepreview/PrivateEndpointConnections.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
-WARNING: Unable to parse swagger path "$(this-folder)/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json"
-AutoRest code generation utility [cli version: 3.4.0; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2021-06-01"} .
@@ -108,7 +86,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined t
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2020-02-14-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -180,7 +158,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResourceLi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2018-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
@@ -265,4 +243,4 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 4ms
-[25.97 s] Generation Complete
+info    | Generation Complete

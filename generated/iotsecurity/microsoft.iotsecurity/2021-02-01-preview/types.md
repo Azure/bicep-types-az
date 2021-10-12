@@ -51,10 +51,15 @@
 
 ## DefenderSettingsProperties
 ### Properties
-* **deviceQuota**: int (Required): Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.
+* **deviceQuota**: int (Required): Size of the device quota. Value is required to be in multiples of 100.
 * **evaluationEndTime**: string (ReadOnly): End time of the evaluation period, if such exist
+* **mdeIntegration**: [DefenderSettingsPropertiesMdeIntegration](#defendersettingspropertiesmdeintegration) (Required): MDE integration configuration
 * **onboardingKind**: 'Default' | 'Evaluation' | 'MigratedToAzure' | 'Purchased' (Required): The kind of onboarding for the subscription
 * **sentinelWorkspaceResourceIds**: string[] (Required): Sentinel Workspace Resource Ids
+
+## DefenderSettingsPropertiesMdeIntegration
+### Properties
+* **status**: 'Disabled' | 'Enabled' (Required): Integration status
 
 ## SystemData
 ### Properties
