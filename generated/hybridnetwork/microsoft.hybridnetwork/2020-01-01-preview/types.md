@@ -62,10 +62,14 @@
 * **Discriminator**: deviceType
 
 ### Base Properties
-* **azureStackEdge**: [SubResource](#subresource): Reference to another sub resource.
 * **networkFunctions**: [SubResource](#subresource)[] (ReadOnly): The list of network functions deployed on the device.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
 * **status**: 'Deleted' | 'NotRegistered' | 'Registered' | 'Unknown' (ReadOnly): The current device status.
+### AzureStackEdgeFormat
+#### Properties
+* **azureStackEdge**: [SubResource](#subresource) (Required): Reference to another sub resource.
+* **deviceType**: 'AzureStackEdge' (Required): The type of the device.
+
 
 ## SubResource
 ### Properties

@@ -21,6 +21,7 @@
 * **createdDateTime**: string (ReadOnly): This is the DateTime when the reservation was created.
 * **displayName**: string: Friendly name of the Reservation
 * **expiryDate**: string (ReadOnly): This is the date when the Reservation will expire.
+* **instanceFlexibility**: 'Off' | 'On' (WriteOnly): Turning this on will apply the reservation discount to other VMs in the same VM size group. Only specify for VirtualMachines reserved resource type.
 * **originalQuantity**: int (ReadOnly): Quantity of the SKUs that are part of the Reservation. Must be greater than zero.
 * **planInformation**: [ReservationOrderBillingPlanInformation](#reservationorderbillingplaninformation) (ReadOnly): Information describing the type of billing plan for this reservation.
 * **provisioningState**: string (ReadOnly): Current state of the reservation.
@@ -73,8 +74,10 @@
 ### Properties
 * **appliedScopes**: string[] (ReadOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
 * **appliedScopeType**: 'Shared' | 'Single' (ReadOnly): Type of the Applied Scope.
+* **archived**: bool (ReadOnly): Property to determine if a reservation is archived or not
 * **billingPlan**: 'Monthly' | 'Upfront' (ReadOnly): Represent the billing plans.
 * **billingScopeId**: string (ReadOnly): Subscription that will be charged for purchasing Reservation
+* **capabilities**: string (ReadOnly): List the Capabilities of a reservation
 * **displayName**: string (ReadOnly): Friendly name for user to easily identify the reservation
 * **effectiveDateTime**: string (ReadOnly): DateTime of the Reservation starting when this version is effective from.
 * **expiryDate**: string (ReadOnly): This is the date when the Reservation will expire.

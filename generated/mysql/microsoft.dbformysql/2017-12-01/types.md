@@ -94,7 +94,7 @@
 * **version**: '5.6' | '5.7' | '8.0': The version of a server.
 ### ServerPropertiesForDefaultCreate
 #### Properties
-* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+* **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.
 * **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
 * **createMode**: 'Default' (Required): The mode to create a new server.
 

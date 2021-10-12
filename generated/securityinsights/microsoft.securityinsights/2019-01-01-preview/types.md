@@ -288,7 +288,7 @@
 ### Properties
 * **incidentId**: string: Incident Id
 * **relationName**: string: Relation Name
-* **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium': The severity of the case
+* **severity**: 'High' | 'Informational' | 'Low' | 'Medium': The severity of the incident
 * **title**: string: The title of the incident
 
 ## RelationProperties

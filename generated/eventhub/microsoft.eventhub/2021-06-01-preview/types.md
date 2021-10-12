@@ -1,5 +1,18 @@
 # Microsoft.EventHub @ 2021-06-01-preview
 
+## Resource Microsoft.EventHub/clusters@2021-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ClusterProperties](#clusterproperties): Event Hubs Cluster properties supplied in responses in List or Get operations.
+* **sku**: [ClusterSku](#clustersku): SKU parameters particular to a cluster instance.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.EventHub/clusters' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventHub/namespaces@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -84,6 +97,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## ClusterProperties
+### Properties
+* **createdAt**: string (ReadOnly): The UTC time when the Event Hubs Cluster was created.
+* **metricId**: string (ReadOnly): The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
+* **status**: string (ReadOnly): Status of the Cluster resource
+* **updatedAt**: string (ReadOnly): The UTC time when the Event Hubs Cluster was last updated.
+
+## ClusterSku
+### Properties
+* **capacity**: int: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+* **name**: 'Dedicated' (Required): Name of this SKU.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedAt**: string: The type of identity that last modified the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault
@@ -157,15 +196,6 @@
 ### Properties
 * **description**: string: Description of the connection state.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Status of the connection.
-
-## SystemData
-### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
-* **lastModifiedAt**: string: The type of identity that last modified the resource.
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
 
 ## Sku
 ### Properties

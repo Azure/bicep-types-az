@@ -732,10 +732,14 @@
 ## MetadataProperties
 ### Properties
 * **author**: [MetadataAuthor](#metadataauthor): Publisher or creator of the content item.
+* **categories**: [MetadataCategories](#metadatacategories): ies for the solution content item
 * **contentId**: string: Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies.  If an active content item is made from a template, both will have the same contentId.
 * **dependencies**: [MetadataDependencies](#metadatadependencies): Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
+* **firstPublishDate**: string: first publish date of solution content item
 * **kind**: 'AnalyticsRule' | 'AnalyticsRuleTemplate' | 'DataConnector' | 'DataType' | 'HuntingQuery' | 'InvestigationQuery' | 'Parser' | 'Playbook' | 'PlaybookTemplate' | 'Solution' | 'Watchlist' | 'WatchlistTemplate' | 'Workbook' | 'WorkbookTemplate' (Required): The kind of content the metadata is for.
+* **lastPublishDate**: string: last publish date of solution content item
 * **parentId**: string (Required): Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
+* **providers**: string[]: Providers for the solution content item
 * **source**: [MetadataSource](#metadatasource): The original source of the content item, where it comes from.
 * **support**: [MetadataSupport](#metadatasupport): Support information for the content item.
 * **version**: string: Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
@@ -745,6 +749,11 @@
 * **email**: string: Email of author contact
 * **link**: string: Link for author/vendor page
 * **name**: string: Name of the author. Company or person.
+
+## MetadataCategories
+### Properties
+* **domains**: string[]: domain for the solution content item
+* **verticals**: string[]: Industry verticals for the solution content item
 
 ## MetadataDependencies
 ### Properties

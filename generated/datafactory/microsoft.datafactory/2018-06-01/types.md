@@ -191,6 +191,11 @@
 * **type**: 'MappingDataFlow' (Required): Type of data flow.
 * **typeProperties**: [MappingDataFlowTypeProperties](#mappingdataflowtypeproperties): Mapping data flow type properties.
 
+### WranglingDataFlow
+#### Properties
+* **type**: 'WranglingDataFlow' (Required): Type of data flow.
+* **typeProperties**: [PowerQueryTypeProperties](#powerquerytypeproperties): Power Query data flow type properties.
+
 
 ## DataFlowFolder
 ### Properties
@@ -246,6 +251,21 @@
 * **description**: string: Transformation description.
 * **name**: string (Required): Transformation name.
 
+## PowerQueryTypeProperties
+### Properties
+* **documentLocale**: string: Locale of the Power query mashup document.
+* **script**: string: Power query mashup script.
+* **sources**: [PowerQuerySource](#powerquerysource)[]: List of sources in Power Query.
+
+## PowerQuerySource
+### Properties
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **description**: string: Transformation description.
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **name**: string (Required): Transformation name.
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **script**: string: source script.
+
 ## Dataset
 * **Discriminator**: type
 
@@ -261,6 +281,16 @@
 #### Properties
 * **type**: 'AmazonMWSObject' (Required): Type of dataset.
 * **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
+
+### AmazonRdsForOracleTableDataset
+#### Properties
+* **type**: 'AmazonRdsForOracleTable' (Required): Type of dataset.
+* **typeProperties**: [AmazonRdsForOracleTableDatasetTypeProperties](#amazonrdsfororacletabledatasettypeproperties): AmazonRdsForOracle dataset properties.
+
+### AmazonRdsForSqlServerTableDataset
+#### Properties
+* **type**: 'AmazonRdsForSqlServerTable' (Required): Type of dataset.
+* **typeProperties**: [AmazonRdsForSqlServerTableDatasetTypeProperties](#amazonrdsforsqlservertabledatasettypeproperties): The Amazon RDS for SQL Server dataset properties.
 
 ### AmazonRedshiftTableDataset
 #### Properties
@@ -739,6 +769,16 @@
 ## GenericDatasetTypeProperties
 ### Properties
 * **tableName**: any: Any object
+
+## AmazonRdsForOracleTableDatasetTypeProperties
+### Properties
+* **schema**: any: Any object
+* **table**: any: Any object
+
+## AmazonRdsForSqlServerTableDatasetTypeProperties
+### Properties
+* **schema**: any: Any object
+* **table**: any: Any object
 
 ## AmazonRedshiftTableDatasetTypeProperties
 ### Properties
@@ -1293,6 +1333,7 @@
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
 * **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource properties for managed integration runtime.
+* **customerVirtualNetwork**: [IntegrationRuntimeCustomerVirtualNetwork](#integrationruntimecustomervirtualnetwork): The definition and properties of virtual network to which Azure-SSIS integration runtime will join.
 * **ssisProperties**: [IntegrationRuntimeSsisProperties](#integrationruntimessisproperties): SSIS properties for managed integration runtime.
 
 ## IntegrationRuntimeComputeProperties
@@ -1323,6 +1364,10 @@
 * **vNetId**: string: The ID of the VNet that this integration runtime will join.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## IntegrationRuntimeCustomerVirtualNetwork
+### Properties
+* **subnetId**: string: The ID of subnet to which Azure-SSIS integration runtime will join.
 
 ## IntegrationRuntimeSsisProperties
 ### Properties
@@ -1473,6 +1518,16 @@
 #### Properties
 * **type**: 'AmazonMWS' (Required): Type of linked service.
 * **typeProperties**: [AmazonMWSLinkedServiceTypeProperties](#amazonmwslinkedservicetypeproperties) (Required): Amazon Marketplace Web Service linked service properties.
+
+### AmazonRdsForOracleLinkedService
+#### Properties
+* **type**: 'AmazonRdsForOracle' (Required): Type of linked service.
+* **typeProperties**: [AmazonRdsForLinkedServiceTypeProperties](#amazonrdsforlinkedservicetypeproperties) (Required): AmazonRdsForOracle database linked service properties.
+
+### AmazonRdsForSqlServerLinkedService
+#### Properties
+* **type**: 'AmazonRdsForSqlServer' (Required): Type of linked service.
+* **typeProperties**: [AmazonRdsForSqlServerLinkedServiceTypeProperties](#amazonrdsforsqlserverlinkedservicetypeproperties) (Required): Amazon Rds for SQL Server linked service properties.
 
 ### AmazonRedshiftLinkedService
 #### Properties
@@ -1999,6 +2054,27 @@
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
 
+## AmazonRdsForLinkedServiceTypeProperties
+### Properties
+* **connectionString**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+
+## AmazonRdsForSqlServerLinkedServiceTypeProperties
+### Properties
+* **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
+* **connectionString**: any (Required): Any object
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **userName**: any: Any object
+
+## SqlAlwaysEncryptedProperties
+### Properties
+* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' | 'UserAssignedManagedIdentity' (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): Credential reference type.
+* **servicePrincipalId**: any: Any object
+* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
+
 ## AmazonRedshiftLinkedServiceTypeProperties
 ### Properties
 * **database**: any (Required): Any object
@@ -2228,12 +2304,6 @@
 * **servicePrincipalId**: any: Any object
 * **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **tenant**: any: Any object
-
-## SqlAlwaysEncryptedProperties
-### Properties
-* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
-* **servicePrincipalId**: any: Any object
-* **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
 
 ## AzureSqlDWLinkedServiceTypeProperties
 ### Properties
@@ -3195,6 +3265,12 @@
 * **type**: 'ExecuteSSISPackage' (Required): Type of activity.
 * **typeProperties**: [ExecuteSsisPackageActivityTypeProperties](#executessispackageactivitytypeproperties) (Required): Execute SSIS package activity properties.
 
+### ExecuteWranglingDataflowActivity
+#### Properties
+* **policy**: [ActivityPolicy](#activitypolicy): Execution policy for an activity.
+* **type**: 'ExecuteWranglingDataflow' (Required): Type of activity.
+* **typeProperties**: [ExecutePowerQueryActivityTypeProperties](#executepowerqueryactivitytypeproperties) (Required): Execute power query data flow activity properties.
+
 ### FilterActivity
 #### Properties
 * **type**: 'Filter' (Required): Type of activity.
@@ -3876,6 +3952,25 @@
 * **query**: any: Any object
 * **type**: 'AmazonMWSSource' (Required): Copy source type.
 
+### AmazonRdsForOracleSource
+#### Properties
+* **additionalColumns**: any: Any object
+* **oracleReaderQuery**: any: Any object
+* **partitionOption**: any: Any object
+* **partitionSettings**: [AmazonRdsForOraclePartitionSettings](#amazonrdsfororaclepartitionsettings): The settings that will be leveraged for AmazonRdsForOracle source partitioning.
+* **queryTimeout**: any: Any object
+* **type**: 'AmazonRdsForOracleSource' (Required): Copy source type.
+
+### AmazonRdsForSqlServerSource
+#### Properties
+* **partitionOption**: any: Any object
+* **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
+* **produceAdditionalTypes**: any: Any object
+* **sqlReaderQuery**: any: Any object
+* **sqlReaderStoredProcedureName**: any: Any object
+* **storedProcedureParameters**: [AmazonRdsForSqlServerSourceStoredProcedureParameters](#amazonrdsforsqlserversourcestoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+* **type**: 'AmazonRdsForSqlServerSource' (Required): Copy source type.
+
 ### AmazonRedshiftSource
 #### Properties
 * **query**: any: Any object
@@ -4448,6 +4543,24 @@
 * **type**: 'ZohoSource' (Required): Copy source type.
 
 
+## AmazonRdsForOraclePartitionSettings
+### Properties
+* **partitionColumnName**: any: Any object
+* **partitionLowerBound**: any: Any object
+* **partitionNames**: any: Any object
+* **partitionUpperBound**: any: Any object
+
+## SqlPartitionSettings
+### Properties
+* **partitionColumnName**: any: Any object
+* **partitionLowerBound**: any: Any object
+* **partitionUpperBound**: any: Any object
+
+## AmazonRdsForSqlServerSourceStoredProcedureParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
+
 ## RedshiftUnloadSettings
 ### Properties
 * **bucketName**: any (Required): Any object
@@ -4648,12 +4761,6 @@
 * **type**: string (Required): The export setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
-
-## SqlPartitionSettings
-### Properties
-* **partitionColumnName**: any: Any object
-* **partitionLowerBound**: any: Any object
-* **partitionUpperBound**: any: Any object
 
 ## AzureSqlSourceStoredProcedureParameters
 ### Properties
@@ -5025,6 +5132,47 @@
 ### Properties
 * **isSensitive**: bool: Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
 * **value**: any (Required): Any object
+
+## ActivityPolicy
+### Properties
+* **retry**: any: Any object
+* **retryIntervalInSeconds**: int: Interval between each retry attempt (in seconds). The default is 30 sec.
+* **secureInput**: bool: When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+* **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+* **timeout**: any: Any object
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ExecutePowerQueryActivityTypeProperties
+### Properties
+* **compute**: [ExecuteDataFlowActivityTypePropertiesCompute](#executedataflowactivitytypepropertiescompute): Compute properties for data flow activity.
+* **continueOnError**: any: Any object
+* **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference type.
+* **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
+* **queries**: [PowerQuerySinkMapping](#powerquerysinkmapping)[]: List of mapping for Power Query mashup query to sink dataset(s).
+* **runConcurrently**: any: Any object
+* **sinks**: [ExecutePowerQueryActivityTypePropertiesSinks](#executepowerqueryactivitytypepropertiessinks): (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
+* **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
+* **traceLevel**: any: Any object
+
+## PowerQuerySinkMapping
+### Properties
+* **dataflowSinks**: [PowerQuerySink](#powerquerysink)[]: List of sinks mapped to Power Query mashup query.
+* **queryName**: string: Name of the query in Power Query mashup document.
+
+## PowerQuerySink
+### Properties
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
+* **description**: string: Transformation description.
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **name**: string (Required): Transformation name.
+* **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
+* **script**: string: sink script.
+
+## ExecutePowerQueryActivityTypePropertiesSinks
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [PowerQuerySink](#powerquerysink)
 
 ## FilterActivityTypeProperties
 ### Properties

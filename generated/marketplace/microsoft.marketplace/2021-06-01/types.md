@@ -57,6 +57,7 @@
 * **collectionIds**: string[] (ReadOnly): Gets list of associated collection ids
 * **eTag**: string: Identifier for purposes of race condition
 * **isGov**: bool: Is government
+* **notificationsSettings**: [NotificationsSettingsProperties](#notificationssettingsproperties): Describes the json payload for notifications settings
 * **privateStoreId**: string (ReadOnly): Private Store id
 * **privateStoreName**: string: Private Store Name
 * **tenantId**: string: Tenant id
@@ -65,6 +66,17 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## NotificationsSettingsProperties
+### Properties
+* **recipients**: [Recipient](#recipient)[]: Gets or sets list of notified recipients for new requests
+* **sendToAllMarketplaceAdmins**: bool: Gets or sets whether to send email to all marketplace admins for new requests
+
+## Recipient
+### Properties
+* **displayName**: string (ReadOnly): Display Name
+* **emailAddress**: string (ReadOnly): Email Address
+* **principalId**: string: Principal ID
 
 ## SystemData
 ### Properties

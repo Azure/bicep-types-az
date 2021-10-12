@@ -105,6 +105,7 @@
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity properties.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationServiceEnvironmentProperties](#integrationserviceenvironmentproperties): The integration service environment properties.
@@ -117,10 +118,10 @@
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The resource location.
+* **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiResourceProperties](#apiresourceproperties) (ReadOnly): The API resource properties.
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **properties**: [IntegrationServiceEnvironmentManagedApiProperties](#integrationserviceenvironmentmanagedapiproperties): The integration service environment managed api properties.
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments/managedApis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/workflows@2019-05-01
@@ -128,6 +129,7 @@
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity properties.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkflowProperties](#workflowproperties): The workflow properties.
@@ -136,77 +138,14 @@
 
 ## IntegrationAccountProperties
 ### Properties
-* **integrationServiceEnvironment**: [IntegrationServiceEnvironment](#integrationserviceenvironment): The integration service environment.
+* **integrationServiceEnvironment**: [ResourceReference](#resourcereference): The resource reference.
 * **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
-
-## IntegrationServiceEnvironment
-### Properties
-* **id**: string (ReadOnly): The resource id.
-* **location**: string: The resource location.
-* **name**: string (ReadOnly): Gets the resource name.
-* **properties**: [IntegrationServiceEnvironmentProperties](#integrationserviceenvironmentproperties): The integration service environment properties.
-* **sku**: [IntegrationServiceEnvironmentSku](#integrationserviceenvironmentsku): The integration service environment sku.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
-* **type**: string (ReadOnly): Gets the resource type.
-
-## IntegrationServiceEnvironmentProperties
-### Properties
-* **encryptionConfiguration**: [IntegrationServiceEnvironmenEncryptionConfiguration](#integrationserviceenvironmenencryptionconfiguration): The encryption configuration for the integration service environment.
-* **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration): The endpoints configuration.
-* **integrationServiceEnvironmentId**: string: Gets the tracking id.
-* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): The network configuration.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The workflow provisioning state.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
-
-## IntegrationServiceEnvironmenEncryptionConfiguration
-### Properties
-* **encryptionKeyReference**: [IntegrationServiceEnvironmenEncryptionKeyReference](#integrationserviceenvironmenencryptionkeyreference): The encryption key details for the integration service environment.
-
-## IntegrationServiceEnvironmenEncryptionKeyReference
-### Properties
-* **keyName**: string: Gets the key name in the Key Vault.
-* **keyVault**: [ResourceReference](#resourcereference): The resource reference.
-* **keyVersion**: string: Gets the version of the key specified in the keyName property.
 
 ## ResourceReference
 ### Properties
 * **id**: string: The resource id.
 * **name**: string (ReadOnly): Gets the resource name.
 * **type**: string (ReadOnly): Gets the resource type.
-
-## FlowEndpointsConfiguration
-### Properties
-* **connector**: [FlowEndpoints](#flowendpoints): The flow endpoints configuration.
-* **workflow**: [FlowEndpoints](#flowendpoints): The flow endpoints configuration.
-
-## FlowEndpoints
-### Properties
-* **accessEndpointIpAddresses**: [IpAddress](#ipaddress)[]: The access endpoint ip address.
-* **outgoingIpAddresses**: [IpAddress](#ipaddress)[]: The outgoing ip address.
-
-## IpAddress
-### Properties
-* **address**: string: The address.
-
-## NetworkConfiguration
-### Properties
-* **accessEndpoint**: [IntegrationServiceEnvironmentAccessEndpoint](#integrationserviceenvironmentaccessendpoint): The integration service environment access endpoint.
-* **subnets**: [ResourceReference](#resourcereference)[]: The subnets.
-* **virtualNetworkAddressSpace**: string: Gets the virtual network address space.
-
-## IntegrationServiceEnvironmentAccessEndpoint
-### Properties
-* **type**: 'External' | 'Internal' | 'NotSpecified': The integration service environment access endpoint type.
-
-## IntegrationServiceEnvironmentSku
-### Properties
-* **capacity**: int: The sku capacity.
-* **name**: 'Developer' | 'NotSpecified' | 'Premium': The integration service environment sku name.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## IntegrationAccountSku
 ### Properties
@@ -685,10 +624,10 @@
 
 ## ContentLink
 ### Properties
-* **contentHash**: [ContentHash](#contenthash): The content hash.
-* **contentSize**: int: The content size.
-* **contentVersion**: string: The content version.
-* **metadata**: any: Any object
+* **contentHash**: [ContentHash](#contenthash) (ReadOnly): The content hash.
+* **contentSize**: int (ReadOnly): The content size.
+* **contentVersion**: string (ReadOnly): The content version.
+* **metadata**: any (ReadOnly): Any object
 * **uri**: string: The content link URI.
 
 ## ContentHash
@@ -837,12 +776,77 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ManagedServiceIdentity
+### Properties
+* **principalId**: string (ReadOnly): Principal Id of managed service identity.
+* **tenantId**: string (ReadOnly): Tenant of managed service identity.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
+
+## ManagedServiceIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): Client Id of user assigned identity
+* **principalId**: string (ReadOnly): Principal Id of user assigned identity
+
+## IntegrationServiceEnvironmentProperties
+### Properties
+* **encryptionConfiguration**: [IntegrationServiceEnvironmenEncryptionConfiguration](#integrationserviceenvironmenencryptionconfiguration): The encryption configuration for the integration service environment.
+* **endpointsConfiguration**: [FlowEndpointsConfiguration](#flowendpointsconfiguration): The endpoints configuration.
+* **integrationServiceEnvironmentId**: string: Gets the tracking id.
+* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration): The network configuration.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The workflow provisioning state.
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended': The workflow state.
+
+## IntegrationServiceEnvironmenEncryptionConfiguration
+### Properties
+* **encryptionKeyReference**: [IntegrationServiceEnvironmenEncryptionKeyReference](#integrationserviceenvironmenencryptionkeyreference): The encryption key details for the integration service environment.
+
+## IntegrationServiceEnvironmenEncryptionKeyReference
+### Properties
+* **keyName**: string: Gets the key name in the Key Vault.
+* **keyVault**: [ResourceReference](#resourcereference): The resource reference.
+* **keyVersion**: string: Gets the version of the key specified in the keyName property.
+
+## FlowEndpointsConfiguration
+### Properties
+* **connector**: [FlowEndpoints](#flowendpoints): The flow endpoints configuration.
+* **workflow**: [FlowEndpoints](#flowendpoints): The flow endpoints configuration.
+
+## FlowEndpoints
+### Properties
+* **accessEndpointIpAddresses**: [IpAddress](#ipaddress)[]: The access endpoint ip address.
+* **outgoingIpAddresses**: [IpAddress](#ipaddress)[]: The outgoing ip address.
+
+## IpAddress
+### Properties
+* **address**: string: The address.
+
+## NetworkConfiguration
+### Properties
+* **accessEndpoint**: [IntegrationServiceEnvironmentAccessEndpoint](#integrationserviceenvironmentaccessendpoint): The integration service environment access endpoint.
+* **subnets**: [ResourceReference](#resourcereference)[]: The subnets.
+* **virtualNetworkAddressSpace**: string: Gets the virtual network address space.
+
+## IntegrationServiceEnvironmentAccessEndpoint
+### Properties
+* **type**: 'External' | 'Internal' | 'NotSpecified': The integration service environment access endpoint type.
+
+## IntegrationServiceEnvironmentSku
+### Properties
+* **capacity**: int: The sku capacity.
+* **name**: 'Developer' | 'NotSpecified' | 'Premium': The integration service environment sku name.
+
 ## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ApiResourceProperties
+## IntegrationServiceEnvironmentManagedApiProperties
 ### Properties
 * **apiDefinitions**: [ApiResourceDefinitions](#apiresourcedefinitions) (ReadOnly): The Api resource definition.
 * **apiDefinitionUrl**: string (ReadOnly): The API definition.
@@ -850,8 +854,9 @@
 * **capabilities**: string[] (ReadOnly): The capabilities.
 * **category**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
 * **connectionParameters**: [ApiResourcePropertiesConnectionParameters](#apiresourcepropertiesconnectionparameters) (ReadOnly): The connection parameters.
+* **deploymentParameters**: [IntegrationServiceEnvironmentManagedApiDeploymentParameters](#integrationserviceenvironmentmanagedapideploymentparameters): The integration service environment managed api deployment parameters.
 * **generalInformation**: [ApiResourceGeneralInformation](#apiresourcegeneralinformation) (ReadOnly): The API general information.
-* **integrationServiceEnvironment**: [ResourceReference](#resourcereference) (ReadOnly): The resource reference.
+* **integrationServiceEnvironment**: [ResourceReference](#resourcereference): The resource reference.
 * **metadata**: [ApiResourceMetadata](#apiresourcemetadata) (ReadOnly): The api resource metadata.
 * **name**: string (ReadOnly): The name
 * **policies**: [ApiResourcePolicies](#apiresourcepolicies) (ReadOnly): The API resource policies.
@@ -860,52 +865,56 @@
 
 ## ApiResourceDefinitions
 ### Properties
-* **modifiedSwaggerUrl**: string (ReadOnly): The modified swagger url.
-* **originalSwaggerUrl**: string (ReadOnly): The original swagger url.
+* **modifiedSwaggerUrl**: string: The modified swagger url.
+* **originalSwaggerUrl**: string: The original swagger url.
 
 ## ApiResourceBackendService
 ### Properties
-* **serviceUrl**: string (ReadOnly): The service URL.
+* **serviceUrl**: string: The service URL.
 
 ## ApiResourcePropertiesConnectionParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## IntegrationServiceEnvironmentManagedApiDeploymentParameters
+### Properties
+* **contentLinkDefinition**: [ContentLink](#contentlink): The content link.
+
 ## ApiResourceGeneralInformation
 ### Properties
-* **description**: string (ReadOnly): The description.
-* **displayName**: string (ReadOnly): The display name.
-* **iconUrl**: string (ReadOnly): The icon url.
-* **releaseTag**: string (ReadOnly): The release tag.
-* **termsOfUseUrl**: string (ReadOnly): The terms of use url.
-* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard' (ReadOnly): The Api tier.
+* **description**: string: The description.
+* **displayName**: string: The display name.
+* **iconUrl**: string: The icon url.
+* **releaseTag**: string: The release tag.
+* **termsOfUseUrl**: string: The terms of use url.
+* **tier**: 'Enterprise' | 'NotSpecified' | 'Premium' | 'Standard': The Api tier.
 
 ## ApiResourceMetadata
 ### Properties
-* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap' (ReadOnly)
-* **brandColor**: string (ReadOnly): The brand color.
-* **connectionType**: string (ReadOnly): The connection type.
-* **deploymentParameters**: [ApiDeploymentParameterMetadataSet](#apideploymentparametermetadataset) (ReadOnly): The API deployment parameters metadata.
-* **hideKey**: string (ReadOnly): The hide key.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting' (ReadOnly): The workflow provisioning state.
-* **source**: string (ReadOnly): The source.
-* **tags**: [ApiResourceMetadataTags](#apiresourcemetadatatags) (ReadOnly): The tags.
-* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' (ReadOnly): The WSDL import method.
-* **wsdlService**: [WsdlService](#wsdlservice) (ReadOnly): The WSDL service.
+* **ApiType**: 'NotSpecified' | 'Rest' | 'Soap'
+* **brandColor**: string: The brand color.
+* **connectionType**: string: The connection type.
+* **deploymentParameters**: [ApiDeploymentParameterMetadataSet](#apideploymentparametermetadataset): The API deployment parameters metadata.
+* **hideKey**: string: The hide key.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InProgress' | 'Moving' | 'NotSpecified' | 'Pending' | 'Ready' | 'Registered' | 'Registering' | 'Renewing' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | 'Waiting': The workflow provisioning state.
+* **source**: string: The source.
+* **tags**: [ApiResourceMetadataTags](#apiresourcemetadatatags): The tags.
+* **wsdlImportMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest': The WSDL import method.
+* **wsdlService**: [WsdlService](#wsdlservice): The WSDL service.
 
 ## ApiDeploymentParameterMetadataSet
 ### Properties
-* **packageContentLink**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata) (ReadOnly): The API deployment parameter metadata.
-* **redisCacheConnectionString**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata) (ReadOnly): The API deployment parameter metadata.
+* **packageContentLink**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata): The API deployment parameter metadata.
+* **redisCacheConnectionString**: [ApiDeploymentParameterMetadata](#apideploymentparametermetadata): The API deployment parameter metadata.
 
 ## ApiDeploymentParameterMetadata
 ### Properties
-* **description**: string (ReadOnly): The description.
-* **displayName**: string (ReadOnly): The display name.
-* **isRequired**: bool (ReadOnly): Indicates whether its required.
-* **type**: string (ReadOnly): The type.
-* **visibility**: 'Default' | 'Internal' | 'NotSpecified' (ReadOnly): The Api deployment parameter visibility.
+* **description**: string: The description.
+* **displayName**: string: The display name.
+* **isRequired**: bool: Indicates whether its required.
+* **type**: string: The type.
+* **visibility**: 'Default' | 'Internal' | 'NotSpecified': The Api deployment parameter visibility.
 
 ## ApiResourceMetadataTags
 ### Properties
@@ -914,13 +923,13 @@
 
 ## WsdlService
 ### Properties
-* **EndpointQualifiedNames**: string[] (ReadOnly): The list of endpoints' qualified names.
-* **qualifiedName**: string (ReadOnly): The qualified name.
+* **EndpointQualifiedNames**: string[]: The list of endpoints' qualified names.
+* **qualifiedName**: string: The qualified name.
 
 ## ApiResourcePolicies
 ### Properties
-* **content**: string (ReadOnly): The API level only policies XML as embedded content.
-* **contentLink**: string (ReadOnly): The content link to the policies.
+* **content**: string: The API level only policies XML as embedded content.
+* **contentLink**: string: The content link to the policies.
 
 ## ResourceTags
 ### Properties
@@ -971,7 +980,7 @@
 ## OpenAuthenticationAccessPolicy
 ### Properties
 * **claims**: [OpenAuthenticationPolicyClaim](#openauthenticationpolicyclaim)[]: The access policy claims.
-* **type**: 'AAD' (ReadOnly): Open authentication policy provider type.
+* **type**: 'AAD': Open authentication policy provider type.
 
 ## OpenAuthenticationPolicyClaim
 ### Properties

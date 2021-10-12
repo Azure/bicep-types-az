@@ -16,7 +16,7 @@
 
 ## ScheduledQueryRuleProperties
 ### Properties
-* **actions**: any: Any object
+* **actions**: [Actions](#actions): Actions to invoke when the alert fires.
 * **autoMitigate**: bool: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert.
 * **checkWorkspaceAlertsStorageConfigured**: bool: The flag which indicates whether this scheduled query rule should be stored in the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
@@ -34,6 +34,16 @@
 * **skipQueryValidation**: bool: The flag which indicates whether the provided query should be validated or not. The default is false. Relevant only for rules of the kind LogAlert.
 * **targetResourceTypes**: string[]: List of resource type of the target resource(s) on which the alert is created/updated. For example if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of the kind LogAlert
 * **windowSize**: string: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size). Relevant and required only for rules of the kind LogAlert.
+
+## Actions
+### Properties
+* **actionGroups**: string[]: Action Group resource Ids to invoke when the alert fires.
+* **customProperties**: [ActionsCustomProperties](#actionscustomproperties): The properties of an alert payload.
+
+## ActionsCustomProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ScheduledQueryRuleCriteria
 ### Properties

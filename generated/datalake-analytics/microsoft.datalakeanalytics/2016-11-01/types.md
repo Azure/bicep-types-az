@@ -60,8 +60,6 @@
 * **firewallAllowAzureIps**: 'Disabled' | 'Enabled': The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
 * **firewallRules**: [CreateFirewallRuleWithAccountParameters](#createfirewallrulewithaccountparameters)[]: The list of firewall rules associated with this account.
 * **firewallState**: 'Disabled' | 'Enabled': The current state of the IP address firewall for this account.
-* **hierarchicalQueue**: [DataLakeAnalyticsAccountPropertiesHierarchicalQueue](#datalakeanalyticsaccountpropertieshierarchicalqueue) (ReadOnly): The hierarchical queue associated with this account.
-* **hierarchicalQueueState**: string (ReadOnly): The hierarchical queue state associated with this account.
 * **hiveMetastores**: [HiveMetastore](#hivemetastore)[] (ReadOnly): The list of hiveMetastores associated with this account.
 * **lastModifiedTime**: string (ReadOnly): The account last modified time.
 * **maxActiveJobCountPerUser**: int (ReadOnly): The maximum supported active jobs under the account at the same time.
@@ -117,10 +115,6 @@
 ### Properties
 * **endIpAddress**: string (Required): The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
 * **startIpAddress**: string (Required): The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-
-## DataLakeAnalyticsAccountPropertiesHierarchicalQueue
-### Properties
-* **root**: any (ReadOnly): Any object
 
 ## HiveMetastore
 ### Properties

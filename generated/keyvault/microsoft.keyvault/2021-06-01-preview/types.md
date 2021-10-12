@@ -188,7 +188,7 @@
 ## Permissions
 ### Properties
 * **certificates**: 'all' | 'backup' | 'create' | 'delete' | 'deleteissuers' | 'get' | 'getissuers' | 'import' | 'list' | 'listissuers' | 'managecontacts' | 'manageissuers' | 'purge' | 'recover' | 'restore' | 'setissuers' | 'update'[]: Permissions to certificates
-* **keys**: 'all' | 'backup' | 'create' | 'decrypt' | 'delete' | 'encrypt' | 'get' | 'import' | 'list' | 'purge' | 'recover' | 'release' | 'restore' | 'sign' | 'unwrapKey' | 'update' | 'verify' | 'wrapKey'[]: Permissions to keys
+* **keys**: 'all' | 'backup' | 'create' | 'decrypt' | 'delete' | 'encrypt' | 'get' | 'import' | 'list' | 'purge' | 'recover' | 'release' | 'restore' | 'rotate' | 'sign' | 'unwrapKey' | 'update' | 'verify' | 'wrapKey'[]: Permissions to keys
 * **secrets**: 'all' | 'backup' | 'delete' | 'get' | 'list' | 'purge' | 'recover' | 'restore' | 'set'[]: Permissions to secrets
 * **storage**: 'all' | 'backup' | 'delete' | 'deletesas' | 'get' | 'getsas' | 'list' | 'listsas' | 'purge' | 'recover' | 'regeneratekey' | 'restore' | 'set' | 'setsas' | 'update'[]: Permissions to storage accounts
 
@@ -253,6 +253,7 @@
 * **keyUri**: string (ReadOnly): The URI to retrieve the current version of the key.
 * **keyUriWithVersion**: string (ReadOnly): The URI to retrieve the specific version of the key.
 * **kty**: 'EC' | 'EC-HSM' | 'RSA' | 'RSA-HSM': The type of the key. For valid values, see JsonWebKeyType.
+* **release_policy**: [KeyReleasePolicy](#keyreleasepolicy)
 * **rotationPolicy**: [RotationPolicy](#rotationpolicy)
 
 ## KeyAttributes
@@ -260,9 +261,15 @@
 * **created**: int (ReadOnly): Creation time in seconds since 1970-01-01T00:00:00Z.
 * **enabled**: bool: Determines whether or not the object is enabled.
 * **exp**: int: Expiry date in seconds since 1970-01-01T00:00:00Z.
+* **exportable**: bool: Indicates if the private key can be exported.
 * **nbf**: int: Not before date in seconds since 1970-01-01T00:00:00Z.
 * **recoveryLevel**: 'Purgeable' | 'Recoverable' | 'Recoverable+ProtectedSubscription' | 'Recoverable+Purgeable' (ReadOnly): The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
 * **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
+
+## KeyReleasePolicy
+### Properties
+* **contentType**: string: Content type and version of key release policy
+* **data**: any: Blob encoding the policy rules under which the key can be released.
 
 ## RotationPolicy
 ### Properties
@@ -286,8 +293,8 @@
 
 ## Trigger
 ### Properties
-* **timeAfterCreate**: string: The time duration after key creation to rotate the key. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
-* **timeBeforeExpiry**: string: The time duration before key expiring to rotate the key. It should be in ISO8601 format. Eg: 'P90D', 'P1Y'.
+* **timeAfterCreate**: string: The time duration after key creation to rotate the key. It only applies to rotate. It will be in ISO 8601 duration format. Eg: 'P90D', 'P1Y'.
+* **timeBeforeExpiry**: string: The time duration before key expiring to rotate or notify. It will be in ISO 8601 duration format. Eg: 'P90D', 'P1Y'.
 
 ## KeyCreateParametersTags
 ### Properties

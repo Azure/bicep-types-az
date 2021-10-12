@@ -733,6 +733,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **defaultValue**: string: Default parameter value.
 * **description**: string: Parameter description.
+* **examples**: [ParameterExamplesContract](#parameterexamplescontract): Parameter examples.
 * **name**: string (Required): Parameter name.
 * **required**: bool: Specifies whether parameter is required or not.
 * **schemaId**: string: Schema identifier.
@@ -740,11 +741,22 @@ dictionary key references will be ARM resource ids in the form:
 * **typeName**: string: Type name defined by the schema.
 * **values**: string[]: Parameter values.
 
+## ParameterExamplesContract
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterExampleContract](#parameterexamplecontract)
+
+## ParameterExampleContract
+### Properties
+* **description**: string: Long description for the example
+* **externalValue**: string: A URL that points to the literal example
+* **summary**: string: Short description for the example
+* **value**: any: Anything
+
 ## RepresentationContract
 ### Properties
 * **contentType**: string (Required): Specifies a registered or custom content type for this representation, e.g. application/xml.
 * **formParameters**: [ParameterContract](#parametercontract)[]: Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
-* **sample**: string: An example of the representation.
 * **schemaId**: string: Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
 * **typeName**: string: Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
 
