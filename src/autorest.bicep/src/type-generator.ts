@@ -55,7 +55,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
 
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
+        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
         const flags = parsePropertyFlags(putProperty, getProperty);
         resourceProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
@@ -294,11 +294,35 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     return factory.lookupBuiltInType(BuiltInTypeKind.Any);
   }
 
+  function getMutabilityFlags(property: Property | undefined) {
+    const mutability = property?.extensions?.["x-ms-mutability"] as string[];
+    if (!mutability) {
+      return ObjectPropertyFlags.None;
+    }
+
+    const writable = mutability.includes('create') || mutability.includes('update');
+    const readable = mutability.includes('read');
+
+    if (writable && !readable) {
+      return ObjectPropertyFlags.WriteOnly;
+    }
+
+    if (readable && !writable) {
+      return ObjectPropertyFlags.ReadOnly;
+    }
+
+    return ObjectPropertyFlags.None;
+  }
+
   function parsePropertyFlags(putProperty: Property | undefined, getProperty: Property | undefined) {
     let flags = ObjectPropertyFlags.None;
 
     if (putProperty && putProperty.required) {
       flags |= ObjectPropertyFlags.Required;
+    }
+
+    if (putProperty && getProperty) {
+      flags |= getMutabilityFlags(putProperty);
     }
 
     if (!putProperty || putProperty.readOnly) {
@@ -383,7 +407,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       const getParentDictionary = (getSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
 
       if (putParentDictionary || getParentDictionary) {
-        additionalProperties = parseType(putParentDictionary?.elementType, putParentDictionary?.elementType);
+        additionalProperties = parseType(putParentDictionary?.elementType, getParentDictionary?.elementType);
       }
     }
 
@@ -397,7 +421,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
     for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeBaseProperties)) {
       const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema, getProperty?.schema)?.language.default?.description;
+        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
         const flags = parsePropertyFlags(putProperty, getProperty);
         definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }

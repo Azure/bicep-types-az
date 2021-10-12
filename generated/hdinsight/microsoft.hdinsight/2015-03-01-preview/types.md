@@ -7,10 +7,10 @@
 * **etag**: string (ReadOnly): The ETag for the resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ClusterIdentity](#clusteridentity): Identity for the cluster.
-* **location**: string: The Azure Region where the resource lives
+* **location**: string: The location of the cluster.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ClusterCreateProperties](#clustercreateproperties): The properties of cluster.
-* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): Resource tags.
+* **properties**: [ClusterCreateProperties](#clustercreateproperties): The cluster create parameters.
+* **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): The resource tags.
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HDInsight/clusters/applications@2015-03-01-preview
@@ -273,17 +273,17 @@
 ### Properties
 * **accessModes**: string[]: The list of access modes for the application.
 * **destinationPort**: int: The destination port to connect to.
-* **disableGatewayAuth**: bool: The value indicates whether to disable GatewayAuth.
+* **disableGatewayAuth**: bool (WriteOnly): The value indicates whether to disable GatewayAuth.
 * **location**: string (ReadOnly): The location of the endpoint.
 * **privateIPAddress**: string: The private ip address of the endpoint.
 * **publicPort**: int (ReadOnly): The public port to connect to.
-* **subDomainSuffix**: string: The subdomain suffix of the application.
+* **subDomainSuffix**: string (WriteOnly): The subdomain suffix of the application.
 
 ## RuntimeScriptAction
 ### Properties
 * **applicationName**: string (ReadOnly): The application name of the script action, if any.
 * **name**: string (Required): The name of the script action.
-* **parameters**: string: The parameters for the script
+* **parameters**: string (WriteOnly): The parameters for the script
 * **roles**: string[] (Required): The list of roles where script will be executed.
 * **uri**: string (Required): The URI to the script.
 

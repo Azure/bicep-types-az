@@ -1,183 +1,136 @@
-AutoRest code generation utility [cli version: 3.3.2; node: v14.17.4]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.1)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-Processing batch task - {"tag":"microsoft.logic-2019-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'WorkflowTriggerReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from WorkflowTriggerReference
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'WorkflowReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from WorkflowReference
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'KeyVaultReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from KeyVaultReference
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BatchConfigurationProperties' has a property 'createdTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BatchConfigurationProperties' has a property 'changedTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
-
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-
-WARNING (Modeler/MissingType): The schema 'Expression-value' has no type or format information whatsoever. Location:
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    | Processing batch task - {"tag":"microsoft.logic-2019-05-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'WorkflowTriggerReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from WorkflowTriggerReference
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'WorkflowReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from WorkflowReference
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'KeyVaultReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from KeyVaultReference
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BatchConfigurationProperties' has a property 'createdTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BatchConfigurationProperties' has a property 'changedTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Modeler/MissingType | The schema 'Expression-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2019-05-01/logic.json#/components/schemas/Expression-value
-
-WARNING (Modeler/MissingType): The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2019-05-01/logic.json#/components/schemas/OperationResultProperties-error
-
-WARNING (Modeler/MissingType): The schema 'ArtifactContentPropertiesDefinition-content' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'ArtifactContentPropertiesDefinition-content' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2019-05-01/logic.json#/components/schemas/ArtifactContentPropertiesDefinition-content
-
-WARNING (Modeler/MissingType): The schema 'ArtifactProperties-metadata' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'ArtifactProperties-metadata' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2019-05-01/logic.json#/components/schemas/ArtifactProperties-metadata
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: Resource type microsoft.logic/integrationserviceenvironments/managedapis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Logic/integrationServiceEnvironments/{integrationServiceEnvironmentName}/managedApis/{apiName}' has no body defined.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 44ms
-Processing batch task - {"tag":"microsoft.logic-2018-07-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'KeyVaultReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from KeyVaultReference
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BatchConfigurationProperties' has a property 'createdTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BatchConfigurationProperties' has a property 'changedTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
-
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-
-WARNING (Modeler/MissingType): The schema 'Expression-value' has no type or format information whatsoever. Location:
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 32ms
+info    | Processing batch task - {"tag":"microsoft.logic-2018-07-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'KeyVaultReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from KeyVaultReference
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BatchConfigurationProperties' has a property 'createdTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BatchConfigurationProperties' has a property 'changedTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Modeler/MissingType | The schema 'Expression-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/preview/2018-07-01-preview/logic.json#/components/schemas/Expression-value
-
-WARNING (Modeler/MissingType): The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/preview/2018-07-01-preview/logic.json#/components/schemas/OperationResultProperties-error
-
-WARNING (Modeler/MissingType): The schema 'ArtifactContentPropertiesDefinition-content' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'ArtifactContentPropertiesDefinition-content' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/preview/2018-07-01-preview/logic.json#/components/schemas/ArtifactContentPropertiesDefinition-content
-
-WARNING (Modeler/MissingType): The schema 'ArtifactProperties-metadata' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'ArtifactProperties-metadata' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/preview/2018-07-01-preview/logic.json#/components/schemas/ArtifactProperties-metadata
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 21ms
-Processing batch task - {"tag":"microsoft.logic-2016-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'KeyVaultReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from KeyVaultReference
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BatchConfigurationProperties' has a property 'createdTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
-
-WARNING (PreCheck/PropertyRedeclarationWarning): Schema 'BatchConfigurationProperties' has a property 'changedTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
-
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-
-WARNING (Modeler/MissingType): The schema 'Expression-value' has no type or format information whatsoever. Location:
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 20ms
+info    | Processing batch task - {"tag":"microsoft.logic-2016-06-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'KeyVaultReference' has a property 'name' that is already declared the parent schema 'ResourceReference' but 'readonly' has been changed -- this is not permitted. The property has been removed from KeyVaultReference
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BatchConfigurationProperties' has a property 'createdTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BatchConfigurationProperties' has a property 'changedTime' that is already declared the parent schema 'ArtifactProperties' but isn't significantly different. The property has been removed from BatchConfigurationProperties
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Modeler/MissingType | The schema 'Expression-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2016-06-01/logic.json#/components/schemas/Expression-value
-
-WARNING (Modeler/MissingType): The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'OperationResultProperties-error' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2016-06-01/logic.json#/components/schemas/OperationResultProperties-error
-
-WARNING (Modeler/MissingType): The schema 'ArtifactContentPropertiesDefinition-content' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'ArtifactContentPropertiesDefinition-content' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2016-06-01/logic.json#/components/schemas/ArtifactContentPropertiesDefinition-content
-
-WARNING (Modeler/MissingType): The schema 'ArtifactProperties-metadata' has no type or format information whatsoever. Location:
+warning | Modeler/MissingType | The schema 'ArtifactProperties-metadata' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/logic/resource-manager/Microsoft.Logic/stable/2016-06-01/logic.json#/components/schemas/ArtifactProperties-metadata
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 18ms
-Processing batch task - {"tag":"microsoft.logic-2015-08-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IntegrationAccountResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 10ms
-Processing batch task - {"tag":"microsoft.logic-2015-02-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-WARNING: Unrecognized property type: any-object. Returning 'any'.
-INFORMATION: autorest.bicep took 2ms
-[78.88 s] Generation Complete
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 18ms
+info    | Processing batch task - {"tag":"microsoft.logic-2015-08-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'IntegrationAccountResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 13ms
+info    | Processing batch task - {"tag":"microsoft.logic-2015-02-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 3ms
+info    | Generation Complete

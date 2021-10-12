@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties of the redis cache.
+* **properties**: [RedisCreateProperties](#rediscreateproperties) (Required): Properties supplied to Create Redis operation.
 * **tags**: [RedisCreateParametersTags](#rediscreateparameterstags): Resource tags.
 * **type**: 'Microsoft.Cache/redis' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
@@ -27,7 +27,7 @@
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Properties of a linked server to be returned in get/put response
+* **properties**: [RedisLinkedServerCreateProperties](#redislinkedservercreateproperties) (Required): Create properties for a linked server
 * **type**: 'Microsoft.Cache/redis/linkedServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Cache/redis/patchSchedules@2020-12-01
@@ -67,7 +67,7 @@
 * **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
 * **sku**: [Sku](#sku) (Required): SKU parameters supplied to the create Redis operation.
 * **sslPort**: int (ReadOnly): Redis SSL port.
-* **staticIP**: string: Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.
+* **staticIP**: string: Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
 * **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
 * **tenantSettings**: [RedisCommonPropertiesTenantSettings](#rediscommonpropertiestenantsettings): A dictionary of tenant settings
 
@@ -114,6 +114,17 @@
 
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
+* **aof-storage-connection-string-0**: string: First storage account connection string
+* **aof-storage-connection-string-1**: string: Second storage account connection string
+* **maxclients**: string (ReadOnly): The max clients config
+* **maxfragmentationmemory-reserved**: string: Value in megabytes reserved for fragmentation per shard
+* **maxmemory-delta**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **maxmemory-policy**: string: The eviction strategy used when your data won't fit within its memory limit.
+* **maxmemory-reserved**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **rdb-backup-enabled**: string: Specifies whether the rdb backup is enabled
+* **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup
+* **rdb-backup-max-snapshot-count**: string: Specifies the maximum number of snapshots for rdb backup
+* **rdb-storage-connection-string**: string: The storage account connection string for storing rdb file
 ### Additional Properties
 * **Additional Properties Type**: string
 

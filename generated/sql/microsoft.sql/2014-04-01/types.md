@@ -138,7 +138,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'import' (Required, DeployTimeConstant): The resource name
-* **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly)
+* **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly): Represents the properties for an import operation
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
@@ -209,7 +209,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string: The administrator login password (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
 * **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
@@ -262,7 +262,7 @@
 ### Properties
 * **collation**: string: The collation of the database. If createMode is not Default, this value is ignored.
 * **containmentState**: int (ReadOnly): The containment state of the database.
-* **createMode**: 'Copy' | 'Default' | 'NonReadableSecondary' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreLongTermRetentionBackup': Specifies the mode of database creation.
+* **createMode**: 'Copy' | 'Default' | 'NonReadableSecondary' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreLongTermRetentionBackup' (WriteOnly): Specifies the mode of database creation.
 
 Default: regular database creation.
 
@@ -300,17 +300,17 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **maxSizeBytes**: string: The max size of the database expressed in bytes. If createMode is not Default, this value is ignored. To see possible values, query the capabilities API (/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationID}/capabilities) referred to by operationId: "Capabilities_ListByLocation."
 * **readScale**: 'Disabled' | 'Enabled': Conditional. If the database is a geo-secondary, readScale indicates whether read-only connections are allowed to this database or not. Not supported for DataWarehouse edition.
 * **recommendedIndex**: [RecommendedIndex](#recommendedindex)[] (ReadOnly): The recommended indices for this database.
-* **recoveryServicesRecoveryPointResourceId**: string: Conditional. If createMode is RestoreLongTermRetentionBackup, then this value is required. Specifies the resource ID of the recovery point to restore from.
+* **recoveryServicesRecoveryPointResourceId**: string (WriteOnly): Conditional. If createMode is RestoreLongTermRetentionBackup, then this value is required. Specifies the resource ID of the recovery point to restore from.
 * **requestedServiceObjectiveId**: string: The configured service level objective ID of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of currentServiceObjectiveId property. If requestedServiceObjectiveId and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveId overrides the value of requestedServiceObjectiveName.
 
 The list of SKUs may vary by region and support offer. To determine the service objective ids that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API.
 * **requestedServiceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L': The serviceLevelObjective for SLO usage metric.
-* **restorePointInTime**: string: Conditional. If createMode is PointInTimeRestore, this value is required. If createMode is Restore, this value is optional. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value.
-* **sampleName**: 'AdventureWorksLT': Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.
+* **restorePointInTime**: string (WriteOnly): Conditional. If createMode is PointInTimeRestore, this value is required. If createMode is Restore, this value is optional. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value.
+* **sampleName**: 'AdventureWorksLT' (WriteOnly): Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.
 * **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceTierAdvisors**: [ServiceTierAdvisor](#servicetieradvisor)[] (ReadOnly): The list of service tier advisors for this database. Expanded property
-* **sourceDatabaseDeletionDate**: string: Conditional. If createMode is Restore and sourceDatabaseId is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database id), then this value is required. Specifies the time that the database was deleted.
-* **sourceDatabaseId**: string: Conditional. If createMode is Copy, NonReadableSecondary, OnlineSecondary, PointInTimeRestore, Recovery, or Restore, then this value is required. Specifies the resource ID of the source database. If createMode is NonReadableSecondary or OnlineSecondary, the name of the source database must be the same as the new database being created.
+* **sourceDatabaseDeletionDate**: string (WriteOnly): Conditional. If createMode is Restore and sourceDatabaseId is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database id), then this value is required. Specifies the time that the database was deleted.
+* **sourceDatabaseId**: string (WriteOnly): Conditional. If createMode is Copy, NonReadableSecondary, OnlineSecondary, PointInTimeRestore, Recovery, or Restore, then this value is required. Specifies the resource ID of the source database. If createMode is NonReadableSecondary or OnlineSecondary, the name of the source database must be the same as the new database being created.
 * **status**: string (ReadOnly): The status of the database.
 * **transparentDataEncryption**: [TransparentDataEncryption](#transparentdataencryption)[] (ReadOnly): The transparent data encryption info for this database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
@@ -445,13 +445,13 @@ The list of SKUs may vary by region and support offer. To determine the service 
 
 ## ImportExtensionProperties
 ### Properties
-* **administratorLogin**: string (Required, WriteOnly)
-* **administratorLoginPassword**: string (Required, WriteOnly)
-* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly)
-* **operationMode**: 'Import' (Required, WriteOnly)
-* **storageKey**: string (Required, WriteOnly)
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly)
-* **storageUri**: string (Required, WriteOnly)
+* **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
+* **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
+* **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
+* **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
+* **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
+* **storageUri**: string (Required, WriteOnly): The storage uri to use.
 
 ## GeoBackupPolicyProperties
 ### Properties
@@ -465,7 +465,7 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **emailAddresses**: string: Specifies the semicolon-separated list of e-mail addresses to which the alert is sent.
 * **retentionDays**: int: Specifies the number of days to keep in the Threat Detection audit logs.
 * **state**: 'Disabled' | 'Enabled' | 'New' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint and storageAccountAccessKey are required.
-* **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
+* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the Threat Detection audit storage account. If state is Enabled, storageAccountAccessKey is required.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. If state is Enabled, storageEndpoint is required.
 * **useServerDefault**: 'Disabled' | 'Enabled': Specifies whether to use the default server policy.
 

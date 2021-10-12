@@ -30,7 +30,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **datasetType**: 'file' | 'tabular' (Required, WriteOnly)
+* **datasetType**: 'file' | 'tabular' (Required, WriteOnly): Specifies dataset type.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
 * **location**: string (ReadOnly): Specifies the location of the resource.
@@ -38,7 +38,7 @@
 * **parameters**: [DatasetCreateRequestParameters](#datasetcreaterequestparameters) (Required, WriteOnly)
 * **properties**: [Dataset](#dataset) (ReadOnly): Machine Learning dataset object.
 * **registration**: [DatasetCreateRequestRegistration](#datasetcreaterequestregistration) (Required, WriteOnly)
-* **skipValidation**: bool (WriteOnly)
+* **skipValidation**: bool (WriteOnly): Skip validation that ensures data can be loaded from the dataset before registration.
 * **sku**: [Sku](#sku) (ReadOnly): Sku of the resource
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **timeSeries**: [DatasetCreateRequestTimeSeries](#datasetcreaterequesttimeseries) (WriteOnly)
@@ -47,45 +47,45 @@
 ## Resource Microsoft.MachineLearningServices/workspaces/datastores@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **accountKey**: string (WriteOnly)
-* **accountName**: string (WriteOnly)
-* **adlsResourceGroup**: string (WriteOnly)
-* **adlsSubscriptionId**: string (WriteOnly)
+* **accountKey**: string (WriteOnly): Account Key of storage account.
+* **accountName**: string (WriteOnly): The name of the storage account.
+* **adlsResourceGroup**: string (WriteOnly): The resource group the ADLS store belongs to. Defaults to selected resource group.
+* **adlsSubscriptionId**: string (WriteOnly): The ID of the subscription the ADLS store belongs to. Defaults to selected subscription.
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **authorityUrl**: string (WriteOnly)
-* **clientId**: string (WriteOnly)
-* **clientSecret**: string (WriteOnly)
-* **containerName**: string (WriteOnly)
-* **databaseName**: string (WriteOnly)
-* **dataStoreType**: 'adls' | 'adls-gen2' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly)
-* **description**: string (WriteOnly)
-* **endpoint**: string (WriteOnly)
-* **enforceSSL**: bool (WriteOnly)
-* **fileSystem**: string (WriteOnly)
+* **authorityUrl**: string (WriteOnly): Authority url used to authenticate the user.
+* **clientId**: string (WriteOnly): The service principal's client/application ID.
+* **clientSecret**: string (WriteOnly): The service principal's secret.
+* **containerName**: string (WriteOnly): The name of the azure blob container.
+* **databaseName**: string (WriteOnly): The database name.
+* **dataStoreType**: 'adls' | 'adls-gen2' | 'blob' | 'dbfs' | 'file' | 'mysqldb' | 'psqldb' | 'sqldb' (Required, WriteOnly): Specifies datastore type.
+* **description**: string (WriteOnly): The description of the datastore.
+* **endpoint**: string (WriteOnly): The endpoint of the server.
+* **enforceSSL**: bool (WriteOnly): This sets the ssl value of the server. Defaults to true if not set.
+* **fileSystem**: string (WriteOnly): The file system name of the ADLS Gen2.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **includeSecret**: bool (WriteOnly)
+* **includeSecret**: bool (WriteOnly): Include datastore secret in response.
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **password**: string (WriteOnly)
-* **port**: string (WriteOnly)
+* **password**: string (WriteOnly): The password.
+* **port**: string (WriteOnly): The port number.
 * **properties**: [Datastore](#datastore) (ReadOnly): Machine Learning datastore object.
-* **protocol**: string (WriteOnly)
-* **resourceUrl**: string (WriteOnly)
-* **sasToken**: string (WriteOnly)
-* **serverName**: string (WriteOnly)
-* **shareName**: string (WriteOnly)
-* **skipValidation**: bool (WriteOnly)
+* **protocol**: string (WriteOnly): The protocol to be used
+* **resourceUrl**: string (WriteOnly): Determines what operations will be performed.
+* **sasToken**: string (WriteOnly): Sas Token of storage account.
+* **serverName**: string (WriteOnly): The SQL/MySQL/PostgreSQL server name
+* **shareName**: string (WriteOnly): The name of the file share.
+* **skipValidation**: bool (WriteOnly): Skip validation that ensures data can be loaded from the dataset before registration.
 * **sku**: [Sku](#sku) (ReadOnly): Sku of the resource
-* **storageAccountResourceGroup**: string (WriteOnly)
-* **storageAccountSubscriptionId**: string (WriteOnly)
-* **storeName**: string (WriteOnly)
+* **storageAccountResourceGroup**: string (WriteOnly): The resource group of the storage account. Defaults to selected resource group
+* **storageAccountSubscriptionId**: string (WriteOnly): The subscription ID of the storage account. Defaults to selected subscription
+* **storeName**: string (WriteOnly): The ADLS store name.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
-* **tenantId**: string (WriteOnly)
+* **tenantId**: string (WriteOnly): The service principal Tenant ID.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datastores' (ReadOnly, DeployTimeConstant): The resource type
-* **userId**: string (WriteOnly)
-* **userName**: string (WriteOnly)
-* **workspaceSystemAssignedIdentity**: bool (WriteOnly)
+* **userId**: string (WriteOnly): The user ID.
+* **userName**: string (WriteOnly): The username of the database user.
+* **workspaceSystemAssignedIdentity**: bool (WriteOnly): If set to true, datastore support data access authenticated with Workspace MSI.
 
 ## Resource Microsoft.MachineLearningServices/workspaces/linkedWorkspaces@2020-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -115,49 +115,49 @@
 
 ### Base Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **description**: string (WriteOnly)
-* **environmentImageRequest**: [CreateServiceRequestEnvironmentImageRequest](#createservicerequestenvironmentimagerequest) (WriteOnly)
+* **description**: string (WriteOnly): The description of the service.
+* **environmentImageRequest**: [CreateServiceRequestEnvironmentImageRequest](#createservicerequestenvironmentimagerequest) (WriteOnly): The Environment, models and assets needed for inferencing.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **keys**: [CreateServiceRequestKeys](#createservicerequestkeys) (WriteOnly)
-* **kvTags**: [CreateServiceRequestKvTags](#createservicerequestkvtags) (WriteOnly)
-* **location**: string: Specifies the location of the resource.
+* **keys**: [CreateServiceRequestKeys](#createservicerequestkeys) (WriteOnly): The authentication keys.
+* **kvTags**: [CreateServiceRequestKvTags](#createservicerequestkvtags) (WriteOnly): The service tag dictionary. Tags are mutable.
+* **location**: string: The name of the Azure location/region.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CreateServiceRequestProperties](#createservicerequestproperties): The base service response. The correct inherited response based on computeType will be returned (ex. ACIServiceResponse)
+* **properties**: [CreateServiceRequestProperties](#createservicerequestproperties): The service properties dictionary. Properties are immutable.
 * **sku**: [Sku](#sku) (ReadOnly): Sku of the resource
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/services' (ReadOnly, DeployTimeConstant): The resource type
 ### ACIServiceCreateRequest
 #### Properties
-* **appInsightsEnabled**: bool (WriteOnly)
-* **authEnabled**: bool (WriteOnly)
-* **cname**: string (WriteOnly)
+* **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
+* **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled on the service.
+* **cname**: string (WriteOnly): The CName for the service.
 * **computeType**: 'ACI' (Required): The compute environment type for the service.
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
-* **dataCollection**: [ACIServiceCreateRequestDataCollection](#aciservicecreaterequestdatacollection) (WriteOnly)
-* **dnsNameLabel**: string (WriteOnly)
-* **encryptionProperties**: [ACIServiceCreateRequestEncryptionProperties](#aciservicecreaterequestencryptionproperties) (WriteOnly)
-* **sslCertificate**: string (WriteOnly)
-* **sslEnabled**: bool (WriteOnly)
-* **sslKey**: string (WriteOnly)
-* **vnetConfiguration**: [ACIServiceCreateRequestVnetConfiguration](#aciservicecreaterequestvnetconfiguration) (WriteOnly)
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
+* **dataCollection**: [ACIServiceCreateRequestDataCollection](#aciservicecreaterequestdatacollection) (WriteOnly): Details of the data collection options specified.
+* **dnsNameLabel**: string (WriteOnly): The Dns label for the service.
+* **encryptionProperties**: [ACIServiceCreateRequestEncryptionProperties](#aciservicecreaterequestencryptionproperties) (WriteOnly): The encryption properties.
+* **sslCertificate**: string (WriteOnly): The public SSL certificate in PEM format to use if SSL is enabled.
+* **sslEnabled**: bool (WriteOnly): Whether or not SSL is enabled.
+* **sslKey**: string (WriteOnly): The public SSL key in PEM format for the certificate.
+* **vnetConfiguration**: [ACIServiceCreateRequestVnetConfiguration](#aciservicecreaterequestvnetconfiguration) (WriteOnly): The virtual network configuration.
 
 ### AKSServiceCreateRequest
 #### Properties
-* **aadAuthEnabled**: bool (WriteOnly)
-* **appInsightsEnabled**: bool (WriteOnly)
-* **authEnabled**: bool (WriteOnly)
-* **autoScaler**: [AKSServiceCreateRequestAutoScaler](#aksservicecreaterequestautoscaler) (WriteOnly)
-* **computeName**: string (WriteOnly)
+* **aadAuthEnabled**: bool (WriteOnly): Whether or not AAD authentication is enabled.
+* **appInsightsEnabled**: bool (WriteOnly): Whether or not Application Insights is enabled.
+* **authEnabled**: bool (WriteOnly): Whether or not authentication is enabled.
+* **autoScaler**: [AKSServiceCreateRequestAutoScaler](#aksservicecreaterequestautoscaler) (WriteOnly): The auto scaler properties.
+* **computeName**: string (WriteOnly): The name of the compute resource.
 * **computeType**: 'AKS' (Required): The compute environment type for the service.
-* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
-* **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly)
-* **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly)
-* **maxConcurrentRequestsPerContainer**: int (WriteOnly)
-* **maxQueueWaitMs**: int (WriteOnly)
-* **namespace**: string (WriteOnly)
-* **numReplicas**: int (WriteOnly)
-* **scoringTimeoutMs**: int (WriteOnly)
+* **containerResourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
+* **dataCollection**: [AKSServiceCreateRequestDataCollection](#aksservicecreaterequestdatacollection) (WriteOnly): Details of the data collection options specified.
+* **livenessProbeRequirements**: [AKSServiceCreateRequestLivenessProbeRequirements](#aksservicecreaterequestlivenessproberequirements) (WriteOnly): The liveness probe requirements.
+* **maxConcurrentRequestsPerContainer**: int (WriteOnly): The maximum number of concurrent requests per container.
+* **maxQueueWaitMs**: int (WriteOnly): Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+* **namespace**: string (WriteOnly): Kubernetes namespace for the service.
+* **numReplicas**: int (WriteOnly): The number of replicas on the cluster.
+* **scoringTimeoutMs**: int (WriteOnly): The scoring timeout in milliseconds.
 
 
 ## Identity
@@ -430,28 +430,28 @@
 
 ## DatasetCreateRequestParameters
 ### Properties
-* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' (WriteOnly)
-* **includePath**: bool (WriteOnly)
-* **partitionFormat**: string (WriteOnly)
+* **header**: 'all_files_have_same_headers' | 'combine_all_files_headers' | 'no_headers' | 'only_first_file_has_headers' (WriteOnly): Header type.
+* **includePath**: bool (WriteOnly): Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
+* **partitionFormat**: string (WriteOnly): The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01
 * **path**: [DatasetCreateRequestParametersPath](#datasetcreaterequestparameterspath) (WriteOnly)
 * **query**: [DatasetCreateRequestParametersQuery](#datasetcreaterequestparametersquery) (WriteOnly)
-* **separator**: string (WriteOnly)
-* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' (WriteOnly)
+* **separator**: string (WriteOnly): The separator used to split columns for 'delimited_files' sourceType.
+* **sourceType**: 'delimited_files' | 'json_lines_files' | 'parquet_files' (WriteOnly): Data source type.
 
 ## DatasetCreateRequestParametersPath
 ### Properties
 * **dataPath**: [DatasetCreateRequestParametersPathDataPath](#datasetcreaterequestparameterspathdatapath) (WriteOnly)
-* **httpUrl**: string (WriteOnly)
+* **httpUrl**: string (WriteOnly): The Http URL.
 
 ## DatasetCreateRequestParametersPathDataPath
 ### Properties
-* **datastoreName**: string (WriteOnly)
-* **relativePath**: string (WriteOnly)
+* **datastoreName**: string (WriteOnly): The datastore name.
+* **relativePath**: string (WriteOnly): Path within the datastore.
 
 ## DatasetCreateRequestParametersQuery
 ### Properties
-* **datastoreName**: string (WriteOnly)
-* **query**: string (WriteOnly)
+* **datastoreName**: string (WriteOnly): The SQL/PostgreSQL/MySQL datastore name.
+* **query**: string (WriteOnly): SQL Quey.
 
 ## Dataset
 ### Properties
@@ -556,9 +556,9 @@
 
 ## DatasetCreateRequestRegistration
 ### Properties
-* **description**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **tags**: [DatasetCreateRequestRegistrationTags](#datasetcreaterequestregistrationtags) (WriteOnly)
+* **description**: string (WriteOnly): The description for the dataset.
+* **name**: string (WriteOnly): The name of the dataset.
+* **tags**: [DatasetCreateRequestRegistrationTags](#datasetcreaterequestregistrationtags) (WriteOnly): Tags associated with the dataset.
 
 ## DatasetCreateRequestRegistrationTags
 ### Properties
@@ -572,8 +572,8 @@
 
 ## DatasetCreateRequestTimeSeries
 ### Properties
-* **coarseGrainTimestamp**: string (WriteOnly)
-* **fineGrainTimestamp**: string (WriteOnly)
+* **coarseGrainTimestamp**: string (WriteOnly): Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
+* **fineGrainTimestamp**: string (WriteOnly): Column name to be used as FineGrainTimestamp
 
 ## Datastore
 ### Properties
@@ -739,36 +739,36 @@
 
 ## CreateServiceRequestEnvironmentImageRequest
 ### Properties
-* **assets**: [ImageAsset](#imageasset)[] (WriteOnly)
-* **driverProgram**: string (WriteOnly)
-* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment) (WriteOnly)
-* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference) (WriteOnly)
-* **modelIds**: string[] (WriteOnly)
-* **models**: [Model](#model)[] (WriteOnly)
+* **assets**: [ImageAsset](#imageasset)[] (WriteOnly): The list of assets.
+* **driverProgram**: string (WriteOnly): The name of the driver file.
+* **environment**: [EnvironmentImageRequestEnvironment](#environmentimagerequestenvironment) (WriteOnly): The details of the AZURE ML environment.
+* **environmentReference**: [EnvironmentImageRequestEnvironmentReference](#environmentimagerequestenvironmentreference) (WriteOnly): The unique identifying details of the AZURE ML environment.
+* **modelIds**: string[] (WriteOnly): The list of model Ids.
+* **models**: [Model](#model)[] (WriteOnly): The list of models.
 
 ## ImageAsset
 ### Properties
-* **id**: string (WriteOnly)
-* **mimeType**: string (WriteOnly)
-* **unpack**: bool (WriteOnly)
-* **url**: string (WriteOnly)
+* **id**: string (WriteOnly): The Asset Id.
+* **mimeType**: string (WriteOnly): The mime type.
+* **unpack**: bool (WriteOnly): Whether the Asset is unpacked.
+* **url**: string (WriteOnly): The Url of the Asset.
 
 ## EnvironmentImageRequestEnvironment
 ### Properties
-* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker) (WriteOnly)
-* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables) (WriteOnly)
-* **inferencingStackVersion**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython) (WriteOnly)
-* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr) (WriteOnly)
-* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark) (WriteOnly)
-* **version**: string (WriteOnly)
+* **docker**: [ModelEnvironmentDefinitionDocker](#modelenvironmentdefinitiondocker) (WriteOnly): The definition of a Docker container.
+* **environmentVariables**: [ModelEnvironmentDefinitionEnvironmentVariables](#modelenvironmentdefinitionenvironmentvariables) (WriteOnly): Definition of environment variables to be defined in the environment.
+* **inferencingStackVersion**: string (WriteOnly): The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
+* **name**: string (WriteOnly): The name of the environment.
+* **python**: [ModelEnvironmentDefinitionPython](#modelenvironmentdefinitionpython) (WriteOnly): Settings for a Python environment.
+* **r**: [ModelEnvironmentDefinitionR](#modelenvironmentdefinitionr) (WriteOnly): Settings for a R environment.
+* **spark**: [ModelEnvironmentDefinitionSpark](#modelenvironmentdefinitionspark) (WriteOnly): The configuration for a Spark environment.
+* **version**: string (WriteOnly): The environment version.
 
 ## ModelEnvironmentDefinitionDocker
 ### Properties
-* **baseDockerfile**: string (WriteOnly)
-* **baseImage**: string (WriteOnly)
-* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly)
+* **baseDockerfile**: string (WriteOnly): Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+* **baseImage**: string (WriteOnly): Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+* **baseImageRegistry**: [ModelDockerSectionBaseImageRegistry](#modeldockersectionbaseimageregistry) (WriteOnly): Image registry that contains the base image.
 
 ## ModelDockerSectionBaseImageRegistry
 ### Properties
@@ -784,36 +784,37 @@
 ## ModelEnvironmentDefinitionPython
 ### Properties
 * **baseCondaEnvironment**: string (WriteOnly)
-* **condaDependencies**: any (WriteOnly)
-* **interpreterPath**: string (WriteOnly)
-* **userManagedDependencies**: bool (WriteOnly)
+* **condaDependencies**: any (WriteOnly): Any object
+* **interpreterPath**: string (WriteOnly): The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+* **userManagedDependencies**: bool (WriteOnly): True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
 
 ## ModelEnvironmentDefinitionR
 ### Properties
-* **bioConductorPackages**: string[] (WriteOnly)
-* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly)
-* **customUrlPackages**: string[] (WriteOnly)
-* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly)
-* **rscriptPath**: string (WriteOnly)
-* **rVersion**: string (WriteOnly)
-* **snapshotDate**: string (WriteOnly)
-* **userManaged**: bool (WriteOnly)
+* **bioConductorPackages**: string[] (WriteOnly): The packages from Bioconductor.
+* **cranPackages**: [RCranPackage](#rcranpackage)[] (WriteOnly): The CRAN packages to use.
+* **customUrlPackages**: string[] (WriteOnly): The packages from custom urls.
+* **gitHubPackages**: [RGitHubPackage](#rgithubpackage)[] (WriteOnly): The packages directly from GitHub.
+* **rscriptPath**: string (WriteOnly): The Rscript path to use if an environment build is not required.
+The path specified gets used to call the user script.
+* **rVersion**: string (WriteOnly): The version of R to be installed
+* **snapshotDate**: string (WriteOnly): Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
+* **userManaged**: bool (WriteOnly): Indicates whether the environment is managed by user or by AzureML.
 
 ## RCranPackage
 ### Properties
-* **name**: string (WriteOnly)
-* **repository**: string (WriteOnly)
+* **name**: string (WriteOnly): The package name.
+* **repository**: string (WriteOnly): The repository name.
 
 ## RGitHubPackage
 ### Properties
-* **authToken**: string (WriteOnly)
-* **repository**: string (WriteOnly)
+* **authToken**: string (WriteOnly): Personal access token to install from a private repo
+* **repository**: string (WriteOnly): Repository address in the format username/repo[/subdir][@ref|#pull].
 
 ## ModelEnvironmentDefinitionSpark
 ### Properties
-* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly)
-* **precachePackages**: bool (WriteOnly)
-* **repositories**: string[] (WriteOnly)
+* **packages**: [SparkMavenPackage](#sparkmavenpackage)[] (WriteOnly): The Spark packages to use.
+* **precachePackages**: bool (WriteOnly): Whether to precache the packages.
+* **repositories**: string[] (WriteOnly): The list of spark repositories.
 
 ## SparkMavenPackage
 ### Properties
@@ -823,37 +824,37 @@
 
 ## EnvironmentImageRequestEnvironmentReference
 ### Properties
-* **name**: string (WriteOnly)
-* **version**: string (WriteOnly)
+* **name**: string (WriteOnly): Name of the environment.
+* **version**: string (WriteOnly): Version of the environment.
 
 ## Model
 ### Properties
-* **createdTime**: string (WriteOnly)
-* **datasets**: [DatasetReference](#datasetreference)[] (WriteOnly)
-* **derivedModelIds**: string[] (WriteOnly)
-* **description**: string (WriteOnly)
-* **experimentName**: string (WriteOnly)
-* **framework**: string (WriteOnly)
-* **frameworkVersion**: string (WriteOnly)
-* **id**: string (WriteOnly)
-* **kvTags**: [ModelKvTags](#modelkvtags) (WriteOnly)
-* **mimeType**: string (Required, WriteOnly)
-* **modifiedTime**: string (WriteOnly)
-* **name**: string (Required, WriteOnly)
-* **parentModelId**: string (WriteOnly)
-* **properties**: [ModelProperties](#modelproperties) (WriteOnly)
-* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly)
-* **runId**: string (WriteOnly)
-* **sampleInputData**: string (WriteOnly)
-* **sampleOutputData**: string (WriteOnly)
-* **unpack**: bool (WriteOnly)
-* **url**: string (Required, WriteOnly)
-* **version**: int (WriteOnly)
+* **createdTime**: string (WriteOnly): The Model creation time (UTC).
+* **datasets**: [DatasetReference](#datasetreference)[] (WriteOnly): The list of datasets associated with the model.
+* **derivedModelIds**: string[] (WriteOnly): Models derived from this model
+* **description**: string (WriteOnly): The Model description text.
+* **experimentName**: string (WriteOnly): The name of the experiment where this model was created.
+* **framework**: string (WriteOnly): The Model framework.
+* **frameworkVersion**: string (WriteOnly): The Model framework version.
+* **id**: string (WriteOnly): The Model Id.
+* **kvTags**: [ModelKvTags](#modelkvtags) (WriteOnly): The Model tag dictionary. Items are mutable.
+* **mimeType**: string (Required, WriteOnly): The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+* **modifiedTime**: string (WriteOnly): The Model last modified time (UTC).
+* **name**: string (Required, WriteOnly): The Model name.
+* **parentModelId**: string (WriteOnly): The Parent Model Id.
+* **properties**: [ModelProperties](#modelproperties) (WriteOnly): The Model property dictionary. Properties are immutable.
+* **resourceRequirements**: [ContainerResourceRequirements](#containerresourcerequirements) (WriteOnly): The resource requirements for the container (cpu and memory).
+* **runId**: string (WriteOnly): The RunId that created this model.
+* **sampleInputData**: string (WriteOnly): Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+* **sampleOutputData**: string (WriteOnly): Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+* **unpack**: bool (WriteOnly): Indicates whether we need to unpack the Model during docker Image creation.
+* **url**: string (Required, WriteOnly): The URL of the Model. Usually a SAS URL.
+* **version**: int (WriteOnly): The Model version assigned by Model Management Service.
 
 ## DatasetReference
 ### Properties
-* **id**: string (WriteOnly)
-* **name**: string (WriteOnly)
+* **id**: string (WriteOnly): The id of the dataset reference.
+* **name**: string (WriteOnly): The name of the dataset reference.
 
 ## ModelKvTags
 ### Properties
@@ -867,15 +868,15 @@
 
 ## ContainerResourceRequirements
 ### Properties
-* **cpu**: int (WriteOnly)
-* **fpga**: int (WriteOnly)
-* **gpu**: int (WriteOnly)
-* **memoryInGB**: int (WriteOnly)
+* **cpu**: int (WriteOnly): The number of CPU cores on the container.
+* **fpga**: int (WriteOnly): The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+* **gpu**: int (WriteOnly): The number of GPU cores in the container.
+* **memoryInGB**: int (WriteOnly): The amount of memory on the container in GB.
 
 ## CreateServiceRequestKeys
 ### Properties
-* **primaryKey**: string (WriteOnly)
-* **secondaryKey**: string (WriteOnly)
+* **primaryKey**: string (WriteOnly): The primary key.
+* **secondaryKey**: string (WriteOnly): The secondary key.
 
 ## CreateServiceRequestKvTags
 ### Properties
@@ -894,38 +895,38 @@
 
 ## ACIServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly)
-* **storageEnabled**: bool (WriteOnly)
+* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
 
 ## ACIServiceCreateRequestEncryptionProperties
 ### Properties
-* **keyName**: string (Required, WriteOnly)
-* **keyVersion**: string (Required, WriteOnly)
-* **vaultBaseUrl**: string (Required, WriteOnly)
+* **keyName**: string (Required, WriteOnly): Encryption Key name
+* **keyVersion**: string (Required, WriteOnly): Encryption Key Version
+* **vaultBaseUrl**: string (Required, WriteOnly): vault base Url
 
 ## ACIServiceCreateRequestVnetConfiguration
 ### Properties
-* **subnetName**: string (WriteOnly)
-* **vnetName**: string (WriteOnly)
+* **subnetName**: string (WriteOnly): The name of the virtual network subnet.
+* **vnetName**: string (WriteOnly): The name of the virtual network.
 
 ## AKSServiceCreateRequestAutoScaler
 ### Properties
-* **autoscaleEnabled**: bool (WriteOnly)
-* **maxReplicas**: int (WriteOnly)
-* **minReplicas**: int (WriteOnly)
-* **refreshPeriodInSeconds**: int (WriteOnly)
-* **targetUtilization**: int (WriteOnly)
+* **autoscaleEnabled**: bool (WriteOnly): Option to enable/disable auto scaling.
+* **maxReplicas**: int (WriteOnly): The maximum number of replicas in the cluster.
+* **minReplicas**: int (WriteOnly): The minimum number of replicas to scale down to.
+* **refreshPeriodInSeconds**: int (WriteOnly): The amount of seconds to wait between auto scale updates.
+* **targetUtilization**: int (WriteOnly): The target utilization percentage to use for determining whether to scale the cluster.
 
 ## AKSServiceCreateRequestDataCollection
 ### Properties
-* **eventHubEnabled**: bool (WriteOnly)
-* **storageEnabled**: bool (WriteOnly)
+* **eventHubEnabled**: bool (WriteOnly): Option for enabling/disabling Event Hub.
+* **storageEnabled**: bool (WriteOnly): Option for enabling/disabling storage.
 
 ## AKSServiceCreateRequestLivenessProbeRequirements
 ### Properties
-* **failureThreshold**: int (WriteOnly)
-* **initialDelaySeconds**: int (WriteOnly)
-* **periodSeconds**: int (WriteOnly)
-* **successThreshold**: int (WriteOnly)
-* **timeoutSeconds**: int (WriteOnly)
+* **failureThreshold**: int (WriteOnly): The number of failures to allow before returning an unhealthy status.
+* **initialDelaySeconds**: int (WriteOnly): The delay before the first probe in seconds.
+* **periodSeconds**: int (WriteOnly): The length of time between probes in seconds.
+* **successThreshold**: int (WriteOnly): The number of successful probes before returning a healthy status.
+* **timeoutSeconds**: int (WriteOnly): The probe timeout in seconds.
 

@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RoleAssignmentProperties](#roleassignmentproperties) (Required): Role assignment properties with scope.
+* **properties**: [RoleAssignmentProperties](#roleassignmentproperties) (Required): Role assignment properties.
 * **type**: 'Microsoft.Authorization/roleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/roleDefinitions@2015-07-01
@@ -20,8 +20,8 @@
 
 ## RoleAssignmentProperties
 ### Properties
-* **principalId**: string (Required): The principal ID.
-* **roleDefinitionId**: string (Required): The role definition ID.
+* **principalId**: string (Required): The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.
+* **roleDefinitionId**: string (Required): The role definition ID used in the role assignment.
 * **scope**: string (ReadOnly): The role assignment scope.
 
 ## RoleDefinitionProperties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties with additional details.
+* **properties**: [DeploymentProperties](#deploymentproperties) (Required): Deployment properties.
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Resources/resourceGroups@2018-02-01
@@ -27,7 +27,7 @@
 * **debugSetting**: [DebugSetting](#debugsetting)
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
 * **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
-* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior with additional details.
+* **onErrorDeployment**: [OnErrorDeployment](#onerrordeployment): Deployment on error behavior.
 * **outputs**: any (ReadOnly): Any object
 * **parameters**: any: Any object
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.

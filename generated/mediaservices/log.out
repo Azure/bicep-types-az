@@ -1,596 +1,362 @@
-AutoRest code generation utility [cli version: 3.3.2; node: v14.17.4]
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-   Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.5.1)
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-Processing batch task - {"tag":"microsoft.media-2021-06-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 37ms
-Processing batch task - {"tag":"microsoft.media-2020-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInputAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInputTrackSelection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventOutputTranscriptionTrack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventTranscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 24ms
-Processing batch task - {"tag":"microsoft.media-2021-05-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 3ms
-Processing batch task - {"tag":"microsoft.media-2018-07-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInputAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    | Processing batch task - {"tag":"microsoft.media-2021-06-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 31ms
+info    | Processing batch task - {"tag":"microsoft.media-2020-05-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInputAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInputTrackSelection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventOutputTranscriptionTrack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventTranscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 24ms
+info    | Processing batch task - {"tag":"microsoft.media-2021-05-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 3ms
+info    | Processing batch task - {"tag":"microsoft.media-2018-07-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInputAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:87"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:164"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:278"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:451"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:554"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:671"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:83"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:160"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:274"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:447"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:550"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (2 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (2 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:667"
   - properties.error.title: <none> => "ApiError"
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated2'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated3'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated4'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated5'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated6'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated2'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated3'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated4'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated5'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated6'
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 25ms
-Processing batch task - {"tag":"microsoft.media-2020-02-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 2ms
-Processing batch task - {"tag":"microsoft.media-2019-09-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-INFORMATION: autorest.bicep took 1ms
-Processing batch task - {"tag":"microsoft.media-2019-05-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInputAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInputTrackSelection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventOutputTranscriptionTrack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventTranscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated3'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated4'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated5'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated6'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated3'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated4'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated5'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated6'
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 20ms
+info    | Processing batch task - {"tag":"microsoft.media-2020-02-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 2ms
+info    | Processing batch task - {"tag":"microsoft.media-2019-09-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 2ms
+info    | Processing batch task - {"tag":"microsoft.media-2019-05-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInputAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInputTrackSelection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventOutputTranscriptionTrack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventTranscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:76"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:152"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:272"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:437"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:540"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:21" => "#/components/schemas/schemas:667"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:72"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:148"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:268"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:433"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:536"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (2 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (2 differences):
   - properties.error.$ref: "#/components/schemas/schemas:17" => "#/components/schemas/schemas:663"
   - properties.error.title: <none> => "ApiError"
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated2'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated3'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated4'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated5'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated6'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated2'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated3'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated4'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated5'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated6'
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 33ms
-Processing batch task - {"tag":"microsoft.media-2015-10-01"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ApiEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ApiError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CheckNameAvailabilityOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'MediaService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'MediaServiceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'MediaServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'RegenerateKeyInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'RegenerateKeyOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ServiceKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'SyncStorageKeysInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (UnkownSecurityScheme): Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-INFORMATION: autorest.bicep took 1ms
-Processing batch task - {"tag":"microsoft.media-2018-03-30-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 13ms
-Processing batch task - {"tag":"microsoft.media-2018-06-01-preview"} .
-INFORMATION: > Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-INFORMATION: > Loading AutoRest extension '@autorest/modelerfour' (*->4.20.0)
-WARNING: Semantic validation was skipped.
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/SchemaMissingType): The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-
-WARNING (PreCheck/CheckDuplicateSchemas): Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated3'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated4'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated5'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated6'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated3'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated4'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated5'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated6'
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 32ms
+info    | Processing batch task - {"tag":"microsoft.media-2015-10-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ApiEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MediaService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MediaServiceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'MediaServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'RegenerateKeyInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'RegenerateKeyOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ServiceKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SyncStorageKeysInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+info    | autorest.bicep took 1ms
+info    | Processing batch task - {"tag":"microsoft.media-2018-03-30-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 11ms
+info    | Processing batch task - {"tag":"microsoft.media-2018-06-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Hls' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveOutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPRange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'IPAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreviewAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventPreview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventEncoding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CrossSiteAccessPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventActionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEvent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'LiveEventListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiSignatureHeaderAuthenticationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AkamaiAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointAccessControl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEntityScaleUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'StreamingEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:28" => "#/components/schemas/schemas:71"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:28" => "#/components/schemas/schemas:169"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:28" => "#/components/schemas/schemas:326"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:28" => "#/components/schemas/schemas:427"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ODataError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ODataError' (1 differences):
   - properties.details.$ref: "#/components/schemas/schemas:28" => "#/components/schemas/schemas:543"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:67"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:165"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:322"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:423"
-
-WARNING (PreCheck/DuplicateSchema): Duplicate Schema named 'ApiError' (1 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ApiError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:539"
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated2'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated3'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated4'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated5'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated2'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated3'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated4'
-
-WARNING (PreNamer/DeduplicateName): Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated5'
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-WARNING: Unrecognized property type: byte-array. Returning 'any'.
-INFORMATION: autorest.bicep took 14ms
-[111.27 s] Generation Complete
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated3'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated4'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ApiError' -> 'ApiErrorAutoGenerated5'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated3'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated4'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ODataError' -> 'ODataErrorAutoGenerated5'
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 12ms
+info    | Generation Complete

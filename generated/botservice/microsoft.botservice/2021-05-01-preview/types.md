@@ -53,6 +53,7 @@
 
 ## BotProperties
 ### Properties
+* **appPasswordHint**: string: The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
 * **cmekKeyVaultUrl**: string: The CMK Url
 * **configuredChannels**: string[] (ReadOnly): Collection of channels for which the bot is configured
 * **description**: string: The description of the bot
@@ -73,6 +74,7 @@
 * **msaAppMSIResourceId**: string: Microsoft App Managed Identity Resource Id for the bot
 * **msaAppTenantId**: string: Microsoft App Tenant Id for the bot
 * **msaAppType**: 'MultiTenant' | 'SingleTenant' | 'UserAssignedMSI': Microsoft App Type for the bot
+* **openWithHint**: string: The hint to browser (e.g. protocol handler) on how to open the bot for authoring
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the bot
 * **schemaTransformationVersion**: string: The channel schema transformation version for the bot
 

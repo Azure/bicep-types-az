@@ -272,6 +272,7 @@
 * **forwardTo**: string: Queue/Topic name to forward the messages
 * **lockDuration**: string: ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
 * **maxDeliveryCount**: int: The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
+* **maxMessageSizeInKilobytes**: int: Maximum size (in KB) of the message payload that can be accepted by the queue. This property is only used in Premium today and default is 1024.
 * **maxSizeInMegabytes**: int: The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
 * **messageCount**: int (ReadOnly): The number of messages in the queue.
 * **requiresDuplicateDetection**: bool: A value indicating if this queue requires duplicate detection.
@@ -299,6 +300,7 @@
 * **enableBatchedOperations**: bool: Value that indicates whether server-side batched operations are enabled.
 * **enableExpress**: bool: Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
 * **enablePartitioning**: bool: Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+* **maxMessageSizeInKilobytes**: int: Maximum size (in KB) of the message payload that can be accepted by the topic. This property is only used in Premium today and default is 1024.
 * **maxSizeInMegabytes**: int: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
 * **requiresDuplicateDetection**: bool: Value indicating if this topic requires duplicate detection.
 * **sizeInBytes**: int (ReadOnly): Size of the topic, in bytes.

@@ -26,14 +26,14 @@
 ### Properties
 * **authCode**: string
 * **autoRenew**: bool: <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
-* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required): Domain purchase consent object, representing acceptance of applicable legal agreements.
-* **contactAdmin**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
+* **consent**: [DomainPurchaseConsent](#domainpurchaseconsent) (Required, WriteOnly): Domain purchase consent object, representing acceptance of applicable legal agreements.
+* **contactAdmin**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
-* **contactBilling**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
+* **contactBilling**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
-* **contactRegistrant**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
+* **contactRegistrant**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
-* **contactTech**: [Contact](#contact) (Required): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
+* **contactTech**: [Contact](#contact) (Required, WriteOnly): Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
 directories as per ICANN requirements.
 * **createdTime**: string (ReadOnly): Domain creation timestamp.
 * **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type

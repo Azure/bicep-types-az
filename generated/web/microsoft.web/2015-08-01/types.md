@@ -116,11 +116,11 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly)
-* **location**: string (Required, WriteOnly)
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2015-08-01
@@ -357,12 +357,12 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (WriteOnly)
+* **location**: string (WriteOnly): Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [ArmPlan](#armplan) (WriteOnly)
-* **properties**: any (WriteOnly)
-* **sku**: [SkuDescription](#skudescription) (WriteOnly)
-* **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly)
+* **plan**: [ArmPlan](#armplan) (WriteOnly): The plan object in an ARM, represents a marketplace plan
+* **properties**: any (WriteOnly): Any object
+* **sku**: [SkuDescription](#skudescription) (WriteOnly): Describes a sku for a scalable resource
+* **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly): Tags associated with resource
 * **type**: 'Microsoft.Web/sites/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots@2015-08-01
@@ -588,12 +588,12 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (WriteOnly)
+* **location**: string (WriteOnly): Geo region resource belongs to e.g. SouthCentralUS, SouthEastAsia
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **plan**: [ArmPlan](#armplan) (WriteOnly)
-* **properties**: any (WriteOnly)
-* **sku**: [SkuDescription](#skudescription) (WriteOnly)
-* **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly)
+* **plan**: [ArmPlan](#armplan) (WriteOnly): The plan object in an ARM, represents a marketplace plan
+* **properties**: any (WriteOnly): Any object
+* **sku**: [SkuDescription](#skudescription) (WriteOnly): Describes a sku for a scalable resource
+* **tags**: [PremierAddOnRequestTags](#premieraddonrequesttags) (WriteOnly): Tags associated with resource
 * **type**: 'Microsoft.Web/sites/slots/premieraddons' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/sourcecontrols@2015-08-01
@@ -625,11 +625,11 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly)
-* **location**: string (Required, WriteOnly)
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/slots/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/sourcecontrols@2015-08-01
@@ -661,11 +661,11 @@
 ### Properties
 * **apiVersion**: '2015-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly)
-* **location**: string (Required, WriteOnly)
+* **kind**: string (WriteOnly): Kind of resource
+* **location**: string (Required, WriteOnly): Resource Location
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties) (WriteOnly)
-* **tags**: [ResourceTags](#resourcetags) (WriteOnly)
+* **tags**: [ResourceTags](#resourcetags) (WriteOnly): Resource tags
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sourcecontrols@2015-08-01
@@ -900,10 +900,16 @@
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **routeType**: string (WriteOnly)
-* **startAddress**: string (WriteOnly)
+* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **name**: string (WriteOnly): The name of this route. This is only returned by the server and does not need to be set by the client.
+* **routeType**: string (WriteOnly): The type of route this is:
+            DEFAULT - By default, every web app has routes to the local address ranges specified by RFC1918
+            INHERITED - Routes inherited from the real Virtual Network routes
+            STATIC - Static route set on the web app only
+            
+            These values will be used for syncing a Web App's routes with those from a Virtual Network. This operation will clear all DEFAULT and INHERITED routes and replace them
+            with new INHERITED routes.
+* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## ResourceTags
 ### Properties
@@ -1366,11 +1372,11 @@
 
 ## ArmPlan
 ### Properties
-* **name**: string (WriteOnly)
-* **product**: string (WriteOnly)
-* **promotionCode**: string (WriteOnly)
-* **publisher**: string (WriteOnly)
-* **version**: string (WriteOnly)
+* **name**: string (WriteOnly): The name
+* **product**: string (WriteOnly): The product
+* **promotionCode**: string (WriteOnly): The promotion code
+* **publisher**: string (WriteOnly): The publisher
+* **version**: string (WriteOnly): Version of product
 
 ## PremierAddOnRequestTags
 ### Properties

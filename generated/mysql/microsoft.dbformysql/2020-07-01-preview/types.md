@@ -50,22 +50,22 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string: The password of the administrator login (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica': The mode to create a new MySQL server.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica' (WriteOnly): The mode to create a new MySQL server.
 * **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments): Delegated subnet arguments of a server
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **haEnabled**: 'Disabled' | 'Enabled': Whether or not HA is enabled for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): The state of a HA server.
-* **infrastructureEncryption**: 'Disabled' | 'Enabled': Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' (WriteOnly): Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **privateDnsZoneArguments**: [PrivateDnsZoneArguments](#privatednszonearguments): Private DNS zone arguments of a server
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: string: The replication role.
-* **restorePointInTime**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
+* **restorePointInTime**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **sourceServerId**: string: The source MySQL server id.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
