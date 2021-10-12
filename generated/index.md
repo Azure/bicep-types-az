@@ -2794,10 +2794,12 @@
 ### microsoft.documentdb/cassandraclusters
 * [2021-03-01-preview](cosmos-db/microsoft.documentdb/2021-03-01-preview/types.md#resource-microsoftdocumentdbcassandraclusters2021-03-01-preview)
 * [2021-04-01-preview](cosmos-db/microsoft.documentdb/2021-04-01-preview/types.md#resource-microsoftdocumentdbcassandraclusters2021-04-01-preview)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbcassandraclusters2021-07-01-preview)
 
 ### microsoft.documentdb/cassandraclusters/datacenters
 * [2021-03-01-preview](cosmos-db/microsoft.documentdb/2021-03-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2021-03-01-preview)
 * [2021-04-01-preview](cosmos-db/microsoft.documentdb/2021-04-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2021-04-01-preview)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbcassandraclustersdatacenters2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts
 * [2015-04-01](cosmos-db/microsoft.documentdb/2015-04-01/types.md#resource-microsoftdocumentdbdatabaseaccounts2015-04-01)
@@ -2818,6 +2820,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccounts2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccounts2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccounts2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccounts2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/apis/databases
 * [2015-04-01](cosmos-db/microsoft.documentdb/2015-04-01/types.md#resource-microsoftdocumentdbdatabaseaccountsapisdatabases2015-04-01)
@@ -2931,6 +2934,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspaces2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2019-08-01)
@@ -2946,6 +2950,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestables2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2019-08-01)
@@ -2961,6 +2966,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacestablesthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2019-08-01)
@@ -2976,6 +2982,16 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesthroughputsettings2021-07-01-preview)
+
+### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviews2021-07-01-preview)
+
+### microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views/throughputsettings
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountscassandrakeyspacesviewsthroughputsettings2021-07-01-preview)
+
+### microsoft.documentdb/databaseaccounts/graphs
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgraphs2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2019-08-01)
@@ -2991,6 +3007,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabases2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases/graphs
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2019-08-01)
@@ -3006,6 +3023,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphs2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases/graphs/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2019-08-01)
@@ -3021,6 +3039,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesgraphsthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/gremlindatabases/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2019-08-01)
@@ -3036,6 +3055,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsgremlindatabasesthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2019-08-01)
@@ -3051,6 +3071,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabases2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases/collections
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2019-08-01)
@@ -3066,6 +3087,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollections2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases/collections/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2019-08-01)
@@ -3081,6 +3103,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasescollectionsthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/mongodbdatabases/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2019-08-01)
@@ -3096,6 +3119,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsmongodbdatabasesthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/notebookworkspaces
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2019-08-01)
@@ -3111,6 +3135,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsnotebookworkspaces2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/privateendpointconnections
 * [2019-08-01-preview](cosmos-db/microsoft.documentdb/2019-08-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2019-08-01-preview)
@@ -3121,9 +3146,11 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsprivateendpointconnections2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/services
 * [2021-04-01-preview](cosmos-db/microsoft.documentdb/2021-04-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2021-04-01-preview)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountsservices2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2019-08-01)
@@ -3139,6 +3166,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabases2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2019-08-01)
@@ -3154,6 +3182,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainers2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/storedprocedures
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2019-08-01)
@@ -3169,6 +3198,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersstoredprocedures2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2019-08-01)
@@ -3184,6 +3214,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/triggers
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2019-08-01)
@@ -3199,6 +3230,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainerstriggers2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/containers/userdefinedfunctions
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2019-08-01)
@@ -3214,6 +3246,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasescontainersuserdefinedfunctions2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqldatabases/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2019-08-01)
@@ -3229,6 +3262,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqldatabasesthroughputsettings2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqlroleassignments
 * [2020-06-01-preview](cosmos-db/microsoft.documentdb/2020-06-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2020-06-01-preview)
@@ -3237,6 +3271,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroleassignments2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/sqlroledefinitions
 * [2020-06-01-preview](cosmos-db/microsoft.documentdb/2020-06-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2020-06-01-preview)
@@ -3245,6 +3280,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountssqlroledefinitions2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/tables
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountstables2019-08-01)
@@ -3260,6 +3296,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountstables2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountstables2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountstables2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstables2021-07-01-preview)
 
 ### microsoft.documentdb/databaseaccounts/tables/throughputsettings
 * [2019-08-01](cosmos-db/microsoft.documentdb/2019-08-01/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2019-08-01)
@@ -3275,6 +3312,7 @@
 * [2021-04-15](cosmos-db/microsoft.documentdb/2021-04-15/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2021-04-15)
 * [2021-05-15](cosmos-db/microsoft.documentdb/2021-05-15/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2021-05-15)
 * [2021-06-15](cosmos-db/microsoft.documentdb/2021-06-15/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2021-06-15)
+* [2021-07-01-preview](cosmos-db/microsoft.documentdb/2021-07-01-preview/types.md#resource-microsoftdocumentdbdatabaseaccountstablesthroughputsettings2021-07-01-preview)
 
 ## microsoft.domainregistration
 ### microsoft.domainregistration/domains
