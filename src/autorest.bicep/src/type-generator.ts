@@ -407,7 +407,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       const getParentDictionary = (getSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
 
       if (putParentDictionary || getParentDictionary) {
-        additionalProperties = parseType(putParentDictionary?.elementType, putParentDictionary?.elementType);
+        additionalProperties = parseType(putParentDictionary?.elementType, getParentDictionary?.elementType);
       }
     }
 
