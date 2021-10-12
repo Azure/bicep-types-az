@@ -41,6 +41,15 @@
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/azureADOnlyAuthentications@2021-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [AzureADOnlyAuthenticationProperties](#azureadonlyauthenticationproperties): Azure Active Directory Only Authentication properties
+* **type**: 'Microsoft.Synapse/workspaces/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/bigDataPools@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -433,6 +442,7 @@
 ## WorkspaceProperties
 ### Properties
 * **adlaResourceId**: string (ReadOnly): The ADLA resource ID.
+* **azureADOnlyAuthentication**: bool: Enable or Disable AzureADOnlyAuthentication on All Workspace subresource
 * **connectivityEndpoints**: [WorkspacePropertiesConnectivityEndpoints](#workspacepropertiesconnectivityendpoints): Connectivity endpoints
 * **cspWorkspaceAdminProperties**: [CspWorkspaceAdminProperties](#cspworkspaceadminproperties): Initial workspace AAD admin properties for a CSP subscription
 * **defaultDataLakeStorage**: [DataLakeStorageAccountDetails](#datalakestorageaccountdetails): Details of the data lake storage account associated with the workspace
@@ -445,6 +455,7 @@
 * **provisioningState**: string (ReadOnly): Resource provisioning state
 * **publicNetworkAccess**: 'Disabled' | 'Enabled': Enable or Disable public network access to workspace
 * **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview Configuration
+* **settings**: [WorkspacePropertiesSettings](#workspacepropertiessettings) (ReadOnly): Workspace settings
 * **sqlAdministratorLogin**: string: Login for workspace SQL active directory administrator
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password
 * **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): Virtual Network Profile
@@ -463,7 +474,9 @@
 ## DataLakeStorageAccountDetails
 ### Properties
 * **accountUrl**: string: Account URL
+* **createManagedPrivateEndpoint**: bool: Create managed private endpoint to this storage account or not
 * **filesystem**: string: Filesystem name
+* **resourceId**: string: ARM resource Id of this storage account
 
 ## EncryptionDetails
 ### Properties
@@ -507,6 +520,11 @@
 ## PurviewConfiguration
 ### Properties
 * **purviewResourceId**: string: Purview Resource ID
+
+## WorkspacePropertiesSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## VirtualNetworkProfile
 ### Properties
@@ -620,6 +638,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
+## AzureADOnlyAuthenticationProperties
+### Properties
+* **azureADOnlyAuthentication**: bool (Required): Azure Active Directory Only Authentication enabled
+* **creationDate**: string (ReadOnly): property configuration date
+* **state**: 'Consistent' | 'InConsistent' | 'Updating' (ReadOnly): Azure Active Directory Only Authentication configuration state
+
 ## BigDataPoolResourceProperties
 ### Properties
 * **autoPause**: [AutoPauseProperties](#autopauseproperties): Auto-pausing properties of a Big Data pool powered by Apache Spark
@@ -660,7 +684,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **path**: string: Storage blob path of library.
 * **provisioningStatus**: string (ReadOnly): Provisioning status of the library/package.
 * **type**: string: Type of the library.
-* **uploadedTimestamp**: string (ReadOnly): The last update time of the library.
+* **uploadedTimestamp**: string: The last update time of the library.
 
 ## DynamicExecutorAllocation
 ### Properties
@@ -818,6 +842,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
+* **cleanup**: bool: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
@@ -1099,12 +1124,21 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SqlPoolResourceProperties
 ### Properties
 * **collation**: string: Collation mode
-* **createMode**: string: What is this?
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore': Specifies the mode of sql pool creation.
+
+Default: regular sql pool creation.
+
+PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an existing sql pool. sourceDatabaseId must be specified as the resource ID of the existing sql pool, and restorePointInTime must be specified.
+
+Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
+
+Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
 * **creationDate**: string: Date the SQL pool was created
 * **maxSizeBytes**: int: Maximum size in bytes
 * **provisioningState**: string: Resource state
 * **recoverableDatabaseId**: string: Backup database to restore from
 * **restorePointInTime**: string: Snapshot time to restore
+* **sourceDatabaseDeletionDate**: string: Specifies the time that the sql pool was deleted
 * **sourceDatabaseId**: string: Source database to create from
 * **status**: string: Resource status
 * **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this sql pool.

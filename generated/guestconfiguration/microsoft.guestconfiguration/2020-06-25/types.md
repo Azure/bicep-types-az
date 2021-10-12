@@ -19,15 +19,20 @@
 * **lastComplianceStatusChecked**: string (ReadOnly): Date and time when last compliance status was checked.
 * **latestAssignmentReport**: [AssignmentReport](#assignmentreport)
 * **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
+* **parameterHash**: string (ReadOnly): parameter hash for the guest configuration assignment.
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
+* **resourceType**: string (ReadOnly): Type of the resource - VMSS / VM
 * **targetResourceId**: string (ReadOnly): VM resource Id.
+* **vmssVMList**: [VmssvmInfo](#vmssvminfo)[]: The list of VM Compliance data for VMSS
 
 ## GuestConfigurationNavigation
 ### Properties
 * **assignmentType**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'Audit' | 'DeployAndAutoCorrect': Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
 * **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]: The configuration parameters for the guest configuration.
+* **configurationProtectedParameter**: [ConfigurationParameter](#configurationparameter)[]: The protected configuration parameters for the guest configuration.
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
 * **contentHash**: string: Combined hash of the guest configuration package and configuration parameters.
+* **contentType**: string (ReadOnly): Specifies the content type of the configuration. Possible values could be Builtin or Custom.
 * **contentUri**: string: Uri of the storage where guest configuration package is uploaded.
 * **kind**: 'DSC': Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
@@ -85,4 +90,12 @@
 ### Properties
 * **id**: string (ReadOnly): Azure resource Id of the VM.
 * **uuid**: string (ReadOnly): UUID(Universally Unique Identifier) of the VM.
+
+## VmssvmInfo
+### Properties
+* **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
+* **lastComplianceChecked**: string (ReadOnly): Date and time when last compliance status was checked.
+* **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
+* **vmId**: string (ReadOnly): UUID of the VM.
+* **vmResourceId**: string (ReadOnly): Azure resource Id of the VM.
 

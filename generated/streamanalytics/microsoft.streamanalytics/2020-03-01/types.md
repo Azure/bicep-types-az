@@ -530,7 +530,7 @@
 * **etag**: string (ReadOnly): The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **query**: string: Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
 * **streamingUnits**: int: Specifies the number of streaming units that the streaming job uses.
-* **validStreamingUnits**: int: Specifies the valid streaming units a streaming job can scale to.
+* **validStreamingUnits**: int[]: Specifies the valid streaming units a streaming job can scale to.
 
 ## TrackedResourceTags
 ### Properties

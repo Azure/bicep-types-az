@@ -97,6 +97,8 @@
 ## RegisteredServerCreateParametersProperties
 ### Properties
 * **agentVersion**: string: Registered Server Agent Version
+* **agentVersionExpirationDate**: string (ReadOnly): Registered Server Agent Version Expiration Date
+* **agentVersionStatus**: 'Blocked' | 'Expired' | 'NearExpiry' | 'Ok' (ReadOnly): Type of the registered server agent version status
 * **clusterId**: string: Registered Server clusterId
 * **clusterName**: string: Registered Server clusterName
 * **discoveryEndpointUri**: string (ReadOnly): Resource discoveryEndpointUri
@@ -231,6 +233,7 @@
 * **appliedBytes**: int (ReadOnly): Applied bytes
 * **appliedItemCount**: int (ReadOnly): Applied item count.
 * **perItemErrorCount**: int (ReadOnly): Per item error count
+* **syncMode**: 'InitialFullDownload' | 'InitialUpload' | 'NamespaceDownload' | 'Regular' | 'SnapshotUpload' (ReadOnly): Sync mode for the server endpoint.
 * **timestamp**: string (ReadOnly): Timestamp when properties were updated
 * **totalBytes**: int (ReadOnly): Total bytes (if available)
 * **totalItemCount**: int (ReadOnly): Total item count (if available)
@@ -238,6 +241,7 @@
 ## ServerEndpointSyncSessionStatus
 ### Properties
 * **filesNotSyncingErrors**: [ServerEndpointFilesNotSyncingError](#serverendpointfilesnotsyncingerror)[] (ReadOnly): Array of per-item errors coming from the last sync session.
+* **lastSyncMode**: 'InitialFullDownload' | 'InitialUpload' | 'NamespaceDownload' | 'Regular' | 'SnapshotUpload' (ReadOnly): Sync mode for the server endpoint.
 * **lastSyncPerItemErrorCount**: int (ReadOnly): Last sync per item error count.
 * **lastSyncResult**: int (ReadOnly): Last sync result (HResult)
 * **lastSyncSuccessTimestamp**: string (ReadOnly): Last sync success timestamp

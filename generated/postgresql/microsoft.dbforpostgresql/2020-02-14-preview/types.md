@@ -37,6 +37,7 @@
 * **createMode**: 'Default' | 'PointInTimeRestore' (WriteOnly): The mode to create a new PostgreSQL server.
 * **delegatedSubnetArguments**: [ServerPropertiesDelegatedSubnetArguments](#serverpropertiesdelegatedsubnetarguments)
 * **displayName**: string: The display name of a server.
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled
 * **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
@@ -74,7 +75,6 @@
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
-* **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
 * **geoRedundantBackup**: 'Disabled' | 'Enabled': A value indicating whether Geo-Redundant backup is enabled on the server.
 * **storageMB**: int: Max storage allowed for a server.
 

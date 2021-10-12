@@ -1,10 +1,13 @@
-AutoRest code generation utility [cli version: 3.4.0; node: v14.18.0]
+WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedapplication.json"
+WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedcluster.json"
+WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/nodetype.json"
+AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-info    | Processing batch task - {"tag":"microsoft.servicefabricmanagedclusters-2021-07-01-preview"} .
+info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-07-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -25,8 +28,8 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 17ms
-info    | Processing batch task - {"tag":"microsoft.servicefabricmanagedclusters-2021-05-01"} .
+info    | autorest.bicep took 19ms
+info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -122,8 +125,8 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 9ms
-info    | Processing batch task - {"tag":"microsoft.servicefabricmanagedclusters-2021-01-01-preview"} .
+info    | autorest.bicep took 10ms
+info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -217,5 +220,5 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 9ms
-[14.82 s] Generation Complete
+info    | autorest.bicep took 11ms
+info    | Generation Complete
