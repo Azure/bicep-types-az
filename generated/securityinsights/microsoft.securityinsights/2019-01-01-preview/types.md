@@ -18,6 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ActionRequestProperties](#actionrequestproperties): Action property bag.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly)
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/automationRules@2019-01-01-preview
@@ -126,7 +127,7 @@
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'EntityAnalytics' | 'EyesOn' | 'Ueba' (Required): The kind of the setting
+* **kind**: 'Anomalies' | 'EntityAnalytics' | 'EyesOn' | 'Ueba' (Required): The kind of the setting
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.SecurityInsights/settings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -166,6 +167,15 @@
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
 * **triggerUri**: string (Required, WriteOnly)
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
+
+## SystemData
+### Properties
+* **createdAt**: string (WriteOnly)
+* **createdBy**: string (WriteOnly)
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (WriteOnly)
+* **lastModifiedAt**: string (WriteOnly)
+* **lastModifiedBy**: string (WriteOnly)
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (WriteOnly)
 
 ## AutomationRuleProperties
 ### Properties

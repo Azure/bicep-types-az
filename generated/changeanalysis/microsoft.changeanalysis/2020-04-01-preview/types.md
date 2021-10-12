@@ -6,6 +6,7 @@
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): The identity block returned by ARM resource that supports managed identity.
+* **location**: string: The location where the resource is to be deployed.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProfileResourceProperties](#configurationprofileresourceproperties): The properties of a configuration profile.
 * **systemData**: [SystemData](#systemdata): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
@@ -28,6 +29,7 @@
 
 ## AzureMonitorWorkspaceProperties
 ### Properties
+* **includeChangeDetails**: 'Exclude' | 'Include' | 'None': The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
 * **workspaceId**: string: The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
 * **workspaceResourceId**: string: The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
 

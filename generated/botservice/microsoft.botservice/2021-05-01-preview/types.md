@@ -59,6 +59,7 @@
 * **developerAppInsightKey**: string: The Application Insights key
 * **developerAppInsightsApiKey**: string: The Application Insights Api Key
 * **developerAppInsightsApplicationId**: string: The Application Insights App Id
+* **disableLocalAuth**: bool: Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
 * **displayName**: string (Required): The Name of the bot
 * **enabledChannels**: string[] (ReadOnly): Collection of channels for which the bot is enabled
 * **endpoint**: string (Required): The bot's endpoint
@@ -69,7 +70,34 @@
 * **luisAppIds**: string[]: Collection of LUIS App Ids
 * **luisKey**: string: The LUIS Key
 * **msaAppId**: string (Required): Microsoft App Id for the bot
+* **msaAppMSIResourceId**: string: Microsoft App Managed Identity Resource Id for the bot
+* **msaAppTenantId**: string: Microsoft App Tenant Id for the bot
+* **msaAppType**: 'MultiTenant' | 'SingleTenant' | 'UserAssignedMSI': Microsoft App Type for the bot
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the bot
 * **schemaTransformationVersion**: string: The channel schema transformation version for the bot
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## PrivateEndpointConnectionProperties
+### Properties
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
+* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+
+## PrivateEndpoint
+### Properties
+* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
+
+## PrivateLinkServiceConnectionState
+### Properties
+* **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
+* **description**: string: The reason for approval/rejection of the connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
 
 ## Sku
 ### Properties
@@ -250,6 +278,7 @@
 * **lastSubmissionId**: string (ReadOnly): The Sms auth token
 * **redirectAction**: string (ReadOnly): The Slack redirect action
 * **registerBeforeOAuthFlow**: bool (ReadOnly): Whether to register the settings before OAuth validation is performed. Recommended to True.
+* **scopes**: string: The Slack permission scopes.
 * **signingSecret**: string: The Slack signing secret.
 * **verificationToken**: string: The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
 
@@ -305,20 +334,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## PrivateEndpointConnectionProperties
-### Properties
-* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
-* **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
-
-## PrivateEndpoint
-### Properties
-* **id**: string (ReadOnly): The ARM identifier for Private Endpoint
-
-## PrivateLinkServiceConnectionState
-### Properties
-* **actionRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
-* **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
 

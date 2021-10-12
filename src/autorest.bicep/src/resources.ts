@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
+import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata, HttpWithBodyRequest, SerializationStyle } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { keys, Dictionary, values } from 'lodash';
 import { success, failure, Result } from './utils';
@@ -220,11 +220,10 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     }
 
     for (const response of validResponses) {
-      const schemaResponse = response as SchemaResponse;
-      if (schemaResponse) {
+      if (response.protocol.http instanceof HttpResponse && response instanceof SchemaResponse && response.schema instanceof ObjectSchema) {
         return {
-          response: (response.protocol.http as HttpResponse),
-          schema: schemaResponse.schema as ObjectSchema,
+          response: response.protocol.http,
+          schema: response.schema,
         };
       }
     }
@@ -248,12 +247,13 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
 
     for (const request of validRequests) {
       const parameters = combineParameters(operation, request);
-      const bodyParameters = parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body);
-      if (bodyParameters.length > 0) {
+      const bodyParameter = parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body)[0];
+
+      if (request.protocol.http instanceof HttpRequest && bodyParameter instanceof Parameter && bodyParameter.schema instanceof ObjectSchema) {
         return {
-          request: (request.protocol.http as HttpRequest),
+          request: request.protocol.http,
           parameters,
-          schema: bodyParameters[0].schema as ObjectSchema,
+          schema: bodyParameter.schema,
         };
       }
     }

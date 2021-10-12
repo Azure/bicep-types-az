@@ -1,20 +1,19 @@
-# Microsoft.DBForPostgreSql @ 2021-06-01
+# Microsoft.DBforPostgreSQL @ 2021-06-01
 
-## Resource Microsoft.DBForPostgreSql/flexibleServers@2021-06-01
+## Resource Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [Identity](#identity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): The properties of a server.
 * **sku**: [Sku](#sku): Sku information related properties of a server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
-* **type**: 'Microsoft.DBForPostgreSql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSql/flexibleServers/configurations@2021-06-01
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/configurations@2021-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,9 +21,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.DBForPostgreSql/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSql/flexibleServers/databases@2021-06-01
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/databases@2021-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,9 +31,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.DBForPostgreSql/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2021-06-01
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2021-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -42,13 +41,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.DBForPostgreSql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
-
-## Identity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'SystemAssigned': The identity type.
+* **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServerProperties
 ### Properties

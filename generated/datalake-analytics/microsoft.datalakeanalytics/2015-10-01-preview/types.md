@@ -60,6 +60,7 @@
 * **firewallAllowAzureIps**: 'Disabled' | 'Enabled': The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
 * **firewallRules**: [CreateFirewallRuleWithAccountParameters](#createfirewallrulewithaccountparameters)[]: The list of firewall rules associated with this account.
 * **firewallState**: 'Disabled' | 'Enabled': The current state of the IP address firewall for this account.
+* **hierarchicalQueueState**: string (ReadOnly): The hierarchical queue state associated with this account.
 * **hiveMetastores**: [HiveMetastore](#hivemetastore)[] (ReadOnly): The list of hiveMetastores associated with this account.
 * **lastModifiedTime**: string (ReadOnly): The account last modified time.
 * **maxDegreeOfParallelism**: int: The maximum supported degree of parallelism for this account.

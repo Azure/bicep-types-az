@@ -33,6 +33,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2021-04-01
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: Etag of the azure resource
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: 'indicator' (Required): The kind of the threat intelligence entity
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ThreatIntelligenceIndicatorProperties](#threatintelligenceindicatorproperties) (WriteOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityInsights/watchlists@2021-04-01
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -124,6 +136,83 @@
 * **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
+
+## ThreatIntelligenceIndicatorProperties
+### Properties
+* **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly, WriteOnly)
+* **confidence**: int (WriteOnly)
+* **created**: string (WriteOnly)
+* **createdByRef**: string (WriteOnly)
+* **defanged**: bool (WriteOnly)
+* **description**: string (WriteOnly)
+* **displayName**: string (WriteOnly)
+* **extensions**: [ThreatIntelligenceIndicatorPropertiesExtensions](#threatintelligenceindicatorpropertiesextensions) (WriteOnly)
+* **externalId**: string (WriteOnly)
+* **externalLastUpdatedTimeUtc**: string (WriteOnly)
+* **externalReferences**: [ThreatIntelligenceExternalReference](#threatintelligenceexternalreference)[] (WriteOnly)
+* **friendlyName**: string (ReadOnly, WriteOnly)
+* **granularMarkings**: [ThreatIntelligenceGranularMarkingModel](#threatintelligencegranularmarkingmodel)[] (WriteOnly)
+* **indicatorTypes**: string[] (WriteOnly)
+* **killChainPhases**: [ThreatIntelligenceKillChainPhase](#threatintelligencekillchainphase)[] (WriteOnly)
+* **labels**: string[] (WriteOnly)
+* **language**: string (WriteOnly)
+* **lastUpdatedTimeUtc**: string (WriteOnly)
+* **modified**: string (WriteOnly)
+* **objectMarkingRefs**: string[] (WriteOnly)
+* **parsedPattern**: [ThreatIntelligenceParsedPattern](#threatintelligenceparsedpattern)[] (WriteOnly)
+* **pattern**: string (WriteOnly)
+* **patternType**: string (WriteOnly)
+* **patternVersion**: string (WriteOnly)
+* **revoked**: bool (WriteOnly)
+* **source**: string (WriteOnly)
+* **threatIntelligenceTags**: string[] (WriteOnly)
+* **threatTypes**: string[] (WriteOnly)
+* **validFrom**: string (WriteOnly)
+* **validUntil**: string (WriteOnly)
+
+## EntityCommonPropertiesAdditionalData
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ThreatIntelligenceIndicatorPropertiesExtensions
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ThreatIntelligenceExternalReference
+### Properties
+* **description**: string (WriteOnly)
+* **externalId**: string (WriteOnly)
+* **hashes**: [ThreatIntelligenceExternalReferenceHashes](#threatintelligenceexternalreferencehashes) (WriteOnly)
+* **sourceName**: string (WriteOnly)
+* **url**: string (WriteOnly)
+
+## ThreatIntelligenceExternalReferenceHashes
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ThreatIntelligenceGranularMarkingModel
+### Properties
+* **language**: string (WriteOnly)
+* **markingRef**: int (WriteOnly)
+* **selectors**: string[] (WriteOnly)
+
+## ThreatIntelligenceKillChainPhase
+### Properties
+* **killChainName**: string (WriteOnly)
+* **phaseName**: string (WriteOnly)
+
+## ThreatIntelligenceParsedPattern
+### Properties
+* **patternTypeKey**: string (WriteOnly)
+* **patternTypeValues**: [ThreatIntelligenceParsedPatternTypeValue](#threatintelligenceparsedpatterntypevalue)[] (WriteOnly)
+
+## ThreatIntelligenceParsedPatternTypeValue
+### Properties
+* **value**: string (WriteOnly)
+* **valueType**: string (WriteOnly)
 
 ## WatchlistProperties
 ### Properties

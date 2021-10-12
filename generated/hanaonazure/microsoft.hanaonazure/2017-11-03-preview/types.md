@@ -13,25 +13,25 @@
 
 ## HanaInstanceProperties
 ### Properties
-* **hanaInstanceId**: string: Specifies the HANA instance unique ID.
+* **hanaInstanceId**: string (ReadOnly): Specifies the HANA instance unique ID.
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the HANA instance.
-* **hwRevision**: string: Hardware revision of a HANA instance
+* **hwRevision**: string (ReadOnly): Hardware revision of a HANA instance
 * **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network settings for the HANA instance disks.
 * **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the HANA instance.
 * **partnerNodeId**: string: ARM ID of another HanaInstance that will share a network with this HanaInstance
-* **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown': Resource power state
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating': State of provisioning of the HanaInstance
-* **proximityPlacementGroup**: string: Resource proximity placement group
+* **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown' (ReadOnly): Resource power state
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): State of provisioning of the HanaInstance
+* **proximityPlacementGroup**: string (ReadOnly): Resource proximity placement group
 * **storageProfile**: [StorageProfile](#storageprofile): Specifies the storage settings for the HANA instance disks.
 
 ## HardwareProfile
 ### Properties
-* **hanaInstanceSize**: 'S112' | 'S144' | 'S144m' | 'S192' | 'S192m' | 'S192xm' | 'S224' | 'S224m' | 'S224om' | 'S224oo' | 'S224oom' | 'S224ooo' | 'S384' | 'S384m' | 'S384xm' | 'S384xxm' | 'S448' | 'S448m' | 'S448om' | 'S448oo' | 'S448oom' | 'S448ooo' | 'S576m' | 'S576xm' | 'S672' | 'S672m' | 'S672om' | 'S672oo' | 'S672oom' | 'S672ooo' | 'S72' | 'S72m' | 'S768' | 'S768m' | 'S768xm' | 'S896' | 'S896m' | 'S896om' | 'S896oo' | 'S896oom' | 'S896ooo' | 'S96' | 'S960m': Specifies the HANA instance SKU.
-* **hardwareType**: 'Cisco_UCS' | 'HPE': Name of the hardware type (vendor and/or their product name)
+* **hanaInstanceSize**: 'S112' | 'S144' | 'S144m' | 'S192' | 'S192m' | 'S192xm' | 'S224' | 'S224m' | 'S224om' | 'S224oo' | 'S224oom' | 'S224ooo' | 'S384' | 'S384m' | 'S384xm' | 'S384xxm' | 'S448' | 'S448m' | 'S448om' | 'S448oo' | 'S448oom' | 'S448ooo' | 'S576m' | 'S576xm' | 'S672' | 'S672m' | 'S672om' | 'S672oo' | 'S672oom' | 'S672ooo' | 'S72' | 'S72m' | 'S768' | 'S768m' | 'S768xm' | 'S896' | 'S896m' | 'S896om' | 'S896oo' | 'S896oom' | 'S896ooo' | 'S96' | 'S960m' (ReadOnly): Specifies the HANA instance SKU.
+* **hardwareType**: 'Cisco_UCS' | 'HPE' (ReadOnly): Name of the hardware type (vendor and/or their product name)
 
 ## NetworkProfile
 ### Properties
-* **circuitId**: string: Specifies the circuit id for connecting to express route.
+* **circuitId**: string (ReadOnly): Specifies the circuit id for connecting to express route.
 * **networkInterfaces**: [IpAddress](#ipaddress)[]: Specifies the network interfaces for the HANA instance.
 
 ## IpAddress
@@ -41,20 +41,20 @@
 ## OSProfile
 ### Properties
 * **computerName**: string: Specifies the host OS name of the HANA instance.
-* **osType**: string: This property allows you to specify the type of the OS.
+* **osType**: string (ReadOnly): This property allows you to specify the type of the OS.
 * **sshPublicKey**: string: Specifies the SSH public key used to access the operating system.
-* **version**: string: Specifies version of operating system.
+* **version**: string (ReadOnly): Specifies version of operating system.
 
 ## StorageProfile
 ### Properties
 * **hanaSids**: [SAPSystemID](#sapsystemid)[]: Specifies information related to SAP system IDs for the hana instance.
-* **nfsIpAddress**: string: IP Address to connect to storage.
+* **nfsIpAddress**: string (ReadOnly): IP Address to connect to storage.
 * **osDisks**: [Disk](#disk)[]: Specifies information about the operating system disk used by the hana instance.
 
 ## SAPSystemID
 ### Properties
 * **gid**: string: Group ID of the HANA database user.
-* **memoryAllocation**: string: Percent of memory to allocate to this SID.
+* **memoryAllocation**: string (ReadOnly): Percent of memory to allocate to this SID.
 * **sid**: string: SAP system ID as database identifier.
 * **uid**: string: User ID of the HANA database user.
 * **username**: string: Name of the HANA database user.
