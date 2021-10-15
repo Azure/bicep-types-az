@@ -29,7 +29,7 @@
     "@types/js-yaml": "^4.0.3",
     "@types/lodash": "^4.14.175",
     "@types/node": "^16.10.3",
-    "@types/yargs": "^17.0.3",
+    "@types/yargs": "^17.0.4",
     "async": "^3.2.1",
     "autorest": "^3.4.1",
     "chalk": "^4.1.2",
