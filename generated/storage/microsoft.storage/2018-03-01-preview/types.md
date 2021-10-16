@@ -43,6 +43,23 @@
 * **properties**: [ManagementPoliciesRules](#managementpoliciesrules): The Storage Account ManagementPolicies Rules, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function ListAccountSas (Microsoft.Storage/storageAccounts@2018-03-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-03-01-preview
+* **Input**: [AccountSasParameters](#accountsasparameters)
+* **Output**: [ListAccountSasResponse](#listaccountsasresponse)
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2018-03-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-03-01-preview
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function ListServiceSas (Microsoft.Storage/storageAccounts@2018-03-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-03-01-preview
+* **Input**: [ServiceSasParameters](#servicesasparameters)
+* **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -204,4 +221,10 @@
 ### Properties
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the ManagementPolicies was last modified.
 * **policy**: any: Any object
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
 

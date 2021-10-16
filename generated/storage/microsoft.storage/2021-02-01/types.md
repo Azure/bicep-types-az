@@ -147,6 +147,23 @@
 * **properties**: [TableProperties](#tableproperties) (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function ListAccountSas (Microsoft.Storage/storageAccounts@2021-02-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2021-02-01
+* **Input**: [AccountSasParameters](#accountsasparameters)
+* **Output**: [ListAccountSasResponse](#listaccountsasresponse)
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2021-02-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2021-02-01
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function ListServiceSas (Microsoft.Storage/storageAccounts@2021-02-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2021-02-01
+* **Input**: [ServiceSasParameters](#servicesasparameters)
+* **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
@@ -691,4 +708,11 @@
 ## TableProperties
 ### Properties
 * **tableName**: string (ReadOnly): Table name under the specified account
+
+## StorageAccountKey
+### Properties
+* **creationTime**: string (ReadOnly): Creation time of the key, in round trip date format.
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
 

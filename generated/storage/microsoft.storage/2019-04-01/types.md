@@ -71,6 +71,23 @@
 * **properties**: [ManagementPolicyProperties](#managementpolicyproperties): The Storage Account ManagementPolicy properties.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function ListAccountSas (Microsoft.Storage/storageAccounts@2019-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2019-04-01
+* **Input**: [AccountSasParameters](#accountsasparameters)
+* **Output**: [ListAccountSasResponse](#listaccountsasresponse)
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2019-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2019-04-01
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function ListServiceSas (Microsoft.Storage/storageAccounts@2019-04-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2019-04-01
+* **Input**: [ServiceSasParameters](#servicesasparameters)
+* **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -347,4 +364,10 @@
 ### Properties
 * **blobTypes**: string[] (Required): An array of predefined enum values. Only blockBlob is supported.
 * **prefixMatch**: string[]: An array of strings for prefixes to be match.
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
 

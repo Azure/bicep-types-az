@@ -14,6 +14,23 @@
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function ListAccountSas (Microsoft.Storage/storageAccounts@2017-10-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2017-10-01
+* **Input**: [AccountSasParameters](#accountsasparameters)
+* **Output**: [ListAccountSasResponse](#listaccountsasresponse)
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2017-10-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2017-10-01
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function ListServiceSas (Microsoft.Storage/storageAccounts@2017-10-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2017-10-01
+* **Input**: [ServiceSasParameters](#servicesasparameters)
+* **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -116,4 +133,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
 
