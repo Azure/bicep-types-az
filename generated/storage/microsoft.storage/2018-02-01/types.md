@@ -34,6 +34,23 @@
 * **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required): The properties of an ImmutabilityPolicy of a blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function ListAccountSas (Microsoft.Storage/storageAccounts@2018-02-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-02-01
+* **Input**: [AccountSasParameters](#accountsasparameters)
+* **Output**: [ListAccountSasResponse](#listaccountsasresponse)
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2018-02-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-02-01
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function ListServiceSas (Microsoft.Storage/storageAccounts@2018-02-01)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-02-01
+* **Input**: [ServiceSasParameters](#servicesasparameters)
+* **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -190,4 +207,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
 
