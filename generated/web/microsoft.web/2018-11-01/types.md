@@ -150,7 +150,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2018-11-01
@@ -200,7 +200,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2018-11-01
@@ -382,7 +382,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2018-11-01
@@ -432,7 +432,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/networkConfig@2018-11-01
@@ -559,7 +559,7 @@ This is valid for all deployment slots in an app.
 * **keyVaultId**: string: Key Vault Csm resource Id.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
-* **password**: string (Required): Certificate password.
+* **password**: string (Required, WriteOnly): Certificate password.
 * **pfxBlob**: any: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
@@ -603,7 +603,7 @@ This is valid for all deployment slots in an app.
 * **clientAffinityEnabled**: bool: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
 * **clientCertEnabled**: bool: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
 * **clientCertExclusionPaths**: string: client certificate authentication comma-separated exclusion paths
-* **cloningInfo**: [CloningInfo](#cloninginfo): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
 * **containerSize**: int: Size of the function container.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
 * **defaultHostName**: string (ReadOnly): Default hostname of the app. Read-only.
@@ -1112,17 +1112,21 @@ Value can range between 25 and 100.
 
 ## MSDeployCore
 ### Properties
-* **appOffline**: bool (WriteOnly)
+* **appOffline**: bool (WriteOnly): Sets the AppOffline rule while the MSDeploy operation executes.
+Setting is <code>false</code> by default.
 * **complete**: bool (ReadOnly): Whether the deployment operation has completed
-* **connectionString**: string (WriteOnly)
-* **dbType**: string (WriteOnly)
+* **connectionString**: string (WriteOnly): SQL Connection String
+* **dbType**: string (WriteOnly): Database Type
 * **deployer**: string (ReadOnly): Username of deployer
 * **endTime**: string (ReadOnly): End time of deploy operation
-* **packageUri**: string (WriteOnly)
+* **packageUri**: string (WriteOnly): Package URI
 * **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state
-* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly)
-* **setParametersXmlFileUri**: string (WriteOnly)
-* **skipAppData**: bool (WriteOnly)
+* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly): MSDeploy Parameters. Must not be set if SetParametersXmlFileUri is used.
+* **setParametersXmlFileUri**: string (WriteOnly): URI of MSDeploy Parameters file. Must not be set if SetParameters is used.
+* **skipAppData**: bool (WriteOnly): Controls whether the MSDeploy operation skips the App_Data directory.
+If set to <code>true</code>, the existing App_Data directory on the destination
+will not be deleted, and any App_Data directory in the source will be ignored.
+Setting is <code>false</code> by default.
 * **startTime**: string (ReadOnly): Start time of deploy operation
 
 ## MSDeployCoreSetParameters
@@ -1316,5 +1320,5 @@ These values will be used for syncing an app's routes with those from a Virtual 
 ## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
-* **vpnPackageUri**: string (Required): The URI where the VPN package can be downloaded.
+* **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
 

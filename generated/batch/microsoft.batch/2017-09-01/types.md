@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): The location of the resource.
+* **location**: string (Required): The region in which to create the account.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties): Account specific properties.
-* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The tags of the resource.
+* **properties**: [BatchAccountCreateProperties](#batchaccountcreateproperties): The properties of a Batch account.
+* **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user-specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/applications@2017-09-01
@@ -44,7 +44,7 @@
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Certificate properties.
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Certificate properties for create operations
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Batch/batchAccounts/pools@2017-09-01
@@ -61,7 +61,7 @@
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
 * **activeJobAndJobScheduleQuota**: int (ReadOnly): The active job and job schedule quota for this Batch account.
-* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): Contains information about the auto-storage account associated with a Batch account.
+* **autoStorage**: [AutoStorageBaseProperties](#autostoragebaseproperties): The properties related to the auto-storage account.
 * **dedicatedCoreQuota**: int (ReadOnly): The dedicated core quota for this Batch account.
 * **keyVaultReference**: [KeyVaultReference](#keyvaultreference): Identifies the Azure key vault associated with a Batch account.
 * **lowPriorityCoreQuota**: int (ReadOnly): The low-priority core quota for this Batch account.
@@ -96,10 +96,10 @@
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
-* **data**: string (Required, WriteOnly)
+* **data**: string (Required, WriteOnly): The maximum size is 10KB.
 * **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): An error response from the Batch service.
 * **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
-* **password**: string (WriteOnly)
+* **password**: string (WriteOnly): This is required if the certificate format is pfx and must be omitted if the certificate format is cer.
 * **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Values are:
 
  Succeeded - The certificate is available for use in pools.

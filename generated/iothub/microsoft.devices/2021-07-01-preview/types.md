@@ -31,7 +31,7 @@
 * **etag**: string (ReadOnly): The etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EventHubConsumerGroupName](#eventhubconsumergroupname) (Required): The tags.
+* **properties**: [EventHubConsumerGroupName](#eventhubconsumergroupname) (Required): The EventHub consumer group name.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2021-07-01-preview
@@ -272,7 +272,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled.
 * **name**: string: The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-* **source**: 'DeviceConnectionStateEvents' | 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceConnectionStateEvents' | 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'MqttBrokerMessages' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## RouteProperties
 ### Properties
@@ -280,7 +280,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether a route is enabled.
 * **name**: string (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-* **source**: 'DeviceConnectionStateEvents' | 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceConnectionStateEvents' | 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'DigitalTwinChangeEvents' | 'Invalid' | 'MqttBrokerMessages' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## IotHubPropertiesStorageEndpoints
 ### Properties
@@ -311,12 +311,12 @@
 * **certificate**: string: The certificate content
 * **created**: string (ReadOnly): The certificate's create date and time.
 * **expiry**: string (ReadOnly): The certificate's expiration date and time.
-* **isVerified**: bool (ReadOnly): Determines whether certificate has been verified.
+* **isVerified**: bool: Determines whether certificate has been verified.
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
 
 ## EventHubConsumerGroupName
 ### Properties
-* **name**: string (Required, WriteOnly)
+* **name**: string (Required, WriteOnly): EventHub consumer group name
 

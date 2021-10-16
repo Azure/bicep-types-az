@@ -33,7 +33,7 @@
 * **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
 * **createdOn**: string (ReadOnly): Connector definition creation datetime
 * **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
-* **credentialsSecret**: string: Credentials secret (eg AWS ExternalId)
+* **credentialsSecret**: string (WriteOnly): Credentials secret (eg AWS ExternalId)
 * **daysTrialRemaining**: int (ReadOnly): Number of days remaining of trial
 * **defaultManagementGroupId**: string: Default ManagementGroupId
 * **displayName**: string: Connector DisplayName

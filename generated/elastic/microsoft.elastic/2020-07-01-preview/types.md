@@ -37,7 +37,7 @@
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
 * **monitoringStatus**: 'Disabled' | 'Enabled': Flag specifying if the resource monitoring is enabled or disabled.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating': Provisioning state of Elastic resource.
-* **userInfo**: [UserInfo](#userinfo): User Information to be passed to partners.
+* **userInfo**: [UserInfo](#userinfo) (WriteOnly): User Information to be passed to partners.
 
 ## ElasticProperties
 ### Properties

@@ -1,9 +1,9 @@
-# Microsoft.DesktopVirtualization @ 2021-05-13-preview
+# Microsoft.DesktopVirtualization @ 2021-09-03-preview
 
-## Resource Microsoft.DesktopVirtualization/applicationGroups@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/applicationGroups@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
@@ -18,20 +18,20 @@
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/applicationGroups/applications@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): Schema for Application properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/hostPools@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/hostPools@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
@@ -46,40 +46,30 @@
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/hostPools/msixPackages@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MsixPackageProperties](#msixpackageproperties) (Required): Schema for MSIX Package properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/msixPackages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/hostPools/sessionHostConfigurations@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [SessionHostConfigurationProperties](#sessionhostconfigurationproperties): Session host configurations of HostPool.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: 'Microsoft.DesktopVirtualization/hostPools/sessionHostConfigurations' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.DesktopVirtualization/scalingPlans@2021-05-13-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
@@ -94,10 +84,10 @@
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/workspaces@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/workspaces@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceModelWithAllowedPropertySetIdentity](#resourcemodelwithallowedpropertysetidentity)
@@ -112,10 +102,10 @@
 * **tags**: [ResourceModelWithAllowedPropertySetTags](#resourcemodelwithallowedpropertysettags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2021-05-13-preview
+## Resource Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2021-09-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2021-09-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
@@ -208,7 +198,6 @@
 * **publicNetworkAccess**: 'Disabled' | 'Enabled': Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints
 * **registrationInfo**: [RegistrationInfo](#registrationinfo): Represents a RegistrationInfo definition.
 * **ring**: int: The ring number of HostPool.
-* **sessionHostComponentUpdateConfiguration**: [SessionHostComponentUpdateConfigurationProperties](#sessionhostcomponentupdateconfigurationproperties): The session host configuration for updating agent, monitoring agent, and stack component.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
 * **ssoClientId**: string: ClientId for the registered Relying Party used to issue WVD SSO certificates.
 * **ssoClientSecretKeyVaultPath**: string: Path to Azure KeyVault storing the secret used for communication to ADFS.
@@ -222,24 +211,6 @@
 * **expirationTime**: string: Expiration time of registration token.
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update': The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
-
-## SessionHostComponentUpdateConfigurationProperties
-### Properties
-* **maintenanceType**: 'Default' | 'TenantAdminControlled': The type of maintenance for session host components.
-* **maintenanceWindowTimeZone**: string: Time zone for maintenance as defined in https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-5.0. Must be set if useLocalTime is true.
-* **primaryWindow**: [MaintenanceWindowProperties](#maintenancewindowproperties): Maintenance window starting hour and day of week.
-* **secondaryWindow**: [SecondaryWindowProperties](#secondarywindowproperties): Secondary maintenance windows is a list of days at one specific hour. Maintenance windows are 2 hours long. We try to exercise this only when the primary window update fails.
-* **useSessionHostLocalTime**: bool: Whether to use localTime of the virtual machine.
-
-## MaintenanceWindowProperties
-### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the week.
-* **hour**: int: The update start hour of the day. (0 - 23)
-
-## SecondaryWindowProperties
-### Properties
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Set of days of the week on which this schedule is active.
-* **hour**: int: The update start hour of the day. (0 - 23)
 
 ## ResourceModelWithAllowedPropertySetTags
 ### Properties
@@ -292,54 +263,13 @@
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
 
-## SessionHostConfigurationProperties
-### Properties
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | 'UltraSSD_LRS': The disk type used by virtual machine in hostpool session host.
-* **domainInfo**: [DomainInfoProperties](#domaininfoproperties): Domain configurations of session hosts.
-* **imageInfo**: [ImageInfoProperties](#imageinfoproperties): Image configurations of session host in a HostPool.
-* **version**: string (ReadOnly): The time when session host configuration was last modified and something was changed.
-* **vmCustomConfigurationUri**: string: The uri to the storage blob containing scripts to be run on the virtual machine after provisioning.
-* **vMSizeId**: string: The id of the size of a virtual machine connected to a hostpool.
-
-## DomainInfoProperties
-### Properties
-* **credentials**: [CredentialsProperties](#credentialsproperties): Credentials needed to create the virtual machine.
-* **joinType**: 'ActiveDirectory' | 'AzureActiveDirectory': The type of domain join done by the virtual machine.
-* **mdmProviderGuid**: string: The MDM Provider GUID used during MDM enrollment for Azure AD joined virtual machines.
-* **name**: string: The domain a virtual machine connected to a hostpool will join.
-
-## CredentialsProperties
-### Properties
-* **domainAdmin**: [KeyVaultCredentialProperties](#keyvaultcredentialproperties): Credentials kept in the keyvault.
-* **localAdmin**: [KeyVaultCredentialProperties](#keyvaultcredentialproperties): Credentials kept in the keyvault.
-
-## KeyVaultCredentialProperties
-### Properties
-* **passwordKeyVaultResourceId**: string: The keyvault resource id to the keyvault secrets.
-* **passwordSecretName**: string: The keyvault secret name the password is stored in.
-* **userName**: string: The user name to the account.
-
-## ImageInfoProperties
-### Properties
-* **customId**: string: The resource id of the custom image or shared image. Image type must be CustomImage.
-* **marketPlaceInfo**: [MarketPlaceInfoProperties](#marketplaceinfoproperties): Image configurations of HostPool.
-* **storageBlobUri**: string: The uri to the storage blob which contains the VHD. Image type must be StorageBlob.
-* **type**: 'CustomImage' | 'Gallery' | 'StorageBlob': The type of image session hosts use in the hostpool.
-
-## MarketPlaceInfoProperties
-### Properties
-* **exactVersion**: string: The exact version of the image.
-* **offer**: string: The offer of the image.
-* **publisher**: string: The publisher of the image.
-* **sku**: string: The sku of the image.
-
 ## ScalingPlanProperties
 ### Properties
 * **description**: string: Description of scaling plan.
 * **exclusionTag**: string: Exclusion tag for scaling plan.
 * **friendlyName**: string: User friendly name of scaling plan.
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]: List of ScalingHostPoolReference definitions.
-* **hostPoolType**: 'BYODesktop' | 'Personal' | 'Pooled': HostPool type for desktop.
+* **hostPoolType**: 'Pooled': HostPool type for desktop.
 * **objectId**: string (ReadOnly): ObjectId of scaling plan. (internal use)
 * **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingSchedule definitions.
 * **timeZone**: string: Timezone of the scaling plan.
@@ -354,21 +284,26 @@
 * **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Set of days of the week on which this schedule is active.
 * **name**: string: Name of the scaling schedule.
 * **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
-* **offPeakStartTime**: string: Starting time for off-peak period.
+* **offPeakStartTime**: [Time](#time): The time for a scaling action to occur.
 * **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
-* **peakStartTime**: string: Starting time for peak period.
+* **peakStartTime**: [Time](#time): The time for a scaling action to occur.
 * **rampDownCapacityThresholdPct**: int: Capacity threshold for ramp down period.
 * **rampDownForceLogoffUsers**: bool: Should users be logged off forcefully from hosts.
 * **rampDownLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **rampDownMinimumHostsPct**: int: Minimum host percentage for ramp down period.
 * **rampDownNotificationMessage**: string: Notification message for users during ramp down period.
-* **rampDownStartTime**: string: Starting time for ramp down period.
+* **rampDownStartTime**: [Time](#time): The time for a scaling action to occur.
 * **rampDownStopHostsWhen**: 'ZeroActiveSessions' | 'ZeroSessions': Specifies when to stop hosts during ramp down period.
 * **rampDownWaitTimeMinutes**: int: Number of minutes to wait to stop hosts during ramp down period.
 * **rampUpCapacityThresholdPct**: int: Capacity threshold for ramp up period.
 * **rampUpLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst': Load balancing algorithm for ramp up period.
 * **rampUpMinimumHostsPct**: int: Minimum host percentage for ramp up period.
-* **rampUpStartTime**: string: Starting time for ramp up period.
+* **rampUpStartTime**: [Time](#time): The time for a scaling action to occur.
+
+## Time
+### Properties
+* **hour**: int (Required): The hour.
+* **minute**: int (Required): The minute.
 
 ## ResourceModelWithAllowedPropertySetTags
 ### Properties

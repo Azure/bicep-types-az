@@ -452,7 +452,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Connection monitor location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectionMonitorParameters](#connectionmonitorparameters) (Required): Describes the properties of a connection monitor.
+* **properties**: [ConnectionMonitorParameters](#connectionmonitorparameters) (Required): Parameters that define the operation to create a connection monitor.
 * **tags**: [ConnectionMonitorTags](#connectionmonitortags): Connection monitor tags.
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -475,7 +475,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): The properties of a packet capture session.
+* **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Parameters that define the create packet capture operation.
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/p2svpnGateways@2021-02-01
@@ -1354,6 +1354,7 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private endpoint.
 * **privateLinkServiceConnections**: [PrivateLinkServiceConnection](#privatelinkserviceconnection)[]: A grouping of information about the connection to the remote resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **resourceGuid**: string: The resource id of private endpoint.
 * **subnet**: [Subnet](#subnet): Subnet in a virtual network resource.
 
 ## CustomDnsConfigPropertiesFormat
@@ -1376,6 +1377,7 @@
 * **privateLinkServiceId**: string: The resource id of private link service.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **requestMessage**: string: A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+* **resolvedPrivateLinkServiceLocation**: string: The location for the resolved private link service.
 
 ## PrivateLinkServiceConnectionState
 ### Properties
@@ -1410,6 +1412,7 @@
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[] (ReadOnly): An array of references to the network interfaces created for this private link service.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): An array of list about connections to the private endpoint.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **resourceGuid**: string: The resource id of private link service.
 * **visibility**: [PrivateLinkServicePropertiesVisibility](#privatelinkservicepropertiesvisibility): The visibility list of the private link service.
 
 ## PrivateLinkServicePropertiesAutoApproval
@@ -3615,12 +3618,16 @@
 
 ## PrivateDnsZoneConfig
 ### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly): The id of the privateDnsZoneConfig.
 * **name**: string: Name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [PrivateDnsZonePropertiesFormat](#privatednszonepropertiesformat): Properties of the private dns zone configuration resource.
+* **type**: string (ReadOnly): Type of resource. Will be specified as private dns zone configurations.
 
 ## PrivateDnsZonePropertiesFormat
 ### Properties
 * **privateDnsZoneId**: string: The resource id of the private dns zone.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **recordSets**: [RecordSet](#recordset)[] (ReadOnly): A collection of information regarding a recordSet, holding information to identify private resources.
 
 ## RecordSet

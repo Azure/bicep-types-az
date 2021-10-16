@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConsoleCreateProperties](#consolecreateproperties) (Required): Cloud shell console properties.
+* **properties**: [ConsoleCreateProperties](#consolecreateproperties) (Required): Cloud shell properties for creating a console.
 * **type**: 'Microsoft.Portal/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Portal/locations/consoles@2018-10-01

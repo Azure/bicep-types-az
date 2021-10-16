@@ -3,14 +3,14 @@
 ## Resource microsoft.visualstudio/account@2014-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **accountName**: string (WriteOnly)
+* **accountName**: string (WriteOnly): The account name.
 * **apiVersion**: '2014-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The Azure instance location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **operationType**: 'create' | 'link' | 'unknown' | 'update' (WriteOnly)
-* **properties**: [AccountResourceRequestProperties](#accountresourcerequestproperties): Resource properties.
-* **tags**: [AccountResourceRequestTags](#accountresourcerequesttags): Resource tags.
+* **operationType**: 'create' | 'link' | 'unknown' | 'update' (WriteOnly): The type of the operation.
+* **properties**: [AccountResourceRequestProperties](#accountresourcerequestproperties): The custom properties of the resource.
+* **tags**: [AccountResourceRequestTags](#accountresourcerequesttags): The custom tags of the resource.
 * **type**: 'microsoft.visualstudio/account' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.visualstudio/account/extension@2014-04-01-preview
@@ -18,11 +18,11 @@
 ### Properties
 * **apiVersion**: '2014-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Resource location.
+* **location**: string: The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **plan**: [ExtensionResourcePlan](#extensionresourceplan): Plan data for an extension resource.
-* **properties**: [ExtensionResourceRequestProperties](#extensionresourcerequestproperties): Resource properties.
-* **tags**: [ExtensionResourceRequestTags](#extensionresourcerequesttags): Resource tags.
+* **properties**: [ExtensionResourceRequestProperties](#extensionresourcerequestproperties): A dictionary of extended properties. This property is currently unused.
+* **tags**: [ExtensionResourceRequestTags](#extensionresourcerequesttags): A dictionary of user-defined tags to be stored with the extension resource.
 * **type**: 'microsoft.visualstudio/account/extension' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.visualstudio/account/project@2014-04-01-preview

@@ -22,7 +22,7 @@
 * **format**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' (ReadOnly): Format in which the API Details are exported to the Storage Blob with Sas Key valid for 5 minutes.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly)
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): API Create or Update Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 * **value**: [ApiExportResultValue](#apiexportresultvalue) (ReadOnly): The object defining the schema of the exported API Detail
 
@@ -122,7 +122,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties): TagDescription contract Properties.
+* **properties**: [TagDescriptionBaseProperties](#tagdescriptionbaseproperties): Parameters supplied to the Create TagDescription operation.
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/tags@2021-01-01-preview
@@ -176,7 +176,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Properties of the Certificate contract.
+* **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Parameters supplied to the CreateOrUpdate certificate operation.
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/contentTypes@2021-01-01-preview
@@ -248,7 +248,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Group contract Properties.
+* **properties**: [GroupCreateParametersProperties](#groupcreateparametersproperties): Parameters supplied to the Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups/users@2021-01-01-preview
@@ -417,7 +417,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SubscriptionCreateParameterProperties](#subscriptioncreateparameterproperties): Subscription details.
+* **properties**: [SubscriptionCreateParameterProperties](#subscriptioncreateparameterproperties): Parameters supplied to the Create subscription operation.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tags@2021-01-01-preview
@@ -435,7 +435,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'accountClosedDeveloper' | 'applicationApprovedNotificationMessage' | 'confirmSignUpIdentityDefault' | 'emailChangeIdentityDefault' | 'inviteUserNotificationMessage' | 'newCommentNotificationMessage' | 'newDeveloperNotificationMessage' | 'newIssueNotificationMessage' | 'passwordResetByAdminNotificationMessage' | 'passwordResetIdentityDefault' | 'purchaseDeveloperNotificationMessage' | 'quotaLimitApproachingDeveloperNotificationMessage' | 'rejectDeveloperNotificationMessage' | 'requestDeveloperNotificationMessage' (Required, DeployTimeConstant): The resource name
-* **properties**: [EmailTemplateUpdateParameterProperties](#emailtemplateupdateparameterproperties): Email Template Contract properties.
+* **properties**: [EmailTemplateUpdateParameterProperties](#emailtemplateupdateparameterproperties): Email Template Update Contract properties.
 * **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tenant@2021-01-01-preview
@@ -444,7 +444,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'access' | 'gitAccess' (Required, DeployTimeConstant): The resource name
-* **properties**: [AccessInformationCreateParameterProperties](#accessinformationcreateparameterproperties): Tenant access information contract of the API Management service.
+* **properties**: [AccessInformationCreateParameterProperties](#accessinformationcreateparameterproperties): Tenant access information update parameters of the API Management service
 * **type**: 'Microsoft.ApiManagement/service/tenant' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/users@2021-01-01-preview
@@ -453,7 +453,7 @@
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): User profile.
+* **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): Parameters supplied to the Create User operation.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApiManagementServiceIdentity
@@ -570,76 +570,79 @@ dictionary key references will be ARM resource ids in the form:
 
 ## ApiCreateOrUpdateProperties
 ### Properties
-* **apiRevision**: string (WriteOnly)
-* **apiRevisionDescription**: string (WriteOnly)
-* **apiType**: 'http' | 'soap' | 'websocket' (WriteOnly)
-* **apiVersion**: string (WriteOnly)
-* **apiVersionDescription**: string (WriteOnly)
-* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly)
-* **apiVersionSetId**: string (WriteOnly)
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly)
-* **contact**: [ApiContactInformation](#apicontactinformation) (WriteOnly)
-* **description**: string (WriteOnly)
-* **displayName**: string (WriteOnly)
-* **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly)
-* **isCurrent**: bool (WriteOnly)
-* **isOnline**: bool (ReadOnly, WriteOnly)
-* **license**: [ApiLicenseInformation](#apilicenseinformation) (WriteOnly)
-* **path**: string (Required, WriteOnly)
-* **protocols**: 'http' | 'https' | 'ws' | 'wss'[] (WriteOnly)
-* **serviceUrl**: string (WriteOnly)
-* **sourceApiId**: string (WriteOnly)
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly)
-* **subscriptionRequired**: bool (WriteOnly)
-* **termsOfServiceUrl**: string (WriteOnly)
-* **type**: 'http' | 'soap' | 'websocket' (WriteOnly)
-* **value**: string (WriteOnly)
-* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly)
+* **apiRevision**: string (WriteOnly): Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (WriteOnly): Description of the API Revision.
+* **apiType**: 'http' | 'soap' | 'websocket' (WriteOnly): Type of API to create. 
+ * `http` creates a REST API 
+ * `soap` creates a SOAP pass-through API  
+ * `websocket` creates websocket API.
+* **apiVersion**: string (WriteOnly): Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (WriteOnly): Description of the API Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (WriteOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): API Authentication Settings.
+* **contact**: [ApiContactInformation](#apicontactinformation) (WriteOnly): API contact information
+* **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (WriteOnly): API name. Must be 1 to 300 characters long.
+* **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly): Format of the Content in which the API is getting imported.
+* **isCurrent**: bool (WriteOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly, WriteOnly): Indicates if API revision is accessible via the gateway.
+* **license**: [ApiLicenseInformation](#apilicenseinformation) (WriteOnly): API license information
+* **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https' | 'ws' | 'wss'[] (WriteOnly): Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string (WriteOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (WriteOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (WriteOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **termsOfServiceUrl**: string (WriteOnly): A URL to the Terms of Service for the API. MUST be in the format of a URL.
+* **type**: 'http' | 'soap' | 'websocket' (WriteOnly): Type of API.
+* **value**: string (WriteOnly): Content value when Importing an API.
+* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiVersionSetContractDetails
 ### Properties
-* **description**: string (WriteOnly)
-* **id**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **versionHeaderName**: string (WriteOnly)
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly)
-* **versionQueryName**: string (WriteOnly)
+* **description**: string (WriteOnly): Description of API Version Set.
+* **id**: string (WriteOnly): Identifier for existing API Version Set. Omit this value to create a new Version Set.
+* **name**: string (WriteOnly): The display Name of the API Version Set.
+* **versionHeaderName**: string (WriteOnly): Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
+* **versionQueryName**: string (WriteOnly): Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly)
-* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly)
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
-* **authorizationServerId**: string (WriteOnly)
-* **scope**: string (WriteOnly)
+* **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
+* **scope**: string (WriteOnly): operations scope.
 
 ## OpenIdAuthenticationSettingsContract
 ### Properties
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly)
-* **openidProviderId**: string (WriteOnly)
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly): How to send token to the server.
+* **openidProviderId**: string (WriteOnly): OAuth authorization server identifier.
 
 ## ApiContactInformation
 ### Properties
-* **email**: string (WriteOnly)
-* **name**: string (WriteOnly)
-* **url**: string (WriteOnly)
+* **email**: string (WriteOnly): The email address of the contact person/organization. MUST be in the format of an email address
+* **name**: string (WriteOnly): The identifying name of the contact person/organization
+* **url**: string (WriteOnly): The URL pointing to the contact information. MUST be in the format of a URL
 
 ## ApiLicenseInformation
 ### Properties
-* **name**: string (WriteOnly)
-* **url**: string (WriteOnly)
+* **name**: string (WriteOnly): The license name used for the API
+* **url**: string (WriteOnly): A URL to the license used for the API. MUST be in the format of a URL
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
-* **header**: string (WriteOnly)
-* **query**: string (WriteOnly)
+* **header**: string (WriteOnly): Subscription key header name.
+* **query**: string (WriteOnly): Subscription key query string parameter name.
 
 ## ApiCreateOrUpdatePropertiesWsdlSelector
 ### Properties
-* **wsdlEndpointName**: string (WriteOnly)
-* **wsdlServiceName**: string (WriteOnly)
+* **wsdlEndpointName**: string (WriteOnly): Name of endpoint(port) to import from WSDL
+* **wsdlServiceName**: string (WriteOnly): Name of service to import from WSDL
 
 ## ApiExportResultValue
 ### Properties
@@ -730,6 +733,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **defaultValue**: string: Default parameter value.
 * **description**: string: Parameter description.
+* **examples**: [ParameterExamplesContract](#parameterexamplescontract): Parameter examples.
 * **name**: string (Required): Parameter name.
 * **required**: bool: Specifies whether parameter is required or not.
 * **schemaId**: string: Schema identifier.
@@ -737,11 +741,22 @@ dictionary key references will be ARM resource ids in the form:
 * **typeName**: string: Type name defined by the schema.
 * **values**: string[]: Parameter values.
 
+## ParameterExamplesContract
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [ParameterExampleContract](#parameterexamplecontract)
+
+## ParameterExampleContract
+### Properties
+* **description**: string: Long description for the example
+* **externalValue**: string: A URL that points to the literal example
+* **summary**: string: Short description for the example
+* **value**: any: Anything
+
 ## RepresentationContract
 ### Properties
 * **contentType**: string (Required): Specifies a registered or custom content type for this representation, e.g. application/xml.
 * **formParameters**: [ParameterContract](#parametercontract)[]: Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
-* **sample**: string: An example of the representation.
 * **schemaId**: string: Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
 * **typeName**: string: Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
 
@@ -886,10 +901,10 @@ dictionary key references will be ARM resource ids in the form:
 
 ## CertificateCreateOrUpdateProperties
 ### Properties
-* **data**: string (WriteOnly)
+* **data**: string (WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **keyVault**: [KeyVaultContractCreateProperties](#keyvaultcontractcreateproperties): KeyVault contract details.
-* **password**: string (WriteOnly)
+* **keyVault**: [KeyVaultContractCreateProperties](#keyvaultcontractcreateproperties): Create keyVault contract details.
+* **password**: string (WriteOnly): Password for the Certificate
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
 * **thumbprint**: string (ReadOnly): Thumbprint of the certificate.
 
@@ -950,9 +965,9 @@ dictionary key references will be ARM resource ids in the form:
 ## GroupCreateParametersProperties
 ### Properties
 * **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-* **description**: string: Group description. Can contain HTML formatting tags.
+* **description**: string: Group description.
 * **displayName**: string (Required): Group name.
-* **externalId**: string: For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
+* **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
 * **type**: 'custom' | 'external' | 'system': Group type.
 
 ## IdentityProviderCreateContractProperties
@@ -985,7 +1000,7 @@ Instrumentation key for applicationInsights logger.
 ## NamedValueCreateContractProperties
 ### Properties
 * **displayName**: string (Required): Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
-* **keyVault**: [KeyVaultContractCreateProperties](#keyvaultcontractcreateproperties): KeyVault contract details.
+* **keyVault**: [KeyVaultContractCreateProperties](#keyvaultcontractcreateproperties): Create keyVault contract details.
 * **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
 * **tags**: string[]: Optional tags that when provided can be used to filter the NamedValue list.
 * **value**: string: Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
@@ -1060,16 +1075,16 @@ Instrumentation key for applicationInsights logger.
 
 ## SubscriptionCreateParameterProperties
 ### Properties
-* **allowTracing**: bool: Determines whether tracing is enabled
+* **allowTracing**: bool: Determines whether tracing can be enabled
 * **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **displayName**: string (Required): The name of the subscription, or null if the subscription has no name.
+* **displayName**: string (Required): Subscription name.
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **ownerId**: string: The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-* **primaryKey**: string: Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **ownerId**: string: User (user id path) for whom subscription is being created in form /users/{userId}
+* **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
 * **scope**: string (Required): Scope like /products/{productId} or /apis or /apis/{apiId}.
-* **secondaryKey**: string: Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
@@ -1093,21 +1108,21 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **enabled**: bool: Determines whether direct access is enabled.
 * **id**: string (ReadOnly): Access Information type ('access' or 'gitAccess')
-* **primaryKey**: string (WriteOnly)
+* **primaryKey**: string (WriteOnly): Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 * **principalId**: string: Principal (User) Identifier.
-* **secondaryKey**: string (WriteOnly)
+* **secondaryKey**: string (WriteOnly): Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
 ## UserCreateParameterProperties
 ### Properties
 * **appType**: 'developerPortal' | 'portal' (WriteOnly)
-* **confirmation**: 'invite' | 'signup' (WriteOnly)
-* **email**: string (Required): Email address.
+* **confirmation**: 'invite' | 'signup' (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user.
+* **email**: string (Required): Email address. Must not be empty and must be unique within the service instance.
 * **firstName**: string (Required): First name.
 * **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
 * **identities**: [UserIdentityContract](#useridentitycontract)[]: Collection of user identities.
 * **lastName**: string (Required): Last name.
 * **note**: string: Optional note about a user set by the administrator.
-* **password**: string (WriteOnly)
+* **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
 

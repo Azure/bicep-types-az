@@ -3,14 +3,14 @@
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
-* **address**: [AddressDetails](#addressdetails) (WriteOnly)
+* **address**: [AddressDetails](#addressdetails) (WriteOnly): Address details.
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **displayName**: string (WriteOnly)
-* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (WriteOnly)
+* **displayName**: string (WriteOnly): The name of the billing profile.
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (WriteOnly): Enabled azure plans for the billing profile.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **invoiceEmailOptIn**: bool (WriteOnly)
+* **invoiceEmailOptIn**: bool (WriteOnly): Flag controlling whether the invoices for the billing profile are sent through email.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **poNumber**: string (WriteOnly)
+* **poNumber**: string (WriteOnly): The purchase order name that will appear on the invoices generated for the billing profile.
 * **properties**: [BillingProfileProperties](#billingprofileproperties) (ReadOnly): The properties of the billing profile.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,7 +27,7 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **displayName**: string (WriteOnly)
+* **displayName**: string (WriteOnly): The name of the invoice section.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InvoiceSectionProperties](#invoicesectionproperties) (ReadOnly): The properties of an invoice section.
@@ -80,21 +80,21 @@
 
 ## AddressDetails
 ### Properties
-* **addressLine1**: string (WriteOnly)
-* **addressLine2**: string (WriteOnly)
-* **addressLine3**: string (WriteOnly)
-* **city**: string (WriteOnly)
-* **companyName**: string (WriteOnly)
-* **country**: string (WriteOnly)
-* **firstName**: string (WriteOnly)
-* **lastName**: string (WriteOnly)
-* **postalCode**: string (WriteOnly)
-* **region**: string (WriteOnly)
+* **addressLine1**: string (WriteOnly): Address line 1.
+* **addressLine2**: string (WriteOnly): Address line 2.
+* **addressLine3**: string (WriteOnly): Address line 3.
+* **city**: string (WriteOnly): Address city.
+* **companyName**: string (WriteOnly): Company name.
+* **country**: string (WriteOnly): Country code uses ISO2, 2-digit format.
+* **firstName**: string (WriteOnly): First name.
+* **lastName**: string (WriteOnly): Last name.
+* **postalCode**: string (WriteOnly): Postal code.
+* **region**: string (WriteOnly): Address region.
 
 ## AzurePlan
 ### Properties
-* **skuDescription**: string (ReadOnly, WriteOnly)
-* **skuId**: string (WriteOnly)
+* **skuDescription**: string (ReadOnly, WriteOnly): The sku description.
+* **skuId**: string (WriteOnly): The sku id.
 
 ## BillingProfileProperties
 ### Properties

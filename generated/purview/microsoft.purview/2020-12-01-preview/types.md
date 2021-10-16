@@ -9,7 +9,7 @@
 * **location**: string: Gets or sets the location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): The account properties
-* **sku**: [AccountSku](#accountsku): The Sku
+* **sku**: [AccountSku](#accountsku) (ReadOnly): Gets or sets the Sku.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags on the azure resource.
 * **type**: 'Microsoft.Purview/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,7 +94,7 @@ Configured in AWS to allow use of the role arn used for scanning
 
 ## AccountSku
 ### Properties
-* **capacity**: int: Gets or sets the sku capacity. Possible values include: 4, 16
+* **capacity**: int: Gets or sets the sku capacity.
 * **name**: 'Standard': Gets or sets the sku name.
 
 ## TrackedResourceTags

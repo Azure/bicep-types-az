@@ -46,17 +46,17 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string: The administrator login password (required for server creation).
+* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **availabilityZone**: string: availability zone information of the server.
 * **backup**: [Backup](#backup): Backup properties of a server
-* **createMode**: 'Create' | 'Default' | 'PointInTimeRestore' | 'Update': The mode to create a new PostgreSQL server.
+* **createMode**: 'Create' | 'Default' | 'PointInTimeRestore' | 'Update' (WriteOnly): The mode to create a new PostgreSQL server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **highAvailability**: [HighAvailability](#highavailability): High availability properties of a server
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window properties of a server.
 * **minorVersion**: string (ReadOnly): The minor version of the server.
 * **network**: [Network](#network): Network properties of a server
-* **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
-* **sourceServerResourceId**: string: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
+* **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
+* **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
 * **storage**: [Storage](#storage): Storage properties of a server
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.

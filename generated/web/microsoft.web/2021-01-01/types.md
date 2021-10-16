@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/hostingEnvironments/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/hostingEnvironments/workerPools@2021-01-01
@@ -118,9 +118,9 @@
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (WriteOnly)
+* **kind**: string (WriteOnly): Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly)
+* **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites@2021-01-01
@@ -295,7 +295,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/functions@2021-01-01
@@ -354,7 +354,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/networkConfig@2021-01-01
@@ -396,7 +396,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/publicCertificates@2021-01-01
@@ -580,7 +580,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/functions@2021-01-01
@@ -639,7 +639,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: 'MSDeploy' (Required, DeployTimeConstant): The resource name
-* **properties**: [MSDeployCore](#msdeploycore): MSDeployStatus resource specific properties
+* **properties**: [MSDeployCore](#msdeploycore): MSDeploy ARM PUT core information
 * **type**: 'Microsoft.Web/sites/slots/instances/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/premieraddons@2021-01-01
@@ -671,7 +671,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/sites/slots/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/slots/publicCertificates@2021-01-01
@@ -843,7 +843,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [StaticSiteCustomDomainRequestPropertiesARMResourceProperties](#staticsitecustomdomainrequestpropertiesarmresourceproperties): StaticSiteCustomDomainOverviewARMResource resource specific properties
+* **properties**: [StaticSiteCustomDomainRequestPropertiesARMResourceProperties](#staticsitecustomdomainrequestpropertiesarmresourceproperties): StaticSiteCustomDomainRequestPropertiesARMResource resource specific properties
 * **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/privateEndpointConnections@2021-01-01
@@ -853,7 +853,7 @@ This is valid for all deployment slots in an app.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): RemotePrivateEndpointConnectionARMResource resource specific properties
+* **properties**: [PrivateLinkConnectionApprovalRequest](#privatelinkconnectionapprovalrequest): A request to approve or reject a private endpoint connection
 * **type**: 'Microsoft.Web/staticSites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/staticSites/userProvidedFunctionApps@2021-01-01
@@ -880,7 +880,7 @@ This is valid for all deployment slots in an app.
 * **keyVaultId**: string: Key Vault Csm resource Id.
 * **keyVaultSecretName**: string: Key Vault secret name.
 * **keyVaultSecretStatus**: 'AzureServiceUnauthorizedToAccessKeyVault' | 'CertificateOrderFailed' | 'ExternalPrivateKey' | 'Initialized' | 'KeyVaultDoesNotExist' | 'KeyVaultSecretDoesNotExist' | 'OperationNotPermittedOnKeyVault' | 'Succeeded' | 'Unknown' | 'UnknownError' | 'WaitingOnCertificateOrder' (ReadOnly): Status of the Key Vault secret.
-* **password**: string: Certificate password.
+* **password**: string (WriteOnly): Certificate password.
 * **pfxBlob**: any: Pfx blob.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **selfLink**: string (ReadOnly): Self link.
@@ -1017,7 +1017,7 @@ This is valid for all deployment slots in an app.
 ## LogAnalyticsConfiguration
 ### Properties
 * **customerId**: string
-* **sharedKey**: string
+* **sharedKey**: string (WriteOnly)
 
 ## ArcConfiguration
 ### Properties
@@ -1027,7 +1027,7 @@ This is valid for all deployment slots in an app.
 * **artifactStorageMountPath**: string
 * **artifactStorageNodeName**: string
 * **frontEndServiceConfiguration**: [FrontEndConfiguration](#frontendconfiguration)
-* **kubeConfig**: string
+* **kubeConfig**: string (WriteOnly)
 
 ## FrontEndConfiguration
 ### Properties
@@ -1084,13 +1084,18 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 ## VnetGatewayProperties
 ### Properties
 * **vnetName**: string: The Virtual Network name.
-* **vpnPackageUri**: string (Required): The URI where the VPN package can be downloaded.
+* **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
 
 ## VnetRouteProperties
 ### Properties
-* **endAddress**: string (WriteOnly)
-* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly)
-* **startAddress**: string (WriteOnly)
+* **endAddress**: string (WriteOnly): The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+* **routeType**: 'DEFAULT' | 'INHERITED' | 'STATIC' (WriteOnly): The type of route this is:
+DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+INHERITED - Routes inherited from the real Virtual Network routes
+STATIC - Static route set on the app only
+
+These values will be used for syncing an app's routes with those from a Virtual Network.
+* **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -1119,7 +1124,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 - ClientCertEnabled: false means ClientCert is ignored.
 - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
 - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-* **cloningInfo**: [CloningInfo](#cloninginfo): Information needed for cloning operation.
+* **cloningInfo**: [CloningInfo](#cloninginfo) (WriteOnly): Information needed for cloning operation.
 * **containerSize**: int: Size of the function container.
 * **customDomainVerificationId**: string: Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
 * **dailyMemoryTimeQuota**: int: Maximum allowed daily memory-time quota (applicable on dynamic apps only).
@@ -1587,14 +1592,6 @@ application used for sign-in.
 
 ## GlobalValidation
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [GlobalValidationProperties](#globalvalidationproperties): GlobalValidation resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## GlobalValidationProperties
-### Properties
 * **excludedPaths**: string[]: The paths for which unauthenticated flow would not be redirected to the login page.
 * **redirectToProvider**: string: The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
@@ -1604,27 +1601,11 @@ action is set to "RedirectToLoginPage".
 
 ## HttpSettings
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [HttpSettingsProperties](#httpsettingsproperties): HttpSettings resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## HttpSettingsProperties
-### Properties
 * **forwardProxy**: [ForwardProxy](#forwardproxy): The configuration settings of a forward proxy used to make the requests.
 * **requireHttps**: bool: <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
 * **routes**: [HttpSettingsRoutes](#httpsettingsroutes): The configuration settings of the paths HTTP requests.
 
 ## ForwardProxy
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [ForwardProxyProperties](#forwardproxyproperties): ForwardProxy resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## ForwardProxyProperties
 ### Properties
 * **convention**: 'Custom' | 'NoProxy' | 'Standard': The convention used to determine the url of the request made.
 * **customHostHeaderName**: string: The name of the header containing the host of the request.
@@ -1632,30 +1613,14 @@ action is set to "RedirectToLoginPage".
 
 ## HttpSettingsRoutes
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [HttpSettingsRoutesProperties](#httpsettingsroutesproperties): HttpSettingsRoutes resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## HttpSettingsRoutesProperties
-### Properties
 * **apiPrefix**: string: The prefix that should precede all the authentication/authorization paths.
 
 ## IdentityProviders
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [IdentityProvidersProperties](#identityprovidersproperties): IdentityProviders resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## IdentityProvidersProperties
-### Properties
 * **apple**: [Apple](#apple): The configuration settings of the Apple provider.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The configuration settings of the Azure Active directory provider.
 * **azureStaticWebApps**: [AzureStaticWebApps](#azurestaticwebapps): The configuration settings of the Azure Static Web Apps provider.
-* **customOpenIdConnectProviders**: [IdentityProvidersPropertiesCustomOpenIdConnectProviders](#identityproviderspropertiescustomopenidconnectproviders): The map of the name of the alias of each custom Open ID Connect provider to the
+* **customOpenIdConnectProviders**: [IdentityProvidersCustomOpenIdConnectProviders](#identityproviderscustomopenidconnectproviders): The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.
 * **facebook**: [Facebook](#facebook): The configuration settings of the Facebook provider.
 * **gitHub**: [GitHub](#github): The configuration settings of the GitHub provider.
@@ -1665,52 +1630,20 @@ configuration settings of the custom Open ID Connect provider.
 
 ## Apple
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AppleProperties](#appleproperties): Apple resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AppleProperties
-### Properties
 * **enabled**: bool: <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [AppleRegistration](#appleregistration): The configuration settings of the registration for the Apple provider
 
 ## LoginScopes
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [LoginScopesProperties](#loginscopesproperties): LoginScopes resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## LoginScopesProperties
-### Properties
 * **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
 ## AppleRegistration
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AppleRegistrationProperties](#appleregistrationproperties): AppleRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AppleRegistrationProperties
 ### Properties
 * **clientId**: string: The Client ID of the app used for login.
 * **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## AzureActiveDirectory
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AzureActiveDirectoryProperties](#azureactivedirectoryproperties): AzureActiveDirectory resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AzureActiveDirectoryProperties
 ### Properties
 * **enabled**: bool: <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **isAutoProvisioned**: bool: Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
@@ -1722,32 +1655,20 @@ read or write to this property.
 
 ## AzureActiveDirectoryLogin
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AzureActiveDirectoryLoginProperties](#azureactivedirectoryloginproperties): AzureActiveDirectoryLogin resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AzureActiveDirectoryLoginProperties
-### Properties
-* **disableWWWAuthenticate**: bool
+* **disableWWWAuthenticate**: bool: <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
 * **loginParameters**: string[]: Login parameters to send to the OpenID Connect authorization endpoint when
 a user logs in. Each parameter must be in the form "key=value".
 
 ## AzureActiveDirectoryRegistration
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AzureActiveDirectoryRegistrationProperties](#azureactivedirectoryregistrationproperties): AzureActiveDirectoryRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AzureActiveDirectoryRegistrationProperties
-### Properties
 * **clientId**: string: The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
 More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
+* **clientSecretCertificateIssuer**: string: An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.
+* **clientSecretCertificateSubjectAlternativeName**: string: An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
+a replacement for the Client Secret Certificate Thumbprint. It is also optional.
 * **clientSecretCertificateThumbprint**: string: An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
 a replacement for the Client Secret. It is also optional.
 * **clientSecretSettingName**: string: The app setting name that contains the client secret of the relying party application.
@@ -1758,69 +1679,29 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## AzureActiveDirectoryValidation
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AzureActiveDirectoryValidationProperties](#azureactivedirectoryvalidationproperties): AzureActiveDirectoryValidation resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AzureActiveDirectoryValidationProperties
-### Properties
 * **allowedAudiences**: string[]: The list of audiences that can make successful authentication/authorization requests.
 * **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks): The configuration settings of the checks that should be made while validating the JWT Claims.
 
 ## JwtClaimChecks
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [JwtClaimChecksProperties](#jwtclaimchecksproperties): JwtClaimChecks resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## JwtClaimChecksProperties
 ### Properties
 * **allowedClientApplications**: string[]: The list of the allowed client applications.
 * **allowedGroups**: string[]: The list of the allowed groups.
 
 ## AzureStaticWebApps
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AzureStaticWebAppsProperties](#azurestaticwebappsproperties): AzureStaticWebApps resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AzureStaticWebAppsProperties
-### Properties
 * **enabled**: bool: <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the registration for the Azure Static Web Apps provider
 
 ## AzureStaticWebAppsRegistration
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AzureStaticWebAppsRegistrationProperties](#azurestaticwebappsregistrationproperties): AzureStaticWebAppsRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AzureStaticWebAppsRegistrationProperties
-### Properties
 * **clientId**: string: The Client ID of the app used for login.
 
-## IdentityProvidersPropertiesCustomOpenIdConnectProviders
+## IdentityProvidersCustomOpenIdConnectProviders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomOpenIdConnectProvider](#customopenidconnectprovider)
 
 ## CustomOpenIdConnectProvider
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [CustomOpenIdConnectProviderProperties](#customopenidconnectproviderproperties): CustomOpenIdConnectProvider resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## CustomOpenIdConnectProviderProperties
 ### Properties
 * **enabled**: bool: <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
 * **login**: [OpenIdConnectLogin](#openidconnectlogin): The configuration settings of the login flow of the custom Open ID Connect provider.
@@ -1828,26 +1709,10 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## OpenIdConnectLogin
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [OpenIdConnectLoginProperties](#openidconnectloginproperties): OpenIdConnectLogin resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## OpenIdConnectLoginProperties
-### Properties
 * **nameClaimType**: string: The name of the claim that contains the users name.
 * **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
 ## OpenIdConnectRegistration
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [OpenIdConnectRegistrationProperties](#openidconnectregistrationproperties): OpenIdConnectRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## OpenIdConnectRegistrationProperties
 ### Properties
 * **clientCredential**: [OpenIdConnectClientCredential](#openidconnectclientcredential): The authentication client credentials of the custom Open ID Connect provider.
 * **clientId**: string: The client id of the custom Open ID Connect provider.
@@ -1855,26 +1720,10 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## OpenIdConnectClientCredential
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [OpenIdConnectClientCredentialProperties](#openidconnectclientcredentialproperties): OpenIdConnectClientCredential resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## OpenIdConnectClientCredentialProperties
-### Properties
 * **clientSecretSettingName**: string: The app setting that contains the client secret for the custom Open ID Connect provider.
 * **method**: 'ClientSecretPost': The method that should be used to authenticate the user.
 
 ## OpenIdConnectConfig
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [OpenIdConnectConfigProperties](#openidconnectconfigproperties): OpenIdConnectConfig resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## OpenIdConnectConfigProperties
 ### Properties
 * **authorizationEndpoint**: string: The endpoint to be used to make an authorization request.
 * **certificationUri**: string: The endpoint that provides the keys necessary to validate the token.
@@ -1884,14 +1733,6 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## Facebook
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [FacebookProperties](#facebookproperties): Facebook resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## FacebookProperties
-### Properties
 * **enabled**: bool: <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **graphApiVersion**: string: The version of the Facebook api to be used while logging in.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
@@ -1899,26 +1740,10 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## AppRegistration
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AppRegistrationProperties](#appregistrationproperties): AppRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AppRegistrationProperties
-### Properties
 * **appId**: string: The App ID of the app used for login.
 * **appSecretSettingName**: string: The app setting name that contains the app secret.
 
 ## GitHub
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [GitHubProperties](#githubproperties): GitHub resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## GitHubProperties
 ### Properties
 * **enabled**: bool: <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
@@ -1926,81 +1751,33 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## ClientRegistration
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [ClientRegistrationProperties](#clientregistrationproperties): ClientRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## ClientRegistrationProperties
-### Properties
 * **clientId**: string: The Client ID of the app used for login.
 * **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## Google
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [GoogleProperties](#googleproperties): Google resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## GoogleProperties
-### Properties
 * **enabled**: bool: <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Allowed Audiences validation flow.
 
 ## AllowedAudiencesValidation
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AllowedAudiencesValidationProperties](#allowedaudiencesvalidationproperties): AllowedAudiencesValidation resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AllowedAudiencesValidationProperties
-### Properties
-* **allowedAudiences**: string[]: Array of AllowedAudiencesValidationPropertiesAllowedAudiencesItem
+* **allowedAudiences**: string[]: The configuration settings of the allowed list of audiences from which to validate the JWT token.
 
 ## LegacyMicrosoftAccount
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [LegacyMicrosoftAccountProperties](#legacymicrosoftaccountproperties): LegacyMicrosoftAccount resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## LegacyMicrosoftAccountProperties
 ### Properties
 * **enabled**: bool: <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation)
+* **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Allowed Audiences validation flow.
 
 ## Twitter
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [TwitterProperties](#twitterproperties): Twitter resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## TwitterProperties
 ### Properties
 * **enabled**: bool: <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **registration**: [TwitterRegistration](#twitterregistration): The configuration settings of the app registration for the Twitter provider.
 
 ## TwitterRegistration
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [TwitterRegistrationProperties](#twitterregistrationproperties): TwitterRegistration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## TwitterRegistrationProperties
 ### Properties
 * **consumerKey**: string: The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
@@ -2009,14 +1786,6 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
 application used for sign-in.
 
 ## Login
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [LoginProperties](#loginproperties): Login resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## LoginProperties
 ### Properties
 * **allowedExternalRedirectUrls**: string[]: External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
@@ -2029,51 +1798,19 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## CookieExpiration
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [CookieExpirationProperties](#cookieexpirationproperties): CookieExpiration resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## CookieExpirationProperties
-### Properties
 * **convention**: 'FixedTime' | 'IdentityProviderDerived': The convention used when determining the session cookie's expiration.
 * **timeToExpiration**: string: The time after the request is made when the session cookie should expire.
 
 ## Nonce
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [NonceProperties](#nonceproperties): Nonce resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## NonceProperties
 ### Properties
 * **nonceExpirationInterval**: string: The time after the request is made when the nonce should expire.
 * **validateNonce**: bool: <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
 
 ## LoginRoutes
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [LoginRoutesProperties](#loginroutesproperties): LoginRoutes resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## LoginRoutesProperties
-### Properties
 * **logoutEndpoint**: string: The endpoint at which a logout request should be made.
 
 ## TokenStore
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [TokenStoreProperties](#tokenstoreproperties): TokenStore resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## TokenStoreProperties
 ### Properties
 * **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore): The configuration settings of the storage of the tokens if blob storage is used.
 * **enabled**: bool: <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
@@ -2084,37 +1821,13 @@ call the token refresh API. The default is 72 hours.
 
 ## BlobStorageTokenStore
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BlobStorageTokenStoreProperties](#blobstoragetokenstoreproperties): BlobStorageTokenStore resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## BlobStorageTokenStoreProperties
-### Properties
 * **sasUrlSettingName**: string: The name of the app setting containing the SAS URL of the blob storage containing the tokens.
 
 ## FileSystemTokenStore
 ### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [FileSystemTokenStoreProperties](#filesystemtokenstoreproperties): FileSystemTokenStore resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## FileSystemTokenStoreProperties
-### Properties
 * **directory**: string: The directory in which the tokens will be stored.
 
 ## AuthPlatform
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [AuthPlatformProperties](#authplatformproperties): AuthPlatform resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## AuthPlatformProperties
 ### Properties
 * **configFilePath**: string: The path of the config file containing auth settings if they come from a file.
 If the path is relative, base will the site's root directory.
@@ -2248,17 +1961,21 @@ Value can range between 25 and 100.
 
 ## MSDeployCore
 ### Properties
-* **appOffline**: bool (WriteOnly)
+* **appOffline**: bool (WriteOnly): Sets the AppOffline rule while the MSDeploy operation executes.
+Setting is <code>false</code> by default.
 * **complete**: bool (ReadOnly): Whether the deployment operation has completed
-* **connectionString**: string (WriteOnly)
-* **dbType**: string (WriteOnly)
+* **connectionString**: string (WriteOnly): SQL Connection String
+* **dbType**: string (WriteOnly): Database Type
 * **deployer**: string (ReadOnly): Username of deployer
 * **endTime**: string (ReadOnly): End time of deploy operation
-* **packageUri**: string (WriteOnly)
+* **packageUri**: string (WriteOnly): Package URI
 * **provisioningState**: 'accepted' | 'canceled' | 'failed' | 'running' | 'succeeded' (ReadOnly): Provisioning state
-* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly)
-* **setParametersXmlFileUri**: string (WriteOnly)
-* **skipAppData**: bool (WriteOnly)
+* **setParameters**: [MSDeployCoreSetParameters](#msdeploycoresetparameters) (WriteOnly): MSDeploy Parameters. Must not be set if SetParametersXmlFileUri is used.
+* **setParametersXmlFileUri**: string (WriteOnly): URI of MSDeploy Parameters file. Must not be set if SetParameters is used.
+* **skipAppData**: bool (WriteOnly): Controls whether the MSDeploy operation skips the App_Data directory.
+If set to <code>true</code>, the existing App_Data directory on the destination
+will not be deleted, and any App_Data directory in the source will be ignored.
+Setting is <code>false</code> by default.
 * **startTime**: string (ReadOnly): Start time of deploy operation
 
 ## MSDeployCoreSetParameters
@@ -2611,6 +2328,6 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 * **domainName**: string (ReadOnly): The domain name for the static site custom domain.
 * **errorMessage**: string (ReadOnly)
 * **status**: 'Adding' | 'Deleting' | 'Failed' | 'Ready' | 'RetrievingValidationToken' | 'Validating' (ReadOnly): The status of the custom domain
-* **validationMethod**: string (WriteOnly)
+* **validationMethod**: string (WriteOnly): Validation method for adding a custom domain
 * **validationToken**: string (ReadOnly): The TXT record validation token
 

@@ -18,14 +18,18 @@
 * **guestConfiguration**: [GuestConfigurationNavigation](#guestconfigurationnavigation): Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
 * **lastComplianceStatusChecked**: string (ReadOnly): Date and time when last compliance status was checked.
 * **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
+* **parameterHash**: string (ReadOnly): parameter hash for the guest configuration assignment.
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
+* **vmssVMList**: [VmssvmInfo](#vmssvminfo)[]: The list of VM Compliance data for VMSS
 
 ## GuestConfigurationNavigation
 ### Properties
 * **assignmentType**: 'ApplyAndAutoCorrect' | 'ApplyAndMonitor' | 'Audit' | 'DeployAndAutoCorrect': Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
 * **configurationParameter**: [ConfigurationParameter](#configurationparameter)[]: The configuration parameters for the guest configuration.
+* **configurationProtectedParameter**: [ConfigurationParameter](#configurationparameter)[]: The protected configuration parameters for the guest configuration.
 * **configurationSetting**: [ConfigurationSetting](#configurationsetting): Configuration setting of LCM (Local Configuration Manager).
 * **contentHash**: string: Combined hash of the guest configuration package and configuration parameters.
+* **contentType**: string (ReadOnly): Specifies the content type of the configuration. Possible values could be Builtin or Custom.
 * **contentUri**: string: Uri of the storage where guest configuration package is uploaded.
 * **kind**: 'DSC': Kind of the guest configuration. For example:DSC
 * **name**: string: Name of the guest configuration.
@@ -44,4 +48,12 @@
 * **configurationModeFrequencyMins**: int: How often, in minutes, the current configuration is checked and applied. This property is ignored if the ConfigurationMode property is set to ApplyOnly. The default value is 15.
 * **rebootIfNeeded**: bool: Set this to true to automatically reboot the node after a configuration that requires reboot is applied. Otherwise, you will have to manually reboot the node for any configuration that requires it. The default value is false. To use this setting when a reboot condition is enacted by something other than DSC (such as Windows Installer), combine this setting with the xPendingReboot module.
 * **refreshFrequencyMins**: int: The time interval, in minutes, at which the LCM checks a pull service to get updated configurations. This value is ignored if the LCM is not configured in pull mode. The default value is 30.
+
+## VmssvmInfo
+### Properties
+* **complianceStatus**: 'Compliant' | 'NonCompliant' | 'Pending' (ReadOnly): A value indicating compliance status of the machine for the assigned guest configuration.
+* **lastComplianceChecked**: string (ReadOnly): Date and time when last compliance status was checked.
+* **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
+* **vmId**: string (ReadOnly): UUID of the VM.
+* **vmResourceId**: string (ReadOnly): Azure resource Id of the VM.
 

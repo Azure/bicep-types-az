@@ -39,7 +39,7 @@
 * **availabilityZoneId**: string (Required): Availability Zone id, e.g. "az1"
 * **availabilityZoneName**: string (ReadOnly): Availability Zone name, e.g. "Availability Zone 1"
 * **cloudRackName**: string (ReadOnly): VMWare Cloud Rack Name
-* **created**: any (ReadOnly): Anything
+* **created**: string (ReadOnly): date time the resource was created
 * **nodesCount**: int (Required): count of nodes to create
 * **placementGroupId**: string (Required): Placement Group id, e.g. "n1"
 * **placementGroupName**: string (ReadOnly): Placement Name, e.g. "Placement Group 1"

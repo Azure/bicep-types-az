@@ -16,15 +16,15 @@
 ## Resource Microsoft.Aad/domainServices/ouContainer@2021-05-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **accountName**: string (WriteOnly)
+* **accountName**: string (WriteOnly): The account name
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **password**: string (WriteOnly)
+* **password**: string (WriteOnly): The account password
 * **properties**: [OuContainerProperties](#oucontainerproperties) (ReadOnly): Properties of the OuContainer.
-* **spn**: string (WriteOnly)
+* **spn**: string (WriteOnly): The account spn
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Aad/domainServices/ouContainer' (ReadOnly, DeployTimeConstant): The resource type

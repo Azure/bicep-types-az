@@ -22,12 +22,6 @@ namespace Azure.Bicep.Types.Az
             var types = TypeSerializer.Deserialize(content);
 
             return types[typeLocation.Index];
-            if (typeLocation.Index is not int intIndex || types[intIndex] is not ResourceType resourceType)
-            {
-                throw new ArgumentException($"Unable to locate resource type at index {typeLocation.Index} in \"{typeLocation.RelativePath}\" resource");
-            }
-
-            return resourceType;
         }
 
         public ResourceType LoadResourceType(TypeLocation typeLocation)
@@ -40,7 +34,7 @@ namespace Azure.Bicep.Types.Az
             return resourceType;
         }
 
-        public ResourceType LoadResourceFunctionType(TypeLocation typeLocation)
+        public ResourceFunctionType LoadResourceFunctionType(TypeLocation typeLocation)
         {
             if (LoadType(typeLocation) is not ResourceFunctionType resourceFunctionType)
             {

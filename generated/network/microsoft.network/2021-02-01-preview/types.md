@@ -123,6 +123,18 @@
 * **properties**: [DefaultUserRulePropertiesFormat](#defaultuserrulepropertiesformat): Security default user rule resource.
 
 
+## Resource Microsoft.Network/networkSecurityPerimeters@2021-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkSecurityPerimeterProperties](#networksecurityperimeterproperties): Properties of network security perimeter.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/networkSecurityPerimeters' (ReadOnly, DeployTimeConstant): The resource type
+
 ## NetworkManagerProperties
 ### Properties
 * **description**: string: A description of the network manager.
@@ -157,7 +169,7 @@
 * **deleteExistingPeering**: 'False' | 'True': Flag if need to remove current existing peerings.
 * **description**: string: A description of the connectivity configuration.
 * **displayName**: string: A friendly name for the resource.
-* **hubId**: string: The hub vnet Id.
+* **hubs**: [Hub](#hub)[]: List of hubItems
 * **isGlobal**: 'False' | 'True': Flag if global mesh is supported.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
@@ -168,19 +180,23 @@
 * **networkGroupId**: string: Network group Id.
 * **useHubGateway**: 'False' | 'True': Flag if need to use hub gateway.
 
+## Hub
+### Properties
+* **resourceId**: string: Resource Id.
+* **resourceType**: string: Resource Type.
+
 ## NetworkGroupProperties
 ### Properties
 * **conditionalMembership**: string: Network group conditional filter.
 * **description**: string: A description of the network group.
 * **displayName**: string: A friendly name for the network group.
 * **groupMembers**: [GroupMembersItem](#groupmembersitem)[]: Group members of network group.
-* **memberType**: 'Subnet' | 'VirtualNetwork': Group member type.
+* **memberType**: string: Group member type.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 
 ## GroupMembersItem
 ### Properties
-* **subnetId**: string: Subnet Id.
-* **vnetId**: string: Vnet Id.
+* **resourceId**: string: Resource Id.
 
 ## SecurityConfigurationPropertiesFormat
 ### Properties
@@ -259,4 +275,15 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **sourcePortRanges**: string[] (ReadOnly): The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[] (ReadOnly): The CIDR or source IP ranges.
+
+## NetworkSecurityPerimeterProperties
+### Properties
+* **description**: string: A description of the network security perimeter.
+* **displayName**: string: A friendly name for the network security perimeter.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

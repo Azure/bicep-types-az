@@ -69,14 +69,14 @@
 
 ## DatadogOrganizationProperties
 ### Properties
-* **apiKey**: string: Api key associated to the Datadog organization.
-* **applicationKey**: string: Application key associated to the Datadog organization.
-* **enterpriseAppId**: string: The Id of the Enterprise App used for Single sign on.
+* **apiKey**: string (WriteOnly): Api key associated to the Datadog organization.
+* **applicationKey**: string (WriteOnly): Application key associated to the Datadog organization.
+* **enterpriseAppId**: string (WriteOnly): The Id of the Enterprise App used for Single sign on.
 * **id**: string (ReadOnly): Id of the Datadog organization.
-* **linkingAuthCode**: string: The auth code used to linking to an existing datadog organization.
-* **linkingClientId**: string: The client_id from an existing in exchange for an auth token to link organization.
+* **linkingAuthCode**: string (WriteOnly): The auth code used to linking to an existing datadog organization.
+* **linkingClientId**: string (WriteOnly): The client_id from an existing in exchange for an auth token to link organization.
 * **name**: string (ReadOnly): Name of the Datadog organization.
-* **redirectUri**: string: The redirect uri for linking.
+* **redirectUri**: string (WriteOnly): The redirect uri for linking.
 
 ## UserInfo
 ### Properties

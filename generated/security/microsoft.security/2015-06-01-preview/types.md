@@ -4,15 +4,15 @@
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
+* **enforcementMode**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Location where the resource is stored
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly)
+* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly): Array of PathRecommendation
 * **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly): Represents a VM/server group and set of rules that are Recommended by Azure Security Center to be allowed
-* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly)
+* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
 * **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant): The resource type
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly)
+* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly): Array of VmRecommendation
 
 ## Resource Microsoft.Security/locations/jitNetworkAccessPolicies@2015-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -27,27 +27,27 @@
 
 ## PathRecommendation
 ### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
-* **common**: bool (WriteOnly)
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly)
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' (WriteOnly)
-* **path**: string (WriteOnly)
-* **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly)
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly)
-* **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly)
-* **userSids**: string[] (WriteOnly)
+* **action**: 'Add' | 'Recommended' | 'Remove' (WriteOnly): The recommendation action of the VM/server or rule
+* **common**: bool (WriteOnly): Whether the path is commonly run on the machine
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly): The configuration status of the VM/server group or machine or rule on the machine
+* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' (WriteOnly): The type of the file (for Linux files - Executable is used)
+* **path**: string (WriteOnly): The full path to whitelist
+* **publisherInfo**: [PublisherInfo](#publisherinfo) (WriteOnly): Represents the publisher information of a process/rule
+* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' (WriteOnly): The type of the rule to be allowed
+* **usernames**: [UserRecommendation](#userrecommendation)[] (WriteOnly): Array of UserRecommendation
+* **userSids**: string[] (WriteOnly): Array of PathRecommendationUserSidsItem
 
 ## PublisherInfo
 ### Properties
-* **binaryName**: string (WriteOnly)
-* **productName**: string (WriteOnly)
-* **publisherName**: string (WriteOnly)
-* **version**: string (WriteOnly)
+* **binaryName**: string (WriteOnly): The "OriginalName" field taken from the file's version resource
+* **productName**: string (WriteOnly): The product name taken from the file's version resource
+* **publisherName**: string (WriteOnly): The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+* **version**: string (WriteOnly): The binary file version taken from the file's version resource
 
 ## UserRecommendation
 ### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
-* **username**: string (WriteOnly)
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly): The recommendation action of the VM/server or rule
+* **username**: string (WriteOnly): Represents a user that is recommended to be allowed for a certain rule
 
 ## AppWhitelistingGroupData
 ### Properties
@@ -67,17 +67,17 @@
 
 ## ProtectionMode
 ### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
-* **executable**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
-* **msi**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
-* **script**: 'Audit' | 'Enforce' | 'None' (WriteOnly)
+* **exe**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
+* **executable**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
+* **msi**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
+* **script**: 'Audit' | 'Enforce' | 'None' (WriteOnly): The application control policy enforcement/protection mode of the VM/server group
 
 ## VmRecommendation
 ### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly)
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' (WriteOnly)
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly)
-* **resourceId**: string (WriteOnly)
+* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' (WriteOnly): The configuration status of the VM/server group or machine or rule on the machine
+* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' (WriteOnly): The VM/server supportability of Enforce feature
+* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' (WriteOnly): The recommendation action of the VM/server or rule
+* **resourceId**: string (WriteOnly): The full azure resource id of the machine
 
 ## JitNetworkAccessPolicyProperties
 ### Properties

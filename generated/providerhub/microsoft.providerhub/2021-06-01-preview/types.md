@@ -65,9 +65,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly)
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -77,9 +75,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly)
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -89,9 +85,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly)
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -101,9 +95,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SkuResourceProperties](#skuresourceproperties) (ReadOnly)
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (WriteOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (Required, WriteOnly)
+* **properties**: [SkuResourceProperties](#skuresourceproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -537,37 +529,37 @@
 
 ## OperationsPutContentProperties
 ### Properties
-* **contents**: [LocalizedOperationDefinition](#localizedoperationdefinition)[] (WriteOnly)
+* **contents**: [LocalizedOperationDefinition](#localizedoperationdefinition)[] (WriteOnly): Operations content.
 
 ## LocalizedOperationDefinition
 ### Properties
 * **actionType**: 'Internal' | 'NotSpecified' (WriteOnly)
-* **display**: [LocalizedOperationDefinitionDisplay](#localizedoperationdefinitiondisplay) (Required, WriteOnly)
-* **isDataAction**: bool (WriteOnly)
-* **name**: string (Required, WriteOnly)
+* **display**: [LocalizedOperationDefinitionDisplay](#localizedoperationdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
+* **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
+* **name**: string (Required, WriteOnly): Name of the operation.
 * **origin**: 'NotSpecified' | 'System' | 'User' (WriteOnly)
-* **properties**: any (WriteOnly)
+* **properties**: any (WriteOnly): Anything
 
 ## LocalizedOperationDefinitionDisplay
 ### Properties
-* **cs**: [LocalizedOperationDisplayDefinitionCs](#localizedoperationdisplaydefinitioncs) (WriteOnly)
-* **de**: [LocalizedOperationDisplayDefinitionDe](#localizedoperationdisplaydefinitionde) (WriteOnly)
-* **default**: [LocalizedOperationDisplayDefinitionDefault](#localizedoperationdisplaydefinitiondefault) (Required, WriteOnly)
-* **en**: [LocalizedOperationDisplayDefinitionEn](#localizedoperationdisplaydefinitionen) (WriteOnly)
-* **es**: [LocalizedOperationDisplayDefinitionEs](#localizedoperationdisplaydefinitiones) (WriteOnly)
-* **fr**: [LocalizedOperationDisplayDefinitionFr](#localizedoperationdisplaydefinitionfr) (WriteOnly)
-* **hu**: [LocalizedOperationDisplayDefinitionHu](#localizedoperationdisplaydefinitionhu) (WriteOnly)
-* **it**: [LocalizedOperationDisplayDefinitionIt](#localizedoperationdisplaydefinitionit) (WriteOnly)
-* **ja**: [LocalizedOperationDisplayDefinitionJa](#localizedoperationdisplaydefinitionja) (WriteOnly)
-* **ko**: [LocalizedOperationDisplayDefinitionKo](#localizedoperationdisplaydefinitionko) (WriteOnly)
-* **nl**: [LocalizedOperationDisplayDefinitionNl](#localizedoperationdisplaydefinitionnl) (WriteOnly)
-* **pl**: [LocalizedOperationDisplayDefinitionPl](#localizedoperationdisplaydefinitionpl) (WriteOnly)
-* **ptBR**: [LocalizedOperationDisplayDefinitionPtBR](#localizedoperationdisplaydefinitionptbr) (WriteOnly)
-* **ptPT**: [LocalizedOperationDisplayDefinitionPt](#localizedoperationdisplaydefinitionpt) (WriteOnly)
-* **ru**: [LocalizedOperationDisplayDefinitionRu](#localizedoperationdisplaydefinitionru) (WriteOnly)
-* **sv**: [LocalizedOperationDisplayDefinitionSv](#localizedoperationdisplaydefinitionsv) (WriteOnly)
-* **zhHans**: [LocalizedOperationDisplayDefinitionZhHans](#localizedoperationdisplaydefinitionzhhans) (WriteOnly)
-* **zhHant**: [LocalizedOperationDisplayDefinitionZhHant](#localizedoperationdisplaydefinitionzhhant) (WriteOnly)
+* **cs**: [LocalizedOperationDisplayDefinitionCs](#localizedoperationdisplaydefinitioncs) (WriteOnly): Display information of the operation for cs locale.
+* **de**: [LocalizedOperationDisplayDefinitionDe](#localizedoperationdisplaydefinitionde) (WriteOnly): Display information of the operation for de locale.
+* **default**: [LocalizedOperationDisplayDefinitionDefault](#localizedoperationdisplaydefinitiondefault) (Required, WriteOnly): Display information of the operation.
+* **en**: [LocalizedOperationDisplayDefinitionEn](#localizedoperationdisplaydefinitionen) (WriteOnly): Display information of the operation for en locale.
+* **es**: [LocalizedOperationDisplayDefinitionEs](#localizedoperationdisplaydefinitiones) (WriteOnly): Display information of the operation for es locale.
+* **fr**: [LocalizedOperationDisplayDefinitionFr](#localizedoperationdisplaydefinitionfr) (WriteOnly): Display information of the operation for fr locale.
+* **hu**: [LocalizedOperationDisplayDefinitionHu](#localizedoperationdisplaydefinitionhu) (WriteOnly): Display information of the operation for hu locale.
+* **it**: [LocalizedOperationDisplayDefinitionIt](#localizedoperationdisplaydefinitionit) (WriteOnly): Display information of the operation for it locale.
+* **ja**: [LocalizedOperationDisplayDefinitionJa](#localizedoperationdisplaydefinitionja) (WriteOnly): Display information of the operation for ja locale.
+* **ko**: [LocalizedOperationDisplayDefinitionKo](#localizedoperationdisplaydefinitionko) (WriteOnly): Display information of the operation for ko locale.
+* **nl**: [LocalizedOperationDisplayDefinitionNl](#localizedoperationdisplaydefinitionnl) (WriteOnly): Display information of the operation for nl locale.
+* **pl**: [LocalizedOperationDisplayDefinitionPl](#localizedoperationdisplaydefinitionpl) (WriteOnly): Display information of the operation for pl locale.
+* **ptBR**: [LocalizedOperationDisplayDefinitionPtBR](#localizedoperationdisplaydefinitionptbr) (WriteOnly): Display information of the operation for pt-BR locale.
+* **ptPT**: [LocalizedOperationDisplayDefinitionPt](#localizedoperationdisplaydefinitionpt) (WriteOnly): Display information of the operation for pt-PT locale.
+* **ru**: [LocalizedOperationDisplayDefinitionRu](#localizedoperationdisplaydefinitionru) (WriteOnly): Display information of the operation for ru locale.
+* **sv**: [LocalizedOperationDisplayDefinitionSv](#localizedoperationdisplaydefinitionsv) (WriteOnly): Display information of the operation for sv locale.
+* **zhHans**: [LocalizedOperationDisplayDefinitionZhHans](#localizedoperationdisplaydefinitionzhhans) (WriteOnly): Display information of the operation for zh-Hans locale.
+* **zhHant**: [LocalizedOperationDisplayDefinitionZhHant](#localizedoperationdisplaydefinitionzhhant) (WriteOnly): Display information of the operation for zh-Hant locale.
 
 ## LocalizedOperationDisplayDefinitionCs
 ### Properties
@@ -697,52 +689,52 @@
 
 ## SkuResourceProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' (ReadOnly)
-* **skuSettings**: [SkuSetting](#skusetting)[] (ReadOnly): Array of SkuSetting
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **skuSettings**: [SkuSetting](#skusetting)[] (Required): Array of SkuSetting
 
 ## SkuSetting
 ### Properties
-* **capabilities**: [SkuCapability](#skucapability)[] (WriteOnly)
-* **capacity**: [SkuSettingCapacity](#skusettingcapacity) (WriteOnly)
-* **costs**: [SkuCost](#skucost)[] (WriteOnly)
-* **family**: string (WriteOnly)
-* **kind**: string (WriteOnly)
-* **locationInfo**: [SkuLocationInfo](#skulocationinfo)[] (WriteOnly)
-* **locations**: string[] (WriteOnly)
-* **name**: string (Required, WriteOnly)
-* **requiredFeatures**: string[] (WriteOnly)
-* **requiredQuotaIds**: string[] (WriteOnly)
-* **size**: string (WriteOnly)
-* **tier**: string (WriteOnly)
+* **capabilities**: [SkuCapability](#skucapability)[]: Array of SkuCapability
+* **capacity**: [SkuSettingCapacity](#skusettingcapacity)
+* **costs**: [SkuCost](#skucost)[]: Array of SkuCost
+* **family**: string
+* **kind**: string
+* **locationInfo**: [SkuLocationInfo](#skulocationinfo)[]: Array of SkuLocationInfo
+* **locations**: string[]: Array of SkuSettingLocationsItem
+* **name**: string (Required)
+* **requiredFeatures**: string[]: Array of SkuSettingRequiredFeaturesItem
+* **requiredQuotaIds**: string[]: Array of SkuSettingRequiredQuotaIdsItem
+* **size**: string
+* **tier**: string
 
 ## SkuCapability
 ### Properties
-* **name**: string (Required, WriteOnly)
-* **value**: string (Required, WriteOnly)
+* **name**: string (Required)
+* **value**: string (Required)
 
 ## SkuSettingCapacity
 ### Properties
-* **default**: int (WriteOnly)
-* **maximum**: int (WriteOnly)
-* **minimum**: int (Required, WriteOnly)
-* **scaleType**: 'Automatic' | 'Manual' | 'None' (WriteOnly)
+* **default**: int
+* **maximum**: int
+* **minimum**: int (Required)
+* **scaleType**: 'Automatic' | 'Manual' | 'None'
 
 ## SkuCost
 ### Properties
-* **extendedUnit**: string (WriteOnly)
-* **meterId**: string (Required, WriteOnly)
-* **quantity**: int (WriteOnly)
+* **extendedUnit**: string
+* **meterId**: string (Required)
+* **quantity**: int
 
 ## SkuLocationInfo
 ### Properties
-* **extendedLocations**: string[] (WriteOnly)
-* **location**: string (Required, WriteOnly)
-* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' (WriteOnly)
-* **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[] (WriteOnly)
-* **zones**: string[] (WriteOnly)
+* **extendedLocations**: string[]: Array of SkuLocationInfoExtendedLocationsItem
+* **location**: string (Required)
+* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified'
+* **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[]: Array of SkuZoneDetail
+* **zones**: string[]: Array of SkuLocationInfoZonesItem
 
 ## SkuZoneDetail
 ### Properties
-* **capabilities**: [SkuCapability](#skucapability)[] (WriteOnly)
-* **name**: string[] (WriteOnly)
+* **capabilities**: [SkuCapability](#skucapability)[]: Array of SkuCapability
+* **name**: string[]: Array of SkuZoneDetailNameItem
 

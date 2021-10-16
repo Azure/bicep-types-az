@@ -22,22 +22,22 @@
   },
   "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
-    "@autorest/core": "3.5.1",
-    "@autorest/modelerfour": "^4.20.0",
-    "@ts-common/commonmark-to-markdown": "^2.0.0",
-    "@types/async": "^3.2.7",
+    "@autorest/core": "3.6.6",
+    "@autorest/modelerfour": "^4.21.3",
+    "@ts-common/commonmark-to-markdown": "^2.0.2",
+    "@types/async": "^3.2.8",
     "@types/js-yaml": "^4.0.3",
-    "@types/lodash": "^4.14.172",
-    "@types/node": "^16.7.13",
-    "@types/yargs": "^17.0.2",
+    "@types/lodash": "^4.14.175",
+    "@types/node": "^16.11.0",
+    "@types/yargs": "^17.0.4",
     "async": "^3.2.1",
-    "autorest": "^3.3.2",
+    "autorest": "^3.4.1",
     "chalk": "^4.1.2",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "strip-ansi": "^6.0.0",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.3.5",
-    "yargs": "^17.1.1"
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4",
+    "yargs": "^17.2.1"
   }
 }
