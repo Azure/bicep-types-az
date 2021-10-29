@@ -1,4 +1,5 @@
-// this enum should be kept in-sync with src/Bicep.Types/Serialization/TypeBaseConverter.cs
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 export enum TypeBaseKind {
   BuiltInType = 1,
   ObjectType = 2,

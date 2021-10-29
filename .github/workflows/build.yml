@@ -68,6 +68,10 @@ jobs:
       - name: Install
         run: npm ci
         working-directory: ./src/generator
+      
+      - name: Lint
+        run: npm run lint
+        working-directory: ./src/generator
 
       - name: Build
         run: npm run build
@@ -90,7 +94,15 @@ jobs:
       - name: Install
         run: npm ci
         working-directory: ./src/autorest.bicep
+      
+      - name: Lint
+        run: npm run lint
+        working-directory: ./src/autorest.bicep
 
       - name: Build
         run: npm run build
+        working-directory: ./src/autorest.bicep
+      
+      - name: Test
+        run: npm test
         working-directory: ./src/autorest.bicep

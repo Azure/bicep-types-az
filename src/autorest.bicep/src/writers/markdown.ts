@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 import { Dictionary, keys, orderBy } from 'lodash';
 import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
 
@@ -15,9 +17,10 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         return `${getTypeName(types, (type as ArrayType).ItemType)}[]`;
       case TypeBaseKind.ResourceType:
         return (type as ResourceType).Name;
-      case TypeBaseKind.UnionType:
+      case TypeBaseKind.UnionType: {
         const elements = (type as UnionType).Elements.map(x => getTypeName(types, x));
         return elements.sort().join(' | ');
+      }
       case TypeBaseKind.StringLiteralType:
         return `'${(type as StringLiteralType).Value}'`;
       case TypeBaseKind.DiscriminatedObjectType:
@@ -65,12 +68,13 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
     const type = types[typeReference.Index];
     switch (type.Type) {
-      case TypeBaseKind.ArrayType:
+      case TypeBaseKind.ArrayType: {
         const arrayType = type as ArrayType;
         processTypeLinks(arrayType.ItemType, false);
 
         return;
-      case TypeBaseKind.ObjectType:
+      }
+      case TypeBaseKind.ObjectType: {
         const objectType = type as ObjectType;
 
         for (const key of sortedKeys(objectType.Properties)) {
@@ -82,7 +86,8 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         }
 
         return;
-      case TypeBaseKind.DiscriminatedObjectType:
+      }
+      case TypeBaseKind.DiscriminatedObjectType: {
         const discriminatedObjectType = type as DiscriminatedObjectType;
 
         for (const key of sortedKeys(discriminatedObjectType.BaseProperties)) {
@@ -96,6 +101,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         }
 
         return;
+      }
     }
   }
 
@@ -105,14 +111,15 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
   function writeComplexType(types: TypeBase[], type: TypeBase, nesting: number, includeHeader: boolean) {
     switch (type.Type) {
-      case TypeBaseKind.ResourceType:
+      case TypeBaseKind.ResourceType: {
         const resourceType = type as ResourceType;
         writeHeading(nesting, `Resource ${resourceType.Name}`);
         writeBullet("Valid Scope(s)", `${getScopeTypeLabels(resourceType.ScopeType).join(', ') || 'Unknown'}`);
         writeComplexType(types, types[resourceType.Body.Index], nesting, false);
 
         return;
-      case TypeBaseKind.ObjectType:
+      }
+      case TypeBaseKind.ObjectType: {
         const objectType = type as ObjectType;
         if (includeHeader) {
           writeHeading(nesting, objectType.Name);
@@ -130,7 +137,8 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
         writeNewLine();
         return;
-      case TypeBaseKind.DiscriminatedObjectType:
+      }
+      case TypeBaseKind.DiscriminatedObjectType: {
         const discriminatedObjectType = type as DiscriminatedObjectType;
         if (includeHeader) {
           writeHeading(nesting, discriminatedObjectType.Name);
@@ -151,6 +159,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
         writeNewLine();
         return;
+      }
     }
   }
 

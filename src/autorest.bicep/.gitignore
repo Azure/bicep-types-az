@@ -7,4 +7,5 @@ test/**/esm
 test/**/node_modules
 test-browser
 .tmp
+temp
 coverage
