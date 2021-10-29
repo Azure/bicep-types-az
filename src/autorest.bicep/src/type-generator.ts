@@ -4,7 +4,7 @@
 import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
-import { uniq, keys, keyBy, Dictionary, flatMap, groupBy } from 'lodash';
+import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
 import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
 export function generateTypes(host: Host, definition: ProviderDefinition) {
@@ -79,7 +79,6 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         }
       }
         
-      const definitionsByConstantName = keyBy(definitions, x => x.descriptor.constantName);
       const polymorphicBodies: Dictionary<TypeReference> = {};
       for (const definition of definitions) {
         const bodyType = processResourceBody(fullyQualifiedType, definition);
@@ -142,7 +141,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
   }
 
   function getStandardizedResourceProperties(descriptor: ResourceDescriptor, resourceName: TypeReference): Dictionary<ObjectProperty> {
-    var type = factory.addType(new StringLiteralType(getFullyQualifiedType(descriptor)));
+    const type = factory.addType(new StringLiteralType(getFullyQualifiedType(descriptor)));
 
     return {
       id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
@@ -354,7 +353,6 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
       case SchemaType.Date:
       case SchemaType.DateTime:
       case SchemaType.Time:
-      case SchemaType.UnixTime:
       case SchemaType.String:
       case SchemaType.Uuid:
       case SchemaType.Duration:
@@ -472,7 +470,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
   }
 
   function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {
-    var itemType = parseType(putSchema?.elementType, getSchema?.elementType);
+    const itemType = parseType(putSchema?.elementType, getSchema?.elementType);
     if (!itemType) {
       return factory.lookupBuiltInType(BuiltInTypeKind.Array);
     }

@@ -4,7 +4,9 @@
   "description": "The Azure Bicep extension for classic generators in AutoRest.",
   "scripts": {
     "build": "tsc -p .",
-    "generate": "ts-node src/cmd/generate"
+    "generate": "ts-node src/cmd/generate",
+    "lint": "eslint src --ext ts",
+    "lint:fix": "eslint src --ext ts --fix"
   },
   "repository": {
     "type": "git",
@@ -30,9 +32,13 @@
     "@types/lodash": "^4.14.176",
     "@types/node": "^16.11.6",
     "@types/yargs": "^17.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "async": "^3.2.1",
     "autorest": "^3.4.2",
     "chalk": "^4.1.2",
+    "eslint": "^8.1.0",
+    "eslint-plugin-header": "^3.1.1",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "strip-ansi": "^6.0.0",

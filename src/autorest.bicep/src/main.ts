@@ -43,4 +43,5 @@ async function main() {
   await pluginHost.Run();
 }
 
+// eslint-disable-next-line jest/require-hook
 main();
