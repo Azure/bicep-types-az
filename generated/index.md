@@ -3938,6 +3938,7 @@
 * [2018-09-01](monitor/microsoft.insights/2018-09-01/types.md#resource-microsoftinsightsactiongroups2018-09-01)
 * [2019-03-01](monitor/microsoft.insights/2019-03-01/types.md#resource-microsoftinsightsactiongroups2019-03-01)
 * [2019-06-01](monitor/microsoft.insights/2019-06-01/types.md#resource-microsoftinsightsactiongroups2019-06-01)
+* [2021-09-01](monitor/microsoft.insights/2021-09-01/types.md#resource-microsoftinsightsactiongroups2021-09-01)
 
 ### microsoft.insights/activitylogalerts
 * [2017-03-01-preview](monitor/microsoft.insights/2017-03-01-preview/types.md#resource-microsoftinsightsactivitylogalerts2017-03-01-preview)
@@ -3951,6 +3952,7 @@
 ### microsoft.insights/autoscalesettings
 * [2014-04-01](monitor/microsoft.insights/2014-04-01/types.md#resource-microsoftinsightsautoscalesettings2014-04-01)
 * [2015-04-01](monitor/microsoft.insights/2015-04-01/types.md#resource-microsoftinsightsautoscalesettings2015-04-01)
+* [2021-05-01-preview](monitor/microsoft.insights/2021-05-01-preview/types.md#resource-microsoftinsightsautoscalesettings2021-05-01-preview)
 
 ### microsoft.insights/components
 * [2015-05-01](applicationinsights/microsoft.insights/2015-05-01/types.md#resource-microsoftinsightscomponents2015-05-01)
