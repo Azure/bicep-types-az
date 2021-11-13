@@ -78,6 +78,11 @@
 * **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Monitoring Setting properties payload
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2021-06-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [TestKeys](#testkeys)
+
 ## ClusterResourceProperties
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload

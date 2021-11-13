@@ -23,6 +23,11 @@
 * **properties**: [PrivateEndpointProperties](#privateendpointproperties): The properties associated with a private endpoint.
 * **type**: 'Microsoft.StreamAnalytics/clusters/privateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listStreamingJobs (Microsoft.StreamAnalytics/clusters@2020-03-01-preview)
+* **Resource**: Microsoft.StreamAnalytics/clusters
+* **ApiVersion**: 2020-03-01-preview
+* **Output**: [ClusterJobListResult](#clusterjoblistresult)
+
 ## ClusterProperties
 ### Properties
 * **capacityAllocated**: int (ReadOnly): Represents the number of streaming units currently being used on the cluster.
@@ -62,4 +67,10 @@
 * **actionsRequired**: string (ReadOnly): A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string (ReadOnly): The reason for approval/rejection of the connection.
 * **status**: string (ReadOnly): Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.
+
+## ClusterJob
+### Properties
+* **id**: string (ReadOnly): Resource ID of the streaming job.
+* **jobState**: 'Created' | 'Degraded' | 'Deleting' | 'Failed' | 'Restarting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The current execution state of the streaming job.
+* **streamingUnits**: int (ReadOnly): The number of streaming units that are used by the streaming job.
 

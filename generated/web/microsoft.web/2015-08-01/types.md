@@ -680,6 +680,28 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function list (Microsoft.Web/sites/slots/config@2015-08-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2015-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function list (Microsoft.Web/sites/config@2015-08-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2015-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function list (Microsoft.Web/sites/slots/backups@2015-08-01)
+* **Resource**: Microsoft.Web/sites/slots/backups
+* **ApiVersion**: 2015-08-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [BackupItem](#backupitem)
+
+## Function list (Microsoft.Web/sites/backups@2015-08-01)
+* **Resource**: Microsoft.Web/sites/backups
+* **ApiVersion**: 2015-08-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [BackupItem](#backupitem)
+
 ## CertificateProperties
 ### Properties
 * **cerBlob**: string: Raw bytes of .cer file
@@ -1533,6 +1555,43 @@
 * **refreshToken**: string: OAuth Refresh Token
 * **token**: string: OAuth Access Token
 * **tokenSecret**: string: OAuth Access Token Secret
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BackupItemProperties
+### Properties
+* **blobName**: string (ReadOnly): Name of the blob which contains data for this backup
+* **correlationId**: string (ReadOnly): Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+* **created**: string (ReadOnly): Timestamp of the backup creation
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[] (ReadOnly): List of databases included in the backup
+* **finishedTimeStamp**: string (ReadOnly): Timestamp when this backup finished.
+* **id**: int (ReadOnly): Id of the backup.
+* **lastRestoreTimeStamp**: string (ReadOnly): Timestamp of a last restore operation which used this backup.
+* **log**: string (ReadOnly): Details regarding this backup. Might contain an error message.
+* **name**: string (ReadOnly): Name of this backup
+* **scheduled**: bool (ReadOnly): True if this backup has been created due to a schedule being triggered.
+* **sizeInBytes**: int (ReadOnly): Size of the backup in bytes
+* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status
+* **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup
+* **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up
 
 ## ResourceTags
 ### Properties

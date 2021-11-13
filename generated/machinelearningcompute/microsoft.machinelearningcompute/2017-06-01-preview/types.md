@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningCompute/operationalizationClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MachineLearningCompute/operationalizationClusters@2017-06-01-preview)
+* **Resource**: Microsoft.MachineLearningCompute/operationalizationClusters
+* **ApiVersion**: 2017-06-01-preview
+* **Output**: [OperationalizationClusterCredentials](#operationalizationclustercredentials)
+
 ## OperationalizationClusterProperties
 ### Properties
 * **appInsights**: [AppInsightsCredentials](#appinsightscredentials): AppInsights credentials.
@@ -87,4 +92,22 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ContainerRegistryCredentials
+### Properties
+* **loginServer**: string (ReadOnly): The ACR login server name. User name is the first part of the FQDN.
+* **password**: string (ReadOnly): The ACR primary password.
+* **password2**: string (ReadOnly): The ACR secondary password.
+
+## ContainerServiceCredentials
+### Properties
+* **acsKubeConfig**: string (ReadOnly): The ACS kube config file.
+* **imagePullSecretName**: string (ReadOnly): The ACR image pull secret name which was created in Kubernetes.
+* **servicePrincipalConfiguration**: [ServicePrincipalProperties](#serviceprincipalproperties) (ReadOnly): The Azure service principal used by Kubernetes for configuring load balancers
+
+## StorageAccountCredentials
+### Properties
+* **primaryKey**: string (ReadOnly): The primary key of the storage account.
+* **resourceId**: string (ReadOnly): The ARM resource ID of the storage account.
+* **secondaryKey**: string (ReadOnly): The secondary key of the storage account.
 

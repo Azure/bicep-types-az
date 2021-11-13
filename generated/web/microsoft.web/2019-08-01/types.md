@@ -727,6 +727,103 @@ This is valid for all deployment slots in an app.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Web/staticSites/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function list (Microsoft.Web/sites/backups@2019-08-01)
+* **Resource**: Microsoft.Web/sites/backups
+* **ApiVersion**: 2019-08-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [BackupItem](#backupitem)
+
+## Function list (Microsoft.Web/sites/config@2019-08-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function list (Microsoft.Web/sites/slots/backups@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots/backups
+* **ApiVersion**: 2019-08-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [BackupItem](#backupitem)
+
+## Function list (Microsoft.Web/sites/slots/config@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listbackups (Microsoft.Web/sites@2019-08-01)
+* **Resource**: Microsoft.Web/sites
+* **ApiVersion**: 2019-08-01
+* **Output**: [BackupItemCollection](#backupitemcollection)
+
+## Function listbackups (Microsoft.Web/sites/slots@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots
+* **ApiVersion**: 2019-08-01
+* **Output**: [BackupItemCollection](#backupitemcollection)
+
+## Function listFunctionAppSettings (Microsoft.Web/staticSites/builds@2019-08-01)
+* **Resource**: Microsoft.Web/staticSites/builds
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listFunctionAppSettings (Microsoft.Web/staticSites@2019-08-01)
+* **Resource**: Microsoft.Web/staticSites
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listkeys (Microsoft.Web/sites/functions@2019-08-01)
+* **Resource**: Microsoft.Web/sites/functions
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listkeys (Microsoft.Web/sites/host@2019-08-01)
+* **Resource**: Microsoft.Web/sites/host
+* **ApiVersion**: 2019-08-01
+* **Output**: [HostKeys](#hostkeys)
+
+## Function listkeys (Microsoft.Web/sites/slots/functions@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots/functions
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listkeys (Microsoft.Web/sites/slots/host@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots/host
+* **ApiVersion**: 2019-08-01
+* **Output**: [HostKeys](#hostkeys)
+
+## Function listKeys (Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays@2019-08-01)
+* **Resource**: Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays
+* **ApiVersion**: 2019-08-01
+* **Output**: [HybridConnectionKey](#hybridconnectionkey)
+
+## Function listsecrets (Microsoft.Web/sites/functions@2019-08-01)
+* **Resource**: Microsoft.Web/sites/functions
+* **ApiVersion**: 2019-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listsecrets (Microsoft.Web/sites/slots/functions@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots/functions
+* **ApiVersion**: 2019-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listSecrets (Microsoft.Web/staticSites@2019-08-01)
+* **Resource**: Microsoft.Web/staticSites
+* **ApiVersion**: 2019-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listsyncfunctiontriggerstatus (Microsoft.Web/sites@2019-08-01)
+* **Resource**: Microsoft.Web/sites
+* **ApiVersion**: 2019-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listsyncfunctiontriggerstatus (Microsoft.Web/sites/slots@2019-08-01)
+* **Resource**: Microsoft.Web/sites/slots
+* **ApiVersion**: 2019-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listUsers (Microsoft.Web/staticSites/authproviders@2019-08-01)
+* **Resource**: Microsoft.Web/staticSites/authproviders
+* **ApiVersion**: 2019-08-01
+* **Output**: [StaticSiteUserCollection](#staticsiteusercollection)
+
 ## CertificateProperties
 ### Properties
 * **canonicalName**: string: CNAME of the certificate to be issued via free certificate
@@ -1717,4 +1814,69 @@ Point-To-Site VPN connection.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## BackupItemProperties
+### Properties
+* **blobName**: string (ReadOnly): Name of the blob which contains data for this backup.
+* **correlationId**: string (ReadOnly): Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+* **created**: string (ReadOnly): Timestamp of the backup creation.
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[] (ReadOnly): List of databases included in the backup.
+* **finishedTimeStamp**: string (ReadOnly): Timestamp when this backup finished.
+* **id**: int (ReadOnly): Id of the backup.
+* **lastRestoreTimeStamp**: string (ReadOnly): Timestamp of a last restore operation which used this backup.
+* **log**: string (ReadOnly): Details regarding this backup. Might contain an error message.
+* **name**: string (ReadOnly): Name of this backup.
+* **scheduled**: bool (ReadOnly): True if this backup has been created due to a schedule being triggered.
+* **sizeInBytes**: int (ReadOnly): Size of the backup in bytes.
+* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
+* **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
+* **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BackupItem
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [BackupItemProperties](#backupitemproperties) (ReadOnly): BackupItem resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## HostKeysFunctionKeys
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HostKeysSystemKeys
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HybridConnectionKeyProperties
+### Properties
+* **sendKeyName**: string (ReadOnly): The name of the send key.
+* **sendKeyValue**: string (ReadOnly): The value of the send key.
+
+## FunctionSecretsProperties
+### Properties
+* **key**: string (ReadOnly): Secret key.
+* **trigger_url**: string (ReadOnly): Trigger URL.
+
+## StaticSiteUserARMResource
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [StaticSiteUserARMResourceProperties](#staticsiteuserarmresourceproperties) (ReadOnly): StaticSiteUserARMResource resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## StaticSiteUserARMResourceProperties
+### Properties
+* **displayName**: string (ReadOnly): The display name for the static site user.
+* **provider**: string (ReadOnly): The identity provider for the static site user.
+* **roles**: string (ReadOnly): The roles for the static site user, in free-form string format
+* **userId**: string (ReadOnly): The user id for the static site user.
 

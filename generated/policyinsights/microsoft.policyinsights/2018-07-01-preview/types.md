@@ -9,6 +9,11 @@
 * **properties**: [RemediationProperties](#remediationproperties): The remediation properties.
 * **type**: 'Microsoft.PolicyInsights/remediations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listDeployments (Microsoft.PolicyInsights/remediations@2018-07-01-preview)
+* **Resource**: Microsoft.PolicyInsights/remediations
+* **ApiVersion**: 2018-07-01-preview
+* **Output**: [RemediationDeploymentsListResult](#remediationdeploymentslistresult)
+
 ## RemediationProperties
 ### Properties
 * **createdOn**: string (ReadOnly): The time at which the remediation was created.
@@ -28,4 +33,27 @@
 ## RemediationFilters
 ### Properties
 * **locations**: string[]: The resource locations that will be remediated.
+
+## RemediationDeployment
+### Properties
+* **createdOn**: string (ReadOnly): The time at which the remediation was created.
+* **deploymentId**: string (ReadOnly): Resource ID of the template deployment that will remediate the resource.
+* **error**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
+* **lastUpdatedOn**: string (ReadOnly): The time at which the remediation deployment was last updated.
+* **remediatedResourceId**: string (ReadOnly): Resource ID of the resource that is being remediated by the deployment.
+* **resourceLocation**: string (ReadOnly): Location of the resource that is being remediated.
+* **status**: string (ReadOnly): Status of the remediation deployment.
+
+## ErrorDefinition
+### Properties
+* **additionalInfo**: [TypedErrorInfo](#typederrorinfo)[] (ReadOnly): Additional scenario specific error details.
+* **code**: string (ReadOnly): Service specific error code which serves as the substatus for the HTTP error code.
+* **details**: [ErrorDefinition](#errordefinition)[] (ReadOnly): Internal error details.
+* **message**: string (ReadOnly): Description of the error.
+* **target**: string (ReadOnly): The target of the error.
+
+## TypedErrorInfo
+### Properties
+* **info**: any (ReadOnly): Anything
+* **type**: string (ReadOnly): The type of included error details.
 

@@ -114,6 +114,27 @@
 * **properties**: [JobProperties](#jobproperties): Properties of the Job.
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listContainerSas (Microsoft.Media/mediaServices/assets@2018-07-01)
+* **Resource**: Microsoft.Media/mediaServices/assets
+* **ApiVersion**: 2018-07-01
+* **Input**: [ListContainerSasInput](#listcontainersasinput)
+* **Output**: [AssetContainerSas](#assetcontainersas)
+
+## Function listContentKeys (Microsoft.Media/mediaServices/streamingLocators@2018-07-01)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2018-07-01
+* **Output**: [ListContentKeysResponse](#listcontentkeysresponse)
+
+## Function listPaths (Microsoft.Media/mediaServices/streamingLocators@2018-07-01)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2018-07-01
+* **Output**: [ListPathsResponse](#listpathsresponse)
+
+## Function listStreamingLocators (Microsoft.Media/mediaServices/assets@2018-07-01)
+* **Resource**: Microsoft.Media/mediaServices/assets
+* **ApiVersion**: 2018-07-01
+* **Output**: [ListStreamingLocatorsResponse](#liststreaminglocatorsresponse)
+
 ## MediaServiceProperties
 ### Properties
 * **mediaServiceId**: string (ReadOnly): The Media Services account ID.
@@ -804,4 +825,21 @@
 ### Properties
 * **code**: string (ReadOnly): Code describing the error detail.
 * **message**: string (ReadOnly): A human-readable representation of the error.
+
+## StreamingPath
+### Properties
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly): Encryption scheme
+* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly): Streaming protocol
+
+## AssetStreamingLocator
+### Properties
+* **assetName**: string (ReadOnly): Asset Name.
+* **created**: string (ReadOnly): The creation time of the Streaming Locator.
+* **defaultContentKeyPolicyName**: string (ReadOnly): Name of the default ContentKeyPolicy used by this Streaming Locator.
+* **endTime**: string (ReadOnly): The end time of the Streaming Locator.
+* **name**: string (ReadOnly): Streaming Locator name.
+* **startTime**: string (ReadOnly): The start time of the Streaming Locator.
+* **streamingLocatorId**: string (ReadOnly): StreamingLocatorId of the Streaming Locator.
+* **streamingPolicyName**: string (ReadOnly): Name of the Streaming Policy used by this Streaming Locator.
 

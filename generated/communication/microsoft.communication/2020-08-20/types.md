@@ -12,6 +12,11 @@
 * **tags**: [TaggedResourceTags](#taggedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.Communication/communicationServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Communication/communicationServices@2020-08-20)
+* **Resource**: Microsoft.Communication/communicationServices
+* **ApiVersion**: 2020-08-20
+* **Output**: [CommunicationServiceKeys](#communicationservicekeys)
+
 ## CommunicationServiceProperties
 ### Properties
 * **dataLocation**: string (Required): The location where the communication service stores its data at rest.

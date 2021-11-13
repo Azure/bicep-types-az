@@ -60,6 +60,11 @@
 * **properties**: [CertificateProperties](#certificateproperties): Certificate resource payload.
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2019-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2019-05-01-preview
+* **Output**: [TestKeys](#testkeys)
+
 ## ClusterResourceProperties
 ### Properties
 * **configServerProperties**: [ConfigServerProperties](#configserverproperties): Config server git properties payload

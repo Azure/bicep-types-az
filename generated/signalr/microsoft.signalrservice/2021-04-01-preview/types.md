@@ -35,6 +35,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/signalR/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/signalR@2021-04-01-preview)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## ManagedIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Get the principal id for the system assigned identity.

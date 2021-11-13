@@ -26,6 +26,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Maps/accounts@2021-07-01-preview)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2021-07-01-preview
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.

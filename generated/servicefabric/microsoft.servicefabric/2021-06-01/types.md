@@ -66,6 +66,12 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listUpgradableVersions (Microsoft.ServiceFabric/clusters@2021-06-01)
+* **Resource**: Microsoft.ServiceFabric/clusters
+* **ApiVersion**: 2021-06-01
+* **Input**: [UpgradableVersionsDescription](#upgradableversionsdescription)
+* **Output**: [UpgradableVersionPathResult](#upgradableversionpathresult)
+
 ## ClusterProperties
 ### Properties
 * **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService'[]: The list of add-on features to enable in the cluster.

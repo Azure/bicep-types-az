@@ -22,6 +22,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): A private endpoint connection properties class.
 * **type**: 'Microsoft.Purview/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Purview/accounts@2020-12-01-preview)
+* **Resource**: Microsoft.Purview/accounts
+* **ApiVersion**: 2020-12-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id

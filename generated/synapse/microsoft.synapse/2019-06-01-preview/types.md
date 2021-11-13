@@ -282,6 +282,11 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAuthKeys (Microsoft.Synapse/workspaces/integrationRuntimes@2019-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
 ## PrivateLinkHubProperties
 ### Properties
 * **privateEndpointConnections**: [PrivateEndpointConnectionForPrivateLinkHubBasic](#privateendpointconnectionforprivatelinkhubbasic)[] (ReadOnly): List of private endpoint connections

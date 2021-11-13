@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Tags to help categorize the resource in the Azure portal.
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Media/mediaservices@2015-10-01)
+* **Resource**: Microsoft.Media/mediaservices
+* **ApiVersion**: 2015-10-01
+* **Output**: [ServiceKeys](#servicekeys)
+
 ## MediaServiceProperties
 ### Properties
 * **apiEndpoints**: [ApiEndpoint](#apiendpoint)[] (ReadOnly): Read-only property that lists the Media Services REST API endpoints for this resource. If supplied on a PUT or PATCH, the value will be ignored.

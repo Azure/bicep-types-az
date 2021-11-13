@@ -20,6 +20,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/topics@2017-06-15-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2017-06-15-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## EventSubscriptionProperties
 ### Properties
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription

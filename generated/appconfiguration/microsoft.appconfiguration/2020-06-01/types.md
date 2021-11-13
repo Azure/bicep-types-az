@@ -22,6 +22,17 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.AppConfiguration/configurationStores@2020-06-01)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2020-06-01
+* **Output**: [ApiKeyListResult](#apikeylistresult)
+
+## Function listKeyValue (Microsoft.AppConfiguration/configurationStores@2020-06-01)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2020-06-01
+* **Input**: [ListKeyValueParameters](#listkeyvalueparameters)
+* **Output**: [KeyValue](#keyvalue)
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
@@ -85,6 +96,20 @@
 * **name**: string (Required): The SKU name of the configuration store.
 
 ## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiKey
+### Properties
+* **connectionString**: string (ReadOnly): A connection string that can be used by supporting clients for authentication.
+* **id**: string (ReadOnly): The key ID.
+* **lastModified**: string (ReadOnly): The last time any of the key's properties were modified.
+* **name**: string (ReadOnly): A name for the key describing its usage.
+* **readOnly**: bool (ReadOnly): Whether this key can only be used for read operations.
+* **value**: string (ReadOnly): The value of the key that is used for authentication purposes.
+
+## KeyValueTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

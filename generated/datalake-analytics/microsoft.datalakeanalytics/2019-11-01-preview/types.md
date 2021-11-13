@@ -47,6 +47,11 @@
 * **properties**: [AddStorageAccountProperties](#addstorageaccountproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listSasTokens (Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers@2019-11-01-preview)
+* **Resource**: Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers
+* **ApiVersion**: 2019-11-01-preview
+* **Output**: [SasTokenInformationListResult](#sastokeninformationlistresult)
+
 ## CreateDataLakeAnalyticsAccountProperties
 ### Properties
 * **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Analytics account.
@@ -172,4 +177,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SasTokenInformation
+### Properties
+* **accessToken**: string (ReadOnly): The access token for the associated Azure Storage Container.
 

@@ -11,6 +11,21 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2018-03-31)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2018-03-31
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2018-03-31)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2018-03-31
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2018-03-31)
+* **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
+* **ApiVersion**: 2018-03-31
+* **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
+
 ## ManagedClusterProperties
 ### Properties
 * **aadProfile**: [ManagedClusterAADProfile](#managedclusteraadprofile): AADProfile specifies attributes for Azure Active Directory integration.
@@ -85,6 +100,20 @@
 ### Properties
 * **clientId**: string (Required): The ID for the service principal.
 * **secret**: string: The secret password associated with the service principal in plain text.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## AccessProfile
+### Properties
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## ResourceTags
 ### Properties

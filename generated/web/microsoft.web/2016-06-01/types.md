@@ -36,6 +36,18 @@
 * **tags**: [TagsDictionary](#tagsdictionary): Resource tags
 * **type**: 'Microsoft.Web/customApis' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConsentLinks (Microsoft.Web/connections@2016-06-01)
+* **Resource**: Microsoft.Web/connections
+* **ApiVersion**: 2016-06-01
+* **Input**: [ListConsentLinksDefinition](#listconsentlinksdefinition)
+* **Output**: [ConsentLinkCollection](#consentlinkcollection)
+
+## Function listWsdlInterfaces (Microsoft.Web/locations@2016-06-01)
+* **Resource**: Microsoft.Web/locations
+* **ApiVersion**: 2016-06-01
+* **Input**: [WsdlDefinition](#wsdldefinition)
+* **Output**: [WsdlServiceCollection](#wsdlservicecollection)
+
 ## ConnectionGatewayDefinitionProperties
 ### Properties
 * **backendUri**: string: The URI of the backend
@@ -203,4 +215,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ConsentLinkParameterDefinition
+### Properties
+* **objectId**: string (WriteOnly): AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
+* **parameterName**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
+* **redirectUrl**: string (WriteOnly): Name of the parameter in the connection provider's OAuth settings
+* **tenantId**: string (WriteOnly): The tenant id
+
+## ConsentLinkDefinition
+### Properties
+* **displayName**: string (ReadOnly): Display name of the parameter in the connection provider's OAuth settings
+* **firstPartyLoginUri**: string (ReadOnly): URI for first party login
+* **link**: string (ReadOnly): URI for the consent link
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' (ReadOnly): Status of the link
 

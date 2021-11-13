@@ -12,6 +12,11 @@
 * **tags**: [MapsAccountCreateParametersTags](#mapsaccountcreateparameterstags): Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
 * **type**: 'Microsoft.Maps/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Maps/accounts@2018-05-01)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2018-05-01
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## MapsAccountProperties
 ### Properties
 * **x-ms-client-id**: string (ReadOnly): A unique identifier for the maps account

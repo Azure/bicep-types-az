@@ -124,6 +124,26 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault

@@ -12,6 +12,18 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConnectionKeys (Microsoft.Web/connections@2015-08-01-preview)
+* **Resource**: Microsoft.Web/connections
+* **ApiVersion**: 2015-08-01-preview
+* **Input**: [ListConnectionKeysInput](#listconnectionkeysinput)
+* **Output**: [ConnectionSecrets](#connectionsecrets)
+
+## Function listConsentLinks (Microsoft.Web/connections@2015-08-01-preview)
+* **Resource**: Microsoft.Web/connections
+* **ApiVersion**: 2015-08-01-preview
+* **Input**: [ConsentLinkInput](#consentlinkinput)
+* **Output**: [ConsentLinkPayload](#consentlinkpayload)
+
 ## ConnectionProperties
 ### Properties
 * **api**: [ExpandedParentApiEntity](#expandedparentapientity): expanded parent object for expansion
@@ -323,4 +335,43 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListConnectionKeysInputProperties
+### Properties
+* **validityTimeSpan**: string (WriteOnly): time span for how long the keys will be valid
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionSecretsParameterValues
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## ConsentLinkInputProperties
+### Properties
+* **parameters**: [ConsentLinkInputParameter](#consentlinkinputparameter)[] (WriteOnly): Array of links
+
+## ConsentLinkInputParameter
+### Properties
+* **objectId**: string (WriteOnly): AAD OID (user or group) if the principal type is ActiveDirectory.
+            MSA PUID if the principal type is MicrosoftAccount.
+* **parameterName**: string (WriteOnly): Name of the parameter in the connection provider's oauthSettings
+* **principalType**: 'ActiveDirectory' | 'Connection' | 'MicrosoftAccount' (WriteOnly): Principal type
+* **redirectUrl**: string (WriteOnly): Name of the parameter in the connection provider's oauthSettings
+* **tenantId**: string (WriteOnly): Tenant Id
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConsentLink
+### Properties
+* **displayName**: string (ReadOnly): Display Name of the parameter in the connection provider's oauthSettings
+* **firstPartyLoginUri**: string (ReadOnly): Uri for first party login
+* **link**: string (ReadOnly): Uri for the consent link
+* **status**: 'Authenticated' | 'Error' | 'Unauthenticated' (ReadOnly): Status of the link
 

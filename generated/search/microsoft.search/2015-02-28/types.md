@@ -11,6 +11,11 @@
 * **tags**: [SearchServiceCreateOrUpdateParametersTags](#searchservicecreateorupdateparameterstags): Tags to help categorize the Search service in the Azure Portal.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2015-02-28)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2015-02-28
+* **Output**: [AdminKeyResult](#adminkeyresult)
+
 ## SearchServiceProperties
 ### Properties
 * **partitionCount**: int: The number of partitions in the Search service; if specified, it can be 1, 2, 3, 4, 6, or 12.

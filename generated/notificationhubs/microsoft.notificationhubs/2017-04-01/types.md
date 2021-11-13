@@ -48,6 +48,16 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2017-04-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [SharedAccessAuthorizationRuleListResult](#sharedaccessauthorizationrulelistresult)
+
+## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2017-04-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string: The time the namespace was created.
@@ -175,6 +185,21 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## SharedAccessAuthorizationRuleResource
+### Properties
+* **id**: string (ReadOnly): Resource Id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (ReadOnly): Resource name
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (ReadOnly): SharedAccessAuthorizationRule properties.
+* **sku**: [Sku](#sku) (ReadOnly): The Sku description for a namespace
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: string (ReadOnly): Resource type
 
 ## ResourceTags
 ### Properties

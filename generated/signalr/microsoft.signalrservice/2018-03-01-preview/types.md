@@ -13,6 +13,11 @@ The geo region of a resource never changes after it is created.
 * **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/SignalR' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/SignalR@2018-03-01-preview)
+* **Resource**: Microsoft.SignalRService/SignalR
+* **ApiVersion**: 2018-03-01-preview
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **externalIP**: string (ReadOnly): The publicly accessible IP of the SignalR service.

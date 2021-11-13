@@ -12,6 +12,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags for the Azure resource.
 * **type**: 'Microsoft.DevSpaces/controllers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConnectionDetails (Microsoft.DevSpaces/controllers@2019-04-01)
+* **Resource**: Microsoft.DevSpaces/controllers
+* **ApiVersion**: 2019-04-01
+* **Input**: [ListConnectionDetailsParameters](#listconnectiondetailsparameters)
+* **Output**: [ControllerConnectionDetailsList](#controllerconnectiondetailslist)
+
 ## ControllerProperties
 ### Properties
 * **dataPlaneFqdn**: string (ReadOnly): DNS name for accessing DataPlane services
@@ -30,4 +36,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ControllerConnectionDetails
+### Properties
+* **orchestratorSpecificConnectionDetails**: [OrchestratorSpecificConnectionDetails](#orchestratorspecificconnectiondetails) (ReadOnly): Base class for types that supply values used to connect to container orchestrators
+
+## OrchestratorSpecificConnectionDetails
+* **Discriminator**: instanceType
+
+### Base Properties
+### KubernetesConnectionDetails
+#### Properties
+* **instanceType**: 'Kubernetes' (Required): Gets the Instance type.
+* **kubeConfig**: string (ReadOnly): Gets the kubeconfig for the cluster.
+
 

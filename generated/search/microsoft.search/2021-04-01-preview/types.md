@@ -31,6 +31,16 @@
 * **properties**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
 * **type**: 'Microsoft.Search/searchServices/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2021-04-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: [AdminKeyResult](#adminkeyresult)
+
+## Function listQueryKeys (Microsoft.Search/searchServices@2021-04-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2021-04-01-preview
+* **Output**: [ListQueryKeysResult](#listquerykeysresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the system-assigned identity of the search service.
@@ -136,4 +146,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly): The value of the query API key.
+* **name**: string (ReadOnly): The name of the query API key; may be empty.
 

@@ -20,6 +20,16 @@
 * **properties**: [BuildStepProperties](#buildstepproperties): Base properties for any build step.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildArguments (Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/buildTasks/steps
+* **ApiVersion**: 2018-02-01-preview
+* **Output**: [BuildArgumentList](#buildargumentlist)
+
+## Function listSourceRepositoryProperties (Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/buildTasks
+* **ApiVersion**: 2018-02-01-preview
+* **Output**: [SourceRepositoryProperties](#sourcerepositoryproperties)
+
 ## BuildTaskProperties
 ### Properties
 * **alias**: string (Required): The alternative updatable name for a build task.

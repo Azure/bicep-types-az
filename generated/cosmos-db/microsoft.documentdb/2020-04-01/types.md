@@ -384,7 +384,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **id**: string (Required): Name of the Cosmos DB Cassandra keyspace
 
 ## Tags
@@ -401,7 +401,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **analyticalStorageTtl**: int: Analytical TTL.
 * **defaultTtl**: int: Time to live of the Cosmos DB Cassandra table
 * **id**: string (Required): Name of the Cosmos DB Cassandra table
@@ -440,7 +440,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **autoscaleSettings**: [AutoscaleSettingsResource](#autoscalesettingsresource): Cosmos DB provisioned throughput settings object
 * **minimumThroughput**: string (ReadOnly): The minimum throughput of the resource
 * **offerReplacePending**: string (ReadOnly): The throughput replace is pending
@@ -480,7 +480,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **id**: string (Required): Name of the Cosmos DB Gremlin database
 
 ## Tags
@@ -497,7 +497,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy): The conflict resolution policy for the container.
 * **defaultTtl**: int: Default time to live
 * **id**: string (Required): Name of the Cosmos DB Gremlin graph
@@ -583,7 +583,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **id**: string (Required): Name of the Cosmos DB MongoDB database
 
 ## Tags
@@ -600,7 +600,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **analyticalStorageTtl**: int: Analytical TTL.
 * **id**: string (Required): Name of the Cosmos DB MongoDB collection
 * **indexes**: [MongoIndex](#mongoindex)[]: List of index keys
@@ -655,7 +655,7 @@
 * **_colls**: string (ReadOnly): A system generated property that specified the addressable path of the collections resource.
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
 * **id**: string (Required): Name of the Cosmos DB SQL database
 
@@ -673,7 +673,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **analyticalStorageTtl**: int: Analytical TTL.
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy): The conflict resolution policy for the container.
 * **defaultTtl**: int: Default time to live
@@ -696,7 +696,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **body**: string: Body of the Stored Procedure
 * **id**: string (Required): Name of the Cosmos DB SQL storedProcedure
 
@@ -719,7 +719,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **body**: string: Body of the Trigger
 * **id**: string (Required): Name of the Cosmos DB SQL trigger
 * **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update': The operation the trigger is associated with
@@ -739,7 +739,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **body**: string: Body of the User Defined Function
 * **id**: string (Required): Name of the Cosmos DB SQL userDefinedFunction
 
@@ -762,7 +762,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Any object
+* **_ts**: any (ReadOnly): Anything
 * **id**: string (Required): Name of the Cosmos DB table
 
 ## Tags

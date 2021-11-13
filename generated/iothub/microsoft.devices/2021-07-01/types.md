@@ -43,6 +43,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/IotHubs@2021-07-01)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2021-07-01
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/IotHubs/IotHubKeys@2021-07-01)
+* **Resource**: Microsoft.Devices/IotHubs/IotHubKeys
+* **ApiVersion**: 2021-07-01
+* **Output**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)
+
 ## ArmIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id

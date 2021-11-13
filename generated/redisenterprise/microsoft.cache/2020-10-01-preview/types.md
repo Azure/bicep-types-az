@@ -31,6 +31,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2020-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## ClusterProperties
 ### Properties
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint

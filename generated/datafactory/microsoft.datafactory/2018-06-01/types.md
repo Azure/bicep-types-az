@@ -103,6 +103,11 @@
 * **properties**: [Trigger](#trigger) (Required): Azure data factory nested object which contains information about creating pipeline run
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAuthKeys (Microsoft.DataFactory/factories/integrationRuntimes@2018-06-01)
+* **Resource**: Microsoft.DataFactory/factories/integrationRuntimes
+* **ApiVersion**: 2018-06-01
+* **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
 ## FactoryIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity.

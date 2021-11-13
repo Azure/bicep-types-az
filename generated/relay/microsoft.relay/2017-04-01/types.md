@@ -57,6 +57,21 @@
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization rule properties.
 * **type**: 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Relay/namespaces/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.Relay/namespaces/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.Relay/namespaces/hybridConnections/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.Relay/namespaces/wcfRelays/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [AccessKeys](#accesskeys)
+
 ## RelayNamespaceProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the namespace was created.

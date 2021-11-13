@@ -12,6 +12,21 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2019-04-01
+* **Output**: [SourceUploadDefinition](#sourceuploaddefinition)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks
+* **ApiVersion**: 2019-04-01
+* **Output**: [Task](#task)
+
+## Function listLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2019-04-01
+* **Output**: [RunGetLogResult](#rungetlogresult)
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
@@ -181,6 +196,11 @@ the source registry during the run.
 * **name**: string (Required): The name of the trigger.
 * **schedule**: string (Required): The CRON expression for the task schedule
 * **status**: 'Disabled' | 'Enabled': The current status of trigger.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

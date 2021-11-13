@@ -34,6 +34,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/webPubSub@2021-09-01-preview)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [WebPubSubKeys](#webpubsubkeys)
+
 ## ManagedIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Get the principal id for the system assigned identity.

@@ -13,6 +13,11 @@ The geo region of a resource never changes after it is created.
 * **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/SignalR@2018-10-01)
+* **Resource**: Microsoft.SignalRService/SignalR
+* **ApiVersion**: 2018-10-01
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **cors**: [SignalRCorsSettings](#signalrcorssettings): Cross-Origin Resource Sharing (CORS) settings.

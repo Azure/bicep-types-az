@@ -42,6 +42,16 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2021-03-01)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2021-03-01
+* **Output**: [BotChannel](#botchannel)
+
+## Function listWithSecrets (Microsoft.BotService/botServices/connections@2021-03-01)
+* **Resource**: Microsoft.BotService/botServices/connections
+* **ApiVersion**: 2021-03-01
+* **Output**: [ConnectionSetting](#connectionsetting)
+
 ## BotProperties
 ### Properties
 * **appPasswordHint**: string: The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
@@ -293,6 +303,16 @@
 ### Properties
 * **key**: string: Key for the Connection Setting Parameter.
 * **value**: string: Value associated with the Connection Setting Parameter.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -24,6 +24,16 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2017-08-21-preview)
+* **Resource**: Microsoft.Devices/provisioningServices
+* **ApiVersion**: 2017-08-21-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/provisioningServices/keys@2017-08-21-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/keys
+* **ApiVersion**: 2017-08-21-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service.

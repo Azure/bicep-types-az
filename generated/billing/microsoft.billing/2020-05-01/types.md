@@ -45,6 +45,11 @@
 * **properties**: [CustomerPolicyProperties](#customerpolicyproperties): The properties of a customer's policy.
 * **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listInvoiceSectionsWithCreateSubscriptionPermission (Microsoft.Billing/billingAccounts@2020-05-01)
+* **Resource**: Microsoft.Billing/billingAccounts
+* **ApiVersion**: 2020-05-01
+* **Output**: [InvoiceSectionListWithCreateSubPermissionResult](#invoicesectionlistwithcreatesubpermissionresult)
+
 ## BillingProfileProperties
 ### Properties
 * **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly): Identifies which services and purchases are paid by a billing profile.
@@ -145,4 +150,17 @@
 ## CustomerPolicyProperties
 ### Properties
 * **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices.
+
+## InvoiceSectionWithCreateSubPermission
+### Properties
+* **billingProfileDisplayName**: string (ReadOnly): The name of the billing profile for the invoice section.
+* **billingProfileId**: string (ReadOnly): The ID of the billing profile for the invoice section.
+* **billingProfileSpendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit.
+* **billingProfileStatus**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
+* **billingProfileStatusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
+* **billingProfileSystemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Enabled azure plans for the associated billing profile.
+* **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section.
+* **invoiceSectionId**: string (ReadOnly): The ID of the invoice section.
+* **invoiceSectionSystemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
 

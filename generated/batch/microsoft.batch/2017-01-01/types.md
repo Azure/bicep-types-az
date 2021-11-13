@@ -37,6 +37,11 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 * **version**: string (ReadOnly): The version of the application package.
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2017-01-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-01-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.

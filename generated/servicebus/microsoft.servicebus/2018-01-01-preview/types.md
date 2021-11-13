@@ -130,6 +130,26 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties supplied to create or update VirtualNetworkRules
 * **type**: 'Microsoft.ServiceBus/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## Identity
 ### Properties
 * **principalId**: string: ObjectId from the KeyVault

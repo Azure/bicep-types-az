@@ -148,6 +148,11 @@
 * **properties**: [WorkloadNetworkVMGroupProperties](#workloadnetworkvmgroupproperties): NSX VM Group Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminCredentials (Microsoft.AVS/privateClouds@2021-06-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2021-06-01
+* **Output**: [AdminCredentials](#admincredentials)
+
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit

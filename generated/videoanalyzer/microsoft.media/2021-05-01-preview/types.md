@@ -43,6 +43,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/videos' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listProvisioningToken (Microsoft.Media/videoAnalyzers/edgeModules@2021-05-01-preview)
+* **Resource**: Microsoft.Media/videoAnalyzers/edgeModules
+* **ApiVersion**: 2021-05-01-preview
+* **Input**: [ListProvisioningTokenInput](#listprovisioningtokeninput)
+* **Output**: [EdgeModuleProvisioningToken](#edgemoduleprovisioningtoken)
+
+## Function listStreamingToken (Microsoft.Media/videoAnalyzers/videos@2021-05-01-preview)
+* **Resource**: Microsoft.Media/videoAnalyzers/videos
+* **ApiVersion**: 2021-05-01-preview
+* **Output**: [VideoStreamingToken](#videostreamingtoken)
+
 ## VideoAnalyzerIdentity
 ### Properties
 * **type**: string (Required): The identity type.

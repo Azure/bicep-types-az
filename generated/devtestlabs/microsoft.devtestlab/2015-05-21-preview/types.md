@@ -88,6 +88,11 @@
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listVhds (Microsoft.DevTestLab/labs@2015-05-21-preview)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2015-05-21-preview
+* **Output**: [ResponseWithContinuationLabVhd](#responsewithcontinuationlabvhd)
+
 ## LabProperties
 ### Properties
 * **artifactsStorageAccount**: string: The artifact storage account of the lab.
@@ -308,4 +313,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly): The absolute URI of the VHD.
 

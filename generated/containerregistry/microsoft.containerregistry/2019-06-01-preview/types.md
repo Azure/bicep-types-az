@@ -37,6 +37,31 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [SourceUploadDefinition](#sourceuploaddefinition)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/taskRuns
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [TaskRun](#taskrun)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [Task](#task)
+
+## Function listLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [RunGetLogResult](#rungetlogresult)
+
+## Function listQueueStatus (Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/agentPools
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [AgentPoolQueueStatus](#agentpoolqueuestatus)
+
 ## AgentPoolProperties
 ### Properties
 * **count**: int: The count of agent machine
@@ -367,6 +392,11 @@ executing a build step.
 * **name**: string (Required): The name of the trigger.
 * **schedule**: string (Required): The CRON expression for the task schedule
 * **status**: 'Disabled' | 'Enabled': The current status of trigger.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

@@ -42,6 +42,26 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.ContainerService/managedClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2021-07-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-07-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2021-07-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-07-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2021-07-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-07-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2021-07-01)
+* **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
+* **ApiVersion**: 2021-07-01
+* **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
+
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
@@ -520,4 +540,18 @@
 ### Properties
 * **description**: string: The private link service connection description.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## AccessProfile
+### Properties
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

@@ -96,6 +96,22 @@
 * **properties**: [JobProperties](#jobproperties): Properties of the Job.
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listContainerSas (Microsoft.Media/mediaServices/assets@2018-03-30-preview)
+* **Resource**: Microsoft.Media/mediaServices/assets
+* **ApiVersion**: 2018-03-30-preview
+* **Input**: [ListContainerSasInput](#listcontainersasinput)
+* **Output**: [AssetContainerSas](#assetcontainersas)
+
+## Function listContentKeys (Microsoft.Media/mediaServices/streamingLocators@2018-03-30-preview)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2018-03-30-preview
+* **Output**: [ListContentKeysResponse](#listcontentkeysresponse)
+
+## Function listPaths (Microsoft.Media/mediaServices/streamingLocators@2018-03-30-preview)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2018-03-30-preview
+* **Output**: [ListPathsResponse](#listpathsresponse)
+
 ## MediaServiceProperties
 ### Properties
 * **mediaServiceId**: string (ReadOnly): The Media Services account ID.
@@ -718,4 +734,19 @@
 ### Properties
 * **code**: string (ReadOnly): Code describing the error detail.
 * **message**: string (ReadOnly): A human-readable representation of the error.
+
+## StreamingLocatorContentKey
+### Properties
+* **id**: string (ReadOnly): ID of Content Key
+* **label**: string (ReadOnly): Label of Content Key
+* **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
+* **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
+* **type**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' (ReadOnly): Encryption type of Content Key
+* **value**: string (ReadOnly): Value of Content Key
+
+## StreamingPath
+### Properties
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly): Encryption scheme
+* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly): Streaming protocol
 

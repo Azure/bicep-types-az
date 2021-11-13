@@ -65,6 +65,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listRegistrationKey (Microsoft.HybridNetwork/devices@2021-05-01)
+* **Resource**: Microsoft.HybridNetwork/devices
+* **ApiVersion**: 2021-05-01
+* **Output**: [DeviceRegistrationKey](#deviceregistrationkey)
+
 ## DevicePropertiesFormat
 * **Discriminator**: deviceType
 

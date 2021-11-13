@@ -496,6 +496,58 @@ This is valid for all deployment slots in an app.
 * **properties**: [VnetGatewayProperties](#vnetgatewayproperties): VnetGateway resource specific properties
 * **type**: 'Microsoft.Web/sites/virtualNetworkConnections/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function list (Microsoft.Web/sites/backups@2016-08-01)
+* **Resource**: Microsoft.Web/sites/backups
+* **ApiVersion**: 2016-08-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [BackupItem](#backupitem)
+
+## Function list (Microsoft.Web/sites/config@2016-08-01)
+* **Resource**: Microsoft.Web/sites/config
+* **ApiVersion**: 2016-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function list (Microsoft.Web/sites/slots/backups@2016-08-01)
+* **Resource**: Microsoft.Web/sites/slots/backups
+* **ApiVersion**: 2016-08-01
+* **Input**: [BackupRequest](#backuprequest)
+* **Output**: [BackupItem](#backupitem)
+
+## Function list (Microsoft.Web/sites/slots/config@2016-08-01)
+* **Resource**: Microsoft.Web/sites/slots/config
+* **ApiVersion**: 2016-08-01
+* **Output**: [StringDictionary](#stringdictionary)
+
+## Function listKeys (Microsoft.Web/sites/hybridConnectionNamespaces/relays@2016-08-01)
+* **Resource**: Microsoft.Web/sites/hybridConnectionNamespaces/relays
+* **ApiVersion**: 2016-08-01
+* **Output**: [HybridConnectionKey](#hybridconnectionkey)
+
+## Function listKeys (Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays@2016-08-01)
+* **Resource**: Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays
+* **ApiVersion**: 2016-08-01
+* **Output**: [HybridConnectionKey](#hybridconnectionkey)
+
+## Function listsecrets (Microsoft.Web/sites/functions@2016-08-01)
+* **Resource**: Microsoft.Web/sites/functions
+* **ApiVersion**: 2016-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listsecrets (Microsoft.Web/sites/slots/functions@2016-08-01)
+* **Resource**: Microsoft.Web/sites/slots/functions
+* **ApiVersion**: 2016-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listsyncfunctiontriggerstatus (Microsoft.Web/sites@2016-08-01)
+* **Resource**: Microsoft.Web/sites
+* **ApiVersion**: 2016-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
+## Function listsyncfunctiontriggerstatus (Microsoft.Web/sites/slots@2016-08-01)
+* **Resource**: Microsoft.Web/sites/slots
+* **ApiVersion**: 2016-08-01
+* **Output**: [FunctionSecrets](#functionsecrets)
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
@@ -1199,4 +1251,36 @@ These values will be used for syncing an app's routes with those from a Virtual 
 ### Properties
 * **vnetName**: string: The Virtual Network name.
 * **vpnPackageUri**: string (Required, WriteOnly): The URI where the VPN package can be downloaded.
+
+## BackupItemProperties
+### Properties
+* **blobName**: string (ReadOnly): Name of the blob which contains data for this backup.
+* **correlationId**: string (ReadOnly): Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
+* **created**: string (ReadOnly): Timestamp of the backup creation.
+* **databases**: [DatabaseBackupSetting](#databasebackupsetting)[] (ReadOnly): List of databases included in the backup.
+* **finishedTimeStamp**: string (ReadOnly): Timestamp when this backup finished.
+* **id**: int (ReadOnly): Id of the backup.
+* **lastRestoreTimeStamp**: string (ReadOnly): Timestamp of a last restore operation which used this backup.
+* **log**: string (ReadOnly): Details regarding this backup. Might contain an error message.
+* **name**: string (ReadOnly): Name of this backup.
+* **scheduled**: bool (ReadOnly): True if this backup has been created due to a schedule being triggered.
+* **sizeInBytes**: int (ReadOnly): Size of the backup in bytes.
+* **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
+* **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
+* **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
+
+## StringDictionaryProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## HybridConnectionKeyProperties
+### Properties
+* **sendKeyName**: string (ReadOnly): The name of the send key.
+* **sendKeyValue**: string (ReadOnly): The value of the send key.
+
+## FunctionSecretsProperties
+### Properties
+* **key**: string (ReadOnly): Secret key.
+* **triggerUrl**: string (ReadOnly): Trigger URL.
 

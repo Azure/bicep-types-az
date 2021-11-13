@@ -24,6 +24,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Elastic/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listDeploymentInfo (Microsoft.Elastic/monitors@2020-07-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2020-07-01
+* **Output**: [DeploymentInfoResponse](#deploymentinforesponse)
+
+## Function listMonitoredResources (Microsoft.Elastic/monitors@2020-07-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2020-07-01
+* **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function listVMHost (Microsoft.Elastic/monitors@2020-07-01)
+* **Resource**: Microsoft.Elastic/monitors
+* **ApiVersion**: 2020-07-01
+* **Output**: [VMHostListResponse](#vmhostlistresponse)
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
@@ -111,4 +126,14 @@
 * **action**: 'Exclude' | 'Include': Valid actions for a filtering tag. Exclusion takes priority over inclusion.
 * **name**: string: The name (also known as the key) of the tag.
 * **value**: string: The value of the tag.
+
+## MonitoredResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
+* **sendingLogs**: 'False' | 'True' (ReadOnly): Flag indicating the status of the resource for sending logs operation to Elastic.
+
+## VMResources
+### Properties
+* **vmResourceId**: string (ReadOnly): The ARM id of the VM resource.
 

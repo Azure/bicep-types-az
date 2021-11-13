@@ -34,6 +34,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2020-09-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices
+* **ApiVersion**: 2020-09-01-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/provisioningServices/keys@2020-09-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/keys
+* **ApiVersion**: 2020-09-01-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
+
 ## ArmIdentity
 ### Properties
 * **identityType**: string: Identity type. Only allowed values are SystemAssigned and UserAssigned. Comma separated if both for ex: SystemAssigned,UserAssigned.

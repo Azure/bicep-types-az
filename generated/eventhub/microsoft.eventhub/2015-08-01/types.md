@@ -52,6 +52,16 @@
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Properties supplied to the Create Or Update Consumer Group operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventHub/namespaces/AuthorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/AuthorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string: The time the Namespace was created.

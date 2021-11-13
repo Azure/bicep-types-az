@@ -106,6 +106,21 @@
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties supplied to create or update VirtualNetworkRules
 * **type**: 'Microsoft.EventHub/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2018-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2018-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## ClusterProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The UTC time when the Event Hubs Cluster was created.

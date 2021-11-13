@@ -16,6 +16,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MixedReality/spatialAnchorsAccounts@2020-05-01)
+* **Resource**: Microsoft.MixedReality/spatialAnchorsAccounts
+* **ApiVersion**: 2020-05-01
+* **Output**: [AccountKeys](#accountkeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.

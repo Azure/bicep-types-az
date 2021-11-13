@@ -78,6 +78,11 @@
 * **properties**: [BillingRoleAssignmentProperties](#billingroleassignmentproperties): The properties of the role assignment.
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listInvoiceSectionsWithCreateSubscriptionPermission (Microsoft.Billing/billingAccounts@2019-10-01-preview)
+* **Resource**: Microsoft.Billing/billingAccounts
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: [InvoiceSectionListWithCreateSubPermissionResult](#invoicesectionlistwithcreatesubpermissionresult)
+
 ## AddressDetails
 ### Properties
 * **addressLine1**: string (WriteOnly): Address line 1.
@@ -162,4 +167,15 @@
 ## CustomerPolicyProperties
 ### Properties
 * **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices.
+
+## InvoiceSectionWithCreateSubPermission
+### Properties
+* **billingProfileDisplayName**: string (ReadOnly): The name of the billing profile for the invoice section.
+* **billingProfileId**: string (ReadOnly): The ID of the billing profile for the invoice section.
+* **billingProfileSpendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit.
+* **billingProfileStatus**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
+* **billingProfileStatusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
+* **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Enabled azure plans for the associated billing profile.
+* **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section.
+* **invoiceSectionId**: string (ReadOnly): The ID of the invoice section.
 

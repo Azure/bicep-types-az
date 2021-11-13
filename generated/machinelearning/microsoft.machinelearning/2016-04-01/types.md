@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.MachineLearning/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listWorkspaceKeys (Microsoft.MachineLearning/workspaces@2016-04-01)
+* **Resource**: Microsoft.MachineLearning/workspaces
+* **ApiVersion**: 2016-04-01
+* **Output**: [WorkspaceKeysResponse](#workspacekeysresponse)
+
 ## WorkspaceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): The creation time for this workspace resource.

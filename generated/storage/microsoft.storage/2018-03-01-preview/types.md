@@ -43,7 +43,7 @@
 * **properties**: [ManagementPoliciesRules](#managementpoliciesrules): The Storage Account ManagementPolicies Rules, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listAccountSas(Microsoft.Storage/storageAccounts@2018-03-01-preview)
+## Function listAccountSas (Microsoft.Storage/storageAccounts@2018-03-01-preview)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2018-03-01-preview
 * **Input**: [AccountSasParameters](#accountsasparameters)
@@ -54,7 +54,7 @@
 * **ApiVersion**: 2018-03-01-preview
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
-## Function listServiceSas(Microsoft.Storage/storageAccounts@2018-03-01-preview)
+## Function listServiceSas (Microsoft.Storage/storageAccounts@2018-03-01-preview)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2018-03-01-preview
 * **Input**: [ServiceSasParameters](#servicesasparameters)

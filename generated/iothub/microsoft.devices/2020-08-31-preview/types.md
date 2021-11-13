@@ -43,6 +43,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: 'Microsoft.Devices/iotHubs/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/IotHubs@2020-08-31-preview)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2020-08-31-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/IotHubs/IotHubKeys@2020-08-31-preview)
+* **Resource**: Microsoft.Devices/IotHubs/IotHubKeys
+* **ApiVersion**: 2020-08-31-preview
+* **Output**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)
+
 ## ArmIdentity
 ### Properties
 * **identityType**: string: Identity type. Only allowed values are SystemAssigned and UserAssigned. Comma separated if both for ex: SystemAssigned,UserAssigned

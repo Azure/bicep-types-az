@@ -187,6 +187,21 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2016-05-15)
+* **Resource**: Microsoft.DevTestLab/labs/schedules
+* **ApiVersion**: 2016-05-15
+* **Output**: [ResponseWithContinuationSchedule](#responsewithcontinuationschedule)
+
+## Function listApplicableSchedules (Microsoft.DevTestLab/labs/virtualmachines@2016-05-15)
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines
+* **ApiVersion**: 2016-05-15
+* **Output**: [ApplicableSchedule](#applicableschedule)
+
+## Function listVhds (Microsoft.DevTestLab/labs@2016-05-15)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2016-05-15
+* **Output**: [ResponseWithContinuationLabVhd](#responsewithcontinuationlabvhd)
+
 ## LabProperties
 ### Properties
 * **artifactsStorageAccount**: string (ReadOnly): The lab's artifact storage account.
@@ -756,4 +771,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly): The URI to the VHD.
 

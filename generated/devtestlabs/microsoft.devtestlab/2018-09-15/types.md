@@ -209,6 +209,26 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listApplicable (Microsoft.DevTestLab/labs/schedules@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs/schedules
+* **ApiVersion**: 2018-09-15
+* **Output**: [ScheduleList](#schedulelist)
+
+## Function listApplicableSchedules (Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs/users/servicefabrics
+* **ApiVersion**: 2018-09-15
+* **Output**: [ApplicableSchedule](#applicableschedule)
+
+## Function listApplicableSchedules (Microsoft.DevTestLab/labs/virtualmachines@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs/virtualmachines
+* **ApiVersion**: 2018-09-15
+* **Output**: [ApplicableSchedule](#applicableschedule)
+
+## Function listVhds (Microsoft.DevTestLab/labs@2018-09-15)
+* **Resource**: Microsoft.DevTestLab/labs
+* **ApiVersion**: 2018-09-15
+* **Output**: [LabVhdList](#labvhdlist)
+
 ## LabProperties
 ### Properties
 * **announcement**: [LabAnnouncementProperties](#labannouncementproperties): Properties of a lab's announcement banner
@@ -879,4 +899,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## LabVhd
+### Properties
+* **id**: string (ReadOnly): The URI to the VHD.
 

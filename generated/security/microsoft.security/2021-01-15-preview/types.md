@@ -9,3 +9,18 @@
 * **properties**: any: Any object
 * **type**: 'Microsoft.Security/ingestionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConnectionStrings (Microsoft.Security/ingestionSettings@2021-01-15-preview)
+* **Resource**: Microsoft.Security/ingestionSettings
+* **ApiVersion**: 2021-01-15-preview
+* **Output**: [ConnectionStrings](#connectionstrings)
+
+## Function listTokens (Microsoft.Security/ingestionSettings@2021-01-15-preview)
+* **Resource**: Microsoft.Security/ingestionSettings
+* **ApiVersion**: 2021-01-15-preview
+* **Output**: [IngestionSettingToken](#ingestionsettingtoken)
+
+## IngestionConnectionString
+### Properties
+* **location**: string (ReadOnly): The region where ingested logs and data resides
+* **value**: string (ReadOnly): Connection string value
+

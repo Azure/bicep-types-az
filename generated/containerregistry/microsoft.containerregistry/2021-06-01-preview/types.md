@@ -112,6 +112,16 @@
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
 * **type**: 'Microsoft.ContainerRegistry/registries/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listCredentials (Microsoft.ContainerRegistry/registries@2021-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
+
+## Function listEvents (Microsoft.ContainerRegistry/registries/webhooks@2021-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/webhooks
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [EventListResult](#eventlistresult)
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
@@ -468,6 +478,82 @@ repositories/repository-name/metadata/write
 * **Additional Properties Type**: string
 
 ## WebhookCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RegistryPassword
+### Properties
+* **name**: 'password' | 'password2' (ReadOnly): The password name.
+* **value**: string (ReadOnly): The password value.
+
+## Event
+### Properties
+* **eventRequestMessage**: [EventRequestMessage](#eventrequestmessage) (ReadOnly): The event request message sent to the service URI.
+* **eventResponseMessage**: [EventResponseMessage](#eventresponsemessage) (ReadOnly): The event response message received from the service URI.
+* **id**: string (ReadOnly): The event ID.
+
+## EventRequestMessage
+### Properties
+* **content**: [EventContent](#eventcontent) (ReadOnly): The content of the event request message.
+* **headers**: [EventRequestMessageHeaders](#eventrequestmessageheaders) (ReadOnly): The headers of the event request message.
+* **method**: string (ReadOnly): The HTTP method used to send the event request message.
+* **requestUri**: string (ReadOnly): The URI used to send the event request message.
+* **version**: string (ReadOnly): The HTTP message version.
+
+## EventContent
+### Properties
+* **action**: string (ReadOnly): The action that encompasses the provided event.
+* **actor**: [Actor](#actor) (ReadOnly): The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+* **id**: string (ReadOnly): The event ID.
+* **request**: [Request](#request) (ReadOnly): The request that generated the event.
+* **source**: [Source](#source) (ReadOnly): The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+* **target**: [Target](#target) (ReadOnly): The target of the event.
+* **timestamp**: string (ReadOnly): The time at which the event occurred.
+
+## Actor
+### Properties
+* **name**: string (ReadOnly): The subject or username associated with the request context that generated the event.
+
+## Request
+### Properties
+* **addr**: string (ReadOnly): The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
+* **host**: string (ReadOnly): The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
+* **id**: string (ReadOnly): The ID of the request that initiated the event.
+* **method**: string (ReadOnly): The request method that generated the event.
+* **useragent**: string (ReadOnly): The user agent header of the request.
+
+## Source
+### Properties
+* **addr**: string (ReadOnly): The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+* **instanceID**: string (ReadOnly): The running instance of an application. Changes after each restart.
+
+## Target
+### Properties
+* **digest**: string (ReadOnly): The digest of the content, as defined by the Registry V2 HTTP API Specification.
+* **length**: int (ReadOnly): The number of bytes of the content. Same as Size field.
+* **mediaType**: string (ReadOnly): The MIME type of the referenced object.
+* **name**: string (ReadOnly): The name of the artifact.
+* **repository**: string (ReadOnly): The repository name.
+* **size**: int (ReadOnly): The number of bytes of the content. Same as Length field.
+* **tag**: string (ReadOnly): The tag name.
+* **url**: string (ReadOnly): The direct URL to the content.
+* **version**: string (ReadOnly): The version of the artifact.
+
+## EventRequestMessageHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## EventResponseMessage
+### Properties
+* **content**: string (ReadOnly): The content of the event response message.
+* **headers**: [EventResponseMessageHeaders](#eventresponsemessageheaders) (ReadOnly): The headers of the event response message.
+* **reasonPhrase**: string (ReadOnly): The reason phrase of the event response message.
+* **statusCode**: string (ReadOnly): The status code of the event response message.
+* **version**: string (ReadOnly): The HTTP message version.
+
+## EventResponseMessageHeaders
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

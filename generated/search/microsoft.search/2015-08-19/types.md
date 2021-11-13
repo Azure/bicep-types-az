@@ -13,6 +13,16 @@
 * **tags**: [ResourceTags](#resourcetags): Tags to help categorize the resource in the Azure portal.
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2015-08-19)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2015-08-19
+* **Output**: [AdminKeyResult](#adminkeyresult)
+
+## Function listQueryKeys (Microsoft.Search/searchServices@2015-08-19)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2015-08-19
+* **Output**: [ListQueryKeysResult](#listquerykeysresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -36,4 +46,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly): The value of the query API key.
+* **name**: string (ReadOnly): The name of the query API key; may be empty.
 

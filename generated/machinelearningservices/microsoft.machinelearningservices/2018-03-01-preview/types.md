@@ -24,6 +24,16 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2018-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2018-03-01-preview
+* **Output**: [ListWorkspaceKeysResult](#listworkspacekeysresult)
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2018-03-01-preview
+* **Output**: [ComputeSecrets](#computesecrets)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -157,4 +167,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **username**: string (ReadOnly)
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
 

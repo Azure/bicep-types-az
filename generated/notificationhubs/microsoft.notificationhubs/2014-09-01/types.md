@@ -42,6 +42,16 @@
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
+* **ApiVersion**: 2014-09-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
+* **ApiVersion**: 2014-09-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string: The time the namespace was created.

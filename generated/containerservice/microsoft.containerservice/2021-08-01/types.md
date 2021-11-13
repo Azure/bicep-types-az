@@ -54,6 +54,26 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2021-08-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-08-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2021-08-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-08-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2021-08-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2021-08-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2021-08-01)
+* **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
+* **ApiVersion**: 2021-08-01
+* **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
+
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
@@ -548,6 +568,20 @@
 ### Properties
 * **creationData**: [CreationData](#creationdata): Data used when creating a target resource from a source resource.
 * **snapshotType**: 'NodePool': The type of a snapshot. The default is NodePool.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## AccessProfile
+### Properties
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## ResourceTags
 ### Properties

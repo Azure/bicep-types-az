@@ -11,6 +11,21 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2018-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2018-09-01
+* **Output**: [SourceUploadDefinition](#sourceuploaddefinition)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2018-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks
+* **ApiVersion**: 2018-09-01
+* **Output**: [Task](#task)
+
+## Function listLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2018-09-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2018-09-01
+* **Output**: [RunGetLogResult](#rungetlogresult)
+
 ## TaskProperties
 ### Properties
 * **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
@@ -148,6 +163,11 @@ the source registry during the run.
 * **scope**: string: The scope of the access token.
 * **token**: string (Required): The access token used to access the source control provider.
 * **tokenType**: 'OAuth' | 'PAT' (Required): The type of Auth token.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

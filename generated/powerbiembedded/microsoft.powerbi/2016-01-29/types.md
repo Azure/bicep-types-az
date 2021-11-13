@@ -12,6 +12,11 @@
 * **tags**: [CreateWorkspaceCollectionRequestTags](#createworkspacecollectionrequesttags): Dictionary of <string>
 * **type**: 'Microsoft.PowerBI/workspaceCollections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.PowerBI/workspaceCollections@2016-01-29)
+* **Resource**: Microsoft.PowerBI/workspaceCollections
+* **ApiVersion**: 2016-01-29
+* **Output**: [WorkspaceCollectionAccessKeys](#workspacecollectionaccesskeys)
+
 ## AzureSku
 ### Properties
 * **name**: 'S1' (Required): SKU name

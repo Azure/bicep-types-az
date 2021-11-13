@@ -39,6 +39,21 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2020-01-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2020-01-01
+* **Output**: [ListWorkspaceKeysResult](#listworkspacekeysresult)
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2020-01-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-01-01
+* **Output**: [ComputeSecrets](#computesecrets)
+
+## Function listNodes (Microsoft.MachineLearningServices/workspaces/computes@2020-01-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2020-01-01
+* **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -266,4 +281,24 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **username**: string (ReadOnly)
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## AmlComputeNodeInformation
+### Properties
+* **nodeId**: string (ReadOnly): ID of the compute node.
+* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+* **port**: int (ReadOnly): SSH port number of the node.
+* **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
+* **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.
+* **runId**: string (ReadOnly): ID of the Experiment running on the node, if any else null.
 

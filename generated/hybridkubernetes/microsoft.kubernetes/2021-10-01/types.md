@@ -13,6 +13,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listClusterUserCredential (Microsoft.Kubernetes/connectedClusters@2021-10-01)
+* **Resource**: Microsoft.Kubernetes/connectedClusters
+* **ApiVersion**: 2021-10-01
+* **Input**: [ListClusterUserCredentialProperties](#listclusterusercredentialproperties)
+* **Output**: [CredentialResults](#credentialresults)
+
 ## ConnectedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
@@ -47,4 +53,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## HybridConnectionConfig
+### Properties
+* **expirationTime**: int (ReadOnly): Timestamp when this token will be expired.
+* **hybridConnectionName**: string (ReadOnly): Name of the connection
+* **relay**: string (ReadOnly): Name of the relay.
+* **token**: string (ReadOnly): Sender access token
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 

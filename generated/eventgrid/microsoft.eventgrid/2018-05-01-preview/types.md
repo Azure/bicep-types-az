@@ -20,6 +20,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/topics@2018-05-01-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2018-05-01-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## EventSubscriptionProperties
 ### Properties
 * **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.

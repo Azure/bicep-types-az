@@ -199,6 +199,33 @@
 * **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required): A Scheduled trigger data transfer object.
 
 
+## Function listSourceShareSynchronizationSettings (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Output**: [SourceShareSynchronizationSettingList](#sourcesharesynchronizationsettinglist)
+
+## Function listSynchronizationDetails (Microsoft.DataShare/accounts/shares@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shares
+* **ApiVersion**: 2019-11-01
+* **Input**: [ShareSynchronization](#sharesynchronization)
+* **Output**: [SynchronizationDetailsList](#synchronizationdetailslist)
+
+## Function listSynchronizationDetails (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Input**: [ShareSubscriptionSynchronization](#sharesubscriptionsynchronization)
+* **Output**: [SynchronizationDetailsList](#synchronizationdetailslist)
+
+## Function listSynchronizations (Microsoft.DataShare/accounts/shares@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shares
+* **ApiVersion**: 2019-11-01
+* **Output**: [ShareSynchronizationList](#sharesynchronizationlist)
+
+## Function listSynchronizations (Microsoft.DataShare/accounts/shareSubscriptions@2019-11-01)
+* **Resource**: Microsoft.DataShare/accounts/shareSubscriptions
+* **ApiVersion**: 2019-11-01
+* **Output**: [ShareSubscriptionSynchronizationList](#sharesubscriptionsynchronizationlist)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): service principal Id
@@ -476,4 +503,60 @@ invitations to specific users or applications in an AD tenant.
 * **synchronizationTime**: string (Required): Synchronization time
 * **triggerStatus**: 'Active' | 'Inactive' | 'SourceSynchronizationSettingDeleted' (ReadOnly): Gets the trigger state
 * **userName**: string (ReadOnly): Name of the user who created the trigger.
+
+## SourceShareSynchronizationSetting
+* **Discriminator**: kind
+
+### Base Properties
+### ScheduledSourceSynchronizationSetting
+#### Properties
+* **kind**: 'ScheduleBased' (Required): Kind of synchronization setting on share.
+* **properties**: [ScheduledSourceShareSynchronizationSettingProperties](#scheduledsourcesharesynchronizationsettingproperties) (ReadOnly): A Scheduled source synchronization setting data transfer object.
+
+
+## ScheduledSourceShareSynchronizationSettingProperties
+### Properties
+* **recurrenceInterval**: 'Day' | 'Hour' (ReadOnly): Recurrence Interval
+* **synchronizationTime**: string (ReadOnly): Synchronization time
+
+## SynchronizationDetails
+### Properties
+* **dataSetId**: string (ReadOnly): Id of data set
+* **dataSetType**: 'AdlsGen1File' | 'AdlsGen1Folder' | 'AdlsGen2File' | 'AdlsGen2FileSystem' | 'AdlsGen2Folder' | 'Blob' | 'BlobFolder' | 'Container' | 'KustoCluster' | 'KustoDatabase' | 'SqlDBTable' | 'SqlDWTable' (ReadOnly): Type of data set
+* **durationMs**: int (ReadOnly): Duration of data set level copy
+* **endTime**: string (ReadOnly): End time of data set level copy
+* **filesRead**: int (ReadOnly): The number of files read from the source data set
+* **filesWritten**: int (ReadOnly): The number of files written into the sink data set
+* **message**: string (ReadOnly): Error message if any
+* **name**: string (ReadOnly): Name of the data set
+* **rowsCopied**: int (ReadOnly): The number of files copied into the sink data set
+* **rowsRead**: int (ReadOnly): The number of rows read from the source data set.
+* **sizeRead**: int (ReadOnly): The size of the data read from the source data set in bytes
+* **sizeWritten**: int (ReadOnly): The size of the data written into the sink data set in bytes
+* **startTime**: string (ReadOnly): Start time of data set level copy
+* **status**: string (ReadOnly): Raw Status
+* **vCore**: int (ReadOnly): The vCore units consumed for the data set synchronization
+
+## ShareSynchronization
+### Properties
+* **consumerEmail**: string (WriteOnly): Email of the user who created the synchronization
+* **consumerName**: string (WriteOnly): Name of the user who created the synchronization
+* **consumerTenantName**: string (WriteOnly): Tenant name of the consumer who created the synchronization
+* **durationMs**: int (WriteOnly): synchronization duration
+* **endTime**: string (WriteOnly): End time of synchronization
+* **message**: string (WriteOnly): message of synchronization
+* **startTime**: string (WriteOnly): start time of synchronization
+* **status**: string (WriteOnly): Raw Status
+* **synchronizationId**: string (WriteOnly): Synchronization id
+* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly, WriteOnly): Synchronization mode
+
+## ShareSubscriptionSynchronization
+### Properties
+* **durationMs**: int (ReadOnly, WriteOnly): Synchronization duration
+* **endTime**: string (ReadOnly, WriteOnly): End time of synchronization
+* **message**: string (ReadOnly, WriteOnly): message of Synchronization
+* **startTime**: string (ReadOnly, WriteOnly): start time of synchronization
+* **status**: string (ReadOnly, WriteOnly): Raw Status
+* **synchronizationId**: string (Required, WriteOnly): Synchronization id
+* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly, WriteOnly): Synchronization mode
 

@@ -40,6 +40,11 @@
 * **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-03-20)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2020-03-20
+* **Output**: [AdminCredentials](#admincredentials)
+
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit

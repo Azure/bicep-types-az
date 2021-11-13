@@ -57,6 +57,11 @@
 * **properties**: [PoolProperties](#poolproperties): Pool properties.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-09-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.

@@ -66,6 +66,17 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listEnvironments (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Input**: [ListEnvironmentsPayload](#listenvironmentspayload)
+* **Output**: [ListEnvironmentsResponse](#listenvironmentsresponse)
+
+## Function listLabs (Microsoft.LabServices/users@2018-10-15)
+* **Resource**: Microsoft.LabServices/users
+* **ApiVersion**: 2018-10-15
+* **Output**: [ListLabsResponse](#listlabsresponse)
+
 ## LabAccountProperties
 ### Properties
 * **enabledRegionSelection**: bool: Represents if region selection is enabled
@@ -242,4 +253,32 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## EnvironmentDetails
+### Properties
+* **description**: string (ReadOnly): Description of the Environment
+* **environmentState**: string (ReadOnly): Publishing state of the environment setting Possible values are Creating, Created, Failed
+* **id**: string (ReadOnly): Resource Id of the environment
+* **latestOperationResult**: [LatestOperationResult](#latestoperationresult) (ReadOnly): Details of the status of an operation.
+* **name**: string (ReadOnly): Name of the Environment
+* **passwordLastReset**: string (ReadOnly): When the password was last reset on the environment.
+* **provisioningState**: string (ReadOnly): The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
+* **totalUsage**: string (ReadOnly): How long the environment has been used by a lab user
+* **virtualMachineDetails**: [VirtualMachineDetails](#virtualmachinedetails) (ReadOnly): Details of the backing virtual machine.
+
+## VirtualMachineDetails
+### Properties
+* **lastKnownPowerState**: string (ReadOnly): Last known compute power state captured in DTL
+* **privateIpAddress**: string (ReadOnly): PrivateIp address of the compute VM
+* **provisioningState**: string (ReadOnly): Provisioning state of the Dtl VM
+* **rdpAuthority**: string (ReadOnly): Connection information for Windows
+* **sshAuthority**: string (ReadOnly): Connection information for Linux
+* **userName**: string (ReadOnly): Compute VM login user name
+
+## LabDetails
+### Properties
+* **id**: string (ReadOnly): The Id of the lab.
+* **name**: string (ReadOnly): Name of the lab
+* **provisioningState**: string (ReadOnly): The provisioning state of the lab.
+* **usageQuota**: string (ReadOnly): The maximum duration a user can use a VM in this lab.
 

@@ -11,6 +11,17 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.AppConfiguration/configurationStores@2019-02-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2019-02-01-preview
+* **Output**: [ApiKeyListResult](#apikeylistresult)
+
+## Function listKeyValue (Microsoft.AppConfiguration/configurationStores@2019-02-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2019-02-01-preview
+* **Input**: [ListKeyValueParameters](#listkeyvalueparameters)
+* **Output**: [KeyValue](#keyvalue)
+
 ## ConfigurationStoreProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of configuration store.
@@ -18,6 +29,20 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the configuration store.
 
 ## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ApiKey
+### Properties
+* **connectionString**: string (ReadOnly): A connection string that can be used by supporting clients for authentication.
+* **id**: string (ReadOnly): The key ID.
+* **lastModified**: string (ReadOnly): The last time any of the key's properties were modified.
+* **name**: string (ReadOnly): A name for the key describing its usage.
+* **readOnly**: bool (ReadOnly): Whether this key can only be used for read operations.
+* **value**: string (ReadOnly): The value of the key that is used for authentication purposes.
+
+## KeyValueTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

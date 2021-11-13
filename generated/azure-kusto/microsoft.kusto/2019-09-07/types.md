@@ -71,6 +71,16 @@
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto iot hub connection properties.
 
 
+## Function listFollowerDatabases (Microsoft.Kusto/clusters@2019-09-07)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-09-07
+* **Output**: [FollowerDatabaseListResult](#followerdatabaselistresult)
+
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-09-07)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2019-09-07
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -191,4 +201,20 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **sharedAccessPolicyName**: string (Required): The name of the share access policy name
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
+
+## FollowerDatabaseDefinition
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (ReadOnly): Database principal role.
+* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **type**: 'App' | 'Group' | 'User' (ReadOnly): Database principal type.
 

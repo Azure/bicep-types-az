@@ -84,6 +84,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventHub/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/authorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules@2021-01-01-preview)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules
+* **ApiVersion**: 2021-01-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): ObjectId from the KeyVault

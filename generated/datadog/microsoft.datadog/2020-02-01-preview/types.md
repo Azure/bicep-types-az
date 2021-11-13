@@ -40,6 +40,26 @@
 * **properties**: [MonitoringTagRulesProperties](#monitoringtagrulesproperties): Definition of the properties for a TagRules resource.
 * **type**: 'Microsoft.Datadog/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listApiKeys (Microsoft.Datadog/monitors@2020-02-01-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2020-02-01-preview
+* **Output**: [DatadogApiKeyListResponse](#datadogapikeylistresponse)
+
+## Function listHosts (Microsoft.Datadog/monitors@2020-02-01-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2020-02-01-preview
+* **Output**: [DatadogHostListResponse](#datadoghostlistresponse)
+
+## Function listLinkedResources (Microsoft.Datadog/monitors@2020-02-01-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2020-02-01-preview
+* **Output**: [LinkedResourceListResponse](#linkedresourcelistresponse)
+
+## Function listMonitoredResources (Microsoft.Datadog/monitors@2020-02-01-preview)
+* **Resource**: Microsoft.Datadog/monitors
+* **ApiVersion**: 2020-02-01-preview
+* **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
 ## DatadogAgreementProperties
 ### Properties
 * **accepted**: bool: If any version of the terms have been accepted, otherwise false.
@@ -122,4 +142,46 @@
 ## MetricRules
 ### Properties
 * **filteringTags**: [FilteringTag](#filteringtag)[]: List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
+
+## DatadogApiKey
+### Properties
+* **created**: string (ReadOnly): The time of creation of the API key.
+* **createdBy**: string (ReadOnly): The user that created the API key.
+* **key**: string (ReadOnly): The value of the API key.
+* **name**: string (ReadOnly): The name of the API key.
+
+## DatadogHost
+### Properties
+* **aliases**: string[] (ReadOnly): The aliases for the host.
+* **apps**: string[] (ReadOnly): The Datadog integrations reporting metrics for the host.
+* **meta**: [DatadogHostMetadata](#datadoghostmetadata) (ReadOnly)
+* **name**: string (ReadOnly): The name of the host.
+
+## DatadogHostMetadata
+### Properties
+* **agentVersion**: string (ReadOnly): The agent version.
+* **installMethod**: [DatadogInstallMethod](#datadoginstallmethod) (ReadOnly)
+* **logsAgent**: [DatadogLogsAgent](#datadoglogsagent) (ReadOnly)
+
+## DatadogInstallMethod
+### Properties
+* **installerVersion**: string (ReadOnly): The installer version.
+* **tool**: string (ReadOnly): The tool.
+* **toolVersion**: string (ReadOnly): The tool version.
+
+## DatadogLogsAgent
+### Properties
+* **transport**: string (ReadOnly): The transport.
+
+## LinkedResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the linked resource.
+
+## MonitoredResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string (ReadOnly): Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: bool (ReadOnly): Flag indicating if resource is sending logs to Datadog.
+* **sendingMetrics**: bool (ReadOnly): Flag indicating if resource is sending metrics to Datadog.
 

@@ -456,6 +456,46 @@
 * **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): Parameters supplied to the Create User operation.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.ApiManagement/service/gateways@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2020-12-01
+* **Output**: [GatewayKeysContract](#gatewaykeyscontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/authorizationServers@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/authorizationServers
+* **ApiVersion**: 2020-12-01
+* **Output**: [AuthorizationServerSecretsContract](#authorizationserversecretscontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/identityProviders@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/identityProviders
+* **ApiVersion**: 2020-12-01
+* **Output**: [ClientSecretContract](#clientsecretcontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/openidConnectProviders@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/openidConnectProviders
+* **ApiVersion**: 2020-12-01
+* **Output**: [ClientSecretContract](#clientsecretcontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/portalsettings@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/portalsettings
+* **ApiVersion**: 2020-12-01
+* **Output**: [PortalSettingValidationKeyContract](#portalsettingvalidationkeycontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/subscriptions@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2020-12-01
+* **Output**: [SubscriptionKeysContract](#subscriptionkeyscontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/tenant@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2020-12-01
+* **Output**: [AccessInformationSecretsContract](#accessinformationsecretscontract)
+
+## Function listValue (Microsoft.ApiManagement/service/namedValues@2020-12-01)
+* **Resource**: Microsoft.ApiManagement/service/namedValues
+* **ApiVersion**: 2020-12-01
+* **Output**: [NamedValueSecretContract](#namedvaluesecretcontract)
+
 ## ApiManagementServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity.

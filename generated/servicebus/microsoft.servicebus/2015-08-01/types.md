@@ -72,6 +72,21 @@
 * **properties**: [SubscriptionProperties](#subscriptionproperties): Description of Subscription Resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.ServiceBus/namespaces/AuthorizationRules@2015-08-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/AuthorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/queues/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/queues/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function listKeys (Microsoft.ServiceBus/namespaces/topics/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.ServiceBus/namespaces/topics/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## NamespaceProperties
 ### Properties
 * **createACSNamespace**: bool: Indicates whether to create an ACS namespace.

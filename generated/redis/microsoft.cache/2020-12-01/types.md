@@ -48,6 +48,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.Cache/redis/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Cache/redis@2020-12-01)
+* **Resource**: Microsoft.Cache/redis
+* **ApiVersion**: 2020-12-01
+* **Output**: [RedisAccessKeys](#redisaccesskeys)
+
 ## RedisCreateProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.

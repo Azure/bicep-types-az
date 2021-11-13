@@ -21,6 +21,11 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/workspaces/storageInsightConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.OperationalInsights/workspaces@2015-03-20)
+* **Resource**: Microsoft.OperationalInsights/workspaces
+* **ApiVersion**: 2015-03-20
+* **Output**: [SharedKeys](#sharedkeys)
+
 ## SavedSearchProperties
 ### Properties
 * **category**: string (Required): The category of the saved search. This helps the user to find a saved search faster.

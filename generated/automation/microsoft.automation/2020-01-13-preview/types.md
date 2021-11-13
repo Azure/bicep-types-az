@@ -160,6 +160,11 @@
 * **tags**: [WatcherTags](#watchertags): Resource tags.
 * **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Automation/automationAccounts@2020-01-13-preview)
+* **Resource**: Microsoft.Automation/automationAccounts
+* **ApiVersion**: 2020-01-13-preview
+* **Output**: [KeyListResult](#keylistresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -507,4 +512,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## Key
+### Properties
+* **KeyName**: 'Primary' | 'Secondary' (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

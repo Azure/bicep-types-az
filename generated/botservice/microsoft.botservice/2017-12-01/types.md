@@ -42,6 +42,16 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2017-12-01)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2017-12-01
+* **Output**: [BotChannel](#botchannel)
+
+## Function listWithSecrets (Microsoft.BotService/botServices/Connections@2017-12-01)
+* **Resource**: Microsoft.BotService/botServices/Connections
+* **ApiVersion**: 2017-12-01
+* **Output**: [ConnectionSetting](#connectionsetting)
+
 ## BotProperties
 ### Properties
 * **configuredChannels**: string[] (ReadOnly): Collection of channels for which the bot is configured
@@ -244,6 +254,16 @@
 ### Properties
 * **key**: string: Key for the Connection Setting Parameter.
 * **value**: string: Value associated with the Connection Setting Parameter.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

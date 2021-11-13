@@ -21,6 +21,26 @@
 * **properties**: [ManagedClusterAgentPoolProfileProperties](#managedclusteragentpoolprofileproperties): Properties for the container service agent pool profile.
 * **type**: 'Microsoft.ContainerService/managedClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listClusterAdminCredential (Microsoft.ContainerService/managedClusters@2020-01-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2020-01-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterMonitoringUserCredential (Microsoft.ContainerService/managedClusters@2020-01-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2020-01-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listClusterUserCredential (Microsoft.ContainerService/managedClusters@2020-01-01)
+* **Resource**: Microsoft.ContainerService/managedClusters
+* **ApiVersion**: 2020-01-01
+* **Output**: [CredentialResults](#credentialresults)
+
+## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2020-01-01)
+* **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
+* **ApiVersion**: 2020-01-01
+* **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
+
 ## ManagedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the system assigned identity which is used by master components.
@@ -220,6 +240,20 @@
 * **Additional Properties Type**: string
 
 ## ManagedClusterAgentPoolProfilePropertiesTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## AccessProfile
+### Properties
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

@@ -40,6 +40,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/domains@2020-01-01-preview)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2020-01-01-preview
+* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+
+## Function listKeys (Microsoft.EventGrid/topics@2020-01-01-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2020-01-01-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.

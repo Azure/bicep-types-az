@@ -144,6 +144,21 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/domains@2021-06-01-preview)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+
+## Function listKeys (Microsoft.EventGrid/partnerNamespaces@2021-06-01-preview)
+* **Resource**: Microsoft.EventGrid/partnerNamespaces
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [PartnerNamespaceSharedAccessKeys](#partnernamespacesharedaccesskeys)
+
+## Function listKeys (Microsoft.EventGrid/topics@2021-06-01-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## IdentityInfo
 ### Properties
 * **principalId**: string: The principal ID of resource identity.

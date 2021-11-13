@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31)
+* **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
+* **ApiVersion**: 2017-08-31
+* **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
+
 ## ManagedClusterProperties
 ### Properties
 * **agentPoolProfiles**: [ContainerServiceAgentPoolProfile](#containerserviceagentpoolprofile)[]: Properties of the agent pool.
@@ -58,6 +63,15 @@
 * **secretName**: string (Required): The secret name.
 * **vaultID**: string (Required): Key vault identifier.
 * **version**: string: The secret version.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## AccessProfile
+### Properties
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## ResourceTags
 ### Properties
