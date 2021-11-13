@@ -267,7 +267,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
         addProviderDefinition(descriptor.namespace);
 
         const action: ResourceListActionDefinition = {
-          actionName,
+          actionName: normalizeListActionName(actionName),
           descriptor,
           postRequest: listData.request,
           requestSchema: listData.requestSchema,

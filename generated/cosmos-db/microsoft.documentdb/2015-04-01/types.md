@@ -166,6 +166,16 @@
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/tables/settings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConnectionStrings (Microsoft.DocumentDB/databaseAccounts@2015-04-01)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2015-04-01
+* **Output**: [DatabaseAccountListConnectionStringsResult](#databaseaccountlistconnectionstringsresult)
+
+## Function listKeys (Microsoft.DocumentDB/databaseAccounts@2015-04-01)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2015-04-01
+* **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
+
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
@@ -225,7 +235,7 @@
 * **_colls**: string (ReadOnly): A system generated property that specified the addressable path of the collections resource.
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Anything
+* **_ts**: any (ReadOnly): Any object
 * **_users**: string (ReadOnly): A system generated property that specifies the addressable path of the users resource.
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL database
 * **options**: [CreateUpdateOptions](#createupdateoptions) (Required, WriteOnly): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
@@ -311,7 +321,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Anything
+* **_ts**: any (ReadOnly): Any object
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (ReadOnly): The conflict resolution policy for the container.
 * **defaultTtl**: int (ReadOnly): Default time to live
 * **id**: string (ReadOnly): Name of the Cosmos DB SQL container
@@ -390,7 +400,7 @@
 ### Properties
 * **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
 * **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: any (ReadOnly): Anything
+* **_ts**: any (ReadOnly): Any object
 * **conflictResolutionPolicy**: [ConflictResolutionPolicy](#conflictresolutionpolicy) (ReadOnly): The conflict resolution policy for the container.
 * **defaultTtl**: int (ReadOnly): Default time to live
 * **id**: string (ReadOnly): Name of the Cosmos DB Gremlin graph
@@ -527,4 +537,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DatabaseAccountConnectionString
+### Properties
+* **connectionString**: string (ReadOnly): Value of the connection string
+* **description**: string (ReadOnly): Description of the connection string
 

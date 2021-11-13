@@ -19,12 +19,15 @@ namespace Azure.Bicep.Types.Az.UnitTests
                 var resourceType = typeLoader.LoadResourceType(kvp.Value);
             }
 
-            foreach (var kvp in indexedTypes.Functions)
+            foreach (var (resourceType, functionsByApiVersion) in indexedTypes.Functions)
             {
-                foreach (var functionLocation in kvp.Value)
+                foreach (var (apiVersion, functions) in functionsByApiVersion)
                 {
-                    var resourceFunctionType = typeLoader.LoadResourceFunctionType(functionLocation);
-                }                
+                    foreach (var functionLocation in functions)
+                    {
+                        var resourceFunctionType = typeLoader.LoadResourceFunctionType(functionLocation);
+                    }
+                }
             }
         }
     }

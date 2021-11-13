@@ -52,7 +52,7 @@
 * **properties**: [ManagementPolicyProperties](#managementpolicyproperties) (ReadOnly): The Storage Account ManagementPolicy properties.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function ListAccountSas (Microsoft.Storage/storageAccounts@2018-11-01)
+## Function listAccountSas(Microsoft.Storage/storageAccounts@2018-11-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2018-11-01
 * **Input**: [AccountSasParameters](#accountsasparameters)
@@ -63,7 +63,7 @@
 * **ApiVersion**: 2018-11-01
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
-## Function ListServiceSas (Microsoft.Storage/storageAccounts@2018-11-01)
+## Function listServiceSas(Microsoft.Storage/storageAccounts@2018-11-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2018-11-01
 * **Input**: [ServiceSasParameters](#servicesasparameters)

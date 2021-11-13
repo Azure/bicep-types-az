@@ -8,14 +8,20 @@ namespace Azure.Bicep.Types.Az.Index
     {
         public TypeIndex(
             IReadOnlyDictionary<string, TypeLocation> types,
-            IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>> functions)
+            IReadOnlyDictionary<string, IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>>> functions)
         {
             Types = types;
             Functions = functions;
         }
 
+        /// <summary>
+        /// Available resource types, indexed by resource type name.
+        /// </summary>
         public IReadOnlyDictionary<string, TypeLocation> Types { get; }
 
-        public IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>> Functions { get; }
+        /// <summary>
+        /// Available resource function types, indexed by resource type -> api version.
+        /// </summary>
+        public IReadOnlyDictionary<string, IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>>> Functions { get; }
     }
 }

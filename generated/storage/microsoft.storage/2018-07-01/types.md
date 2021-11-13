@@ -43,7 +43,7 @@
 * **properties**: [ImmutabilityPolicyProperty](#immutabilitypolicyproperty) (Required): The properties of an ImmutabilityPolicy of a blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function ListAccountSas (Microsoft.Storage/storageAccounts@2018-07-01)
+## Function listAccountSas(Microsoft.Storage/storageAccounts@2018-07-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2018-07-01
 * **Input**: [AccountSasParameters](#accountsasparameters)
@@ -54,7 +54,7 @@
 * **ApiVersion**: 2018-07-01
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
-## Function ListServiceSas (Microsoft.Storage/storageAccounts@2018-07-01)
+## Function listServiceSas(Microsoft.Storage/storageAccounts@2018-07-01)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2018-07-01
 * **Input**: [ServiceSasParameters](#servicesasparameters)

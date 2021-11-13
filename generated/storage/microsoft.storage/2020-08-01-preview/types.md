@@ -147,7 +147,7 @@
 * **properties**: [TableProperties](#tableproperties) (ReadOnly)
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function ListAccountSas (Microsoft.Storage/storageAccounts@2020-08-01-preview)
+## Function listAccountSas(Microsoft.Storage/storageAccounts@2020-08-01-preview)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2020-08-01-preview
 * **Input**: [AccountSasParameters](#accountsasparameters)
@@ -158,7 +158,7 @@
 * **ApiVersion**: 2020-08-01-preview
 * **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
 
-## Function ListServiceSas (Microsoft.Storage/storageAccounts@2020-08-01-preview)
+## Function listServiceSas(Microsoft.Storage/storageAccounts@2020-08-01-preview)
 * **Resource**: Microsoft.Storage/storageAccounts
 * **ApiVersion**: 2020-08-01-preview
 * **Input**: [ServiceSasParameters](#servicesasparameters)

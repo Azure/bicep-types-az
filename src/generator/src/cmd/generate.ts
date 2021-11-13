@@ -1,7 +1,7 @@
 import os from 'os';
 import path from 'path';
 import { createWriteStream, existsSync } from 'fs';
-import { readdir, stat, rmdir, mkdir, rm, writeFile, readFile, copyFile } from 'fs/promises';
+import { readdir, stat, mkdir, rm, writeFile, readFile, copyFile } from 'fs/promises';
 import { series } from 'async';
 import { spawn } from 'child_process';
 import chalk from 'chalk';
@@ -57,7 +57,7 @@ executeSynchronous(async () => {
   }
 
   const tmpOutputPath = `${os.tmpdir()}/_bcp_${new Date().getTime()}`;
-  await rmdir(tmpOutputPath, { recursive: true });
+  await rm(tmpOutputPath, { recursive: true, force: true, });
 
   // this file is deliberately gitignored as it'll be overwritten when using --single-path
   // it's used to generate the git commit message
@@ -76,7 +76,7 @@ executeSynchronous(async () => {
     }
 
     // prepare temp dir for output
-    await rmdir(tmpOutputDir, { recursive: true });
+    await rm(tmpOutputDir, { recursive: true, force: true, });
     await mkdir(tmpOutputDir, { recursive: true });
     const logger = await getLogger(`${tmpOutputDir}/log.out`);
     const config = getConfig(basePath);
@@ -87,7 +87,7 @@ executeSynchronous(async () => {
       await generateSchema(logger, readmePath, tmpOutputDir, verbose, waitForDebugger);
 
       // remove all previously-generated files and copy over results
-      await rmdir(outputDir, { recursive: true });
+      await rm(outputDir, { recursive: true, force: true, });
       await mkdir(outputDir, { recursive: true });
       await copyRecursive(tmpOutputDir, outputDir);
     } catch (err) {
@@ -106,7 +106,7 @@ ${err}
     }
 
     // clean up temp dir
-    await rmdir(tmpOutputDir, { recursive: true });
+    await rm(tmpOutputDir, { recursive: true, force: true, });
     // clean up autorest readme.bicep.md files
     await rm(bicepReadmePath, { force: true });
   }
@@ -365,7 +365,7 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
 
 interface TypeIndex {
   Types: Dictionary<TypeIndexEntry>;
-  Functions: Dictionary<TypeIndexEntry[]>;
+  Functions: Dictionary<Dictionary<TypeIndexEntry[]>>;
 }
 
 interface TypeIndexEntry {
@@ -406,7 +406,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   
   const resourceTypes = new Set<string>();
   const typeDictionary: Dictionary<TypeIndexEntry> = {};
-  const funcDictionary: Dictionary<TypeIndexEntry[]> = {};
+  const funcDictionary: Dictionary<Dictionary<TypeIndexEntry[]>> = {};
 
   // Use a consistent sort order so that file system differences don't generate changes
   for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
@@ -414,35 +414,38 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
 
     const types = JSON.parse(content) as any[];
     for (const type of types) {
-      const resource = type[TypeBaseKind.ResourceType];
-      if (resource) {
-        if (resourceTypes.has(resource.Name.toLowerCase())) {
-          logOut(logger, `WARNING: Found duplicate type \"${resource.Name}\"`);
+      const resourceType = type[TypeBaseKind.ResourceType];
+      if (resourceType) {
+        if (resourceTypes.has(resourceType.Name.toLowerCase())) {
+          logOut(logger, `WARNING: Found duplicate type \"${resourceType.Name}\"`);
           continue;
         }
-        resourceTypes.add(resource.Name.toLowerCase());
+        resourceTypes.add(resourceType.Name.toLowerCase());
   
-        typeDictionary[resource.Name] = {
+        typeDictionary[resourceType.Name] = {
           RelativePath: path.relative(baseDir, typeFilePath),
           Index: types.indexOf(type),
         };
         
-         continue;
+        continue;
       }
 
       const resourceFunction = type[TypeBaseKind.ResourceFunctionType];
       if (resourceFunction) {
         if (!funcDictionary[resourceFunction.ResourceType]) {
-          funcDictionary[resourceFunction.ResourceType] = [];
+          funcDictionary[resourceFunction.ResourceType] = {};
+        }
+        if (!funcDictionary[resourceFunction.ResourceType][resourceFunction.ApiVersion]) {
+          funcDictionary[resourceFunction.ResourceType][resourceFunction.ApiVersion] = [];
         }
 
-        funcDictionary[resourceFunction.ResourceType].push({
+        funcDictionary[resourceFunction.ResourceType][resourceFunction.ApiVersion].push({
           RelativePath: path.relative(baseDir, typeFilePath),
           Index: types.indexOf(type),
         });
 
-         continue;
-      } 
+        continue;
+      }
     }
   }
 
