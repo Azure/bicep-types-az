@@ -186,7 +186,7 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
     const resourceTypes = orderBy(types.filter(t => t instanceof ResourceType) as ResourceType[], x => x.Name.split('@')[0].toLowerCase());
     const resourceFunctionTypes = orderBy(types.filter(t => t instanceof ResourceFunctionType) as ResourceFunctionType[], x => x.Name.split('@')[0].toLowerCase());
-    const typesToWrite = [...resourceTypes, ...resourceFunctionTypes];
+    const typesToWrite: TypeBase[] = [...resourceTypes, ...resourceFunctionTypes];
 
     for (const resourceType of resourceTypes) {
       findTypesToWrite(types, typesToWrite, resourceType.Body);
@@ -195,8 +195,10 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
     for (const resourceFunctionType of resourceFunctionTypes) {
       if (resourceFunctionType.Input)
       {
+        typesToWrite.push(types[resourceFunctionType.Input.Index]);
         findTypesToWrite(types, typesToWrite, resourceFunctionType.Input);
       }
+      typesToWrite.push(types[resourceFunctionType.Output.Index]);
       findTypesToWrite(types, typesToWrite, resourceFunctionType.Output);
     }
 

@@ -12,6 +12,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Test.Rp1/testType1' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listFoos (Test.Rp1/testType1@2021-10-31)
+* **Resource**: Test.Rp1/testType1
+* **ApiVersion**: 2021-10-31
+* **Input**: [FoosRequest](#foosrequest)
+* **Output**: [FoosResponse](#foosresponse)
+
 ## TestType1Properties
 ### Properties
 * **basicString**: string: Description for a basic string property.
@@ -30,4 +36,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## FoosRequest
+### Properties
+* **someString**: string (Required, WriteOnly): The foo request string
+
+## FoosResponse
+### Properties
+* **someString**: string (ReadOnly): The foo response string
 

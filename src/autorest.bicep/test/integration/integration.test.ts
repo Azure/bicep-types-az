@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 import os from 'os';
 import path from 'path';
-import { rmdir } from 'fs/promises';
+import { rm, mkdir } from 'fs/promises';
 import { compare } from 'dir-compare';
 import { defaultLogger, executeCmd, ILogger } from './utils';
 
@@ -48,7 +48,7 @@ describe('integration tests', () => {
   ]
 
   // set to true to overwrite baselines
-  const record = false;
+  const record = true;
 
   // bump timeout - autorest can take a while to run
   jest.setTimeout(60000);
@@ -59,11 +59,11 @@ describe('integration tests', () => {
       const outputDir = `${outputBaseDir}/${spec}`;
 
       if (record) {
-        await rmdir(outputDir, { recursive: true });
+        await rm(outputDir, { recursive: true, force: true, });
         await generateSchema(defaultLogger, readmePath, outputDir, false, false);
       } else {
         const stagingOutputDir = `${__dirname}/temp/${spec}`;
-        await rmdir(stagingOutputDir, { recursive: true });
+        await rm(stagingOutputDir, { recursive: true, force: true, });
   
         await generateSchema(defaultLogger, readmePath, stagingOutputDir, false, false);
   
