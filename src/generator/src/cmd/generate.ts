@@ -405,6 +405,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   });
   
   const resourceTypes = new Set<string>();
+  const resourceFunctions = new Set<string>();
   const typeDictionary: Dictionary<TypeIndexEntry> = {};
   const funcDictionary: Dictionary<Dictionary<TypeIndexEntry[]>> = {};
 
@@ -432,14 +433,20 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
 
       const resourceFunction = type[TypeBaseKind.ResourceFunctionType];
       if (resourceFunction) {
-        if (!funcDictionary[resourceFunction.ResourceType]) {
-          funcDictionary[resourceFunction.ResourceType] = {};
+        const funcKey = `${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}:${resourceFunction.Name}`.toLowerCase();
+        
+        const resourceTypeLower = resourceFunction.ResourceType.toLowerCase();
+        const apiVersionLower = resourceFunction.ApiVersion.toLowerCase();
+        if (resourceFunctions.has(funcKey)) {
+          logOut(logger, `WARNING: Found duplicate function \"${resourceFunction.Name}\" for resource type \"${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}\"`);
+          continue;
         }
-        if (!funcDictionary[resourceFunction.ResourceType][resourceFunction.ApiVersion]) {
-          funcDictionary[resourceFunction.ResourceType][resourceFunction.ApiVersion] = [];
-        }
+        resourceFunctions.add(funcKey);
 
-        funcDictionary[resourceFunction.ResourceType][resourceFunction.ApiVersion].push({
+        funcDictionary[resourceTypeLower] = funcDictionary[resourceTypeLower] || {};
+        funcDictionary[resourceTypeLower][apiVersionLower] = funcDictionary[resourceTypeLower][apiVersionLower] || {};
+
+        funcDictionary[resourceTypeLower][apiVersionLower].push({
           RelativePath: path.relative(baseDir, typeFilePath),
           Index: types.indexOf(type),
         });
