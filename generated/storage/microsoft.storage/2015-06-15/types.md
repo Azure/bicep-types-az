@@ -11,11 +11,6 @@
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listKeys (Microsoft.Storage/storageAccounts@2015-06-15)
-* **Resource**: Microsoft.Storage/storageAccounts
-* **ApiVersion**: 2015-06-15
-* **Output**: [StorageAccountKeys](#storageaccountkeys)
-
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS' (Required): The sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType.
