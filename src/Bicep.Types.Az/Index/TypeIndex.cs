@@ -7,17 +7,17 @@ namespace Azure.Bicep.Types.Az.Index
     public class TypeIndex
     {
         public TypeIndex(
-            IReadOnlyDictionary<string, TypeLocation> types,
+            IReadOnlyDictionary<string, TypeLocation> resources,
             IReadOnlyDictionary<string, IReadOnlyDictionary<string, IReadOnlyList<TypeLocation>>> functions)
         {
-            Types = types;
+            Resources = resources;
             Functions = functions;
         }
 
         /// <summary>
         /// Available resource types, indexed by resource type name.
         /// </summary>
-        public IReadOnlyDictionary<string, TypeLocation> Types { get; }
+        public IReadOnlyDictionary<string, TypeLocation> Resources { get; }
 
         /// <summary>
         /// Available resource function types, indexed by resource type -> api version.

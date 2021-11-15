@@ -241,7 +241,7 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
 }
 
 interface TypeIndex {
-  Types: Dictionary<TypeIndexEntry>;
+  Resources: Dictionary<TypeIndexEntry>;
   Functions: Dictionary<Dictionary<TypeIndexEntry[]>>;
 }
 
@@ -253,7 +253,7 @@ interface TypeIndexEntry {
 function generateIndexMarkdown(index: TypeIndex) {
   let markdown = '# Bicep Types\n';
 
-  const byProvider = groupBy(keys(index.Types), x => x.split('/')[0].toLowerCase());
+  const byProvider = groupBy(keys(index.Resources), x => x.split('/')[0].toLowerCase());
   for (const namespace of sortBy(keys(byProvider), x => x.toLowerCase())) {
     markdown += `## ${namespace}\n`;
 
@@ -263,7 +263,7 @@ function generateIndexMarkdown(index: TypeIndex) {
 
       for (const typeString of sortBy(byResourceType[resourceType], x => x.toLowerCase())) {
         const version = typeString.split('@')[1];
-        const jsonPath = index.Types[typeString].RelativePath;
+        const jsonPath = index.Resources[typeString].RelativePath;
         const anchor = `resource-${typeString.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
 
         markdown += `* [${version}](${path.dirname(jsonPath)}/types.md#${anchor})\n`;
@@ -283,7 +283,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   
   const resourceTypes = new Set<string>();
   const resourceFunctions = new Set<string>();
-  const typeDictionary: Dictionary<TypeIndexEntry> = {};
+  const resDictionary: Dictionary<TypeIndexEntry> = {};
   const funcDictionary: Dictionary<Dictionary<TypeIndexEntry[]>> = {};
 
   // Use a consistent sort order so that file system differences don't generate changes
@@ -301,7 +301,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
         }
         resourceTypes.add(resourceType.Name.toLowerCase());
   
-        typeDictionary[resourceType.Name] = {
+        resDictionary[resourceType.Name] = {
           RelativePath: path.relative(baseDir, typeFilePath),
           Index: types.indexOf(type),
         };
@@ -335,7 +335,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   }
 
   return {
-    Types: typeDictionary,
+    Resources: resDictionary,
     Functions: funcDictionary,
   }
 }

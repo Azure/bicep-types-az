@@ -16,7 +16,7 @@ namespace Azure.Bicep.Types.Az.UnitTests
             var typeLoader = new TypeLoader();
             var indexedTypes = typeLoader.GetIndexedTypes();
 
-            foreach (var kvp in indexedTypes.Types)
+            foreach (var kvp in indexedTypes.Resources)
             {
                 var resourceType = typeLoader.LoadResourceType(kvp.Value);
             }
@@ -39,7 +39,7 @@ namespace Azure.Bicep.Types.Az.UnitTests
             var typeLoader = new TypeLoader();
             var indexedTypes = typeLoader.GetIndexedTypes();
 
-            indexedTypes.Types.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
+            indexedTypes.Resources.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
             indexedTypes.Functions.Keys.Select(x => x.ToLowerInvariant()).Should().OnlyHaveUniqueItems();
             foreach (var functionsByApiVersion in indexedTypes.Functions.Values)
             {
