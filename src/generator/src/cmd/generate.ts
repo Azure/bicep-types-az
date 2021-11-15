@@ -1,27 +1,16 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 import os from 'os';
 import path from 'path';
-import { createWriteStream, existsSync } from 'fs';
-import { readdir, stat, mkdir, rm, writeFile, readFile, copyFile } from 'fs/promises';
-import { series } from 'async';
-import { spawn } from 'child_process';
-import chalk from 'chalk';
-import stripAnsi from 'strip-ansi';
+import { existsSync } from 'fs';
+import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
 import { groupBy, keys, orderBy, sortBy, Dictionary } from 'lodash';
 import { TypeBaseKind } from '../types';
 import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
-
-interface ILogger {
-  out: (data: string) => void;
-  err: (data: string) => void;
-}
-
-const defaultLogger: ILogger = {
-  out: data => process.stdout.write(data),
-  err: data => process.stderr.write(data),
-}
+import { copyRecursive, executeSynchronous, getLogger, lowerCaseCompare, logErr, logOut, ILogger, defaultLogger, executeCmd, findRecursive } from '../utils';
 
 const rootDir = `${__dirname}/../../../../`;
 
@@ -116,13 +105,15 @@ ${err}
 });
 
 function normalizeJsonPath(jsonPath: string) {
+  // eslint-disable-next-line no-useless-escape
   return path.normalize(jsonPath).replace(/[\\\/]/g, '/');
 }
 
 async function generateAutorestConfig(logger: ILogger, readmePath: string, bicepReadmePath: string, config: GeneratorConfig) {
   // We expect a path format convention of <provider>/(preview|stable)/<yyyy>-<mm>-<dd>(|-preview)/<filename>.json
   // This information is used to generate individual tags in the generated autorest configuration
-  const pathRegex = /^([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
+  // eslint-disable-next-line no-useless-escape
+  const pathRegex = /^(\$\(this-folder\)\/|)([^\/]+)\/[^\/]+\/(\d{4}-\d{2}-\d{2}(|-preview))\/.*\.json$/i;
 
   const readmeContents = await readFile(readmePath, { encoding: 'utf8' });
   const readmeMarkdown = markdown.parse(readmeContents);
@@ -141,6 +132,7 @@ async function generateAutorestConfig(logger: ILogger, readmePath: string, bicep
       continue;
     }
     
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const yamlData = yaml.load(node.literal) as any;
     if (yamlData) {
       // input-file may be a single string or an array of strings
@@ -163,14 +155,14 @@ async function generateAutorestConfig(logger: ILogger, readmePath: string, bicep
       // Generate a unique tag. We can't process all of the different API versions in one autorest pass
       // because there are constraints on naming uniqueness (e.g. naming of definitions), so we want to pass over
       // each API version separately.
-      const tagName = `${match[1].toLowerCase()}-${match[2].toLowerCase()}`;
+      const tagName = `${match[2].toLowerCase()}-${match[3].toLowerCase()}`;
       if (!filesByTag[tagName]) {
         filesByTag[tagName] = [];
       }
 
       filesByTag[tagName].push(normalizedFile);
     } else {
-      logOut(logger, `WARNING: Unable to parse swagger path \"${file}\"`);
+      logOut(logger, `WARNING: Unable to parse swagger path "${file}"`);
     }
   }
 
@@ -236,121 +228,6 @@ async function findReadmePaths(specsPath: string) {
   });
 }
 
-async function copyRecursive(sourceBasePath: string, destinationBasePath: string): Promise<void> {
-  for (const filePath of await findRecursive(sourceBasePath, _ => true)) {
-    const destinationPath = path.join(destinationBasePath, path.relative(sourceBasePath, filePath));
-
-    await mkdir(path.dirname(destinationPath), { recursive: true });
-    await copyFile(filePath, destinationPath);
-  }
-}
-
-async function findRecursive(basePath: string, filter: (name: string) => boolean): Promise<string[]> {
-  let results: string[] = [];
-
-  for (const subPathName of await readdir(basePath)) {
-    const subPath = path.resolve(`${basePath}/${subPathName}`);
-
-    const fileStat = await stat(subPath);
-    if (fileStat.isDirectory()) {
-      const pathResults = await findRecursive(subPath, filter);
-      results = results.concat(pathResults);
-      continue;
-    }
-
-    if (!fileStat.isFile()) {
-      continue;
-    }
-
-    if (!filter(subPath)) {
-      continue;
-    }
-
-    results.push(subPath);
-  }
-
-  return results;
-}
-
-function executeCmd(logger: ILogger, verbose: boolean, cwd: string, cmd: string, args: string[]) : Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (verbose) {
-      logOut(logger, chalk.green(`Executing: ${cmd} ${args.join(' ')}`));
-    }
-
-    const child = spawn(cmd, args, {
-      cwd: cwd,
-      windowsHide: true,
-      shell: true,
-    });
-
-    child.stdout.on('data', data => logger.out(chalk.grey(data.toString())));
-    child.stderr.on('data', data => {
-      const message = data.toString();
-      logger.err(chalk.red(message));
-      if (message.indexOf('FATAL ERROR') > -1 && message.indexOf('Allocation failed - JavaScript heap out of memory') > -1) {
-        reject('Child process has run out of memory');
-      }
-    });
-
-    child.on('error', err => {
-      reject(err);
-    });
-    child.on('exit', code => {
-      if (code !== 0) {
-        reject(`Exited with code ${code}`);
-      } else {
-        resolve();
-      }
-    });
-  });
-}
-
-function executeSynchronous<T>(asyncFunc: () => Promise<T>) {
-  series(
-    [asyncFunc],
-    (error, _) => {
-      if (error) {
-        throw error;
-      }
-    });
-}
-
-function lowerCaseCompare(a: string, b: string) {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
-
-  if (aLower === bLower) {
-    return 0;
-  }
-
-  return aLower < bLower ? -1 : 1;
-}
-
-function logOut(logger: ILogger, line: string) {
-  logger.out(`${line}\n`);
-}
-
-function logErr(logger: ILogger, line: any) {
-  logger.err(`${line}\n`);
-}
-
-async function getLogger(logFilePath: string): Promise<ILogger> {
-  await rm(logFilePath, { force: true });
-  const logFileStream = createWriteStream(logFilePath, { flags: 'a' });
-
-  return {
-    out: (data: string) => {
-      process.stdout.write(data);
-      logFileStream.write(stripAnsi(data));
-    },
-    err: (data: string) => {
-      process.stdout.write(data);
-      logFileStream.write(stripAnsi(data));
-    },
-  };
-}
-
 async function buildTypeIndex(logger: ILogger, baseDir: string) {
   const indexContent = await buildIndex(logger, baseDir);
 
@@ -413,12 +290,13 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
     const content = await readFile(typeFilePath, { encoding: 'utf8' });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const types = JSON.parse(content) as any[];
     for (const type of types) {
       const resourceType = type[TypeBaseKind.ResourceType];
       if (resourceType) {
         if (resourceTypes.has(resourceType.Name.toLowerCase())) {
-          logOut(logger, `WARNING: Found duplicate type \"${resourceType.Name}\"`);
+          logOut(logger, `WARNING: Found duplicate type "${resourceType.Name}"`);
           continue;
         }
         resourceTypes.add(resourceType.Name.toLowerCase());
@@ -438,7 +316,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
         const resourceTypeLower = resourceFunction.ResourceType.toLowerCase();
         const apiVersionLower = resourceFunction.ApiVersion.toLowerCase();
         if (resourceFunctions.has(funcKey)) {
-          logOut(logger, `WARNING: Found duplicate function \"${resourceFunction.Name}\" for resource type \"${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}\"`);
+          logOut(logger, `WARNING: Found duplicate function "${resourceFunction.Name}" for resource type "${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}"`);
           continue;
         }
         resourceFunctions.add(funcKey);
