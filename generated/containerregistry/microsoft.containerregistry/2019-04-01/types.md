@@ -12,6 +12,21 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2019-04-01
+* **Output**: [SourceUploadDefinition](#sourceuploaddefinition)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks
+* **ApiVersion**: 2019-04-01
+* **Output**: [Task](#task)
+
+## Function listLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2019-04-01)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2019-04-01
+* **Output**: [RunGetLogResult](#rungetlogresult)
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
@@ -186,4 +201,28 @@ the source registry during the run.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SourceUploadDefinition
+### Properties
+* **relativePath**: string (ReadOnly): The relative path to the source. This is used to submit the subsequent queue build request.
+* **uploadUrl**: string (ReadOnly): The URL where the client can upload the source.
+
+## Task
+### Properties
+* **id**: string (ReadOnly): The resource ID.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RunGetLogResult
+### Properties
+* **logLink**: string (ReadOnly): The link to logs for a run on a azure container registry.
 

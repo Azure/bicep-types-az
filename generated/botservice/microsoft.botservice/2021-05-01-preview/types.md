@@ -51,6 +51,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.BotService/botServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2021-05-01-preview)
+* **Resource**: Microsoft.BotService/botServices/channels
+* **ApiVersion**: 2021-05-01-preview
+* **Output**: [BotChannel](#botchannel)
+
+## Function listWithSecrets (Microsoft.BotService/botServices/connections@2021-05-01-preview)
+* **Resource**: Microsoft.BotService/botServices/connections
+* **ApiVersion**: 2021-05-01-preview
+* **Output**: [ConnectionSetting](#connectionsetting)
+
 ## BotProperties
 ### Properties
 * **appPasswordHint**: string: The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
@@ -331,6 +341,40 @@
 ### Properties
 * **key**: string: Key for the Connection Setting Parameter.
 * **value**: string: Value associated with the Connection Setting Parameter.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BotChannel
+### Properties
+* **etag**: string (ReadOnly): Entity Tag
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
+* **location**: string (ReadOnly): Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [Channel](#channel) (ReadOnly): Channel definition
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionSetting
+### Properties
+* **etag**: string (ReadOnly): Entity Tag
+* **id**: string (ReadOnly): Specifies the resource ID.
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
+* **location**: string (ReadOnly): Specifies the location of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
+* **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item
+* **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## ResourceTags
 ### Properties

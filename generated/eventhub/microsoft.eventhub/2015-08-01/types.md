@@ -52,6 +52,16 @@
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Properties supplied to the Create Or Update Consumer Group operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventHub/namespaces/AuthorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/AuthorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2015-08-01)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2015-08-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string: The time the Namespace was created.
@@ -92,4 +102,20 @@
 * **eventHubPath**: string (ReadOnly): The path of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
 * **userMetadata**: string: The user metadata.
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created Namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created Namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created Namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created Namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 

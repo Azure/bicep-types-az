@@ -22,6 +22,21 @@
 * **properties**: [TransactionNodeProperties](#transactionnodeproperties): Payload of transaction node properties payload in the transaction node payload.
 * **type**: 'Microsoft.Blockchain/blockchainMembers/transactionNodes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listApiKeys (Microsoft.Blockchain/blockchainMembers@2018-06-01-preview)
+* **Resource**: Microsoft.Blockchain/blockchainMembers
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: [ApiKeyCollection](#apikeycollection)
+
+## Function listApiKeys (Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview)
+* **Resource**: Microsoft.Blockchain/blockchainMembers/transactionNodes
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: [ApiKeyCollection](#apikeycollection)
+
+## Function listConsortiums (Microsoft.Blockchain/locations@2018-06-01-preview)
+* **Resource**: Microsoft.Blockchain/locations
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: [ConsortiumCollection](#consortiumcollection)
+
 ## BlockchainMemberProperties
 ### Properties
 * **consortium**: string: Gets or sets the consortium for the blockchain member.
@@ -67,4 +82,26 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Gets or sets the blockchain member provision state.
 * **publicKey**: string (ReadOnly): Gets or sets the transaction node public key.
 * **userName**: string (ReadOnly): Gets or sets the transaction node dns endpoint basic auth user name.
+
+## ApiKeyCollection
+### Properties
+* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
+
+## ApiKey
+### Properties
+* **keyName**: string (ReadOnly): Gets or sets the API key name.
+* **value**: string (ReadOnly): Gets or sets the API key value.
+
+## ApiKeyCollection
+### Properties
+* **keys**: [ApiKey](#apikey)[] (ReadOnly): Gets or sets the collection of API key.
+
+## ConsortiumCollection
+### Properties
+* **value**: [Consortium](#consortium)[] (ReadOnly): Gets or sets the collection of consortiums.
+
+## Consortium
+### Properties
+* **name**: string (ReadOnly): Gets or sets the blockchain member name.
+* **protocol**: 'Corda' | 'NotSpecified' | 'Parity' | 'Quorum' (ReadOnly): Gets or sets the blockchain protocol.
 

@@ -67,6 +67,11 @@
 * **properties**: [VnetRouteProperties](#vnetrouteproperties) (WriteOnly): VnetRoute resource specific properties
 * **type**: 'Microsoft.Web/serverfarms/virtualNetworkConnections/routes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays@2016-09-01)
+* **Resource**: Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays
+* **ApiVersion**: 2016-09-01
+* **Output**: [HybridConnectionKey](#hybridconnectionkey)
+
 ## AppServiceEnvironment
 ### Properties
 * **allowedMultiSizes**: string (ReadOnly): List of comma separated strings describing which VM sizes are allowed for front-ends.
@@ -236,4 +241,17 @@ STATIC - Static route set on the app only
 
 These values will be used for syncing an app's routes with those from a Virtual Network.
 * **startAddress**: string (WriteOnly): The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+
+## HybridConnectionKey
+### Properties
+* **id**: string (ReadOnly): Resource Id.
+* **kind**: string (ReadOnly): Kind of resource.
+* **name**: string (ReadOnly): Resource Name.
+* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties) (ReadOnly): HybridConnectionKey resource specific properties
+* **type**: string (ReadOnly): Resource type.
+
+## HybridConnectionKeyProperties
+### Properties
+* **sendKeyName**: string (ReadOnly): The name of the send key.
+* **sendKeyValue**: string (ReadOnly): The value of the send key.
 

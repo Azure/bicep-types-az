@@ -136,6 +136,33 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/mediaServices/transforms/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listContainerSas (Microsoft.Media/mediaServices/assets@2021-06-01)
+* **Resource**: Microsoft.Media/mediaServices/assets
+* **ApiVersion**: 2021-06-01
+* **Input**: [ListContainerSasInput](#listcontainersasinput)
+* **Output**: [AssetContainerSas](#assetcontainersas)
+
+## Function listContentKeys (Microsoft.Media/mediaServices/streamingLocators@2021-06-01)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2021-06-01
+* **Output**: [ListContentKeysResponse](#listcontentkeysresponse)
+
+## Function listEdgePolicies (Microsoft.Media/mediaservices@2021-06-01)
+* **Resource**: Microsoft.Media/mediaservices
+* **ApiVersion**: 2021-06-01
+* **Input**: [ListEdgePoliciesInput](#listedgepoliciesinput)
+* **Output**: [EdgePolicies](#edgepolicies)
+
+## Function listPaths (Microsoft.Media/mediaServices/streamingLocators@2021-06-01)
+* **Resource**: Microsoft.Media/mediaServices/streamingLocators
+* **ApiVersion**: 2021-06-01
+* **Output**: [ListPathsResponse](#listpathsresponse)
+
+## Function listStreamingLocators (Microsoft.Media/mediaServices/assets@2021-06-01)
+* **Resource**: Microsoft.Media/mediaServices/assets
+* **ApiVersion**: 2021-06-01
+* **Output**: [ListStreamingLocatorsResponse](#liststreaminglocatorsresponse)
+
 ## MediaServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The Principal ID of the identity.
@@ -1047,4 +1074,64 @@
 ### Properties
 * **code**: string (ReadOnly): Code describing the error detail.
 * **message**: string (ReadOnly): A human-readable representation of the error.
+
+## ListContainerSasInput
+### Properties
+* **expiryTime**: string (WriteOnly): The SAS URL expiration time.  This must be less than 24 hours from the current time.
+* **permissions**: 'Read' | 'ReadWrite' | 'ReadWriteDelete' (WriteOnly): The permissions to set on the SAS URL.
+
+## AssetContainerSas
+### Properties
+* **assetContainerSasUrls**: string[] (ReadOnly): The list of Asset container SAS URLs.
+
+## ListContentKeysResponse
+### Properties
+* **contentKeys**: [StreamingLocatorContentKey](#streaminglocatorcontentkey)[] (ReadOnly): ContentKeys used by current Streaming Locator
+
+## ListEdgePoliciesInput
+### Properties
+* **deviceId**: string (WriteOnly): Unique identifier of the edge device.
+
+## EdgePolicies
+### Properties
+* **usageDataCollectionPolicy**: [EdgeUsageDataCollectionPolicy](#edgeusagedatacollectionpolicy) (ReadOnly)
+
+## EdgeUsageDataCollectionPolicy
+### Properties
+* **dataCollectionFrequency**: string (ReadOnly): Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **dataReportingFrequency**: string (ReadOnly): Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+* **eventHubDetails**: [EdgeUsageDataEventHub](#edgeusagedataeventhub) (ReadOnly)
+* **maxAllowedUnreportedUsageDuration**: string (ReadOnly): Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+
+## EdgeUsageDataEventHub
+### Properties
+* **name**: string (ReadOnly): Name of the Event Hub where usage will be reported.
+* **namespace**: string (ReadOnly): Namespace of the Event Hub where usage will be reported.
+* **token**: string (ReadOnly): SAS token needed to interact with Event Hub.
+
+## ListPathsResponse
+### Properties
+* **downloadPaths**: string[] (ReadOnly): Download Paths supported by current Streaming Locator
+* **streamingPaths**: [StreamingPath](#streamingpath)[] (ReadOnly): Streaming Paths supported by current Streaming Locator
+
+## StreamingPath
+### Properties
+* **encryptionScheme**: 'CommonEncryptionCbcs' | 'CommonEncryptionCenc' | 'EnvelopeEncryption' | 'NoEncryption' (ReadOnly): Encryption scheme
+* **paths**: string[] (ReadOnly): Streaming paths for each protocol and encryptionScheme pair
+* **streamingProtocol**: 'Dash' | 'Download' | 'Hls' | 'SmoothStreaming' (ReadOnly): Streaming protocol
+
+## ListStreamingLocatorsResponse
+### Properties
+* **streamingLocators**: [AssetStreamingLocator](#assetstreaminglocator)[] (ReadOnly): The list of Streaming Locators.
+
+## AssetStreamingLocator
+### Properties
+* **assetName**: string (ReadOnly): Asset Name.
+* **created**: string (ReadOnly): The creation time of the Streaming Locator.
+* **defaultContentKeyPolicyName**: string (ReadOnly): Name of the default ContentKeyPolicy used by this Streaming Locator.
+* **endTime**: string (ReadOnly): The end time of the Streaming Locator.
+* **name**: string (ReadOnly): Streaming Locator name.
+* **startTime**: string (ReadOnly): The start time of the Streaming Locator.
+* **streamingLocatorId**: string (ReadOnly): StreamingLocatorId of the Streaming Locator.
+* **streamingPolicyName**: string (ReadOnly): Name of the Streaming Policy used by this Streaming Locator.
 

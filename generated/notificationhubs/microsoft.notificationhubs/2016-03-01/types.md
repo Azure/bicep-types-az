@@ -48,6 +48,16 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/AuthorizationRules
+* **ApiVersion**: 2016-03-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
+## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2016-03-01)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules
+* **ApiVersion**: 2016-03-01
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## NamespaceProperties
 ### Properties
 * **createdAt**: string: The time the namespace was created.
@@ -165,4 +175,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
+* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
+
+## ResourceListKeys
+### Properties
+* **keyName**: string (ReadOnly): KeyName of the created AuthorizationRule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string (ReadOnly): PrimaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created AuthorizationRule
+* **secondaryKey**: string (ReadOnly): SecondaryKey of the created AuthorizationRule
 

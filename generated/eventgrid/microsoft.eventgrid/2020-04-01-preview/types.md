@@ -129,6 +129,21 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/domains@2020-04-01-preview)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+
+## Function listKeys (Microsoft.EventGrid/partnerNamespaces@2020-04-01-preview)
+* **Resource**: Microsoft.EventGrid/partnerNamespaces
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: [PartnerNamespaceSharedAccessKeys](#partnernamespacesharedaccesskeys)
+
+## Function listKeys (Microsoft.EventGrid/topics@2020-04-01-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2020-04-01-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## IdentityInfo
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
@@ -549,4 +564,19 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DomainSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly): Shared access key1 for the domain.
+* **key2**: string (ReadOnly): Shared access key2 for the domain.
+
+## PartnerNamespaceSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly): Shared access key1 for the partner namespace.
+* **key2**: string (ReadOnly): Shared access key2 for the partner namespace.
+
+## TopicSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly): Shared access key1 for the topic.
+* **key2**: string (ReadOnly): Shared access key2 for the topic.
 

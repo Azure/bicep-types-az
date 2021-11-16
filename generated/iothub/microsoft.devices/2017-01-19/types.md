@@ -24,6 +24,16 @@
 * **tags**: [EventHubConsumerGroupInfoTags](#eventhubconsumergroupinfotags) (ReadOnly): The tags.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/IotHubs@2017-01-19)
+* **Resource**: Microsoft.Devices/IotHubs
+* **ApiVersion**: 2017-01-19
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/IotHubs/IotHubKeys@2017-01-19)
+* **Resource**: Microsoft.Devices/IotHubs/IotHubKeys
+* **ApiVersion**: 2017-01-19
+* **Output**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)
+
 ## IotHubProperties
 ### Properties
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[]: The shared access policies you can use to secure a connection to the IoT hub.
@@ -172,4 +182,16 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly): The next link.
+* **value**: [SharedAccessSignatureAuthorizationRule](#sharedaccesssignatureauthorizationrule)[] (ReadOnly): The list of shared access policies.
+
+## SharedAccessSignatureAuthorizationRule
+### Properties
+* **keyName**: string (Required): The name of the shared access policy.
+* **primaryKey**: string: The primary key.
+* **rights**: 'DeviceConnect' | 'RegistryRead' | 'RegistryRead, DeviceConnect' | 'RegistryRead, RegistryWrite' | 'RegistryRead, RegistryWrite, DeviceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect' | 'RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect' | 'RegistryRead, ServiceConnect' | 'RegistryRead, ServiceConnect, DeviceConnect' | 'RegistryWrite' | 'RegistryWrite, DeviceConnect' | 'RegistryWrite, ServiceConnect' | 'RegistryWrite, ServiceConnect, DeviceConnect' | 'ServiceConnect' | 'ServiceConnect, DeviceConnect' (Required): The permissions assigned to the shared access policy.
+* **secondaryKey**: string: The secondary key.
 

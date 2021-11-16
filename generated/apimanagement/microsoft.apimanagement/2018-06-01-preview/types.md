@@ -30,7 +30,6 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **link**: string (ReadOnly): Link to the Storage Blob containing the result of the export operation. The Blob Uri is only valid for 5 minutes.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): Api Create or Update Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2018-06-01-preview
@@ -471,66 +470,6 @@
 * **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
 * **versioningScheme**: 'Header' | 'Query' | 'Segment' (Required): An value that determines where the API Version identifier will be located in a HTTP request.
 * **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-
-## ApiCreateOrUpdateProperties
-### Properties
-* **apiRevision**: string (WriteOnly): Describes the Revision of the Api. If no value is provided, default revision 1 is created
-* **apiRevisionDescription**: string (WriteOnly): Description of the Api Revision.
-* **apiType**: 'http' | 'soap' (WriteOnly): Type of Api to create. 
- * `http` creates a SOAP to REST API 
- * `soap` creates a SOAP pass-through API .
-* **apiVersion**: string (WriteOnly): Indicates the Version identifier of the API if the API is versioned
-* **apiVersionDescription**: string (WriteOnly): Description of the Api Version.
-* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly): An API Version Set contains the common configuration for a set of API Versions relating
-* **apiVersionSetId**: string (WriteOnly): A resource identifier for the related ApiVersionSet.
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): API Authentication Settings.
-* **contentFormat**: 'openapi' | 'openapi+json' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly): Format of the Content in which the API is getting imported.
-* **contentValue**: string (WriteOnly): Content value when Importing an API.
-* **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
-* **displayName**: string (WriteOnly): API name.
-* **isCurrent**: bool (ReadOnly, WriteOnly): Indicates if API revision is current api revision.
-* **isOnline**: bool (ReadOnly, WriteOnly): Indicates if API revision is accessible via the gateway.
-* **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-* **protocols**: 'http' | 'https'[] (WriteOnly): Describes on which protocols the operations in this API can be invoked.
-* **serviceUrl**: string (WriteOnly): Absolute URL of the backend service implementing this API.
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Subscription key parameter names details.
-* **subscriptionRequired**: bool (WriteOnly): Specifies whether an API or Product subscription is required for accessing the API.
-* **type**: 'http' | 'soap' (WriteOnly): Type of API.
-* **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
-
-## ApiVersionSetContractDetails
-### Properties
-* **description**: string (WriteOnly): Description of API Version Set.
-* **id**: string (WriteOnly): Identifier for existing API Version Set. Omit this value to create a new Version Set.
-* **versionHeaderName**: string (WriteOnly): Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
-* **versionQueryName**: string (WriteOnly): Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-
-## AuthenticationSettingsContract
-### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
-* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
-* **subscriptionKeyRequired**: bool (WriteOnly): Specifies whether subscription key is required during call to this API, true - API is included into closed products only, false - API is included into open products alone, null - there is a mix of products.
-
-## OAuth2AuthenticationSettingsContract
-### Properties
-* **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
-* **scope**: string (WriteOnly): operations scope.
-
-## OpenIdAuthenticationSettingsContract
-### Properties
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly): How to send token to the server.
-* **openidProviderId**: string (WriteOnly): OAuth authorization server identifier.
-
-## SubscriptionKeyParameterNamesContract
-### Properties
-* **header**: string (WriteOnly): Subscription key header name.
-* **query**: string (WriteOnly): Subscription key query string parameter name.
-
-## ApiCreateOrUpdatePropertiesWsdlSelector
-### Properties
-* **wsdlEndpointName**: string (WriteOnly): Name of endpoint(port) to import from WSDL
-* **wsdlServiceName**: string (WriteOnly): Name of service to import from WSDL
 
 ## DiagnosticContractProperties
 ### Properties

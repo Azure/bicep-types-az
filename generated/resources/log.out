@@ -1,12 +1,12 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'DataManifestCustomResourceFunctionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -52,10 +52,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -88,10 +88,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -102,7 +102,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-07-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyExemptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -114,7 +114,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -135,10 +135,10 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 d
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -220,10 +220,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2017-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -233,10 +233,10 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2020-08-21-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -284,10 +284,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'LocationMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -384,10 +384,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ScriptLogsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -474,10 +474,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-10-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ScriptLogsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -487,10 +487,10 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.features-2021-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -498,7 +498,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.features-2015-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FeatureProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'FeatureResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -510,7 +510,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2016-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -523,53 +523,17 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2015-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.authorization-2019-09-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -603,9 +567,45 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 4ms
+info    | Processing batch task - {"tag":"microsoft.authorization-2019-09-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParameterValuesValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParameterDefinitionsValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'PolicySetDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -632,10 +632,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -665,7 +665,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -692,10 +692,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -721,10 +721,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2017-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicySku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -746,7 +746,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2016-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -762,10 +762,25 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resources-2021-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecVersionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 4ms
+info    | Processing batch task - {"tag":"microsoft.resources-2021-03-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecVersionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -778,24 +793,9 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 2ms
-info    | Processing batch task - {"tag":"microsoft.resources-2021-03-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecVersionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecVersionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -804,10 +804,10 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2016-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -822,7 +822,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2015-10-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -834,10 +834,10 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -873,167 +873,6 @@ warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an u
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceTypeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 12ms
-info    | Processing batch task - {"tag":"microsoft.resources-2020-06-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ScopedDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ScopedDeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ApiProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
-info    | Processing batch task - {"tag":"microsoft.resources-2019-10-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ScopedDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ScopedDeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1079,9 +918,170 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 6ms
+info    | Processing batch task - {"tag":"microsoft.resources-2020-06-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ScopedDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ScopedDeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ApiProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 4ms
+info    | Processing batch task - {"tag":"microsoft.resources-2019-10-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ScopedDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ScopedDeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1152,10 +1152,10 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1228,7 +1228,74 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-05-10"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceManagementErrorWithDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasPathType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AliasType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 3ms
+info    | Processing batch task - {"tag":"microsoft.resources-2019-05-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1293,76 +1360,9 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.resources-2019-05-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceManagementErrorWithDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasPathType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'AliasType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ZoneMapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
-warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
-warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1426,10 +1426,10 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2018-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1493,10 +1493,10 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2018-02-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1558,10 +1558,10 @@ warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Un
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2017-05-10"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1626,7 +1626,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1698,7 +1698,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1761,7 +1761,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-02-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1823,7 +1823,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2015-11-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1907,7 +1907,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.resources-2020-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'LocationMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1930,7 +1930,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-11-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'LocationMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1953,7 +1953,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.resources-2019-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'LocationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1974,7 +1974,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.resources-2018-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'LocationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1991,10 +1991,10 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.resources-2016-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'LocationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2014,7 +2014,7 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2019-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2064,7 +2064,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2018-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2091,10 +2091,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2017-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2120,10 +2120,10 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.solutions-2016-09-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Appliance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'AppliancePatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2149,5 +2149,5 @@ warning | Skipping path '/{applianceId}': Unable to locate "/providers/" segment
 warning | Skipping path '/{applianceDefinitionId}': Unable to locate "/providers/" segment
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Generation Complete

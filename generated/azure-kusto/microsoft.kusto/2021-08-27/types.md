@@ -121,6 +121,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listFollowerDatabases (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Output**: [FollowerDatabaseListResult](#followerdatabaselistresult)
+
+## Function listLanguageExtensions (Microsoft.Kusto/clusters@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2021-08-27
+* **Output**: [LanguageExtensionsList](#languageextensionslist)
+
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2021-08-27)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2021-08-27
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -345,4 +360,32 @@
 * **actionsRequired**: string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
+
+## FollowerDatabaseListResult
+### Properties
+* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+
+## FollowerDatabaseDefinition
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
+
+## LanguageExtensionsList
+### Properties
+* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
+
+## DatabasePrincipalListResult
+### Properties
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewer' | 'User' | 'Viewer' (ReadOnly): Database principal role.
+* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **type**: 'App' | 'Group' | 'User' (ReadOnly): Database principal type.
 

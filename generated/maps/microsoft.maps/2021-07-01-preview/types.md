@@ -26,6 +26,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Maps/accounts@2021-07-01-preview)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2021-07-01-preview
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## ManagedServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -83,4 +88,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## MapsAccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
+* **primaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the primary key.
+* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
+* **secondaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the secondary key.
 

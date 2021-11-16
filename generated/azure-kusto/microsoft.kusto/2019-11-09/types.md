@@ -89,6 +89,16 @@
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): A class representing cluster principal property.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listFollowerDatabases (Microsoft.Kusto/clusters@2019-11-09)
+* **Resource**: Microsoft.Kusto/clusters
+* **ApiVersion**: 2019-11-09
+* **Output**: [FollowerDatabaseListResult](#followerdatabaselistresult)
+
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-11-09)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2019-11-09
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -232,4 +242,28 @@
 * **role**: 'AllDatabasesAdmin' | 'AllDatabasesViewer' (Required): Cluster principal role.
 * **tenantId**: string: The tenant id of the principal
 * **tenantName**: string (ReadOnly): The tenant name of the principal
+
+## FollowerDatabaseListResult
+### Properties
+* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+
+## FollowerDatabaseDefinition
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
+
+## DatabasePrincipalListResult
+### Properties
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (ReadOnly): Database principal role.
+* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **type**: 'App' | 'Group' | 'User' (ReadOnly): Database principal type.
 

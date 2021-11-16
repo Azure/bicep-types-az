@@ -66,6 +66,12 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listUpgradableVersions (Microsoft.ServiceFabric/clusters@2021-06-01)
+* **Resource**: Microsoft.ServiceFabric/clusters
+* **ApiVersion**: 2021-06-01
+* **Input**: [UpgradableVersionsDescription](#upgradableversionsdescription)
+* **Output**: [UpgradableVersionPathResult](#upgradableversionpathresult)
+
 ## ClusterProperties
 ### Properties
 * **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService'[]: The list of add-on features to enable in the cluster.
@@ -548,4 +554,12 @@ should be split between the partition ‘count’
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UpgradableVersionsDescription
+### Properties
+* **targetVersion**: string (Required, WriteOnly): The target code version.
+
+## UpgradableVersionPathResult
+### Properties
+* **supportedPath**: string[] (ReadOnly): Array of UpgradableVersionPathResultSupportedPathItem
 

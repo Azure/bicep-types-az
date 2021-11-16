@@ -58,6 +58,11 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listRegistrationKey (Microsoft.HybridNetwork/devices@2020-01-01-preview)
+* **Resource**: Microsoft.HybridNetwork/devices
+* **ApiVersion**: 2020-01-01-preview
+* **Output**: [DeviceRegistrationKey](#deviceregistrationkey)
+
 ## DevicePropertiesFormat
 * **Discriminator**: deviceType
 
@@ -225,4 +230,8 @@
 ## VirtualHardDisk
 ### Properties
 * **uri**: string (WriteOnly): Specifies the virtual hard disk's uri.
+
+## DeviceRegistrationKey
+### Properties
+* **registrationKey**: string (ReadOnly): The registration key for the device.
 

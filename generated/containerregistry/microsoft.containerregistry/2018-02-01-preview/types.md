@@ -20,6 +20,16 @@
 * **properties**: [BuildStepProperties](#buildstepproperties): Base properties for any build step.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildArguments (Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/buildTasks/steps
+* **ApiVersion**: 2018-02-01-preview
+* **Output**: [BuildArgumentList](#buildargumentlist)
+
+## Function listSourceRepositoryProperties (Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/buildTasks
+* **ApiVersion**: 2018-02-01-preview
+* **Output**: [SourceRepositoryProperties](#sourcerepositoryproperties)
+
 ## BuildTaskProperties
 ### Properties
 * **alias**: string (Required): The alternative updatable name for a build task.
@@ -88,4 +98,16 @@
 * **name**: string (Required): The name of the argument.
 * **type**: 'DockerBuildArgument' (Required): The type of the argument.
 * **value**: string (Required): The value of the argument.
+
+## BuildArgumentList
+### Properties
+* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
+* **value**: [BuildArgument](#buildargument)[] (ReadOnly): The collection value.
+
+## SourceRepositoryProperties
+### Properties
+* **isCommitTriggerEnabled**: bool: The value of this property indicates whether the source control commit trigger is enabled or not.
+* **repositoryUrl**: string (Required): The full URL to the source code repository
+* **sourceControlAuthProperties**: [SourceControlAuthInfo](#sourcecontrolauthinfo): The authorization properties for accessing the source code repository.
+* **sourceControlType**: 'Github' | 'VisualStudioTeamService' (Required): The type of source control service.
 

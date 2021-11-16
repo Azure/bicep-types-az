@@ -56,6 +56,32 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Logz/monitors/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listMonitoredResources (Microsoft.Logz/monitors@2020-10-01-preview)
+* **Resource**: Microsoft.Logz/monitors
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function listMonitoredResources (Microsoft.Logz/monitors/accounts@2020-10-01-preview)
+* **Resource**: Microsoft.Logz/monitors/accounts
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: [MonitoredResourceListResponse](#monitoredresourcelistresponse)
+
+## Function listUserRoles (Microsoft.Logz/monitors@2020-10-01-preview)
+* **Resource**: Microsoft.Logz/monitors
+* **ApiVersion**: 2020-10-01-preview
+* **Input**: [UserRoleRequest](#userrolerequest)
+* **Output**: [UserRoleListResponse](#userrolelistresponse)
+
+## Function listVMHosts (Microsoft.Logz/monitors@2020-10-01-preview)
+* **Resource**: Microsoft.Logz/monitors
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: [VMResourcesListResponse](#vmresourceslistresponse)
+
+## Function listVMHosts (Microsoft.Logz/monitors/accounts@2020-10-01-preview)
+* **Resource**: Microsoft.Logz/monitors/accounts
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: [VMResourcesListResponse](#vmresourceslistresponse)
+
 ## IdentityProperties
 ### Properties
 * **principalId**: string (ReadOnly): The identity ID.
@@ -138,4 +164,51 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Flag specifying if the resource provisioning state as tracked by ARM.
 * **singleSignOnState**: 'Disable' | 'Enable' | 'Existing' | 'Initial': Various states of the SSO resource
 * **singleSignOnUrl**: string: The login URL specific to this Logz Organization.
+
+## MonitoredResourceListResponse
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+
+## MonitoredResource
+### Properties
+* **id**: string (ReadOnly): The ARM id of the resource.
+* **reasonForLogsStatus**: string (ReadOnly): Reason for why the resource is sending logs (or why it is not sending).
+* **reasonForMetricsStatus**: string (ReadOnly): Reason for why the resource is sending metrics (or why it is not sending).
+* **sendingLogs**: bool (ReadOnly): Flag indicating if resource is sending logs to Logz.
+* **sendingMetrics**: bool (ReadOnly): Flag indicating if resource is sending metrics to Logz.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+
+## MonitoredResourceListResponse
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
+* **value**: [MonitoredResource](#monitoredresource)[] (ReadOnly): Results of a list operation.
+
+## UserRoleRequest
+### Properties
+* **emailAddress**: string (WriteOnly): Email of the user used by Logz for contacting them if needed
+
+## UserRoleListResponse
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
+* **value**: [UserRoleResponse](#userroleresponse)[] (ReadOnly): List of user roles for Logz.io account.
+
+## UserRoleResponse
+### Properties
+* **role**: 'Admin' | 'None' | 'User' (ReadOnly): User roles on configured in Logz.io account.
+
+## VMResourcesListResponse
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
+* **value**: [VMResources](#vmresources)[] (ReadOnly): Response of a list vm host update operation.
+
+## VMResources
+### Properties
+* **agentVersion**: string (ReadOnly): Version of the Logz agent installed on the VM.
+* **id**: string (ReadOnly): Request of a list vm host update operation.
+
+## VMResourcesListResponse
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next set of results, if any.
+* **value**: [VMResources](#vmresources)[] (ReadOnly): Response of a list vm host update operation.
 

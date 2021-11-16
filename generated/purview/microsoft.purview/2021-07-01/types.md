@@ -23,6 +23,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): A private endpoint connection properties class.
 * **type**: 'Microsoft.Purview/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Purview/accounts@2021-07-01)
+* **Resource**: Microsoft.Purview/accounts
+* **ApiVersion**: 2021-07-01
+* **Output**: [AccessKeys](#accesskeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id
@@ -101,4 +106,9 @@ Configured in AWS to allow use of the role arn used for scanning
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccessKeys
+### Properties
+* **atlasKafkaPrimaryEndpoint**: string (ReadOnly): Gets or sets the primary connection string.
+* **atlasKafkaSecondaryEndpoint**: string (ReadOnly): Gets or sets the secondary connection string.
 

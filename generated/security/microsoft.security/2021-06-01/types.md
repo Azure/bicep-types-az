@@ -91,6 +91,17 @@
 * **Discriminator**: source
 
 ### Base Properties
+### AzureResourceDetails
+#### Properties
+* **id**: string (ReadOnly): Azure resource Id of the assessed resource
+* **source**: 'Azure' (Required): The platform where the assessed resource resides
+
+### OnPremiseSqlResourceDetails
+#### Properties
+* **databaseName**: string (Required): The Sql database name installed on the machine
+* **serverName**: string (Required): The Sql server name installed on the machine
+* **source**: 'OnPremiseSql' (Required): The platform where the assessed resource resides
+
 
 ## AssessmentStatus
 ### Properties

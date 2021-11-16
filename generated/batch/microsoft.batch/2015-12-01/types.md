@@ -37,6 +37,11 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 * **version**: string (ReadOnly): The version of the application package.
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2015-12-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2015-12-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
 ## BatchAccountBaseProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The endpoint used by this account to interact with the Batch services.
@@ -65,4 +70,9 @@
 * **storageUrl**: string (ReadOnly): The storage URL at which the application package is stored.
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the storage URL will expire.
 * **version**: string (ReadOnly): The version of the application package.
+
+## BatchAccountKeys
+### Properties
+* **primary**: string (ReadOnly): The primary key associated with the account.
+* **secondary**: string (ReadOnly): The secondary key associated with the account.
 

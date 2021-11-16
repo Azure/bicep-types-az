@@ -48,6 +48,21 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MixedReality/spatialAnchorsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MixedReality/spatialAnchorsAccounts@2021-03-01-preview)
+* **Resource**: Microsoft.MixedReality/spatialAnchorsAccounts
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [AccountKeys](#accountkeys)
+
+## Function listKeys (Microsoft.MixedReality/remoteRenderingAccounts@2021-03-01-preview)
+* **Resource**: Microsoft.MixedReality/remoteRenderingAccounts
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [AccountKeys](#accountkeys)
+
+## Function listKeys (Microsoft.MixedReality/objectAnchorsAccounts@2021-03-01-preview)
+* **Resource**: Microsoft.MixedReality/objectAnchorsAccounts
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [AccountKeys](#accountkeys)
+
 ## ObjectAnchorsAccountIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -97,4 +112,19 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): value of primary key.
+* **secondaryKey**: string (ReadOnly): value of secondary key.
+
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): value of primary key.
+* **secondaryKey**: string (ReadOnly): value of secondary key.
+
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): value of primary key.
+* **secondaryKey**: string (ReadOnly): value of secondary key.
 

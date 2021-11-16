@@ -34,6 +34,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2020-09-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices
+* **ApiVersion**: 2020-09-01-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/provisioningServices/keys@2020-09-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/keys
+* **ApiVersion**: 2020-09-01-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
+
 ## ArmIdentity
 ### Properties
 * **identityType**: string: Identity type. Only allowed values are SystemAssigned and UserAssigned. Comma separated if both for ex: SystemAssigned,UserAssigned.
@@ -143,4 +153,16 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly): The next link.
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): The list of shared access policies.
+
+## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
+### Properties
+* **keyName**: string (Required): Name of the key.
+* **primaryKey**: string: Primary SAS key value.
+* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' (Required): Rights that this key has.
+* **secondaryKey**: string: Secondary SAS key value.
 

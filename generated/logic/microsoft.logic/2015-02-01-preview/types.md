@@ -20,6 +20,11 @@
 * **properties**: [WorkflowAccessKeyProperties](#workflowaccesskeyproperties)
 * **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function list (Microsoft.Logic/workflows/accessKeys@2015-02-01-preview)
+* **Resource**: Microsoft.Logic/workflows/accessKeys
+* **ApiVersion**: 2015-02-01-preview
+* **Output**: [WorkflowSecretKeys](#workflowsecretkeys)
+
 ## WorkflowProperties
 ### Properties
 * **accessEndpoint**: string (ReadOnly): Gets the access endpoint.
@@ -78,4 +83,9 @@
 ### Properties
 * **notAfter**: string: Gets or sets the not-after time.
 * **notBefore**: string: Gets or sets the not-before time.
+
+## WorkflowSecretKeys
+### Properties
+* **primarySecretKey**: string (ReadOnly): Gets the primary secret key.
+* **secondarySecretKey**: string (ReadOnly): Gets the secondary secret key.
 

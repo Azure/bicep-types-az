@@ -49,6 +49,11 @@
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto iot hub connection properties.
 
 
+## Function listPrincipals (Microsoft.Kusto/clusters/databases@2019-05-15)
+* **Resource**: Microsoft.Kusto/clusters/databases
+* **ApiVersion**: 2019-05-15
+* **Output**: [DatabasePrincipalListResult](#databaseprincipallistresult)
+
 ## ClusterProperties
 ### Properties
 * **dataIngestionUri**: string (ReadOnly): The cluster data ingestion URI.
@@ -127,4 +132,18 @@
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **sharedAccessPolicyName**: string (Required): The name of the share access policy name
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.
+
+## DatabasePrincipalListResult
+### Properties
+* **value**: [DatabasePrincipal](#databaseprincipal)[] (ReadOnly): The list of Kusto database principals.
+
+## DatabasePrincipal
+### Properties
+* **appId**: string (ReadOnly): Application id - relevant only for application principal type.
+* **email**: string (ReadOnly): Database principal email if exists.
+* **fqn**: string (ReadOnly): Database principal fully qualified name.
+* **name**: string (ReadOnly): Database principal name.
+* **role**: 'Admin' | 'Ingestor' | 'Monitor' | 'UnrestrictedViewers' | 'User' | 'Viewer' (ReadOnly): Database principal role.
+* **tenantName**: string (ReadOnly): The tenant name of the principal
+* **type**: 'App' | 'Group' | 'User' (ReadOnly): Database principal type.
 

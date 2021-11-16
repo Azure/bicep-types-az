@@ -66,6 +66,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function list_value (Microsoft.ServiceFabricMesh/secrets/values@2018-09-01-preview)
+* **Resource**: Microsoft.ServiceFabricMesh/secrets/values
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: [SecretValue](#secretvalue)
+
 ## ApplicationResourceProperties
 ### Properties
 * **debugParams**: string: Internal - used by Visual Studio to setup the debugging session on the local development environment.
@@ -425,4 +430,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SecretValue
+### Properties
+* **value**: string (ReadOnly): The actual value of the secret.
 
