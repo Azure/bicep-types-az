@@ -322,7 +322,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
         resourceFunctions.add(funcKey);
 
         funcDictionary[resourceTypeLower] = funcDictionary[resourceTypeLower] || {};
-        funcDictionary[resourceTypeLower][apiVersionLower] = funcDictionary[resourceTypeLower][apiVersionLower] || {};
+        funcDictionary[resourceTypeLower][apiVersionLower] = funcDictionary[resourceTypeLower][apiVersionLower] || [];
 
         funcDictionary[resourceTypeLower][apiVersionLower].push({
           RelativePath: path.relative(baseDir, typeFilePath),
