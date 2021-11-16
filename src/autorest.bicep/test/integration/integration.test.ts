@@ -48,14 +48,14 @@ describe('integration tests', () => {
   ]
 
   // set to true to overwrite baselines
-  const record = true;
+  const record = false;
 
   // bump timeout - autorest can take a while to run
   jest.setTimeout(60000);
 
   for (const spec of specs) {
     it(spec, async () => {
-      const readmePath = `specs/${spec}/resource-manager/README.md`;
+      const readmePath = path.join(__dirname, `specs/${spec}/resource-manager/README.md`);
       const outputDir = `${outputBaseDir}/${spec}`;
 
       if (record) {

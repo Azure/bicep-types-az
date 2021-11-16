@@ -42,8 +42,8 @@ export interface ResourceListActionDefinition {
   actionName: string;
   descriptor: ResourceDescriptor;
   postRequest: HttpRequest;
-  requestSchema?: ObjectSchema;
-  responseSchema?: ObjectSchema;
+  requestSchema?: Schema;
+  responseSchema?: Schema;
 }
 
 const parentScopePrefix = /^.*\/providers\//ig;
@@ -217,7 +217,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
 
       const putData = getPutSchema(putOperation);
       const getData = getGetSchema(getOperation) ?? putData;
-      if (!putData) {
+      if (!putData || !getData) {
         continue;
       }
 
@@ -234,8 +234,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
           descriptor,
           putRequest: putData.request,
           putParameters: putData.parameters,
-          putSchema: putData.schema,
-          getSchema: getData?.schema,
+          putSchema: (putData.schema instanceof ObjectSchema) ? putData.schema : undefined,
+          getSchema: (getData.schema instanceof ObjectSchema) ? getData.schema : undefined,
         };
 
         const lcNamespace = descriptor.namespace.toLowerCase();
@@ -300,7 +300,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
 
       const bodyParameter = parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body)[0];
 
-      if (request.protocol.http instanceof HttpRequest && bodyParameter instanceof Parameter && bodyParameter.schema instanceof ObjectSchema) {
+      if (request.protocol.http instanceof HttpRequest && bodyParameter instanceof Parameter && bodyParameter.schema) {
         return {
           request: request.protocol.http,
           parameters,
@@ -328,7 +328,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: Host): Provid
     }
 
     for (const response of validResponses) {
-      if (response.protocol.http instanceof HttpResponse && response instanceof SchemaResponse && response.schema instanceof ObjectSchema) {
+      if (response.protocol.http instanceof HttpResponse && response instanceof SchemaResponse && response.schema) {
         return {
           response: response.protocol.http,
           schema: response.schema,

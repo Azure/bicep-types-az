@@ -92,6 +92,12 @@
       "required": [
         "someString"
       ]
+    },
+    "ArrayOfFoosResponse": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FoosResponse"
+      }
     }
   },
   "paths": {
@@ -243,6 +249,45 @@
               "$ref": "#/definitions/FoosRequest"
             },
             "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.Rp1/testType1/{typeName}/listArrayOfFoos": {
+      "post": {
+        "summary": "List array of foos for the testType1 resource",
+        "description": "List array of foos for the testType1 resource",
+        "operationId": "TestType1_ListArrayofFoos",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfFoosResponse"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The testType1 resource name."
           },
           {
             "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"

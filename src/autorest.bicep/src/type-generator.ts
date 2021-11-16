@@ -145,6 +145,11 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         }
       }
 
+      if (!action.responseSchema) {
+        logWarning(`Skipping resource action ${action.actionName} under path '${action.postRequest.path}': failed to find a response schema`);
+        continue;
+      }
+
       const response = parseType(undefined, action.responseSchema);
       if (!response) {
         continue;
