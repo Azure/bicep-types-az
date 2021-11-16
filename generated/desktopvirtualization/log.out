@@ -1,88 +1,115 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-09-03-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7537:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7560:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7583:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-07-12"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:206:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7135:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7158:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7181:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2019-01-23-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:92:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:135:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:179:4
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 2ms
+info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2019-09-24-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:92:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:135:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:179:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | autorest.bicep took 4ms
-info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2019-09-24-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2019-12-10-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:92:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:135:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:179:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2020-09-21-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:199:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2020-10-19-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:199:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
@@ -90,25 +117,33 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2020-11-02-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:199:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2020-11-10-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:199:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
@@ -116,68 +151,98 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-01-14-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:206:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7179:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7202:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7225:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:206:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7179:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7202:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7225:4
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+info    | autorest.bicep took 3ms
+info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-03-09-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:206:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7135:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7158:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7181:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | autorest.bicep took 5ms
-info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-03-09-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:112:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:206:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionWithSystemData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6507:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResultWithSystemData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6533:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7235:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7258:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7281:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 6ms
 info    | Generation Complete

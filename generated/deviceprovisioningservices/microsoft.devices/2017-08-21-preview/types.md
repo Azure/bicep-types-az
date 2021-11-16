@@ -24,6 +24,16 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listkeys (Microsoft.Devices/provisioningServices@2017-08-21-preview)
+* **Resource**: Microsoft.Devices/provisioningServices
+* **ApiVersion**: 2017-08-21-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+
+## Function listkeys (Microsoft.Devices/provisioningServices/keys@2017-08-21-preview)
+* **Resource**: Microsoft.Devices/provisioningServices/keys
+* **ApiVersion**: 2017-08-21-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static': Allocation policy to be used by this provisioning service.
@@ -69,4 +79,16 @@
 * **subject**: string (ReadOnly): The certificate's subject name.
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
+
+## SharedAccessSignatureAuthorizationRuleListResult
+### Properties
+* **nextLink**: string (ReadOnly)
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (ReadOnly): Array of SharedAccessSignatureAuthorizationRule_AccessRightsDescription_
+
+## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
+### Properties
+* **keyName**: string (Required): Name of the key.
+* **primaryKey**: string: Primary SAS key value.
+* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' (Required): Rights that this key has.
+* **secondaryKey**: string: Secondary SAS key value.
 

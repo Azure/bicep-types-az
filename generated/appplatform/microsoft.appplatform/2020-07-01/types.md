@@ -78,6 +78,11 @@
 * **properties**: [MonitoringSettingProperties](#monitoringsettingproperties): Monitoring Setting properties payload
 * **type**: 'Microsoft.AppPlatform/Spring/monitoringSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2020-07-01)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2020-07-01
+* **Output**: [TestKeys](#testkeys)
+
 ## ClusterResourceProperties
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
@@ -271,4 +276,12 @@ the relative path to the target module/project.
 * **error**: [Error](#error): The error code compose of code and message.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality
+
+## TestKeys
+### Properties
+* **enabled**: bool (ReadOnly): Indicates whether the test endpoint feature enabled or not
+* **primaryKey**: string (ReadOnly): Primary key
+* **primaryTestEndpoint**: string (ReadOnly): Primary test endpoint
+* **secondaryKey**: string (ReadOnly): Secondary key
+* **secondaryTestEndpoint**: string (ReadOnly): Secondary test endpoint
 

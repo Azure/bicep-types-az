@@ -1,37 +1,55 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.redhatopenshift-2020-04-30"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'APIServerProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:68:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:90:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:195:4
 warning | PreCheck/SchemaMissingType | The schema 'ConsoleProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:297:4
 warning | PreCheck/SchemaMissingType | The schema 'Display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:336:4
 warning | PreCheck/SchemaMissingType | The schema 'IngressProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:438:4
 warning | PreCheck/SchemaMissingType | The schema 'MasterProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:502:4
 warning | PreCheck/SchemaMissingType | The schema 'NetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:545:4
 warning | PreCheck/SchemaMissingType | The schema 'OpenShiftCluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:605:4
 warning | PreCheck/SchemaMissingType | The schema 'OpenShiftClusterCredentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:633:4
 warning | PreCheck/SchemaMissingType | The schema 'OpenShiftClusterList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:693:4
 warning | PreCheck/SchemaMissingType | The schema 'OpenShiftClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:756:4
 warning | PreCheck/SchemaMissingType | The schema 'OpenShiftClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:850:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:877:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:941:4
 warning | PreCheck/SchemaMissingType | The schema 'ServicePrincipalProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1004:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkerProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1100:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.redhatopenshift-2021-09-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous

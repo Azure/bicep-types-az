@@ -410,6 +410,46 @@
 * **properties**: [UserCreateParameterProperties](#usercreateparameterproperties): Parameters supplied to the Create User operation.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.ApiManagement/service/gateways@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/gateways
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [GatewayKeysContract](#gatewaykeyscontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/authorizationServers@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/authorizationServers
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [ClientSecretContract](#clientsecretcontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/identityProviders@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/identityProviders
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [ClientSecretContract](#clientsecretcontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/openidConnectProviders@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/openidConnectProviders
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [ClientSecretContract](#clientsecretcontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/portalsettings@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/portalsettings
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [PortalSettingValidationKeyContract](#portalsettingvalidationkeycontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/subscriptions@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/subscriptions
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [SubscriptionKeysContract](#subscriptionkeyscontract)
+
+## Function listSecrets (Microsoft.ApiManagement/service/tenant@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/tenant
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [AccessInformationContract](#accessinformationcontract)
+
+## Function listValue (Microsoft.ApiManagement/service/namedValues@2019-12-01-preview)
+* **Resource**: Microsoft.ApiManagement/service/namedValues
+* **ApiVersion**: 2019-12-01-preview
+* **Output**: [PropertyValueContract](#propertyvaluecontract)
+
 ## ApiManagementServiceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity.
@@ -995,4 +1035,41 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **id**: string: Identifier value within provider.
 * **provider**: string: Identity provider name.
+
+## GatewayKeysContract
+### Properties
+* **primary**: string (ReadOnly): Primary gateway key.
+* **secondary**: string (ReadOnly): Secondary gateway key.
+
+## ClientSecretContract
+### Properties
+* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+
+## ClientSecretContract
+### Properties
+* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+
+## ClientSecretContract
+### Properties
+* **clientSecret**: string (ReadOnly): Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+
+## PortalSettingValidationKeyContract
+### Properties
+* **validationKey**: string (ReadOnly): This is secret value of the validation key in portal settings.
+
+## SubscriptionKeysContract
+### Properties
+* **primaryKey**: string (ReadOnly): Subscription primary key.
+* **secondaryKey**: string (ReadOnly): Subscription secondary key.
+
+## AccessInformationContract
+### Properties
+* **enabled**: bool (ReadOnly): Determines whether direct access is enabled.
+* **id**: string (ReadOnly): Identifier.
+* **primaryKey**: string (ReadOnly): Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **secondaryKey**: string (ReadOnly): Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+
+## PropertyValueContract
+### Properties
+* **value**: string (ReadOnly): This is secret value of the NamedValue entity.
 

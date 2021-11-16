@@ -38,10 +38,10 @@
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Gets or sets the location of the resource.
+* **location**: string (ReadOnly): The Azure Region where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DscConfigurationCreateOrUpdateProperties](#dscconfigurationcreateorupdateproperties) (Required): The properties to create or update configuration.
-* **tags**: [DscConfigurationCreateOrUpdateParametersTags](#dscconfigurationcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
+* **properties**: [DscConfigurationProperties](#dscconfigurationproperties) (ReadOnly): Definition of the configuration property type.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Automation/automationAccounts/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/connections@2015-10-31
@@ -196,6 +196,11 @@
 * **properties**: [WebhookCreateOrUpdateProperties](#webhookcreateorupdateproperties) (Required): The properties of the create webhook operation.
 * **type**: 'Microsoft.Automation/automationAccounts/webhooks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Automation/automationAccounts@2015-10-31)
+* **Resource**: Microsoft.Automation/automationAccounts
+* **ApiVersion**: 2015-10-31
+* **Output**: [KeyListResult](#keylistresult)
+
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets the creation time.
@@ -258,45 +263,44 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## DscConfigurationCreateOrUpdateProperties
+## DscConfigurationProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets or sets the creation time.
-* **description**: string: Gets or sets the description of the configuration.
+* **description**: string (ReadOnly): Gets or sets the description.
 * **jobCount**: int (ReadOnly): Gets or sets the job count of the configuration.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time.
-* **logProgress**: bool (WriteOnly): Gets or sets progress log option.
-* **logVerbose**: bool: Gets or sets verbose log option.
+* **logVerbose**: bool (ReadOnly): Gets or sets verbose log option.
 * **nodeConfigurationCount**: int (ReadOnly): Gets the number of compiled node configurations.
-* **parameters**: [DscConfigurationCreateOrUpdatePropertiesParameters](#dscconfigurationcreateorupdatepropertiesparameters): Gets or sets the configuration parameters.
+* **parameters**: [DscConfigurationPropertiesParameters](#dscconfigurationpropertiesparameters) (ReadOnly): Gets or sets the configuration parameters.
 * **provisioningState**: 'Succeeded' (ReadOnly): Gets or sets the provisioning state of the configuration.
-* **source**: [ContentSource](#contentsource) (Required): Definition of the content source.
+* **source**: [ContentSource](#contentsource) (ReadOnly): Definition of the content source.
 * **state**: 'Edit' | 'New' | 'Published' (ReadOnly): Gets or sets the state of the configuration.
 
-## DscConfigurationCreateOrUpdatePropertiesParameters
+## DscConfigurationPropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [DscConfigurationParameter](#dscconfigurationparameter)
 
 ## DscConfigurationParameter
 ### Properties
-* **defaultValue**: string: Gets or sets the default value of parameter.
-* **isMandatory**: bool: Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
-* **position**: int: Get or sets the position of the parameter.
-* **type**: string: Gets or sets the type of the parameter.
+* **defaultValue**: string (ReadOnly): Gets or sets the default value of parameter.
+* **isMandatory**: bool (ReadOnly): Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+* **position**: int (ReadOnly): Get or sets the position of the parameter.
+* **type**: string (ReadOnly): Gets or sets the type of the parameter.
 
 ## ContentSource
 ### Properties
-* **hash**: [ContentHash](#contenthash): Definition of the runbook property type.
-* **type**: 'embeddedContent' | 'uri': Gets or sets the content source type.
-* **value**: string: Gets or sets the value of the content. This is based on the content source type.
-* **version**: string: Gets or sets the version of the content.
+* **hash**: [ContentHash](#contenthash) (ReadOnly): Definition of the runbook property type.
+* **type**: 'embeddedContent' | 'uri' (ReadOnly): Gets or sets the content source type.
+* **value**: string (ReadOnly): Gets or sets the value of the content. This is based on the content source type.
+* **version**: string (ReadOnly): Gets or sets the version of the content.
 
 ## ContentHash
 ### Properties
-* **algorithm**: string (Required): Gets or sets the content hash algorithm used to hash the content.
-* **value**: string (Required): Gets or sets expected hash value of the content.
+* **algorithm**: string (ReadOnly): Gets or sets the content hash algorithm used to hash the content.
+* **value**: string (ReadOnly): Gets or sets expected hash value of the content.
 
-## DscConfigurationCreateOrUpdateParametersTags
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -550,4 +554,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## KeyListResult
+### Properties
+* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
+
+## Key
+### Properties
+* **KeyName**: 'Primary' | 'Secondary' (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

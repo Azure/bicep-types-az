@@ -31,6 +31,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2020-10-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2020-10-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## ClusterProperties
 ### Properties
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
@@ -88,4 +93,9 @@
 * **args**: string: Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
 * **name**: string (Required): The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
 * **version**: string (ReadOnly): The version of the module, e.g. '1.0'.
+
+## AccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate
 

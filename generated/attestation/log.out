@@ -1,49 +1,73 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.attestation-2018-09-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationProvider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:220:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:318:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:340:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:401:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServicePatchParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:443:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:505:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationSpecificParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:596:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.attestation-2020-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationProvider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:225:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:354:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:376:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:437:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServicePatchParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:484:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:546:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationSpecificParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:637:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.attestation-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationProvider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:225:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:358:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:380:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:441:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServicePatchParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:488:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:577:4
 warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationSpecificParams' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:668:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Generation Complete

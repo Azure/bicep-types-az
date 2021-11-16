@@ -2,141 +2,266 @@ WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/ba
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/replicationLinks_legacy.json"
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/sql.core_legacy.json"
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/usages_legacy.json"
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.sql-2014-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServerConnectionPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerConnectionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:32:4
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:122:4
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:218:4
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:292:4
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:544:4
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:618:4
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:708:4
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:760:4
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:837:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:943:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1105:4
 warning | PreCheck/SchemaMissingType | The schema 'Metric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1169:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1298:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1343:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1407:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1497:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerCommunicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1654:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerCommunicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1727:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerCommunicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1801:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceObjective' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1907:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceObjectiveProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1935:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceObjectiveListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2017:4
 warning | PreCheck/SchemaMissingType | The schema 'RecoverableDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2094:4
 warning | PreCheck/SchemaMissingType | The schema 'RecoverableDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2205:4
 warning | PreCheck/SchemaMissingType | The schema 'RecoverableDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2233:4
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2278:4
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2483:4
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2534:4
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2929:4
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2993:4
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3090:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3196:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3280:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3543:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3571:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolListMetricsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3616:4
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3709:4
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3897:4
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3971:4
 warning | PreCheck/SchemaMissingType | The schema 'UnlinkParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4013:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolActivityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4227:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4720:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolActivityListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4777:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolDatabaseActivityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4822:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolDatabaseActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5192:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolDatabaseActivityListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5249:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedIndexProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5294:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedIndex' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5589:4
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5618:4
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5643:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTierAdvisorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5694:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTierAdvisor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6166:4
 warning | PreCheck/SchemaMissingType | The schema 'SloUsageMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6195:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationImpact' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6272:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTierAdvisorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6384:4
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionActivityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6429:4
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6480:4
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionActivityListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6531:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6736:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6918:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6963:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7145:4
 warning | PreCheck/SchemaMissingType | The schema 'MaxSizeCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7222:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceObjectiveCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7278:4
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceLevel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7387:4
 warning | PreCheck/SchemaMissingType | The schema 'EditionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7436:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerVersionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7514:4
 warning | PreCheck/SchemaMissingType | The schema 'LocationCapabilities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7613:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolEditionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7686:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolDtuCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7764:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolPerDatabaseMaxDtuCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7919:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolPerDatabaseMinDtuCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7992:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8071:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8617:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8668:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8739:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9024:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9179:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9230:4
 warning | PreCheck/SchemaMissingType | The schema 'ElasticPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9301:4
 warning | PreCheck/SchemaMissingType | The schema 'ImportExtensionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9442:4
 warning | PreCheck/SchemaMissingType | The schema 'ImportExtensionRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9475:4
 warning | PreCheck/SchemaMissingType | The schema 'ImportExportResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9540:4
 warning | PreCheck/SchemaMissingType | The schema 'ImportExportResponseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9568:4
 warning | PreCheck/SchemaMissingType | The schema 'ImportRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9794:4
 warning | PreCheck/SchemaMissingType | The schema 'ExportRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9881:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10052:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10136:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10399:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10427:4
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedElasticPoolListMetricsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10472:4
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10565:4
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10616:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10726:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerAzureADAdministrator' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10822:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10850:4
 warning | PreCheck/SchemaMissingType | The schema 'RestorePointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10924:4
 warning | PreCheck/SchemaMissingType | The schema 'RestorePoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10998:4
 warning | PreCheck/SchemaMissingType | The schema 'RestorePointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11026:4
 warning | PreCheck/SchemaMissingType | The schema 'AdvisorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11280:4
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11418:4
 warning | PreCheck/SchemaMissingType | The schema 'ExtensionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11460:4
 warning | PreCheck/SchemaMissingType | The schema 'ExtensionListResult-valueItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11502:4
 warning | PreCheck/SchemaMissingType | The schema 'DisasterRecoveryConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11598:4
 warning | PreCheck/SchemaMissingType | The schema 'DisasterRecoveryConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11722:4
 warning | PreCheck/SchemaMissingType | The schema 'DisasterRecoveryConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11799:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11953:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12060:4
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12144:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12310:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12377:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12469:4
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12566:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatisticListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12611:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryText' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12656:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryTextListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12742:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12851:4
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13013:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13064:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13135:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseTableAuditingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13463:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerTableAuditingPolicyProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13507:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseTableAuditingPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13919:4
 warning | PreCheck/SchemaMissingType | The schema 'ServerTableAuditingPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13964:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RecommendedElasticPoolProperties' (1 differences):
   - properties.databases.$ref: "#/components/schemas/schemas:169" => "#/components/schemas/schemas:494"
@@ -151,88 +276,88 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'RecommendedElas
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'RecommendedElasticPoolProperties' -> 'RecommendedElasticPoolPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'RecommendedElasticPoolListResult' -> 'RecommendedElasticPoolListResultAutoGenerated'
 info    | Resource type microsoft.sql/servers/disasterrecoveryconfiguration under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/disasterRecoveryConfiguration/{disasterRecoveryConfigurationName}' has no body defined.
-info    | autorest.bicep took 25ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.sql-2020-11-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
 info    | Resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}' has no body defined.
 info    | Resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}' has no body defined.
-info    | autorest.bicep took 72ms
+info    | autorest.bicep took 31ms
 info    | Processing batch task - {"tag":"microsoft.sql-2021-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
 info    | Resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}' has no body defined.
 info    | Resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}' has no body defined.
-info    | autorest.bicep took 61ms
+info    | autorest.bicep took 43ms
 info    | Processing batch task - {"tag":"microsoft.sql-2015-05-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
 info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.sql-2017-03-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 info    | Resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}' has no body defined.
 info    | Resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}' has no body defined.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.sql-2017-10-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.sql-2018-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.sql-2019-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.sql-2020-08-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
 info    | Resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}' has no body defined.
 info    | Resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}' has no body defined.
-info    | autorest.bicep took 27ms
+info    | autorest.bicep took 39ms
 info    | Processing batch task - {"tag":"microsoft.sql-2020-02-02-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules': Found mismatch between type segments (2) and name segments (1)
 info    | Resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}' has no body defined.
 info    | Resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}' has no body defined.
-info    | autorest.bicep took 34ms
+info    | autorest.bicep took 38ms
 info    | Processing batch task - {"tag":"microsoft.sql-2015-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.sql-2021-05-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
@@ -240,5 +365,5 @@ warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourc
 info    | Resource type microsoft.sql/servers/jobagents/jobs/executions under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/jobAgents/{jobAgentName}/jobs/{jobName}/executions/{jobExecutionId}' has no body defined.
 info    | Resource type microsoft.sql/servers/outboundfirewallrules under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/outboundFirewallRules/{outboundRuleFqdn}' has no body defined.
 info    | Resource type microsoft.sql/servers/dnsaliases under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/dnsAliases/{dnsAliasName}' has no body defined.
-info    | autorest.bicep took 54ms
+info    | autorest.bicep took 31ms
 info    | Generation Complete

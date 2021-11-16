@@ -12,6 +12,11 @@
 * **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
 * **type**: 'Microsoft.DataBox/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listCredentials (Microsoft.DataBox/jobs@2018-01-01)
+* **Resource**: Microsoft.DataBox/jobs
+* **ApiVersion**: 2018-01-01
+* **Output**: [UnencryptedCredentialsList](#unencryptedcredentialslist)
+
 ## JobProperties
 ### Properties
 * **cancellationReason**: string (ReadOnly): Reason for cancellation.
@@ -193,4 +198,76 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## UnencryptedCredentialsList
+### Properties
+* **nextLink**: string (ReadOnly): Link for the next set of unencrypted credentials.
+* **value**: [UnencryptedCredentials](#unencryptedcredentials)[] (ReadOnly): List of unencrypted credentials.
+
+## UnencryptedCredentials
+### Properties
+* **jobName**: string (ReadOnly): Name of the job.
+* **jobSecrets**: [JobSecrets](#jobsecrets) (ReadOnly): The base class for the secrets
+
+## JobSecrets
+* **Discriminator**: jobSecretsType
+
+### Base Properties
+### DataboxJobSecrets
+#### Properties
+* **jobSecretsType**: 'DataBox' (Required): Used to indicate what type of job secrets object.
+* **podSecrets**: [DataBoxSecret](#databoxsecret)[] (ReadOnly): Contains the list of secret objects for a job.
+
+### DataBoxDiskJobSecrets
+#### Properties
+* **diskSecrets**: [DiskSecret](#disksecret)[] (ReadOnly): Contains the list of secrets object for that device.
+* **isPasskeyUserDefined**: bool (ReadOnly): Whether passkey was provided by user.
+* **jobSecretsType**: 'DataBoxDisk' (Required): Used to indicate what type of job secrets object.
+* **passKey**: string (ReadOnly): PassKey for the disk Job.
+
+### DataBoxHeavyJobSecrets
+#### Properties
+* **cabinetPodSecrets**: [DataBoxHeavySecret](#databoxheavysecret)[] (ReadOnly): Contains the list of secret objects for a DataBoxHeavy job.
+* **jobSecretsType**: 'DataBoxHeavy' (Required): Used to indicate what type of job secrets object.
+
+
+## DataBoxSecret
+### Properties
+* **accountCredentialDetails**: [AccountCredentialDetails](#accountcredentialdetails)[] (ReadOnly): Per account level access credentials.
+* **devicePassword**: string (ReadOnly): Password for out of the box experience on device.
+* **deviceSerialNumber**: string (ReadOnly): Serial number of the assigned device.
+* **encodedValidationCertPubKey**: string (ReadOnly): The base 64 encoded public key to authenticate with the device
+* **networkConfigurations**: [ApplianceNetworkConfiguration](#appliancenetworkconfiguration)[] (ReadOnly): Network configuration of the appliance.
+
+## AccountCredentialDetails
+### Properties
+* **accountConnectionString**: string (ReadOnly): Connection string of the account endpoint to use the account as a storage endpoint on the device.
+* **accountName**: string (ReadOnly): Name of the account.
+* **shareCredentialDetails**: [ShareCredentialDetails](#sharecredentialdetails)[] (ReadOnly): Per share level unencrypted access credentials.
+
+## ShareCredentialDetails
+### Properties
+* **password**: string (ReadOnly): Password for the share.
+* **shareName**: string (ReadOnly): Name of the share.
+* **shareType**: 'AzureFile' | 'BlockBlob' | 'HCS' | 'ManagedDisk' | 'PageBlob' | 'UnknownType' (ReadOnly): Type of the share.
+* **supportedAccessProtocols**: 'NFS' | 'SMB'[] (ReadOnly): Access protocols supported on the device.
+* **userName**: string (ReadOnly): User name for the share.
+
+## ApplianceNetworkConfiguration
+### Properties
+* **macAddress**: string (ReadOnly): Mac Address.
+* **name**: string (ReadOnly): Name of the network.
+
+## DiskSecret
+### Properties
+* **bitLockerKey**: string (ReadOnly): Bit Locker key of the disk which can be used to unlock the disk to copy data.
+* **diskSerialNumber**: string (ReadOnly): Serial number of the assigned disk.
+
+## DataBoxHeavySecret
+### Properties
+* **accountCredentialDetails**: [AccountCredentialDetails](#accountcredentialdetails)[] (ReadOnly): Per account level access credentials.
+* **devicePassword**: string (ReadOnly): Password for out of the box experience on device.
+* **deviceSerialNumber**: string (ReadOnly): Serial number of the assigned device.
+* **encodedValidationCertPubKey**: string (ReadOnly): The base 64 encoded public key to authenticate with the device
+* **networkConfigurations**: [ApplianceNetworkConfiguration](#appliancenetworkconfiguration)[] (ReadOnly): Network configuration of the appliance.
 

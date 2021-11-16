@@ -13,6 +13,11 @@ The geo region of a resource never changes after it is created.
 * **tags**: [SignalRUpdateParametersTags](#signalrupdateparameterstags): A list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/SignalR@2018-10-01)
+* **Resource**: Microsoft.SignalRService/SignalR
+* **ApiVersion**: 2018-10-01
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## SignalRCreateOrUpdateProperties
 ### Properties
 * **cors**: [SignalRCorsSettings](#signalrcorssettings): Cross-Origin Resource Sharing (CORS) settings.
@@ -68,4 +73,11 @@ Allowed values: Standard_S1, Free_F1
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SignalRKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the primaryKey
+* **primaryKey**: string (ReadOnly): The primary access key.
+* **secondaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the secondaryKey
+* **secondaryKey**: string (ReadOnly): The secondary access key.
 

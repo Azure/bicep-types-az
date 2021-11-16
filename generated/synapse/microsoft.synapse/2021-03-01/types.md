@@ -293,6 +293,11 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAuthKeys (Microsoft.Synapse/workspaces/integrationRuntimes@2021-03-01)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-03-01
+* **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
 ## PrivateLinkHubProperties
 ### Properties
 * **privateEndpointConnections**: [PrivateEndpointConnectionForPrivateLinkHubBasic](#privateendpointconnectionforprivatelinkhubbasic)[] (ReadOnly): List of private endpoint connections
@@ -1154,4 +1159,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
 * **storageContainerPath**: string (Required): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
 * **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
+
+## IntegrationRuntimeAuthKeys
+### Properties
+* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
+* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
 

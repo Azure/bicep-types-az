@@ -12,6 +12,12 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kubernetes/connectedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listClusterUserCredentials (Microsoft.Kubernetes/connectedClusters@2020-01-01-preview)
+* **Resource**: Microsoft.Kubernetes/connectedClusters
+* **ApiVersion**: 2020-01-01-preview
+* **Input**: [AuthenticationDetails](#authenticationdetails)
+* **Output**: [CredentialResults](#credentialresults)
+
 ## ConnectedClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
@@ -44,4 +50,30 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AuthenticationDetails
+### Properties
+* **authenticationMethod**: 'Token' (Required, WriteOnly): The mode of client authentication.
+* **value**: [AuthenticationDetailsValue](#authenticationdetailsvalue) (Required, WriteOnly): Authentication token value.
+
+## AuthenticationDetailsValue
+### Properties
+* **token**: string (WriteOnly): Authentication token.
+
+## CredentialResults
+### Properties
+* **hybridConnectionConfig**: [HybridConnectionConfig](#hybridconnectionconfig) (ReadOnly): Contains the REP (rendezvous endpoint) and “Sender” access token.
+* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## HybridConnectionConfig
+### Properties
+* **expirationTime**: int (ReadOnly): Timestamp when this token will be expired.
+* **hybridConnectionName**: string (ReadOnly): Name of the connection
+* **relay**: string (ReadOnly): Name of the relay.
+* **token**: string (ReadOnly): Sender access token
+
+## CredentialResult
+### Properties
+* **name**: string (ReadOnly): The name of the credential.
+* **value**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 

@@ -20,6 +20,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/topics@2017-06-15-preview)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2017-06-15-preview
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## EventSubscriptionProperties
 ### Properties
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
@@ -59,4 +64,9 @@ Wildcard characters are not supported in this path.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TopicSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly): Shared access key1 for the topic.
+* **key2**: string (ReadOnly): Shared access key2 for the topic.
 

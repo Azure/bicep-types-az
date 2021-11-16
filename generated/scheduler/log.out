@@ -1,117 +1,207 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.scheduler-2016-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4:4
 warning | PreCheck/SchemaMissingType | The schema 'JobListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:68:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:130:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:192:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:344:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:377:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionQuota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:402:4
 warning | PreCheck/SchemaMissingType | The schema 'JobDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:465:4
 warning | PreCheck/SchemaMissingType | The schema 'JobProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:555:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:611:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:702:4
 warning | PreCheck/SchemaMissingType | The schema 'JobAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:874:4
 warning | PreCheck/SchemaMissingType | The schema 'JobErrorAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:923:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:968:4
 warning | PreCheck/SchemaMissingType | The schema 'ClientCertAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1095:4
 warning | PreCheck/SchemaMissingType | The schema 'BasicAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1224:4
 warning | PreCheck/SchemaMissingType | The schema 'OAuthAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1289:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1396:4
 warning | PreCheck/SchemaMissingType | The schema 'StorageQueueMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1427:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusQueueMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1528:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusTopicMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1571:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1614:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1732:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusBrokeredMessageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1799:4
 warning | PreCheck/SchemaMissingType | The schema 'RetryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2074:4
 warning | PreCheck/SchemaMissingType | The schema 'JobMaxRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2142:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2188:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrenceSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2280:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrenceScheduleMonthlyOccurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2370:4
 warning | PreCheck/SchemaMissingType | The schema 'JobStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2460:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.scheduler-2016-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'JobListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:95:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:157:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:219:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:371:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:404:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionQuota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:429:4
 warning | PreCheck/SchemaMissingType | The schema 'JobDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:492:4
 warning | PreCheck/SchemaMissingType | The schema 'JobProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:582:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:638:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:729:4
 warning | PreCheck/SchemaMissingType | The schema 'JobAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:901:4
 warning | PreCheck/SchemaMissingType | The schema 'JobErrorAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:950:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:995:4
 warning | PreCheck/SchemaMissingType | The schema 'ClientCertAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1122:4
 warning | PreCheck/SchemaMissingType | The schema 'BasicAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1250:4
 warning | PreCheck/SchemaMissingType | The schema 'OAuthAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1314:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1420:4
 warning | PreCheck/SchemaMissingType | The schema 'StorageQueueMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1445:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusQueueMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1546:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusTopicMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1589:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1632:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1750:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusBrokeredMessageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1817:4
 warning | PreCheck/SchemaMissingType | The schema 'RetryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2092:4
 warning | PreCheck/SchemaMissingType | The schema 'JobMaxRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2160:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2206:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrenceSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2298:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrenceScheduleMonthlyOccurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2388:4
 warning | PreCheck/SchemaMissingType | The schema 'JobStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2478:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.scheduler-2014-08-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:31:4
 warning | PreCheck/SchemaMissingType | The schema 'JobListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:95:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:157:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:219:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:371:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:404:4
 warning | PreCheck/SchemaMissingType | The schema 'JobCollectionQuota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:429:4
 warning | PreCheck/SchemaMissingType | The schema 'JobDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:492:4
 warning | PreCheck/SchemaMissingType | The schema 'JobProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:582:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:638:4
 warning | PreCheck/SchemaMissingType | The schema 'JobHistoryDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:729:4
 warning | PreCheck/SchemaMissingType | The schema 'JobAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:901:4
 warning | PreCheck/SchemaMissingType | The schema 'JobErrorAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:950:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:995:4
 warning | PreCheck/SchemaMissingType | The schema 'ClientCertAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1122:4
 warning | PreCheck/SchemaMissingType | The schema 'BasicAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1250:4
 warning | PreCheck/SchemaMissingType | The schema 'OAuthAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1314:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1420:4
 warning | PreCheck/SchemaMissingType | The schema 'StorageQueueMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1445:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusQueueMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1546:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusTopicMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1589:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1632:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1750:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusBrokeredMessageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1817:4
 warning | PreCheck/SchemaMissingType | The schema 'RetryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2092:4
 warning | PreCheck/SchemaMissingType | The schema 'JobMaxRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2160:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2206:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrenceSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2298:4
 warning | PreCheck/SchemaMissingType | The schema 'JobRecurrenceScheduleMonthlyOccurrence' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2388:4
 warning | PreCheck/SchemaMissingType | The schema 'JobStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2478:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 3ms
 info    | Generation Complete

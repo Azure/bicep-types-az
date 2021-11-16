@@ -37,6 +37,11 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 * **version**: string (ReadOnly): The version of the application package.
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2017-05-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-05-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
@@ -73,4 +78,10 @@
 * **storageUrl**: string (ReadOnly): The URL for the application package in Azure Storage.
 * **storageUrlExpiry**: string (ReadOnly): The UTC time at which the Azure Storage URL will expire.
 * **version**: string (ReadOnly): The version of the application package.
+
+## BatchAccountKeys
+### Properties
+* **accountName**: string (ReadOnly): The Batch account name.
+* **primary**: string (ReadOnly): The primary key associated with the account.
+* **secondary**: string (ReadOnly): The secondary key associated with the account.
 

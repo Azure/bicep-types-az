@@ -37,6 +37,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HDInsight/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listHosts (Microsoft.HDInsight/clusters@2021-06-01)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2021-06-01
+* **Output**: [HostInfo](#hostinfo)[]
+
 ## ClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
@@ -380,4 +385,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## HostInfo
+### Properties
+* **effectiveDiskEncryptionKeyUrl**: string (ReadOnly): The effective disk encryption key URL used by the host
+* **fqdn**: string (ReadOnly): The Fully Qualified Domain Name of host
+* **name**: string (ReadOnly): The host name
 

@@ -24,6 +24,21 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2019-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2019-05-01
+* **Output**: [ListWorkspaceKeysResult](#listworkspacekeysresult)
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2019-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2019-05-01
+* **Output**: [ComputeSecrets](#computesecrets)
+
+## Function listNodes (Microsoft.MachineLearningServices/workspaces/computes@2019-05-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2019-05-01
+* **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -210,4 +225,56 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListWorkspaceKeysResult
+### Properties
+* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
+* **userStorageKey**: string (ReadOnly)
+* **userStorageResourceId**: string (ReadOnly)
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **username**: string (ReadOnly)
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## ComputeSecrets
+* **Discriminator**: computeType
+
+### Base Properties
+### AksComputeSecrets
+#### Properties
+* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **computeType**: 'AKS' (Required): The type of compute
+* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
+* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+
+### DatabricksComputeSecrets
+#### Properties
+* **computeType**: 'Databricks' (Required): The type of compute
+* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
+
+### VirtualMachineSecrets
+#### Properties
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+
+
+## AmlComputeNodesInformation
+### Properties
+* **computeType**: 'AKS' | 'AmlCompute' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'VirtualMachine' (ReadOnly): The type of compute
+* **nextLink**: string (ReadOnly): The continuation token.
+* **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
+
+## AmlComputeNodeInformation
+### Properties
+* **ipAddress**: string (ReadOnly): Public IP address of the compute node.
+* **nodeId**: string (ReadOnly): ID of the compute node.
+* **port**: int (ReadOnly): SSH port number of the node.
 

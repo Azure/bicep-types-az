@@ -1,88 +1,163 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.providerhub-2021-09-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:117:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:140:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:541:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:564:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:623:4
 warning | PreCheck/SchemaMissingType | The schema 'Error-innerError' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:853:4
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:901:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-expeditedRollout' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1097:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1120:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-lowTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1143:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-mediumTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1166:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-highTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1189:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupOne' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1212:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupTwo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1235:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1258:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1385:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1408:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1464:4
 warning | PreCheck/SchemaMissingType | The schema 'LoggingRule-hiddenPropertyPaths' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2058:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2418:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3220:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3296:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3357:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-templateDeploymentPolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3431:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3899:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4008:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4031:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4073:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-reRegisterSubscriptionMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4152:4
 warning | PreCheck/SchemaMissingType | The schema 'NotificationRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4460:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4705:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-default' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4869:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-en' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4893:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-cs' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4917:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-de' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4941:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-es' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4965:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-fr' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4989:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-hu' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5013:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-it' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5037:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ja' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5061:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ko' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5085:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-nl' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5109:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-pl' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5133:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ptBR' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5157:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ptPT' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5181:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ru' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5205:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-sv' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5229:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-zhHans' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5253:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-zhHant' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5277:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5361:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5724:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-thirdPartyProviderAuthorization' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5747:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5971:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6080:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6103:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6126:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6186:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-providerHubMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6242:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6265:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6319:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6637:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeExtensionOptions-resourceCreationBegin' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6787:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-extensionOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7185:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7389:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7412:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7435:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-checkNameAvailabilitySpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7458:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7535:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7577:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceMovePolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7619:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceGraphConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7664:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7687:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7741:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuSetting-capacity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8532:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8671:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'ResourceProviderManagement-resourceAccessRolesItem' has no type or format information whatsoever. Location:
@@ -103,86 +178,161 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ResourceTypeReg
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DefaultRolloutProperties' -> 'DefaultRolloutPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'NotificationRegistrationProperties' -> 'NotificationRegistrationPropertiesAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 24ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.providerhub-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:117:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:140:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:541:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:564:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:623:4
 warning | PreCheck/SchemaMissingType | The schema 'Error-innerError' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:853:4
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:901:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-expeditedRollout' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1097:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1120:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-lowTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1143:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-mediumTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1166:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-highTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1189:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupOne' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1212:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupTwo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1235:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1258:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1385:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1408:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1464:4
 warning | PreCheck/SchemaMissingType | The schema 'LoggingRule-hiddenPropertyPaths' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2058:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2418:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3213:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3289:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3350:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-templateDeploymentPolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3424:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3892:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4001:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4024:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4066:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-reRegisterSubscriptionMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4145:4
 warning | PreCheck/SchemaMissingType | The schema 'NotificationRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4453:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4698:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-default' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4862:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-en' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4886:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-cs' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4910:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-de' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4934:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-es' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4958:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-fr' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4982:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-hu' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5006:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-it' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5030:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ja' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5054:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ko' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5078:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-nl' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5102:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-pl' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5126:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ptBR' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5150:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ptPT' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5174:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ru' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5198:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-sv' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5222:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-zhHans' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5246:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-zhHant' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5270:4
 warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5354:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5717:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-thirdPartyProviderAuthorization' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5740:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5964:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6073:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6096:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6119:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6179:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-providerHubMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6235:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6258:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6312:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6630:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeExtensionOptions-resourceCreationBegin' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6780:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-extensionOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7178:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7382:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7405:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7428:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-checkNameAvailabilitySpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7451:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7528:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7570:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceMovePolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7612:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceGraphConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7657:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7680:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7734:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuSetting-capacity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8525:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8664:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'ResourceProviderManagement-resourceAccessRolesItem' has no type or format information whatsoever. Location:
@@ -203,65 +353,119 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ResourceTypeReg
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DefaultRolloutProperties' -> 'DefaultRolloutPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'NotificationRegistrationProperties' -> 'NotificationRegistrationPropertiesAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.providerhub-2021-05-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:117:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:140:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:541:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:564:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:619:4
 warning | PreCheck/SchemaMissingType | The schema 'Error-innerError' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:849:4
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:897:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-expeditedRollout' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1093:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1116:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-lowTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1139:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-mediumTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1162:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-highTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1185:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupOne' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1208:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupTwo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1231:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1254:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1381:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1404:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1456:4
 warning | PreCheck/SchemaMissingType | The schema 'LoggingRule-hiddenPropertyPaths' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2050:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2403:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3198:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3274:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3335:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-templateDeploymentPolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3409:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3877:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3986:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4009:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4051:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-reRegisterSubscriptionMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4130:4
 warning | PreCheck/SchemaMissingType | The schema 'NotificationRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4434:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4679:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5019:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-thirdPartyProviderAuthorization' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5042:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5263:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5372:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5395:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5418:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-providerHubMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5508:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5558:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5869:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeExtensionOptions-resourceCreationBegin' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6019:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-extensionOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6414:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6618:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6641:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6664:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-checkNameAvailabilitySpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6687:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6764:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6806:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceMovePolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6848:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceGraphConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6893:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6916:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6966:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuSetting-capacity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7757:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7892:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'ResourceProviderManagement-resourceAccessRolesItem' has no type or format information whatsoever. Location:
@@ -280,64 +484,117 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ResourceTypeReg
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DefaultRolloutProperties' -> 'DefaultRolloutPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'NotificationRegistrationProperties' -> 'NotificationRegistrationPropertiesAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 22ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.providerhub-2020-11-20"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:117:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:140:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:544:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:567:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:622:4
 warning | PreCheck/SchemaMissingType | The schema 'Error-innerError' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:852:4
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:900:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1070:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-lowTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1093:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-mediumTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1116:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-highTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1139:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupOne' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1162:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupTwo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1185:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1208:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1338:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1361:4
 warning | PreCheck/SchemaMissingType | The schema 'DefaultRollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1413:4
 warning | PreCheck/SchemaMissingType | The schema 'LoggingRule-hiddenPropertyPaths' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2007:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2360:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3155:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3231:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3292:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceType-templateDeploymentPolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3366:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3834:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3943:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3966:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4008:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-reRegisterSubscriptionMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4087:4
 warning | PreCheck/SchemaMissingType | The schema 'NotificationRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4394:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4639:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4979:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-thirdPartyProviderAuthorization' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5002:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5226:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5335:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5358:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5381:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5441:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-providerHubMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5500:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5523:4
 warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5573:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5884:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeExtensionOptions-resourceCreationBegin' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6034:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-extensionOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6358:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6562:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6585:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6608:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-checkNameAvailabilitySpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6631:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6708:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6750:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceMovePolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6792:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistration-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6842:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuSetting-capacity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7633:4
 warning | PreCheck/SchemaMissingType | The schema 'SkuResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7771:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'ResourceProviderManagement-resourceAccessRolesItem' has no type or format information whatsoever. Location:
@@ -356,5 +613,5 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ResourceTypeReg
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DefaultRolloutProperties' -> 'DefaultRolloutPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'NotificationRegistrationProperties' -> 'NotificationRegistrationPropertiesAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 11ms
 info    | Generation Complete

@@ -12,6 +12,12 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2015-08-01)
+* **Resource**: Microsoft.DomainRegistration/topLevelDomains
+* **ApiVersion**: 2015-08-01
+* **Input**: [TopLevelDomainAgreementOption](#topleveldomainagreementoption)
+* **Output**: [TldLegalAgreementCollection](#tldlegalagreementcollection)
+
 ## DomainProperties
 ### Properties
 * **autoRenew**: bool: If true then domain will renewed automatically
@@ -71,4 +77,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TopLevelDomainAgreementOption
+### Properties
+* **includePrivacy**: bool (WriteOnly): If true then the list of agreements will include agreements for domain privacy as well.
+
+## TldLegalAgreementCollection
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources
+* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources
+
+## TldLegalAgreement
+### Properties
+* **agreementKey**: string (ReadOnly): Unique identifier for the agreement
+* **content**: string (ReadOnly): Agreement details
+* **title**: string (ReadOnly): Agreement title
+* **url**: string (ReadOnly): Url where a copy of the agreement details is hosted
 

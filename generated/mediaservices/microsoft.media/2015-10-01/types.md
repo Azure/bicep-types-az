@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Tags to help categorize the resource in the Azure portal.
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Media/mediaservices@2015-10-01)
+* **Resource**: Microsoft.Media/mediaservices
+* **ApiVersion**: 2015-10-01
+* **Output**: [ServiceKeys](#servicekeys)
+
 ## MediaServiceProperties
 ### Properties
 * **apiEndpoints**: [ApiEndpoint](#apiendpoint)[] (ReadOnly): Read-only property that lists the Media Services REST API endpoints for this resource. If supplied on a PUT or PATCH, the value will be ignored.
@@ -30,4 +35,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ServiceKeys
+### Properties
+* **primaryAuthEndpoint**: string (ReadOnly): The primary authorization endpoint.
+* **primaryKey**: string (ReadOnly): The primary key for the Media Service resource.
+* **scope**: string (ReadOnly): The authorization scope.
+* **secondaryAuthEndpoint**: string (ReadOnly): The secondary authorization endpoint.
+* **secondaryKey**: string (ReadOnly): The secondary key for the Media Service resource.
 

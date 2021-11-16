@@ -1,300 +1,563 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.avs-2021-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Trial' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1087:4
 warning | PreCheck/SchemaMissingType | The schema 'Quota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1138:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1213:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1301:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1390:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1412:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1435:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1561:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2271:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2300:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2373:4
 warning | PreCheck/SchemaMissingType | The schema 'Circuit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2440:4
 warning | PreCheck/SchemaMissingType | The schema 'Endpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2550:4
 warning | PreCheck/SchemaMissingType | The schema 'IdentitySource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2637:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloud' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2854:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2890:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2917:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2971:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3248:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3283:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3306:4
 warning | PreCheck/SchemaMissingType | The schema 'CommonClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3346:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagementCluster' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3456:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3480:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3502:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3569:4
 warning | PreCheck/SchemaMissingType | The schema 'Addon' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3636:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3664:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonSrmProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3705:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonVrProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3753:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonHcxProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3802:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3850:4
 warning | PreCheck/SchemaMissingType | The schema 'DatastoreList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3917:4
 warning | PreCheck/SchemaMissingType | The schema 'Datastore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3984:4
 warning | PreCheck/SchemaMissingType | The schema 'DatastoreProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4012:4
 warning | PreCheck/SchemaMissingType | The schema 'NetAppVolume' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4047:4
 warning | PreCheck/SchemaMissingType | The schema 'DiskPoolVolume' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4089:4
 warning | PreCheck/SchemaMissingType | The schema 'AdminCredentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4184:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4298:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4340:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSite' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4407:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4436:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnectionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4486:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4553:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4581:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudLinkList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4682:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4749:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4777:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentSubnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4825:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentPortVif' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4904:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4943:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5073:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5101:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpEntity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5168:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5294:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpRelay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5361:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcp' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5427:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5455:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroringProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5522:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroring' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5651:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroringList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5679:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5746:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5865:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroupsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5893:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5960:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6008:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachinesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6036:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGatewayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6103:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGateway' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6165:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGatewayList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6193:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6260:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6429:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsServicesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6457:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZoneProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6524:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZone' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6717:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZonesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6745:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPublicIPProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6812:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPublicIP' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6905:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPublicIPsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6933:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptPackageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7000:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptPackagesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7064:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptPackage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7131:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7159:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptCmdlet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7248:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptCmdletProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7276:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptCmdletsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7366:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptExecutionParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7433:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptExecution' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7487:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptExecutionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7515:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptExecutionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7960:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptSecureStringExecutionParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8027:4
 warning | PreCheck/SchemaMissingType | The schema 'ScriptStringExecutionParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8074:4
 warning | PreCheck/SchemaMissingType | The schema 'PSCredentialExecutionParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8119:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.avs-2021-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Trial' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:846:4
 warning | PreCheck/SchemaMissingType | The schema 'Quota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:897:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:972:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1060:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1149:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1171:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1194:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1320:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2030:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2059:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2132:4
 warning | PreCheck/SchemaMissingType | The schema 'Circuit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2199:4
 warning | PreCheck/SchemaMissingType | The schema 'Endpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2309:4
 warning | PreCheck/SchemaMissingType | The schema 'IdentitySource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2396:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloud' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2613:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2649:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2676:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2730:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2957:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2992:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3015:4
 warning | PreCheck/SchemaMissingType | The schema 'CommonClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3055:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagementCluster' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3170:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3194:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3216:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3283:4
 warning | PreCheck/SchemaMissingType | The schema 'Addon' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3350:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3378:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3401:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3424:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonSrmProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3464:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3503:4
 warning | PreCheck/SchemaMissingType | The schema 'DatastoreList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3570:4
 warning | PreCheck/SchemaMissingType | The schema 'Datastore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3637:4
 warning | PreCheck/SchemaMissingType | The schema 'DatastoreProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3665:4
 warning | PreCheck/SchemaMissingType | The schema 'NetAppVolume' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3700:4
 warning | PreCheck/SchemaMissingType | The schema 'DiskPoolVolume' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3760:4
 warning | PreCheck/SchemaMissingType | The schema 'AdminCredentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3839:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3953:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3995:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSite' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4062:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4091:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnectionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4141:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4208:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4236:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentSubnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4337:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentPortVif' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4416:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4455:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4585:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4613:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpEntity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4680:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4806:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpRelay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4873:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcp' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4939:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4967:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroringProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5034:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroring' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5163:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroringList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5191:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5258:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5377:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroupsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5405:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5472:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5520:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachinesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5548:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGatewayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5615:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGateway' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5677:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGatewayList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5705:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5772:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5941:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsServicesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5969:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZoneProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6036:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZone' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6229:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZonesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6257:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.avs-2020-07-17-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Trial' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:807:4
 warning | PreCheck/SchemaMissingType | The schema 'Quota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:858:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:933:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1021:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1110:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1132:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1155:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1281:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1991:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2020:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2093:4
 warning | PreCheck/SchemaMissingType | The schema 'Circuit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2160:4
 warning | PreCheck/SchemaMissingType | The schema 'Endpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2270:4
 warning | PreCheck/SchemaMissingType | The schema 'IdentitySource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2357:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloud' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2574:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2610:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2637:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2691:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2918:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2953:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2976:4
 warning | PreCheck/SchemaMissingType | The schema 'CommonClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3016:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagementCluster' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3131:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3155:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3177:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3244:4
 warning | PreCheck/SchemaMissingType | The schema 'Addon' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3311:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3339:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3362:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3385:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonSrmProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3425:4
 warning | PreCheck/SchemaMissingType | The schema 'AddonList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3464:4
 warning | PreCheck/SchemaMissingType | The schema 'AdminCredentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3531:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3645:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3687:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSite' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3754:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3783:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnectionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3833:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3900:4
 warning | PreCheck/SchemaMissingType | The schema 'GlobalReachConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3928:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentSubnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4029:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentPortVif' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4108:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4147:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4277:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkSegmentsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4305:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpEntity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4372:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpServer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4498:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpRelay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4565:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcp' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4631:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDhcpList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4659:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroringProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4726:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroring' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4855:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkPortMirroringList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4883:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4950:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5069:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVMGroupsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5097:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5164:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5212:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkVirtualMachinesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5240:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGatewayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5307:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGateway' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5369:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkGatewayList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5397:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5464:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5633:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsServicesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5661:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZoneProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5728:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZone' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5921:4
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadNetworkDnsZonesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5949:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.avs-2020-03-20"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Trial' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:371:4
 warning | PreCheck/SchemaMissingType | The schema 'Quota' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:422:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:497:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:585:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:682:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:705:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:831:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1541:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1570:4
 warning | PreCheck/SchemaMissingType | The schema 'ExpressRouteAuthorizationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1643:4
 warning | PreCheck/SchemaMissingType | The schema 'Circuit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1710:4
 warning | PreCheck/SchemaMissingType | The schema 'Endpoints' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1820:4
 warning | PreCheck/SchemaMissingType | The schema 'IdentitySource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1907:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloud' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2124:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2161:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2227:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2281:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2516:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2552:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2575:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagementCluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2615:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2711:4
 warning | PreCheck/SchemaMissingType | The schema 'PrivateCloudList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2738:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2805:4
 warning | PreCheck/SchemaMissingType | The schema 'AdminCredentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2872:4
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2986:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3028:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSite' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3095:4
 warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3124:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ClusterProperties' has a property 'provisioningState' that is already declared the parent schema 'ManagementCluster' but isn't significantly different. The property has been removed from ClusterProperties
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 2ms
 info    | Generation Complete

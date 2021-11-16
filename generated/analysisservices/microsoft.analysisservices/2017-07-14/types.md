@@ -12,6 +12,11 @@
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.AnalysisServices/servers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listGatewayStatus (Microsoft.AnalysisServices/servers@2017-07-14)
+* **Resource**: Microsoft.AnalysisServices/servers
+* **ApiVersion**: 2017-07-14
+* **Output**: [GatewayListStatusLive](#gatewayliststatuslive)
+
 ## AnalysisServicesServerProperties
 ### Properties
 * **asAdministrators**: [ServerAdministrators](#serveradministrators): An array of administrator user identities
@@ -42,4 +47,8 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GatewayListStatusLive
+### Properties
+* **status**: '0' (ReadOnly): Live message of list gateway. Status: 0 - Live
 

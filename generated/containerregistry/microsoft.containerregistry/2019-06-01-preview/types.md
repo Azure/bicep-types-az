@@ -37,6 +37,31 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listBuildSourceUploadUrl (Microsoft.ContainerRegistry/registries@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [SourceUploadDefinition](#sourceuploaddefinition)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/taskRuns
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [TaskRun](#taskrun)
+
+## Function listDetails (Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/tasks
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [Task](#task)
+
+## Function listLogSasUrl (Microsoft.ContainerRegistry/registries/runs@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/runs
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [RunGetLogResult](#rungetlogresult)
+
+## Function listQueueStatus (Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview)
+* **Resource**: Microsoft.ContainerRegistry/registries/agentPools
+* **ApiVersion**: 2019-06-01-preview
+* **Output**: [AgentPoolQueueStatus](#agentpoolqueuestatus)
+
 ## AgentPoolProperties
 ### Properties
 * **count**: int: The count of agent machine
@@ -372,4 +397,44 @@ executing a build step.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SourceUploadDefinition
+### Properties
+* **relativePath**: string (ReadOnly): The relative path to the source. This is used to submit the subsequent queue build request.
+* **uploadUrl**: string (ReadOnly): The URL where the client can upload the source.
+
+## TaskRun
+### Properties
+* **id**: string (ReadOnly): The resource ID.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **location**: string (ReadOnly): The location of the resource
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [TaskRunProperties](#taskrunproperties) (ReadOnly): The properties of task run.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## Task
+### Properties
+* **id**: string (ReadOnly): The resource ID.
+* **identity**: [IdentityProperties](#identityproperties) (ReadOnly): Managed identity for the resource.
+* **location**: string (ReadOnly): The location of the resource. This cannot be changed after the resource is created.
+* **name**: string (ReadOnly): The name of the resource.
+* **properties**: [TaskProperties](#taskproperties) (ReadOnly): The properties of a task.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The tags of the resource.
+* **type**: string (ReadOnly): The type of the resource.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## RunGetLogResult
+### Properties
+* **logArtifactLink**: string (ReadOnly): The link to logs in registry for a run on a azure container registry.
+* **logLink**: string (ReadOnly): The link to logs for a run on a azure container registry.
+
+## AgentPoolQueueStatus
+### Properties
+* **count**: int (ReadOnly): The number of pending runs in the queue
 

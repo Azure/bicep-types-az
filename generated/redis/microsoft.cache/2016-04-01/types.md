@@ -30,6 +30,11 @@
 * **properties**: [ScheduleEntries](#scheduleentries) (Required): List of patch schedules for a Redis cache.
 * **type**: 'Microsoft.Cache/Redis/patchSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Cache/Redis@2016-04-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2016-04-01
+* **Output**: [RedisAccessKeys](#redisaccesskeys)
+
 ## RedisCreateProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.
@@ -86,4 +91,9 @@
 * **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | 'Weekend' (Required): Day of the week when a cache can be patched.
 * **maintenanceWindow**: string: ISO8601 timespan specifying how much time cache patching can take.
 * **startHourUtc**: int (Required): Start hour after which cache patching can start.
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 

@@ -12,6 +12,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RedHatOpenShift/openShiftClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminCredentials (Microsoft.RedHatOpenShift/openShiftClusters@2021-09-01-preview)
+* **Resource**: Microsoft.RedHatOpenShift/openShiftClusters
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [OpenShiftClusterAdminKubeconfig](#openshiftclusteradminkubeconfig)
+
+## Function listCredentials (Microsoft.RedHatOpenShift/openShiftClusters@2021-09-01-preview)
+* **Resource**: Microsoft.RedHatOpenShift/openShiftClusters
+* **ApiVersion**: 2021-09-01-preview
+* **Output**: [OpenShiftClusterCredentials](#openshiftclustercredentials)
+
 ## OpenShiftClusterProperties
 ### Properties
 * **apiserverProfile**: [APIServerProfile](#apiserverprofile): APIServerProfile represents an API server profile.
@@ -88,4 +98,13 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## OpenShiftClusterAdminKubeconfig
+### Properties
+* **kubeconfig**: string (ReadOnly): The base64-encoded kubeconfig file.
+
+## OpenShiftClusterCredentials
+### Properties
+* **kubeadminPassword**: string (ReadOnly): The password for the kubeadmin user.
+* **kubeadminUsername**: string (ReadOnly): The username for the kubeadmin user.
 

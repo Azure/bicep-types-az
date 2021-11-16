@@ -66,6 +66,21 @@
 * **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventHub/namespaces/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.EventHub/namespaces/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [AccessKeys](#accesskeys)
+
+## Function listKeys (Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2017-04-01)
+* **Resource**: Microsoft.EventHub/namespaces/eventhubs/authorizationRules
+* **ApiVersion**: 2017-04-01
+* **Output**: [AccessKeys](#accesskeys)
+
 ## EHNamespaceProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the Namespace was created.
@@ -155,4 +170,34 @@
 ## Subnet
 ### Properties
 * **id**: string (Required): Resource ID of Virtual Network Subnet
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+
+## AccessKeys
+### Properties
+* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
+* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
+* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
+* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
+* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
