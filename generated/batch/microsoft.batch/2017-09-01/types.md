@@ -57,6 +57,11 @@
 * **properties**: [PoolProperties](#poolproperties): Pool properties.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2017-09-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2017-09-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
 ## BatchAccountCreateProperties
 ### Properties
 * **accountEndpoint**: string (ReadOnly): The account endpoint used to interact with the Batch service.
@@ -364,4 +369,10 @@
 * **gid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
 * **sshPrivateKey**: string: The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
 * **uid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
+
+## BatchAccountKeys
+### Properties
+* **accountName**: string (ReadOnly): The Batch account name.
+* **primary**: string (ReadOnly): The primary key associated with the account.
+* **secondary**: string (ReadOnly): The secondary key associated with the account.
 

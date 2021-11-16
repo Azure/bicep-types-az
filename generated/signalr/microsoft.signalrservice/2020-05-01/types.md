@@ -22,6 +22,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private endpoint connection properties
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/signalR@2020-05-01)
+* **Resource**: Microsoft.SignalRService/signalR
+* **ApiVersion**: 2020-05-01
+* **Output**: [SignalRKeys](#signalrkeys)
+
 ## SignalRProperties
 ### Properties
 * **cors**: [SignalRCorsSettings](#signalrcorssettings): Cross-Origin Resource Sharing (CORS) settings.
@@ -144,4 +149,11 @@ Allowed values: Standard_S1, Free_F1
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SignalRKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the primaryKey
+* **primaryKey**: string (ReadOnly): The primary access key.
+* **secondaryConnectionString**: string (ReadOnly): SignalR connection string constructed via the secondaryKey
+* **secondaryKey**: string (ReadOnly): The secondary access key.
 

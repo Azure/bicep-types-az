@@ -28,6 +28,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.CognitiveServices/accounts@2021-04-30)
+* **Resource**: Microsoft.CognitiveServices/accounts
+* **ApiVersion**: 2021-04-30
+* **Output**: [ApiKeys](#apikeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -208,4 +213,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ApiKeys
+### Properties
+* **key1**: string (ReadOnly): Gets the value of key 1.
+* **key2**: string (ReadOnly): Gets the value of key 2.
 

@@ -26,6 +26,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.CognitiveServices/accounts@2017-04-18)
+* **Resource**: Microsoft.CognitiveServices/accounts
+* **ApiVersion**: 2017-04-18
+* **Output**: [CognitiveServicesAccountKeys](#cognitiveservicesaccountkeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): Principal Id of managed service identity.
@@ -149,4 +154,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## CognitiveServicesAccountKeys
+### Properties
+* **key1**: string (ReadOnly): Gets the value of key 1.
+* **key2**: string (ReadOnly): Gets the value of key 2.
 

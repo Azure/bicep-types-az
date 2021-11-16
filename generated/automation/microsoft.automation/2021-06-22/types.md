@@ -36,6 +36,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Automation/automationAccounts@2021-06-22)
+* **Resource**: Microsoft.Automation/automationAccounts
+* **ApiVersion**: 2021-06-22
+* **Output**: [KeyListResult](#keylistresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -144,4 +149,14 @@
 * **vmResourceId**: string: Azure Resource Manager Id for a virtual machine.
 * **workerName**: string (ReadOnly): Name of the HybridWorker.
 * **workerType**: 'HybridV1' | 'HybridV2' (ReadOnly): Type of the HybridWorker.
+
+## KeyListResult
+### Properties
+* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
+
+## Key
+### Properties
+* **KeyName**: 'Primary' | 'Secondary' (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

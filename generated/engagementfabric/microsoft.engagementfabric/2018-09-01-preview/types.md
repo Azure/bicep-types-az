@@ -20,6 +20,16 @@
 * **properties**: [ChannelProperties](#channelproperties): The EngagementFabric channel properties
 * **type**: 'Microsoft.EngagementFabric/Accounts/Channels' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listChannelTypes (Microsoft.EngagementFabric/Accounts@2018-09-01-preview)
+* **Resource**: Microsoft.EngagementFabric/Accounts
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: [ChannelTypeDescriptionList](#channeltypedescriptionlist)
+
+## Function listKeys (Microsoft.EngagementFabric/Accounts@2018-09-01-preview)
+* **Resource**: Microsoft.EngagementFabric/Accounts
+* **ApiVersion**: 2018-09-01-preview
+* **Output**: [KeyDescriptionList](#keydescriptionlist)
+
 ## SKU
 ### Properties
 * **name**: string (Required): The name of the SKU
@@ -40,4 +50,24 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ChannelTypeDescriptionList
+### Properties
+* **value**: [ChannelTypeDescription](#channeltypedescription)[] (ReadOnly): Channel descriptions
+
+## ChannelTypeDescription
+### Properties
+* **channelDescription**: string (ReadOnly): Text description for the channel
+* **channelFunctions**: string[] (ReadOnly): All the available functions for the channel
+* **channelType**: string (ReadOnly): Channel type
+
+## KeyDescriptionList
+### Properties
+* **value**: [KeyDescription](#keydescription)[] (ReadOnly): Account keys
+
+## KeyDescription
+### Properties
+* **name**: string (ReadOnly): The name of the key
+* **rank**: 'PrimaryKey' | 'SecondaryKey' (ReadOnly): The rank of the EngagementFabric account key
+* **value**: string (ReadOnly): The value of the key
 

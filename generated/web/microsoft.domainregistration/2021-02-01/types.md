@@ -22,6 +22,12 @@
 * **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties): DomainOwnershipIdentifier resource specific properties
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAgreements (Microsoft.DomainRegistration/topLevelDomains@2021-02-01)
+* **Resource**: Microsoft.DomainRegistration/topLevelDomains
+* **ApiVersion**: 2021-02-01
+* **Input**: [TopLevelDomainAgreementOption](#topleveldomainagreementoption)
+* **Output**: [TldLegalAgreementCollection](#tldlegalagreementcollection)
+
 ## DomainProperties
 ### Properties
 * **authCode**: string
@@ -94,4 +100,21 @@ directories as per ICANN requirements.
 ## DomainOwnershipIdentifierProperties
 ### Properties
 * **ownershipId**: string: Ownership Id.
+
+## TopLevelDomainAgreementOption
+### Properties
+* **forTransfer**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
+* **includePrivacy**: bool (WriteOnly): If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
+
+## TldLegalAgreementCollection
+### Properties
+* **nextLink**: string (ReadOnly): Link to next page of resources.
+* **value**: [TldLegalAgreement](#tldlegalagreement)[] (ReadOnly): Collection of resources.
+
+## TldLegalAgreement
+### Properties
+* **agreementKey**: string (ReadOnly): Unique identifier for the agreement.
+* **content**: string (ReadOnly): Agreement details.
+* **title**: string (ReadOnly): Agreement title.
+* **url**: string (ReadOnly): URL where a copy of the agreement details is hosted.
 

@@ -10,6 +10,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ServiceLinker/linkers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConfigurations (Microsoft.ServiceLinker/linkers@2021-11-01-preview)
+* **Resource**: Microsoft.ServiceLinker/linkers
+* **ApiVersion**: 2021-11-01-preview
+* **Output**: [SourceConfigurationResult](#sourceconfigurationresult)
+
 ## LinkerProperties
 ### Properties
 * **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
@@ -60,4 +65,13 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+
+## SourceConfigurationResult
+### Properties
+* **configurations**: [SourceConfiguration](#sourceconfiguration)[] (ReadOnly): The configuration properties for source resource.
+
+## SourceConfiguration
+### Properties
+* **name**: string (ReadOnly): The name of setting.
+* **value**: string (ReadOnly): The value of setting
 

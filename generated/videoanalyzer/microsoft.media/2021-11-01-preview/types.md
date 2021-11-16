@@ -85,6 +85,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/videos' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listContentToken (Microsoft.Media/videoAnalyzers/videos@2021-11-01-preview)
+* **Resource**: Microsoft.Media/videoAnalyzers/videos
+* **ApiVersion**: 2021-11-01-preview
+* **Output**: [VideoContentToken](#videocontenttoken)
+
+## Function listProvisioningToken (Microsoft.Media/videoAnalyzers/edgeModules@2021-11-01-preview)
+* **Resource**: Microsoft.Media/videoAnalyzers/edgeModules
+* **ApiVersion**: 2021-11-01-preview
+* **Input**: [ListProvisioningTokenInput](#listprovisioningtokeninput)
+* **Output**: [EdgeModuleProvisioningToken](#edgemoduleprovisioningtoken)
+
 ## VideoAnalyzerIdentity
 ### Properties
 * **type**: string (Required): The identity type.
@@ -497,4 +508,18 @@
 ## VideoMediaInfo
 ### Properties
 * **segmentLength**: string (ReadOnly): Video segment length indicates the length of individual video files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. "PT30S" equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments.
+
+## VideoContentToken
+### Properties
+* **expirationDate**: string (ReadOnly): The content token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
+* **token**: string (ReadOnly): The content token value to be added to the video content URL as the value for the "token" query string parameter. The token is specific to a single video.
+
+## ListProvisioningTokenInput
+### Properties
+* **expirationDate**: string (Required, WriteOnly): The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+
+## EdgeModuleProvisioningToken
+### Properties
+* **expirationDate**: string (ReadOnly): The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+* **token**: string (ReadOnly): The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
 

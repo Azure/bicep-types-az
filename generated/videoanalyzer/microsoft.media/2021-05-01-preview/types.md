@@ -43,6 +43,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/videoAnalyzers/videos' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listProvisioningToken (Microsoft.Media/videoAnalyzers/edgeModules@2021-05-01-preview)
+* **Resource**: Microsoft.Media/videoAnalyzers/edgeModules
+* **ApiVersion**: 2021-05-01-preview
+* **Input**: [ListProvisioningTokenInput](#listprovisioningtokeninput)
+* **Output**: [EdgeModuleProvisioningToken](#edgemoduleprovisioningtoken)
+
+## Function listStreamingToken (Microsoft.Media/videoAnalyzers/videos@2021-05-01-preview)
+* **Resource**: Microsoft.Media/videoAnalyzers/videos
+* **ApiVersion**: 2021-05-01-preview
+* **Output**: [VideoStreamingToken](#videostreamingtoken)
+
 ## VideoAnalyzerIdentity
 ### Properties
 * **type**: string (Required): The identity type.
@@ -180,4 +191,18 @@
   - DASH CMAF: /manifest(format=mpd-time-cmaf)
 
 Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
+
+## ListProvisioningTokenInput
+### Properties
+* **expirationDate**: string (Required, WriteOnly): The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+
+## EdgeModuleProvisioningToken
+### Properties
+* **expirationDate**: string (ReadOnly): The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+* **token**: string (ReadOnly): The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
+
+## VideoStreamingToken
+### Properties
+* **expirationDate**: string (ReadOnly): The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
+* **token**: string (ReadOnly): The streaming token value to be added to the video streaming URL as the value for a "token" query string parameter. The token is specific to a single video.
 

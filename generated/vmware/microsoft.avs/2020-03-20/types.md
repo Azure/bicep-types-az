@@ -40,6 +40,11 @@
 * **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminCredentials (Microsoft.AVS/privateClouds@2020-03-20)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2020-03-20
+* **Output**: [AdminCredentials](#admincredentials)
+
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
@@ -116,4 +121,11 @@
 ### Properties
 * **activationKey**: string (ReadOnly): The activation key
 * **status**: 'Available' | 'Consumed' | 'Deactivated' | 'Deleted' (ReadOnly): The status of the HCX Enterprise Site
+
+## AdminCredentials
+### Properties
+* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
+* **nsxtUsername**: string (ReadOnly): NSX-T Manager username
+* **vcenterPassword**: string (ReadOnly): vCenter admin password
+* **vcenterUsername**: string (ReadOnly): vCenter admin username
 

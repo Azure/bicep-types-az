@@ -218,6 +218,51 @@
 * **tags**: [PrivateEndpointConnectionTags](#privateendpointconnectiontags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ListWorkspaceKeysResult](#listworkspacekeysresult)
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ComputeSecrets](#computesecrets)
+
+## Function listkeys (Microsoft.MachineLearningServices/workspaces/batchEndpoints@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/batchEndpoints
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [EndpointAuthKeys](#endpointauthkeys)
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [EndpointAuthKeys](#endpointauthkeys)
+
+## Function listNodes (Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/computes
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [AmlComputeNodesInformation](#amlcomputenodesinformation)
+
+## Function listNotebookAccessToken (Microsoft.MachineLearningServices/workspaces@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [NotebookAccessTokenResult](#notebookaccesstokenresult)
+
+## Function listNotebookKeys (Microsoft.MachineLearningServices/workspaces@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ListNotebookKeysResult](#listnotebookkeysresult)
+
+## Function listSecrets (Microsoft.MachineLearningServices/workspaces/datastores@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/datastores
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [DatastoreSecrets](#datastoresecrets)
+
+## Function listStorageAccountKeys (Microsoft.MachineLearningServices/workspaces@2021-03-01-preview)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ListStorageAccountKeysResult](#liststorageaccountkeysresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -1596,4 +1641,129 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListWorkspaceKeysResult
+### Properties
+* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
+* **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
+* **userStorageKey**: string (ReadOnly)
+* **userStorageResourceId**: string (ReadOnly)
+
+## RegistryListCredentialsResult
+### Properties
+* **location**: string (ReadOnly)
+* **passwords**: [Password](#password)[] (ReadOnly): Array of Password
+* **username**: string (ReadOnly)
+
+## Password
+### Properties
+* **name**: string (ReadOnly)
+* **value**: string (ReadOnly)
+
+## ListNotebookKeysResult
+### Properties
+* **primaryAccessKey**: string (ReadOnly)
+* **secondaryAccessKey**: string (ReadOnly)
+
+## ComputeSecrets
+* **Discriminator**: computeType
+
+### Base Properties
+### AksComputeSecrets
+#### Properties
+* **adminKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+* **computeType**: 'AKS' (Required): The type of compute
+* **imagePullSecretName**: string (ReadOnly): Image registry pull secret.
+* **userKubeConfig**: string (ReadOnly): Content of kubeconfig file that can be used to connect to the Kubernetes cluster.
+
+### DatabricksComputeSecrets
+#### Properties
+* **computeType**: 'Databricks' (Required): The type of compute
+* **databricksAccessToken**: string (ReadOnly): access token for databricks account.
+
+### VirtualMachineSecrets
+#### Properties
+* **administratorAccount**: [VirtualMachineSshCredentials](#virtualmachinesshcredentials) (ReadOnly): Admin credentials for virtual machine
+* **computeType**: 'VirtualMachine' (Required): The type of compute
+
+
+## EndpointAuthKeys
+### Properties
+* **primaryKey**: string: The primary key.
+* **secondaryKey**: string: The secondary key.
+
+## EndpointAuthKeys
+### Properties
+* **primaryKey**: string: The primary key.
+* **secondaryKey**: string: The secondary key.
+
+## AmlComputeNodesInformation
+### Properties
+* **computeType**: 'AKS' | 'AmlCompute' | 'ComputeInstance' | 'DataFactory' | 'DataLakeAnalytics' | 'Databricks' | 'HDInsight' | 'SynapseSpark' | 'VirtualMachine' (ReadOnly): The type of compute
+* **nextLink**: string (ReadOnly): The continuation token.
+* **nodes**: [AmlComputeNodeInformation](#amlcomputenodeinformation)[] (ReadOnly): The collection of returned AmlCompute nodes details.
+
+## AmlComputeNodeInformation
+### Properties
+* **nodeId**: string (ReadOnly): ID of the compute node.
+* **nodeState**: 'idle' | 'leaving' | 'preempted' | 'preparing' | 'running' | 'unusable' (ReadOnly): State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+* **port**: int (ReadOnly): SSH port number of the node.
+* **privateIpAddress**: string (ReadOnly): Private IP address of the compute node.
+* **publicIpAddress**: string (ReadOnly): Public IP address of the compute node.
+* **runId**: string (ReadOnly): ID of the Experiment running on the node, if any else null.
+
+## NotebookAccessTokenResult
+### Properties
+* **accessToken**: string (ReadOnly)
+* **expiresIn**: int (ReadOnly)
+* **hostName**: string (ReadOnly)
+* **notebookResourceId**: string (ReadOnly)
+* **publicDns**: string (ReadOnly)
+* **refreshToken**: string (ReadOnly)
+* **scope**: string (ReadOnly)
+* **tokenType**: string (ReadOnly)
+
+## ListNotebookKeysResult
+### Properties
+* **primaryAccessKey**: string (ReadOnly)
+* **secondaryAccessKey**: string (ReadOnly)
+
+## DatastoreSecrets
+* **Discriminator**: secretsType
+
+### Base Properties
+### AccountKeyDatastoreSecrets
+#### Properties
+* **key**: string (ReadOnly): Storage account key.
+* **secretsType**: 'AccountKey' (Required): Credential type used to authentication with storage.
+
+### CertificateDatastoreSecrets
+#### Properties
+* **certificate**: string (ReadOnly): Service principal certificate.
+* **secretsType**: 'Certificate' (Required): Credential type used to authentication with storage.
+
+### NoneDatastoreSecrets
+#### Properties
+* **secretsType**: 'None' (Required): Credential type used to authentication with storage.
+
+### SasDatastoreSecrets
+#### Properties
+* **sasToken**: string (ReadOnly): Storage container SAS token.
+* **secretsType**: 'Sas' (Required): Credential type used to authentication with storage.
+
+### ServicePrincipalDatastoreSecrets
+#### Properties
+* **clientSecret**: string (ReadOnly): Service principal secret.
+* **secretsType**: 'ServicePrincipal' (Required): Credential type used to authentication with storage.
+
+### SqlAdminDatastoreSecrets
+#### Properties
+* **password**: string (ReadOnly): SQL database password.
+* **secretsType**: 'SqlAdmin' (Required): Credential type used to authentication with storage.
+
+
+## ListStorageAccountKeysResult
+### Properties
+* **userStorageKey**: string (ReadOnly)
 

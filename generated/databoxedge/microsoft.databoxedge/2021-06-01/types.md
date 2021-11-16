@@ -189,6 +189,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/users' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listDCAccessCode (Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2021-06-01)
+* **Resource**: Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders
+* **ApiVersion**: 2021-06-01
+* **Output**: [DCAccessCode](#dcaccesscode)
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Service Principal Id backing the Msi
@@ -627,4 +632,12 @@ by the already existing properties
 ### Properties
 * **accessType**: 'Change' | 'Custom' | 'Read' (Required): Type of access to be allowed on the share for this user.
 * **shareId**: string (Required): The share ID.
+
+## DCAccessCode
+### Properties
+* **properties**: [DCAccessCodeProperties](#dcaccesscodeproperties) (ReadOnly): DCAccessCode Properties.
+
+## DCAccessCodeProperties
+### Properties
+* **authCode**: string (ReadOnly): DCAccess Code for the Self Managed shipment.
 

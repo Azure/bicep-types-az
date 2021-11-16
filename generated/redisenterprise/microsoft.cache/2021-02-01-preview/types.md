@@ -31,6 +31,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.Cache/redisEnterprise/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Cache/redisEnterprise/databases@2021-02-01-preview)
+* **Resource**: Microsoft.Cache/redisEnterprise/databases
+* **ApiVersion**: 2021-02-01-preview
+* **Output**: [AccessKeys](#accesskeys)
+
 ## ClusterProperties
 ### Properties
 * **hostName**: string (ReadOnly): DNS name of the cluster endpoint
@@ -107,4 +112,9 @@
 * **aofFrequency**: '1s' | 'always': Sets the frequency at which data is written to disk.
 * **rdbEnabled**: bool: Sets whether RDB is enabled.
 * **rdbFrequency**: '12h' | '1h' | '6h': Sets the frequency at which a snapshot of the database is created.
+
+## AccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate
 

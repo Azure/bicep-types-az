@@ -62,6 +62,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.EventGrid/domains@2020-06-01)
+* **Resource**: Microsoft.EventGrid/domains
+* **ApiVersion**: 2020-06-01
+* **Output**: [DomainSharedAccessKeys](#domainsharedaccesskeys)
+
+## Function listKeys (Microsoft.EventGrid/topics@2020-06-01)
+* **Resource**: Microsoft.EventGrid/topics
+* **ApiVersion**: 2020-06-01
+* **Output**: [TopicSharedAccessKeys](#topicsharedaccesskeys)
+
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
@@ -360,4 +370,14 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DomainSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly): Shared access key1 for the domain.
+* **key2**: string (ReadOnly): Shared access key2 for the domain.
+
+## TopicSharedAccessKeys
+### Properties
+* **key1**: string (ReadOnly): Shared access key1 for the topic.
+* **key2**: string (ReadOnly): Shared access key2 for the topic.
 

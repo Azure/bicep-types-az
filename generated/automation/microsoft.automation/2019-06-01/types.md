@@ -223,6 +223,11 @@
 * **tags**: [WatcherTags](#watchertags): Resource tags.
 * **type**: 'Microsoft.Automation/automationAccounts/watchers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Automation/automationAccounts@2019-06-01)
+* **Resource**: Microsoft.Automation/automationAccounts
+* **ApiVersion**: 2019-06-01
+* **Output**: [KeyListResult](#keylistresult)
+
 ## AutomationAccountCreateOrUpdateProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Gets the creation time.
@@ -718,4 +723,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## KeyListResult
+### Properties
+* **keys**: [Key](#key)[] (ReadOnly): Lists the automation keys.
+
+## Key
+### Properties
+* **KeyName**: 'Primary' | 'Secondary' (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' (ReadOnly): Automation key permissions.
+* **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

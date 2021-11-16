@@ -25,6 +25,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Maps/accounts/creators' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Maps/accounts@2021-02-01)
+* **Resource**: Microsoft.Maps/accounts
+* **ApiVersion**: 2021-02-01
+* **Output**: [MapsAccountKeys](#mapsaccountkeys)
+
 ## MapsAccountProperties
 ### Properties
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
@@ -59,4 +64,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## MapsAccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The primary key for accessing the Maps REST APIs.
+* **primaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the primary key.
+* **secondaryKey**: string (ReadOnly): The secondary key for accessing the Maps REST APIs.
+* **secondaryKeyLastUpdated**: string (ReadOnly): The last updated date and time of the secondary key.
 

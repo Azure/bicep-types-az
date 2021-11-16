@@ -60,6 +60,11 @@
 * **properties**: [CertificateProperties](#certificateproperties): Certificate resource payload.
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listTestKeys (Microsoft.AppPlatform/Spring@2019-05-01-preview)
+* **Resource**: Microsoft.AppPlatform/Spring
+* **ApiVersion**: 2019-05-01-preview
+* **Output**: [TestKeys](#testkeys)
+
 ## ClusterResourceProperties
 ### Properties
 * **configServerProperties**: [ConfigServerProperties](#configserverproperties): Config server git properties payload
@@ -256,4 +261,12 @@ the relative path to the target module/project.
 * **subjectName**: string (ReadOnly): The subject name of certificate.
 * **thumbprint**: string (ReadOnly): The thumbprint of certificate.
 * **vaultUri**: string (Required): The vault uri of user key vault.
+
+## TestKeys
+### Properties
+* **enabled**: bool (ReadOnly): Indicates whether the test endpoint feature enabled or not
+* **primaryKey**: string (ReadOnly): Primary key
+* **primaryTestEndpoint**: string (ReadOnly): Primary test endpoint
+* **secondaryKey**: string (ReadOnly): Secondary key
+* **secondaryTestEndpoint**: string (ReadOnly): Secondary test endpoint
 

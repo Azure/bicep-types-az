@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Cache/Redis' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Cache/Redis@2015-08-01)
+* **Resource**: Microsoft.Cache/Redis
+* **ApiVersion**: 2015-08-01
+* **Output**: [RedisListKeysResult](#redislistkeysresult)
+
 ## RedisProperties
 ### Properties
 * **enableNonSslPort**: bool: If the value is true, then the non-SLL Redis server port (6379) will be enabled.
@@ -47,4 +52,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RedisListKeysResult
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 

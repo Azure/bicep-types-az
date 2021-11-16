@@ -57,6 +57,21 @@
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): AuthorizationRule properties.
 * **type**: 'Microsoft.Relay/namespaces/WcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Relay/namespaces/AuthorizationRules@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/AuthorizationRules
+* **ApiVersion**: 2016-07-01
+* **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
+
+## Function listKeys (Microsoft.Relay/namespaces/HybridConnections/authorizationRules@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/HybridConnections/authorizationRules
+* **ApiVersion**: 2016-07-01
+* **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
+
+## Function listKeys (Microsoft.Relay/namespaces/WcfRelays/authorizationRules@2016-07-01)
+* **Resource**: Microsoft.Relay/namespaces/WcfRelays/authorizationRules
+* **ApiVersion**: 2016-07-01
+* **Output**: [AuthorizationRuleKeys](#authorizationrulekeys)
+
 ## RelayNamespaceProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the namespace was created.
@@ -97,4 +112,28 @@
 * **requiresTransportSecurity**: bool: true if transport security is needed for this relay; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 * **userMetadata**: string: usermetadata is a placeholder to store user-defined string data for the HybridConnection endpoint.e.g. it can be used to store  descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+
+## AuthorizationRuleKeys
+### Properties
+* **keyName**: string (ReadOnly): A string that describes the authorization rule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the created Namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created Namespace AuthorizationRule
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit secondary key for signing and validating the SAS token
+
+## AuthorizationRuleKeys
+### Properties
+* **keyName**: string (ReadOnly): A string that describes the authorization rule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the created Namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created Namespace AuthorizationRule
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit secondary key for signing and validating the SAS token
+
+## AuthorizationRuleKeys
+### Properties
+* **keyName**: string (ReadOnly): A string that describes the authorization rule
+* **primaryConnectionString**: string (ReadOnly): PrimaryConnectionString of the created Namespace AuthorizationRule.
+* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token
+* **secondaryConnectionString**: string (ReadOnly): SecondaryConnectionString of the created Namespace AuthorizationRule
+* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit secondary key for signing and validating the SAS token
 
