@@ -15,17 +15,33 @@ namespace Azure.Bicep.Types.Az
         private const string TypeContainerName = "types.json";
         private const string TypeIndexResourceName = "index.json";
 
-        public ResourceType LoadResourceType(TypeLocation typeLocation)
+        private TypeBase LoadType(TypeLocation typeLocation)
         {
             var content = GetContentAtPath(typeLocation.RelativePath);
 
             var types = TypeSerializer.Deserialize(content);
-            if (typeLocation.Index is not int intIndex || types[intIndex] is not ResourceType resourceType)
+
+            return types[typeLocation.Index];
+        }
+
+        public ResourceType LoadResourceType(TypeLocation typeLocation)
+        {
+            if (LoadType(typeLocation) is not ResourceType resourceType)
             {
                 throw new ArgumentException($"Unable to locate resource type at index {typeLocation.Index} in \"{typeLocation.RelativePath}\" resource");
             }
 
             return resourceType;
+        }
+
+        public ResourceFunctionType LoadResourceFunctionType(TypeLocation typeLocation)
+        {
+            if (LoadType(typeLocation) is not ResourceFunctionType resourceFunctionType)
+            {
+                throw new ArgumentException($"Unable to locate resource function type at index {typeLocation.Index} in \"{typeLocation.RelativePath}\" resource");
+            }
+
+            return resourceFunctionType;
         }
 
         public string GetContentAtPath(string? path)

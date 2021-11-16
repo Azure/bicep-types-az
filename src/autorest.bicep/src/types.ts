@@ -90,6 +90,7 @@ export enum TypeBaseKind {
   UnionType = 5,
   StringLiteralType = 6,
   DiscriminatedObjectType = 7,
+  ResourceFunctionType = 8,
 }
 
 const TypeBaseKindLabel = new Map<TypeBaseKind, string>([
@@ -154,6 +155,22 @@ export class ResourceType extends TypeBase {
   readonly Name: string;
   readonly ScopeType: ScopeType;
   readonly Body: TypeReference;
+}
+
+export class ResourceFunctionType extends TypeBase {
+  constructor(name: string, resourceType: string, apiVersion: string, output: TypeReference, input?: TypeReference) {
+    super(TypeBaseKind.ResourceFunctionType);
+    this.Name = name;
+    this.ResourceType = resourceType;
+    this.ApiVersion = apiVersion;
+    this.Output = output;
+    this.Input = input;
+  }
+  readonly Name: string;
+  readonly ResourceType: string;
+  readonly ApiVersion: string;
+  readonly Output: TypeReference;
+  readonly Input?: TypeReference;
 }
 
 export class ObjectType extends TypeBase {

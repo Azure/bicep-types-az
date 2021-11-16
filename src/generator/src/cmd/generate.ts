@@ -3,7 +3,7 @@
 import os from 'os';
 import path from 'path';
 import { existsSync } from 'fs';
-import { rmdir, mkdir, rm, writeFile, readFile } from 'fs/promises';
+import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
 import { groupBy, keys, orderBy, sortBy, Dictionary } from 'lodash';
 import { TypeBaseKind } from '../types';
@@ -46,7 +46,7 @@ executeSynchronous(async () => {
   }
 
   const tmpOutputPath = `${os.tmpdir()}/_bcp_${new Date().getTime()}`;
-  await rmdir(tmpOutputPath, { recursive: true });
+  await rm(tmpOutputPath, { recursive: true, force: true, });
 
   // this file is deliberately gitignored as it'll be overwritten when using --single-path
   // it's used to generate the git commit message
@@ -65,7 +65,7 @@ executeSynchronous(async () => {
     }
 
     // prepare temp dir for output
-    await rmdir(tmpOutputDir, { recursive: true });
+    await rm(tmpOutputDir, { recursive: true, force: true, });
     await mkdir(tmpOutputDir, { recursive: true });
     const logger = await getLogger(`${tmpOutputDir}/log.out`);
     const config = getConfig(basePath);
@@ -76,7 +76,7 @@ executeSynchronous(async () => {
       await generateSchema(logger, readmePath, tmpOutputDir, verbose, waitForDebugger);
 
       // remove all previously-generated files and copy over results
-      await rmdir(outputDir, { recursive: true });
+      await rm(outputDir, { recursive: true, force: true, });
       await mkdir(outputDir, { recursive: true });
       await copyRecursive(tmpOutputDir, outputDir);
     } catch (err) {
@@ -95,7 +95,7 @@ ${err}
     }
 
     // clean up temp dir
-    await rmdir(tmpOutputDir, { recursive: true });
+    await rm(tmpOutputDir, { recursive: true, force: true, });
     // clean up autorest readme.bicep.md files
     await rm(bicepReadmePath, { force: true });
   }
@@ -241,7 +241,8 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
 }
 
 interface TypeIndex {
-  Types: Dictionary<TypeIndexEntry>;
+  Resources: Dictionary<TypeIndexEntry>;
+  Functions: Dictionary<Dictionary<TypeIndexEntry[]>>;
 }
 
 interface TypeIndexEntry {
@@ -252,7 +253,7 @@ interface TypeIndexEntry {
 function generateIndexMarkdown(index: TypeIndex) {
   let markdown = '# Bicep Types\n';
 
-  const byProvider = groupBy(keys(index.Types), x => x.split('/')[0].toLowerCase());
+  const byProvider = groupBy(keys(index.Resources), x => x.split('/')[0].toLowerCase());
   for (const namespace of sortBy(keys(byProvider), x => x.toLowerCase())) {
     markdown += `## ${namespace}\n`;
 
@@ -262,7 +263,7 @@ function generateIndexMarkdown(index: TypeIndex) {
 
       for (const typeString of sortBy(byResourceType[resourceType], x => x.toLowerCase())) {
         const version = typeString.split('@')[1];
-        const jsonPath = index.Types[typeString].RelativePath;
+        const jsonPath = index.Resources[typeString].RelativePath;
         const anchor = `resource-${typeString.replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`
 
         markdown += `* [${version}](${path.dirname(jsonPath)}/types.md#${anchor})\n`;
@@ -281,7 +282,9 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   });
   
   const resourceTypes = new Set<string>();
-  const typeDictionary: Dictionary<TypeIndexEntry> = {};
+  const resourceFunctions = new Set<string>();
+  const resDictionary: Dictionary<TypeIndexEntry> = {};
+  const funcDictionary: Dictionary<Dictionary<TypeIndexEntry[]>> = {};
 
   // Use a consistent sort order so that file system differences don't generate changes
   for (const typeFilePath of orderBy(typeFiles, f => f.toLowerCase(), 'asc')) {
@@ -290,25 +293,49 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const types = JSON.parse(content) as any[];
     for (const type of types) {
-      const resource = type[TypeBaseKind.ResourceType];
-      if (!resource) {
+      const resourceType = type[TypeBaseKind.ResourceType];
+      if (resourceType) {
+        if (resourceTypes.has(resourceType.Name.toLowerCase())) {
+          logOut(logger, `WARNING: Found duplicate type "${resourceType.Name}"`);
+          continue;
+        }
+        resourceTypes.add(resourceType.Name.toLowerCase());
+  
+        resDictionary[resourceType.Name] = {
+          RelativePath: path.relative(baseDir, typeFilePath),
+          Index: types.indexOf(type),
+        };
+        
         continue;
       }
 
-      if (resourceTypes.has(resource.Name.toLowerCase())) {
-        logOut(logger, `WARNING: Found duplicate type "${resource.Name}"`);
+      const resourceFunction = type[TypeBaseKind.ResourceFunctionType];
+      if (resourceFunction) {
+        const funcKey = `${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}:${resourceFunction.Name}`.toLowerCase();
+        
+        const resourceTypeLower = resourceFunction.ResourceType.toLowerCase();
+        const apiVersionLower = resourceFunction.ApiVersion.toLowerCase();
+        if (resourceFunctions.has(funcKey)) {
+          logOut(logger, `WARNING: Found duplicate function "${resourceFunction.Name}" for resource type "${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}"`);
+          continue;
+        }
+        resourceFunctions.add(funcKey);
+
+        funcDictionary[resourceTypeLower] = funcDictionary[resourceTypeLower] || {};
+        funcDictionary[resourceTypeLower][apiVersionLower] = funcDictionary[resourceTypeLower][apiVersionLower] || [];
+
+        funcDictionary[resourceTypeLower][apiVersionLower].push({
+          RelativePath: path.relative(baseDir, typeFilePath),
+          Index: types.indexOf(type),
+        });
+
         continue;
       }
-      resourceTypes.add(resource.Name.toLowerCase());
-
-      typeDictionary[resource.Name] = {
-        RelativePath: path.relative(baseDir, typeFilePath),
-        Index: types.indexOf(type),
-      };
     }
   }
 
   return {
-    Types: typeDictionary,
+    Resources: resDictionary,
+    Functions: funcDictionary,
   }
 }

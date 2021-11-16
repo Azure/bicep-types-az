@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 import os from 'os';
 import path from 'path';
-import { rmdir } from 'fs/promises';
+import { rm, mkdir } from 'fs/promises';
 import { compare } from 'dir-compare';
 import { defaultLogger, executeCmd, ILogger } from './utils';
 
@@ -55,15 +55,15 @@ describe('integration tests', () => {
 
   for (const spec of specs) {
     it(spec, async () => {
-      const readmePath = `specs/${spec}/resource-manager/README.md`;
+      const readmePath = path.join(__dirname, `specs/${spec}/resource-manager/README.md`);
       const outputDir = `${outputBaseDir}/${spec}`;
 
       if (record) {
-        await rmdir(outputDir, { recursive: true });
+        await rm(outputDir, { recursive: true, force: true, });
         await generateSchema(defaultLogger, readmePath, outputDir, false, false);
       } else {
         const stagingOutputDir = `${__dirname}/temp/${spec}`;
-        await rmdir(stagingOutputDir, { recursive: true });
+        await rm(stagingOutputDir, { recursive: true, force: true, });
   
         await generateSchema(defaultLogger, readmePath, stagingOutputDir, false, false);
   

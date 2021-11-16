@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 import { Dictionary, keys, orderBy } from 'lodash';
-import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
+import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
 
 export function writeMarkdown(provider: string, apiVersion: string, types: TypeBase[]) {
   let output = '';
@@ -17,6 +17,10 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         return `${getTypeName(types, (type as ArrayType).ItemType)}[]`;
       case TypeBaseKind.ResourceType:
         return (type as ResourceType).Name;
+      case TypeBaseKind.ResourceFunctionType: {
+        const functionType = type as ResourceFunctionType;
+        return `${functionType.Name} (${functionType.ResourceType}@${functionType.ApiVersion})`;
+      }
       case TypeBaseKind.UnionType: {
         const elements = (type as UnionType).Elements.map(x => getTypeName(types, x));
         return elements.sort().join(' | ');
@@ -119,6 +123,19 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
 
         return;
       }
+      case TypeBaseKind.ResourceFunctionType: {
+        const resourceFunctionType = type as ResourceFunctionType;
+        writeHeading(nesting, `Function ${resourceFunctionType.Name} (${resourceFunctionType.ResourceType}@${resourceFunctionType.ApiVersion})`);
+        writeBullet("Resource", resourceFunctionType.ResourceType);
+        writeBullet("ApiVersion", resourceFunctionType.ApiVersion);
+        if (resourceFunctionType.Input) {
+          writeBullet("Input", getTypeName(types, resourceFunctionType.Input));
+        }
+        writeBullet("Output", getTypeName(types, resourceFunctionType.Output));
+
+        writeNewLine();
+        return;
+      }
       case TypeBaseKind.ObjectType: {
         const objectType = type as ObjectType;
         if (includeHeader) {
@@ -168,10 +185,21 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
     writeNewLine();
 
     const resourceTypes = orderBy(types.filter(t => t instanceof ResourceType) as ResourceType[], x => x.Name.split('@')[0].toLowerCase());
-    const typesToWrite = [...resourceTypes];
+    const resourceFunctionTypes = orderBy(types.filter(t => t instanceof ResourceFunctionType) as ResourceFunctionType[], x => x.Name.split('@')[0].toLowerCase());
+    const typesToWrite: TypeBase[] = [...resourceTypes, ...resourceFunctionTypes];
 
     for (const resourceType of resourceTypes) {
       findTypesToWrite(types, typesToWrite, resourceType.Body);
+    }
+
+    for (const resourceFunctionType of resourceFunctionTypes) {
+      if (resourceFunctionType.Input)
+      {
+        typesToWrite.push(types[resourceFunctionType.Input.Index]);
+        findTypesToWrite(types, typesToWrite, resourceFunctionType.Input);
+      }
+      typesToWrite.push(types[resourceFunctionType.Output.Index]);
+      findTypesToWrite(types, typesToWrite, resourceFunctionType.Output);
     }
 
     for (const type of typesToWrite) {

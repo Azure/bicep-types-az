@@ -3,7 +3,7 @@
 
 import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, Host } from "@autorest/extension-base";
-import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
+import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
 import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
@@ -22,7 +22,6 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
     const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definition;
     const nameSchemaResult = parseNameSchema(
-      descriptor,
       putRequest,
       putParameters,
       schema => parseType(schema, schema),
@@ -119,7 +118,7 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
   }
 
   function generateTypes() {
-    const resourcesByType = definition.resourcesByType;
+    const { resourcesByType, resourceActions } = definition;
 
     for (const fullyQualifiedType in resourcesByType) {
       const definitions = resourcesByType[fullyQualifiedType];
@@ -135,6 +134,35 @@ export function generateTypes(host: Host, definition: ProviderDefinition) {
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
         descriptor.scopeType,
         bodyType));
+    }
+
+    for (const action of resourceActions) {
+      let request: TypeReference | undefined;
+      if (action.requestSchema) {
+        request = parseType(action.requestSchema, undefined);
+        if (!request) {
+          continue;
+        }
+      }
+
+      if (!action.responseSchema) {
+        logWarning(`Skipping resource action ${action.actionName} under path '${action.postRequest.path}': failed to find a response schema`);
+        continue;
+      }
+
+      const response = parseType(undefined, action.responseSchema);
+      if (!response) {
+        continue;
+      }
+
+      const { actionName, descriptor } = action;
+
+      factory.addType(new ResourceFunctionType(
+        actionName,
+        getFullyQualifiedType(descriptor),
+        descriptor.apiVersion,
+        response,
+        request));
     }
 
     return factory.types;

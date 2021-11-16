@@ -35,6 +35,7 @@ namespace Azure.Bicep.Types.Serialization
             UnionType = 5,
             StringLiteralType = 6,
             DiscriminatedObjectType = 7,
+            ResourceFunctionType = 8,
         }
 
         public override TypeBase Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -64,6 +65,7 @@ namespace Azure.Bicep.Types.Serialization
                 TypeBaseKind.UnionType => JsonSerializer.Deserialize<UnionType>(ref reader, serializerOptions),
                 TypeBaseKind.StringLiteralType => JsonSerializer.Deserialize<StringLiteralType>(ref reader, serializerOptions),
                 TypeBaseKind.DiscriminatedObjectType => JsonSerializer.Deserialize<DiscriminatedObjectType>(ref reader, serializerOptions),
+                TypeBaseKind.ResourceFunctionType => JsonSerializer.Deserialize<ResourceFunctionType>(ref reader, serializerOptions),
                 _ => throw new JsonException("Found unknown TypeBaseKind"),
             };
 
@@ -89,6 +91,7 @@ namespace Azure.Bicep.Types.Serialization
                 UnionType _ => TypeBaseKind.UnionType,
                 StringLiteralType _ => TypeBaseKind.StringLiteralType,
                 DiscriminatedObjectType _ => TypeBaseKind.DiscriminatedObjectType,
+                ResourceFunctionType _ => TypeBaseKind.ResourceFunctionType,
                 _ => throw new JsonException(),
             };
 
@@ -116,6 +119,9 @@ namespace Azure.Bicep.Types.Serialization
                     break;
                 case DiscriminatedObjectType discriminatedObjectType:
                     JsonSerializer.Serialize(writer, discriminatedObjectType, serializerOptions);
+                    break;
+                case ResourceFunctionType resourceFunctionType:
+                    JsonSerializer.Serialize(writer, resourceFunctionType, serializerOptions);
                     break;
                 default:
                     throw new JsonException();
