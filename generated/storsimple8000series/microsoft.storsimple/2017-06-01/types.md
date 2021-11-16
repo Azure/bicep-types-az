@@ -113,6 +113,27 @@
 * **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required): The storage account credential properties.
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listActivationKey (Microsoft.StorSimple/managers@2017-06-01)
+* **Resource**: Microsoft.StorSimple/managers
+* **ApiVersion**: 2017-06-01
+* **Output**: [Key](#key)
+
+## Function listFailoverSets (Microsoft.StorSimple/managers/devices@2017-06-01)
+* **Resource**: Microsoft.StorSimple/managers/devices
+* **ApiVersion**: 2017-06-01
+* **Output**: [FailoverSetsList](#failoversetslist)
+
+## Function listFailoverTargets (Microsoft.StorSimple/managers/devices@2017-06-01)
+* **Resource**: Microsoft.StorSimple/managers/devices
+* **ApiVersion**: 2017-06-01
+* **Input**: [ListFailoverTargetsRequest](#listfailovertargetsrequest)
+* **Output**: [FailoverTargetsList](#failovertargetslist)
+
+## Function listPublicEncryptionKey (Microsoft.StorSimple/managers@2017-06-01)
+* **Resource**: Microsoft.StorSimple/managers
+* **ApiVersion**: 2017-06-01
+* **Output**: [SymmetricEncryptedSecret](#symmetricencryptedsecret)
+
 ## ManagerProperties
 ### Properties
 * **cisIntrinsicSettings**: [ManagerIntrinsicSettings](#managerintrinsicsettings): Intrinsic settings which refers to the type of the StorSimple Manager.
@@ -237,4 +258,76 @@
 * **endPoint**: string (Required): The storage endpoint
 * **sslStatus**: 'Disabled' | 'Enabled' (Required): Signifies whether SSL needs to be enabled or not.
 * **volumesCount**: int (ReadOnly): The count of volumes using this storage account credential.
+
+## Key
+### Properties
+* **activationKey**: string (ReadOnly): The activation key for the device.
+
+## FailoverSetsList
+### Properties
+* **value**: [FailoverSet](#failoverset)[] (ReadOnly): The list of failover sets.
+
+## FailoverSet
+### Properties
+* **eligibilityResult**: [FailoverSetEligibilityResult](#failoverseteligibilityresult) (ReadOnly): The eligibility result of failover set, for failover.
+* **volumeContainers**: [VolumeContainerFailoverMetadata](#volumecontainerfailovermetadata)[] (ReadOnly): The list of meta data of volume containers, which are part of the failover set.
+
+## FailoverSetEligibilityResult
+### Properties
+* **errorMessage**: string (ReadOnly): The error message, if the failover set is not eligible for failover.
+* **isEligibleForFailover**: bool (ReadOnly): Represents if this failover set is eligible for failover or not.
+
+## VolumeContainerFailoverMetadata
+### Properties
+* **volumeContainerId**: string (ReadOnly): The path ID of the volume container.
+* **volumes**: [VolumeFailoverMetadata](#volumefailovermetadata)[] (ReadOnly): The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+
+## VolumeFailoverMetadata
+### Properties
+* **backupCreatedDate**: string (ReadOnly): The date at which the snapshot was taken.
+* **backupElementId**: string (ReadOnly): The path ID of the backup-element for this volume, inside the backup set.
+* **backupId**: string (ReadOnly): The path ID of the backup set.
+* **backupPolicyId**: string (ReadOnly): The path ID of the backup policy using which the snapshot was taken.
+* **sizeInBytes**: int (ReadOnly): The size of the volume in bytes at the time the snapshot was taken.
+* **volumeId**: string (ReadOnly): The path ID of the volume.
+* **volumeType**: 'Archival' | 'LocallyPinned' | 'Tiered' (ReadOnly): The volume type.
+
+## ListFailoverTargetsRequest
+### Properties
+* **volumeContainers**: string[] (WriteOnly): The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+
+## FailoverTargetsList
+### Properties
+* **value**: [FailoverTarget](#failovertarget)[] (ReadOnly): The list of all the failover targets.
+
+## FailoverTarget
+### Properties
+* **availableLocalStorageInBytes**: int (ReadOnly): The amount of free local storage available on the device in bytes.
+* **availableTieredStorageInBytes**: int (ReadOnly): The amount of free tiered storage available for the device in bytes.
+* **dataContainersCount**: int (ReadOnly): The count of data containers on the device.
+* **deviceId**: string (ReadOnly): The path ID of the device.
+* **deviceLocation**: string (ReadOnly): The geo location (applicable only for cloud appliances) of the device.
+* **deviceSoftwareVersion**: string (ReadOnly): The software version of the device.
+* **deviceStatus**: 'Creating' | 'Deactivated' | 'Deactivating' | 'Deleted' | 'MaintenanceMode' | 'Offline' | 'Online' | 'Provisioning' | 'ReadyToSetup' | 'RequiresAttention' | 'Unknown' (ReadOnly): The current status of the device.
+* **eligibilityResult**: [TargetEligibilityResult](#targeteligibilityresult) (ReadOnly): The eligibility result of device, as a failover target device.
+* **friendlyDeviceSoftwareVersion**: string (ReadOnly): The friendly name for the current version of software on the device.
+* **modelDescription**: string (ReadOnly): The model number of the device.
+* **volumesCount**: int (ReadOnly): The count of volumes on the device.
+
+## TargetEligibilityResult
+### Properties
+* **eligibilityStatus**: 'Eligible' | 'NotEligible' (ReadOnly): The eligibility status of device, as a failover target device.
+* **messages**: [TargetEligibilityErrorMessage](#targeteligibilityerrormessage)[] (ReadOnly): The list of error messages, if a device does not qualify as a failover target device.
+
+## TargetEligibilityErrorMessage
+### Properties
+* **message**: string (ReadOnly): The localized error message stating the reason why the device is not eligible as a target device.
+* **resolution**: string (ReadOnly): The localized resolution message for the error.
+* **resultCode**: 'LocalToTieredVolumesConversionWarning' | 'TargetAndSourceCannotBeSameError' | 'TargetInsufficientCapacityError' | 'TargetInsufficientLocalVolumeMemoryError' | 'TargetInsufficientTieredVolumeMemoryError' | 'TargetIsNotOnlineError' | 'TargetSourceIncompatibleVersionError' (ReadOnly): The result code for the error, due to which the device does not qualify as a failover target device.
+
+## SymmetricEncryptedSecret
+### Properties
+* **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' (ReadOnly): The algorithm used to encrypt "Value".
+* **value**: string (ReadOnly): The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
+* **valueCertificateThumbprint**: string (ReadOnly): The thumbprint of the cert that was used to encrypt "Value".
 

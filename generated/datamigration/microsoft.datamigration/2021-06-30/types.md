@@ -1048,6 +1048,68 @@
 
 ### Base Properties
 * **id**: string (ReadOnly): Result identifier
+### MigrateMySqlAzureDbForMySqlOfflineTaskOutputDatabaseLevel
+#### Properties
+* **databaseName**: string (ReadOnly): Name of the database
+* **endedOn**: string (ReadOnly): Migration end time
+* **errorCount**: int (ReadOnly): Number of database/object errors.
+* **errorPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all errors of the item
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
+* **lastStorageUpdate**: string (ReadOnly): Last time the storage was updated
+* **message**: string (ReadOnly): Migration progress message
+* **numberOfObjects**: int (ReadOnly): Number of objects
+* **numberOfObjectsCompleted**: int (ReadOnly): Number of successfully completed objects
+* **objectSummary**: string (ReadOnly): Summary of object results in the migration
+* **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
+* **resultType**: 'DatabaseLevelOutput' (Required): Result type
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
+* **startedOn**: string (ReadOnly): Migration start time
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **statusMessage**: string (ReadOnly): Status message
+
+### MigrateMySqlAzureDbForMySqlOfflineTaskOutputError
+#### Properties
+* **error**: [ReportableException](#reportableexception) (ReadOnly): Exception object for all custom exceptions
+* **resultType**: 'ErrorOutput' (Required): Result type
+
+### MigrateMySqlAzureDbForMySqlOfflineTaskOutputMigrationLevel
+#### Properties
+* **databases**: string: Selected databases as a map from database name to database id
+* **databaseSummary**: string (ReadOnly): Summary of database results in the migration
+* **durationInSeconds**: int (ReadOnly): Duration of task execution in seconds.
+* **endedOn**: string (ReadOnly): Migration end time
+* **exceptionsAndWarnings**: [ReportableException](#reportableexception)[] (ReadOnly): Migration exceptions and warnings.
+* **lastStorageUpdate**: string (ReadOnly): Last time the storage was updated
+* **message**: string (ReadOnly): Migration progress message
+* **migrationReportResult**: [MigrationReportResult](#migrationreportresult): Migration validation report result, contains the url for downloading the generated report.
+* **resultType**: 'MigrationLevelOutput' (Required): Result type
+* **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
+* **sourceServerVersion**: string (ReadOnly): Source server version
+* **startedOn**: string (ReadOnly): Migration start time
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
+* **statusMessage**: string (ReadOnly): Migration status message
+* **targetServerBrandVersion**: string (ReadOnly): Target server brand version
+* **targetServerVersion**: string (ReadOnly): Target server version
+
+### MigrateMySqlAzureDbForMySqlOfflineTaskOutputTableLevel
+#### Properties
+* **endedOn**: string (ReadOnly): Migration end time
+* **errorPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all errors of the item
+* **itemsCompletedCount**: int (ReadOnly): Number of successfully completed items
+* **itemsCount**: int (ReadOnly): Number of items
+* **lastStorageUpdate**: string (ReadOnly): Last time the storage was updated
+* **objectName**: string (ReadOnly): Name of the item
+* **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
+* **resultType**: 'TableLevelOutput' (Required): Result type
+* **startedOn**: string (ReadOnly): Migration start time
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **statusMessage**: string (ReadOnly): Status message
+
+
+## MigrationReportResult
+### Properties
+* **id**: string: Migration validation result identifier
+* **reportUrl**: string: The url of the report.
 
 ## MigrateMySqlAzureDbForMySqlSyncTaskInput
 ### Properties
@@ -1709,11 +1771,6 @@
 * **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
 * **statusMessage**: string (ReadOnly): Status message
 
-
-## MigrationReportResult
-### Properties
-* **id**: string: Migration validation result identifier
-* **reportUrl**: string: The url of the report.
 
 ## MigrationValidationResult
 ### Properties

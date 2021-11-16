@@ -67,6 +67,12 @@
 * **tags**: [IntegrationAccountResourceTags](#integrationaccountresourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listCallbackUrl (Microsoft.Logic/integrationAccounts@2015-08-01-preview)
+* **Resource**: Microsoft.Logic/integrationAccounts
+* **ApiVersion**: 2015-08-01-preview
+* **Input**: [ListCallbackUrlParameters](#listcallbackurlparameters)
+* **Output**: [CallbackUrl](#callbackurl)
+
 ## IntegrationAccountSku
 ### Properties
 * **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard'
@@ -616,4 +622,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ListCallbackUrlParameters
+### Properties
+* **NotAfter**: string (WriteOnly): The expiry time.
+
+## CallbackUrl
+### Properties
+* **value**: string (ReadOnly): The URL value.
 

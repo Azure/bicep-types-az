@@ -12,6 +12,11 @@
 * **tags**: [RegistryCreateParametersTags](#registrycreateparameterstags): The tags for the container registry.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listCredentials (Microsoft.ContainerRegistry/registries@2017-03-01)
+* **Resource**: Microsoft.ContainerRegistry/registries
+* **ApiVersion**: 2017-03-01
+* **Output**: [RegistryListCredentialsResult](#registrylistcredentialsresult)
+
 ## RegistryPropertiesCreateParameters
 ### Properties
 * **adminUserEnabled**: bool: The value that indicates whether the admin user is enabled.
@@ -34,4 +39,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RegistryListCredentialsResult
+### Properties
+* **passwords**: [RegistryPassword](#registrypassword)[] (ReadOnly): The list of passwords for a container registry.
+* **username**: string (ReadOnly): The username for a container registry.
+
+## RegistryPassword
+### Properties
+* **name**: 'password' | 'password2' (ReadOnly): The password name.
+* **value**: string (ReadOnly): The password value.
 

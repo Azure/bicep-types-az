@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Storage/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Storage/storageAccounts@2015-05-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2015-05-01-preview
+* **Output**: [StorageAccountKeys](#storageaccountkeys)
+
 ## StorageAccountPropertiesCreateParameters
 ### Properties
 * **accountType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_RAGRS' | 'Standard_ZRS': Gets or sets the account type.
@@ -40,4 +45,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageAccountKeys
+### Properties
+* **key1**: string (ReadOnly): Gets the value of key 1.
+* **key2**: string (ReadOnly): Gets the value of key 2.
 

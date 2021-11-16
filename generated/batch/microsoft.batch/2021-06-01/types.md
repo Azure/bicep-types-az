@@ -53,6 +53,11 @@
 * **properties**: [PoolProperties](#poolproperties): Pool properties.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.Batch/batchAccounts@2021-06-01)
+* **Resource**: Microsoft.Batch/batchAccounts
+* **ApiVersion**: 2021-06-01
+* **Output**: [BatchAccountKeys](#batchaccountkeys)
+
 ## BatchAccountIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the Batch account. This property will only be provided for a system assigned identity.
@@ -503,4 +508,10 @@
 ## WindowsUserConfiguration
 ### Properties
 * **loginMode**: 'Batch' | 'Interactive': Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+
+## BatchAccountKeys
+### Properties
+* **accountName**: string (ReadOnly): The Batch account name.
+* **primary**: string (ReadOnly): The primary key associated with the account.
+* **secondary**: string (ReadOnly): The secondary key associated with the account.
 

@@ -43,6 +43,23 @@
 * **properties**: [ManagementPoliciesRules](#managementpoliciesrules): The Storage Account ManagementPolicies Rules, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
 * **type**: 'Microsoft.Storage/storageAccounts/managementPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAccountSas (Microsoft.Storage/storageAccounts@2018-03-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-03-01-preview
+* **Input**: [AccountSasParameters](#accountsasparameters)
+* **Output**: [ListAccountSasResponse](#listaccountsasresponse)
+
+## Function listKeys (Microsoft.Storage/storageAccounts@2018-03-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-03-01-preview
+* **Output**: [StorageAccountListKeysResult](#storageaccountlistkeysresult)
+
+## Function listServiceSas (Microsoft.Storage/storageAccounts@2018-03-01-preview)
+* **Resource**: Microsoft.Storage/storageAccounts
+* **ApiVersion**: 2018-03-01-preview
+* **Input**: [ServiceSasParameters](#servicesasparameters)
+* **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -204,4 +221,54 @@
 ### Properties
 * **lastModifiedTime**: string (ReadOnly): Returns the date and time the ManagementPolicies was last modified.
 * **policy**: any: Any object
+
+## AccountSasParameters
+### Properties
+* **keyToSign**: string (WriteOnly): The key to sign the account SAS token with.
+* **signedExpiry**: string (Required, WriteOnly): The time at which the shared access signature becomes invalid.
+* **signedIp**: string (WriteOnly): An IP address or a range of IP addresses from which to accept requests.
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' (Required, WriteOnly): The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
+* **signedProtocol**: 'https' | 'https,http' (WriteOnly): The protocol permitted for a request made with the account SAS.
+* **signedResourceTypes**: 'c' | 'o' | 's' (Required, WriteOnly): The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
+* **signedServices**: 'b' | 'f' | 'q' | 't' (Required, WriteOnly): The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
+* **signedStart**: string (WriteOnly): The time at which the SAS becomes valid.
+
+## ListAccountSasResponse
+### Properties
+* **accountSasToken**: string (ReadOnly): List SAS credentials of storage account.
+
+## StorageAccountListKeysResult
+### Properties
+* **keys**: [StorageAccountKey](#storageaccountkey)[] (ReadOnly): Gets the list of storage account keys and their properties for the specified storage account.
+
+## StorageAccountKey
+### Properties
+* **keyName**: string (ReadOnly): Name of the key.
+* **permissions**: 'Full' | 'Read' (ReadOnly): Permissions for the key -- read-only or full permissions.
+* **value**: string (ReadOnly): Base 64-encoded value of the key.
+
+## ServiceSasParameters
+### Properties
+* **canonicalizedResource**: string (Required, WriteOnly): The canonical path to the signed resource.
+* **endPk**: string (WriteOnly): The end of partition key.
+* **endRk**: string (WriteOnly): The end of row key.
+* **keyToSign**: string (WriteOnly): The key to sign the account SAS token with.
+* **rscc**: string (WriteOnly): The response header override for cache control.
+* **rscd**: string (WriteOnly): The response header override for content disposition.
+* **rsce**: string (WriteOnly): The response header override for content encoding.
+* **rscl**: string (WriteOnly): The response header override for content language.
+* **rsct**: string (WriteOnly): The response header override for content type.
+* **signedExpiry**: string (WriteOnly): The time at which the shared access signature becomes invalid.
+* **signedIdentifier**: string (WriteOnly): A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
+* **signedIp**: string (WriteOnly): An IP address or a range of IP addresses from which to accept requests.
+* **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' (WriteOnly): The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
+* **signedProtocol**: 'https' | 'https,http' (WriteOnly): The protocol permitted for a request made with the account SAS.
+* **signedResource**: 'b' | 'c' | 'f' | 's' (WriteOnly): The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).
+* **signedStart**: string (WriteOnly): The time at which the SAS becomes valid.
+* **startPk**: string (WriteOnly): The start of partition key.
+* **startRk**: string (WriteOnly): The start of row key.
+
+## ListServiceSasResponse
+### Properties
+* **serviceSasToken**: string (ReadOnly): List service SAS credentials of specific resource.
 

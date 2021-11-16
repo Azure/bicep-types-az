@@ -32,6 +32,11 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.AppConfiguration/configurationStores@2021-03-01-preview)
+* **Resource**: Microsoft.AppConfiguration/configurationStores
+* **ApiVersion**: 2021-03-01-preview
+* **Output**: [ApiKeyListResult](#apikeylistresult)
+
 ## ResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
@@ -128,4 +133,18 @@ A locked key-value may not be modified until it is unlocked.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ApiKeyListResult
+### Properties
+* **nextLink**: string (ReadOnly): The URI that can be used to request the next set of paged results.
+* **value**: [ApiKey](#apikey)[] (ReadOnly): The collection value.
+
+## ApiKey
+### Properties
+* **connectionString**: string (ReadOnly): A connection string that can be used by supporting clients for authentication.
+* **id**: string (ReadOnly): The key ID.
+* **lastModified**: string (ReadOnly): The last time any of the key's properties were modified.
+* **name**: string (ReadOnly): A name for the key describing its usage.
+* **readOnly**: bool (ReadOnly): Whether this key can only be used for read operations.
+* **value**: string (ReadOnly): The value of the key that is used for authentication purposes.
 

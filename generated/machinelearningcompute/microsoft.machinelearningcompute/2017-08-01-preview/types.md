@@ -11,6 +11,11 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningCompute/operationalizationClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MachineLearningCompute/operationalizationClusters@2017-08-01-preview)
+* **Resource**: Microsoft.MachineLearningCompute/operationalizationClusters
+* **ApiVersion**: 2017-08-01-preview
+* **Output**: [OperationalizationClusterCredentials](#operationalizationclustercredentials)
+
 ## OperationalizationClusterProperties
 ### Properties
 * **appInsights**: [AppInsightsProperties](#appinsightsproperties): Properties of App Insights.
@@ -110,4 +115,37 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## OperationalizationClusterCredentials
+### Properties
+* **appInsights**: [AppInsightsCredentials](#appinsightscredentials) (ReadOnly): AppInsights credentials.
+* **containerRegistry**: [ContainerRegistryCredentials](#containerregistrycredentials) (ReadOnly): Information about the Azure Container Registry which contains the images deployed to the cluster.
+* **containerService**: [ContainerServiceCredentials](#containerservicecredentials) (ReadOnly): Information about the Azure Container Registry which contains the images deployed to the cluster.
+* **serviceAuthConfiguration**: [ServiceAuthConfiguration](#serviceauthconfiguration) (ReadOnly): Global service auth configuration properties. These are the data-plane authorization keys and are used if a service doesn't define it's own.
+* **sslConfiguration**: [SslConfiguration](#sslconfiguration) (ReadOnly): SSL configuration. If configured data-plane calls to user services will be exposed over SSL only.
+* **storageAccount**: [StorageAccountCredentials](#storageaccountcredentials) (ReadOnly): Access information for the storage account.
+
+## AppInsightsCredentials
+### Properties
+* **appId**: string (ReadOnly): The AppInsights application ID.
+* **instrumentationKey**: string (ReadOnly): The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+
+## ContainerRegistryCredentials
+### Properties
+* **loginServer**: string (ReadOnly): The ACR login server name. User name is the first part of the FQDN.
+* **password**: string (ReadOnly): The ACR primary password.
+* **password2**: string (ReadOnly): The ACR secondary password.
+* **username**: string (ReadOnly): The ACR login username.
+
+## ContainerServiceCredentials
+### Properties
+* **acsKubeConfig**: string (ReadOnly): The ACS kube config file.
+* **imagePullSecretName**: string (ReadOnly): The ACR image pull secret name which was created in Kubernetes.
+* **servicePrincipalConfiguration**: [ServicePrincipalProperties](#serviceprincipalproperties) (ReadOnly): The Azure service principal used by Kubernetes for configuring load balancers
+
+## StorageAccountCredentials
+### Properties
+* **primaryKey**: string (ReadOnly): The primary key of the storage account.
+* **resourceId**: string (ReadOnly): The ARM resource ID of the storage account.
+* **secondaryKey**: string (ReadOnly): The secondary key of the storage account.
 

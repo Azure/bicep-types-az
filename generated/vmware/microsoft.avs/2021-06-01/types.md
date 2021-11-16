@@ -148,6 +148,11 @@
 * **properties**: [WorkloadNetworkVMGroupProperties](#workloadnetworkvmgroupproperties): NSX VM Group Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminCredentials (Microsoft.AVS/privateClouds@2021-06-01)
+* **Resource**: Microsoft.AVS/privateClouds
+* **ApiVersion**: 2021-06-01
+* **Output**: [AdminCredentials](#admincredentials)
+
 ## PrivateCloudProperties
 ### Properties
 * **circuit**: [Circuit](#circuit): An ExpressRoute Circuit
@@ -406,4 +411,11 @@
 * **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state
 * **revision**: int: NSX revision number.
 * **status**: 'SUCCESS, FAILURE' (ReadOnly): VM Group status.
+
+## AdminCredentials
+### Properties
+* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
+* **nsxtUsername**: string (ReadOnly): NSX-T Manager username
+* **vcenterPassword**: string (ReadOnly): vCenter admin password
+* **vcenterUsername**: string (ReadOnly): vCenter admin username
 

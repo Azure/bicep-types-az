@@ -1,143 +1,273 @@
-AutoRest code generation utility [cli version: 3.4.1; node: v14.18.0]
+AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 info    | Processing batch task - {"tag":"microsoft.cdn-2020-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:116:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:189:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:432:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:561:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:693:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1121:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1153:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1184:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1215:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1246:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1277:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1308:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1339:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1370:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1401:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1432:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1463:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1494:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1525:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1556:4
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1587:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1688:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1749:4
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1850:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1972:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2073:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2195:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2296:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2353:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2454:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2555:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2656:4
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2733:4
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2855:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2940:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2972:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3003:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3128:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3159:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningParamIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3215:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3266:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3297:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3327:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3358:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3430:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3461:4
 warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3492:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3568:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3599:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3663:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3694:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4175:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4370:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultSigningKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4417:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4641:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4732:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4976:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5152:4
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5228:4
 warning | PreCheck/SchemaMissingType | The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5306:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5379:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5443:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5536:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5672:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5714:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5763:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5794:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5827:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5858:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6009:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6418:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6640:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6730:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6795:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6888:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7082:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7287:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7387:4
 warning | PreCheck/SchemaMissingType | The schema 'Certificate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8822:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8903:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomerCertificate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8924:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9140:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9233:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDDomainUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9321:4
 warning | PreCheck/SchemaMissingType | The schema 'DomainValidationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9349:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9413:4
 warning | PreCheck/SchemaMissingType | The schema 'SecurityPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9483:4
 warning | PreCheck/SchemaMissingType | The schema 'SecurityPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9680:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9773:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9822:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDEndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9954:4
 warning | PreCheck/SchemaMissingType | The schema 'SecretListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10067:4
 warning | PreCheck/SchemaMissingType | The schema 'SecretProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10160:4
 warning | PreCheck/SchemaMissingType | The schema 'RuleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10438:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDOriginProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10581:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDOriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10632:4
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10832:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDOriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10926:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDOriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11068:4
 warning | PreCheck/SchemaMissingType | The schema 'AFDOriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11217:4
 warning | PreCheck/SchemaMissingType | The schema 'RouteListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11282:4
 warning | PreCheck/SchemaMissingType | The schema 'RouteProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11375:4
 warning | PreCheck/SchemaMissingType | The schema 'RouteUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11425:4
 warning | PreCheck/SchemaMissingType | The schema 'RuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11650:4
 warning | PreCheck/SchemaMissingType | The schema 'RuleUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11795:4
 warning | PreCheck/SchemaMissingType | The schema 'AfdErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11967:4
 warning | PreCheck/SchemaMissingType | The schema 'MetricsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11990:4
 warning | PreCheck/SchemaMissingType | The schema 'RankingsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12270:4
 warning | PreCheck/SchemaMissingType | The schema 'ContinentsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12544:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourcesResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12699:4
 warning | PreCheck/SchemaMissingType | The schema 'WafMetricsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12998:4
 warning | PreCheck/SchemaMissingType | The schema 'WafRankingsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13278:4
 warning | PreCheck/SchemaMissingType | The schema 'UsageName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13551:4
 warning | PreCheck/SchemaMissingType | The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13611:4
 warning | PreCheck/SchemaMissingType | The schema 'UsagesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13714:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16273:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16338:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16457:4
 warning | PreCheck/SchemaMissingType | The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16534:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16656:4
 warning | PreCheck/SchemaMissingType | The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16806:4
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16926:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17054:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17210:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17276:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17330:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17395:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17427:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17540:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17630:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
   - discriminator: {"propertyName":"name"} => <none>
@@ -153,102 +283,193 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAct
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | Resource type microsoft.cdn/profiles/rulesets under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}' has no body defined.
-info    | autorest.bicep took 30ms
+info    | autorest.bicep took 27ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2020-04-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:91:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:141:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:384:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:513:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:645:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1073:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1105:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1136:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1167:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1198:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1229:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1260:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1291:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1322:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1353:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1384:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1415:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1446:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1477:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1508:4
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1539:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1640:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1701:4
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1802:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1924:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2025:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2147:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2248:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2305:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2406:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2507:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2608:4
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2685:4
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2807:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2892:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2924:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2955:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3080:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3111:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningParamIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3228:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3279:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3310:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3382:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3413:4
 warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3444:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3520:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3551:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3615:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3646:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4127:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4322:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultSigningKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4369:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4593:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4684:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4928:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5104:4
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5180:4
 warning | PreCheck/SchemaMissingType | The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5258:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5331:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5395:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5488:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5624:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5666:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5715:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5746:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5779:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5810:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5961:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6370:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6592:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6682:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6747:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6840:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7034:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7122:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7222:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8554:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8619:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8738:4
 warning | PreCheck/SchemaMissingType | The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8815:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8937:4
 warning | PreCheck/SchemaMissingType | The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9086:4
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9204:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9332:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9488:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9554:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9608:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9673:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9705:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9818:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9908:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
   - discriminator: {"propertyName":"name"} => <none>
@@ -260,84 +481,157 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction'
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAction' -> 'DeliveryRuleActionAutoGenerated'
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2019-12-31"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:66:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:116:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:359:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:488:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:620:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:977:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1009:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1040:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1071:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1102:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1133:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1164:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1195:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1226:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1257:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1288:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1319:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1350:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1381:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1412:4
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1443:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1544:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1605:4
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1706:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1828:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1929:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2051:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2152:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2209:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2310:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2411:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2512:4
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2589:4
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2711:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2796:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2828:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2859:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2984:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3015:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3087:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3118:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3148:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3179:4
 warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3210:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3286:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3317:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3381:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3412:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3809:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4094:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4176:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4336:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4512:4
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4588:4
 warning | PreCheck/SchemaMissingType | The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4666:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4739:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4803:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4896:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5032:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5074:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5123:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5154:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5187:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5218:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5369:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5778:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6000:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6090:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6155:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6248:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6442:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6530:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6630:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
   - discriminator: {"propertyName":"name"} => <none>
@@ -348,91 +642,171 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction'
   - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAction' -> 'DeliveryRuleActionAutoGenerated'
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2019-06-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:91:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:141:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:384:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:489:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:621:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1020:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1052:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1083:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1114:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1145:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1176:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1207:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1238:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1269:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1300:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1331:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1362:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1393:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1424:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1455:4
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1486:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1587:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1648:4
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1749:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1871:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1972:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2094:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2195:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2252:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2353:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2454:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2555:4
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2632:4
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2754:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2839:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2871:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2902:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3027:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3058:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3130:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3161:4
 warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3192:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3268:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3299:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3363:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3394:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3836:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3984:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4073:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4166:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4306:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4348:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4397:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4428:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4461:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4492:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4643:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5052:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5274:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5364:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5429:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5522:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5716:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5804:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5904:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6916:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6981:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7100:4
 warning | PreCheck/SchemaMissingType | The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7177:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7299:4
 warning | PreCheck/SchemaMissingType | The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7448:4
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7566:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7694:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7850:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7916:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7970:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8035:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8067:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8180:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8270:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
   - discriminator: {"propertyName":"name"} => <none>
@@ -444,91 +818,171 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction'
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAction' -> 'DeliveryRuleActionAutoGenerated'
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2019-06-15-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:91:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:141:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:384:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:489:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:621:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1020:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1052:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1083:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1114:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1145:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1176:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1207:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1238:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1269:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1300:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1331:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1362:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1393:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1424:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1455:4
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1486:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1588:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1650:4
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1752:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1876:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1978:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2102:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2204:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2262:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2364:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2466:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2568:4
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2646:4
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2770:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2856:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2888:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2919:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3044:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3075:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3147:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3178:4
 warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3209:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3285:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3316:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3380:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3411:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3853:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4001:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4090:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4183:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4323:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4365:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4414:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4445:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4478:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4509:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4661:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5070:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5292:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5382:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5447:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5540:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5734:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5822:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5922:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6934:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6999:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7118:4
 warning | PreCheck/SchemaMissingType | The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7195:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7317:4
 warning | PreCheck/SchemaMissingType | The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7466:4
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7584:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7712:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7868:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7934:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7988:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8053:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8085:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8198:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8288:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
   - discriminator: {"propertyName":"name"} => <none>
@@ -540,76 +994,141 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction'
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAction' -> 'DeliveryRuleActionAutoGenerated'
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2019-04-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:66:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:116:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:359:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:464:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:596:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:948:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:980:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1011:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1042:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1073:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1104:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1135:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1166:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1197:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1228:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1259:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1290:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1321:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1352:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1383:4
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1414:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1515:4
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1576:4
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1677:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1799:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1900:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2022:4
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2123:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2180:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2281:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2382:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2483:4
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2560:4
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2682:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2767:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2799:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2830:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2955:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2986:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3058:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3089:4
 warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3120:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3196:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3227:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3291:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3322:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3764:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3912:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4001:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4094:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4234:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4276:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4325:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4356:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4389:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4420:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4571:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4980:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5202:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5292:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5357:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5450:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5644:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5732:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5832:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
   - discriminator: {"propertyName":"name"} => <none>
@@ -623,135 +1142,234 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAct
 info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2017-10-12"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:66:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:116:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:359:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:464:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:596:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:927:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:955:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:986:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1037:4
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1068:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1133:4
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1161:4
 warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1192:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1635:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1783:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1872:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1965:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2101:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2143:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2184:4
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2215:4
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2248:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2279:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2431:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2840:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3062:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3152:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3217:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3310:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3504:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3592:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3692:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2017-04-02"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:66:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:116:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:359:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:464:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:596:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1148:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1296:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1385:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1478:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1614:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1656:4
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2065:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2287:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2377:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2442:4
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2535:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2729:4
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2817:4
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2917:4
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+info    | autorest.bicep took 2ms
+info    | Processing batch task - {"tag":"microsoft.cdn-2016-10-02"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:66:4
+warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:116:4
+warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:356:4
+warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:461:4
+warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:591:4
+warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1122:4
+warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1270:4
+warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1359:4
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1450:4
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1577:4
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1619:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1903:4
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2113:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2197:4
+warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2260:4
+warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2351:4
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2545:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.cdn-2016-10-02"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2016-04-02"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:63:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:93:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:360:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:535:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:734:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:876:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1277:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1397:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1480:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1549:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1627:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1668:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1973:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2056:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2189:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.cdn-2015-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.21.3)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:59:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:93:4
 warning | PreCheck/SchemaMissingType | The schema 'ProfilePropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:225:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:383:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:558:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:757:4
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:899:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1300:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1420:4
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1503:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1572:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1650:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1691:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1996:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2079:4
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2212:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 2ms

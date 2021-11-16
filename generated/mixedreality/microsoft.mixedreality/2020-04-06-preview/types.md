@@ -16,6 +16,11 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MixedReality/remoteRenderingAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.MixedReality/remoteRenderingAccounts@2020-04-06-preview)
+* **Resource**: Microsoft.MixedReality/remoteRenderingAccounts
+* **ApiVersion**: 2020-04-06-preview
+* **Output**: [AccountKeys](#accountkeys)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -49,4 +54,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AccountKeys
+### Properties
+* **primaryKey**: string (ReadOnly): value of primary key.
+* **secondaryKey**: string (ReadOnly): value of secondary key.
 

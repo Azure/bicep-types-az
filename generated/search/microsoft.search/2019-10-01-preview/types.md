@@ -22,6 +22,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
 * **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAdminKeys (Microsoft.Search/searchServices@2019-10-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: [AdminKeyResult](#adminkeyresult)
+
+## Function listQueryKeys (Microsoft.Search/searchServices@2019-10-01-preview)
+* **Resource**: Microsoft.Search/searchServices
+* **ApiVersion**: 2019-10-01-preview
+* **Output**: [ListQueryKeysResult](#listquerykeysresult)
+
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -78,4 +88,18 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AdminKeyResult
+### Properties
+* **primaryKey**: string (ReadOnly): The primary admin API key of the Search service.
+* **secondaryKey**: string (ReadOnly): The secondary admin API key of the Search service.
+
+## ListQueryKeysResult
+### Properties
+* **value**: [QueryKey](#querykey)[] (ReadOnly): The query keys for the Azure Cognitive Search service.
+
+## QueryKey
+### Properties
+* **key**: string (ReadOnly): The value of the query API key.
+* **name**: string (ReadOnly): The name of the query API key; may be empty.
 

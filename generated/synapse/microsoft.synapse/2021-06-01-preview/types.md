@@ -391,6 +391,21 @@
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listAuthKeys (Microsoft.Synapse/workspaces/integrationRuntimes@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/integrationRuntimes
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [IntegrationRuntimeAuthKeys](#integrationruntimeauthkeys)
+
+## Function listFollowerDatabases (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [FollowerDatabaseListResult](#followerdatabaselistresult)
+
+## Function listLanguageExtensions (Microsoft.Synapse/workspaces/kustoPools@2021-06-01-preview)
+* **Resource**: Microsoft.Synapse/workspaces/kustoPools
+* **ApiVersion**: 2021-06-01-preview
+* **Output**: [LanguageExtensionsList](#languageextensionslist)
+
 ## PrivateLinkHubProperties
 ### Properties
 * **privateEndpointConnections**: [PrivateEndpointConnectionForPrivateLinkHubBasic](#privateendpointconnectionforprivatelinkhubbasic)[] (ReadOnly): List of private endpoint connections
@@ -1430,4 +1445,23 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the storage account for vulnerability assessment scan results. If 'StorageContainerSasKey' isn't specified, storageAccountAccessKey is required.
 * **storageContainerPath**: string (Required): A blob storage container path to hold the scan results (e.g. https://myStorage.blob.core.windows.net/VaScans/).
 * **storageContainerSasKey**: string (WriteOnly): A shared access signature (SAS Key) that has read and write access to the blob container specified in 'storageContainerPath' parameter. If 'storageAccountAccessKey' isn't specified, StorageContainerSasKey is required.
+
+## IntegrationRuntimeAuthKeys
+### Properties
+* **authKey1**: string (ReadOnly): The primary integration runtime authentication key.
+* **authKey2**: string (ReadOnly): The secondary integration runtime authentication key.
+
+## FollowerDatabaseListResult
+### Properties
+* **value**: [FollowerDatabaseDefinition](#followerdatabasedefinition)[] (ReadOnly): The list of follower database result.
+
+## FollowerDatabaseDefinition
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly): Resource name of the attached database configuration in the follower cluster.
+* **clusterResourceId**: string (ReadOnly): Resource id of the cluster that follows a database owned by this cluster.
+* **databaseName**: string (ReadOnly): The database name owned by this cluster that was followed. * in case following all databases.
+
+## LanguageExtensionsList
+### Properties
+* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
 

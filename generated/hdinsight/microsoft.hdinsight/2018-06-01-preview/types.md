@@ -24,6 +24,11 @@
 * **tags**: [ApplicationTags](#applicationtags): The tags for the application.
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listHosts (Microsoft.HDInsight/clusters@2018-06-01-preview)
+* **Resource**: Microsoft.HDInsight/clusters
+* **ApiVersion**: 2018-06-01-preview
+* **Output**: [HostInfo](#hostinfo)[]
+
 ## ClusterIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
@@ -298,4 +303,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## HostInfo
+### Properties
+* **effectiveDiskEncryptionKeyUrl**: string (ReadOnly): The effective disk encryption key URL used by the host
+* **fqdn**: string (ReadOnly): The Fully Qualified Domain Name of host
+* **name**: string (ReadOnly): The host name
 

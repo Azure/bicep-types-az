@@ -166,6 +166,16 @@
 * **tags**: [Tags](#tags) (ReadOnly): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/apis/tables/settings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listConnectionStrings (Microsoft.DocumentDB/databaseAccounts@2015-04-01)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2015-04-01
+* **Output**: [DatabaseAccountListConnectionStringsResult](#databaseaccountlistconnectionstringsresult)
+
+## Function listKeys (Microsoft.DocumentDB/databaseAccounts@2015-04-01)
+* **Resource**: Microsoft.DocumentDB/databaseAccounts
+* **ApiVersion**: 2015-04-01
+* **Output**: [DatabaseAccountListKeysResult](#databaseaccountlistkeysresult)
+
 ## DatabaseAccountCreateUpdateProperties
 ### Properties
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
@@ -527,4 +537,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DatabaseAccountListConnectionStringsResult
+### Properties
+* **connectionStrings**: [DatabaseAccountConnectionString](#databaseaccountconnectionstring)[] (ReadOnly): An array that contains the connection strings for the Cosmos DB account.
+
+## DatabaseAccountConnectionString
+### Properties
+* **connectionString**: string (ReadOnly): Value of the connection string
+* **description**: string (ReadOnly): Description of the connection string
+
+## DatabaseAccountListKeysResult
+### Properties
+* **primaryMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-write key.
+* **primaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the primary read-only key.
+* **secondaryMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-write key.
+* **secondaryReadonlyMasterKey**: string (ReadOnly): Base 64 encoded value of the secondary read-only key.
 

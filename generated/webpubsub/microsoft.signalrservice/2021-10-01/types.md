@@ -44,6 +44,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listKeys (Microsoft.SignalRService/webPubSub@2021-10-01)
+* **Resource**: Microsoft.SignalRService/webPubSub
+* **ApiVersion**: 2021-10-01
+* **Output**: [WebPubSubKeys](#webpubsubkeys)
+
 ## ManagedIdentity
 ### Properties
 * **principalId**: string (ReadOnly): Get the principal id for the system assigned identity.
@@ -237,4 +242,11 @@ There are 3 kind of patterns supported:
 ### Properties
 * **resource**: string: The Resource indicating the App ID URI of the target resource.
 It also appears in the aud (audience) claim of the issued token.
+
+## WebPubSubKeys
+### Properties
+* **primaryConnectionString**: string (ReadOnly): Connection string constructed via the primaryKey
+* **primaryKey**: string (ReadOnly): The primary access key.
+* **secondaryConnectionString**: string (ReadOnly): Connection string constructed via the secondaryKey
+* **secondaryKey**: string (ReadOnly): The secondary access key.
 
