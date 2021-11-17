@@ -1475,6 +1475,16 @@
 ### microsoft.changeanalysis/profile
 * [2020-04-01-preview](changeanalysis/microsoft.changeanalysis/2020-04-01-preview/types.md#resource-microsoftchangeanalysisprofile2020-04-01-preview)
 
+## microsoft.chaos
+### microsoft.chaos/experiments
+* [2021-09-15-preview](chaos/microsoft.chaos/2021-09-15-preview/types.md#resource-microsoftchaosexperiments2021-09-15-preview)
+
+### microsoft.chaos/targets
+* [2021-09-15-preview](chaos/microsoft.chaos/2021-09-15-preview/types.md#resource-microsoftchaostargets2021-09-15-preview)
+
+### microsoft.chaos/targets/capabilities
+* [2021-09-15-preview](chaos/microsoft.chaos/2021-09-15-preview/types.md#resource-microsoftchaostargetscapabilities2021-09-15-preview)
+
 ## microsoft.cognitiveservices
 ### microsoft.cognitiveservices/accounts
 * [2016-02-01-preview](cognitiveservices/microsoft.cognitiveservices/2016-02-01-preview/types.md#resource-microsoftcognitiveservicesaccounts2016-02-01-preview)
