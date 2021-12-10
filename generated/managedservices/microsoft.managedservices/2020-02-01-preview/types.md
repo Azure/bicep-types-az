@@ -84,6 +84,8 @@
 * **eligibleAuthorizations**: [EligibleAuthorization](#eligibleauthorization)[]: The collection of eligible authorization objects describing the just-in-time access Azure Active Directory principals in the managedBy tenant will receive on the delegated resource in the managed tenant.
 * **managedByTenantId**: string (Required): The identifier of the managedBy tenant.
 * **managedByTenantName**: string (ReadOnly): The name of the managedBy tenant.
+* **manageeTenantId**: string (ReadOnly): The identifier of the managed tenant.
+* **manageeTenantName**: string (ReadOnly): The name of the managed tenant.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the registration definition.
 * **registrationDefinitionName**: string: The name of the registration definition.
 

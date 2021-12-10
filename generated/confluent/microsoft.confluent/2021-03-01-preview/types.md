@@ -57,7 +57,7 @@
 * **planId**: string (Required): Offer Plan Id
 * **planName**: string (Required): Offer Plan Name
 * **publisherId**: string (Required): Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating': SaaS Offer Status for confluent RP
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' (ReadOnly): SaaS Offer Status for confluent RP
 * **termUnit**: string (Required): Offer Plan Term unit
 
 ## UserDetail

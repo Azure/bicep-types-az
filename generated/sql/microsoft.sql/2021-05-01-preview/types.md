@@ -1396,7 +1396,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **operationMode**: 'Export' | 'Import' | 'PolybaseImport' (Required, WriteOnly): Operation mode of the operation: Import, Export, or PolybaseImport.
 * **serviceObjectiveName**: string (WriteOnly): Database service level objective for the newly created database in the case of an import operation.
 * **storageKey**: string (Required, WriteOnly): Storage key for the storage account.
-* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): Storage key type: StorageAccessKey or SharedAccessKey.
+* **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): Storage key type.
 * **storageUri**: string (Required, WriteOnly): Storage Uri for the storage account.
 
 ## NetworkIsolationSettings

@@ -743,9 +743,6 @@
 
 ## GraphResource
 ### Properties
-* **_etag**: string (ReadOnly): A system generated property representing the resource etag required for optimistic concurrency control.
-* **_rid**: string (ReadOnly): A system generated property. A unique identifier.
-* **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
 * **id**: string (Required): Name of the Cosmos DB Graph
 
 ## Tags

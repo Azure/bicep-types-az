@@ -1,15 +1,51 @@
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedapplication.json"
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedcluster.json"
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/nodetype.json"
-AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
+
+WARNING: AutoRest has not been tested with Node versions greater than v14.
+
+AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-11-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:101:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'AveragePartitionLoadScalingTrigger' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:1119:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'AverageServiceLoadScalingTrigger' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:1257:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'NamedPartitionScheme' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:1560:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'PartitionInstanceCountScaleMechanism' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:1678:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'ServicePlacementInvalidDomainPolicy' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:2320:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'ServicePlacementPreferPrimaryDomainPolicy' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:2461:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'ServicePlacementRequiredDomainPolicy' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:2531:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'ServicePlacementRequireDomainDistributionPolicy' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:2601:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'UniformInt64RangePartitionScheme' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:3372:6
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'ManagedCluster' has an allOf list with an empty object schema as a parent, removing it.
+    - openapi-document.json:4575:6
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-07-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - openapi-document.json:101:6
@@ -39,10 +75,10 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:81:4
@@ -222,10 +258,10 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.servicefabric-2021-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:81:4
@@ -401,5 +437,5 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 11ms
 info    | Generation Complete

@@ -191,6 +191,11 @@
 * **annotations**: any[]: List of tags that can be used for describing the data flow.
 * **description**: string: The description of the data flow.
 * **folder**: [DataFlowFolder](#dataflowfolder): The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+### Flowlet
+#### Properties
+* **type**: 'Flowlet' (Required): Type of data flow.
+* **typeProperties**: [FlowletTypeProperties](#flowlettypeproperties): Flowlet type properties.
+
 ### MappingDataFlow
 #### Properties
 * **type**: 'MappingDataFlow' (Required): Type of data flow.
@@ -206,17 +211,19 @@
 ### Properties
 * **name**: string: The name of the folder that this data flow is in.
 
-## MappingDataFlowTypeProperties
+## FlowletTypeProperties
 ### Properties
-* **script**: string: DataFlow script.
-* **sinks**: [DataFlowSink](#dataflowsink)[]: List of sinks in data flow.
-* **sources**: [DataFlowSource](#dataflowsource)[]: List of sources in data flow.
-* **transformations**: [Transformation](#transformation)[]: List of transformations in data flow.
+* **script**: string: Flowlet script.
+* **scriptLines**: string[]: Flowlet script lines.
+* **sinks**: [DataFlowSink](#dataflowsink)[]: List of sinks in Flowlet.
+* **sources**: [DataFlowSource](#dataflowsource)[]: List of sources in Flowlet.
+* **transformations**: [Transformation](#transformation)[]: List of transformations in Flowlet.
 
 ## DataFlowSink
 ### Properties
 * **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
 * **description**: string: Transformation description.
+* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
@@ -226,6 +233,20 @@
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference dataset name.
 * **type**: 'DatasetReference' (Required): Dataset reference type.
+
+## ParameterValueSpecification
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## DataFlowReference
+### Properties
+* **datasetParameters**: any: Any object
+* **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
+* **referenceName**: string (Required): Reference data flow name.
+* **type**: 'DataFlowReference' (Required): Data flow reference type.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ParameterValueSpecification
 ### Properties
@@ -247,14 +268,26 @@
 ### Properties
 * **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
 * **description**: string: Transformation description.
+* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 
 ## Transformation
 ### Properties
+* **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
 * **description**: string: Transformation description.
+* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
+
+## MappingDataFlowTypeProperties
+### Properties
+* **script**: string: DataFlow script.
+* **scriptLines**: string[]: Data flow script lines.
+* **sinks**: [DataFlowSink](#dataflowsink)[]: List of sinks in data flow.
+* **sources**: [DataFlowSource](#dataflowsource)[]: List of sources in data flow.
+* **transformations**: [Transformation](#transformation)[]: List of transformations in data flow.
 
 ## PowerQueryTypeProperties
 ### Properties
@@ -266,6 +299,7 @@
 ### Properties
 * **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
 * **description**: string: Transformation description.
+* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
@@ -803,37 +837,11 @@
 * **version**: any: Any object
 
 ## DatasetCompression
-* **Discriminator**: type
-
-### Base Properties
-### DatasetBZip2Compression
-#### Properties
-* **type**: 'BZip2' (Required): Type of dataset compression. Type: string (or Expression with resultType string).
-
-### DatasetDeflateCompression
-#### Properties
+### Properties
 * **level**: any: Any object
-* **type**: 'Deflate' (Required): Type of dataset compression. Type: string (or Expression with resultType string).
-
-### DatasetGZipCompression
-#### Properties
-* **level**: any: Any object
-* **type**: 'GZip' (Required): Type of dataset compression. Type: string (or Expression with resultType string).
-
-### DatasetTarCompression
-#### Properties
-* **type**: 'Tar' (Required): Type of dataset compression. Type: string (or Expression with resultType string).
-
-### DatasetTarGZipCompression
-#### Properties
-* **level**: any: Any object
-* **type**: 'TarGZip' (Required): Type of dataset compression. Type: string (or Expression with resultType string).
-
-### DatasetZipDeflateCompression
-#### Properties
-* **level**: any: Any object
-* **type**: 'ZipDeflate' (Required): Type of dataset compression. Type: string (or Expression with resultType string).
-
+* **type**: any (Required): Any object
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## DatasetStorageFormat
 * **Discriminator**: type
@@ -4678,6 +4686,7 @@
 ### FtpReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Any object
+* **disableChunking**: any: Any object
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
 * **fileListPath**: any: Any object
 * **partitionRootPath**: any: Any object
@@ -4742,6 +4751,7 @@
 ### SftpReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Any object
+* **disableChunking**: any: Any object
 * **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
 * **fileListPath**: any: Any object
 * **modifiedDatetimeEnd**: any: Any object
@@ -5002,14 +5012,6 @@
 * **computeType**: any: Any object
 * **coreCount**: any: Any object
 
-## DataFlowReference
-### Properties
-* **datasetParameters**: any: Any object
-* **referenceName**: string (Required): Reference data flow name.
-* **type**: 'DataFlowReference' (Required): Data flow reference type.
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## DataFlowStagingInfo
 ### Properties
 * **folderPath**: any: Any object
@@ -5169,6 +5171,7 @@
 ### Properties
 * **dataset**: [DatasetReference](#datasetreference): Dataset reference type.
 * **description**: string: Transformation description.
+* **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.

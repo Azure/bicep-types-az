@@ -685,6 +685,7 @@
 * **relatedAnalyticRuleIds**: string[] (ReadOnly): List of resource ids of Analytic rules related to the incident
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' (Required): The severity of the incident
 * **status**: 'Active' | 'Closed' | 'New' (Required): The status of the incident
+* **teamInformation**: [TeamInformation](#teaminformation): Describes team information
 * **title**: string (Required): The title of the incident
 
 ## IncidentAdditionalData
@@ -707,6 +708,14 @@
 * **objectId**: string: The object id of the user the incident is assigned to.
 * **ownerType**: 'Group' | 'Unknown' | 'User' (ReadOnly): The type of the owner the incident is assigned to.
 * **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
+
+## TeamInformation
+### Properties
+* **description**: string (ReadOnly): The description of the team
+* **name**: string (ReadOnly): The name of the team
+* **primaryChannelUrl**: string (ReadOnly): The primary channel URL of the team
+* **teamCreationTimeUtc**: string (ReadOnly): The time the team was created
+* **teamId**: string (ReadOnly): Team ID
 
 ## IncidentCommentProperties
 ### Properties
@@ -802,13 +811,15 @@
 * **contentTypes**: 'AnalyticRule' | 'Workbook'[] (Required): Array of source control content types.
 * **description**: string: A description of the source control
 * **displayName**: string (Required): The display name of the source control
+* **id**: string: The id (a Guid) of the source control
 * **repository**: [Repository](#repository) (Required): metadata of a repository.
 * **repoType**: 'DevOps' | 'Github' (Required): The type of repository.
-* **sourceControlId**: string: The id (a Guid) of the source control
 
 ## Repository
 ### Properties
 * **branch**: string: Branch name of repository.
+* **deploymentLogsUrl**: string: Url to access repository action logs.
+* **displayUrl**: string: Display url of repository.
 * **pathMapping**: [ContentPathMap](#contentpathmap)[]: Dictionary of source control content type and path mapping.
 * **url**: string: Url of repository.
 

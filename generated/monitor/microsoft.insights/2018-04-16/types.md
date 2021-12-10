@@ -55,14 +55,14 @@
 ### Properties
 * **metricTrigger**: [LogMetricTrigger](#logmetrictrigger): A log metrics trigger descriptor.
 * **threshold**: int (Required): Result or count threshold based on which rule should be triggered.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Result Condition Evaluation criteria. Supported Values - 'GreaterThan' or 'LessThan' or 'Equal'.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Result Condition Evaluation criteria.
 
 ## LogMetricTrigger
 ### Properties
 * **metricColumn**: string: Evaluation of metric on a particular column
 * **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Evaluation Type
 * **threshold**: int: The threshold of the metric trigger.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Result Condition Evaluation criteria. Supported Values - 'GreaterThan' or 'LessThan' or 'Equal'.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Result Condition Evaluation criteria.
 
 ## Criteria
 ### Properties

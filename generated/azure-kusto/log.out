@@ -1,13 +1,16 @@
 WARNING: Unable to parse swagger path "Microsoft.Kusto/preview/2017-09-07-privatepreview/kusto.json"
-AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
+
+WARNING: AutoRest has not been tested with Node versions greater than v14.
+
+AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.kusto-2021-08-27"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -100,10 +103,106 @@ warning | PreCheck/SchemaMissingType | The schema 'OperationResultErrorPropertie
 warning | PreCheck/SchemaMissingType | The schema 'TableLevelSharingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:6260:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2021-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4:4
+warning | PreCheck/SchemaMissingType | The schema 'TrustedExternalTenant' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:178:4
+warning | PreCheck/SchemaMissingType | The schema 'AzureResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:217:4
+warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1033:4
+warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1158:4
+warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1235:4
+warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1364:4
+warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1544:4
+warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1721:4
+warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1866:4
+warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1932:4
+warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2042:4
+warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2084:4
+warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2133:4
+warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2191:4
+warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2220:4
+warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2766:4
+warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2794:4
+warning | PreCheck/SchemaMissingType | The schema 'ScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2822:4
+warning | PreCheck/SchemaMissingType | The schema 'Script' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2864:4
+warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2896:4
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2938:4
+warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:2980:4
+warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3022:4
+warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3064:4
+warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3106:4
+warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3148:4
+warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3246:4
+warning | PreCheck/SchemaMissingType | The schema 'DiagnoseVirtualNetworkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3376:4
+warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3433:4
+warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3476:4
+warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3505:4
+warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3534:4
+warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3563:4
+warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3605:4
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:3647:4
+warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4098:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4204:4
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4316:4
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4457:4
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4623:4
+warning | PreCheck/SchemaMissingType | The schema 'LanguageExtensionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4756:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4945:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultErrorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5005:4
+warning | PreCheck/SchemaMissingType | The schema 'TableLevelSharingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5065:4
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 5ms
+info    | Processing batch task - {"tag":"microsoft.kusto-2020-09-18"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -112,180 +211,84 @@ warning | PreCheck/SchemaMissingType | The schema 'TrustedExternalTenant' with a
 warning | PreCheck/SchemaMissingType | The schema 'AzureResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:216:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1032:4
+    - openapi-document.json:1008:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1156:4
+    - openapi-document.json:1128:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1231:4
+    - openapi-document.json:1205:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1358:4
+    - openapi-document.json:1334:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1537:4
+    - openapi-document.json:1493:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1713:4
+    - openapi-document.json:1670:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1857:4
+    - openapi-document.json:1815:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1923:4
+    - openapi-document.json:1858:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2033:4
+    - openapi-document.json:1968:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2075:4
+    - openapi-document.json:2010:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2124:4
+    - openapi-document.json:2059:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2182:4
+    - openapi-document.json:2117:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2211:4
+    - openapi-document.json:2146:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2754:4
+    - openapi-document.json:2588:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2782:4
-warning | PreCheck/SchemaMissingType | The schema 'ScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2810:4
-warning | PreCheck/SchemaMissingType | The schema 'Script' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2852:4
+    - openapi-document.json:2616:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2884:4
+    - openapi-document.json:2644:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2926:4
+    - openapi-document.json:2686:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2968:4
+    - openapi-document.json:2728:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3010:4
+    - openapi-document.json:2770:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3052:4
+    - openapi-document.json:2812:4
 warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3094:4
+    - openapi-document.json:2854:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3136:4
+    - openapi-document.json:2896:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3234:4
+    - openapi-document.json:2994:4
 warning | PreCheck/SchemaMissingType | The schema 'DiagnoseVirtualNetworkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3364:4
+    - openapi-document.json:3124:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3421:4
+    - openapi-document.json:3181:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3464:4
+    - openapi-document.json:3224:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3493:4
+    - openapi-document.json:3253:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3522:4
+    - openapi-document.json:3282:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3551:4
+    - openapi-document.json:3311:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3593:4
+    - openapi-document.json:3353:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3635:4
+    - openapi-document.json:3395:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4086:4
+    - openapi-document.json:3794:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4192:4
+    - openapi-document.json:3900:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4304:4
+    - openapi-document.json:4012:4
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4445:4
+    - openapi-document.json:4153:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4611:4
+    - openapi-document.json:4319:4
 warning | PreCheck/SchemaMissingType | The schema 'LanguageExtensionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4744:4
-warning | PreCheck/SchemaMissingType | The schema 'OperationResultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4933:4
-warning | PreCheck/SchemaMissingType | The schema 'OperationResultErrorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4993:4
-warning | PreCheck/SchemaMissingType | The schema 'TableLevelSharingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5053:4
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
-info    | Processing batch task - {"tag":"microsoft.kusto-2020-09-18"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4:4
-warning | PreCheck/SchemaMissingType | The schema 'TrustedExternalTenant' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:176:4
-warning | PreCheck/SchemaMissingType | The schema 'AzureResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:215:4
-warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1007:4
-warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1126:4
-warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1201:4
-warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1328:4
-warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1486:4
-warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1662:4
-warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1806:4
-warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1849:4
-warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1959:4
-warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2001:4
-warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2050:4
-warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2108:4
-warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2137:4
-warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2577:4
-warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2605:4
-warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2633:4
-warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2675:4
-warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2717:4
-warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2759:4
-warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2801:4
-warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2843:4
-warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2885:4
-warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2983:4
-warning | PreCheck/SchemaMissingType | The schema 'DiagnoseVirtualNetworkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3113:4
-warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3170:4
-warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3213:4
-warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3242:4
-warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3271:4
-warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3300:4
-warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3342:4
-warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3384:4
-warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3783:4
-warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3889:4
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4001:4
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4142:4
-warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4308:4
-warning | PreCheck/SchemaMissingType | The schema 'LanguageExtensionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4441:4
+    - openapi-document.json:4452:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2020-06-14"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -298,80 +301,80 @@ warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:1128:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1208:4
+    - openapi-document.json:1209:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1340:4
+    - openapi-document.json:1342:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1494:4
+    - openapi-document.json:1496:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1666:4
+    - openapi-document.json:1668:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1806:4
+    - openapi-document.json:1808:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1849:4
+    - openapi-document.json:1851:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1959:4
+    - openapi-document.json:1961:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2001:4
+    - openapi-document.json:2003:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2050:4
+    - openapi-document.json:2052:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2108:4
+    - openapi-document.json:2110:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2137:4
+    - openapi-document.json:2139:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2587:4
+    - openapi-document.json:2589:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2615:4
+    - openapi-document.json:2617:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2643:4
+    - openapi-document.json:2645:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2685:4
+    - openapi-document.json:2687:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2727:4
+    - openapi-document.json:2729:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2769:4
+    - openapi-document.json:2771:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2811:4
+    - openapi-document.json:2813:4
 warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2853:4
+    - openapi-document.json:2855:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2895:4
+    - openapi-document.json:2897:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2993:4
+    - openapi-document.json:2995:4
 warning | PreCheck/SchemaMissingType | The schema 'DiagnoseVirtualNetworkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3123:4
+    - openapi-document.json:3125:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3180:4
+    - openapi-document.json:3182:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3223:4
+    - openapi-document.json:3225:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3252:4
+    - openapi-document.json:3254:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3281:4
+    - openapi-document.json:3283:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3310:4
+    - openapi-document.json:3312:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3352:4
+    - openapi-document.json:3354:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3394:4
+    - openapi-document.json:3396:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3793:4
+    - openapi-document.json:3795:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3899:4
+    - openapi-document.json:3901:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4011:4
+    - openapi-document.json:4013:4
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4152:4
+    - openapi-document.json:4154:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4318:4
+    - openapi-document.json:4320:4
 warning | PreCheck/SchemaMissingType | The schema 'LanguageExtensionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4430:4
+    - openapi-document.json:4432:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2020-02-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -384,80 +387,80 @@ warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:1115:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1195:4
+    - openapi-document.json:1196:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1327:4
+    - openapi-document.json:1329:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1481:4
+    - openapi-document.json:1483:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1653:4
+    - openapi-document.json:1655:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1787:4
+    - openapi-document.json:1789:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1830:4
+    - openapi-document.json:1832:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1940:4
+    - openapi-document.json:1942:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1982:4
+    - openapi-document.json:1984:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2031:4
+    - openapi-document.json:2033:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2089:4
+    - openapi-document.json:2091:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2118:4
+    - openapi-document.json:2120:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2568:4
+    - openapi-document.json:2570:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2596:4
+    - openapi-document.json:2598:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2624:4
+    - openapi-document.json:2626:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2666:4
+    - openapi-document.json:2668:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2708:4
+    - openapi-document.json:2710:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2750:4
+    - openapi-document.json:2752:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2792:4
+    - openapi-document.json:2794:4
 warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2834:4
+    - openapi-document.json:2836:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2876:4
+    - openapi-document.json:2878:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2974:4
+    - openapi-document.json:2976:4
 warning | PreCheck/SchemaMissingType | The schema 'DiagnoseVirtualNetworkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3104:4
+    - openapi-document.json:3106:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3161:4
+    - openapi-document.json:3163:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3204:4
+    - openapi-document.json:3206:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3233:4
+    - openapi-document.json:3235:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3262:4
+    - openapi-document.json:3264:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3291:4
+    - openapi-document.json:3293:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3333:4
+    - openapi-document.json:3335:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3375:4
+    - openapi-document.json:3377:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3774:4
+    - openapi-document.json:3776:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3880:4
+    - openapi-document.json:3882:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3992:4
+    - openapi-document.json:3994:4
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4133:4
+    - openapi-document.json:4135:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4299:4
+    - openapi-document.json:4301:4
 warning | PreCheck/SchemaMissingType | The schema 'LanguageExtensionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4411:4
+    - openapi-document.json:4413:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2019-11-09"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -470,78 +473,78 @@ warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:1105:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1203:4
+    - openapi-document.json:1204:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1335:4
+    - openapi-document.json:1337:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1489:4
+    - openapi-document.json:1491:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1661:4
+    - openapi-document.json:1663:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1795:4
+    - openapi-document.json:1797:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1838:4
+    - openapi-document.json:1840:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1948:4
+    - openapi-document.json:1950:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1990:4
+    - openapi-document.json:1992:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2039:4
+    - openapi-document.json:2041:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2097:4
+    - openapi-document.json:2099:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2126:4
+    - openapi-document.json:2128:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2576:4
+    - openapi-document.json:2578:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2604:4
+    - openapi-document.json:2606:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2632:4
+    - openapi-document.json:2634:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2674:4
+    - openapi-document.json:2676:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2716:4
+    - openapi-document.json:2718:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2758:4
+    - openapi-document.json:2760:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2800:4
+    - openapi-document.json:2802:4
 warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2842:4
+    - openapi-document.json:2844:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2884:4
+    - openapi-document.json:2886:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2982:4
+    - openapi-document.json:2984:4
 warning | PreCheck/SchemaMissingType | The schema 'DiagnoseVirtualNetworkResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3112:4
+    - openapi-document.json:3114:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3169:4
+    - openapi-document.json:3171:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3212:4
+    - openapi-document.json:3214:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3241:4
+    - openapi-document.json:3243:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3270:4
+    - openapi-document.json:3272:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3299:4
+    - openapi-document.json:3301:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3341:4
+    - openapi-document.json:3343:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3383:4
+    - openapi-document.json:3385:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3782:4
+    - openapi-document.json:3784:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3888:4
+    - openapi-document.json:3890:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4000:4
+    - openapi-document.json:4002:4
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4141:4
+    - openapi-document.json:4143:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4307:4
+    - openapi-document.json:4309:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2019-09-07"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -554,68 +557,68 @@ warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:1082:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1157:4
+    - openapi-document.json:1158:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1289:4
+    - openapi-document.json:1291:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1439:4
+    - openapi-document.json:1441:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1611:4
+    - openapi-document.json:1613:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1745:4
+    - openapi-document.json:1747:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1788:4
+    - openapi-document.json:1790:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1898:4
+    - openapi-document.json:1900:4
 warning | PreCheck/SchemaMissingType | The schema 'AttachedDatabaseConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1940:4
+    - openapi-document.json:1942:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1989:4
+    - openapi-document.json:1991:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2044:4
+    - openapi-document.json:2046:4
 warning | PreCheck/SchemaMissingType | The schema 'ReadOnlyFollowingDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2073:4
+    - openapi-document.json:2075:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2249:4
+    - openapi-document.json:2251:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2291:4
+    - openapi-document.json:2293:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2333:4
+    - openapi-document.json:2335:4
 warning | PreCheck/SchemaMissingType | The schema 'FollowerDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2375:4
+    - openapi-document.json:2377:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2417:4
+    - openapi-document.json:2419:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2515:4
+    - openapi-document.json:2517:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2645:4
+    - openapi-document.json:2647:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2688:4
+    - openapi-document.json:2690:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2717:4
+    - openapi-document.json:2719:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2746:4
+    - openapi-document.json:2748:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2775:4
+    - openapi-document.json:2777:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2817:4
+    - openapi-document.json:2819:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2859:4
+    - openapi-document.json:2861:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3154:4
+    - openapi-document.json:3156:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3260:4
+    - openapi-document.json:3262:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3372:4
+    - openapi-document.json:3374:4
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3513:4
+    - openapi-document.json:3515:4
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3679:4
+    - openapi-document.json:3681:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2019-05-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -626,54 +629,54 @@ warning | PreCheck/SchemaMissingType | The schema 'AzureResourceSku' with an und
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:953:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1028:4
+    - openapi-document.json:1029:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1178:4
+    - openapi-document.json:1179:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1350:4
+    - openapi-document.json:1351:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1484:4
+    - openapi-document.json:1485:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1523:4
+    - openapi-document.json:1524:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1629:4
+    - openapi-document.json:1630:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1678:4
+    - openapi-document.json:1679:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1874:4
+    - openapi-document.json:1875:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1916:4
+    - openapi-document.json:1917:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1958:4
+    - openapi-document.json:1959:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2000:4
+    - openapi-document.json:2001:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2098:4
+    - openapi-document.json:2099:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2140:4
+    - openapi-document.json:2141:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2183:4
+    - openapi-document.json:2184:4
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2212:4
+    - openapi-document.json:2213:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2241:4
+    - openapi-document.json:2242:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2270:4
+    - openapi-document.json:2271:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2312:4
+    - openapi-document.json:2313:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2354:4
+    - openapi-document.json:2355:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2649:4
+    - openapi-document.json:2650:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2755:4
+    - openapi-document.json:2756:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2867:4
+    - openapi-document.json:2868:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2019-01-21"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -684,50 +687,50 @@ warning | PreCheck/SchemaMissingType | The schema 'AzureResourceSku' with an und
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:393:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:468:4
+    - openapi-document.json:469:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:578:4
+    - openapi-document.json:579:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:712:4
+    - openapi-document.json:713:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:747:4
+    - openapi-document.json:748:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:853:4
+    - openapi-document.json:854:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:902:4
+    - openapi-document.json:903:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1075:4
+    - openapi-document.json:1076:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1117:4
+    - openapi-document.json:1118:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1159:4
+    - openapi-document.json:1160:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1201:4
+    - openapi-document.json:1202:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1299:4
+    - openapi-document.json:1300:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1341:4
+    - openapi-document.json:1342:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1384:4
+    - openapi-document.json:1385:4
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1413:4
+    - openapi-document.json:1414:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1442:4
+    - openapi-document.json:1443:4
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1484:4
+    - openapi-document.json:1485:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1526:4
+    - openapi-document.json:1527:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1864:4
+    - openapi-document.json:1865:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1970:4
+    - openapi-document.json:1971:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2082:4
+    - openapi-document.json:2083:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.kusto-2018-09-07-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -738,41 +741,41 @@ warning | PreCheck/SchemaMissingType | The schema 'AzureResourceSku' with an und
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:388:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionValidation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:464:4
+    - openapi-document.json:465:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:507:4
+    - openapi-document.json:508:4
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:621:4
+    - openapi-document.json:622:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:678:4
+    - openapi-document.json:679:4
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:806:4
+    - openapi-document.json:807:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:856:4
+    - openapi-document.json:857:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1050:4
+    - openapi-document.json:1051:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1098:4
+    - openapi-document.json:1099:4
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1185:4
+    - openapi-document.json:1186:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1227:4
+    - openapi-document.json:1228:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1269:4
+    - openapi-document.json:1270:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1311:4
+    - openapi-document.json:1312:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionValidationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1353:4
+    - openapi-document.json:1354:4
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1395:4
+    - openapi-document.json:1396:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1437:4
+    - openapi-document.json:1438:4
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1711:4
+    - openapi-document.json:1712:4
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1817:4
+    - openapi-document.json:1818:4
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1928:4
+    - openapi-document.json:1929:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Generation Complete

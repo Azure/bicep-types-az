@@ -138,19 +138,19 @@
 ## Function listActiveConnectivityConfigurations (Microsoft.Network/networkManagers@2021-02-01-preview)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2021-02-01-preview
-* **Input**: any
+* **Input**: [ActiveConfigurationParameter](#activeconfigurationparameter)
 * **Output**: [ActiveConnectivityConfigurationsListResult](#activeconnectivityconfigurationslistresult)
 
 ## Function listActiveSecurityAdminRules (Microsoft.Network/networkManagers@2021-02-01-preview)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2021-02-01-preview
-* **Input**: any
+* **Input**: [ActiveConfigurationParameter](#activeconfigurationparameter)
 * **Output**: [ActiveSecurityAdminRulesListResult](#activesecurityadminruleslistresult)
 
 ## Function listActiveSecurityUserRules (Microsoft.Network/networkManagers@2021-02-01-preview)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2021-02-01-preview
-* **Input**: any
+* **Input**: [ActiveConfigurationParameter](#activeconfigurationparameter)
 * **Output**: [ActiveSecurityUserRulesListResult](#activesecurityuserruleslistresult)
 
 ## Function listDeploymentStatus (Microsoft.Network/networkManagers@2021-02-01-preview)
@@ -174,13 +174,13 @@
 ## Function listNetworkManagerEffectiveConnectivityConfigurations (Microsoft.Network/virtualNetworks@2021-02-01-preview)
 * **Resource**: Microsoft.Network/virtualNetworks
 * **ApiVersion**: 2021-02-01-preview
-* **Input**: any
+* **Input**: [QueryRequestOptions](#queryrequestoptions)
 * **Output**: [NetworkManagerEffectiveConnectivityConfigurationListResult](#networkmanagereffectiveconnectivityconfigurationlistresult)
 
 ## Function listNetworkManagerEffectiveSecurityAdminRules (Microsoft.Network/virtualNetworks@2021-02-01-preview)
 * **Resource**: Microsoft.Network/virtualNetworks
 * **ApiVersion**: 2021-02-01-preview
-* **Input**: any
+* **Input**: [QueryRequestOptions](#queryrequestoptions)
 * **Output**: [NetworkManagerEffectiveSecurityAdminRulesListResult](#networkmanagereffectivesecurityadminruleslistresult)
 
 ## NetworkManagerProperties
@@ -335,6 +335,11 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## ActiveConfigurationParameter
+### Properties
+* **regions**: string[] (WriteOnly): List of regions.
+* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+
 ## ActiveConnectivityConfigurationsListResult
 ### Properties
 * **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
@@ -352,6 +357,11 @@
 ### Properties
 * **id**: string (ReadOnly): Resource ID.
 * **properties**: [NetworkGroupProperties](#networkgroupproperties) (ReadOnly): Properties of network group
+
+## ActiveConfigurationParameter
+### Properties
+* **regions**: string[] (WriteOnly): List of regions.
+* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## ActiveSecurityAdminRulesListResult
 ### Properties
@@ -381,6 +391,11 @@
 * **kind**: 'Default' (Required): Whether the rule is custom or default.
 * **properties**: [DefaultAdminPropertiesFormat](#defaultadminpropertiesformat) (ReadOnly): Security default admin rule resource.
 
+
+## ActiveConfigurationParameter
+### Properties
+* **regions**: string[] (WriteOnly): List of regions.
+* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## ActiveSecurityUserRulesListResult
 ### Properties
@@ -456,6 +471,10 @@
 * **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 * **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[] (ReadOnly): Gets a page of EffectiveVirtualNetwork
 
+## QueryRequestOptions
+### Properties
+* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+
 ## NetworkManagerEffectiveConnectivityConfigurationListResult
 ### Properties
 * **skipToken**: string (ReadOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
@@ -466,6 +485,10 @@
 * **configurationGroups**: [ConfigurationGroup](#configurationgroup)[] (ReadOnly): Effective configuration groups.
 * **id**: string (ReadOnly): Resource ID.
 * **properties**: [ConnectivityConfigurationProperties](#connectivityconfigurationproperties) (ReadOnly): Properties of network manager connectivity configuration
+
+## QueryRequestOptions
+### Properties
+* **skipToken**: string (WriteOnly): When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## NetworkManagerEffectiveSecurityAdminRulesListResult
 ### Properties

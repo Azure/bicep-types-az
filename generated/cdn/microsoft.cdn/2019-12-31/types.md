@@ -427,12 +427,46 @@
 
 ## CustomDomainPropertiesParameters
 ### Properties
+* **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
 * **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the custom domain.
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
 * **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 * **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+
+## CustomDomainHttpsParameters
+* **Discriminator**: certificateSource
+
+### Base Properties
+* **minimumTlsVersion**: 'None' | 'TLS10' | 'TLS12' (ReadOnly): TLS protocol version that will be used for Https
+* **protocolType**: 'IPBased' | 'ServerNameIndication' (ReadOnly): Defines the TLS extension protocol that is used for secure delivery.
+### UserManagedHttpsParameters
+#### Properties
+* **certificateSource**: 'AzureKeyVault' (Required): Defines the source of the SSL certificate.
+* **certificateSourceParameters**: [KeyVaultCertificateSourceParameters](#keyvaultcertificatesourceparameters) (ReadOnly): Describes the parameters for using a user's KeyVault certificate for securing custom domain.
+
+### CdnManagedHttpsParameters
+#### Properties
+* **certificateSource**: 'Cdn' (Required): Defines the source of the SSL certificate.
+* **certificateSourceParameters**: [CdnCertificateSourceParameters](#cdncertificatesourceparameters) (ReadOnly): Defines the parameters for using CDN managed certificate for securing custom domain.
+
+
+## KeyVaultCertificateSourceParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.KeyVaultCertificateSourceParameters' (ReadOnly)
+* **deleteRule**: 'NoAction' (ReadOnly): Describes the action that shall be taken when the certificate is removed from Key Vault.
+* **resourceGroupName**: string (ReadOnly): Resource group of the user's Key Vault containing the SSL certificate
+* **secretName**: string (ReadOnly): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+* **secretVersion**: string (ReadOnly): The version(GUID) of Key Vault Secret in Key Vault.
+* **subscriptionId**: string (ReadOnly): Subscription Id of the user's Key Vault containing the SSL certificate
+* **updateRule**: 'NoAction' (ReadOnly): Describes the action that shall be taken when the certificate is updated in Key Vault.
+* **vaultName**: string (ReadOnly): The name of the user's Key Vault containing the SSL certificate
+
+## CdnCertificateSourceParameters
+### Properties
+* **@odata.type**: '#Microsoft.Azure.Cdn.Models.CdnCertificateSourceParameters' (ReadOnly)
+* **certificateType**: 'Dedicated' | 'Shared' (ReadOnly): Type of certificate used
 
 ## OriginGroupProperties
 ### Properties

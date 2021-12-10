@@ -13,6 +13,7 @@
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[] (ReadOnly): Entity zones
 
 ## Resource Microsoft.BotService/botServices/channels@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -27,6 +28,7 @@
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[] (ReadOnly): Entity zones
 
 ## Resource Microsoft.BotService/botServices/connections@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -41,11 +43,12 @@
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[] (ReadOnly): Entity zones
 
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2021-03-01)
 * **Resource**: Microsoft.BotService/botServices/channels
 * **ApiVersion**: 2021-03-01
-* **Output**: [BotChannel](#botchannel)
+* **Output**: [ListChannelWithKeysResponse](#listchannelwithkeysresponse)
 
 ## Function listWithSecrets (Microsoft.BotService/botServices/connections@2021-03-01)
 * **Resource**: Microsoft.BotService/botServices/connections
@@ -54,25 +57,49 @@
 
 ## BotProperties
 ### Properties
+* **allSettings**: [BotPropertiesAllSettings](#botpropertiesallsettings): Contains resource all settings defined as key/value pairs.
 * **appPasswordHint**: string: The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
+* **cmekEncryptionStatus**: string: The CMK encryption status
 * **cmekKeyVaultUrl**: string: The CMK Url
 * **configuredChannels**: string[] (ReadOnly): Collection of channels for which the bot is configured
 * **description**: string: The description of the bot
 * **developerAppInsightKey**: string: The Application Insights key
 * **developerAppInsightsApiKey**: string: The Application Insights Api Key
 * **developerAppInsightsApplicationId**: string: The Application Insights App Id
+* **disableLocalAuth**: bool: Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
 * **displayName**: string (Required): The Name of the bot
 * **enabledChannels**: string[] (ReadOnly): Collection of channels for which the bot is enabled
 * **endpoint**: string (Required): The bot's endpoint
 * **endpointVersion**: string (ReadOnly): The bot's endpoint version
 * **iconUrl**: string: The Icon Url of the bot
 * **isCmekEnabled**: bool: Whether Cmek is enabled
-* **isIsolated**: bool: Whether the bot is in an isolated network
+* **isDeveloperAppInsightsApiKeySet**: bool: Whether the bot is developerAppInsightsApiKey set
+* **isStreamingSupported**: bool: Whether the bot is streaming supported
 * **luisAppIds**: string[]: Collection of LUIS App Ids
 * **luisKey**: string: The LUIS Key
+* **manifestUrl**: string: The bot's manifest url
+* **migrationToken**: string (ReadOnly): Token used to migrate non Azure bot to azure subscription
 * **msaAppId**: string (Required): Microsoft App Id for the bot
+* **msaAppMSIResourceId**: string: Microsoft App Managed Identity Resource Id for the bot
+* **msaAppTenantId**: string: Microsoft App Tenant Id for the bot
+* **msaAppType**: 'MultiTenant' | 'SingleTenant' | 'UserAssignedMSI': Microsoft App Type for the bot
 * **openWithHint**: string: The hint to browser (e.g. protocol handler) on how to open the bot for authoring
+* **parameters**: [BotPropertiesParameters](#botpropertiesparameters): Contains resource parameters defined as key/value pairs.
+* **provisioningState**: string (ReadOnly): Provisioning state of the resource
+* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether the bot is in an isolated network
+* **publishingCredentials**: string: Publishing credentials of the resource
 * **schemaTransformationVersion**: string: The channel schema transformation version for the bot
+* **storageResourceId**: string: The storage resourceId for the bot
+
+## BotPropertiesAllSettings
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BotPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## Sku
 ### Properties
@@ -88,6 +115,9 @@
 * **Discriminator**: channelName
 
 ### Base Properties
+* **etag**: string: Entity Tag of the resource
+* **location**: string: Specifies the location of the resource.
+* **provisioningState**: string (ReadOnly): Provisioning state of the resource
 ### AlexaChannel
 #### Properties
 * **channelName**: 'AlexaChannel' (Required): The channel name
@@ -163,10 +193,12 @@
 
 ## DirectLineChannelProperties
 ### Properties
+* **DirectLineEmbedCode**: string: Direct Line embed code of the resource
 * **sites**: [DirectLineSite](#directlinesite)[]: The list of Direct Line sites
 
 ## DirectLineSite
 ### Properties
+* **isBlockUserUploadEnabled**: bool: Whether this site is enabled for block user upload.
 * **isEnabled**: bool (Required): Whether this site is enabled for DirectLine channel.
 * **isSecureSiteEnabled**: bool: Whether this site is enabled for authentication with Bot Framework.
 * **isV1Enabled**: bool (Required): Whether this site is enabled for Bot Framework V1 protocol.
@@ -227,8 +259,11 @@
 
 ## MsTeamsChannelProperties
 ### Properties
+* **acceptedTerms**: bool: Whether this channel accepted terms
 * **callingWebHook**: string: Webhook for Microsoft Teams channel calls
+* **deploymentEnvironment**: string: Deployment environment for Microsoft Teams channel calls
 * **enableCalling**: bool: Enable calling for Microsoft Teams channel
+* **incomingCallRoute**: string: Webhook for Microsoft Teams channel calls
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 
 ## SkypeChannelProperties
@@ -241,6 +276,7 @@
 * **enableScreenSharing**: bool: Enable screen sharing for Skype channel
 * **enableVideo**: bool: Enable video for Skype channel
 * **groupsMode**: string: Group mode for Skype channel
+* **incomingCallRoute**: string: Incoming call route for Skype channel
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 
 ## SlackChannelProperties
@@ -277,8 +313,8 @@
 
 ## WebChatSite
 ### Properties
-* **enablePreview**: bool (Required): Whether this site is enabled for preview versions of Webchat
 * **isEnabled**: bool (Required): Whether this site is enabled for DirectLine channel
+* **isWebchatPreviewEnabled**: bool (Required): Whether this site is enabled for preview versions of Webchat
 * **key**: string (ReadOnly): Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
 * **siteId**: string (ReadOnly): Site Id
@@ -293,7 +329,10 @@
 ### Properties
 * **clientId**: string: Client Id associated with the Connection Setting.
 * **clientSecret**: string: Client Secret associated with the Connection Setting
+* **id**: string: Id associated with the Connection Setting.
+* **name**: string: Name associated with the Connection Setting.
 * **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
+* **provisioningState**: string: Provisioning state of the resource
 * **scopes**: string: Scopes associated with the Connection Setting
 * **serviceProviderDisplayName**: string: Service Provider Display Name associated with the Connection Setting
 * **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
@@ -309,7 +348,7 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## BotChannel
+## ListChannelWithKeysResponse
 ### Properties
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
@@ -317,9 +356,40 @@
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [Channel](#channel) (ReadOnly): Channel definition
+* **resource**: [Channel](#channel) (ReadOnly): Channel definition
+* **setting**: [ChannelSettings](#channelsettings) (ReadOnly): Channel settings definition
 * **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
+* **zones**: string[] (ReadOnly): Entity zones
+
+## ChannelSettings
+### Properties
+* **botIconUrl**: string (ReadOnly): The bot icon url
+* **botId**: string (ReadOnly): The bot id
+* **channelDisplayName**: string (ReadOnly): The channel display name
+* **channelId**: string (ReadOnly): The channel id
+* **disableLocalAuth**: bool (ReadOnly): Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+* **extensionKey1**: string (ReadOnly): The extensionKey1
+* **extensionKey2**: string (ReadOnly): The extensionKey2
+* **isEnabled**: bool (ReadOnly): Whether this channel is enabled for the bot
+* **sites**: [Site](#site)[] (ReadOnly): The list of sites
+
+## Site
+### Properties
+* **eTag**: string (ReadOnly): Entity Tag
+* **isBlockUserUploadEnabled**: bool (ReadOnly): Whether this site is enabled for block user upload.
+* **isEnabled**: bool (ReadOnly): Whether this site is enabled for DirectLine channel.
+* **isSecureSiteEnabled**: bool (ReadOnly): Whether this site is enabled for authentication with Bot Framework.
+* **isTokenEnabled**: bool (ReadOnly): Whether this site is token enabled for channel
+* **isV1Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
+* **isV3Enabled**: bool (ReadOnly): Whether this site is enabled for Bot Framework V1 protocol.
+* **isWebchatPreviewEnabled**: bool (ReadOnly): Whether this site is enabled for preview versions of Webchat
+* **key**: string (ReadOnly): Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+* **key2**: string (ReadOnly): Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+* **siteId**: string (ReadOnly): Site Id
+* **siteName**: string (ReadOnly): Site name
+* **trustedOrigins**: string[] (ReadOnly): List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
 
 ## ResourceTags
 ### Properties
@@ -337,6 +407,7 @@
 * **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Contains resource tags defined as key/value pairs.
 * **type**: string (ReadOnly): Specifies the type of the resource.
+* **zones**: string[] (ReadOnly): Entity zones
 
 ## ResourceTags
 ### Properties

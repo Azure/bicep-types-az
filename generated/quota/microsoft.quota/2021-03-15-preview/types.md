@@ -27,9 +27,11 @@ This parameter is optional because, for some resources like compute, the period 
 * **Discriminator**: limitObjectType
 
 ### Base Properties
-### LimitValue
+### LimitObject
 #### Properties
 * **limitObjectType**: 'LimitValue' (Required): The limit object type.
+* **limitType**: 'Independent' | 'Shared': The quota or usages limit types.
+* **value**: int (Required): The quota/limit value
 
 
 ## ResourceName
