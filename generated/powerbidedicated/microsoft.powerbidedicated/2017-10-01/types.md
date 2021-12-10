@@ -15,9 +15,11 @@
 ## DedicatedCapacityProperties
 ### Properties
 * **administration**: [DedicatedCapacityAdministrators](#dedicatedcapacityadministrators): An array of administrator user identities
+* **friendlyName**: string (ReadOnly): Capacity name
 * **mode**: string (ReadOnly): The capacity mode.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
 * **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
+* **tenantId**: string (ReadOnly): Tenant ID for the capacity. Used for creating Pro Plus capacity.
 
 ## DedicatedCapacityAdministrators
 ### Properties
@@ -25,6 +27,7 @@
 
 ## ResourceSku
 ### Properties
+* **capacity**: int: The capacity of the SKU.
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'PBIE_Azure': The name of the Azure pricing tier to which the SKU applies.
 

@@ -123,6 +123,7 @@
 * **locations**: string[] (ReadOnly): The collection of locations where this resource type can be created.
 * **properties**: [ProviderResourceTypeProperties](#providerresourcetypeproperties) (ReadOnly): The properties.
 * **resourceType**: string (ReadOnly): The resource type.
+* **zoneMappings**: [ZoneMapping](#zonemapping)[] (ReadOnly): Array of ZoneMapping
 
 ## Alias
 ### Properties
@@ -166,6 +167,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ZoneMapping
+### Properties
+* **location**: string (ReadOnly): The location of the zone mapping.
+* **zones**: string[] (ReadOnly): Array of ZoneMappingZonesItem
 
 ## TemplateLink
 ### Properties

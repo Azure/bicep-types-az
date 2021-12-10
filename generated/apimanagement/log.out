@@ -1,12 +1,15 @@
-AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
+
+WARNING: AutoRest has not been tested with Node versions greater than v14.
+
+AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
-info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-04-01-preview"} .
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:1056:4
@@ -678,6 +681,703 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'ParameterExampleContract-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2021-08-01/definitions.json#/components/schemas/ParameterExampleContract-value
+info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | Resource type microsoft.apimanagement/service/contenttypes under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}' has no body defined.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | Resource type microsoft.apimanagement/service/contenttypes/contentitems under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/contentTypes/{contentTypeId}/contentItems/{contentItemId}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/notifications under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/notifications/recipientusers under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientUsers/{userId}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
+info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
+info    | autorest.bicep took 47ms
+info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-04-01-preview"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1081:4
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1162:4
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1185:4
+warning | PreCheck/SchemaMissingType | The schema 'RegionContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1269:4
+warning | PreCheck/SchemaMissingType | The schema 'RegionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:1318:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuResults' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4039:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4105:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4156:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4269:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4321:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4408:4
+warning | PreCheck/SchemaMissingType | The schema 'HostnameConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4479:4
+warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4644:4
+warning | PreCheck/SchemaMissingType | The schema 'AdditionalLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4730:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceBackupRestoreParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:4981:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5131:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5202:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceBaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5269:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionConstraint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5841:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceSkuProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5881:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:5959:4
+warning | PreCheck/SchemaMissingType | The schema 'ApimResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6097:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6228:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6327:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceGetSsoTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6393:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceCheckNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6432:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6474:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceGetDomainOwnershipIdentifierResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6528:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceApplyNetworkConfigurationParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6569:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementServiceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6608:4
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6825:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:6968:4
+warning | PreCheck/SchemaMissingType | The schema 'ConnectivityStatusContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:7975:4
+warning | PreCheck/SchemaMissingType | The schema 'NetworkStatusContractByLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8121:4
+warning | PreCheck/SchemaMissingType | The schema 'NetworkStatusContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:8165:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9635:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9734:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuCapabilities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9822:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuZoneDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9886:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuRestrictions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:9972:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10055:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuLocationInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10404:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkuRestrictionInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10512:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiManagementSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:10613:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11225:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11314:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11342:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationSecretsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11406:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11512:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationCreateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11535:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11620:4
+warning | PreCheck/SchemaMissingType | The schema 'AccessInformationUpdateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11643:4
+warning | PreCheck/SchemaMissingType | The schema 'TenantSettingsCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11665:4
+warning | PreCheck/SchemaMissingType | The schema 'TenantSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11732:4
+warning | PreCheck/SchemaMissingType | The schema 'TenantSettingsContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11760:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11821:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11910:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:11938:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiCreateOrUpdateParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12086:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12109:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiEntityBaseContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12306:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12657:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiReleaseCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12774:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiReleaseContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12863:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiReleaseContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12891:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiRevisionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:12999:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiRevisionContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13088:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiRevisionInfoContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13259:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiTagResourceContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13346:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13487:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiContractUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13510:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13630:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13715:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetContractDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13743:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13870:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetEntityBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:13942:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14027:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiVersionSetUpdateParametersProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14050:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthenticationSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14118:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14144:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14229:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerContractBaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14257:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14514:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14702:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerUpdateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14730:4
+warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerSecretsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14911:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendAuthorizationHeaderCredentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:14992:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendBaseParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15060:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15163:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15248:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15276:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendCredentialsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15344:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15572:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendProxyContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15594:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendReconnectContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15684:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendReconnectProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15712:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendServiceFabricClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15752:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendTlsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15941:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendUpdateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:15969:4
+warning | PreCheck/SchemaMissingType | The schema 'BackendUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16033:4
+warning | PreCheck/SchemaMissingType | The schema 'BodyDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16056:4
+warning | PreCheck/SchemaMissingType | The schema 'CacheCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16097:4
+warning | PreCheck/SchemaMissingType | The schema 'CacheContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16182:4
+warning | PreCheck/SchemaMissingType | The schema 'CacheContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16210:4
+warning | PreCheck/SchemaMissingType | The schema 'CacheUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16320:4
+warning | PreCheck/SchemaMissingType | The schema 'CacheUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16343:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16449:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16534:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16562:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16653:4
+warning | PreCheck/SchemaMissingType | The schema 'CertificateCreateOrUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16676:4
+warning | PreCheck/SchemaMissingType | The schema 'DataMasking' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16740:4
+warning | PreCheck/SchemaMissingType | The schema 'DataMaskingEntity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16805:4
+warning | PreCheck/SchemaMissingType | The schema 'DeployConfigurationParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16861:4
+warning | PreCheck/SchemaMissingType | The schema 'DeployConfigurationParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16884:4
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:16930:4
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17015:4
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17043:4
+warning | PreCheck/SchemaMissingType | The schema 'EmailTemplateCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17177:4
+warning | PreCheck/SchemaMissingType | The schema 'EmailTemplateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17262:4
+warning | PreCheck/SchemaMissingType | The schema 'EmailTemplateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17290:4
+warning | PreCheck/SchemaMissingType | The schema 'EmailTemplateParametersContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17428:4
+warning | PreCheck/SchemaMissingType | The schema 'EmailTemplateUpdateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17517:4
+warning | PreCheck/SchemaMissingType | The schema 'EmailTemplateUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17646:4
+warning | PreCheck/SchemaMissingType | The schema 'GenerateSsoUrlResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17669:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17708:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17793:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17821:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17921:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupCreateParametersProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:17944:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18038:4
+warning | PreCheck/SchemaMissingType | The schema 'GroupUpdateParametersProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18061:4
+warning | PreCheck/SchemaMissingType | The schema 'HttpMessageDiagnostic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18152:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderBaseParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18218:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderCreateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18441:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderCreateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18469:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18542:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18570:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18642:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18727:4
+warning | PreCheck/SchemaMissingType | The schema 'IdentityProviderUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18750:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueAttachmentCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18819:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueAttachmentContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18908:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueAttachmentContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:18936:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19022:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueCommentCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19111:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueCommentContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19200:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueCommentContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19228:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19314:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueContractBaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19342:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19433:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19524:4
+warning | PreCheck/SchemaMissingType | The schema 'IssueUpdateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19547:4
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultContractCreateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19633:4
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19693:4
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultLastAccessStatusContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19720:4
+warning | PreCheck/SchemaMissingType | The schema 'LoggerCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19802:4
+warning | PreCheck/SchemaMissingType | The schema 'LoggerContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19887:4
+warning | PreCheck/SchemaMissingType | The schema 'LoggerContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:19915:4
+warning | PreCheck/SchemaMissingType | The schema 'LoggerUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20052:4
+warning | PreCheck/SchemaMissingType | The schema 'LoggerUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20075:4
+warning | PreCheck/SchemaMissingType | The schema 'NotificationCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20183:4
+warning | PreCheck/SchemaMissingType | The schema 'NotificationContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20268:4
+warning | PreCheck/SchemaMissingType | The schema 'NotificationContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20296:4
+warning | PreCheck/SchemaMissingType | The schema 'OAuth2AuthenticationSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20365:4
+warning | PreCheck/SchemaMissingType | The schema 'OpenIdAuthenticationSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20425:4
+warning | PreCheck/SchemaMissingType | The schema 'OpenIdConnectProviderCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20488:4
+warning | PreCheck/SchemaMissingType | The schema 'OpenidConnectProviderContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20573:4
+warning | PreCheck/SchemaMissingType | The schema 'OpenidConnectProviderContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20601:4
+warning | PreCheck/SchemaMissingType | The schema 'OpenidConnectProviderUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20732:4
+warning | PreCheck/SchemaMissingType | The schema 'OpenidConnectProviderUpdateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20755:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20881:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20970:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:20998:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationEntityBaseContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21097:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21210:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21238:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultLogItemContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21380:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationTagResourceContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21461:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21665:4
+warning | PreCheck/SchemaMissingType | The schema 'OperationUpdateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21688:4
+warning | PreCheck/SchemaMissingType | The schema 'ParameterContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21782:4
+warning | PreCheck/SchemaMissingType | The schema 'ParameterExamplesContract' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21978:4
+warning | PreCheck/SchemaMissingType | The schema 'ParameterExampleContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:21998:4
+warning | PreCheck/SchemaMissingType | The schema 'PipelineDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22102:4
+warning | PreCheck/SchemaMissingType | The schema 'PolicyCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22128:4
+warning | PreCheck/SchemaMissingType | The schema 'PolicyContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22213:4
+warning | PreCheck/SchemaMissingType | The schema 'PolicyContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22241:4
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDescriptionContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22309:4
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDescriptionContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22337:4
+warning | PreCheck/SchemaMissingType | The schema 'PolicyDescriptionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22402:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalDelegationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22466:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalDelegationSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22494:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSettingsCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22564:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22628:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSettingsContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22656:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSigninSettingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22735:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSigninSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22757:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSignupSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22785:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSignupSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22813:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22840:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22925:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:22953:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductEntityBaseParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23002:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductTagResourceContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23102:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23172:4
+warning | PreCheck/SchemaMissingType | The schema 'ProductUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23195:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23241:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueCreateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23326:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueCreateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23354:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23430:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23458:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueEntityBaseParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23534:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueUpdateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23597:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23671:4
+warning | PreCheck/SchemaMissingType | The schema 'QuotaCounterCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23694:4
+warning | PreCheck/SchemaMissingType | The schema 'QuotaCounterContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23779:4
+warning | PreCheck/SchemaMissingType | The schema 'QuotaCounterValueContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23895:4
+warning | PreCheck/SchemaMissingType | The schema 'QuotaCounterValueContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23918:4
+warning | PreCheck/SchemaMissingType | The schema 'QuotaCounterValueUpdateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:23980:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientEmailCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24003:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientEmailContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24088:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientEmailContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24116:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientsContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24155:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientUserCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24253:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientUserContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24338:4
+warning | PreCheck/SchemaMissingType | The schema 'RecipientUsersContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24366:4
+warning | PreCheck/SchemaMissingType | The schema 'RegistrationDelegationSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24405:4
+warning | PreCheck/SchemaMissingType | The schema 'ReportCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24427:4
+warning | PreCheck/SchemaMissingType | The schema 'ReportRecordContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:24512:4
+warning | PreCheck/SchemaMissingType | The schema 'RepresentationContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25095:4
+warning | PreCheck/SchemaMissingType | The schema 'RequestContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25207:4
+warning | PreCheck/SchemaMissingType | The schema 'RequestReportCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25318:4
+warning | PreCheck/SchemaMissingType | The schema 'RequestReportRecordContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25382:4
+warning | PreCheck/SchemaMissingType | The schema 'ResponseContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25788:4
+warning | PreCheck/SchemaMissingType | The schema 'SamplingSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25900:4
+warning | PreCheck/SchemaMissingType | The schema 'SaveConfigurationParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25956:4
+warning | PreCheck/SchemaMissingType | The schema 'SaveConfigurationParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:25979:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiSchemaCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26025:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiSchemaContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26114:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiSchemaContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26142:4
+warning | PreCheck/SchemaMissingType | The schema 'ApiSchemaDocumentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26189:4
+warning | PreCheck/SchemaMissingType | The schema 'SchemaCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26276:4
+warning | PreCheck/SchemaMissingType | The schema 'SchemaContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26365:4
+warning | PreCheck/SchemaMissingType | The schema 'SchemaContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26393:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26499:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26584:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26612:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionCreateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:26895:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27040:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionKeyParameterNamesContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27063:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionsDelegationSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27129:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionUpdateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27151:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27333:4
+warning | PreCheck/SchemaMissingType | The schema 'TagCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27356:4
+warning | PreCheck/SchemaMissingType | The schema 'TagContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27441:4
+warning | PreCheck/SchemaMissingType | The schema 'TagContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27469:4
+warning | PreCheck/SchemaMissingType | The schema 'TagCreateUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27513:4
+warning | PreCheck/SchemaMissingType | The schema 'TagDescriptionBaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27536:4
+warning | PreCheck/SchemaMissingType | The schema 'TagDescriptionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27618:4
+warning | PreCheck/SchemaMissingType | The schema 'TagDescriptionContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27703:4
+warning | PreCheck/SchemaMissingType | The schema 'TagDescriptionContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27731:4
+warning | PreCheck/SchemaMissingType | The schema 'TagDescriptionCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27798:4
+warning | PreCheck/SchemaMissingType | The schema 'TagResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27821:4
+warning | PreCheck/SchemaMissingType | The schema 'TagResourceContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27906:4
+warning | PreCheck/SchemaMissingType | The schema 'TagTagResourceContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:27943:4
+warning | PreCheck/SchemaMissingType | The schema 'TenantConfigurationSyncStateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28005:4
+warning | PreCheck/SchemaMissingType | The schema 'TenantConfigurationSyncStateContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28033:4
+warning | PreCheck/SchemaMissingType | The schema 'TermsOfServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28170:4
+warning | PreCheck/SchemaMissingType | The schema 'TokenBodyParameterContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28217:4
+warning | PreCheck/SchemaMissingType | The schema 'UserCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28281:4
+warning | PreCheck/SchemaMissingType | The schema 'UserContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28366:4
+warning | PreCheck/SchemaMissingType | The schema 'UserContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28394:4
+warning | PreCheck/SchemaMissingType | The schema 'UserCreateParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28528:4
+warning | PreCheck/SchemaMissingType | The schema 'UserCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28682:4
+warning | PreCheck/SchemaMissingType | The schema 'UserEntityBaseParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28705:4
+warning | PreCheck/SchemaMissingType | The schema 'UserIdentityCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28794:4
+warning | PreCheck/SchemaMissingType | The schema 'UserIdentityContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28879:4
+warning | PreCheck/SchemaMissingType | The schema 'UserTokenParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28939:4
+warning | PreCheck/SchemaMissingType | The schema 'UserTokenParameterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:28962:4
+warning | PreCheck/SchemaMissingType | The schema 'UserTokenResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29014:4
+warning | PreCheck/SchemaMissingType | The schema 'UserUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29053:4
+warning | PreCheck/SchemaMissingType | The schema 'UserUpdateParametersProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29076:4
+warning | PreCheck/SchemaMissingType | The schema 'X509CertificateName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29189:4
+warning | PreCheck/SchemaMissingType | The schema 'ClientSecretContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29252:4
+warning | PreCheck/SchemaMissingType | The schema 'NamedValueSecretContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29291:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalSettingValidationKeyContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29330:4
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionKeysContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29369:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29433:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29522:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29550:4
+warning | PreCheck/SchemaMissingType | The schema 'ResourceLocationDataContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29594:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayKeysContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29703:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayTokenRequestContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29763:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayTokenContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29815:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayKeyRegenerationRequestContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29854:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayHostnameConfigurationCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29883:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayHostnameConfigurationContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29950:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayHostnameConfigurationContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:29978:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayCertificateAuthorityCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30054:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayCertificateAuthorityContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30121:4
+warning | PreCheck/SchemaMissingType | The schema 'GatewayCertificateAuthorityContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30149:4
+warning | PreCheck/SchemaMissingType | The schema 'AssociationContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30171:4
+warning | PreCheck/SchemaMissingType | The schema 'AssociationContract-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30199:4
+warning | PreCheck/SchemaMissingType | The schema 'ContentTypeCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30229:4
+warning | PreCheck/SchemaMissingType | The schema 'ContentTypeContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30296:4
+warning | PreCheck/SchemaMissingType | The schema 'ContentTypeContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30324:4
+warning | PreCheck/SchemaMissingType | The schema 'ContentItemCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30449:4
+warning | PreCheck/SchemaMissingType | The schema 'ContentItemContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30516:4
+warning | PreCheck/SchemaMissingType | The schema 'ContentItemContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30544:4
+warning | PreCheck/SchemaMissingType | The schema 'DeletedServicesCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30561:4
+warning | PreCheck/SchemaMissingType | The schema 'DeletedServiceContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30628:4
+warning | PreCheck/SchemaMissingType | The schema 'DeletedServiceContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30679:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalRevisionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30761:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalRevisionContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30828:4
+warning | PreCheck/SchemaMissingType | The schema 'PortalRevisionContractProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:30856:4
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Modeler/MissingType | The schema 'ParameterExampleContract-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/apimanagement/resource-manager/Microsoft.ApiManagement/preview/2021-04-01-preview/definitions.json#/components/schemas/ParameterExampleContract-value
 info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
@@ -693,10 +1393,11 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 29ms
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 40ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2021-01-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:981:4
@@ -1379,10 +2080,10 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 28ms
+info    | autorest.bicep took 22ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2020-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:981:4
@@ -2064,7 +2765,7 @@ info    | Resource type microsoft.apimanagement/service/products/groups under pa
 info    | autorest.bicep took 31ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2020-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:981:4
@@ -2739,10 +3440,10 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 27ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:881:4
@@ -3342,10 +4043,10 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 26ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-12-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:856:4
@@ -3927,10 +4628,10 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 21ms
+info    | autorest.bicep took 22ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2019-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:831:4
@@ -4467,10 +5168,10 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2018-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:806:4
@@ -5003,10 +5704,10 @@ info    | Resource type microsoft.apimanagement/service/notifications/recipientu
 info    | Resource type microsoft.apimanagement/service/notifications/recipientemails under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/notifications/{notificationName}/recipientEmails/{email}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
-info    | autorest.bicep took 22ms
+info    | autorest.bicep took 20ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2018-01-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:631:4
@@ -5515,10 +6216,10 @@ info    | Resource type microsoft.apimanagement/service/products/groups under pa
 info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2017-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:631:4
@@ -6009,10 +6710,10 @@ info    | Resource type microsoft.apimanagement/service/products/groups under pa
 info    | Resource type microsoft.apimanagement/service/apis/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/apis/operations/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/tags/{tagId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/tags under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/tags/{tagId}' has no body defined.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 19ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2016-10-10"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:456:4
@@ -6058,6 +6759,14 @@ warning | PreCheck/SchemaMissingType | The schema 'ResultContract' with an undef
     - openapi-document.json:2270:4
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionKeyParameterNamesContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:2360:4
+warning | PreCheck/BinarySchema | 'The schema paths·5rdexk·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apis-apiid-operations-operationid-policy·get·responses·200·content·application-vnd-msazureapim-policy-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
+    - openapi-document.json:2608:4
+warning | PreCheck/BinarySchema | 'The schema paths·qmxfmd·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apis-apiid-operations-operationid-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
+    - openapi-document.json:2656:4
+warning | PreCheck/BinarySchema | 'The schema paths·1rdaea0·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apis-apiid-policy·get·responses·200·content·application-vnd-msazureapim-policy-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
+    - openapi-document.json:2705:4
+warning | PreCheck/BinarySchema | 'The schema paths·17gm3tl·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apis-apiid-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
+    - openapi-document.json:2753:4
 warning | PreCheck/SchemaMissingType | The schema 'AuthorizationServerCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:2786:4
 warning | PreCheck/SchemaMissingType | The schema 'OAuth2AuthorizationServerContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -6170,6 +6879,10 @@ warning | PreCheck/SchemaMissingType | The schema 'ProductContract' with an unde
     - openapi-document.json:9088:4
 warning | PreCheck/SchemaMissingType | The schema 'ProductUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:9238:4
+warning | PreCheck/BinarySchema | 'The schema paths·ml1sbr·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-products-productid-policy·get·responses·200·content·application-vnd-msazureapim-policy-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
+    - openapi-document.json:9524:4
+warning | PreCheck/BinarySchema | 'The schema paths·s3kaaf·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-products-productid-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
+    - openapi-document.json:9572:4
 warning | PreCheck/SchemaMissingType | The schema 'PropertyCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:9605:4
 warning | PreCheck/SchemaMissingType | The schema 'PropertyContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -6208,6 +6921,10 @@ warning | PreCheck/SchemaMissingType | The schema 'SaveConfigurationParameter' w
     - openapi-document.json:12182:4
 warning | PreCheck/SchemaMissingType | The schema 'TenantConfigurationSyncStateContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:12228:4
+warning | PreCheck/BinarySchema | 'The schema paths·1rpo226·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-tenant-policy·get·responses·200·content·application-vnd-msazureapim-policy-xml·schema with 'type: file', format: undefined' will be treated as a binary blob for binary media types.
+    - openapi-document.json:12392:4
+warning | PreCheck/BinarySchema | 'The schema paths·1wjf4m4·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-tenant-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: object', format: file' will be treated as a binary blob for binary media types.
+    - openapi-document.json:12440:4
 warning | PreCheck/SchemaMissingType | The schema 'GenerateSsoUrlResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:12473:4
 warning | PreCheck/SchemaMissingType | The schema 'UserCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -6248,6 +6965,10 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
+warning | Modeler/Superflous type information | 'The schema paths·qmxfmd·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apis-apiid-operations-operationid-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: string', format: binary' will be treated as a binary blob for binary media types.
+warning | Modeler/Superflous type information | 'The schema paths·17gm3tl·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-apis-apiid-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: string', format: binary' will be treated as a binary blob for binary media types.
+warning | Modeler/Superflous type information | 'The schema paths·s3kaaf·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-products-productid-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: string', format: binary' will be treated as a binary blob for binary media types.
+warning | Modeler/Superflous type information | 'The schema paths·1wjf4m4·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-apimanagement-service-servicename-tenant-policy·put·requestbody·content·application-vnd-msazureapim-policy-xml·schema with 'type: string', format: binary' will be treated as a binary blob for binary media types.
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/operations/{operationId}/policy': Found mismatch between type segments (4) and name segments (3)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}/policy': Found mismatch between type segments (3) and name segments (2)
 warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/policy': Found mismatch between type segments (3) and name segments (2)
@@ -6256,10 +6977,10 @@ info    | Resource type microsoft.apimanagement/service/groups/users under path 
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/tenant under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/tenant/policy' has no body defined.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.apimanagement-2016-07-07"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OAuth2AuthenticationSettingsContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:56:4
@@ -6448,5 +7169,5 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 info    | Resource type microsoft.apimanagement/service/products/apis under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/products/groups under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}' has no body defined.
 info    | Resource type microsoft.apimanagement/service/groups/users under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{uid}' has no body defined.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 8ms
 info    | Generation Complete

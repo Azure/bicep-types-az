@@ -1,12 +1,15 @@
-AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
+
+WARNING: AutoRest has not been tested with Node versions greater than v14.
+
+AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.keyvault-2016-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Attributes' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -71,10 +74,10 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSpecification' with an
 warning | PreCheck/SchemaMissingType | The schema 'LogSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:2927:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2018-02-14"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Attributes' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -165,10 +168,10 @@ warning | PreCheck/SchemaMissingType | The schema 'ServiceSpecification' with an
 warning | PreCheck/SchemaMissingType | The schema 'LogSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:3833:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2018-02-14-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Attributes' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -242,7 +245,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2019-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -369,10 +372,10 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Attributes' (6 diff
   - properties.updated.$ref: "#/components/schemas/schemas:8" => "#/components/schemas/schemas:238"
   - properties.recoveryLevel: <none> => {"x-ms-enum":{"name":"DeletionRecoveryLevel","modelAsString":true},"$ref":"#/components/schemas/DeletionRecoveryLevel","description":"The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.","readOnly":true}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Attributes' -> 'AttributesAutoGenerated'
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -501,10 +504,10 @@ warning | PreCheck/SchemaMissingType | The schema 'DimensionProperties' with an 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2021-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4
@@ -668,10 +671,10 @@ warning | PreCheck/SchemaMissingType | The schema 'SecretListResult' with an und
     - openapi-document.json:7272:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2020-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagedHsmSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:131:4
@@ -791,10 +794,10 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - openapi-document.json:6074:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.keyvault-2015-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:4:4

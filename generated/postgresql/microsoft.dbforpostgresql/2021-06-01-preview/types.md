@@ -49,7 +49,6 @@
 * **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore'.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
 * **storage**: [Storage](#storage): Storage properties of a server
-* **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
 * **version**: '11' | '12' | '13': The version of a server.
 
 ## Backup
@@ -81,11 +80,6 @@
 ### Properties
 * **storageSizeGB**: int: Max storage allowed for a server.
 
-## ServerPropertiesTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
@@ -111,7 +105,12 @@
 * **dataType**: 'Boolean' | 'Enumeration' | 'Integer' | 'Numeric' (ReadOnly): Data type of the configuration.
 * **defaultValue**: string (ReadOnly): Default value of the configuration.
 * **description**: string (ReadOnly): Description of the configuration.
+* **documentationLink**: string (ReadOnly): Configuration documentation link.
+* **isConfigPendingRestart**: bool (ReadOnly): Configuration is pending restart or not.
+* **isDynamicConfig**: bool (ReadOnly): Configuration dynamic or static.
+* **isReadOnly**: bool (ReadOnly): Configuration read-only or not.
 * **source**: string: Source of the configuration.
+* **unit**: string (ReadOnly): Configuration unit.
 * **value**: string: Value of the configuration.
 
 ## FirewallRuleProperties

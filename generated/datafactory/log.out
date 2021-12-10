@@ -1,12 +1,15 @@
-AutoRest code generation utility [cli version: 3.4.2; node: v14.18.1]
+
+WARNING: AutoRest has not been tested with Node versions greater than v14.
+
+AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.datafactory-2018-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:231:4
@@ -67,541 +70,542 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowStagingInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:6916:4
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7823:4
+    - openapi-document.json:7847:4
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowDebugResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7853:4
+    - openapi-document.json:7877:4
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7883:4
+    - openapi-document.json:7907:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedPrivateEndpointResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8040:4
+    - openapi-document.json:8068:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedVirtualNetworkReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8137:4
+    - openapi-document.json:8165:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedVirtualNetworkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8184:4
+    - openapi-document.json:8212:4
 warning | PreCheck/SchemaMissingType | The schema 'MappingDataFlowTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9726:4
+    - openapi-document.json:9787:4
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10016:4
+    - openapi-document.json:10281:4
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowSink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10051:4
+    - openapi-document.json:10320:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3DatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12144:4
+    - openapi-document.json:12194:4
 warning | PreCheck/SchemaMissingType | The schema 'AvroDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12347:4
+    - openapi-document.json:12397:4
 warning | PreCheck/SchemaMissingType | The schema 'ExcelDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12447:4
+    - openapi-document.json:12497:4
 warning | PreCheck/SchemaMissingType | The schema 'ParquetDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12626:4
+    - openapi-document.json:12676:4
 warning | PreCheck/SchemaMissingType | The schema 'DelimitedTextDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12705:4
+    - openapi-document.json:12755:4
 warning | PreCheck/SchemaMissingType | The schema 'JsonDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12976:4
+    - openapi-document.json:13026:4
 warning | PreCheck/SchemaMissingType | The schema 'XmlDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13059:4
+    - openapi-document.json:13109:4
 warning | PreCheck/SchemaMissingType | The schema 'OrcDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13166:4
+    - openapi-document.json:13216:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13305:4
+    - openapi-document.json:13355:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13484:4
+    - openapi-document.json:13534:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13559:4
+    - openapi-document.json:13609:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlMITableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13679:4
+    - openapi-document.json:13729:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDWTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13799:4
+    - openapi-document.json:13849:4
 warning | PreCheck/SchemaMissingType | The schema 'CassandraTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13919:4
+    - openapi-document.json:13969:4
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbSqlApiCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14068:4
+    - openapi-document.json:14118:4
 warning | PreCheck/SchemaMissingType | The schema 'DocumentDbCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14146:4
+    - openapi-document.json:14196:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14221:4
+    - openapi-document.json:14271:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsCrmEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14293:4
+    - openapi-document.json:14343:4
 warning | PreCheck/SchemaMissingType | The schema 'CommonDataServiceForAppsEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14365:4
+    - openapi-document.json:14415:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14437:4
+    - openapi-document.json:14487:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobFSDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14541:4
+    - openapi-document.json:14591:4
 warning | PreCheck/SchemaMissingType | The schema 'Office365DatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14648:4
+    - openapi-document.json:14698:4
 warning | PreCheck/SchemaMissingType | The schema 'FileShareDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14747:4
+    - openapi-document.json:14797:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14926:4
+    - openapi-document.json:14976:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbAtlasCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15004:4
+    - openapi-document.json:15054:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbV2CollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15082:4
+    - openapi-document.json:15132:4
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbMongoDbApiCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15160:4
+    - openapi-document.json:15210:4
 warning | PreCheck/SchemaMissingType | The schema 'ODataResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15235:4
+    - openapi-document.json:15285:4
 warning | PreCheck/SchemaMissingType | The schema 'OracleTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15307:4
+    - openapi-document.json:15357:4
 warning | PreCheck/SchemaMissingType | The schema 'TeradataTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15524:4
+    - openapi-document.json:15574:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMySqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15623:4
+    - openapi-document.json:15673:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonRedshiftTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15719:4
+    - openapi-document.json:15769:4
 warning | PreCheck/SchemaMissingType | The schema 'Db2TableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15839:4
+    - openapi-document.json:15889:4
 warning | PreCheck/SchemaMissingType | The schema 'RelationalTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15959:4
+    - openapi-document.json:16009:4
 warning | PreCheck/SchemaMissingType | The schema 'InformixTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16031:4
+    - openapi-document.json:16081:4
 warning | PreCheck/SchemaMissingType | The schema 'OdbcTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16103:4
+    - openapi-document.json:16153:4
 warning | PreCheck/SchemaMissingType | The schema 'MySqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16175:4
+    - openapi-document.json:16225:4
 warning | PreCheck/SchemaMissingType | The schema 'PostgreSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16247:4
+    - openapi-document.json:16297:4
 warning | PreCheck/SchemaMissingType | The schema 'MicrosoftAccessTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16367:4
+    - openapi-document.json:16417:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceObjectDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16439:4
+    - openapi-document.json:16489:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceServiceCloudObjectDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16511:4
+    - openapi-document.json:16561:4
 warning | PreCheck/SchemaMissingType | The schema 'SybaseTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16583:4
+    - openapi-document.json:16633:4
 warning | PreCheck/SchemaMissingType | The schema 'SapCloudForCustomerResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16682:4
+    - openapi-document.json:16732:4
 warning | PreCheck/SchemaMissingType | The schema 'SapEccResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16760:4
+    - openapi-document.json:16810:4
 warning | PreCheck/SchemaMissingType | The schema 'SapHanaTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16835:4
+    - openapi-document.json:16885:4
 warning | PreCheck/SchemaMissingType | The schema 'SapOpenHubTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16934:4
+    - openapi-document.json:16984:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17057:4
+    - openapi-document.json:17107:4
 warning | PreCheck/SchemaMissingType | The schema 'RestResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17274:4
+    - openapi-document.json:17324:4
 warning | PreCheck/SchemaMissingType | The schema 'SapTableResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17445:4
+    - openapi-document.json:17495:4
 warning | PreCheck/SchemaMissingType | The schema 'WebTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17523:4
+    - openapi-document.json:17573:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSearchIndexDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17625:4
+    - openapi-document.json:17675:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17700:4
+    - openapi-document.json:17750:4
 warning | PreCheck/SchemaMissingType | The schema 'GenericDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17822:4
+    - openapi-document.json:17872:4
 warning | PreCheck/SchemaMissingType | The schema 'AzurePostgreSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17924:4
+    - openapi-document.json:17974:4
 warning | PreCheck/SchemaMissingType | The schema 'DrillDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18104:4
+    - openapi-document.json:18154:4
 warning | PreCheck/SchemaMissingType | The schema 'GoogleBigQueryDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18254:4
+    - openapi-document.json:18304:4
 warning | PreCheck/SchemaMissingType | The schema 'GreenplumDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18374:4
+    - openapi-document.json:18424:4
 warning | PreCheck/SchemaMissingType | The schema 'HiveDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18524:4
+    - openapi-document.json:18574:4
 warning | PreCheck/SchemaMissingType | The schema 'ImpalaDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18674:4
+    - openapi-document.json:18724:4
 warning | PreCheck/SchemaMissingType | The schema 'PhoenixDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18974:4
+    - openapi-document.json:19024:4
 warning | PreCheck/SchemaMissingType | The schema 'PrestoDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19094:4
+    - openapi-document.json:19144:4
 warning | PreCheck/SchemaMissingType | The schema 'SparkDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19304:4
+    - openapi-document.json:19354:4
 warning | PreCheck/SchemaMissingType | The schema 'NetezzaTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19514:4
+    - openapi-document.json:19564:4
 warning | PreCheck/SchemaMissingType | The schema 'VerticaDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19634:4
+    - openapi-document.json:19684:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsAXResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19817:4
+    - openapi-document.json:19867:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19925:4
+    - openapi-document.json:19975:4
 warning | PreCheck/SchemaMissingType | The schema 'SnowflakeDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20030:4
+    - openapi-document.json:20080:4
 warning | PreCheck/SchemaMissingType | The schema 'SharePointOnlineListDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20126:4
+    - openapi-document.json:20176:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksDeltaLakeDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20198:4
+    - openapi-document.json:20248:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22240:4
+    - openapi-document.json:22290:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22437:4
+    - openapi-document.json:22487:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22530:4
+    - openapi-document.json:22580:4
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:23252:4
+    - openapi-document.json:23302:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25451:4
+    - openapi-document.json:25501:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25546:4
+    - openapi-document.json:25596:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDWLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25796:4
+    - openapi-document.json:25846:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25982:4
+    - openapi-document.json:26032:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDatabaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26251:4
+    - openapi-document.json:26301:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlMILinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26441:4
+    - openapi-document.json:26491:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlAlwaysEncryptedProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26598:4
+    - openapi-document.json:26648:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBatchLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26692:4
+    - openapi-document.json:26742:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureKeyVaultLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26857:4
+    - openapi-document.json:26907:4
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26939:4
+    - openapi-document.json:26989:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27182:4
+    - openapi-document.json:27232:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsCrmLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27485:4
+    - openapi-document.json:27535:4
 warning | PreCheck/SchemaMissingType | The schema 'CommonDataServiceForAppsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27788:4
+    - openapi-document.json:27838:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28091:4
+    - openapi-document.json:28141:4
 warning | PreCheck/SchemaMissingType | The schema 'FileServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28277:4
+    - openapi-document.json:28327:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28407:4
+    - openapi-document.json:28457:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3CompatibleLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28638:4
+    - openapi-document.json:28688:4
 warning | PreCheck/SchemaMissingType | The schema 'OracleCloudStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28789:4
+    - openapi-document.json:28839:4
 warning | PreCheck/SchemaMissingType | The schema 'GoogleCloudStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28916:4
+    - openapi-document.json:28966:4
 warning | PreCheck/SchemaMissingType | The schema 'OracleLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29043:4
+    - openapi-document.json:29093:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMySqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29256:4
+    - openapi-document.json:29306:4
 warning | PreCheck/SchemaMissingType | The schema 'MySqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29362:4
+    - openapi-document.json:29412:4
 warning | PreCheck/SchemaMissingType | The schema 'PostgreSqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29468:4
+    - openapi-document.json:29518:4
 warning | PreCheck/SchemaMissingType | The schema 'SybaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29574:4
+    - openapi-document.json:29624:4
 warning | PreCheck/SchemaMissingType | The schema 'Db2LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29761:4
+    - openapi-document.json:29811:4
 warning | PreCheck/SchemaMissingType | The schema 'TeradataLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29992:4
+    - openapi-document.json:30042:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30151:4
+    - openapi-document.json:30201:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLServiceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30358:4
+    - openapi-document.json:30408:4
 warning | PreCheck/SchemaMissingType | The schema 'OdbcLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30562:4
+    - openapi-document.json:30612:4
 warning | PreCheck/SchemaMissingType | The schema 'InformixLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30720:4
+    - openapi-document.json:30770:4
 warning | PreCheck/SchemaMissingType | The schema 'MicrosoftAccessLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30878:4
+    - openapi-document.json:30928:4
 warning | PreCheck/SchemaMissingType | The schema 'HdfsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31036:4
+    - openapi-document.json:31086:4
 warning | PreCheck/SchemaMissingType | The schema 'ODataLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31190:4
+    - openapi-document.json:31240:4
 warning | PreCheck/SchemaMissingType | The schema 'WebAnonymousAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31525:4
+    - openapi-document.json:31575:4
 warning | PreCheck/SchemaMissingType | The schema 'WebBasicAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31547:4
+    - openapi-document.json:31597:4
 warning | PreCheck/SchemaMissingType | The schema 'WebClientCertificateAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31603:4
+    - openapi-document.json:31653:4
 warning | PreCheck/SchemaMissingType | The schema 'CassandraLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31672:4
+    - openapi-document.json:31722:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31850:4
+    - openapi-document.json:31900:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbAtlasLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32109:4
+    - openapi-document.json:32159:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbV2LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32212:4
+    - openapi-document.json:32262:4
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbMongoDbApiLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32315:4
+    - openapi-document.json:32365:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32442:4
+    - openapi-document.json:32492:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobFSLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32696:4
+    - openapi-document.json:32746:4
 warning | PreCheck/SchemaMissingType | The schema 'Office365LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32902:4
+    - openapi-document.json:32952:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33059:4
+    - openapi-document.json:33109:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceServiceCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33214:4
+    - openapi-document.json:33264:4
 warning | PreCheck/SchemaMissingType | The schema 'SapCloudForCustomerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33393:4
+    - openapi-document.json:33443:4
 warning | PreCheck/SchemaMissingType | The schema 'SapEccLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33523:4
+    - openapi-document.json:33573:4
 warning | PreCheck/SchemaMissingType | The schema 'SapOpenHubLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33644:4
+    - openapi-document.json:33694:4
 warning | PreCheck/SchemaMissingType | The schema 'RestServiceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33939:4
+    - openapi-document.json:33989:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34230:4
+    - openapi-document.json:34280:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonRedshiftLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34385:4
+    - openapi-document.json:34435:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSearchLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34618:4
+    - openapi-document.json:34668:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34724:4
+    - openapi-document.json:34774:4
 warning | PreCheck/SchemaMissingType | The schema 'FtpServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34958:4
+    - openapi-document.json:35008:4
 warning | PreCheck/SchemaMissingType | The schema 'SftpServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35168:4
+    - openapi-document.json:35218:4
 warning | PreCheck/SchemaMissingType | The schema 'SapBWLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35410:4
+    - openapi-document.json:35460:4
 warning | PreCheck/SchemaMissingType | The schema 'SapHanaLinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35590:4
+    - openapi-document.json:35640:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonMWSLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35749:4
+    - openapi-document.json:35799:4
 warning | PreCheck/SchemaMissingType | The schema 'AzurePostgreSqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36006:4
+    - openapi-document.json:36056:4
 warning | PreCheck/SchemaMissingType | The schema 'ConcurLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36109:4
+    - openapi-document.json:36159:4
 warning | PreCheck/SchemaMissingType | The schema 'CouchbaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36336:4
+    - openapi-document.json:36386:4
 warning | PreCheck/SchemaMissingType | The schema 'DrillLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36439:4
+    - openapi-document.json:36489:4
 warning | PreCheck/SchemaMissingType | The schema 'EloquaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36542:4
+    - openapi-document.json:36592:4
 warning | PreCheck/SchemaMissingType | The schema 'GoogleBigQueryLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36745:4
+    - openapi-document.json:36795:4
 warning | PreCheck/SchemaMissingType | The schema 'GreenplumLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37032:4
+    - openapi-document.json:37082:4
 warning | PreCheck/SchemaMissingType | The schema 'HBaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37135:4
+    - openapi-document.json:37185:4
 warning | PreCheck/SchemaMissingType | The schema 'HiveLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37418:4
+    - openapi-document.json:37468:4
 warning | PreCheck/SchemaMissingType | The schema 'HubspotLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37813:4
+    - openapi-document.json:37863:4
 warning | PreCheck/SchemaMissingType | The schema 'ImpalaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37999:4
+    - openapi-document.json:38049:4
 warning | PreCheck/SchemaMissingType | The schema 'JiraLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38282:4
+    - openapi-document.json:38332:4
 warning | PreCheck/SchemaMissingType | The schema 'MagentoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38509:4
+    - openapi-document.json:38559:4
 warning | PreCheck/SchemaMissingType | The schema 'MariaDBLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38687:4
+    - openapi-document.json:38737:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMariaDBLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38790:4
+    - openapi-document.json:38840:4
 warning | PreCheck/SchemaMissingType | The schema 'MarketoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38893:4
+    - openapi-document.json:38943:4
 warning | PreCheck/SchemaMissingType | The schema 'PaypalLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39096:4
+    - openapi-document.json:39146:4
 warning | PreCheck/SchemaMissingType | The schema 'PhoenixLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39299:4
+    - openapi-document.json:39349:4
 warning | PreCheck/SchemaMissingType | The schema 'PrestoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39606:4
+    - openapi-document.json:39656:4
 warning | PreCheck/SchemaMissingType | The schema 'QuickBooksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39963:4
+    - openapi-document.json:40013:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceNowLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40170:4
+    - openapi-document.json:40220:4
 warning | PreCheck/SchemaMissingType | The schema 'ShopifyLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40409:4
+    - openapi-document.json:40459:4
 warning | PreCheck/SchemaMissingType | The schema 'SparkLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40587:4
+    - openapi-document.json:40637:4
 warning | PreCheck/SchemaMissingType | The schema 'SquareLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40911:4
+    - openapi-document.json:40961:4
 warning | PreCheck/SchemaMissingType | The schema 'XeroLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41158:4
+    - openapi-document.json:41208:4
 warning | PreCheck/SchemaMissingType | The schema 'ZohoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41361:4
+    - openapi-document.json:41411:4
 warning | PreCheck/SchemaMissingType | The schema 'VerticaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41560:4
+    - openapi-document.json:41610:4
 warning | PreCheck/SchemaMissingType | The schema 'NetezzaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41663:4
+    - openapi-document.json:41713:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceMarketingCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41766:4
+    - openapi-document.json:41816:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightOnDemandLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41965:4
+    - openapi-document.json:42015:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeAnalyticsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:42832:4
+    - openapi-document.json:42882:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43059:4
+    - openapi-document.json:43109:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksDetltaLakeLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43592:4
+    - openapi-document.json:43642:4
 warning | PreCheck/SchemaMissingType | The schema 'ResponsysLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43722:4
+    - openapi-document.json:43772:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsAXLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43925:4
+    - openapi-document.json:43975:4
 warning | PreCheck/SchemaMissingType | The schema 'OracleServiceCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44107:4
+    - openapi-document.json:44157:4
 warning | PreCheck/SchemaMissingType | The schema 'GoogleAdWordsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44311:4
+    - openapi-document.json:44361:4
 warning | PreCheck/SchemaMissingType | The schema 'SapTableLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44555:4
+    - openapi-document.json:44605:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44970:4
+    - openapi-document.json:45020:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45129:4
+    - openapi-document.json:45179:4
 warning | PreCheck/SchemaMissingType | The schema 'SnowflakeLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45287:4
+    - openapi-document.json:45337:4
 warning | PreCheck/SchemaMissingType | The schema 'SharePointOnlineListLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45393:4
+    - openapi-document.json:45443:4
 warning | PreCheck/SchemaMissingType | The schema 'ControlActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:46369:4
+    - openapi-document.json:46416:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecutionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:46392:4
+    - openapi-document.json:46439:4
 warning | PreCheck/SchemaMissingType | The schema 'CopyActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:51487:4
+    - openapi-document.json:51582:4
 warning | PreCheck/SchemaMissingType | The schema 'CopyActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:51567:4
+    - openapi-document.json:51662:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightHiveActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:64683:4
+    - openapi-document.json:64778:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightHiveActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:64715:4
+    - openapi-document.json:64810:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightPigActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:64939:4
+    - openapi-document.json:65034:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightPigActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:64971:4
+    - openapi-document.json:65066:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightMapReduceActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65114:4
+    - openapi-document.json:65209:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightMapReduceActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65146:4
+    - openapi-document.json:65241:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightStreamingActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65377:4
+    - openapi-document.json:65472:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightStreamingActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65409:4
+    - openapi-document.json:65504:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightSparkActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65757:4
+    - openapi-document.json:65852:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightSparkActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65789:4
+    - openapi-document.json:65884:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteSSISPackageActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65999:4
+    - openapi-document.json:66094:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteSSISPackageActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:66031:4
+    - openapi-document.json:66126:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:66966:4
+    - openapi-document.json:67061:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:66998:4
+    - openapi-document.json:67093:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivityReferenceObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67168:4
+    - openapi-document.json:67263:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerStoredProcedureActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67234:4
+    - openapi-document.json:67329:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerStoredProcedureActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67267:4
+    - openapi-document.json:67362:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecutePipelineActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67339:4
+    - openapi-document.json:67434:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecutePipelineActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67371:4
+    - openapi-document.json:67466:4
 warning | PreCheck/SchemaMissingType | The schema 'DeleteActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67404:4
+    - openapi-document.json:67499:4
 warning | PreCheck/SchemaMissingType | The schema 'DeleteActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67436:4
+    - openapi-document.json:67531:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerCommandActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67539:4
+    - openapi-document.json:67634:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerCommandActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67571:4
+    - openapi-document.json:67666:4
 warning | PreCheck/SchemaMissingType | The schema 'LookupActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67640:4
+    - openapi-document.json:67735:4
 warning | PreCheck/SchemaMissingType | The schema 'LookupActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67672:4
+    - openapi-document.json:67767:4
 warning | PreCheck/SchemaMissingType | The schema 'WebActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67726:4
+    - openapi-document.json:67821:4
 warning | PreCheck/SchemaMissingType | The schema 'WebActivityAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67758:4
+    - openapi-document.json:67853:4
 warning | PreCheck/SchemaMissingType | The schema 'WebActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67881:4
+    - openapi-document.json:67976:4
 warning | PreCheck/SchemaMissingType | The schema 'GetMetadataActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68035:4
+    - openapi-document.json:68130:4
 warning | PreCheck/SchemaMissingType | The schema 'GetMetadataActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68067:4
+    - openapi-document.json:68162:4
 warning | PreCheck/SchemaMissingType | The schema 'IfConditionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68142:4
+    - openapi-document.json:68237:4
 warning | PreCheck/SchemaMissingType | The schema 'IfConditionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68174:4
+    - openapi-document.json:68269:4
 warning | PreCheck/SchemaMissingType | The schema 'SwitchActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68247:4
+    - openapi-document.json:68342:4
 warning | PreCheck/SchemaMissingType | The schema 'SwitchActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68279:4
+    - openapi-document.json:68374:4
 warning | PreCheck/SchemaMissingType | The schema 'SwitchCase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68353:4
-warning | PreCheck/SchemaMissingType | The schema 'ForEachActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68416:4
-warning | PreCheck/SchemaMissingType | The schema 'ForEachActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:68448:4
+warning | PreCheck/SchemaMissingType | The schema 'ForEachActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:68511:4
+warning | PreCheck/SchemaMissingType | The schema 'ForEachActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:68543:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLBatchExecutionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68524:4
+    - openapi-document.json:68619:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLBatchExecutionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68556:4
+    - openapi-document.json:68651:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLUpdateResourceActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68724:4
+    - openapi-document.json:68819:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLUpdateResourceActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68756:4
+    - openapi-document.json:68851:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLExecutePipelineActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68831:4
+    - openapi-document.json:68926:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLExecutePipelineActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68863:4
+    - openapi-document.json:68958:4
 warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalyticsUSQLActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69149:4
+    - openapi-document.json:69244:4
 warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalyticsUSQLActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69181:4
+    - openapi-document.json:69276:4
 warning | PreCheck/SchemaMissingType | The schema 'WaitActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69372:4
+    - openapi-document.json:69467:4
 warning | PreCheck/SchemaMissingType | The schema 'WaitActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69404:4
+    - openapi-document.json:69499:4
 warning | PreCheck/SchemaMissingType | The schema 'UntilActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69449:4
+    - openapi-document.json:69544:4
 warning | PreCheck/SchemaMissingType | The schema 'UntilActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69481:4
+    - openapi-document.json:69576:4
 warning | PreCheck/SchemaMissingType | The schema 'ValidationActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69555:4
+    - openapi-document.json:69650:4
 warning | PreCheck/SchemaMissingType | The schema 'ValidationActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69587:4
+    - openapi-document.json:69682:4
 warning | PreCheck/SchemaMissingType | The schema 'FilterActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69708:4
+    - openapi-document.json:69803:4
 warning | PreCheck/SchemaMissingType | The schema 'FilterActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69740:4
+    - openapi-document.json:69835:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksNotebookActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69770:4
+    - openapi-document.json:69865:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksNotebookActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69802:4
+    - openapi-document.json:69897:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkJarActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69953:4
+    - openapi-document.json:70048:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkJarActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69985:4
+    - openapi-document.json:70080:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkPythonActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70133:4
+    - openapi-document.json:70228:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkPythonActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70165:4
+    - openapi-document.json:70260:4
 warning | PreCheck/SchemaMissingType | The schema 'SetVariableActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70313:4
-warning | PreCheck/SchemaMissingType | The schema 'SetVariableActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70345:4
-warning | PreCheck/SchemaMissingType | The schema 'AppendVariableActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:70408:4
-warning | PreCheck/SchemaMissingType | The schema 'AppendVariableActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'SetVariableActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:70440:4
-warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AppendVariableActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:70503:4
-warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'AppendVariableActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:70535:4
+warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:70598:4
+warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - openapi-document.json:70630:4
 warning | PreCheck/SchemaMissingType | The schema 'WebHookActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70633:4
+    - openapi-document.json:70728:4
 warning | PreCheck/SchemaMissingType | The schema 'WebHookActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70665:4
+    - openapi-document.json:70760:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteDataFlowActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70812:4
+    - openapi-document.json:70907:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteDataFlowActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70881:4
+    - openapi-document.json:70976:4
 warning | PreCheck/SchemaMissingType | The schema 'MultiplePipelineTrigger' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71469:4
+    - openapi-document.json:71564:4
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71549:4
+    - openapi-document.json:71644:4
 warning | PreCheck/SchemaMissingType | The schema 'BlobTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71921:4
+    - openapi-document.json:72016:4
 warning | PreCheck/SchemaMissingType | The schema 'BlobEventsTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72026:4
+    - openapi-document.json:72121:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomEventsTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72179:4
+    - openapi-document.json:72274:4
 warning | PreCheck/SchemaMissingType | The schema 'TumblingWindowTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72345:4
+    - openapi-document.json:72440:4
 warning | PreCheck/SchemaMissingType | The schema 'RetryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72518:4
+    - openapi-document.json:72613:4
 warning | PreCheck/SchemaMissingType | The schema 'RerunTumblingWindowTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72887:4
+    - openapi-document.json:72982:4
 warning | PreCheck/SchemaMissingType | The schema 'ChainingTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:73043:4
+    - openapi-document.json:73138:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'BlobEventTypes' (4 differences):
-  - type: "array" => "string"
-  - items: {"x-ms-enum":{"name":"BlobEventTypes","modelAsString":true},"$ref":"#/components/schemas/BlobEventTypes"} => <none>
-  - enum: <none> => ["Microsoft.Storage.BlobCreated","Microsoft.Storage.BlobDeleted"]
-  - x-ms-enum: <none> => {"name":"BlobEventTypes","modelAsString":true}
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSource' has a property 'dataset' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSource' has a property 'linkedService' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSource' has a property 'flowlet' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSink' has a property 'dataset' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSink
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSink' has a property 'linkedService' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSink
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSink' has a property 'flowlet' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSink
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2024,10 +2028,11 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 180ms
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 227ms
 info    | Processing batch task - {"tag":"microsoft.datafactory-2017-09-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.0)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - openapi-document.json:31:4
@@ -2850,5 +2855,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 97ms
+info    | autorest.bicep took 80ms
 info    | Generation Complete

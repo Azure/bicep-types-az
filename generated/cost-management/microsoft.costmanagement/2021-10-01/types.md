@@ -117,6 +117,8 @@
 * **accumulated**: 'false' | 'true': Show costs accumulated over time.
 * **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table': Chart type of the main view in Cost Analysis. Required.
 * **createdOn**: string (ReadOnly): Date the user created this view.
+* **currency**: string (ReadOnly): Currency of the current view.
+* **dateRange**: string (ReadOnly): Date range of the current view.
 * **displayName**: string: User input name of the view. Required.
 * **kpis**: [KpiProperties](#kpiproperties)[]: List of KPIs to show in Cost Analysis UI.
 * **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost': Metric to use when displaying costs.
@@ -139,6 +141,7 @@
 ## ReportConfigDefinition
 ### Properties
 * **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **includeMonetaryCommitment**: bool: If true, report includes monetary commitment.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
 * **type**: 'Usage' (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.

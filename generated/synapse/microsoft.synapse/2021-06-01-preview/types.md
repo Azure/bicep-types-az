@@ -1081,6 +1081,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **dataFormat**: 'APACHEAVRO' | 'AVRO' | 'CSV' | 'JSON' | 'MULTIJSON' | 'ORC' | 'PARQUET' | 'PSV' | 'RAW' | 'SCSV' | 'SINGLEJSON' | 'SOHSV' | 'TSV' | 'TSVE' | 'TXT' | 'W3CLOGFILE': The data format of the message. Optionally the data format can be added to each message.
 * **eventHubResourceId**: string (Required): The resource ID of the event hub to be used to create a data connection.
 * **eventSystemProperties**: string[]: System properties of the event hub
+* **managedIdentityResourceId**: string: The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub.
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **tableName**: string: The table where the data should be ingested. Optionally the table information can be added to each message.

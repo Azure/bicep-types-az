@@ -305,7 +305,7 @@ along with a default value to be used, and at least one of these two properties 
 
 ## EventSubscriptionIdentity
 ### Properties
-* **type**: 'SystemAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
+* **type**: 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
 * **userAssignedIdentity**: string: The user identity associated with the resource.
 
 ## DeliveryWithResourceIdentity

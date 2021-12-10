@@ -62,7 +62,7 @@
 * **enabled**: bool (Required): The notification is enabled or not.
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator.
 * **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
-* **thresholdType**: 'Actual': The type of threshold
+* **thresholdType**: 'Actual' | 'Forecasted': The type of threshold
 
 ## BudgetTimePeriod
 ### Properties

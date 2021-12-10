@@ -699,20 +699,13 @@
 ### Properties
 * **consistencyMode**: 'ApplicationConsistent' | 'CrashConsistent' | 'FileSystemConsistent' (ReadOnly): Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
 * **excludeDisks**: [ApiEntityReference](#apientityreference)[]: List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-* **provisioningDetails**: [RestorePointProvisioningDetails](#restorepointprovisioningdetails) (ReadOnly): Restore Point Provisioning details.
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the restore point.
 * **sourceMetadata**: [RestorePointSourceMetadata](#restorepointsourcemetadata) (ReadOnly): Describes the properties of the Virtual Machine for which the restore point was created. The properties provided are a subset and the snapshot of the overall Virtual Machine properties captured at the time of the restore point creation.
+* **timeCreated**: string: Gets the creation time of the restore point.
 
 ## ApiEntityReference
 ### Properties
 * **id**: string: The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
-
-## RestorePointProvisioningDetails
-### Properties
-* **creationTime**: string: Gets the creation time of the restore point.
-* **statusCode**: int: Gets the status of the Create restore point operation.
-* **statusMessage**: string: Gets the status message of the Create restore point operation.
-* **totalUsedSizeInBytes**: int: Gets the total size of the data in all the disks which are part of the restore point.
 
 ## RestorePointSourceMetadata
 ### Properties
