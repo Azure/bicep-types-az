@@ -1,9 +1,0 @@
-{
-  "tool": "Credential Scanner",
-  "suppressions": [
-    {
-      "file": "types.json",
-      "_justification": "Types.json files are a dump of type space, which cannot possibly contain secrets."
-    }
-  ]
-}
