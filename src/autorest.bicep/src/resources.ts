@@ -115,7 +115,7 @@ export function getSerializedName(metadata: Metadata) {
 export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[], parseType: (schema: Schema) => T, createConstantName: (name: string) => T): Result<T, string> {
   const path = getNormalizedMethodPath(request.path);
 
-  const finalProvidersMatch = path.match(parentScopePrefix)?.at(-1);
+  const finalProvidersMatch = path.match(parentScopePrefix)?.slice(-1)[0];
   if (!finalProvidersMatch) {
     return failure(`Unable to locate "/providers/" segment`);
   }
@@ -378,7 +378,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   function parseResourceScopes(path: string): Result<{scopeType: ScopeType, routingScope: string}, string> {
     path = getNormalizedMethodPath(path);
 
-    const finalProvidersMatch = path.match(parentScopePrefix)?.at(-1);
+    const finalProvidersMatch = path.match(parentScopePrefix)?.slice(-1)[0];
     if (!finalProvidersMatch) {
       return failure(`Unable to locate "/providers/" segment`);
     }
