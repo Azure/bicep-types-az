@@ -4,7 +4,7 @@ import path from 'path';
 import { createWriteStream } from 'fs';
 import { readdir, stat, mkdir, rm, copyFile } from 'fs/promises';
 import { spawn } from 'child_process';
-import * as colors from 'colors';
+import colors from 'colors';
 
 export interface ILogger {
   out: (data: string) => void;
