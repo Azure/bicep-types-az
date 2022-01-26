@@ -36,7 +36,7 @@
     "@typescript-eslint/parser": "^5.8.0",
     "async": "^3.2.2",
     "autorest": "^3.5.1",
-    "chalk": "^4.1.2",
+    "chalk": "^5.0.0",
     "eslint": "^8.5.0",
     "eslint-plugin-header": "^3.1.1",
     "js-yaml": "^4.1.0",
