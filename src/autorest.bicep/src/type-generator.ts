@@ -2,21 +2,21 @@
 // Licensed under the MIT License.
 
 import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
-import { Channel, Host } from "@autorest/extension-base";
+import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
 import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
-export function generateTypes(host: Host, definition: ProviderDefinition) {
+export function generateTypes(host: AutorestExtensionHost, definition: ProviderDefinition) {
   const factory = new TypeFactory();
   const namedDefinitions: Dictionary<TypeReference> = {};
 
   function logWarning(message: string) {
-    host.Message({ Channel: Channel.Warning, Text: message, });
+    host.message({ Channel: Channel.Warning, Text: message, });
   }
 
   function logInfo(message: string) {
-    host.Message({ Channel: Channel.Information, Text: message, });
+    host.message({ Channel: Channel.Information, Text: message, });
   }
 
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {

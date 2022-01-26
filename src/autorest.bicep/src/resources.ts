@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import { ChoiceSchema, CodeModel, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
-import { Channel, Host } from "@autorest/extension-base";
+import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy } from 'lodash';
 import { success, failure, Result } from './utils';
 
@@ -144,7 +144,7 @@ export function parseNameSchema<T>(request: HttpRequest, parameters: Parameter[]
   return success(createConstantName(resNameParam));
 }
 
-export function getProviderDefinitions(codeModel: CodeModel, host: Host): ProviderDefinition[] {
+export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExtensionHost): ProviderDefinition[] {
   function logWarning(message: string) {
     host.Message({
       Channel: Channel.Warning,
