@@ -34,7 +34,7 @@
     "@types/yargs": "^17.0.7",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
-    "async": "^3.2.2",
+    "async": "^3.2.3",
     "autorest": "^3.5.1",
     "chalk": "^5.0.0",
     "eslint": "^8.7.0",
