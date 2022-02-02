@@ -34,6 +34,10 @@
     <!-- generate symbols for upload to the nuget feed -->
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <!-- sourcelink configuration -->
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Azure/bicep-types-az</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(EnableNuget)' == 'true'" >
