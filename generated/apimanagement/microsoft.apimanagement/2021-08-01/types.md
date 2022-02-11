@@ -421,6 +421,15 @@
 * **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ApiManagement/service/schemas@2021-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GlobalSchemaContractProperties](#globalschemacontractproperties): Schema create or update contract Properties.
+* **type**: 'Microsoft.ApiManagement/service/schemas' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ApiManagement/service/subscriptions@2021-08-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -880,7 +889,7 @@ dictionary key references will be ARM resource ids in the form:
 ## SchemaContractProperties
 ### Properties
 * **contentType**: string (Required): Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
-* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Schema Document Properties.
+* **document**: [SchemaDocumentProperties](#schemadocumentproperties): Api Schema Document Properties.
 
 ## SchemaDocumentProperties
 ### Properties
@@ -1182,6 +1191,13 @@ Instrumentation key for applicationInsights logger.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+
+## GlobalSchemaContractProperties
+### Properties
+* **description**: string: Free-form schema entity description.
+* **document**: any: Any object
+* **schemaType**: 'json' | 'xml' (Required): Schema Type. Immutable.
+* **value**: any: Anything
 
 ## SubscriptionCreateParameterProperties
 ### Properties

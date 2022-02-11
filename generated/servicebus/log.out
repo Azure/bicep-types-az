@@ -1,10 +1,9 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.servicebus-2021-01-01-preview"} .
@@ -12,123 +11,123 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:306:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:594:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:393:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:615:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:456:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:631:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:497:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:659:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:533:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:682:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:783:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:774:5
 warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:950:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:829:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1006:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:859:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1090:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:879:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1123:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:899:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1157:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:928:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1196:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:937:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1243:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:960:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1306:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:976:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1392:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:998:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1509:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:1020:5
 warning | PreCheck/SchemaMissingType | The schema 'userAssignedIdentityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1572:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json:1036:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1627:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1740:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/operations.json:102:9
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1830:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:521:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1893:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:537:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1926:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:539:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1979:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:577:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2158:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:617:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2208:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:657:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2250:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:669:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2299:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:687:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2332:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:689:9
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2438:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:750:5
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2461:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:752:9
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecoveryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2487:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/DisasterRecoveryConfig.json:765:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2552:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/migrationconfigs.json:312:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2585:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/migrationconfigs.json:314:9
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2723:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/migrationconfigs.json:361:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2788:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/networksets.json:175:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2836:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/networksets.json:197:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetVirtualNetworkRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2878:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/networksets.json:209:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2905:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/networksets.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2938:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/networksets.json:225:9
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3016:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/networksets.json:270:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3079:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/AuthorizationRules.json:978:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3142:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/AuthorizationRules.json:994:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3175:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/AuthorizationRules.json:996:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3228:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/AuthorizationRules.json:1034:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3407:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/AuthorizationRules.json:1074:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3457:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Queue.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3520:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Queue.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3553:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Queue.json:278:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3898:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/topics.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3961:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/topics.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3994:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/topics.json:278:5
 warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4249:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json:260:5
 warning | PreCheck/SchemaMissingType | The schema 'Ruleproperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4282:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json:280:5
 warning | PreCheck/SchemaMissingType | The schema 'RuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4316:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json:301:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4823:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4886:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json:270:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4919:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json:290:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5210:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/CheckNameAvailability.json:84:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5252:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/CheckNameAvailability.json:96:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
@@ -144,127 +143,127 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:306:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:594:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:393:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:615:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:456:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:631:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:497:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:659:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:533:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:682:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:787:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:778:5
 warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:954:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:833:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1010:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:863:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1094:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:883:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1127:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:903:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1161:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:932:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1200:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:941:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1247:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:964:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1310:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:980:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1396:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:1002:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1513:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/namespace-preview.json:1024:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1632:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1745:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/operations.json:102:9
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1835:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:521:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1898:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:537:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1931:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:539:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1984:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:577:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2163:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:617:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2213:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:657:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2255:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:669:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2304:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:687:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2337:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:689:9
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2443:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:750:5
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2466:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:752:9
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecoveryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2492:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/DisasterRecoveryConfig.json:765:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2557:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/migrationconfigs.json:312:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2590:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/migrationconfigs.json:314:9
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2728:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/migrationconfigs.json:361:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2793:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/networksets.json:175:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2841:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/networksets.json:197:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetVirtualNetworkRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2883:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/networksets.json:209:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2910:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/networksets.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2943:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/networksets.json:225:9
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3033:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/networksets.json:287:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3096:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/AuthorizationRules.json:978:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3159:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/AuthorizationRules.json:994:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3192:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/AuthorizationRules.json:996:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3245:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/AuthorizationRules.json:1034:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3424:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/AuthorizationRules.json:1074:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3474:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/Queue.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3537:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/Queue.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3570:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/Queue.json:278:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3937:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/topics.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4000:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/topics.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4033:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/topics.json:278:5
 warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4310:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/Rules.json:260:5
 warning | PreCheck/SchemaMissingType | The schema 'Ruleproperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4343:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/Rules.json:280:5
 warning | PreCheck/SchemaMissingType | The schema 'RuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4377:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/Rules.json:301:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4881:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/subscriptions.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4944:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/subscriptions.json:270:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4977:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/subscriptions.json:290:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5324:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/CheckNameAvailability.json:84:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5366:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-06-01-preview/CheckNameAvailability.json:96:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
@@ -286,161 +285,161 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'IpFilterRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:456:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/IPFilterRules-preview.json:224:5
 warning | PreCheck/SchemaMissingType | The schema 'IpFilterRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:484:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/IPFilterRules-preview.json:226:9
 warning | PreCheck/SchemaMissingType | The schema 'IpFilterRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:556:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/IPFilterRules-preview.json:260:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:619:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:594:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:706:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:615:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:769:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:631:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:805:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:654:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:841:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:677:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1067:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:762:5
 warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1136:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:788:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1167:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:810:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1227:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:823:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1255:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:838:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1289:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:867:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1328:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:876:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1375:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:899:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1438:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:915:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1524:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:937:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1641:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/namespace-preview.json:959:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1720:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/VirtualNetworkRules-preview.json:224:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1748:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/VirtualNetworkRules-preview.json:226:9
 warning | PreCheck/SchemaMissingType | The schema 'VirtualNetworkRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1791:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/VirtualNetworkRules-preview.json:244:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1854:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:521:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1917:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:537:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1945:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:539:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1998:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:572:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2177:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:612:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2227:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:652:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2269:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:664:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2318:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:682:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2346:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:684:9
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2452:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:740:5
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2475:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:742:9
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecoveryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2501:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/DisasterRecoveryConfig.json:755:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2566:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/AuthorizationRules.json:978:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2629:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/AuthorizationRules.json:994:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2657:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/AuthorizationRules.json:996:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2710:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/AuthorizationRules.json:1029:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2889:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/AuthorizationRules.json:1069:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2939:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/CheckNameAvailability.json:84:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2981:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/CheckNameAvailability.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'Eventhub' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3030:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/eventhubs.json:84:5
 warning | PreCheck/SchemaMissingType | The schema 'Eventhub-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3058:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/eventhubs.json:86:9
 warning | PreCheck/SchemaMissingType | The schema 'EventHubListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3226:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/eventhubs.json:142:5
 warning | PreCheck/SchemaMissingType | The schema 'CaptureDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3291:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/eventhubs.json:159:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3373:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/eventhubs.json:198:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3417:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/eventhubs.json:204:9
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3502:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/networksets.json:175:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3550:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/networksets.json:197:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetVirtualNetworkRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3592:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/networksets.json:209:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3619:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/networksets.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3647:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/networksets.json:225:9
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3725:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/networksets.json:265:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3818:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/migrationconfigs.json:312:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3846:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/migrationconfigs.json:314:9
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3984:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/migrationconfigs.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4049:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/PremiumMessagingRegions.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4136:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/PremiumMessagingRegions.json:99:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4162:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/PremiumMessagingRegions.json:101:9
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4228:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/PremiumMessagingRegions.json:123:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4521:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/Queue.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4584:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/Queue.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4612:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/Queue.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4957:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/sku.json:81:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5044:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/sku.json:102:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5070:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/sku.json:104:9
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5136:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/sku.json:126:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5201:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/subscriptions.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5264:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/subscriptions.json:270:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5292:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/subscriptions.json:285:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5583:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/topics.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5646:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/topics.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5674:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/topics.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5929:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/Rules.json:260:5
 warning | PreCheck/SchemaMissingType | The schema 'Ruleproperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5957:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/Rules.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'RuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5991:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/Rules.json:296:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6498:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6611:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/preview/2018-01-01-preview/operations.json:102:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
@@ -468,19 +467,19 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2220:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/DisasterRecoveryConfig.json:323:9
 warning | PreCheck/SchemaMissingType | The schema 'FailoverProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2350:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/DisasterRecoveryConfig.json:387:9
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2476:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/migrationconfigs.json:315:9
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2834:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/networksets.json:229:9
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2988:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/AuthorizationRules.json:1131:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3085:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/AuthorizationRules.json:1150:9
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4785:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/subscriptions.json:254:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
@@ -496,129 +495,129 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2017-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:406:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/AuthorizationRules.json:978:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:469:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/AuthorizationRules.json:994:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:497:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/AuthorizationRules.json:996:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:550:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/AuthorizationRules.json:1029:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:729:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/AuthorizationRules.json:1069:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:779:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/CheckNameAvailability.json:84:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:821:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/CheckNameAvailability.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:870:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:512:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:933:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:528:5
 warning | PreCheck/SchemaMissingType | The schema 'SBAuthorizationRule-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:961:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:530:9
 warning | PreCheck/SchemaMissingType | The schema 'AccessKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1014:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:563:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateAccessKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1193:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:603:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1243:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:643:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1285:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:655:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1334:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:673:5
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecovery-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1362:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:675:9
 warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecoveryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1468:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/DisasterRecoveryConfig.json:731:5
 warning | PreCheck/SchemaMissingType | The schema 'Eventhub' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1533:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/eventhubs.json:84:5
 warning | PreCheck/SchemaMissingType | The schema 'Eventhub-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1561:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/eventhubs.json:86:9
 warning | PreCheck/SchemaMissingType | The schema 'EventHubListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1729:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/eventhubs.json:142:5
 warning | PreCheck/SchemaMissingType | The schema 'CaptureDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1794:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/eventhubs.json:159:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1876:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/eventhubs.json:198:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1920:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/eventhubs.json:204:9
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2035:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/migrationconfigs.json:312:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigProperties-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2063:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/migrationconfigs.json:314:9
 warning | PreCheck/SchemaMissingType | The schema 'MigrationConfigListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2201:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/migrationconfigs.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2266:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/namespaces.json:342:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2353:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/namespaces.json:363:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2416:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/namespaces.json:379:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2448:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/namespaces.json:398:5
 warning | PreCheck/SchemaMissingType | The schema 'SBNamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2480:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/namespaces.json:417:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2691:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/networksets.json:175:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2739:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/networksets.json:197:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetVirtualNetworkRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2781:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/networksets.json:209:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2808:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/networksets.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2836:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/networksets.json:225:9
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSetListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2914:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/networksets.json:265:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2977:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3090:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/operations.json:102:9
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3180:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/PremiumMessagingRegions.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3267:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/PremiumMessagingRegions.json:99:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3293:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/PremiumMessagingRegions.json:101:9
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3359:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/PremiumMessagingRegions.json:123:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3652:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/Queue.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3715:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/Queue.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBQueueProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3743:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/Queue.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4088:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/Rules.json:260:5
 warning | PreCheck/SchemaMissingType | The schema 'Ruleproperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4116:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/Rules.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'RuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4150:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/Rules.json:296:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceNamespacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4657:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/sku.json:81:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4744:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/sku.json:102:5
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegions-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4770:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/sku.json:104:9
 warning | PreCheck/SchemaMissingType | The schema 'PremiumMessagingRegionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4836:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/sku.json:126:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4901:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/subscriptions.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4964:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/subscriptions.json:270:5
 warning | PreCheck/SchemaMissingType | The schema 'SBSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4992:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/subscriptions.json:285:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5283:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/topics.json:242:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5346:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/topics.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'SBTopicProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5374:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2017-04-01/topics.json:273:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
@@ -638,69 +637,69 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2015-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1823:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:121:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1847:5
 warning | PreCheck/SchemaMissingType | The schema 'NamespaceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:230:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1872:5
 warning | PreCheck/SchemaMissingType | The schema 'NamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:322:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1898:5
 warning | PreCheck/SchemaMissingType | The schema 'NamespaceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:385:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1914:5
 warning | PreCheck/SchemaMissingType | The schema 'NamespaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:415:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1931:5
 warning | PreCheck/SchemaMissingType | The schema 'NamespaceUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:543:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:1989:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedAccessAuthorizationRuleCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:668:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2045:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedAccessAuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:732:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2062:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedAccessAuthorizationRuleResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:795:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2078:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedAccessAuthorizationRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:822:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2092:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceListKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:871:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2116:5
 warning | PreCheck/SchemaMissingType | The schema 'RegenerateKeysParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:994:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2141:5
 warning | PreCheck/SchemaMissingType | The schema 'QueueCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1020:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2158:5
 warning | PreCheck/SchemaMissingType | The schema 'QueueListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1087:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2178:5
 warning | PreCheck/SchemaMissingType | The schema 'QueueResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1150:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2194:5
 warning | PreCheck/SchemaMissingType | The schema 'QueueProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1177:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2208:5
 warning | PreCheck/SchemaMissingType | The schema 'TopicCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1626:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2349:5
 warning | PreCheck/SchemaMissingType | The schema 'TopicListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1693:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2369:5
 warning | PreCheck/SchemaMissingType | The schema 'TopicResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1756:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2385:5
 warning | PreCheck/SchemaMissingType | The schema 'TopicProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1783:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2399:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2050:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2495:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2117:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2515:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2180:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2531:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2207:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2545:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2438:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2673:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckNameAvailabilityResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2480:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2685:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2529:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2703:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2642:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2730:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous

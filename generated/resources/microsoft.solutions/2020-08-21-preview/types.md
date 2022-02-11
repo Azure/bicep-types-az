@@ -76,6 +76,7 @@
 ## ApplicationPackageLockingPolicyDefinition
 ### Properties
 * **allowedActions**: string[]: The deny assignment excluded actions.
+* **allowedDataActions**: string[]: The deny assignment excluded data actions.
 
 ## ApplicationManagementPolicy
 ### Properties

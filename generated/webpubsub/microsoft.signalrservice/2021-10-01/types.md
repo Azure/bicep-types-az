@@ -55,7 +55,7 @@
 Only be used in response.
 * **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
 Only be used in response
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represent the identity type: systemAssigned, userAssigned, None
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represents the identity type: systemAssigned, userAssigned, None
 * **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
 
 ## ManagedIdentityUserAssignedIdentities
@@ -113,7 +113,7 @@ Case insensitive.
 
 ## WebPubSubNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches
+* **defaultAction**: 'Allow' | 'Deny': Azure Networking ACL Action.
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
@@ -223,7 +223,7 @@ Allowed values: Standard_S1, Free_F1
 
 ## EventHandler
 ### Properties
-* **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings.
+* **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings. If not set, no auth is used for upstream messages.
 * **systemEvents**: string[]: Gets ot sets the list of system events.
 * **urlTemplate**: string (Required): Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
 For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
@@ -236,7 +236,7 @@ There are 3 kind of patterns supported:
 ## UpstreamAuthSettings
 ### Properties
 * **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
-* **type**: 'ManagedIdentity' | 'None': Gets or sets the type of auth. None or ManagedIdentity is supported now.
+* **type**: 'ManagedIdentity' | 'None': Upstream auth type enum.
 
 ## ManagedIdentitySettings
 ### Properties

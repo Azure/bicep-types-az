@@ -59,7 +59,7 @@
 ### Properties
 * **allSettings**: [BotPropertiesAllSettings](#botpropertiesallsettings): Contains resource all settings defined as key/value pairs.
 * **appPasswordHint**: string: The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
-* **cmekEncryptionStatus**: string: The CMK encryption status
+* **cmekEncryptionStatus**: string (ReadOnly): The CMK encryption status
 * **cmekKeyVaultUrl**: string: The CMK Url
 * **configuredChannels**: string[] (ReadOnly): Collection of channels for which the bot is configured
 * **description**: string: The description of the bot
@@ -73,7 +73,7 @@
 * **endpointVersion**: string (ReadOnly): The bot's endpoint version
 * **iconUrl**: string: The Icon Url of the bot
 * **isCmekEnabled**: bool: Whether Cmek is enabled
-* **isDeveloperAppInsightsApiKeySet**: bool: Whether the bot is developerAppInsightsApiKey set
+* **isDeveloperAppInsightsApiKeySet**: bool (ReadOnly): Whether the bot is developerAppInsightsApiKey set
 * **isStreamingSupported**: bool: Whether the bot is streaming supported
 * **luisAppIds**: string[]: Collection of LUIS App Ids
 * **luisKey**: string: The LUIS Key
@@ -350,12 +350,15 @@
 
 ## ListChannelWithKeysResponse
 ### Properties
+* **changedTime**: string (ReadOnly): Changed time of the resource
+* **entityTag**: string (ReadOnly): Entity tag of the resource
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [Channel](#channel) (ReadOnly): Channel definition
+* **provisioningState**: string (ReadOnly): Provisioning state of the resource
 * **resource**: [Channel](#channel) (ReadOnly): Channel definition
 * **setting**: [ChannelSettings](#channelsettings) (ReadOnly): Channel settings definition
 * **sku**: [Sku](#sku) (ReadOnly): The SKU of the cognitive services account.

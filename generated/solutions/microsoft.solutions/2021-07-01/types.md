@@ -19,7 +19,7 @@
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [Identity](#identity): Identity for the resource.
 * **kind**: string (Required): The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
 * **location**: string: Resource location
 * **managedBy**: string: ID of the resource that manages this resource.
@@ -80,6 +80,7 @@
 ## ApplicationPackageLockingPolicyDefinition
 ### Properties
 * **allowedActions**: string[]: The deny assignment excluded actions.
+* **allowedDataActions**: string[]: The deny assignment excluded data actions.
 
 ## ApplicationManagementPolicy
 ### Properties
@@ -122,22 +123,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ManagedServiceIdentity
+## Identity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The identity type.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
-## UserAssignedIdentities
+## IdentityUserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+* **Additional Properties Type**: [UserAssignedResourceIdentity](#userassignedresourceidentity)
 
-## UserAssignedIdentity
+## UserAssignedResourceIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+* **tenantId**: string (ReadOnly): The tenant id of user assigned identity.
 
 ## Plan
 ### Properties

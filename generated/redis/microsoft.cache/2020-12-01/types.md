@@ -130,6 +130,7 @@
 * **rdb-backup-frequency**: string: Specifies the frequency for creating rdb backup
 * **rdb-backup-max-snapshot-count**: string: Specifies the maximum number of snapshots for rdb backup
 * **rdb-storage-connection-string**: string: The storage account connection string for storing rdb file
+* **zonal-configuration**: string (ReadOnly): Zonal Configuration
 ### Additional Properties
 * **Additional Properties Type**: string
 

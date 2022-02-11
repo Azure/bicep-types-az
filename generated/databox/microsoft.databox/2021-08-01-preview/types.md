@@ -65,7 +65,7 @@
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
 * **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
 * **datacenterAddress**: [DatacenterAddressResponse](#datacenteraddressresponse) (ReadOnly): Datacenter address for given storage location.
-* **dataCenterCode**: 'AM2' | 'AMS06' | 'AMS20' | 'AUH20' | 'AdHoc' | 'BJB' | 'BL20' | 'BL7' | 'BN1' | 'BOM01' | 'BY1' | 'BY2' | 'BY21' | 'BY24' | 'CBR20' | 'CH1' | 'CPQ02' | 'CPQ20' | 'CWL20' | 'CYS04' | 'DSM05' | 'FRA22' | 'HKG20' | 'Invalid' | 'JNB21' | 'JNB22' | 'LON24' | 'MAA01' | 'MEL23' | 'MNZ21' | 'MWH01' | 'ORK70' | 'OSA20' | 'PUS20' | 'SEL20' | 'SEL21' | 'SG2' | 'SHA03' | 'SIN20' | 'SN5' | 'SN8' | 'SSE90' | 'SYD03' | 'SYD23' | 'TYO01' | 'TYO22' | 'YQB20' | 'YTO20' | 'YTO21' | 'ZRH20' (ReadOnly): DataCenter code.
+* **dataCenterCode**: 'AM2' | 'AMS06' | 'AMS20' | 'AUH20' | 'AdHoc' | 'BJB' | 'BL20' | 'BL7' | 'BN1' | 'BN7' | 'BOM01' | 'BY1' | 'BY2' | 'BY21' | 'BY24' | 'CBR20' | 'CH1' | 'CPQ02' | 'CPQ20' | 'CWL20' | 'CYS04' | 'DSM05' | 'FRA22' | 'HKG20' | 'Invalid' | 'JNB21' | 'JNB22' | 'LON24' | 'MAA01' | 'MEL23' | 'MNZ21' | 'MWH01' | 'ORK70' | 'OSA20' | 'PAR22' | 'PUS20' | 'SEL20' | 'SEL21' | 'SG2' | 'SHA03' | 'SIN20' | 'SN5' | 'SN6' | 'SN8' | 'SSE90' | 'SYD03' | 'SYD23' | 'TYO01' | 'TYO22' | 'YQB20' | 'YTO20' | 'YTO21' | 'ZRH20' (ReadOnly): DataCenter code.
 * **dataExportDetails**: [DataExportDetails](#dataexportdetails)[]: Details of the data to be exported from azure.
 * **dataImportDetails**: [DataImportDetails](#dataimportdetails)[]: Details of the data to be imported into azure.
 * **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): package shipping details

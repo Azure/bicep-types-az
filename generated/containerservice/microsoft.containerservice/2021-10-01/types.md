@@ -453,7 +453,7 @@
 ## ManagedClusterSecurityProfileAzureDefender
 ### Properties
 * **enabled**: bool: Whether to enable Azure Defender
-* **logAnalyticsWorkspaceResourceId**: string: Resource ID of the Log Analytics workspace to be associated with Azure Defender.  When Azure Defender is enabled, this field is required and must be a valid workspace resource ID. When Azure Defender is disabled, leave the field empty.
+* **logAnalyticsWorkspaceResourceId**: string: Resource ID of the Log Analytics workspace to be associated with Azure Defender.  When Azure Defender is enabled, this field is required and must be a valid workspace resource ID. When Azure Defender is disabled, this field should not be exists.
 
 ## ManagedClusterServicePrincipalProfile
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedIdentity](#managedidentity): A class represent managed identities used for request and response
-* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR" for "Microsoft.SignalRService/SignalR"
+* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service, it can be SignalR or RawWebSockets
 * **location**: string: The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the resource
@@ -46,7 +46,7 @@
 Only be used in response.
 * **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
 Only be used in response
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represent the identity type: systemAssigned, userAssigned, None
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represents the identity type: systemAssigned, userAssigned, None
 * **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
 
 ## ManagedIdentityUserAssignedIdentities
@@ -112,7 +112,7 @@ When it's Disabled, public network access is always disabled no matter what you 
 
 ## SignalRNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches
+* **defaultAction**: 'Allow' | 'Deny': Azure Networking ACL Action.
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
@@ -200,7 +200,7 @@ Case insensitive.
 
 ## UpstreamTemplate
 ### Properties
-* **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings.
+* **auth**: [UpstreamAuthSettings](#upstreamauthsettings): Upstream auth settings. If not set, no auth is used for upstream messages.
 * **categoryPattern**: string: Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
@@ -222,7 +222,7 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 ## UpstreamAuthSettings
 ### Properties
 * **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
-* **type**: 'ManagedIdentity' | 'None': Gets or sets the type of auth. None or ManagedIdentity is supported now.
+* **type**: 'ManagedIdentity' | 'None': Upstream auth type enum.
 
 ## ManagedIdentitySettings
 ### Properties

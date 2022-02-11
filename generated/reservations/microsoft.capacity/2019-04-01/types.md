@@ -72,6 +72,7 @@
 
 ## ReservationProperties
 ### Properties
+* **appliedScopeProperties**: [AppliedScopeProperties](#appliedscopeproperties) (ReadOnly)
 * **appliedScopes**: string[] (ReadOnly): List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
 * **appliedScopeType**: 'Shared' | 'Single' (ReadOnly): Type of the Applied Scope.
 * **archived**: bool (ReadOnly): Property to determine if a reservation is archived or not
@@ -94,7 +95,14 @@
 * **reservedResourceType**: 'AppService' | 'AzureDataExplorer' | 'BlockBlob' | 'CosmosDb' | 'Databricks' | 'DedicatedHost' | 'ManagedDisk' | 'MariaDb' | 'MySql' | 'PostgreSql' | 'RedHat' | 'RedHatOsa' | 'RedisCache' | 'SapHana' | 'SqlAzureHybridBenefit' | 'SqlDataWarehouse' | 'SqlDatabases' | 'SuseLinux' | 'VMwareCloudSimple' | 'VirtualMachines' (ReadOnly): The type of the resource that is being reserved.
 * **skuDescription**: string (ReadOnly): Description of the SKU in english.
 * **splitProperties**: [ReservationSplitProperties](#reservationsplitproperties) (ReadOnly)
+* **swapProperties**: [ReservationSwapProperties](#reservationswapproperties) (ReadOnly)
 * **term**: 'P1Y' | 'P3Y' (ReadOnly): Represent the term of Reservation.
+
+## AppliedScopeProperties
+### Properties
+* **displayName**: string (ReadOnly): Management group display name
+* **managementGroupId**: string (ReadOnly): Management group ID of the format /providers/Microsoft.Management/managementGroups/{managementGroupId}
+* **tenantId**: string (ReadOnly): Tenant ID of the applied scope type
 
 ## ReservationMergeProperties
 ### Properties
@@ -131,6 +139,11 @@
 ### Properties
 * **splitDestinations**: string[] (ReadOnly): List of destination Resource Id that are created due to split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 * **splitSource**: string (ReadOnly): Resource Id of the Reservation from which this is split. Format of the resource Id is /providers/Microsoft.Capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+
+## ReservationSwapProperties
+### Properties
+* **swapDestination**: string (ReadOnly): Reservation Resource Id that the original resource gets swapped to. Format of the resource Id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
+* **swapSource**: string (ReadOnly): Resource Id of the Source Reservation that gets swapped. Format of the resource Id is /providers/microsoft.capacity/reservationOrders/{reservationOrderId}/reservations/{reservationId}
 
 ## PurchaseRequestPropertiesReservedResourceProperties
 ### Properties

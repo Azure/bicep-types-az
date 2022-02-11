@@ -60,7 +60,7 @@
 * **container**: string (Required): The name of the container where exports will be uploaded. If the container does not exist it will be created.
 * **resourceId**: string: The resource id of the storage account where exports will be delivered. This is not required if a sasToken and storageAccount are specified.
 * **rootFolderPath**: string: The name of the directory where exports will be uploaded.
-* **sasToken**: string (WriteOnly): A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
+* **sasToken**: string: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
 * **storageAccount**: string: The storage account where exports will be uploaded. For a restricted set of Azure customers this together with sasToken can be specified instead of resourceId.
 
 ## ExportExecutionListResult
@@ -140,7 +140,7 @@
 
 ## ReportConfigDefinition
 ### Properties
-* **dataset**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
+* **dataSet**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
 * **includeMonetaryCommitment**: bool: If true, report includes monetary commitment.
 * **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
@@ -172,10 +172,9 @@
 ## ReportConfigFilter
 ### Properties
 * **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
-* **dimension**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
-* **not**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
+* **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
 * **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
-* **tag**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
+* **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): The comparison expression to be used in the report.
 
 ## ReportConfigComparisonExpression
 ### Properties

@@ -478,7 +478,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ### StatelessServiceProperties
 #### Properties
-* **instanceCloseDelayDuration**: string: Delay duration for RequestDrain feature to ensures that the endpoint advertised by the stateless instance is removed before the delay starts prior to closing the instance. This delay enables existing requests to drain gracefully before the instance actually goes down (https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-application-upgrade-advanced#avoid-connection-drops-during-stateless-service-planned-downtime-preview). It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+* **instanceCloseDelayDuration**: string: Delay duration for RequestDrain feature to ensures that the endpoint advertised by the stateless instance is removed before the delay starts prior to closing the instance. This delay enables existing requests to drain gracefully before the instance actually goes down (https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-application-upgrade-advanced#avoid-connection-drops-during-stateless-service-planned-downtime-preview). It is represented in ISO 8601 format (hh:mm:ss.s).
 * **instanceCount**: int: The instance count.
 * **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
 

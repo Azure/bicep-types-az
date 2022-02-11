@@ -385,7 +385,7 @@
 * **eula**: string: The Eula agreement for the gallery Application Definition.
 * **privacyStatementUri**: string: The privacy statement uri.
 * **releaseNoteUri**: string: The release note uri.
-* **supportedOSType**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
+* **supportedOSType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 
 ## ResourceTags
 ### Properties
@@ -469,8 +469,8 @@
 * **features**: [GalleryImageFeature](#galleryimagefeature)[]: A list of gallery image features.
 * **hyperVGeneration**: 'V1' | 'V2': The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier) (Required): This is the gallery image definition identifier.
-* **osState**: 'Generalized' | 'Specialized' (Required): The OS State.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
+* **osState**: 'Generalized' | 'Specialized' (Required): This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **privacyStatementUri**: string: The privacy statement uri.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
 * **purchasePlan**: [ImagePurchasePlan](#imagepurchaseplan): Describes the gallery image definition purchase plan. This is used by marketplace images.
@@ -653,8 +653,8 @@
 * **diskEncryptionSet**: [DiskEncryptionSetParameters](#diskencryptionsetparameters): Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. <br><br> NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
 * **diskSizeGB**: int: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
 * **managedDisk**: [SubResource](#subresource)
-* **osState**: 'Generalized' | 'Specialized' (Required): The OS State.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system of the osDiskImage.
+* **osState**: 'Generalized' | 'Specialized' (Required): This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.
+* **osType**: 'Linux' | 'Windows' (Required): This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **snapshot**: [SubResource](#subresource)
 * **storageAccountType**: 'Premium_LRS' | 'Premium_ZRS' | 'StandardSSD_LRS' | 'StandardSSD_ZRS' | 'Standard_LRS' | 'UltraSSD_LRS': Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks. It cannot be used with OS Disk. Standard_LRS uses Standard HDD. StandardSSD_LRS uses Standard SSD. Premium_LRS uses Premium SSD. UltraSSD_LRS uses Ultra disk. Premium_ZRS uses Premium SSD zone redundant storage. StandardSSD_ZRS uses Standard SSD zone redundant storage. For more information regarding disks supported for Windows Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/windows/disks-types and, for Linux Virtual Machines, refer to https://docs.microsoft.com/azure/virtual-machines/linux/disks-types
 
@@ -1217,7 +1217,7 @@
 * **image**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
 * **managedDisk**: [ManagedDiskParameters](#manageddiskparameters): The parameters of a managed disk.
 * **name**: string: The disk name.
-* **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
+* **osType**: 'Linux' | 'Windows': This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **vhd**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
 
@@ -1529,7 +1529,7 @@
 * **image**: [VirtualHardDisk](#virtualharddisk): Describes the uri of a disk.
 * **managedDisk**: [VirtualMachineScaleSetManagedDiskParameters](#virtualmachinescalesetmanageddiskparameters): Describes the parameters of a ScaleSet managed disk.
 * **name**: string: The disk name.
-* **osType**: 'Linux' | 'Windows': The operating system of the osDiskImage.
+* **osType**: 'Linux' | 'Windows': This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
 * **vhdContainers**: string[]: Specifies the container urls that are used to store operating system disks for the scale set.
 * **writeAcceleratorEnabled**: bool: Specifies whether writeAccelerator should be enabled or disabled on the disk.
 

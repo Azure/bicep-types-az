@@ -1,10 +1,9 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.storagecache-2021-09-01"} .
@@ -13,14 +12,14 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.storagecache-2021-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.storagecache-2021-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
@@ -33,81 +32,81 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ApiOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1134:9
 warning | PreCheck/SchemaMissingType | The schema 'AscOperationProperties-output' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:634:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1283:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1016:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1419:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheNetworkSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1088:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1446:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheEncryptionSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1173:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1467:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1196:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1477:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheActiveDirectorySettings-credentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1409:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1541:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheUsernameDownloadSettings-credentials' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1639:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1637:9
 warning | PreCheck/SchemaMissingType | The schema 'NfsAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1704:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1653:5
 warning | PreCheck/SchemaMissingType | The schema 'NfsAccessRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1771:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1673:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultKeyReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1886:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1734:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultKeyReference-sourceVault' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1933:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1741:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheHealth' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2039:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1773:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageTargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2273:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1865:5
 warning | PreCheck/SchemaMissingType | The schema 'Nfs3Target' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2471:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1964:5
 warning | PreCheck/SchemaMissingType | The schema 'ClfsTarget' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2555:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:1988:5
 warning | PreCheck/SchemaMissingType | The schema 'UnknownTarget' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2600:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:2007:5
 warning | PreCheck/SchemaMissingType | The schema 'Restriction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2817:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:2065:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3049:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-10-01/storagecache.json:2126:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.storagecache-2020-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ApiOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1070:9
 warning | PreCheck/SchemaMissingType | The schema 'AscOperationProperties-output' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:634:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1219:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1011:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1350:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheNetworkSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1083:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1377:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheEncryptionSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1167:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1397:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1190:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1407:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultKeyReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1212:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1416:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultKeyReference-sourceVault' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1259:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1423:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheHealth' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1365:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1455:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageTargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1599:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1547:5
 warning | PreCheck/SchemaMissingType | The schema 'Nfs3Target' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1797:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1646:5
 warning | PreCheck/SchemaMissingType | The schema 'ClfsTarget' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1881:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1670:5
 warning | PreCheck/SchemaMissingType | The schema 'UnknownTarget' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1926:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1689:5
 warning | PreCheck/SchemaMissingType | The schema 'Restriction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2143:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1747:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2375:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2020-03-01/storagecache.json:1808:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -117,13 +116,13 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ApiOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:58:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2019-11-01/storagecache.json:1011:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheHealth' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:674:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2019-11-01/storagecache.json:1193:5
 warning | PreCheck/SchemaMissingType | The schema 'Restriction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1185:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2019-11-01/storagecache.json:1356:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1417:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/stable/2019-11-01/storagecache.json:1417:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'paths·100ptyt·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storagecache-caches-cachename·delete·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
@@ -169,13 +168,13 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ApiOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:58:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/preview/2019-08-01-preview/storagecache.json:1066:9
 warning | PreCheck/SchemaMissingType | The schema 'CacheHealth' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:674:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/preview/2019-08-01-preview/storagecache.json:1248:5
 warning | PreCheck/SchemaMissingType | The schema 'Restriction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1185:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/preview/2019-08-01-preview/storagecache.json:1411:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1417:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/storagecache/resource-manager/Microsoft.StorageCache/preview/2019-08-01-preview/storagecache.json:1472:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The schema 'paths·100ptyt·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-storagecache-caches-cachename·delete·responses·200·content·application-json·schema' has no type or format information whatsoever. Location:
