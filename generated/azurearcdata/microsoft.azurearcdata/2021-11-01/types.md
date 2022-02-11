@@ -113,7 +113,7 @@
 * **extensionId**: string: If a CustomLocation is provided, this contains the ARM id of the extension the custom location belongs to.
 * **k8sRaw**: [SqlManagedInstanceK8SRaw](#sqlmanagedinstancek8sraw): The raw kubernetes information.
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': The license type to apply for this managed instance.
+* **licenseType**: 'BasePrice' | 'DisasterRecovery' | 'LicenseIncluded': The license type to apply for this managed instance.
 * **provisioningState**: string (ReadOnly)
 * **startTime**: string: The instance start time
 

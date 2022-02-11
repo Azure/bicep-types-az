@@ -1,10 +1,9 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.edgeorder-2021-12-01"} .
@@ -26,5 +25,5 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/listProductFamilies': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/listConfigurations': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 6ms
 info    | Generation Complete

@@ -290,7 +290,7 @@ the relative path to the target module/project.
 * **thumbprint**: string (ReadOnly): The thumbprint of certificate.
 ### ContentCertificateProperties
 #### Properties
-* **content**: string (Required): The content of uploaded certificate.
+* **content**: string (WriteOnly): The content of uploaded certificate.
 * **type**: 'ContentCertificate' (Required): The type of the certificate source.
 
 ### KeyVaultCertificateProperties

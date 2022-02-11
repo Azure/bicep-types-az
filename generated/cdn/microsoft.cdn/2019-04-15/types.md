@@ -230,7 +230,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **selector**: string: Name of Cookies to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## HttpVersionMatchConditionParameters
 ### Properties
@@ -245,7 +245,7 @@
 * **matchValues**: 'Desktop' | 'Mobile'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## PostArgsMatchConditionParameters
 ### Properties
@@ -254,7 +254,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **selector**: string: Name of PostArg to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## QueryStringMatchConditionParameters
 ### Properties
@@ -262,7 +262,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
@@ -270,7 +270,7 @@
 * **matchValues**: string[]: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RequestBodyMatchConditionParameters
 ### Properties
@@ -278,7 +278,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
@@ -287,7 +287,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
 * **selector**: string: Name of Header to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RequestMethodMatchConditionParameters
 ### Properties
@@ -309,7 +309,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
@@ -317,7 +317,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
@@ -325,7 +325,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## UrlPathMatchConditionParameters
 ### Properties
@@ -333,7 +333,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'Wildcard' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## GeoFilter
 ### Properties

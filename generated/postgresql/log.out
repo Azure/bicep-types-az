@@ -6,407 +6,415 @@ WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-02
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-01-01-privatepreview/DataEncryptionKeys.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2018-06-01-privatepreview/PrivateEndpointConnections.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2021-06-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageEditionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:569:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1161:5
 warning | PreCheck/SchemaMissingType | The schema 'CapabilityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1005:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1276:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1200:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1352:5
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1468:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1482:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1505:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1506:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1587:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1558:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1742:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1600:5
 warning | PreCheck/SchemaMissingType | The schema 'Storage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1793:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1626:5
 warning | PreCheck/SchemaMissingType | The schema 'Backup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1833:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1636:5
 warning | PreCheck/SchemaMissingType | The schema 'Network' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1910:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1670:5
 warning | PreCheck/SchemaMissingType | The schema 'HighAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1997:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1706:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2164:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1775:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2230:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1794:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2330:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1834:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2529:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1902:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2626:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1939:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2736:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:1964:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2907:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:2024:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2970:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:2040:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3102:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/postgresql.json:2102:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3204:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/Databases.json:238:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3264:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/Databases.json:251:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3361:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/Databases.json:288:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3432:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2021-06-01/PrivateDnsZone.json:76:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2021-06-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageEditionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:569:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1161:5
 warning | PreCheck/SchemaMissingType | The schema 'CapabilityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1005:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1276:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1200:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1352:5
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1468:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1482:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1505:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1506:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1587:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1558:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1742:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1600:5
 warning | PreCheck/SchemaMissingType | The schema 'Storage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1793:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1626:5
 warning | PreCheck/SchemaMissingType | The schema 'Backup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1833:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1636:5
 warning | PreCheck/SchemaMissingType | The schema 'Network' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1910:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1670:5
 warning | PreCheck/SchemaMissingType | The schema 'HighAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1997:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1706:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2164:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1775:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2230:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1794:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2330:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1834:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2529:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1902:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2626:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1939:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2736:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:1964:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2907:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:2024:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2970:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:2040:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3102:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/postgresql.json:2102:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3630:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/IntelligentPerformance.json:305:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3764:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2021-06-01-preview/QueryPerformanceInsights.json:303:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | ? | Operation 'WaitStatistics/ListByServer' really should not have a media type (because there should be no body)
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2020-11-05-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-11-05-preview/Databases.json:238:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:91:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-11-05-preview/Databases.json:251:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:183:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-11-05-preview/Databases.json:283:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2020-02-14-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'StorageEditionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:450:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1079:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerEditionCapability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:515:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1096:5
 warning | PreCheck/SchemaMissingType | The schema 'CapabilityProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:604:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1120:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:737:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1168:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties-delegatedSubnetArguments' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1179:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1330:9
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties-privateDnsZoneArguments' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1220:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1338:9
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1319:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1377:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1461:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1425:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1550:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1467:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1705:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1509:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1779:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1540:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1830:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1566:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1896:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1585:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1991:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1620:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2129:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2221:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1695:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2331:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1720:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2502:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1780:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2565:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1796:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2650:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2020-02-14-preview/postgresql.json:1817:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2017-12-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:239:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:1814:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:467:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:1897:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:545:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:1936:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForDefaultCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:601:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:1983:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:674:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2008:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForGeoRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:745:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2032:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForReplica' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:793:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2050:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:841:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2068:5
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1031:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2136:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1067:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2159:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1166:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2192:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1201:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2202:9
 warning | PreCheck/SchemaMissingType | The schema 'ServerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1325:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2247:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1367:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2259:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1433:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2278:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1464:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2296:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1659:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2376:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1719:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2389:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1747:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2404:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1789:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2416:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1941:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2449:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1969:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2464:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2011:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2476:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2121:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2501:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2223:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2539:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2265:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2551:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2395:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2581:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2444:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2600:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierServiceLevelObjectives' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2486:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2612:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2677:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2654:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2872:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2700:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2914:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2712:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2977:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2728:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3041:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2745:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3063:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2754:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3159:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2789:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3187:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2017-12-01/postgresql.json:2804:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2018-06-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:380:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PrivateEndpointConnections.json:384:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:402:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PrivateEndpointConnections.json:393:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:724:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PrivateLinkResources.json:187:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:826:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:393:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTextProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:848:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryText' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:908:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:415:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueryStatisticsInputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1004:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:449:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueryStatisticsInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1159:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:489:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatisticProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1185:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:502:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1436:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:554:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatisticsInputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1532:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:588:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatisticsInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1620:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:612:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatisticProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1646:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:625:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1859:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/QueryPerformanceInsights.json:672:5
 warning | PreCheck/SchemaMissingType | The schema 'AdvisorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2054:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json:378:5
 warning | PreCheck/SchemaMissingType | The schema 'Advisor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2071:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json:382:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendationActionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2167:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json:416:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2378:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json:459:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedActionSessionsOperationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2474:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json:493:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2556:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2018-06-01/PerformanceRecommendations.json:511:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | ? | Operation 'WaitStatistics/ListByServer' really should not have a media type (because there should be no body)
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2020-01-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:199:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2020-01-01/DataEncryptionKeys.json:299:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.dbforpostgresql-2017-12-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:214:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:1942:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:450:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2041:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:528:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2080:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForDefaultCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:576:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2119:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:649:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2144:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForGeoRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:720:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2168:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForReplica' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:768:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2186:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:816:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2204:5
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1006:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2272:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1042:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2295:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1137:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2324:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1168:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2330:9
 warning | PreCheck/SchemaMissingType | The schema 'ServerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1288:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2371:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1330:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2383:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1396:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2402:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1427:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2420:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1622:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2500:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1682:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2513:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1710:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2528:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1752:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2540:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1904:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2573:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1932:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2588:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1974:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2600:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2084:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2625:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2186:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2663:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2228:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2675:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2358:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2705:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2407:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2724:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierServiceLevelObjectives' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2449:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2736:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2640:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2778:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2835:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2824:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2877:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2836:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2940:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2852:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3211:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2937:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3301:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2965:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3407:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:2990:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3503:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:3025:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerAdministratorResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3531:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/preview/2017-12-01-preview/postgresql.json:3040:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous

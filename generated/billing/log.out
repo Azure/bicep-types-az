@@ -1,13 +1,16 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.billing-2021-10-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -16,168 +19,172 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.billing-2020-05-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:3704:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:124:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:3744:5
 warning | PreCheck/SchemaMissingType | The schema 'TransferProductRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:325:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:3810:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:500:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:3895:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:596:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:3929:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfilesOnExpand' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:749:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4021:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountUpdateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:796:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4038:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPropertyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:848:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4064:5
 warning | PreCheck/SchemaMissingType | The schema 'Enrollment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1195:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4179:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1400:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4229:5
 warning | PreCheck/SchemaMissingType | The schema 'DepartmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1467:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4270:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1601:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4310:5
 warning | PreCheck/SchemaMissingType | The schema 'InstructionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1772:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4349:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1839:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4367:5
 warning | PreCheck/SchemaMissingType | The schema 'InstructionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1964:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4417:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileCreationRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2074:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4446:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2166:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4474:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionsOnExpand' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2448:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4604:5
 warning | PreCheck/SchemaMissingType | The schema 'AddressDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2495:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4621:5
 warning | PreCheck/SchemaMissingType | The schema 'IndirectRelationshipInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2811:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4686:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionCreationRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2892:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4703:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2931:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4712:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3051:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4752:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionWithCreateSubPermission' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3281:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4818:5
 warning | PreCheck/SchemaMissingType | The schema 'AzurePlan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3488:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4901:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadUrl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3550:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4915:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3615:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4931:5
 warning | PreCheck/SchemaMissingType | The schema 'Reseller' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3836:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:4989:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3900:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5004:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3988:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5025:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4108:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5065:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4514:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5236:5
 warning | PreCheck/SchemaMissingType | The schema 'RebillDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4615:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5276:5
 warning | PreCheck/SchemaMissingType | The schema 'Document' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4709:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5300:5
 warning | PreCheck/SchemaMissingType | The schema 'ProductsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4768:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5338:5
 warning | PreCheck/SchemaMissingType | The schema 'ProductProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4888:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5378:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingSubscriptionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5427:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5576:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5547:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5616:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountContext' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5880:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5713:5
 warning | PreCheck/SchemaMissingType | The schema 'TransactionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5984:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5749:5
 warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6104:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:5789:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6845:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6008:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomerPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6916:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6066:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailableBalanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6971:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6099:5
 warning | PreCheck/SchemaMissingType | The schema 'Amount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6994:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6109:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7107:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6137:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7220:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6164:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7287:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6182:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7383:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6216:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7621:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6266:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7717:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6300:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPermissionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7805:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6322:5
 warning | PreCheck/SchemaMissingType | The schema 'AgreementListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7943:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6362:5
 warning | PreCheck/SchemaMissingType | The schema 'AgreementProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8039:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6396:5
 warning | PreCheck/SchemaMissingType | The schema 'Participants' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8193:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6484:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8317:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6515:5
 warning | PreCheck/SchemaMissingType | The schema 'Reservation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8389:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6538:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationSkuProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8510:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6574:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8551:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2020-05-01/billing.json:6584:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.billing-2018-03-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billingV2.json:222:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountSummaryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:100:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billingV2.json:240:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPeriodsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:170:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billingV2.json:266:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPeriodProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:237:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billingV2.json:284:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:345:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billingV2.json:309:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:566:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billingV2.json:367:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:798:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:408:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:865:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:426:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPeriodsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:935:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:452:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPeriodProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1002:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:470:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadUrl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1110:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:495:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1175:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:511:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoicesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1314:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:557:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1381:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:575:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1539:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:613:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1629:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:635:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1696:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-03-01-preview/billing.json:653:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EnrollmentAccountListResult' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:2" => "#/components/schemas/schemas:38"
@@ -192,324 +199,336 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' 
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetails' -> 'ErrorDetailsAutoGenerated'
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.billing-2020-09-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:697:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2020-09-01-preview/billingPromotions.json:368:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.billing-2020-11-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PromotionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:134:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2020-11-01-preview/billingPromotions.json:218:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:654:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2020-11-01-preview/billingPromotions.json:355:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.billing-2019-10-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:5609:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:100:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:5643:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:557:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:5823:5
 warning | PreCheck/SchemaMissingType | The schema 'RecipientTransferDetailsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1238:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6041:5
 warning | PreCheck/SchemaMissingType | The schema 'TransferDetailsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1305:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6059:5
 warning | PreCheck/SchemaMissingType | The schema 'TransferProductRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1372:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6077:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1833:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6269:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1929:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6303:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountUpdateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2101:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6391:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPropertyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2153:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6417:5
 warning | PreCheck/SchemaMissingType | The schema 'Enrollment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2474:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6521:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2679:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6571:5
 warning | PreCheck/SchemaMissingType | The schema 'DepartmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2717:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6596:5
 warning | PreCheck/SchemaMissingType | The schema 'DepartmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2813:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6630:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2918:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6654:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3014:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6688:5
 warning | PreCheck/SchemaMissingType | The schema 'InstructionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3164:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6723:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3231:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6741:5
 warning | PreCheck/SchemaMissingType | The schema 'InstructionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3356:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6791:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileCreationRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3466:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6820:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3558:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6848:5
 warning | PreCheck/SchemaMissingType | The schema 'AddressDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3788:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:6962:5
 warning | PreCheck/SchemaMissingType | The schema 'IndirectRelationshipInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4016:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7007:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionCreationRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4097:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7024:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4136:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7033:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4232:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7067:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionWithCreateSubPermission' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4351:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7112:5
 warning | PreCheck/SchemaMissingType | The schema 'AzurePlan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4512:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7184:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadUrl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4574:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7198:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4639:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7214:5
 warning | PreCheck/SchemaMissingType | The schema 'Reseller' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4860:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7272:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4924:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7287:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5012:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7308:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5132:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7348:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5458:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7492:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceRebillDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5559:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7532:5
 warning | PreCheck/SchemaMissingType | The schema 'Document' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5631:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7560:5
 warning | PreCheck/SchemaMissingType | The schema 'ProductsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5723:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7593:5
 warning | PreCheck/SchemaMissingType | The schema 'ProductProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5819:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7627:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingSubscriptionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6373:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7818:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6469:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7852:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountContext' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6739:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7937:5
 warning | PreCheck/SchemaMissingType | The schema 'TransactionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6843:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:7973:5
 warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6939:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8007:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7634:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8216:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomerPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7705:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8274:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailableBalanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7760:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8307:5
 warning | PreCheck/SchemaMissingType | The schema 'Amount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7783:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8317:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentMethodsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7845:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8331:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentMethodProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7941:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8365:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8109:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8424:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8199:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8446:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentPayload' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8266:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8464:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8326:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8477:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8422:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8511:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8683:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8566:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8779:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8600:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPermissionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8867:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8622:5
 warning | PreCheck/SchemaMissingType | The schema 'AgreementListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9005:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8662:5
 warning | PreCheck/SchemaMissingType | The schema 'AgreementProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9101:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8696:5
 warning | PreCheck/SchemaMissingType | The schema 'ValidateTransferListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9255:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8758:5
 warning | PreCheck/SchemaMissingType | The schema 'ValidationResultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9412:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8805:5
 warning | PreCheck/SchemaMissingType | The schema 'Participants' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9499:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2019-10-01-preview/billing.json:8825:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Modeler/MissingType | The enum schema 'BillingProfileStatusReasonCode' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
 warning | Modeler/MissingType | The enum schema 'BillingProfileSpendingLimit' with an undefined type and enum values is ambiguous. This has been auto-corrected to 'type:string'
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.billing-2018-11-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:374:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4122:5
 warning | PreCheck/SchemaMissingType | The schema 'RecipientTransferDetailsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:894:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4305:5
 warning | PreCheck/SchemaMissingType | The schema 'TransferDetailsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:961:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4323:5
 warning | PreCheck/SchemaMissingType | The schema 'TransferProductRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1028:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4341:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1395:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4473:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1491:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4507:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingAccountUpdateProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1693:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4578:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPropertySummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1745:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4604:5
 warning | PreCheck/SchemaMissingType | The schema 'Enrollment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2039:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4669:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2244:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4719:5
 warning | PreCheck/SchemaMissingType | The schema 'DepartmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2282:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4744:5
 warning | PreCheck/SchemaMissingType | The schema 'DepartmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2378:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4778:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2483:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4802:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2579:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4836:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2729:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4871:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileCreationParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2825:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4905:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2917:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4933:5
 warning | PreCheck/SchemaMissingType | The schema 'Address' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3086:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:4985:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3314:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5030:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3410:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5064:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionCreationRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3497:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5087:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3557:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5100:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3653:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5134:5
 warning | PreCheck/SchemaMissingType | The schema 'EnabledAzureSKUs' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3716:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5150:5
 warning | PreCheck/SchemaMissingType | The schema 'Reseller' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3778:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5164:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3842:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5179:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadUrl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3925:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5197:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3990:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5213:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4100:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5243:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4188:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5264:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceSummaryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4284:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5298:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4534:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5379:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4604:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5400:5
 warning | PreCheck/SchemaMissingType | The schema 'ProductsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4650:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5421:5
 warning | PreCheck/SchemaMissingType | The schema 'ProductSummaryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4746:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5455:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingSubscriptionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5226:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5626:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingSubscriptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5322:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5660:5
 warning | PreCheck/SchemaMissingType | The schema 'EnrollmentAccountContext' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5592:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5745:5
 warning | PreCheck/SchemaMissingType | The schema 'TransactionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5696:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5768:5
 warning | PreCheck/SchemaMissingType | The schema 'TransactionsSummaryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5792:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5802:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6253:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5939:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailableBalanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6312:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5972:5
 warning | PreCheck/SchemaMissingType | The schema 'Amount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6335:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5982:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentMethodsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6397:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:5996:5
 warning | PreCheck/SchemaMissingType | The schema 'PaymentMethodProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6493:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6030:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6662:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6090:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6752:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6112:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentPayload' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6819:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6130:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6879:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6143:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6952:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6172:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7131:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6212:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingRoleDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7204:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6241:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPermissionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7273:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6261:5
 warning | PreCheck/SchemaMissingType | The schema 'AgreementListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7388:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6296:5
 warning | PreCheck/SchemaMissingType | The schema 'AgreementProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7484:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6330:5
 warning | PreCheck/SchemaMissingType | The schema 'Participants' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7620:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6364:5
 warning | PreCheck/SchemaMissingType | The schema 'LineOfCreditProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7737:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2018-11-01-preview/billing.json:6401:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.billing-2017-04-24-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'BillingPeriodsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:59:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:349:5
 warning | PreCheck/SchemaMissingType | The schema 'BillingPeriodProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:126:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:367:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadUrl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:234:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:392:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:299:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:408:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoicesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:437:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:453:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:504:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:471:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:662:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:509:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:752:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:531:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:819:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-04-24-preview/billing.json:549:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.billing-2017-02-27-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DownloadUrl' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:225:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:96:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:241:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoicesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:233:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:285:5
 warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:300:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:303:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:416:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:333:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:506:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:355:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:573:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/preview/2017-02-27-preview/billing.json:373:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 0ms

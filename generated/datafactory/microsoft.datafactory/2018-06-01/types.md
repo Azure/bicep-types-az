@@ -1516,6 +1516,7 @@
 ### LinkedIntegrationRuntimeRbacAuthorization
 #### Properties
 * **authorizationType**: 'RBAC' (Required): The authorization type for integration runtime sharing.
+* **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **resourceId**: string (Required): The resource identifier of the integration runtime to be shared.
 
 
@@ -2130,6 +2131,8 @@
 * **azureCloudType**: any: Any object
 * **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **encryptedCredential**: any: Any object
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
+* **servicePrincipalCredentialType**: any: Any object
 * **servicePrincipalId**: any: Any object
 * **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **tenant**: any: Any object
@@ -2198,8 +2201,10 @@
 ### Properties
 * **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
 * **clusterId**: any: Any object
+* **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **domain**: any (Required): Any object
 * **encryptedCredential**: any: Any object
+* **workspaceResourceId**: any: Any object
 
 ## AzureDataExplorerLinkedServiceTypeProperties
 ### Properties
@@ -2391,6 +2396,7 @@
 * **azureCloudType**: any: Any object
 * **connectionMode**: 'Direct' | 'Gateway': The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
 * **connectionString**: any: Any object
+* **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **database**: any: Any object
 * **encryptedCredential**: any: Any object
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -2431,6 +2437,7 @@
 ## DynamicsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any (Required): Any object
+* **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **deploymentType**: any (Required): Any object
 * **encryptedCredential**: any: Any object
 * **hostName**: any: Any object
@@ -2497,11 +2504,12 @@
 
 ## GoogleAdWordsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
-* **clientCustomerID**: any (Required): Any object
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication': The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+* **clientCustomerID**: any: Any object
 * **clientId**: any: Any object
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
-* **developerToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **connectionProperties**: any: Any object
+* **developerToken**: [SecretBase](#secretbase): The base definition of a secret type.
 * **email**: any: Any object
 * **encryptedCredential**: any: Any object
 * **keyFilePath**: any: Any object
@@ -3284,6 +3292,11 @@
 * **type**: 'ExecuteWranglingDataflow' (Required): Type of activity.
 * **typeProperties**: [ExecutePowerQueryActivityTypeProperties](#executepowerqueryactivitytypeproperties) (Required): Execute power query data flow activity properties.
 
+### FailActivity
+#### Properties
+* **type**: 'Fail' (Required): Type of activity.
+* **typeProperties**: [FailActivityTypeProperties](#failactivitytypeproperties) (Required): Fail activity properties.
+
 ### FilterActivity
 #### Properties
 * **type**: 'Filter' (Required): Type of activity.
@@ -3333,6 +3346,11 @@
 #### Properties
 * **type**: 'Lookup' (Required): Type of activity.
 * **typeProperties**: [LookupActivityTypeProperties](#lookupactivitytypeproperties) (Required): Lookup activity properties.
+
+### ScriptActivity
+#### Properties
+* **type**: 'Script' (Required): Type of activity.
+* **typeProperties**: [ScriptActivityTypeProperties](#scriptactivitytypeproperties) (Required): Script activity properties.
 
 ### SetVariableActivity
 #### Properties
@@ -5182,6 +5200,11 @@
 ### Additional Properties
 * **Additional Properties Type**: [PowerQuerySink](#powerquerysink)
 
+## FailActivityTypeProperties
+### Properties
+* **errorCode**: any (Required): Any object
+* **message**: any (Required): Any object
+
 ## FilterActivityTypeProperties
 ### Properties
 * **condition**: [Expression](#expression) (Required): Azure Data Factory expression definition.
@@ -5329,6 +5352,30 @@
 * **dataset**: [DatasetReference](#datasetreference) (Required): Dataset reference type.
 * **firstRowOnly**: any: Any object
 * **source**: [CopySource](#copysource) (Required): A copy activity source.
+
+## ScriptActivityTypeProperties
+### Properties
+* **logSettings**: [ScriptActivityTypePropertiesLogSettings](#scriptactivitytypepropertieslogsettings): Log settings of script activity.
+* **scripts**: [ScriptActivityScriptBlock](#scriptactivityscriptblock)[]: Array of script blocks. Type: array.
+
+## ScriptActivityTypePropertiesLogSettings
+### Properties
+* **logDestination**: 'ActivityOutput' | 'ExternalStore' (Required): The destination of logs. Type: string.
+* **logLocationSettings**: [LogLocationSettings](#loglocationsettings): Log location settings.
+
+## ScriptActivityScriptBlock
+### Properties
+* **parameters**: [ScriptActivityParameter](#scriptactivityparameter)[]: Array of script parameters. Type: array.
+* **text**: any (Required): Any object
+* **type**: 'NonQuery' | 'Query' (Required): The type of the query. Type: string.
+
+## ScriptActivityParameter
+### Properties
+* **direction**: 'Input' | 'InputOutput' | 'Output': The direction of the parameter.
+* **name**: any: Any object
+* **size**: int: The size of the output direction parameter.
+* **type**: 'Boolean' | 'DateTime' | 'DateTimeOffset' | 'Decimal' | 'Double' | 'Guid' | 'Int16' | 'Int32' | 'Int64' | 'Single' | 'String' | 'Timespan': The type of the parameter.
+* **value**: any: Any object
 
 ## SetVariableActivityTypeProperties
 ### Properties

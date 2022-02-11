@@ -145,6 +145,11 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases' (ReadOnly, DeployTimeConstant): The resource type
+### ReadOnlyFollowingDatabase
+#### Properties
+* **kind**: 'ReadOnlyFollowing' (Required): Kind of the database
+* **properties**: [ReadOnlyFollowingDatabaseProperties](#readonlyfollowingdatabaseproperties): Class representing the Kusto database properties.
+
 ### ReadWriteDatabase
 #### Properties
 * **kind**: 'ReadWrite' (Required): Kind of the database
@@ -473,6 +478,7 @@
 * **settings**: [WorkspacePropertiesSettings](#workspacepropertiessettings) (ReadOnly): Workspace settings
 * **sqlAdministratorLogin**: string: Login for workspace SQL active directory administrator
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password
+* **trustedServiceBypassEnabled**: bool: Is trustedServiceBypassEnabled for the workspace
 * **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): Virtual Network Profile
 * **workspaceRepositoryConfiguration**: [WorkspaceRepositoryConfiguration](#workspacerepositoryconfiguration): Git integration settings
 * **workspaceUID**: string (ReadOnly): The workspace unique identifier
@@ -664,7 +670,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **autoPause**: [AutoPauseProperties](#autopauseproperties): Auto-pausing properties of a Big Data pool powered by Apache Spark
 * **autoScale**: [AutoScaleProperties](#autoscaleproperties): Auto-scaling properties of a Big Data pool powered by Apache Spark
 * **cacheSize**: int: The cache size
-* **creationDate**: string: The time when the Big Data pool was created.
+* **creationDate**: string (ReadOnly): The time when the Big Data pool was created.
 * **customLibraries**: [LibraryInfo](#libraryinfo)[]: List of custom libraries/packages associated with the spark pool.
 * **defaultSparkLogFolder**: string: The default folder where Spark logs will be written.
 * **dynamicExecutorAllocation**: [DynamicExecutorAllocation](#dynamicexecutorallocation): Dynamic Executor Allocation Properties
@@ -704,6 +710,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## DynamicExecutorAllocation
 ### Properties
 * **enabled**: bool: Indicates whether Dynamic Executor Allocation is enabled or not.
+* **maxExecutors**: int: The maximum number of executors alloted
+* **minExecutors**: int: The minimum number of executors alloted
 
 ## LibraryRequirements
 ### Properties
@@ -829,6 +837,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **description**: string: Integration runtime description.
 ### ManagedIntegrationRuntime
 #### Properties
+* **managedVirtualNetwork**: [ManagedIntegrationRuntimeManagedVirtualNetworkReference](#managedintegrationruntimemanagedvirtualnetworkreference): Managed integration runtime managed virtual network reference.
 * **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
 * **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
@@ -838,6 +847,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **type**: 'SelfHosted' (Required): Type of integration runtime.
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
 
+
+## ManagedIntegrationRuntimeManagedVirtualNetworkReference
+### Properties
+* **id**: string: The id of the managed virtual network.
+* **referenceName**: string: The reference name of the managed virtual network.
+* **type**: string: The type of the managed virtual network.
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
@@ -1050,6 +1065,20 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **tablesToExclude**: string[]: List of tables to exclude from the follower database
 * **tablesToInclude**: string[]: List of tables to include in the follower database
 
+## ReadOnlyFollowingDatabaseProperties
+### Properties
+* **attachedDatabaseConfigurationName**: string (ReadOnly): The name of the attached database configuration cluster
+* **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
+* **leaderClusterResourceId**: string (ReadOnly): The name of the leader cluster
+* **principalsModificationKind**: 'None' | 'Replace' | 'Union' (ReadOnly): The principals modification kind of the database
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
+* **softDeletePeriod**: string (ReadOnly): The time the data should be kept before it stops being accessible to queries in TimeSpan.
+* **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
+
+## DatabaseStatistics
+### Properties
+* **size**: int: The database size - the total size of compressed data and index in bytes.
+
 ## ReadWriteDatabaseProperties
 ### Properties
 * **hotCachePeriod**: string: The time the data should be kept in cache for fast queries in TimeSpan.
@@ -1057,10 +1086,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **softDeletePeriod**: string: The time the data should be kept before it stops being accessible to queries in TimeSpan.
 * **statistics**: [DatabaseStatistics](#databasestatistics) (ReadOnly): A class that contains database statistics information.
-
-## DatabaseStatistics
-### Properties
-* **size**: int: The database size - the total size of compressed data and index in bytes.
 
 ## EventGridConnectionProperties
 ### Properties
@@ -1140,7 +1165,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SqlPoolResourceProperties
 ### Properties
 * **collation**: string: Collation mode
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore': Specifies the mode of sql pool creation.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore' (WriteOnly): Specifies the mode of sql pool creation.
 
 Default: regular sql pool creation.
 
@@ -1149,15 +1174,15 @@ PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an
 Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
 
 Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-* **creationDate**: string: Date the SQL pool was created
+* **creationDate**: string (ReadOnly): Date the SQL pool was created
 * **maxSizeBytes**: int: Maximum size in bytes
 * **provisioningState**: string: Resource state
 * **recoverableDatabaseId**: string: Backup database to restore from
 * **restorePointInTime**: string: Snapshot time to restore
 * **sourceDatabaseDeletionDate**: string: Specifies the time that the sql pool was deleted
-* **sourceDatabaseId**: string: Source database to create from
-* **status**: string: Resource status
-* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this sql pool.
+* **sourceDatabaseId**: string (WriteOnly): Source database to create from
+* **status**: string (ReadOnly): Resource status
+* **storageAccountType**: 'GRS' | 'LRS': The storage account type used to store backups for this sql pool.
 
 ## Sku
 ### Properties
@@ -1372,7 +1397,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## MetadataSyncConfigProperties
 ### Properties
 * **enabled**: bool: Indicates whether the metadata sync is enabled or disabled
-* **syncIntervalInMinutes**: int: The Sync Interval in minutes.
+* **syncIntervalInMinutes**: int (ReadOnly): The Sync Interval in minutes.
 
 ## SensitivityLabelProperties
 ### Properties

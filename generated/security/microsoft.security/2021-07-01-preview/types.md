@@ -87,7 +87,12 @@
 #### Properties
 * **arcAutoProvisioning**: [DefenderForServersAwsOfferingArcAutoProvisioning](#defenderforserversawsofferingarcautoprovisioning): The ARC autoprovisioning configuration
 * **defenderForServers**: [DefenderForServersAwsOfferingDefenderForServers](#defenderforserversawsofferingdefenderforservers): The Defender for servers connection configuration
-* **offeringType**: 'DefenderForServersAWS' (Required): The type of the security offering.
+* **offeringType**: 'DefenderForServersAws' (Required): The type of the security offering.
+
+### InformationProtectionAwsOffering
+#### Properties
+* **informationProtection**: [InformationProtectionAwsOfferingInformationProtection](#informationprotectionawsofferinginformationprotection): The native cloud connection configuration
+* **offeringType**: 'InformationProtectionAws' (Required): The type of the security offering.
 
 
 ## CspmMonitorAwsOfferingNativeCloudConnection
@@ -122,6 +127,10 @@
 * **parameterStoreRegion**: string: region of parameter store where secret is kept
 
 ## DefenderForServersAwsOfferingDefenderForServers
+### Properties
+* **cloudRoleArn**: string: The cloud role ARN in AWS for this feature
+
+## InformationProtectionAwsOfferingInformationProtection
 ### Properties
 * **cloudRoleArn**: string: The cloud role ARN in AWS for this feature
 

@@ -25,15 +25,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/tables@2021-06-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [TableProperties](#tableproperties): Table properties.
-* **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -139,11 +130,4 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## TableProperties
-### Properties
-* **isTroubleshootEnabled**: bool: Enable or disable troubleshoot for this table.
-* **isTroubleshootingAllowed**: bool (ReadOnly): Specifies if IsTroubleshootingEnabled property can be set for this table.
-* **lastTroubleshootDate**: string (ReadOnly): Last time when troubleshooting was set for this table.
-* **retentionInDays**: int: The data table data retention in days, between 7 and 730. Setting this property to null will default to the workspace retention.
 

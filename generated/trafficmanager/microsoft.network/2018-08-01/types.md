@@ -11,6 +11,33 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/trafficmanagerprofiles/AzureEndpoints@2018-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **type**: 'Microsoft.Network/trafficmanagerprofiles/AzureEndpoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/trafficmanagerprofiles/ExternalEndpoints@2018-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **type**: 'Microsoft.Network/trafficmanagerprofiles/ExternalEndpoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/trafficmanagerprofiles/NestedEndpoints@2018-08-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [EndpointProperties](#endpointproperties): Class representing a Traffic Manager endpoint properties.
+* **type**: 'Microsoft.Network/trafficmanagerprofiles/NestedEndpoints' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-08-01
 * **Valid Scope(s)**: Subscription
 ### Properties

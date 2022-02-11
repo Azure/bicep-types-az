@@ -1,22 +1,31 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.blueprint-2017-11-11-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:358:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:725:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:401:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:738:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:445:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:746:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -33,21 +42,26 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | Resource type microsoft.blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}' has no body defined.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.blueprint-2018-11-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:383:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:860:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:426:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:873:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:470:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:881:9
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2025:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:1389:5
 warning | PreCheck/SchemaMissingType | The schema 'WhoIsBlueprintContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3205:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintAssignment.json:640:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -62,5 +76,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Generation Complete

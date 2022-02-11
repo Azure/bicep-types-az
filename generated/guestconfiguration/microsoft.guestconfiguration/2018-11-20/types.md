@@ -20,6 +20,7 @@
 * **latestReportId**: string (ReadOnly): Id of the latest report for the guest configuration assignment.
 * **parameterHash**: string (ReadOnly): parameter hash for the guest configuration assignment.
 * **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
+* **resourceType**: string (ReadOnly): Type of the resource - VMSS / VM
 * **vmssVMList**: [VmssvmInfo](#vmssvminfo)[]: The list of VM Compliance data for VMSS
 
 ## GuestConfigurationNavigation

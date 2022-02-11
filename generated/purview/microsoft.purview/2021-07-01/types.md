@@ -32,11 +32,22 @@
 ### Properties
 * **principalId**: string (ReadOnly): Service principal object Id
 * **tenantId**: string (ReadOnly): Tenant Id
-* **type**: 'SystemAssigned': Identity Type
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Identity Type
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): User Assigned Identities
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): Gets or Sets Client ID
+* **principalId**: string (ReadOnly): Gets or Sets Principal ID
 
 ## AccountProperties
 ### Properties
-* **cloudConnectors**: [CloudConnectors](#cloudconnectors)
+* **cloudConnectors**: [CloudConnectors](#cloudconnectors): External Cloud Service connectors
 * **createdAt**: string (ReadOnly): Gets the time at which the entity was created.
 * **createdBy**: string (ReadOnly): Gets the creator of the entity.
 * **createdByObjectId**: string (ReadOnly): Gets the creators of the entity's object id.

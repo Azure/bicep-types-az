@@ -1,20 +1,31 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.streamanalytics-2021-10-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1788:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2021-10-01-preview/functions.json:980:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionQuota-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8032:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2021-10-01-preview/subscriptions.json:359:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -26,49 +37,61 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 21ms
+info    | autorest.bicep took 19ms
 info    | Processing batch task - {"tag":"microsoft.streamanalytics-2020-03-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:81:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/clusters.json:368:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:134:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/clusters.json:390:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:250:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/clusters.json:421:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterJob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:317:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/clusters.json:439:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterJobListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:385:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/clusters.json:458:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:452:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/clusters.json:476:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:524:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/privateEndpoints.json:239:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:574:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/privateEndpoints.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkServiceConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:639:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/privateEndpoints.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkServiceConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:662:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/privateEndpoints.json:285:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:766:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/privateEndpoints.json:309:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:853:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2020-03-01-preview/privateEndpoints.json:329:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.streamanalytics-2017-04-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1813:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2017-04-01-preview/functions.json:980:5
 warning | PreCheck/SchemaMissingType | The schema 'StreamingJobListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7397:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2017-04-01-preview/streamingjobs.json:692:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionQuota-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7772:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/preview/2017-04-01-preview/subscriptions.json:359:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -81,11 +104,17 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.streamanalytics-2020-03-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionQuota-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7180:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2020-03-01/subscriptions.json:104:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -98,193 +127,199 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 17ms
 info    | Processing batch task - {"tag":"microsoft.streamanalytics-2016-03-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:181:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:528:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:295:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:555:9
 warning | PreCheck/SchemaMissingType | The schema 'StreamingJob' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:409:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:583:5
 warning | PreCheck/SchemaMissingType | The schema 'StreamingJobProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:437:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:598:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:778:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:699:5
 warning | PreCheck/SchemaMissingType | The schema 'StreamingJobListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:804:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:715:5
 warning | PreCheck/SchemaMissingType | The schema 'StartStreamingJobParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:871:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:733:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1110:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/streamingjobs.json:848:5
 warning | PreCheck/SchemaMissingType | The schema 'Input' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1355:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:424:5
 warning | PreCheck/SchemaMissingType | The schema 'InputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1382:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:438:5
 warning | PreCheck/SchemaMissingType | The schema 'StreamInputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1459:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:465:5
 warning | PreCheck/SchemaMissingType | The schema 'ReferenceInputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1487:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:480:5
 warning | PreCheck/SchemaMissingType | The schema 'StreamInputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1515:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:495:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobStreamInputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1560:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:508:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobStreamInputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1589:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:524:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubStreamInputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1634:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:539:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubStreamInputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1663:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:555:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTHubStreamInputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1707:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:569:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTHubStreamInputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1736:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:585:5
 warning | PreCheck/SchemaMissingType | The schema 'ReferenceInputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1859:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:610:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobReferenceInputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1904:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:623:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobReferenceInputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1933:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:639:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1955:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:648:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2081:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:676:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2141:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:689:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2222:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:706:5
 warning | PreCheck/SchemaMissingType | The schema 'Diagnostics' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2266:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:720:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2310:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:733:5
 warning | PreCheck/SchemaMissingType | The schema 'InputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2397:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:753:5
 warning | PreCheck/SchemaMissingType | The schema 'Serialization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2464:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:771:5
 warning | PreCheck/SchemaMissingType | The schema 'CsvSerialization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2492:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:797:5
 warning | PreCheck/SchemaMissingType | The schema 'CsvSerializationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2521:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:813:5
 warning | PreCheck/SchemaMissingType | The schema 'JsonSerialization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2564:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:826:5
 warning | PreCheck/SchemaMissingType | The schema 'JsonSerializationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2593:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:842:5
 warning | PreCheck/SchemaMissingType | The schema 'AvroSerialization' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2619:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:855:5
 warning | PreCheck/SchemaMissingType | The schema 'AvroSerializationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2648:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:871:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceTestStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2665:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:898:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2711:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:913:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2775:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/inputs.json:928:5
 warning | PreCheck/SchemaMissingType | The schema 'Output' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3069:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:466:5
 warning | PreCheck/SchemaMissingType | The schema 'OutputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3097:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:481:5
 warning | PreCheck/SchemaMissingType | The schema 'OutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3151:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:504:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3196:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:517:5
 warning | PreCheck/SchemaMissingType | The schema 'BlobOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3225:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:533:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureTableOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3247:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:542:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureTableOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3276:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:558:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3461:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:595:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3490:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:611:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDatabaseOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3534:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:625:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDatabaseOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3563:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:641:5
 warning | PreCheck/SchemaMissingType | The schema 'DocumentDbOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3585:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:650:5
 warning | PreCheck/SchemaMissingType | The schema 'DocumentDbOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3614:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:666:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusQueueOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3758:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:695:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusQueueOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3787:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:711:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusTopicOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3871:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:732:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceBusTopicOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3900:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:748:5
 warning | PreCheck/SchemaMissingType | The schema 'PowerBIOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3984:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:769:5
 warning | PreCheck/SchemaMissingType | The schema 'PowerBIOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4013:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:785:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreOutputDataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4120:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:811:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreOutputDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4149:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:827:5
 warning | PreCheck/SchemaMissingType | The schema 'OutputListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4277:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:857:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDatabaseDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4344:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:875:5
 warning | PreCheck/SchemaMissingType | The schema 'OAuthBasedDataSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4467:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:900:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4548:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/outputs.json:917:5
 warning | PreCheck/SchemaMissingType | The schema 'Transformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4842:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/transformations.json:241:5
 warning | PreCheck/SchemaMissingType | The schema 'TransformationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4870:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/transformations.json:256:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:4954:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/transformations.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'Function' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5232:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:460:5
 warning | PreCheck/SchemaMissingType | The schema 'FunctionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5259:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:474:5
 warning | PreCheck/SchemaMissingType | The schema 'ScalarFunctionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5327:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:492:5
 warning | PreCheck/SchemaMissingType | The schema 'ScalarFunctionConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5356:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:508:5
 warning | PreCheck/SchemaMissingType | The schema 'FunctionInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5406:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:528:5
 warning | PreCheck/SchemaMissingType | The schema 'FunctionOutput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5449:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:541:5
 warning | PreCheck/SchemaMissingType | The schema 'FunctionBinding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5488:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:550:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceFunctionBinding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5533:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:563:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceFunctionBindingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5562:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:579:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceInputs' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5672:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:608:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceInputColumn' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5735:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:624:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceOutputColumn' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5817:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:642:5
 warning | PreCheck/SchemaMissingType | The schema 'JavaScriptFunctionBinding' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5877:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:655:5
 warning | PreCheck/SchemaMissingType | The schema 'JavaScriptFunctionBindingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5906:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:671:5
 warning | PreCheck/SchemaMissingType | The schema 'FunctionRetrieveDefaultDefinitionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5945:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:680:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceFunctionRetrieveDefaultDefinitionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5990:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:693:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMachineLearningWebServiceFunctionBindingRetrievalProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6019:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:709:5
 warning | PreCheck/SchemaMissingType | The schema 'JavaScriptFunctionRetrieveDefaultDefinitionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6062:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:722:5
 warning | PreCheck/SchemaMissingType | The schema 'JavaScriptFunctionBindingRetrievalProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6091:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:738:5
 warning | PreCheck/SchemaMissingType | The schema 'FunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6134:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:751:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6201:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/functions.json:780:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionQuotasListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6495:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/subscriptions.json:81:5
 warning | PreCheck/SchemaMissingType | The schema 'SubscriptionQuota-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6569:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/subscriptions.json:103:9
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6640:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/streamanalytics/resource-manager/Microsoft.StreamAnalytics/stable/2016-03-01/subscriptions.json:124:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
@@ -293,5 +328,5 @@ warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will 
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 9ms
 info    | Generation Complete

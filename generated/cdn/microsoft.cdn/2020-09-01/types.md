@@ -284,7 +284,7 @@
 
 ## RouteProperties
 ### Properties
-* **compressionSettings**: any: Any object
+* **compressionSettings**: [CompressionSettings](#compressionsettings): settings for compression.
 * **customDomains**: [ResourceReference](#resourcereference)[]: Domains referenced by this endpoint.
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
 * **enabledState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
@@ -298,6 +298,11 @@
 * **queryStringCachingBehavior**: 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
 * **ruleSets**: [ResourceReference](#resourcereference)[]: rule sets referenced by this endpoint.
 * **supportedProtocols**: 'Http' | 'Https'[]: List of supported protocols for this route.
+
+## CompressionSettings
+### Properties
+* **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
+* **isCompressionEnabled**: bool: Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
 
 ## ResourceReference
 ### Properties
@@ -538,7 +543,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
 * **selector**: string: Name of Cookies to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## HttpVersionMatchConditionParameters
 ### Properties
@@ -553,7 +558,7 @@
 * **matchValues**: 'Desktop' | 'Mobile'[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## PostArgsMatchConditionParameters
 ### Properties
@@ -562,7 +567,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
 * **selector**: string: Name of PostArg to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## QueryStringMatchConditionParameters
 ### Properties
@@ -570,7 +575,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RemoteAddressMatchConditionParameters
 ### Properties
@@ -578,7 +583,7 @@
 * **matchValues**: string[]: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RequestBodyMatchConditionParameters
 ### Properties
@@ -586,7 +591,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
@@ -595,7 +600,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
 * **selector**: string: Name of Header to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## RequestMethodMatchConditionParameters
 ### Properties
@@ -617,7 +622,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## UrlFileExtensionMatchConditionParameters
 ### Properties
@@ -625,7 +630,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
@@ -633,7 +638,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## UrlPathMatchConditionParameters
 ### Properties
@@ -641,7 +646,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | 'Wildcard' (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'Uppercase'[]: List of transforms
+* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode'[]: List of transforms
 
 ## GeoFilter
 ### Properties
@@ -817,8 +822,16 @@
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
 * **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status
-* **sharedPrivateLinkResource**: any: Any object
+* **sharedPrivateLinkResource**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource to use when connecting to a private origin.
 * **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+
+## SharedPrivateLinkResourceProperties
+### Properties
+* **groupId**: string: The group id from the provider of resource the shared private link resource is for.
+* **privateLink**: [ResourceReference](#resourcereference): Reference to another resource.
+* **privateLinkLocation**: string: The location of the shared private link resource
+* **requestMessage**: string: The request message for requesting approval of the shared private link resource.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
 
 ## RuleSetProperties
 ### Properties

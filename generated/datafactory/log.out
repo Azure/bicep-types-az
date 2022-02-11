@@ -1,604 +1,619 @@
-
-WARNING: AutoRest has not been tested with Node versions greater than v14.
-
-AutoRest code generation utility [cli version: 3.4.2; node: v16.13.0]
+SourceMapConsumer.initialize is a no-op when running in node.js
+AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.6.6)
+SourceMapConsumer.initialize is a no-op when running in node.js
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Processing batch task - {"tag":"microsoft.datafactory-2018-06-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:231:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4370:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:414:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4411:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResourceDebugResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:525:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4437:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:922:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4568:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:973:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4592:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeDebugResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1003:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4609:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1033:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:4626:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryRepoUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2489:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5085:5
 warning | PreCheck/SchemaMissingType | The schema 'GitHubAccessTokenRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2532:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5098:5
 warning | PreCheck/SchemaMissingType | The schema 'GitHubAccessTokenResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2621:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5123:5
 warning | PreCheck/SchemaMissingType | The schema 'UserAccessPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2660:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5132:5
 warning | PreCheck/SchemaMissingType | The schema 'AccessPolicyResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2783:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5157:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2847:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5174:5
 warning | PreCheck/SchemaMissingType | The schema 'EncryptionConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2955:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5237:5
 warning | PreCheck/SchemaMissingType | The schema 'CMKIdentityDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3044:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5262:5
 warning | PreCheck/SchemaMissingType | The schema 'PipelineReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3209:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5330:5
 warning | PreCheck/SchemaMissingType | The schema 'TriggerPipelineReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3277:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5354:5
 warning | PreCheck/SchemaMissingType | The schema 'TriggerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3303:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5367:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3385:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5407:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3458:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5428:5
 warning | PreCheck/SchemaMissingType | The schema 'DatasetReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3577:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5477:5
 warning | PreCheck/SchemaMissingType | The schema 'DatasetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3628:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5501:5
 warning | PreCheck/SchemaMissingType | The schema 'DatasetDebugResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3658:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5518:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3688:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5535:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3739:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5559:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceDebugResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3769:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:5576:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5489:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6071:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5622:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6099:9
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowStagingInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6916:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6427:5
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7847:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6667:5
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowDebugResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7877:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6684:5
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:7907:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6701:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedPrivateEndpointResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8068:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6752:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedVirtualNetworkReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8165:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6789:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedVirtualNetworkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8212:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json:6809:5
 warning | PreCheck/SchemaMissingType | The schema 'MappingDataFlowTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9787:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/DataFlow.json:89:5
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10281:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/DataFlow.json:231:5
 warning | PreCheck/SchemaMissingType | The schema 'DataFlowSink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10320:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/DataFlow.json:257:5
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3DatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12194:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:501:5
 warning | PreCheck/SchemaMissingType | The schema 'AvroDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12397:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:558:5
 warning | PreCheck/SchemaMissingType | The schema 'ExcelDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12497:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:610:5
 warning | PreCheck/SchemaMissingType | The schema 'ParquetDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12676:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:663:5
 warning | PreCheck/SchemaMissingType | The schema 'DelimitedTextDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12755:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:696:5
 warning | PreCheck/SchemaMissingType | The schema 'JsonDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13026:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:781:5
 warning | PreCheck/SchemaMissingType | The schema 'XmlDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13109:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:818:5
 warning | PreCheck/SchemaMissingType | The schema 'OrcDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13216:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:859:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13355:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:939:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13534:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:992:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13609:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1021:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlMITableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13729:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1055:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDWTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13849:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1089:5
 warning | PreCheck/SchemaMissingType | The schema 'CassandraTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13969:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1123:5
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbSqlApiCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14118:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1172:5
 warning | PreCheck/SchemaMissingType | The schema 'DocumentDbCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14196:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1204:5
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14271:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1233:5
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsCrmEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14343:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1259:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonDataServiceForAppsEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14415:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1285:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14487:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1311:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobFSDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14591:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1349:5
 warning | PreCheck/SchemaMissingType | The schema 'Office365DatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14698:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1390:5
 warning | PreCheck/SchemaMissingType | The schema 'FileShareDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14797:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1423:5
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14976:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1476:5
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbAtlasCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15054:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1508:5
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbV2CollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15132:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1540:5
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbMongoDbApiCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15210:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1572:5
 warning | PreCheck/SchemaMissingType | The schema 'ODataResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15285:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1601:5
 warning | PreCheck/SchemaMissingType | The schema 'OracleTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15357:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1627:5
 warning | PreCheck/SchemaMissingType | The schema 'TeradataTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15574:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1692:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMySqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15673:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1725:5
 warning | PreCheck/SchemaMissingType | The schema 'AmazonRedshiftTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15769:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1755:5
 warning | PreCheck/SchemaMissingType | The schema 'Db2TableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15889:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1789:5
 warning | PreCheck/SchemaMissingType | The schema 'RelationalTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16009:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1823:5
 warning | PreCheck/SchemaMissingType | The schema 'InformixTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16081:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1849:5
 warning | PreCheck/SchemaMissingType | The schema 'OdbcTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16153:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1875:5
 warning | PreCheck/SchemaMissingType | The schema 'MySqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16225:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1901:5
 warning | PreCheck/SchemaMissingType | The schema 'PostgreSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16297:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1927:5
 warning | PreCheck/SchemaMissingType | The schema 'MicrosoftAccessTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16417:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1961:5
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceObjectDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16489:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:1987:5
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceServiceCloudObjectDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16561:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2013:5
 warning | PreCheck/SchemaMissingType | The schema 'SybaseTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16633:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2039:5
 warning | PreCheck/SchemaMissingType | The schema 'SapCloudForCustomerResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16732:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2079:5
 warning | PreCheck/SchemaMissingType | The schema 'SapEccResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16810:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2111:5
 warning | PreCheck/SchemaMissingType | The schema 'SapHanaTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16885:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2140:5
 warning | PreCheck/SchemaMissingType | The schema 'SapOpenHubTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16984:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2173:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17107:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2210:5
 warning | PreCheck/SchemaMissingType | The schema 'RestResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17324:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2275:5
 warning | PreCheck/SchemaMissingType | The schema 'SapTableResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17495:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2320:5
 warning | PreCheck/SchemaMissingType | The schema 'WebTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17573:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2352:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSearchIndexDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17675:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2388:5
 warning | PreCheck/SchemaMissingType | The schema 'HttpDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17750:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2417:5
 warning | PreCheck/SchemaMissingType | The schema 'GenericDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17872:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2446:5
 warning | PreCheck/SchemaMissingType | The schema 'AzurePostgreSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17974:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2489:5
 warning | PreCheck/SchemaMissingType | The schema 'DrillDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18154:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2557:5
 warning | PreCheck/SchemaMissingType | The schema 'GoogleBigQueryDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18304:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2608:5
 warning | PreCheck/SchemaMissingType | The schema 'GreenplumDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18424:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2642:5
 warning | PreCheck/SchemaMissingType | The schema 'HiveDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18574:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2693:5
 warning | PreCheck/SchemaMissingType | The schema 'ImpalaDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18724:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2744:5
 warning | PreCheck/SchemaMissingType | The schema 'PhoenixDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19024:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2880:5
 warning | PreCheck/SchemaMissingType | The schema 'PrestoDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19144:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2914:5
 warning | PreCheck/SchemaMissingType | The schema 'SparkDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19354:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:2999:5
 warning | PreCheck/SchemaMissingType | The schema 'NetezzaTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19564:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3084:5
 warning | PreCheck/SchemaMissingType | The schema 'VerticaDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19684:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3118:5
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsAXResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19867:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3189:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19975:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3238:5
 warning | PreCheck/SchemaMissingType | The schema 'SnowflakeDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20080:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3284:5
 warning | PreCheck/SchemaMissingType | The schema 'SharePointOnlineListDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20176:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3314:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksDeltaLakeDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20248:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Dataset.json:3340:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22290:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/IntegrationRuntime.json:787:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22487:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/IntegrationRuntime.json:830:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22580:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/IntegrationRuntime.json:865:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:23302:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/IntegrationRuntime.json:1071:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25501:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:116:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25596:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:141:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDWLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25846:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:214:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26032:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:274:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDatabaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26301:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:371:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlMILinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26491:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:435:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlAlwaysEncryptedProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26648:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:479:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureBatchLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26742:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:532:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureKeyVaultLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26907:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:591:5
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26989:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:627:5
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27232:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:716:5
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsCrmLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27535:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:822:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonDataServiceForAppsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27838:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:911:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28141:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:988:5
 warning | PreCheck/SchemaMissingType | The schema 'FileServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28327:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1048:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFileStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28457:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1092:5
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3CompatibleLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28688:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1157:5
 warning | PreCheck/SchemaMissingType | The schema 'OracleCloudStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28839:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1202:5
 warning | PreCheck/SchemaMissingType | The schema 'GoogleCloudStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28966:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1243:5
 warning | PreCheck/SchemaMissingType | The schema 'OracleLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29093:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1284:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMySqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29306:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1365:5
 warning | PreCheck/SchemaMissingType | The schema 'MySqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29412:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1405:5
 warning | PreCheck/SchemaMissingType | The schema 'PostgreSqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29518:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1445:5
 warning | PreCheck/SchemaMissingType | The schema 'SybaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29624:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1485:5
 warning | PreCheck/SchemaMissingType | The schema 'Db2LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29811:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1550:5
 warning | PreCheck/SchemaMissingType | The schema 'TeradataLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30042:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1618:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30201:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1675:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLServiceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30408:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1736:5
 warning | PreCheck/SchemaMissingType | The schema 'OdbcLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30612:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1794:5
 warning | PreCheck/SchemaMissingType | The schema 'InformixLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30770:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1846:5
 warning | PreCheck/SchemaMissingType | The schema 'MicrosoftAccessLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:30928:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1898:5
 warning | PreCheck/SchemaMissingType | The schema 'HdfsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31086:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1950:5
 warning | PreCheck/SchemaMissingType | The schema 'ODataLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31240:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:1998:5
 warning | PreCheck/SchemaMissingType | The schema 'WebAnonymousAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31575:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2128:5
 warning | PreCheck/SchemaMissingType | The schema 'WebBasicAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31597:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2137:5
 warning | PreCheck/SchemaMissingType | The schema 'WebClientCertificateAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31653:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2160:5
 warning | PreCheck/SchemaMissingType | The schema 'CassandraLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31722:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2203:5
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31900:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2255:5
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbAtlasLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32159:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2332:5
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbV2LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32262:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2369:5
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbMongoDbApiLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32365:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2406:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32492:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2447:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobFSLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32746:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2515:5
 warning | PreCheck/SchemaMissingType | The schema 'Office365LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:32952:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2583:5
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33109:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2634:5
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceServiceCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33264:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2683:5
 warning | PreCheck/SchemaMissingType | The schema 'SapCloudForCustomerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33443:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2736:5
 warning | PreCheck/SchemaMissingType | The schema 'SapEccLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33573:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2780:5
 warning | PreCheck/SchemaMissingType | The schema 'SapOpenHubLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33694:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2824:5
 warning | PreCheck/SchemaMissingType | The schema 'RestServiceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:33989:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2893:5
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34280:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:2984:5
 warning | PreCheck/SchemaMissingType | The schema 'AmazonRedshiftLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34435:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3033:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureSearchLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34668:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3106:5
 warning | PreCheck/SchemaMissingType | The schema 'HttpLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:34774:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3146:5
 warning | PreCheck/SchemaMissingType | The schema 'FtpServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35008:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3221:5
 warning | PreCheck/SchemaMissingType | The schema 'SftpServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35218:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3289:5
 warning | PreCheck/SchemaMissingType | The schema 'SapBWLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35460:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3370:5
 warning | PreCheck/SchemaMissingType | The schema 'SapHanaLinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35640:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3424:5
 warning | PreCheck/SchemaMissingType | The schema 'AmazonMWSLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:35799:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3481:5
 warning | PreCheck/SchemaMissingType | The schema 'AzurePostgreSqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36056:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3552:5
 warning | PreCheck/SchemaMissingType | The schema 'ConcurLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36159:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3589:5
 warning | PreCheck/SchemaMissingType | The schema 'CouchbaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36386:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3650:5
 warning | PreCheck/SchemaMissingType | The schema 'DrillLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36489:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3687:5
 warning | PreCheck/SchemaMissingType | The schema 'EloquaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36592:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3724:5
 warning | PreCheck/SchemaMissingType | The schema 'GoogleBigQueryLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:36795:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3781:5
 warning | PreCheck/SchemaMissingType | The schema 'GreenplumLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37082:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3866:5
 warning | PreCheck/SchemaMissingType | The schema 'HBaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37185:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3903:5
 warning | PreCheck/SchemaMissingType | The schema 'HiveLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37468:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:3984:5
 warning | PreCheck/SchemaMissingType | The schema 'HubspotLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:37863:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4109:5
 warning | PreCheck/SchemaMissingType | The schema 'ImpalaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38049:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4169:5
 warning | PreCheck/SchemaMissingType | The schema 'JiraLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38332:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4251:5
 warning | PreCheck/SchemaMissingType | The schema 'MagentoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38559:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4312:5
 warning | PreCheck/SchemaMissingType | The schema 'MariaDBLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38737:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4364:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMariaDBLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38840:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4401:5
 warning | PreCheck/SchemaMissingType | The schema 'MarketoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:38943:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4438:5
 warning | PreCheck/SchemaMissingType | The schema 'PaypalLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39146:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4495:5
 warning | PreCheck/SchemaMissingType | The schema 'PhoenixLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39349:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4552:5
 warning | PreCheck/SchemaMissingType | The schema 'PrestoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:39656:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4638:5
 warning | PreCheck/SchemaMissingType | The schema 'QuickBooksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40013:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4733:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceNowLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40220:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4794:5
 warning | PreCheck/SchemaMissingType | The schema 'ShopifyLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40459:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4871:5
 warning | PreCheck/SchemaMissingType | The schema 'SparkLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40637:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:4923:5
 warning | PreCheck/SchemaMissingType | The schema 'SquareLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:40961:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5037:5
 warning | PreCheck/SchemaMissingType | The schema 'XeroLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41208:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5098:5
 warning | PreCheck/SchemaMissingType | The schema 'ZohoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41411:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5155:5
 warning | PreCheck/SchemaMissingType | The schema 'VerticaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41610:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5208:5
 warning | PreCheck/SchemaMissingType | The schema 'NetezzaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41713:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5245:5
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceMarketingCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:41816:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5282:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightOnDemandLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:42015:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5335:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeAnalyticsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:42882:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5551:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43109:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5612:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksDetltaLakeLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43642:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5728:5
 warning | PreCheck/SchemaMissingType | The schema 'ResponsysLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43772:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5780:5
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsAXLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:43975:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5837:5
 warning | PreCheck/SchemaMissingType | The schema 'OracleServiceCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44157:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5893:5
 warning | PreCheck/SchemaMissingType | The schema 'GoogleAdWordsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44361:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:5951:5
 warning | PreCheck/SchemaMissingType | The schema 'SapTableLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:44605:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:6032:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45020:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:6121:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45179:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:6174:5
 warning | PreCheck/SchemaMissingType | The schema 'SnowflakeLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45337:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:6226:5
 warning | PreCheck/SchemaMissingType | The schema 'SharePointOnlineListLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:45443:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/LinkedService.json:6266:5
 warning | PreCheck/SchemaMissingType | The schema 'ControlActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:46416:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:189:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecutionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:46439:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:199:5
 warning | PreCheck/SchemaMissingType | The schema 'CopyActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:51582:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:1528:5
 warning | PreCheck/SchemaMissingType | The schema 'CopyActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:51662:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:1561:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightHiveActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:64778:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5168:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightHiveActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:64810:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5187:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightPigActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65034:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5252:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightPigActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65066:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5271:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightMapReduceActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65209:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5307:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightMapReduceActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65241:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5326:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightStreamingActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65472:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5382:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightStreamingActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65504:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5401:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightSparkActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65852:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5480:5
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightSparkActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:65884:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5499:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteSSISPackageActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:66094:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5548:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteSSISPackageActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:66126:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5567:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67061:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5863:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67093:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5882:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivityReferenceObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67263:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5922:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerStoredProcedureActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67329:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5941:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerStoredProcedureActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67362:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5961:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecutePipelineActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67434:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5980:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecutePipelineActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67466:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:5999:5
 warning | PreCheck/SchemaMissingType | The schema 'DeleteActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67499:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6019:5
 warning | PreCheck/SchemaMissingType | The schema 'DeleteActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67531:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6038:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerCommandActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67634:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6071:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataExplorerCommandActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67666:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6090:5
 warning | PreCheck/SchemaMissingType | The schema 'LookupActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67735:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6106:5
 warning | PreCheck/SchemaMissingType | The schema 'LookupActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67767:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6125:5
 warning | PreCheck/SchemaMissingType | The schema 'WebActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67821:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6160:5
 warning | PreCheck/SchemaMissingType | The schema 'WebActivityAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67853:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6179:5
 warning | PreCheck/SchemaMissingType | The schema 'WebActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:67976:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6212:5
 warning | PreCheck/SchemaMissingType | The schema 'GetMetadataActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68130:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6259:5
 warning | PreCheck/SchemaMissingType | The schema 'GetMetadataActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68162:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6278:5
 warning | PreCheck/SchemaMissingType | The schema 'IfConditionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68237:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6306:5
 warning | PreCheck/SchemaMissingType | The schema 'IfConditionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68269:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6325:5
 warning | PreCheck/SchemaMissingType | The schema 'SwitchActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68342:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6351:5
 warning | PreCheck/SchemaMissingType | The schema 'SwitchActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68374:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6370:5
 warning | PreCheck/SchemaMissingType | The schema 'SwitchCase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68448:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6397:5
 warning | PreCheck/SchemaMissingType | The schema 'ForEachActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68511:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6413:5
 warning | PreCheck/SchemaMissingType | The schema 'ForEachActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68543:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6432:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLBatchExecutionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68619:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6461:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLBatchExecutionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68651:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6480:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLUpdateResourceActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68819:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6525:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLUpdateResourceActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68851:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6544:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLExecutePipelineActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68926:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6566:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLExecutePipelineActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:68958:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6585:5
 warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalyticsUSQLActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69244:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6638:5
 warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalyticsUSQLActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69276:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6657:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69467:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6698:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69499:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6717:5
 warning | PreCheck/SchemaMissingType | The schema 'UntilActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69544:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6767:5
 warning | PreCheck/SchemaMissingType | The schema 'UntilActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69576:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6786:5
 warning | PreCheck/SchemaMissingType | The schema 'ValidationActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69650:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6810:5
 warning | PreCheck/SchemaMissingType | The schema 'ValidationActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69682:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6829:5
 warning | PreCheck/SchemaMissingType | The schema 'FilterActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69803:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6857:5
 warning | PreCheck/SchemaMissingType | The schema 'FilterActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69835:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6876:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksNotebookActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69865:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6893:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksNotebookActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:69897:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6912:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkJarActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70048:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6943:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkJarActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70080:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6962:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkPythonActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70228:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:6993:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksSparkPythonActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70260:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7012:5
 warning | PreCheck/SchemaMissingType | The schema 'SetVariableActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70408:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7043:5
 warning | PreCheck/SchemaMissingType | The schema 'SetVariableActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70440:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7062:5
 warning | PreCheck/SchemaMissingType | The schema 'AppendVariableActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70503:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7075:5
 warning | PreCheck/SchemaMissingType | The schema 'AppendVariableActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70535:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7094:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70598:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7124:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFunctionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70630:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7143:5
 warning | PreCheck/SchemaMissingType | The schema 'WebHookActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70728:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7168:5
 warning | PreCheck/SchemaMissingType | The schema 'WebHookActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70760:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7198:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteDataFlowActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70907:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7235:5
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteDataFlowActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:70976:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Pipeline.json:7278:5
 warning | PreCheck/SchemaMissingType | The schema 'MultiplePipelineTrigger' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71564:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:66:5
 warning | PreCheck/SchemaMissingType | The schema 'ScheduleTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:71644:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:93:9
 warning | PreCheck/SchemaMissingType | The schema 'BlobTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72016:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:268:9
 warning | PreCheck/SchemaMissingType | The schema 'BlobEventsTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72121:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:305:9
 warning | PreCheck/SchemaMissingType | The schema 'CustomEventsTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72274:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:364:9
 warning | PreCheck/SchemaMissingType | The schema 'TumblingWindowTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72440:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:411:9
 warning | PreCheck/SchemaMissingType | The schema 'RetryPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72613:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:482:5
 warning | PreCheck/SchemaMissingType | The schema 'RerunTumblingWindowTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:72982:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:612:9
 warning | PreCheck/SchemaMissingType | The schema 'ChainingTrigger-typeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:73138:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/entityTypes/Trigger.json:662:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSource' has a property 'dataset' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataFlowSource' has a property 'linkedService' that is already declared the parent schema 'Transformation' but isn't significantly different. The property has been removed from DataFlowSource
@@ -2029,341 +2044,211 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 227ms
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 213ms
 info    | Processing batch task - {"tag":"microsoft.datafactory-2017-09-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:31:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2452:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:191:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2488:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:660:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2636:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:711:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2660:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:741:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2677:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryVSTSConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1472:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2905:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryRepoUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1637:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2938:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1701:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:2955:5
 warning | PreCheck/SchemaMissingType | The schema 'PipelineReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1844:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3002:5
 warning | PreCheck/SchemaMissingType | The schema 'TriggerPipelineReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1912:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3026:5
 warning | PreCheck/SchemaMissingType | The schema 'TriggerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:1938:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3039:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2020:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3079:5
 warning | PreCheck/SchemaMissingType | The schema 'FactoryIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2085:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3095:5
 warning | PreCheck/SchemaMissingType | The schema 'DatasetReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2162:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3126:5
 warning | PreCheck/SchemaMissingType | The schema 'DatasetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2213:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3150:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2243:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3167:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:2294:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3191:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3721:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3608:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:3854:4
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/datafactory/resource-manager/Microsoft.DataFactory/preview/2017-09-01-preview/datafactory.json:3636:9
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:5878:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6075:4
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6168:4
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:6820:4
 warning | PreCheck/SchemaMissingType | The schema 'ControlActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8240:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecutionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8263:4
 warning | PreCheck/SchemaMissingType | The schema 'CopyActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8408:4
 warning | PreCheck/SchemaMissingType | The schema 'CopyActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:8488:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightHiveActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9152:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightHiveActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9184:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightPigActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9345:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightPigActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9377:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightMapReduceActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9538:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightMapReduceActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9570:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightStreamingActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9801:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightStreamingActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:9833:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightSparkActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10181:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightSparkActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10213:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteSSISPackageActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10423:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecuteSSISPackageActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:10455:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11186:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11218:4
 warning | PreCheck/SchemaMissingType | The schema 'CustomActivityReferenceObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11340:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerStoredProcedureActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11406:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerStoredProcedureActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11439:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecutePipelineActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11511:4
 warning | PreCheck/SchemaMissingType | The schema 'ExecutePipelineActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11543:4
 warning | PreCheck/SchemaMissingType | The schema 'LookupActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11576:4
 warning | PreCheck/SchemaMissingType | The schema 'LookupActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11608:4
 warning | PreCheck/SchemaMissingType | The schema 'WebActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11662:4
 warning | PreCheck/SchemaMissingType | The schema 'WebActivityAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11694:4
 warning | PreCheck/SchemaMissingType | The schema 'WebActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11786:4
 warning | PreCheck/SchemaMissingType | The schema 'GetMetadataActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11936:4
 warning | PreCheck/SchemaMissingType | The schema 'GetMetadataActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:11968:4
 warning | PreCheck/SchemaMissingType | The schema 'IfConditionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12035:4
 warning | PreCheck/SchemaMissingType | The schema 'IfConditionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12067:4
 warning | PreCheck/SchemaMissingType | The schema 'ForEachActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12140:4
 warning | PreCheck/SchemaMissingType | The schema 'ForEachActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12172:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLBatchExecutionActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12248:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLBatchExecutionActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12280:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLUpdateResourceActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12448:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLUpdateResourceActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12480:4
 warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalyticsUSQLActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12555:4
 warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalyticsUSQLActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12587:4
 warning | PreCheck/SchemaMissingType | The schema 'WaitActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12778:4
 warning | PreCheck/SchemaMissingType | The schema 'WaitActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12810:4
 warning | PreCheck/SchemaMissingType | The schema 'UntilActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12852:4
 warning | PreCheck/SchemaMissingType | The schema 'UntilActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12884:4
 warning | PreCheck/SchemaMissingType | The schema 'FilterActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12958:4
 warning | PreCheck/SchemaMissingType | The schema 'FilterActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:12990:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksNotebookActivity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13020:4
 warning | PreCheck/SchemaMissingType | The schema 'DatabricksNotebookActivityTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13052:4
 warning | PreCheck/SchemaMissingType | The schema 'MultiplePipelineTrigger' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13233:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3DatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13762:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBlobDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:13920:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14051:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14129:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDWTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14207:4
 warning | PreCheck/SchemaMissingType | The schema 'CassandraTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14285:4
 warning | PreCheck/SchemaMissingType | The schema 'DocumentDbCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14384:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsEntityDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14462:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14537:4
 warning | PreCheck/SchemaMissingType | The schema 'FileShareDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14647:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbCollectionDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14778:4
 warning | PreCheck/SchemaMissingType | The schema 'ODataResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14856:4
 warning | PreCheck/SchemaMissingType | The schema 'OracleTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:14931:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMySqlTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15009:4
 warning | PreCheck/SchemaMissingType | The schema 'RelationalTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15084:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceObjectDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15159:4
 warning | PreCheck/SchemaMissingType | The schema 'SapCloudForCustomerResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15234:4
 warning | PreCheck/SchemaMissingType | The schema 'SapEccResourceDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15312:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15390:4
 warning | PreCheck/SchemaMissingType | The schema 'WebTableDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15468:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSearchIndexDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15570:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpDatasetTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:15648:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureStorageLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16657:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDWLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16760:4
 warning | PreCheck/SchemaMissingType | The schema 'SqlServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:16914:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSqlDatabaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17044:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureBatchLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17198:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureKeyVaultLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17359:4
 warning | PreCheck/SchemaMissingType | The schema 'CosmosDbLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17437:4
 warning | PreCheck/SchemaMissingType | The schema 'DynamicsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17539:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17759:4
 warning | PreCheck/SchemaMissingType | The schema 'FileServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:17897:4
 warning | PreCheck/SchemaMissingType | The schema 'OracleLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18027:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMySqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18129:4
 warning | PreCheck/SchemaMissingType | The schema 'MySqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18231:4
 warning | PreCheck/SchemaMissingType | The schema 'PostgreSqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18313:4
 warning | PreCheck/SchemaMissingType | The schema 'SybaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18395:4
 warning | PreCheck/SchemaMissingType | The schema 'Db2LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18582:4
 warning | PreCheck/SchemaMissingType | The schema 'TeradataLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18745:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureMLLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:18883:4
 warning | PreCheck/SchemaMissingType | The schema 'OdbcLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19066:4
 warning | PreCheck/SchemaMissingType | The schema 'HdfsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19224:4
 warning | PreCheck/SchemaMissingType | The schema 'ODataLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19378:4
 warning | PreCheck/SchemaMissingType | The schema 'WebAnonymousAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19573:4
 warning | PreCheck/SchemaMissingType | The schema 'WebBasicAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19595:4
 warning | PreCheck/SchemaMissingType | The schema 'WebClientCertificateAuthentication' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19651:4
 warning | PreCheck/SchemaMissingType | The schema 'CassandraLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19720:4
 warning | PreCheck/SchemaMissingType | The schema 'MongoDbLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:19898:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeStoreLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20157:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20383:4
 warning | PreCheck/SchemaMissingType | The schema 'SapCloudForCustomerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20514:4
 warning | PreCheck/SchemaMissingType | The schema 'SapEccLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20644:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonS3LinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20765:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonRedshiftLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:20868:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureSearchLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:21101:4
 warning | PreCheck/SchemaMissingType | The schema 'HttpLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:21207:4
 warning | PreCheck/SchemaMissingType | The schema 'FtpServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:21417:4
 warning | PreCheck/SchemaMissingType | The schema 'SftpServerLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:21627:4
 warning | PreCheck/SchemaMissingType | The schema 'SapBWLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:21869:4
 warning | PreCheck/SchemaMissingType | The schema 'SapHanaLinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22049:4
 warning | PreCheck/SchemaMissingType | The schema 'AmazonMWSLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22187:4
 warning | PreCheck/SchemaMissingType | The schema 'AzurePostgreSqlLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22444:4
 warning | PreCheck/SchemaMissingType | The schema 'ConcurLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22543:4
 warning | PreCheck/SchemaMissingType | The schema 'CouchbaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22746:4
 warning | PreCheck/SchemaMissingType | The schema 'DrillLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22845:4
 warning | PreCheck/SchemaMissingType | The schema 'EloquaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:22944:4
 warning | PreCheck/SchemaMissingType | The schema 'GoogleBigQueryLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:23147:4
 warning | PreCheck/SchemaMissingType | The schema 'GreenplumLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:23414:4
 warning | PreCheck/SchemaMissingType | The schema 'HBaseLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:23513:4
 warning | PreCheck/SchemaMissingType | The schema 'HiveLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:23796:4
 warning | PreCheck/SchemaMissingType | The schema 'HubspotLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:24191:4
 warning | PreCheck/SchemaMissingType | The schema 'ImpalaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:24377:4
 warning | PreCheck/SchemaMissingType | The schema 'JiraLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:24660:4
 warning | PreCheck/SchemaMissingType | The schema 'MagentoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:24887:4
 warning | PreCheck/SchemaMissingType | The schema 'MariaDBLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25065:4
 warning | PreCheck/SchemaMissingType | The schema 'MarketoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25164:4
 warning | PreCheck/SchemaMissingType | The schema 'PaypalLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25367:4
 warning | PreCheck/SchemaMissingType | The schema 'PhoenixLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25570:4
 warning | PreCheck/SchemaMissingType | The schema 'PrestoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:25877:4
 warning | PreCheck/SchemaMissingType | The schema 'QuickBooksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26234:4
 warning | PreCheck/SchemaMissingType | The schema 'ServiceNowLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26425:4
 warning | PreCheck/SchemaMissingType | The schema 'ShopifyLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26664:4
 warning | PreCheck/SchemaMissingType | The schema 'SparkLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:26842:4
 warning | PreCheck/SchemaMissingType | The schema 'SquareLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27166:4
 warning | PreCheck/SchemaMissingType | The schema 'XeroLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27394:4
 warning | PreCheck/SchemaMissingType | The schema 'ZohoLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27576:4
 warning | PreCheck/SchemaMissingType | The schema 'VerticaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27754:4
 warning | PreCheck/SchemaMissingType | The schema 'NetezzaLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27853:4
 warning | PreCheck/SchemaMissingType | The schema 'SalesforceMarketingCloudLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:27952:4
 warning | PreCheck/SchemaMissingType | The schema 'HDInsightOnDemandLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28130:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDataLakeAnalyticsLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:28810:4
 warning | PreCheck/SchemaMissingType | The schema 'AzureDatabricksLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29037:4
 warning | PreCheck/SchemaMissingType | The schema 'ResponsysLinkedServiceTypeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - openapi-document.json:29285:4
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -2855,5 +2740,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 80ms
+info    | autorest.bicep took 91ms
 info    | Generation Complete

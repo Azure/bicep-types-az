@@ -374,6 +374,7 @@
 * **settings**: [WorkspacePropertiesSettings](#workspacepropertiessettings) (ReadOnly): Workspace settings
 * **sqlAdministratorLogin**: string: Login for workspace SQL active directory administrator
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password
+* **trustedServiceBypassEnabled**: bool: Is trustedServiceBypassEnabled for the workspace
 * **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): Virtual Network Profile
 * **workspaceRepositoryConfiguration**: [WorkspaceRepositoryConfiguration](#workspacerepositoryconfiguration): Git integration settings
 * **workspaceUID**: string (ReadOnly): The workspace unique identifier
@@ -390,7 +391,7 @@
 ## DataLakeStorageAccountDetails
 ### Properties
 * **accountUrl**: string: Account URL
-* **createManagedPrivateEndpoint**: bool: Create managed private endpoint to this storage account or not
+* **createManagedPrivateEndpoint**: bool (WriteOnly): Create managed private endpoint to this storage account or not
 * **filesystem**: string: Filesystem name
 * **resourceId**: string: ARM resource Id of this storage account
 
@@ -540,6 +541,16 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+* **isDevopsAuditEnabled**: bool: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
+In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
+
+When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created.
+
+Diagnostic Settings URI format:
+PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
@@ -565,7 +576,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **autoPause**: [AutoPauseProperties](#autopauseproperties): Auto-pausing properties of a Big Data pool powered by Apache Spark
 * **autoScale**: [AutoScaleProperties](#autoscaleproperties): Auto-scaling properties of a Big Data pool powered by Apache Spark
 * **cacheSize**: int: The cache size
-* **creationDate**: string: The time when the Big Data pool was created.
+* **creationDate**: string (ReadOnly): The time when the Big Data pool was created.
 * **customLibraries**: [LibraryInfo](#libraryinfo)[]: List of custom libraries/packages associated with the spark pool.
 * **defaultSparkLogFolder**: string: The default folder where Spark logs will be written.
 * **dynamicExecutorAllocation**: [DynamicExecutorAllocation](#dynamicexecutorallocation): Dynamic Executor Allocation Properties
@@ -577,7 +588,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **nodeSizeFamily**: 'HardwareAcceleratedFPGA' | 'HardwareAcceleratedGPU' | 'MemoryOptimized' | 'None': The kind of nodes that the Big Data pool provides.
 * **provisioningState**: string: The state of the Big Data pool.
 * **sessionLevelPackagesEnabled**: bool: Whether session level packages enabled.
-* **sparkConfigProperties**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
+* **sparkConfigProperties**: [SparkConfigProperties](#sparkconfigproperties): SparkConfig Properties for a Big Data pool powered by Apache Spark
 * **sparkEventsFolder**: string: The Spark events folder
 * **sparkVersion**: string: The Apache Spark version.
 
@@ -605,12 +616,21 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## DynamicExecutorAllocation
 ### Properties
 * **enabled**: bool: Indicates whether Dynamic Executor Allocation is enabled or not.
+* **maxExecutors**: int: The maximum number of executors alloted
+* **minExecutors**: int: The minimum number of executors alloted
 
 ## LibraryRequirements
 ### Properties
 * **content**: string: The library requirements.
 * **filename**: string: The filename of the library requirements file.
 * **time**: string (ReadOnly): The last update time of the library requirements file.
+
+## SparkConfigProperties
+### Properties
+* **configurationType**: 'Artifact' | 'File': The type of the spark config properties file.
+* **content**: string: The spark config properties.
+* **filename**: string: The filename of the spark config properties file.
+* **time**: string (ReadOnly): The last update time of the spark config properties file.
 
 ## TrackedResourceTags
 ### Properties
@@ -695,6 +715,16 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+* **isDevopsAuditEnabled**: bool: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor.
+In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true
+
+When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created.
+
+Diagnostic Settings URI format:
+PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **isStorageSecondaryKeyInUse**: bool: Specifies whether storageAccountAccessKey value is the storage's secondary key.
 * **predicateExpression**: string: Specifies condition of where clause when creating an audit.
 * **queueDelayMs**: int: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
@@ -723,7 +753,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **description**: string: Integration runtime description.
 ### ManagedIntegrationRuntime
 #### Properties
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
+* **managedVirtualNetwork**: [ManagedIntegrationRuntimeManagedVirtualNetworkReference](#managedintegrationruntimemanagedvirtualnetworkreference): Managed integration runtime managed virtual network reference.
+* **provisioningState**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
 * **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -732,6 +763,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **type**: 'SelfHosted' (Required): Type of integration runtime.
 * **typeProperties**: [SelfHostedIntegrationRuntimeTypeProperties](#selfhostedintegrationruntimetypeproperties): The self-hosted integration runtime properties.
 
+
+## ManagedIntegrationRuntimeManagedVirtualNetworkReference
+### Properties
+* **id**: string: The id of the managed virtual network.
+* **referenceName**: string: The reference name of the managed virtual network
+* **type**: string: The type of the managed virtual network.
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
@@ -905,7 +942,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SqlPoolResourceProperties
 ### Properties
 * **collation**: string: Collation mode
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore': Specifies the mode of sql pool creation.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore' (WriteOnly): Specifies the mode of sql pool creation.
 
 Default: regular sql pool creation.
 
@@ -914,15 +951,15 @@ PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an
 Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
 
 Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-* **creationDate**: string: Date the SQL pool was created
+* **creationDate**: string (ReadOnly): Date the SQL pool was created
 * **maxSizeBytes**: int: Maximum size in bytes
 * **provisioningState**: string: Resource state
 * **recoverableDatabaseId**: string: Backup database to restore from
 * **restorePointInTime**: string: Snapshot time to restore
 * **sourceDatabaseDeletionDate**: string: Specifies the time that the sql pool was deleted
-* **sourceDatabaseId**: string: Source database to create from
-* **status**: string: Resource status
-* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this sql pool.
+* **sourceDatabaseId**: string (WriteOnly): Source database to create from
+* **status**: string (ReadOnly): Resource status
+* **storageAccountType**: 'GRS' | 'LRS': The storage account type used to store backups for this sql pool.
 
 ## Sku
 ### Properties

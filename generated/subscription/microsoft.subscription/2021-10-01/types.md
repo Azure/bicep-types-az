@@ -32,6 +32,7 @@
 For CustomerLed and FieldLed - /billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName}
 For PartnerLed - /billingAccounts/{billingAccountName}/customers/{customerName}
 For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}
+* **createdTime**: string (ReadOnly): Created Time
 * **displayName**: string: The friendly name of the subscription.
 * **managementGroupId**: string (ReadOnly): The Management Group Id.
 * **provisioningState**: 'Accepted' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the resource.

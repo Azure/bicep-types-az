@@ -26,7 +26,7 @@
 * **TimeCreated**: string (ReadOnly): Date and time in UTC when this item was created.
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this item.
 * **type**: 'microsoft.insights/components/analyticsItems' (ReadOnly, DeployTimeConstant): The resource type
-* **Type**: 'folder' | 'function' | 'query' | 'recent': Enum indicating the type of the Analytics item.
+* **Type**: 'function' | 'none' | 'query' | 'recent': Enum indicating the type of the Analytics item.
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
 
 ## Resource Microsoft.Insights/components/exportconfiguration@2015-05-01
@@ -92,7 +92,7 @@
 * **TimeCreated**: string (ReadOnly): Date and time in UTC when this item was created.
 * **TimeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this item.
 * **type**: 'microsoft.insights/components/myanalyticsItems' (ReadOnly, DeployTimeConstant): The resource type
-* **Type**: 'folder' | 'function' | 'query' | 'recent': Enum indicating the type of the Analytics item.
+* **Type**: 'function' | 'none' | 'query' | 'recent': Enum indicating the type of the Analytics item.
 * **Version**: string (ReadOnly): This instance's version of the data model. This can change as new features are added.
 
 ## Resource Microsoft.Insights/components/ProactiveDetectionConfigs@2015-05-01
