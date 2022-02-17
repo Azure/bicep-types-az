@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Azure.Bicep.Types.Az.Index
 {
@@ -8,7 +9,7 @@ namespace Azure.Bicep.Types.Az.Index
     {
         private static readonly JsonSerializerOptions SerializeOptions = new JsonSerializerOptions
         {
-            IgnoreNullValues = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         };
 
         public static TypeIndex DeserializeIndex(string content)
