@@ -1,10 +1,10 @@
 WARNING: Unable to parse swagger path "Microsoft.DBforPostgreSQL/preview/2020-10-05-privatepreview/postgresqlhsc.json"
 SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
+AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 info    | Generation Complete

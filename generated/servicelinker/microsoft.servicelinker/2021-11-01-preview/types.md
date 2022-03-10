@@ -20,7 +20,9 @@
 * **authInfo**: [AuthInfoBase](#authinfobase): The authentication info
 * **clientType**: 'django' | 'dotnet' | 'go' | 'java' | 'nodejs' | 'none' | 'php' | 'python' | 'ruby' | 'springBoot': The application client type
 * **provisioningState**: string (ReadOnly): The provisioning state.
+* **secretStore**: [SecretStore](#secretstore): An option to store secret value in secure place
 * **targetId**: string: The resource Id of target service.
+* **vNetSolution**: [VNetSolution](#vnetsolution): The VNet solution for linker
 
 ## AuthInfoBase
 * **Discriminator**: authType
@@ -56,6 +58,14 @@
 * **clientId**: string (Required): Client Id for userAssignedIdentity.
 * **subscriptionId**: string (Required): Subscription id for userAssignedIdentity.
 
+
+## SecretStore
+### Properties
+* **keyVaultId**: string: The key vault id to store secret
+
+## VNetSolution
+### Properties
+* **type**: 'privateLink' | 'serviceEndpoint': Type of VNet solution.
 
 ## SystemData
 ### Properties

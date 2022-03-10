@@ -346,9 +346,14 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 
 ## AfdRouteCacheConfiguration
 ### Properties
-* **compressionSettings**: any: Any object
+* **compressionSettings**: [CompressionSettings](#compressionsettings): settings for compression.
 * **queryParameters**: string: query parameters to include or exclude (comma separated).
 * **queryStringCachingBehavior**: 'IgnoreQueryString' | 'IgnoreSpecifiedQueryStrings' | 'IncludeSpecifiedQueryStrings' | 'UseQueryString': Defines how Frontdoor caches requests that include query strings. You can ignore any query strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query strings.
+
+## CompressionSettings
+### Properties
+* **contentTypesToCompress**: string[]: List of content types on which compression applies. The value should be a valid MIME type.
+* **isCompressionEnabled**: bool: Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
 
 ## ActivatedResourceReference
 ### Properties
@@ -990,8 +995,16 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
 * **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status
-* **sharedPrivateLinkResource**: any: Any object
+* **sharedPrivateLinkResource**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): Describes the properties of an existing Shared Private Link Resource to use when connecting to a private origin.
 * **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+
+## SharedPrivateLinkResourceProperties
+### Properties
+* **groupId**: string: The group id from the provider of resource the shared private link resource is for.
+* **privateLink**: [ResourceReference](#resourcereference): Reference to another resource.
+* **privateLinkLocation**: string: The location of the shared private link resource
+* **requestMessage**: string: The request message for requesting approval of the shared private link resource.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout': Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
 
 ## RuleSetProperties
 ### Properties

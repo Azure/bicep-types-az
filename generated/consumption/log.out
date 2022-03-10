@@ -1,9 +1,9 @@
 SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.13.2]
+AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.5)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
@@ -15,112 +15,112 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MeterDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:1790:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:1850:5
 warning | PreCheck/SchemaMissingType | The schema 'UsageDetailsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:1869:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:1929:5
 warning | PreCheck/SchemaMissingType | The schema 'LegacyUsageDetailProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:1907:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:1967:5
 warning | PreCheck/SchemaMissingType | The schema 'ModernUsageDetailProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:2180:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:2240:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationSummariesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:2920:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:2980:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationSummaryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:2938:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:2998:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationDetailsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3045:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3105:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationDetailProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3063:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3123:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationRecommendationDetailsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3155:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3215:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationRecommendationDetailsCalculatedSavingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3190:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3250:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationRecommendationDetailsResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3229:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3289:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationRecommendationDetailsSavingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3267:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3327:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationRecommendationDetailsUsageProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3306:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3366:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationRecommendationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3339:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3399:5
 warning | PreCheck/SchemaMissingType | The schema 'SkuProperty' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3536:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3596:5
 warning | PreCheck/SchemaMissingType | The schema 'ModernReservationRecommendationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3571:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3631:5
 warning | PreCheck/SchemaMissingType | The schema 'ModernReservationTransactionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3666:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3726:5
 warning | PreCheck/SchemaMissingType | The schema 'LegacyReservationTransactionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3814:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3873:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationTransactionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3957:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4016:5
 warning | PreCheck/SchemaMissingType | The schema 'ModernReservationTransactionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:3975:5
-warning | PreCheck/SchemaMissingType | The schema 'TagProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4009:5
-warning | PreCheck/SchemaMissingType | The schema 'Tag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4034:5
+warning | PreCheck/SchemaMissingType | The schema 'TagProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4068:5
+warning | PreCheck/SchemaMissingType | The schema 'Tag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4093:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4050:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4109:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4084:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4143:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4155:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4214:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4173:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4232:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetFilterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4199:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4258:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4212:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4271:5
 warning | PreCheck/SchemaMissingType | The schema 'CurrentSpend' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4245:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4304:5
 warning | PreCheck/SchemaMissingType | The schema 'ForecastSpend' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4261:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4320:5
 warning | PreCheck/SchemaMissingType | The schema 'Notification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4277:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4336:5
 warning | PreCheck/SchemaMissingType | The schema 'PriceSheetModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4395:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4454:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4421:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4480:5
 warning | PreCheck/SchemaMissingType | The schema 'PriceSheetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4436:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4495:5
 warning | PreCheck/SchemaMissingType | The schema 'ChargesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4572:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4631:5
 warning | PreCheck/SchemaMissingType | The schema 'MeterDetailsResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4757:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4816:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4787:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4846:5
 warning | PreCheck/SchemaMissingType | The schema 'HighCasedErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4802:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4861:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4851:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4910:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4878:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4937:5
 warning | PreCheck/SchemaMissingType | The schema 'Events' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4896:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4955:5
 warning | PreCheck/SchemaMissingType | The schema 'EventProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4930:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:4989:5
 warning | PreCheck/SchemaMissingType | The schema 'Lots' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5063:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5122:5
 warning | PreCheck/SchemaMissingType | The schema 'LotProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5097:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5156:5
 warning | PreCheck/SchemaMissingType | The schema 'CreditBalanceSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5258:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5317:5
 warning | PreCheck/SchemaMissingType | The schema 'amount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5278:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5337:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5294:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5353:5
 warning | PreCheck/SchemaMissingType | The schema 'ReservationTransactionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5328:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5387:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceAttributes' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5357:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5416:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5372:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5431:5
 warning | PreCheck/SchemaMissingType | The schema 'AmountWithExchangeRate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5397:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2021-10-01/consumption.json:5456:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReservationRecommendationDetailsModel' has a property 'etag' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ReservationRecommendationDetailsModel
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 63ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2021-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -348,7 +348,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReservationRecommendationDetailsModel' has a property 'etag' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from ReservationRecommendationDetailsModel
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -464,7 +464,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LegacyReservationTransaction' has a property 'properties' that is already declared the parent schema 'ReservationTransaction' but isn't significantly different. The property has been removed from LegacyReservationTransaction
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -596,7 +596,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2019-05-01/consumption.json:3041:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -726,7 +726,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2019-04-01-preview/consumption.json:2931:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -927,7 +927,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PriceSheetProperties' with an
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2018-01-31/consumption.json:2030:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-03-31"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1082,7 +1082,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Skipping path '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Consumption/costTags': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-08-31"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1208,7 +1208,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/stable/2018-10-01/consumption.json:4510:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2017-04-24-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1258,5 +1258,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2017-12-30-preview/consumption.json:502:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 4ms
 info    | Generation Complete

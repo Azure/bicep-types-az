@@ -61,6 +61,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/bigDataPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/dedicatedSQLminimalTlsSettings@2021-06-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [DedicatedSQLminimalTlsSettingsProperties](#dedicatedsqlminimaltlssettingsproperties): Properties of a dedicated sql minimal tls settings.
+* **type**: 'Microsoft.Synapse/workspaces/dedicatedSQLminimalTlsSettings' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/encryptionProtector@2021-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -730,6 +740,10 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## DedicatedSQLminimalTlsSettingsProperties
+### Properties
+* **minimalTlsVersion**: string: The minimal tls version of the sql server.
 
 ## EncryptionProtectorProperties
 ### Properties

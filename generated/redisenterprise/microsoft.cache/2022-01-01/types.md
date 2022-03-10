@@ -102,7 +102,7 @@
 
 ## Module
 ### Properties
-* **args**: string: Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
+* **args**: string: Configuration options for the module, e.g. 'ERROR_RATE 0.01 INITIAL_SIZE 400'.
 * **name**: string (Required): The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
 * **version**: string (ReadOnly): The version of the module, e.g. '1.0'.
 

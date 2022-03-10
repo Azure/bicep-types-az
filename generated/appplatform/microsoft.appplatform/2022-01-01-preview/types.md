@@ -218,7 +218,7 @@
 * **fqdn**: string (ReadOnly): Fully qualified dns name of the service instance
 * **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
 * **powerState**: 'Running' | 'Stopped' (ReadOnly): Power state of the Service
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Service
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Service
 * **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
 * **zoneRedundant**: bool
