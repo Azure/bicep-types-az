@@ -73,6 +73,7 @@
 * **description**: string: description of the standard
 * **displayName**: string: display name of the standard, equivalent to the standardId
 * **standardType**: string (ReadOnly): standard type (Custom or BuiltIn only currently)
+* **supportedClouds**: 'AWS' | 'GCP'[]: List of all standard supported clouds.
 
 ## StandardComponentProperties
 ### Properties

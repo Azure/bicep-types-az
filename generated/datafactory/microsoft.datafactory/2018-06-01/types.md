@@ -1908,6 +1908,11 @@
 * **type**: 'Presto' (Required): Type of linked service.
 * **typeProperties**: [PrestoLinkedServiceTypeProperties](#prestolinkedservicetypeproperties) (Required): Presto server linked service properties.
 
+### QuickbaseLinkedService
+#### Properties
+* **type**: 'Quickbase' (Required): Type of linked service.
+* **typeProperties**: [QuickbaseLinkedServiceTypeProperties](#quickbaselinkedservicetypeproperties) (Required): Quickbase linked service type properties.
+
 ### QuickBooksLinkedService
 #### Properties
 * **type**: 'QuickBooks' (Required): Type of linked service.
@@ -1988,6 +1993,11 @@
 * **type**: 'Shopify' (Required): Type of linked service.
 * **typeProperties**: [ShopifyLinkedServiceTypeProperties](#shopifylinkedservicetypeproperties) (Required): Shopify Service linked service properties.
 
+### SmartsheetLinkedService
+#### Properties
+* **type**: 'Smartsheet' (Required): Type of linked service.
+* **typeProperties**: [SmartsheetLinkedServiceTypeProperties](#smartsheetlinkedservicetypeproperties) (Required): Smartsheet linked service type properties.
+
 ### SnowflakeLinkedService
 #### Properties
 * **type**: 'Snowflake' (Required): Type of linked service.
@@ -2013,6 +2023,11 @@
 * **type**: 'Sybase' (Required): Type of linked service.
 * **typeProperties**: [SybaseLinkedServiceTypeProperties](#sybaselinkedservicetypeproperties) (Required): Sybase linked service properties.
 
+### TeamDeskLinkedService
+#### Properties
+* **type**: 'TeamDesk' (Required): Type of linked service.
+* **typeProperties**: [TeamDeskLinkedServiceTypeProperties](#teamdesklinkedservicetypeproperties) (Required): TeamDesk linked service type properties.
+
 ### TeradataLinkedService
 #### Properties
 * **type**: 'Teradata' (Required): Type of linked service.
@@ -2032,6 +2047,11 @@
 #### Properties
 * **type**: 'Xero' (Required): Type of linked service.
 * **typeProperties**: [XeroLinkedServiceTypeProperties](#xerolinkedservicetypeproperties) (Required): Xero Service linked service properties.
+
+### ZendeskLinkedService
+#### Properties
+* **type**: 'Zendesk' (Required): Type of linked service.
+* **typeProperties**: [ZendeskLinkedServiceTypeProperties](#zendesklinkedservicetypeproperties) (Required): Zendesk linked service type properties.
 
 ### ZohoLinkedService
 #### Properties
@@ -2873,6 +2893,12 @@
 * **username**: any: Any object
 * **useSystemTrustStore**: any: Any object
 
+## QuickbaseLinkedServiceTypeProperties
+### Properties
+* **encryptedCredential**: any: Any object
+* **url**: any (Required): Any object
+* **userToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+
 ## QuickBooksLinkedServiceTypeProperties
 ### Properties
 * **accessToken**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -3049,6 +3075,11 @@
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
 
+## SmartsheetLinkedServiceTypeProperties
+### Properties
+* **apiToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **encryptedCredential**: any: Any object
+
 ## SnowflakeLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required): Any object
@@ -3102,6 +3133,15 @@
 * **server**: any (Required): Any object
 * **username**: any: Any object
 
+## TeamDeskLinkedServiceTypeProperties
+### Properties
+* **apiToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **authenticationType**: 'Basic' | 'Token' (Required): The authentication type to use.
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **url**: any (Required): Any object
+* **userName**: any: Any object
+
 ## TeradataLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
@@ -3149,6 +3189,15 @@
 * **useEncryptedEndpoints**: any: Any object
 * **useHostVerification**: any: Any object
 * **usePeerVerification**: any: Any object
+
+## ZendeskLinkedServiceTypeProperties
+### Properties
+* **apiToken**: [SecretBase](#secretbase): The base definition of a secret type.
+* **authenticationType**: 'Basic' | 'Token' (Required): The authentication type to use.
+* **encryptedCredential**: any: Any object
+* **password**: [SecretBase](#secretbase): The base definition of a secret type.
+* **url**: any (Required): Any object
+* **userName**: any: Any object
 
 ## ZohoLinkedServiceTypeProperties
 ### Properties

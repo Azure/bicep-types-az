@@ -31,7 +31,7 @@
 
 ## CertBasedSecurityPrincipal
 ### Properties
-* **cert**: string: Base64 encoded public key of the user cert (.pem or .cer)
+* **cert**: string: Public key of the user cert (.pem or .cer)
 * **ledgerRoleName**: 'Administrator' | 'Contributor' | 'Reader': LedgerRole associated with the Security Principal of Ledger
 
 ## SystemData

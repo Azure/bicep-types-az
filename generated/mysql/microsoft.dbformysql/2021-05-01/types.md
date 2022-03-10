@@ -5,6 +5,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): Properties to configure Identity for Bring your Own Keys
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): The properties of a server.
@@ -33,6 +34,18 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): ObjectId from the KeyVault
+* **tenantId**: string (ReadOnly): TenantId from the KeyVault
+* **type**: 'UserAssigned': Type of managed service identity.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): Metadata of user assigned identity.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
@@ -40,6 +53,7 @@
 * **availabilityZone**: string: availability Zone information of the server.
 * **backup**: [Backup](#backup): Storage Profile properties of a server
 * **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' (WriteOnly): The mode to create a new MySQL server.
+* **dataEncryption**: [DataEncryption](#dataencryption): The date encryption for cmk.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **highAvailability**: [HighAvailability](#highavailability): Network related properties of a server
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
@@ -57,6 +71,14 @@
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **geoRedundantBackup**: 'Disabled' | 'Enabled': Enum to indicate whether value is 'Enabled' or 'Disabled'
+
+## DataEncryption
+### Properties
+* **geoBackupKeyUri**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
+* **geoBackupUserAssignedIdentityId**: string: Geo backup user identity resource id as identity can't cross region, need identity in same region as geo backup
+* **primaryKeyUri**: string: Primary key uri
+* **primaryUserAssignedIdentityId**: string: Primary user identity resource id
+* **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
 
 ## HighAvailability
 ### Properties

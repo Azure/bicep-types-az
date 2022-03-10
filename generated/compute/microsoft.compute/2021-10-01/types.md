@@ -203,6 +203,7 @@
 
 ## GalleryImageProperties
 ### Properties
+* **architecture**: 'Arm64' | 'x64': The architecture of the image. Applicable to OS disks only.
 * **description**: string: The description of this gallery image definition resource. This property is updatable.
 * **disallowed**: [Disallowed](#disallowed): Describes the disallowed disk types.
 * **endOfLifeDate**: string: The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.

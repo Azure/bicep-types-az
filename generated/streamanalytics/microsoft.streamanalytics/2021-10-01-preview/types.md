@@ -335,6 +335,7 @@
 
 ## BlobReferenceInputDataSourceProperties
 ### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -395,6 +396,7 @@
 
 ## BlobStreamInputDataSourceProperties
 ### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -430,7 +432,7 @@
 ### Base Properties
 ### AzureFunctionOutputDataSource
 #### Properties
-* **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties): The properties that are associated with a DocumentDB output.
+* **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties): The properties that are associated with an Azure Function output.
 * **type**: 'Microsoft.AzureFunction' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### AzureDataLakeStoreOutputDataSource
