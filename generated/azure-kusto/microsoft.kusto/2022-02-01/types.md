@@ -311,7 +311,7 @@
 * **eventHubResourceId**: string (Required): The resource ID where the event grid is configured to send events.
 * **ignoreFirstRecord**: bool: A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
 * **managedIdentityObjectId**: string (ReadOnly): The object ID of managedIdentityResourceId
-* **managedIdentityResourceId**: string: The resource ID of a managed identity (system or user assigned) to be used to authenticate with event hub and storage account.
+* **managedIdentityResourceId**: string: Empty for non-managed identity based data connection. For system assigned identity, provide cluster resource Id.  For user assigned identity (UAI) provide the UAI resource Id.
 * **mappingRuleName**: string: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' (ReadOnly): The provisioned state of the resource.
 * **storageAccountResourceId**: string (Required): The resource ID of the storage account where the data resides.

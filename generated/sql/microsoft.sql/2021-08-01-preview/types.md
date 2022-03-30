@@ -717,7 +717,7 @@
 * **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for managed instance creation).
 * **administrators**: [ManagedInstanceExternalAdministrator](#managedinstanceexternaladministrator): Properties of a active directory administrator.
 * **collation**: string: Collation of the managed instance.
-* **currentBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' (ReadOnly): The storage account type used to store backups for this database.
+* **currentBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' (ReadOnly, WriteOnly): The storage account type used to store backups for this database.
 * **dnsZone**: string (ReadOnly): The Dns Zone that the managed instance is in.
 * **dnsZonePartner**: string (WriteOnly): The resource id of another managed instance whose DNS zone this managed instance will share after creation.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the managed instance.
@@ -906,7 +906,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ### Properties
 * **autoRotationEnabled**: bool: Key auto rotation opt-in flag. Either true or false.
 * **serverKeyName**: string: The name of the managed instance key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
 
@@ -1172,7 +1172,7 @@ RestoreLongTermRetentionBackup: Creates a database by restoring from a long term
 
 Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
-* **currentBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' (ReadOnly): The storage account type used to store backups for this database.
+* **currentBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' (ReadOnly, WriteOnly): The storage account type used to store backups for this database.
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
 * **currentSku**: [Sku](#sku) (ReadOnly): An ARM Resource SKU.
 * **databaseId**: string (ReadOnly): The ID of the database.
@@ -1195,7 +1195,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **readScale**: 'Disabled' | 'Enabled': The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region. Not applicable to a Hyperscale database within an elastic pool.
 * **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
 * **recoveryServicesRecoveryPointId**: string (WriteOnly): The resource identifier of the recovery point associated with create operation of this database.
-* **requestedBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone': The storage account type used to store backups for this database.
+* **requestedBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' (WriteOnly): The storage account type used to store backups for this database.
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the database.
 * **restorableDroppedDatabaseId**: string (WriteOnly): The resource identifier of the restorable dropped database associated with create operation of this database.
 * **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
@@ -1204,6 +1204,19 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **secondaryType**: 'Geo' | 'Named': The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
 * **sourceDatabaseDeletionDate**: string (WriteOnly): Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
+* **sourceResourceId**: string (WriteOnly): The resource identifier of the source associated with the create operation of this database.
+
+When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover.
+
+When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of an existing database or existing sql pool, and restorePointInTime must be specified.
+
+When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable dropped sql pool.
+
+When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool.
+
+This property allows to restore across subscriptions which is only supported for DataWarehouse edition.
+
+When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary” header must contain authentication token for the source tenant. For more details about “x-ms-authorization-auxiliary” header see https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant
 * **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Starting' | 'Stopped' | 'Stopping' | 'Suspect' (ReadOnly): The status of the database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
@@ -1547,7 +1560,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **autoRotationEnabled**: bool: Key auto rotation opt-in flag. Either true or false.
 * **serverKeyName**: string: The name of the server key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the encryption protector.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
