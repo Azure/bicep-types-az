@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
-    "@autorest/core": "3.7.6",
+    "@autorest/core": "3.8.2",
     "@autorest/modelerfour": "^4.22.3",
     "@ts-common/commonmark-to-markdown": "^2.0.2",
     "@types/async": "^3.2.12",
