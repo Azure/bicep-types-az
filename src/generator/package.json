@@ -25,11 +25,11 @@
   "homepage": "https://github.com/Azure/bicep-types-az/blob/main/README.md",
   "devDependencies": {
     "@autorest/core": "3.8.2",
-    "@autorest/modelerfour": "^4.22.3",
+    "@autorest/modelerfour": "^4.23.1",
     "@ts-common/commonmark-to-markdown": "^2.0.2",
     "@types/async": "^3.2.12",
     "@types/js-yaml": "^4.0.5",
-    "@types/lodash": "^4.14.180",
+    "@types/lodash": "^4.14.181",
     "@types/node": "^17.0.23",
     "@types/yargs": "^17.0.8",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
