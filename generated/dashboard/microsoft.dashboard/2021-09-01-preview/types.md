@@ -8,10 +8,10 @@
 * **identity**: [ManagedIdentity](#managedidentity): The managed identity of a resource.
 * **location**: string: The geo-location where the grafana resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GrafanaResourceProperties](#grafanaresourceproperties): Properties specific to the grafana resource.
+* **properties**: [ManagedGrafanaProperties](#managedgrafanaproperties): Properties specific to the grafana resource.
 * **sku**: [ResourceSku](#resourcesku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
-* **tags**: [GrafanaResourceTags](#grafanaresourcetags): The tags for grafana resource.
+* **tags**: [ManagedGrafanaTags](#managedgrafanatags): The tags for grafana resource.
 * **type**: 'Microsoft.Dashboard/grafana' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagedIdentity
@@ -31,7 +31,7 @@
 * **clientId**: string (ReadOnly): The client id of user assigned identity.
 * **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
-## GrafanaResourceProperties
+## ManagedGrafanaProperties
 ### Properties
 * **endpoint**: string (ReadOnly): The endpoint of the Grafana instance.
 * **grafanaVersion**: string (ReadOnly): The Grafana software version.
@@ -51,7 +51,7 @@
 * **lastModifiedBy**: string
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
 
-## GrafanaResourceTags
+## ManagedGrafanaTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

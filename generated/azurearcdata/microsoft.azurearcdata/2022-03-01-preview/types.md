@@ -146,7 +146,7 @@
 
 ## ActiveDirectoryDomainControllers
 ### Properties
-* **primaryDomainController**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller) (Required): Information about a domain controller in the AD domain.
+* **primaryDomainController**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller): Information about a domain controller in the AD domain.
 * **secondaryDomainControllers**: [ActiveDirectoryDomainController](#activedirectorydomaincontroller)[]: Information about the secondary domain controllers in the AD domain.
 
 ## ActiveDirectoryDomainController
