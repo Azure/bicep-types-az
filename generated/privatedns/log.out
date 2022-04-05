@@ -1,9 +1,8 @@
 SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
+AutoRest code generation utility [cli version: 3.5.1; node: v16.14.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.2)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -66,7 +65,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'id' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -122,7 +121,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'id' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -179,4 +178,4 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a prope
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecordSet' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from RecordSet
 info    | autorest.bicep took 3ms
-info    | Generation Complete
+info    | Autorest completed in 9.16s. 6 files generated.

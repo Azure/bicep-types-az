@@ -1,9 +1,8 @@
 SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
+AutoRest code generation utility [cli version: 3.5.1; node: v16.14.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.2)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2022-02-10-preview"} .
@@ -49,7 +48,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2019-01-23-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
@@ -75,7 +74,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-dis
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/preview/2019-09-24-preview/desktopvirtualization.json:1834:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2019-12-10-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
@@ -122,7 +121,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2020-11-02-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
@@ -176,7 +175,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
@@ -196,7 +195,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-03-09-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
@@ -216,7 +215,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.desktopvirtualization-2021-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.1)
@@ -240,5 +239,5 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Generation Complete
+info    | autorest.bicep took 5ms
+info    | Autorest completed in 50.24s. 28 files generated.
