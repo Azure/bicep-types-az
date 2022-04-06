@@ -3,6 +3,7 @@
 using System;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Azure.Bicep.Types.Concrete;
 using Azure.Bicep.Types.Serialization;
 
@@ -16,7 +17,7 @@ namespace Azure.Bicep.Types
 
             var serializeOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             };
             serializeOptions.Converters.Add(new TypeBaseConverter(factory));
 
@@ -29,7 +30,7 @@ namespace Azure.Bicep.Types
 
             var serializeOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             };
             serializeOptions.Converters.Add(new TypeBaseConverter(factory));
 

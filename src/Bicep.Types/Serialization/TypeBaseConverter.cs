@@ -15,7 +15,7 @@ namespace Azure.Bicep.Types.Serialization
         {
             serializerOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             };
             serializerOptions.Converters.Add(new TypeReferenceConverter(factory));
         }
