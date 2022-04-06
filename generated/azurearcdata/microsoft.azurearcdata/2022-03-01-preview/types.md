@@ -193,6 +193,7 @@
 
 ## SqlManagedInstanceProperties
 ### Properties
+* **activeDirectoryInformation**: [ActiveDirectoryInformation](#activedirectoryinformation): Active Directory information that related to the resource.
 * **admin**: string: The instance admin user
 * **basicLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
 * **clusterId**: string: If a CustomLocation is provided, this contains the ARM id of the connected cluster the custom location belongs to.
@@ -200,11 +201,18 @@
 * **endTime**: string: The instance end time
 * **extensionId**: string: If a CustomLocation is provided, this contains the ARM id of the extension the custom location belongs to.
 * **k8sRaw**: [SqlManagedInstanceK8SRaw](#sqlmanagedinstancek8sraw): The raw kubernetes information.
-* **keytab**: string (WriteOnly): A base64-encoded keytab.
 * **lastUploadedDate**: string: Last uploaded date from Kubernetes cluster. Defaults to current date time
 * **licenseType**: 'BasePrice' | 'DisasterRecovery' | 'LicenseIncluded': The license type to apply for this managed instance.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Arc-enabled SQL Managed Instance resource.
 * **startTime**: string: The instance start time
+
+## ActiveDirectoryInformation
+### Properties
+* **keytabInformation**: [KeytabInformation](#keytabinformation): Keytab used for authenticate with Active Directory.
+
+## KeytabInformation
+### Properties
+* **keytab**: string (WriteOnly): A base64-encoded keytab.
 
 ## SqlManagedInstanceK8SRaw
 ### Properties
