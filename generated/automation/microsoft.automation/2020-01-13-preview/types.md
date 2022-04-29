@@ -219,6 +219,7 @@
 
 ## PrivateEndpointConnectionProperties
 ### Properties
+* **groupIds**: string[]: Gets the groupIds.
 * **privateEndpoint**: [PrivateEndpointProperty](#privateendpointproperty): Private endpoint which the connection belongs to.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionStateProperty](#privatelinkserviceconnectionstateproperty): Connection State of the Private Endpoint Connection.
 

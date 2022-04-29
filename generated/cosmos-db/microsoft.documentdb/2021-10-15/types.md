@@ -431,7 +431,7 @@
 
 ## ApiProperties
 ### Properties
-* **serverVersion**: '3.2' | '3.6' | '4.0': Describes the ServerVersion of an a MongoDB account.
+* **serverVersion**: '3.2' | '3.6' | '4.0' | '4.2': Describes the ServerVersion of an a MongoDB account.
 
 ## BackupPolicy
 * **Discriminator**: type

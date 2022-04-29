@@ -1558,6 +1558,16 @@
 * **type**: 'AmazonS3Compatible' (Required): Type of linked service.
 * **typeProperties**: [AmazonS3CompatibleLinkedServiceTypeProperties](#amazons3compatiblelinkedservicetypeproperties) (Required): Amazon S3 Compatible linked service properties.
 
+### AppFiguresLinkedService
+#### Properties
+* **type**: 'AppFigures' (Required): Type of linked service.
+* **typeProperties**: [AppFiguresLinkedServiceTypeProperties](#appfigureslinkedservicetypeproperties) (Required): AppFigures linked service type properties.
+
+### AsanaLinkedService
+#### Properties
+* **type**: 'Asana' (Required): Type of linked service.
+* **typeProperties**: [AsanaLinkedServiceTypeProperties](#asanalinkedservicetypeproperties) (Required): Asana linked service type properties.
+
 ### AzureBatchLinkedService
 #### Properties
 * **type**: 'AzureBatch' (Required): Type of linked service.
@@ -1702,6 +1712,11 @@
 #### Properties
 * **type**: 'CustomDataSource' (Required): Type of linked service.
 * **typeProperties**: any (Required): Any object
+
+### DataworldLinkedService
+#### Properties
+* **type**: 'Dataworld' (Required): Type of linked service.
+* **typeProperties**: [DataworldLinkedServiceTypeProperties](#dataworldlinkedservicetypeproperties) (Required): Dataworld linked service type properties.
 
 ### Db2LinkedService
 #### Properties
@@ -2033,6 +2048,11 @@
 * **type**: 'Teradata' (Required): Type of linked service.
 * **typeProperties**: [TeradataLinkedServiceTypeProperties](#teradatalinkedservicetypeproperties) (Required): Teradata linked service properties.
 
+### TwilioLinkedService
+#### Properties
+* **type**: 'Twilio' (Required): Type of linked service.
+* **typeProperties**: [TwilioLinkedServiceTypeProperties](#twiliolinkedservicetypeproperties) (Required): Twilio linked service type properties.
+
 ### VerticaLinkedService
 #### Properties
 * **type**: 'Vertica' (Required): Type of linked service.
@@ -2134,6 +2154,17 @@
 * **forcePathStyle**: any: Any object
 * **secretAccessKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **serviceUrl**: any: Any object
+
+## AppFiguresLinkedServiceTypeProperties
+### Properties
+* **clientKey**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **userName**: any (Required): Any object
+
+## AsanaLinkedServiceTypeProperties
+### Properties
+* **apiToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **encryptedCredential**: any: Any object
 
 ## AzureBatchLinkedServiceTypeProperties
 ### Properties
@@ -2434,6 +2465,11 @@
 ### Properties
 * **connectionString**: any: Any object
 * **credString**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): Azure Key Vault secret reference.
+* **encryptedCredential**: any: Any object
+
+## DataworldLinkedServiceTypeProperties
+### Properties
+* **apiToken**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
 * **encryptedCredential**: any: Any object
 
 ## Db2LinkedServiceTypeProperties
@@ -3151,6 +3187,11 @@
 * **server**: any: Any object
 * **username**: any: Any object
 
+## TwilioLinkedServiceTypeProperties
+### Properties
+* **password**: [SecretBase](#secretbase) (Required): The base definition of a secret type.
+* **userName**: any (Required): Any object
+
 ## VerticaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: Any object
@@ -3327,6 +3368,7 @@
 
 ### ExecutePipelineActivity
 #### Properties
+* **policy**: [ExecutePipelineActivityPolicy](#executepipelineactivitypolicy): Execution policy for an execute pipeline activity.
 * **type**: 'ExecutePipeline' (Required): Type of activity.
 * **typeProperties**: [ExecutePipelineActivityTypeProperties](#executepipelineactivitytypeproperties) (Required): Execute pipeline activity properties.
 
@@ -5084,6 +5126,12 @@
 * **folderPath**: any: Any object
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 
+## ExecutePipelineActivityPolicy
+### Properties
+* **secureInput**: bool: When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## ExecutePipelineActivityTypeProperties
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
@@ -5434,12 +5482,7 @@
 ## SqlServerStoredProcedureActivityTypeProperties
 ### Properties
 * **storedProcedureName**: any (Required): Any object
-* **storedProcedureParameters**: [SqlServerStoredProcedureActivityTypePropertiesStoredProcedureParameters](#sqlserverstoredprocedureactivitytypepropertiesstoredprocedureparameters): Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
-
-## SqlServerStoredProcedureActivityTypePropertiesStoredProcedureParameters
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [StoredProcedureParameter](#storedprocedureparameter)
+* **storedProcedureParameters**: any: Any object
 
 ## SwitchActivityTypeProperties
 ### Properties
@@ -5476,6 +5519,7 @@
 * **body**: any: Any object
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
 * **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
+* **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
 * **headers**: any: Any object
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
 * **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' (Required): The list of HTTP methods supported by a WebActivity.
@@ -5535,13 +5579,13 @@
 
 ## PrivateLinkConnectionApprovalRequest
 ### Properties
-* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): A wrapper for an ARM resource id
+* **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
 * **provisioningState**: string (ReadOnly)
 
-## ArmIdWrapper
+## PrivateEndpoint
 ### Properties
-* **id**: string (ReadOnly)
+* **id**: string: The resource Id for private endpoint
 
 ## PrivateLinkConnectionState
 ### Properties

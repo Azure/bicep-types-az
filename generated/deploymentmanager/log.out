@@ -1,9 +1,7 @@
-SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
+AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
+info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -21,8 +19,8 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.deploymentmanager-2019-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -41,80 +39,79 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RolloutRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1266:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1266:5
 warning | PreCheck/SchemaMissingType | The schema 'RolloutRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1289:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1289:5
 warning | PreCheck/SchemaMissingType | The schema 'StepGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1321:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1321:5
 warning | PreCheck/SchemaMissingType | The schema 'PrePostStep' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1364:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1364:5
 warning | PreCheck/SchemaMissingType | The schema 'ArtifactSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1377:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1377:5
 warning | PreCheck/SchemaMissingType | The schema 'ArtifactSource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1385:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1385:9
 warning | PreCheck/SchemaMissingType | The schema 'ArtifactSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1396:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1396:5
 warning | PreCheck/SchemaMissingType | The schema 'SasProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1450:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1450:5
 warning | PreCheck/SchemaMissingType | The schema 'Rollout' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1462:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1462:5
 warning | PreCheck/SchemaMissingType | The schema 'Rollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1474:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1474:9
 warning | PreCheck/SchemaMissingType | The schema 'RolloutProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1488:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1488:5
 warning | PreCheck/SchemaMissingType | The schema 'RolloutOperationInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1517:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1517:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTopologyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1550:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1550:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTopologyResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1558:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1558:9
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTopologyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1572:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1572:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1581:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1581:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1589:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1589:9
 warning | PreCheck/SchemaMissingType | The schema 'Service' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1603:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1603:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1624:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1624:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1641:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1641:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1649:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1649:9
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1663:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1684:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1684:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitArtifacts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1714:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1714:5
 warning | PreCheck/SchemaMissingType | The schema 'RolloutStep' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1739:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1739:5
 warning | PreCheck/SchemaMissingType | The schema 'StepOperationInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1781:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1781:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1818:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1818:5
 warning | PreCheck/SchemaMissingType | The schema 'Message' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1851:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1851:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1867:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1867:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1877:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1877:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1914:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1914:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDetail' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1936:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1936:5
 warning | PreCheck/SchemaMissingType | The schema 'StepResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1957:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2019-11-01-preview/deploymentmanager.json:1957:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'RolloutProperties' -> 'RolloutPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ArtifactSourceProperties' -> 'ArtifactSourcePropertiesAutoGenerated'
-info    | autorest.bicep took 18ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.deploymentmanager-2018-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -133,78 +130,77 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RolloutRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1025:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1025:5
 warning | PreCheck/SchemaMissingType | The schema 'RolloutRequestProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1048:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1048:5
 warning | PreCheck/SchemaMissingType | The schema 'Step' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1080:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1080:5
 warning | PreCheck/SchemaMissingType | The schema 'PrePostStep' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1123:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1123:5
 warning | PreCheck/SchemaMissingType | The schema 'ArtifactSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1136:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1136:5
 warning | PreCheck/SchemaMissingType | The schema 'ArtifactSource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1144:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1144:9
 warning | PreCheck/SchemaMissingType | The schema 'ArtifactSourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1155:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1155:5
 warning | PreCheck/SchemaMissingType | The schema 'SasProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1209:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1209:5
 warning | PreCheck/SchemaMissingType | The schema 'Rollout' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1221:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1221:5
 warning | PreCheck/SchemaMissingType | The schema 'Rollout-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1233:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1233:9
 warning | PreCheck/SchemaMissingType | The schema 'RolloutProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1247:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1247:5
 warning | PreCheck/SchemaMissingType | The schema 'RolloutOperationInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1276:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1276:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTopologyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1309:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1309:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTopologyResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1317:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1317:9
 warning | PreCheck/SchemaMissingType | The schema 'ServiceTopologyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1331:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1331:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1340:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1340:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1348:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1348:9
 warning | PreCheck/SchemaMissingType | The schema 'Service' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1362:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1362:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1383:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1383:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1400:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1400:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1408:9
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1408:9
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnit' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1422:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1422:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1443:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1443:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceUnitArtifacts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1473:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1473:5
 warning | PreCheck/SchemaMissingType | The schema 'RolloutStep' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1498:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1498:5
 warning | PreCheck/SchemaMissingType | The schema 'StepOperationInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1540:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1540:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1577:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1577:5
 warning | PreCheck/SchemaMissingType | The schema 'Message' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1610:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1610:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1626:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1626:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1636:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1636:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1669:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1669:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDetail' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1691:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1691:5
 warning | PreCheck/SchemaMissingType | The schema 'StepResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1712:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deploymentmanager/resource-manager/Microsoft.DeploymentManager/preview/2018-09-01-preview/deploymentmanager.json:1712:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'RolloutProperties' -> 'RolloutPropertiesAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ArtifactSourceProperties' -> 'ArtifactSourcePropertiesAutoGenerated'
-info    | autorest.bicep took 5ms
-info    | Generation Complete
+info    | autorest.bicep took 2ms
+info    | Autorest completed in 2.43s. 4 files generated.

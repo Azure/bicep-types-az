@@ -16,8 +16,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **privateLink**: string: The rmpl Resource ID.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **properties**: [PrivateLinkAssociationProperties](#privatelinkassociationproperties)
 * **type**: 'Microsoft.Authorization/privateLinkAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/resourceManagementPrivateLinks@2020-05-01
@@ -48,6 +47,13 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+
+## PrivateLinkAssociationProperties
+### Properties
+* **privateLink**: string: The rmpl Resource ID.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **scope**: string (ReadOnly): The scope of the private link association.
+* **tenantID**: string (ReadOnly): The TenantID.
 
 ## ResourceManagementPrivateLinkEndpointConnections
 ### Properties

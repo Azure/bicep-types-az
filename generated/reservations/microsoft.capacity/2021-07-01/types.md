@@ -58,7 +58,7 @@
 ## ExtendedStatusInfo
 ### Properties
 * **message**: string (ReadOnly): The message giving detailed information about the status code.
-* **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'PurchaseError' | 'Split' | 'Succeeded' (ReadOnly)
+* **statusCode**: 'Active' | 'Expired' | 'Merged' | 'None' | 'PaymentInstrumentError' | 'Pending' | 'Processing' | 'PurchaseError' | 'Split' | 'Succeeded' (ReadOnly)
 
 ## ReservationResponse
 ### Properties

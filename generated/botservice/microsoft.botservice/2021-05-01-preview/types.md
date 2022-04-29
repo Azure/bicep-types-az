@@ -23,7 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
-* **name**: 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
+* **name**: 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'MsTeamsChannel' | 'OutlookChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): Channel definition
 * **sku**: [Sku](#sku): The SKU of the cognitive services account.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.

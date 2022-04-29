@@ -93,7 +93,7 @@
 
 ## NetworkRuleSet
 ### Properties
-* **bypass**: 'None': A specific data exfiltration scenario that is disabled for the service.
+* **bypass**: 'AzurePortal' | 'None': Possible origins of inbound traffic that can bypass the rules defined in the 'ipRules' section.
 * **ipRules**: [IpRule](#iprule)[]: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
 
 ## IpRule

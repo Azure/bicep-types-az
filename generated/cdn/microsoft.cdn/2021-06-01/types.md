@@ -286,27 +286,9 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 ## ProfileProperties
 ### Properties
 * **frontDoorId**: string (ReadOnly): The Id of the frontdoor.
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity.
 * **originResponseTimeoutSeconds**: int: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
-
-## ManagedServiceIdentity
-### Properties
-* **principalId**: string (ReadOnly): Principal Id of managed service identity.
-* **tenantId**: string (ReadOnly): Tenant of managed service identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': Type of managed service identity.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string (ReadOnly): Client Id of user assigned identity
-* **principalId**: string (ReadOnly): Principal Id of user assigned identity
 
 ## TrackedResourceTags
 ### Properties
@@ -368,7 +350,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 ### Properties
 * **azureDnsZone**: [ResourceReference](#resourcereference): Reference to another resource.
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' (ReadOnly)
-* **domainValidationState**: 'Approved' | 'Pending' | 'PendingRevalidation' | 'Rejected' | 'Submitting' | 'TimedOut' | 'Unknown' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
+* **domainValidationState**: 'Approved' | 'InternalError' | 'Pending' | 'PendingRevalidation' | 'RefreshingValidationToken' | 'Rejected' | 'Submitting' | 'TimedOut' | 'Unknown' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
 * **hostName**: string (Required): The host name of the domain. Must be a domain name.
 * **preValidatedCustomDomainResourceId**: [ResourceReference](#resourcereference): Reference to another resource.
 * **profileName**: string (ReadOnly): The name of the profile which holds the domain.
@@ -972,7 +954,6 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **loadBalancingSettings**: [LoadBalancingSettingsParameters](#loadbalancingsettingsparameters): Round-Robin load balancing settings for a backend pool
 * **profileName**: string (ReadOnly): The name of the profile which holds the origin group.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status
-* **responseBasedAfdOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.
 * **sessionAffinityState**: 'Disabled' | 'Enabled': Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 

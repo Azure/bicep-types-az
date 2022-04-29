@@ -7,7 +7,7 @@
 * **etag**: string: Resource etag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [WorkbookResourceIdentity](#workbookresourceidentity): Identity used for BYOS
-* **kind**: 'shared' | 'user': The kind of workbook. Choices are user and shared.
+* **kind**: 'shared' | 'user': The kind of workbook. Only valid value is shared.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkbookProperties](#workbookproperties): Properties that contain a workbook.

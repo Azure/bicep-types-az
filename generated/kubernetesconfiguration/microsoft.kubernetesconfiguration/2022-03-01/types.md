@@ -46,12 +46,13 @@
 * **customLocationSettings**: [ExtensionPropertiesCustomLocationSettings](#extensionpropertiescustomlocationsettings) (ReadOnly): Custom Location settings properties.
 * **errorInfo**: [ErrorDetail](#errordetail) (ReadOnly): The error detail.
 * **extensionType**: string: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
+* **installedVersion**: string (ReadOnly): Installed version of the extension.
 * **packageUri**: string (ReadOnly): Uri of the Helm package
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource.
 * **releaseTrain**: string: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
 * **scope**: [Scope](#scope): Scope of the extension. It can be either Cluster or Namespace; but not both.
 * **statuses**: [ExtensionStatus](#extensionstatus)[]: Status from this extension.
-* **version**: string: Version of the extension for this extension, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
+* **version**: string: User-specified version of the extension for this extension to 'pin'. To use 'version', autoUpgradeMinorVersion must be 'false'.
 
 ## ExtensionPropertiesAksAssignedIdentity
 ### Properties

@@ -60,7 +60,7 @@
 * **groupIds**: string[]: The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
 * **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): A collection of read-only information about the state of the connection to the private remote resource.
 * **privateLinkServiceId**: string: The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
-* **requestMessage**: string: A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+* **requestMessage**: string (ReadOnly): A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
 
 ## PrivateLinkConnectionState
 ### Properties

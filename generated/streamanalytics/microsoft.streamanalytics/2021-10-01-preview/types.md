@@ -88,14 +88,24 @@
 
 ## External
 ### Properties
-* **container**: string
-* **path**: string
+* **container**: string: The UserCustomCode container.
+* **path**: string: The UserCustomCode path.
+* **refreshConfiguration**: [RefreshConfiguration](#refreshconfiguration): The refresh parameters for any/all updatable user defined functions present in the job config.
 * **storageAccount**: [StorageAccount](#storageaccount): The properties that are associated with an Azure Storage account
+
+## RefreshConfiguration
+### Properties
+* **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
+* **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
+* **refreshInterval**: string: The refresh interval.
+* **refreshType**: 'Blocking' | 'Nonblocking' | 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static': Indicates the type of data refresh option.
+* **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
 
 ## StorageAccount
 ### Properties
 * **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 
 ## Function
 ### Properties
@@ -179,8 +189,10 @@
 * **apiKey**: string: The API key used to authenticate with Request-Response endpoint.
 * **batchSize**: int: Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
 * **endpoint**: string: The Request-Response execute endpoint of the Azure Machine Learning web service.
+* **inputRequestName**: string: Label for the input request object.
 * **inputs**: [AzureMachineLearningServiceInputColumn](#azuremachinelearningserviceinputcolumn)[]: The inputs for the Azure Machine Learning web service endpoint.
 * **numberOfParallelRequests**: int: The number of parallel requests that will be sent per partition of your job to the machine learning service. Default is 1.
+* **outputResponseName**: string: Label for the output request object.
 * **outputs**: [AzureMachineLearningServiceOutputColumn](#azuremachinelearningserviceoutputcolumn)[]: A list of outputs from the Azure Machine Learning web service endpoint execution.
 
 ## AzureMachineLearningServiceInputColumn
@@ -200,7 +212,7 @@
 * **class**: string: The Csharp code containing a single function definition.
 * **dllPath**: string: The Csharp code containing a single function definition.
 * **method**: string: The Csharp code containing a single function definition.
-* **script**: string: The Csharp code containing a single function definition.
+* **updateMode**: 'Refreshable' | 'Static': Refresh modes for Stream Analytics functions.
 
 ## JavaScriptFunctionBindingProperties
 ### Properties
@@ -231,6 +243,7 @@
 * **etag**: string (ReadOnly): The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
 * **partitionKey**: string: partitionKey Describes a key in the input data which is used for partitioning the input data
 * **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output.
+* **watermarkSettings**: [InputWatermarkProperties](#inputwatermarkproperties): Settings which determine whether to read watermark events.
 ### ReferenceInputProperties
 #### Properties
 * **datasource**: [ReferenceInputDataSource](#referenceinputdatasource): Describes an input data source that contains reference data.
@@ -301,6 +314,10 @@
 * **encoding**: 'UTF8': Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output.
 * **format**: 'Array' | 'LineSeparated': Specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects.
 
+## InputWatermarkProperties
+### Properties
+* **watermarkMode**: 'None' | 'ReadWatermark': The input watermark mode.
+
 ## ReferenceInputDataSource
 * **Discriminator**: type
 
@@ -323,22 +340,27 @@
 
 ## AzureSqlReferenceInputDataSourceProperties
 ### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **database**: string: This element is associated with the datasource element. This is the name of the database that output will be written to.
 * **deltaSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch incremental changes from the SQL database. To use this option, we recommend using temporal tables in Azure SQL Database.
 * **fullSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch data from the sql database.
 * **password**: string: This element is associated with the datasource element. This is the password that will be used to connect to the SQL Database instance.
 * **refreshRate**: string: This element is associated with the datasource element. This indicates how frequently the data will be fetched from the database. It is of DateTime format.
-* **refreshType**: 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static': Indicates the type of data refresh option.
+* **refreshType**: 'Blocking' | 'Nonblocking' | 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static': Indicates the type of data refresh option.
 * **server**: string: This element is associated with the datasource element. This is the name of the server that contains the database that will be written to.
-* **table**: string: This element is associated with the datasource element. The name of the table in the Azure SQL database..
 * **user**: string: This element is associated with the datasource element. This is the user name that will be used to connect to the SQL Database instance.
 
 ## BlobReferenceInputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **blobName**: string: The name of the blob input.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
+* **deltaPathPattern**: string: The path pattern of the delta snapshot.
+* **deltaSnapshotRefreshRate**: string: The interval that the user generates a delta snapshot of this reference blob input data source.
+* **fullSnapshotRefreshRate**: string: The refresh interval of the blob input data source.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
+* **sourcePartitionCount**: int: The partition count of the blob input data source. Range 1 - 256.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
 
@@ -351,10 +373,20 @@
 * **Discriminator**: type
 
 ### Base Properties
+### GatewayMessageBusStreamInputDataSource
+#### Properties
+* **properties**: [GatewayMessageBusStreamInputDataSourceProperties](#gatewaymessagebusstreaminputdatasourceproperties): The properties that are associated with a gateway message bus input containing stream data.
+* **type**: 'GatewayMessageBus' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+
 ### IoTHubStreamInputDataSource
 #### Properties
 * **properties**: [IoTHubStreamInputDataSourceProperties](#iothubstreaminputdatasourceproperties): The properties that are associated with a IoT Hub input containing stream data.
 * **type**: 'Microsoft.Devices/IotHubs' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+
+### EventGridStreamInputDataSource
+#### Properties
+* **properties**: [EventGridStreamInputDataSourceProperties](#eventgridstreaminputdatasourceproperties): The properties that are associated with an event grid input containing stream data.
+* **type**: 'Microsoft.EventGrid/EventSubscriptions' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubV2StreamInputDataSource
 #### Properties
@@ -377,6 +409,10 @@
 * **type**: 'Raw' (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
 
 
+## GatewayMessageBusStreamInputDataSourceProperties
+### Properties
+* **topic**: string: The name of the Service Bus topic.
+
 ## IoTHubStreamInputDataSourceProperties
 ### Properties
 * **consumerGroupName**: string: The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
@@ -385,11 +421,25 @@
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
 
+## EventGridStreamInputDataSourceProperties
+### Properties
+* **eventTypes**: string[]: List of Event Types that are supported by the Event Grid adapter.
+* **schema**: 'CloudEventSchema' | 'EventGridEventSchema': Supported Event Grid schema types.
+* **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
+* **subscriber**: [EventHubV2StreamInputDataSource](#eventhubv2streaminputdatasource): Describes an Event Hub input data source that contains stream data.
+
+## EventHubV2StreamInputDataSource
+### Properties
+* **properties**: [EventHubStreamInputDataSourceProperties](#eventhubstreaminputdatasourceproperties): The properties that are associated with a Event Hub input containing stream data.
+* **type**: string (Required): Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+
 ## EventHubStreamInputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **consumerGroupName**: string: The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
 * **eventHubName**: string: The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+* **partitionCount**: int: The partition count of the event hub data source. Range 1 - 256.
+* **prefetchCount**: int: The number of messages that the message receiver can simultaneously request.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
@@ -400,7 +450,7 @@
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
-* **sourcePartitionCount**: int: The partition count of the blob input data source. Range 1 - 256.
+* **sourcePartitionCount**: int: The partition count of the blob input data source. Range 1 - 1024.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
 
@@ -422,14 +472,21 @@
 * **datasource**: [OutputDataSource](#outputdatasource): Describes the data source that output will be written to.
 * **diagnostics**: [Diagnostics](#diagnostics) (ReadOnly): Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
 * **etag**: string (ReadOnly): The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+* **lastOutputEventTimestamps**: [LastOutputEventTimestamp](#lastoutputeventtimestamp)[] (ReadOnly): A list of the last output event times for each output partition. The index of the array corresponds to the partition number.
 * **serialization**: [Serialization](#serialization): Describes how data from an input is serialized or how data is serialized when written to an output.
 * **sizeWindow**: int: The size window to constrain a Stream Analytics output to.
 * **timeWindow**: string: The time frame for filtering Stream Analytics job outputs.
+* **watermarkSettings**: [OutputWatermarkProperties](#outputwatermarkproperties): Settings which determine whether to send watermarks to downstream.
 
 ## OutputDataSource
 * **Discriminator**: type
 
 ### Base Properties
+### GatewayMessageBusOutputDataSource
+#### Properties
+* **properties**: [GatewayMessageBusOutputDataSourceProperties](#gatewaymessagebusoutputdatasourceproperties): The properties that are associated with a Gateway Message Bus.
+* **type**: 'GatewayMessageBus' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+
 ### AzureFunctionOutputDataSource
 #### Properties
 * **properties**: [AzureFunctionOutputDataSourceProperties](#azurefunctionoutputdatasourceproperties): The properties that are associated with an Azure Function output.
@@ -439,6 +496,11 @@
 #### Properties
 * **properties**: [AzureDataLakeStoreOutputDataSourceProperties](#azuredatalakestoreoutputdatasourceproperties): The properties that are associated with an Azure Data Lake Store.
 * **type**: 'Microsoft.DataLake/Accounts' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+
+### PostgreSQLOutputDataSource
+#### Properties
+* **properties**: [PostgreSQLOutputDataSourceProperties](#postgresqloutputdatasourceproperties): The properties that are associated with a PostgreSQL output.
+* **type**: 'Microsoft.DBForPostgreSQL/servers/databases' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubV2OutputDataSource
 #### Properties
@@ -496,6 +558,10 @@
 * **type**: 'Raw' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 
+## GatewayMessageBusOutputDataSourceProperties
+### Properties
+* **topic**: string: The name of the Service Bus topic.
+
 ## AzureFunctionOutputDataSourceProperties
 ### Properties
 * **apiKey**: string: If you want to use an Azure Function from another subscription, you can do so by providing the key to access your function.
@@ -516,10 +582,21 @@
 * **tokenUserDisplayName**: string: The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 * **tokenUserPrincipalName**: string: The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
 
+## PostgreSQLOutputDataSourceProperties
+### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **maxWriterCount**: int: Max Writer count, currently only 1(single writer) and 0(based on query partition) are available. Optional on PUT requests.
+* **password**: string: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **server**: string: The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **table**: string: The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **user**: string: The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+
 ## EventHubOutputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **eventHubName**: string: The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+* **partitionCount**: int: The partition count of the event hub data source. Range 1 - 256.
 * **partitionKey**: string: The key/column that is used to determine to which partition to send event data.
 * **propertyColumns**: string[]: The properties associated with this Event Hub output.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
@@ -564,6 +641,7 @@
 
 ## AzureSynapseOutputDataSourceProperties
 ### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **password**: string: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **server**: string: The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
@@ -573,6 +651,8 @@
 ## BlobOutputDataSourceProperties
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
+* **blobPathPrefix**: string: Blob path prefix.
+* **blobWriteMode**: 'Append' | 'Once': Determines whether blob blocks are either committed automatically or appended.
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
@@ -583,6 +663,7 @@
 ### Properties
 * **accountId**: string: The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
 * **accountKey**: string: The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken': Authentication Mode. Valid modes are `ConnectionString`, `Msi` and 'UserToken'.
 * **collectionNamePattern**: string: The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
 * **database**: string: The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
 * **documentId**: string: The name of the field in output events used to specify the primary key which insert or update operations are based on.
@@ -612,6 +693,16 @@
 ## RawOutputDatasourceProperties
 ### Properties
 * **payloadUri**: string: The SAS URL to a blob where the output should be written. If this property is not set, output data will be written into a temporary storage, and a SAS URL to that temporary storage will be included in the result.
+
+## LastOutputEventTimestamp
+### Properties
+* **lastOutputEventTime**: string: The last output event time.
+* **lastUpdateTime**: string: The time that the last update happened.
+
+## OutputWatermarkProperties
+### Properties
+* **maxWatermarkDifferenceAcrossPartitions**: string: Describes the maximal delta between the fastest and slowest partitions, so the out of order window that catches all necessary events in downstream jobs is well defined.
+* **watermarkMode**: 'None' | 'SendCurrentPartitionWatermark' | 'SendLowestWatermarkAcrossPartitions': The output watermark mode.
 
 ## Sku
 ### Properties

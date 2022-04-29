@@ -30,7 +30,6 @@
 ### Properties
 * **and**: [BudgetFilterProperties](#budgetfilterproperties)[]: The logical "AND" expression. Must have at least 2 items.
 * **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): The comparison expression to be used in the budgets.
-* **not**: [BudgetFilterProperties](#budgetfilterproperties): The Dimensions or Tags to filter a budget by.
 * **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): The comparison expression to be used in the budgets.
 
 ## BudgetFilterProperties

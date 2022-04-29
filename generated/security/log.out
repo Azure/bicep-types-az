@@ -1,9 +1,7 @@
-SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
+AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
+info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -12,8 +10,97 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    | Processing batch task - {"tag":"microsoft.security-2021-11-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 0ms
+info    | Processing batch task - {"tag":"microsoft.security-2022-03-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'PricingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2022-03-01/pricings.json:154:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 3ms
+info    | Processing batch task - {"tag":"microsoft.security-2021-12-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 2ms
+info    | Processing batch task - {"tag":"microsoft.security-2015-06-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ExternalSecuritySolutionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/externalSecuritySolutions.json:165:5
+warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:240:5
+warning | PreCheck/SchemaMissingType | The schema 'EffectiveNetworkSecurityGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:287:5
+warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:303:5
+warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardening' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:327:5
+warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:342:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ExternalSecuritySolutionKind' (4 differences):
+  - type: "object" => "string"
+  - properties: {"kind":{"x-ms-enum":{"name":"ExternalSecuritySolutionKind","modelAsString":true,"values":[{"value":"CEF"},{"value":"ATA"},{"value":"AAD"}]},"$ref":"#/components/schemas/ExternalSecuritySolutionKind","description":"The kind of the external solution"}} => <none>
+  - enum: <none> => ["CEF","ATA","AAD"]
+  - x-ms-enum: <none> => {"name":"ExternalSecuritySolutionKind","modelAsString":true,"values":[{"value":"CEF"},{"value":"ATA"},{"value":"AAD"}]}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AadConnectivityState' (5 differences):
+  - type: "object" => "string"
+  - properties: {"connectivityState":{"x-ms-enum":{"name":"AadConnectivityState","modelAsString":true,"values":[{"value":"Discovered"},{"value":"NotLicensed"},{"value":"Connected"}]},"$ref":"#/components/schemas/AadConnectivityState"}} => <none>
+  - title: <none> => "The connectivity state of the external AAD solution "
+  - enum: <none> => ["Discovered","NotLicensed","Connected"]
+  - x-ms-enum: <none> => {"name":"AadConnectivityState","modelAsString":true,"values":[{"value":"Discovered"},{"value":"NotLicensed"},{"value":"Connected"}]}
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ExternalSecuritySolutionKind' -> 'ExternalSecuritySolutionKindAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AadConnectivityState' -> 'AadConnectivityStateAutoGenerated'
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.security-2021-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -23,33 +110,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 15ms
-info    | Processing batch task - {"tag":"microsoft.security-2021-07-01-preview"} .
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.security-2021-10-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -59,13 +126,27 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 0ms
+info    | Processing batch task - {"tag":"microsoft.security-2021-07-01-preview"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.security-2021-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -75,14 +156,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SoftwareProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2021-05-01-preview/softwareInventories.json:253:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2021-05-01-preview/softwareInventories.json:253:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.security-2020-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -93,15 +173,12 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.security-2020-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -111,14 +188,12 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.security-2019-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -128,26 +203,20 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AutomationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/automations.json:299:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/automations.json:299:5
 warning | PreCheck/SchemaMissingType | The schema 'RegulatoryComplianceStandardList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/regulatoryCompliance.json:300:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/regulatoryCompliance.json:300:5
 warning | PreCheck/SchemaMissingType | The schema 'RegulatoryComplianceControlList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/regulatoryCompliance.json:393:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/regulatoryCompliance.json:393:5
 warning | PreCheck/SchemaMissingType | The schema 'RegulatoryComplianceAssessmentList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/regulatoryCompliance.json:487:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2019-01-01-preview/regulatoryCompliance.json:487:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.security-2017-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -157,102 +226,40 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PricingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/pricings.json:284:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/pricings.json:284:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSettingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/workspaceSettings.json:231:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/workspaceSettings.json:231:5
 warning | PreCheck/SchemaMissingType | The schema 'AdvancedThreatProtectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/advancedThreatProtectionSettings.json:118:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/advancedThreatProtectionSettings.json:118:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutions.json:306:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutions.json:306:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutions.json:318:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutions.json:318:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:393:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:393:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelProperties-devicesMetricsItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:411:11
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:411:11
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:443:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:443:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityAggregatedAlertList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:463:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:463:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityAggregatedRecommendationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:483:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:483:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityAlertedDevicesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:503:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:503:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityDeviceAlertsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:523:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:523:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityDeviceRecommendationsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:543:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:543:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:877:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/iotSecuritySolutionAnalytics.json:877:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 10ms
-info    | Processing batch task - {"tag":"microsoft.security-2015-06-01-preview"} .
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ExternalSecuritySolutionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/externalSecuritySolutions.json:165:5
-warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:240:5
-warning | PreCheck/SchemaMissingType | The schema 'EffectiveNetworkSecurityGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:287:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:303:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardening' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:327:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:342:5
-warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ExternalSecuritySolutionKind' (4 differences):
-  - type: "object" => "string"
-  - properties: {"kind":{"x-ms-enum":{"name":"ExternalSecuritySolutionKind","modelAsString":true,"values":[{"value":"CEF"},{"value":"ATA"},{"value":"AAD"}]},"$ref":"#/components/schemas/ExternalSecuritySolutionKind","description":"The kind of the external solution"}} => <none>
-  - enum: <none> => ["CEF","ATA","AAD"]
-  - x-ms-enum: <none> => {"name":"ExternalSecuritySolutionKind","modelAsString":true,"values":[{"value":"CEF"},{"value":"ATA"},{"value":"AAD"}]}
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AadConnectivityState' (5 differences):
-  - type: "object" => "string"
-  - properties: {"connectivityState":{"x-ms-enum":{"name":"AadConnectivityState","modelAsString":true,"values":[{"value":"Discovered"},{"value":"NotLicensed"},{"value":"Connected"}]},"$ref":"#/components/schemas/AadConnectivityState"}} => <none>
-  - title: <none> => "The connectivity state of the external AAD solution "
-  - enum: <none> => ["Discovered","NotLicensed","Connected"]
-  - x-ms-enum: <none> => {"name":"AadConnectivityState","modelAsString":true,"values":[{"value":"Discovered"},{"value":"NotLicensed"},{"value":"Connected"}]}
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ExternalSecuritySolutionKind' -> 'ExternalSecuritySolutionKindAutoGenerated'
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AadConnectivityState' -> 'AadConnectivityStateAutoGenerated'
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.security-2021-01-15-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -262,18 +269,17 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'IngestionSettingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2021-01-15-preview/ingestionSettings.json:272:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2021-01-15-preview/ingestionSettings.json:272:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionStrings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2021-01-15-preview/ingestionSettings.json:339:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2021-01-15-preview/ingestionSettings.json:339:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.security-2018-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -283,15 +289,14 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PricingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2018-06-01/pricings.json:154:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2018-06-01/pricings.json:154:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.security-2019-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -301,16 +306,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdvancedThreatProtectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-01-01/advancedThreatProtectionSettings.json:118:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-01-01/advancedThreatProtectionSettings.json:118:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.security-2017-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -321,14 +323,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ComplianceResultList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2017-08-01/complianceResults.json:117:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2017-08-01/complianceResults.json:117:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.security-2019-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -339,37 +340,30 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutions.json:306:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutions.json:306:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutions.json:318:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutions.json:318:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:398:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:398:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelProperties-devicesMetricsItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:417:11
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:417:11
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:449:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:449:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityAggregatedAlertList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:469:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:469:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityAggregatedRecommendationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:489:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:489:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecurityAggregatedAlertProperties-topDevicesListItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:643:11
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:643:11
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:875:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2019-08-01/iotSecuritySolutionAnalytics.json:875:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.security-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -379,21 +373,21 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:240:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:240:5
 warning | PreCheck/SchemaMissingType | The schema 'EffectiveNetworkSecurityGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:287:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:287:5
 warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:303:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:303:5
 warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardening' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:327:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:327:5
 warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:342:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:342:5
 warning | PreCheck/SchemaMissingType | The schema 'ExternalSecuritySolutionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/externalSecuritySolutions.json:165:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/externalSecuritySolutions.json:165:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ExternalSecuritySolutionKind' (4 differences):
@@ -407,24 +401,10 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AadConnectivityStat
   - title: <none> => "The connectivity state of the external AAD solution "
   - enum: <none> => ["Discovered","NotLicensed","Connected"]
   - x-ms-enum: <none> => {"name":"AadConnectivityState","modelAsString":true,"values":[{"value":"Discovered"},{"value":"NotLicensed"},{"value":"Connected"}]}
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ExternalSecuritySolutionKind' -> 'ExternalSecuritySolutionKindAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AadConnectivityState' -> 'AadConnectivityStateAutoGenerated'
 info    | Resource type microsoft.security/servervulnerabilityassessments under path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.Security/serverVulnerabilityAssessments/{serverVulnerabilityAssessment}' has no body defined.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.security-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -434,30 +414,12 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 3ms
-info    | Processing batch task - {"tag":"microsoft.security-2021-01-01"} .
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.security-2021-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -467,11 +429,25 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 1ms
-info    | Generation Complete
+info    | autorest.bicep took 0ms
+info    | Processing batch task - {"tag":"microsoft.security-2021-01-01"} .
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 0ms
+info    | Autorest completed in 15.45s. 32 files generated.

@@ -129,6 +129,7 @@
 
 ## ActiveDirectoryConnectorProperties
 ### Properties
+* **domainServiceAccountLoginInformation**: [BasicLoginInformation](#basiclogininformation): Username and password for basic login authentication.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Active Directory connector resource.
 * **spec**: [ActiveDirectoryConnectorSpec](#activedirectoryconnectorspec) (Required): The specifications of the AD Kubernetes resource.
 * **status**: [ActiveDirectoryConnectorStatus](#activedirectoryconnectorstatus): The status of the Kubernetes custom resource.
@@ -142,7 +143,9 @@
 ### Properties
 * **domainControllers**: [ActiveDirectoryDomainControllers](#activedirectorydomaincontrollers) (Required): Details about the Active Directory domain controllers associated with this AD connector instance
 * **netbiosDomainName**: string: NETBIOS name of the Active Directory domain.
+* **ouDistinguishedName**: string: The distinguished name of the Active Directory Organizational Unit.
 * **realm**: string (Required): Name (uppercase) of the Active Directory domain that this AD connector will be associated with.
+* **serviceAccountProvisioning**: 'automatic' | 'manual': The service account provisioning mode for this Active Directory connector.
 
 ## ActiveDirectoryDomainControllers
 ### Properties
@@ -279,7 +282,6 @@
 * **createTime**: string (ReadOnly): The time when the resource was created.
 * **currentVersion**: string: SQL Server current version.
 * **edition**: 'Developer' | 'Enterprise' | 'Evaluation' | 'Express' | 'Standard' | 'Web': SQL Server edition.
-* **esuExpirationDate**: string: Timestamp of ESU Expiration.
 * **hostType**: 'AWS Virtual Machine' | 'GCP Virtual Machine' | 'Other' | 'Physical Server' | 'Virtual Machine': Type of host for Azure Arc SQL Server
 * **instanceName**: string: SQL Server instance name.
 * **licenseType**: 'Free' | 'HADR' | 'Paid' | 'Undefined': SQL Server license type.

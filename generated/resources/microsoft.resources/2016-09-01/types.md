@@ -26,6 +26,7 @@
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
 * **debugSetting**: [DebugSetting](#debugsetting)
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): The list of deployment dependencies.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
 * **mode**: 'Complete' | 'Incremental' (Required): The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
 * **outputs**: any (ReadOnly): Any object
 * **parameters**: any: Any object
@@ -52,6 +53,19 @@
 * **id**: string (ReadOnly): The ID of the dependency.
 * **resourceName**: string (ReadOnly): The dependency resource name.
 * **resourceType**: string (ReadOnly): The dependency resource type.
+
+## ErrorResponse
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
 
 ## ParametersLink
 ### Properties
