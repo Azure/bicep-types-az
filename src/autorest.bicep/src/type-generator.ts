@@ -3,7 +3,7 @@
 
 import { AnySchema, ArraySchema, ChoiceSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
-import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
+import { ArrayType, BuiltInTypeKind, DiscriminatedObjectType, ObjectProperty, ObjectPropertyFlags, ObjectType, ResourceFlags, ResourceFunctionType, ResourceType, StringLiteralType, TypeFactory, TypeReference, UnionType } from "./types";
 import { uniq, keys, keyBy, Dictionary, flatMap } from 'lodash';
 import { getFullyQualifiedType, getSerializedName, parseNameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 
@@ -19,31 +19,51 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     host.message({ Channel: Channel.Information, Text: message, });
   }
 
+  function getHttpProperties(definition: ResourceDefinition) {
+    if (definition.putOperation) {
+      return {
+        request: definition.putOperation.request,
+        parameters: definition.putOperation.parameters,
+        putSchema: definition.putOperation.schema,
+        getSchema: definition.getOperation?.schema,
+      }
+    }
+
+    return {
+      request: definition.getOperation.request,
+      parameters: definition.getOperation.parameters,
+      getSchema: definition.getOperation.schema,
+    }
+  }
+
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
-    const { descriptor, putRequest, putParameters, putSchema, getSchema, } = definition;
+    const {descriptor} = definition;
+    const {request, parameters, putSchema, getSchema} = getHttpProperties(definition);
+
     const nameSchemaResult = parseNameSchema(
-      putRequest,
-      putParameters,
+      request,
+      parameters,
       schema => parseType(schema, schema),
       (name) => factory.addType(new StringLiteralType(name)));
 
     if (!nameSchemaResult.success) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': ${nameSchemaResult.error}`);
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${request.path}': ${nameSchemaResult.error}`);
       return
     }
 
     if (!nameSchemaResult.value) {
-      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${putRequest.path}': failed to obtain a name value`);
+      logWarning(`Skipping resource type ${fullyQualifiedType} under path '${request.path}': failed to obtain a name value`);
       return
     }
 
     const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
 
     let resourceDefinition: TypeReference;
-    if (putSchema) {
-      resourceDefinition = createObject(getFullyQualifiedType(descriptor), putSchema, resourceProperties);
+    let schema = putSchema ?? getSchema;
+    if (schema) {
+      resourceDefinition = createObject(getFullyQualifiedType(descriptor), schema, resourceProperties);
     } else {
-      logInfo(`Resource type ${fullyQualifiedType} under path '${putRequest.path}' has no body defined.`);
+      logInfo(`Resource type ${fullyQualifiedType} under path '${request.path}' has no body defined.`);
       resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
     }
 
@@ -73,18 +93,18 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (definitions.length > 1) {
       for (const definition of definitions) {
         if (!definition.descriptor.constantName) {
-          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${definitions[0].putRequest.path}': Found multiple definitions for the same type`);
+          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getHttpProperties(definitions[0]).request.path}': Found multiple definitions for the same type`);
           return null;
         }
       }
-        
+
       const polymorphicBodies: Dictionary<TypeReference> = {};
       for (const definition of definitions) {
         const bodyType = processResourceBody(fullyQualifiedType, definition);
         if (!bodyType || !definition.descriptor.constantName) {
           return null;
         }
-        
+
         polymorphicBodies[definition.descriptor.constantName] = bodyType;
       }
 
@@ -129,11 +149,19 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       }
 
       const { descriptor, bodyType } = output;
+      let flags = ResourceFlags.None;
+      if (descriptor.readable) {
+        flags |= ResourceFlags.Readable;
+      }
+      if (descriptor.writable) {
+        flags |= ResourceFlags.Writable;
+      }
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
         descriptor.scopeType,
-        bodyType));
+        bodyType,
+        flags));
     }
 
     for (const action of resourceActions) {
@@ -266,7 +294,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const getSubTypes = flattenDiscriminatorSubTypes(getSchema);
 
     for (const subTypeName of uniq([...keys(putSubTypes), ...keys(getSubTypes)])) {
-      yield { 
+      yield {
         subTypeName,
         putSubType: putSubTypes[subTypeName],
         getSubType: getSubTypes[subTypeName],
@@ -426,7 +454,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       // so construct the type on-the-fly, and don't cache it globally
       return namedDefinitions[definitionName];
     }
-    
+
     let additionalProperties: TypeReference | undefined;
     if (includeBaseProperties) {
       const putParentDictionary = (putSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
