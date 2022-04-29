@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 import { Dictionary, keys, orderBy } from 'lodash';
-import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
+import { ArrayType, BuiltInType, DiscriminatedObjectType, getBuiltInTypeKindLabel, getObjectPropertyFlagsLabels, getResourceFlagsLabels, getScopeTypeLabels, ObjectProperty, ObjectType, ResourceFunctionType, ResourceType, StringLiteralType, TypeBase, TypeBaseKind, TypeReference, UnionType } from '../types';
 
 export function writeMarkdown(provider: string, apiVersion: string, types: TypeBase[]) {
   let output = '';
@@ -119,6 +119,9 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
         const resourceType = type as ResourceType;
         writeHeading(nesting, `Resource ${resourceType.Name}`);
         writeBullet("Valid Scope(s)", `${getScopeTypeLabels(resourceType.ScopeType).join(', ') || 'Unknown'}`);
+        if (resourceType.Flags) {
+          writeBullet("Attributes", getResourceFlagsLabels(resourceType.Flags).join(', '));
+        }
         writeComplexType(types, types[resourceType.Body.Index], nesting, false);
 
         return;
