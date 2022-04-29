@@ -1,15 +1,25 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+using System;
 
 namespace Azure.Bicep.Types.Concrete
 {
+    [Flags]
+    public enum ResourceFlags
+    {
+        None = 0,
+        Readable = 1 << 0,
+        Writable = 1 << 1,
+    }
+
     public class ResourceType : TypeBase
     {
-        public ResourceType(string name, ScopeType scopeType, ITypeReference body)
+        public ResourceType(string name, ScopeType scopeType, ITypeReference body, ResourceFlags flags)
         {
             Name = name;
             ScopeType = scopeType;
             Body = body;
+            Flags = flags;
         }
 
         public string Name { get; set; }
@@ -17,5 +27,7 @@ namespace Azure.Bicep.Types.Concrete
         public ScopeType ScopeType { get; set; }
 
         public ITypeReference Body { get; set; }
+
+        public ResourceFlags Flags { get; set; }
     }
 }
