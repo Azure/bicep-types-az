@@ -32,7 +32,7 @@
 * **eTag**: string (ReadOnly): ETag from NRP.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **properties**: [PrivateEndpointConnectionProxyProperties](#privateendpointconnectionproxyproperties): Private endpoint connection proxy object property bag.
 * **remotePrivateEndpoint**: [RemotePrivateEndpoint](#remoteprivateendpoint): Remote private endpoint details.
 * **status**: string: Operation status.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -136,14 +136,21 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## PrivateEndpointConnectionProxyProperties
+### Properties
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+
 ## RemotePrivateEndpoint
 ### Properties
 * **connectionDetails**: [ConnectionDetails](#connectiondetails)[]: List of connection details.
 * **id**: string: Remote endpoint resource ID.
+* **immutableResourceId**: string: Original resource ID needed by Microsoft.Network.
+* **immutableSubscriptionId**: string: Original subscription ID needed by Microsoft.Network.
+* **location**: string: ARM location of the remote private endpoint.
 * **manualPrivateLinkServiceConnections**: [PrivateLinkServiceConnection](#privatelinkserviceconnection)[]: List of private link service connections that need manual approval.
 * **privateLinkServiceConnections**: [PrivateLinkServiceConnection](#privatelinkserviceconnection)[]: List of automatically approved private link service connections.
 * **privateLinkServiceProxies**: [PrivateLinkServiceProxy](#privatelinkserviceproxy)[]: List of private link service proxies.
-* **vnetTrafficTag**: string (ReadOnly): Virtual network traffic tag.
+* **vnetTrafficTag**: string: Virtual network traffic tag.
 
 ## ConnectionDetails
 ### Properties

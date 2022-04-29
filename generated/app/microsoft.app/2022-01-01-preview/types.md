@@ -19,7 +19,7 @@
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AuthConfigProperties](#authconfigproperties): Auth configuration resource specific properties
+* **properties**: [AuthConfigProperties](#authconfigproperties): AuthConfig resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.App/containerApps/authConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -299,14 +299,15 @@ eg: azure-servicebus, redis etc.
 
 ## AuthConfigProperties
 ### Properties
-* **globalValidation**: [GlobalValidation](#globalvalidation): The configuration settings that determines the validation flow of users using ContainerApp Authentication/Authorization.
-* **httpSettings**: [HttpSettings](#httpsettings): The configuration settings of the HTTP requests for authentication and authorization requests made against ContainerApp Authentication/Authorization.
-* **identityProviders**: [IdentityProviders](#identityproviders): The configuration settings of each of the identity providers used to configure ContainerApp Authentication/Authorization.
-* **login**: [Login](#login): The configuration settings of the login flow of users using ContainerApp Authentication/Authorization.
-* **state**: 'Disabled' | 'Enabled': <code>Enabled</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>Disabled</code>.
+* **globalValidation**: [GlobalValidation](#globalvalidation): The configuration settings that determines the validation flow of users using ContainerApp Service Authentication/Authorization.
+* **httpSettings**: [HttpSettings](#httpsettings): The configuration settings of the HTTP requests for authentication and authorization requests made against ContainerApp Service Authentication/Authorization.
+* **identityProviders**: [IdentityProviders](#identityproviders): The configuration settings of each of the identity providers used to configure ContainerApp Service Authentication/Authorization.
+* **login**: [Login](#login): The configuration settings of the login flow of users using ContainerApp Service Authentication/Authorization.
+* **platform**: [AuthPlatform](#authplatform): The configuration settings of the platform of ContainerApp Service Authentication/Authorization.
 
 ## GlobalValidation
 ### Properties
+* **excludedPaths**: string[]: The paths for which unauthenticated flow would not be redirected to the login page.
 * **redirectToProvider**: string: The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
 action is set to "RedirectToLoginPage".
@@ -314,10 +315,17 @@ action is set to "RedirectToLoginPage".
 
 ## HttpSettings
 ### Properties
-* **requireHttps**: 'False' | 'True': <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
-* **route**: [HttpSettingsRoute](#httpsettingsroute): The configuration settings of the paths HTTP requests.
+* **forwardProxy**: [ForwardProxy](#forwardproxy): The configuration settings of a forward proxy used to make the requests.
+* **requireHttps**: bool: <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+* **routes**: [HttpSettingsRoutes](#httpsettingsroutes): The configuration settings of the paths HTTP requests.
 
-## HttpSettingsRoute
+## ForwardProxy
+### Properties
+* **convention**: 'Custom' | 'NoProxy' | 'Standard': The convention used to determine the url of the request made.
+* **customHostHeaderName**: string: The name of the header containing the host of the request.
+* **customProtoHeaderName**: string: The name of the header containing the scheme of the request.
+
+## HttpSettingsRoutes
 ### Properties
 * **apiPrefix**: string: The prefix that should precede all the authentication/authorization paths.
 
@@ -325,7 +333,7 @@ action is set to "RedirectToLoginPage".
 ### Properties
 * **apple**: [Apple](#apple): The configuration settings of the Apple provider.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The configuration settings of the Azure Active directory provider.
-* **azureStaticWebApp**: [AzureStaticWebApp](#azurestaticwebapp): The configuration settings of the Azure Static Web Apps provider.
+* **azureStaticWebApps**: [AzureStaticWebApps](#azurestaticwebapps): The configuration settings of the Azure Static Web Apps provider.
 * **customOpenIdConnectProviders**: [IdentityProvidersCustomOpenIdConnectProviders](#identityproviderscustomopenidconnectproviders): The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.
 * **facebook**: [Facebook](#facebook): The configuration settings of the Facebook provider.
@@ -335,9 +343,9 @@ configuration settings of the custom Open ID Connect provider.
 
 ## Apple
 ### Properties
+* **enabled**: bool: <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [AppleRegistration](#appleregistration): The configuration settings of the registration for the Apple provider
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 
 ## LoginScopes
 ### Properties
@@ -346,18 +354,21 @@ configuration settings of the custom Open ID Connect provider.
 ## AppleRegistration
 ### Properties
 * **clientId**: string: The Client ID of the app used for login.
-* **clientSecretRefName**: string: The app secret ref name that contains the client secret.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## AzureActiveDirectory
 ### Properties
+* **enabled**: bool: <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **isAutoProvisioned**: bool: Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+read or write to this property.
 * **login**: [AzureActiveDirectoryLogin](#azureactivedirectorylogin): The configuration settings of the Azure Active Directory login flow.
 * **registration**: [AzureActiveDirectoryRegistration](#azureactivedirectoryregistration): The configuration settings of the Azure Active Directory app registration.
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 * **validation**: [AzureActiveDirectoryValidation](#azureactivedirectoryvalidation): The configuration settings of the Azure Active Directory token validation flow.
 
 ## AzureActiveDirectoryLogin
 ### Properties
-* **disableWwwAuthenticate**: 'False' | 'True': <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
+* **disableWWWAuthenticate**: bool: <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
 * **loginParameters**: string[]: Login parameters to send to the OpenID Connect authorization endpoint when
 a user logs in. Each parameter must be in the form "key=value".
 
@@ -373,7 +384,7 @@ a replacement for the Client Secret Certificate Thumbprint. It is also optional.
 a replacement for the Client Secret Certificate Thumbprint. It is also optional.
 * **clientSecretCertificateThumbprint**: string: An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
 a replacement for the Client Secret. It is also optional.
-* **clientSecretRefName**: string: The app secret ref name that contains the client secret of the relying party application.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret of the relying party application.
 * **openIdIssuer**: string: The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
 This URI is a case-sensitive identifier for the token issuer.
@@ -382,13 +393,30 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## AzureActiveDirectoryValidation
 ### Properties
 * **allowedAudiences**: string[]: The list of audiences that can make successful authentication/authorization requests.
+* **defaultAuthorizationPolicy**: [DefaultAuthorizationPolicy](#defaultauthorizationpolicy): The configuration settings of the Azure Active Directory default authorization policy.
+* **jwtClaimChecks**: [JwtClaimChecks](#jwtclaimchecks): The configuration settings of the checks that should be made while validating the JWT Claims.
 
-## AzureStaticWebApp
+## DefaultAuthorizationPolicy
 ### Properties
-* **registration**: [AzureStaticWebAppRegistration](#azurestaticwebappregistration): The configuration settings of the registration for the Azure Static Web Apps provider
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
+* **allowedApplications**: string[]: The configuration settings of the Azure Active Directory allowed applications.
+* **allowedPrincipals**: [AllowedPrincipals](#allowedprincipals): The configuration settings of the Azure Active Directory allowed principals.
 
-## AzureStaticWebAppRegistration
+## AllowedPrincipals
+### Properties
+* **groups**: string[]: The list of the allowed groups.
+* **identities**: string[]: The list of the allowed identities.
+
+## JwtClaimChecks
+### Properties
+* **allowedClientApplications**: string[]: The list of the allowed client applications.
+* **allowedGroups**: string[]: The list of the allowed groups.
+
+## AzureStaticWebApps
+### Properties
+* **enabled**: bool: <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+* **registration**: [AzureStaticWebAppsRegistration](#azurestaticwebappsregistration): The configuration settings of the registration for the Azure Static Web Apps provider
+
+## AzureStaticWebAppsRegistration
 ### Properties
 * **clientId**: string: The Client ID of the app used for login.
 
@@ -399,9 +427,9 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## CustomOpenIdConnectProvider
 ### Properties
+* **enabled**: bool: <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
 * **login**: [OpenIdConnectLogin](#openidconnectlogin): The configuration settings of the login flow of the custom Open ID Connect provider.
 * **registration**: [OpenIdConnectRegistration](#openidconnectregistration): The configuration settings of the app registration for the custom Open ID Connect provider.
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 
 ## OpenIdConnectLogin
 ### Properties
@@ -416,7 +444,8 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## OpenIdConnectClientCredential
 ### Properties
-* **clientSecretRefName**: string: The app setting that contains the client secret for the custom Open ID Connect provider.
+* **clientSecretSettingName**: string: The app setting that contains the client secret for the custom Open ID Connect provider.
+* **method**: 'ClientSecretPost': The method that should be used to authenticate the user.
 
 ## OpenIdConnectConfig
 ### Properties
@@ -428,32 +457,32 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## Facebook
 ### Properties
+* **enabled**: bool: <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **graphApiVersion**: string: The version of the Facebook api to be used while logging in.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [AppRegistration](#appregistration): The configuration settings of the app registration for providers that have app ids and app secrets
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 
 ## AppRegistration
 ### Properties
 * **appId**: string: The App ID of the app used for login.
-* **appSecretRefName**: string: The app secret ref name that contains the app secret.
+* **appSecretSettingName**: string: The app setting name that contains the app secret.
 
 ## GitHub
 ### Properties
+* **enabled**: bool: <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 
 ## ClientRegistration
 ### Properties
 * **clientId**: string: The Client ID of the app used for login.
-* **clientSecretRefName**: string: The app secret ref name that contains the client secret.
+* **clientSecretSettingName**: string: The app setting name that contains the client secret.
 
 ## Google
 ### Properties
+* **enabled**: bool: <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **login**: [LoginScopes](#loginscopes): The configuration settings of the login flow, including the scopes that should be requested.
 * **registration**: [ClientRegistration](#clientregistration): The configuration settings of the app registration for providers that have client ids and client secrets
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 * **validation**: [AllowedAudiencesValidation](#allowedaudiencesvalidation): The configuration settings of the Allowed Audiences validation flow.
 
 ## AllowedAudiencesValidation
@@ -462,15 +491,15 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## Twitter
 ### Properties
+* **enabled**: bool: <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
 * **registration**: [TwitterRegistration](#twitterregistration): The configuration settings of the app registration for the Twitter provider.
-* **state**: 'Disabled' | 'Enabled': Indicate whether identity provider is enabled or disabled.
 
 ## TwitterRegistration
 ### Properties
 * **consumerKey**: string: The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
 Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-* **consumerSecretRefName**: string: The app secret ref name that contains the OAuth 1.0a consumer secret of the Twitter
+* **consumerSecretSettingName**: string: The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
 application used for sign-in.
 
 ## Login
@@ -478,12 +507,30 @@ application used for sign-in.
 * **allowedExternalRedirectUrls**: string[]: External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
 Note that URLs within the current domain are always implicitly allowed.
-* **preserveUrlFragmentsForLogins**: 'False' | 'True': <code>True</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>False</code>.
-* **route**: [LoginRoute](#loginroute): The route that specify the endpoint used for login and logout requests.
+* **cookieExpiration**: [CookieExpiration](#cookieexpiration): The configuration settings of the session cookie's expiration.
+* **nonce**: [Nonce](#nonce): The configuration settings of the nonce used in the login flow.
+* **preserveUrlFragmentsForLogins**: bool: <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
+* **routes**: [LoginRoutes](#loginroutes): The routes that specify the endpoints used for login and logout requests.
 
-## LoginRoute
+## CookieExpiration
+### Properties
+* **convention**: 'FixedTime' | 'IdentityProviderDerived': The convention used when determining the session cookie's expiration.
+* **timeToExpiration**: string: The time after the request is made when the session cookie should expire.
+
+## Nonce
+### Properties
+* **nonceExpirationInterval**: string: The time after the request is made when the nonce should expire.
+* **validateNonce**: bool: <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
+
+## LoginRoutes
 ### Properties
 * **logoutEndpoint**: string: The endpoint at which a logout request should be made.
+
+## AuthPlatform
+### Properties
+* **enabled**: bool: <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+* **runtimeVersion**: string: The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
 
 ## SourceControlProperties
 ### Properties

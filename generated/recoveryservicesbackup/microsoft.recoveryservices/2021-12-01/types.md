@@ -463,6 +463,9 @@ Backup is VMAppContainer
 * **policyType**: 'Invalid' | 'V1' | 'V2'
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+* **tieringPolicy**: [AzureIaaSVMProtectionPolicyTieringPolicy](#azureiaasvmprotectionpolicytieringpolicy): Tiering policy to automatically move RPs to another tier
+Key is Target Tier, defined in RecoveryPointTierType enum.
+Tiering policy specifies the criteria to move RP to the target tier.
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
 
 ### AzureSqlProtectionPolicy
@@ -618,6 +621,21 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Array of DayOfWeek
 * **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 
+## AzureIaaSVMProtectionPolicyTieringPolicy
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [TieringPolicy](#tieringpolicy)
+
+## TieringPolicy
+### Properties
+* **duration**: int: Number of days/weeks/months/years to retain backups in current tier before tiering.
+Used only if TieringMode is set to TierAfter
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': Retention duration type of retention policy.
+* **tieringMode**: 'DoNotTier' | 'Invalid' | 'TierAfter' | 'TierRecommended': Tiering Mode to control automatic tiering of recovery points. Supported values are:
+1. TierRecommended: Tier all recovery points recommended to be tiered
+2. TierAfter: Tier all recovery points after a fixed period, as specified in duration + durationType below.
+3. DoNotTier: Do not tier any recovery points
+
 ## Settings
 ### Properties
 * **isCompression**: bool: Workload compression flag. This has been added so that 'isSqlCompression'
@@ -630,6 +648,14 @@ will be deprecated once clients upgrade to consider this flag.
 * **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log': Type of backup policy type
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
+* **tieringPolicy**: [SubProtectionPolicyTieringPolicy](#subprotectionpolicytieringpolicy): Tiering policy to automatically move RPs to another tier.
+Key is Target Tier, defined in RecoveryPointTierType enum.
+Tiering policy specifies the criteria to move RP to the target tier.
+
+## SubProtectionPolicyTieringPolicy
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [TieringPolicy](#tieringpolicy)
 
 ## ResourceTags
 ### Properties

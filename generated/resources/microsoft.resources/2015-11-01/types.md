@@ -24,6 +24,7 @@
 ### Properties
 * **correlationId**: string (ReadOnly): Gets or sets the correlation ID of the deployment.
 * **dependencies**: [Dependency](#dependency)[] (ReadOnly): Gets the list of deployment dependencies.
+* **error**: [ErrorResponse](#errorresponse) (ReadOnly): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.)
 * **mode**: 'Complete' | 'Incremental': Gets or sets the deployment mode.
 * **outputs**: any (ReadOnly): Any object
 * **parameters**: any: Any object
@@ -46,6 +47,19 @@
 * **id**: string (ReadOnly): Gets or sets the ID of the dependency.
 * **resourceName**: string (ReadOnly): Gets or sets the dependency resource name.
 * **resourceType**: string (ReadOnly): Gets or sets the dependency resource type.
+
+## ErrorResponse
+### Properties
+* **additionalInfo**: [ErrorAdditionalInfo](#erroradditionalinfo)[] (ReadOnly): The error additional info.
+* **code**: string (ReadOnly): The error code.
+* **details**: [ErrorResponse](#errorresponse)[] (ReadOnly): The error details.
+* **message**: string (ReadOnly): The error message.
+* **target**: string (ReadOnly): The error target.
+
+## ErrorAdditionalInfo
+### Properties
+* **info**: any (ReadOnly): Any object
+* **type**: string (ReadOnly): The additional info type.
 
 ## ParametersLink
 ### Properties

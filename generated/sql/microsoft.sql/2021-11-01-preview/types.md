@@ -1164,20 +1164,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## DatabaseIdentity
 ### Properties
-* **delegatedResources**: [DatabaseIdentityDelegatedResources](#databaseidentitydelegatedresources): Resources delegated to the database - Internal Use Only
 * **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'None' | 'UserAssigned': The identity type
 * **userAssignedIdentities**: [DatabaseIdentityUserAssignedIdentities](#databaseidentityuserassignedidentities): The resource ids of the user assigned identities to use
-
-## DatabaseIdentityDelegatedResources
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [Delegation](#delegation)
-
-## Delegation
-### Properties
-* **resourceId**: string: The resource id of the source resource - Internal Use Only
-* **tenantId**: string (ReadOnly): AAD tenant guid of the source resource identity - Internal Use Only.
 
 ## DatabaseIdentityUserAssignedIdentities
 ### Properties
@@ -1231,7 +1220,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **maxSizeBytes**: int: The max size of the database expressed in bytes.
 * **minCapacity**: int: Minimal capacity that database will always have allocated, if not paused
 * **pausedDate**: string (ReadOnly): The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
-* **primaryDelegatedIdentityClientId**: string: The Primary Delegated Identity Client id used for per database CMK - for internal use only
 * **readScale**: 'Disabled' | 'Enabled': The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region. Not applicable to a Hyperscale database within an elastic pool.
 * **recoverableDatabaseId**: string (WriteOnly): The resource identifier of the recoverable database associated with create operation of this database.
 * **recoveryServicesRecoveryPointId**: string (WriteOnly): The resource identifier of the recovery point associated with create operation of this database.

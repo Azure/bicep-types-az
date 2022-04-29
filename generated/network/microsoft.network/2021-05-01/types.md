@@ -2979,7 +2979,7 @@
 ## ExpressRouteGatewayProperties
 ### Properties
 * **autoScaleConfiguration**: [ExpressRouteGatewayPropertiesAutoScaleConfiguration](#expressroutegatewaypropertiesautoscaleconfiguration): Configuration for auto scaling.
-* **expressRouteConnections**: [ExpressRouteConnection](#expressrouteconnection)[] (ReadOnly): List of ExpressRoute connections to the ExpressRoute gateway.
+* **expressRouteConnections**: [ExpressRouteConnection](#expressrouteconnection)[]: List of ExpressRoute connections to the ExpressRoute gateway.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **virtualHub**: [VirtualHubId](#virtualhubid) (Required): Virtual Hub identifier.
 

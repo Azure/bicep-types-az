@@ -135,6 +135,39 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkSecurityPerimeters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Network/networkSecurityPerimeters/profiles@2021-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NspProfileProperties](#nspprofileproperties): Properties of NSP profile.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/networkSecurityPerimeters/profiles' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/networkSecurityPerimeters/profiles/accessRules@2021-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NspAccessRuleProperties](#nspaccessruleproperties): Properties of NSP access rule.
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/networkSecurityPerimeters/profiles/accessRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2021-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NspAssociationProperties](#nspassociationproperties)
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **type**: 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listActiveConnectivityConfigurations (Microsoft.Network/networkManagers@2021-02-01-preview)
 * **Resource**: Microsoft.Network/networkManagers
 * **ApiVersion**: 2021-02-01-preview
@@ -328,7 +361,58 @@
 ### Properties
 * **description**: string: A description of the network security perimeter.
 * **displayName**: string: A friendly name for the network security perimeter.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## NspProfileProperties
+### Properties
+* **accessRulesVersion**: string (ReadOnly): Version number that increases with every update to access rules within the profile.
+* **enabledLogCategories**: [LoggingCategory](#loggingcategory)[]: Gets the enabled log categories.
+
+## LoggingCategory
+### Properties
+* **name**: string: The name of the logging category.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## NspAccessRuleProperties
+### Properties
+* **addressPrefixes**: string[]: Inbound address prefixes (IPv4/IPv6)
+* **direction**: 'Inbound' | 'Outbound': Direction that specifies whether the access rules is inbound/outbound.
+* **fullyQualifiedDomainNames**: string[]: Outbound rules fully qualified domain name format.
+* **networkSecurityPerimeters**: [PerimeterBasedAccessRule](#perimeterbasedaccessrule)[]: Inbound rule specified by the perimeter id.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **subscriptions**: string[]: Subscription id in the ARM id format.
+
+## PerimeterBasedAccessRule
+### Properties
+* **id**: string: NSP id in the ARM id format.
+* **location**: string (ReadOnly): Location of the NSP supplied.
+* **perimeterGuid**: string (ReadOnly): Resource guid of the NSP supplied.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## NspAssociationProperties
+### Properties
+* **accessMode**: 'Audit' | 'Enforced' | 'Learning': Access mode on the association.
+* **hasProvisioningIssues**: string (ReadOnly): Specifies if there are provisioning issues
+* **privateLinkResource**: [SubResource](#subresource): Reference to another subresource.
+* **profile**: [SubResource](#subresource): Reference to another subresource.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+
+## SubResource
+### Properties
+* **id**: string: Resource ID.
 
 ## ResourceTags
 ### Properties

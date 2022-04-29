@@ -164,16 +164,20 @@
 
 ### Base Properties
 * **etag**: string (ReadOnly): The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+* **properties**: [FunctionConfiguration](#functionconfiguration)
+### AggregateFunctionProperties
+#### Properties
+* **type**: 'Aggregate' (Required): Indicates the type of function.
+
 ### ScalarFunctionProperties
 #### Properties
-* **properties**: [ScalarFunctionConfiguration](#scalarfunctionconfiguration): Describes the configuration of the scalar function.
 * **type**: 'Scalar' (Required): Indicates the type of function.
 
 
-## ScalarFunctionConfiguration
+## FunctionConfiguration
 ### Properties
 * **binding**: [FunctionBinding](#functionbinding): The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
-* **inputs**: [FunctionInput](#functioninput)[]: A list of inputs describing the parameters of the function.
+* **inputs**: [FunctionInput](#functioninput)[]: Array of FunctionInput
 * **output**: [FunctionOutput](#functionoutput): Describes the output of a function.
 
 ## FunctionBinding
@@ -393,7 +397,7 @@
 * **container**: string: The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
 * **dateFormat**: string: The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
 * **pathPattern**: string: The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
-* **sourcePartitionCount**: int: The partition count of the blob input data source. Range 1 - 256.
+* **sourcePartitionCount**: int: The partition count of the blob input data source. Range 1 - 1024.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
 * **timeFormat**: string: The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
 

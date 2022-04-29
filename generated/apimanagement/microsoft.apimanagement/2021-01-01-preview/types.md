@@ -950,7 +950,7 @@ dictionary key references will be ARM resource ids in the form:
 
 ## KeyVaultContractCreateProperties
 ### Properties
-* **identityClientId**: string: SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+* **identityClientId**: string: Null for SystemAssignedIdentity or Client Id for UserAssignedIdentity , which will be used to access key vault secret.
 * **lastStatus**: [KeyVaultLastAccessStatusContractProperties](#keyvaultlastaccessstatuscontractproperties) (ReadOnly): Issue contract Update Properties.
 * **secretIdentifier**: string: Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires API Management service to be configured with aka.ms/apimmsi
 

@@ -2188,6 +2188,7 @@
 * **authentication**: [WebActivityAuthentication](#webactivityauthentication): Web activity authentication properties.
 * **body**: any: Any object
 * **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
+* **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
 * **headers**: any: Any object
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
 * **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' (Required): The list of HTTP methods supported by a WebActivity.

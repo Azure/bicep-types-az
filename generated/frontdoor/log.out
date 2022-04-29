@@ -1,9 +1,7 @@
-SourceMapConsumer.initialize is a no-op when running in node.js
-AutoRest code generation utility [cli version: 3.5.1; node: v16.14.0]
+AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-SourceMapConsumer.initialize is a no-op when running in node.js
-info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.7.6)
+info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -16,8 +14,8 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.network-2020-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -31,57 +29,55 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/network.json:138:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:262:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:262:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:285:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:285:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:367:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:367:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:384:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:384:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:438:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:438:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:450:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:450:5
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:532:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:532:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:605:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:605:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:652:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:652:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:678:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:678:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:705:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:705:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:722:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:722:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:737:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:737:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:770:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:770:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:793:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:793:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleExclusion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:818:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-11-01/webapplicationfirewall.json:818:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -95,44 +91,42 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProfileList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:889:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:889:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:906:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:906:5
 warning | PreCheck/SchemaMissingType | The schema 'ExperimentList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1063:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1063:5
 warning | PreCheck/SchemaMissingType | The schema 'Experiment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1080:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1080:5
 warning | PreCheck/SchemaMissingType | The schema 'LatencyScorecard' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1100:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1100:5
 warning | PreCheck/SchemaMissingType | The schema 'Timeseries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1243:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1243:5
 warning | PreCheck/SchemaMissingType | The schema 'PreconfiguredEndpointList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1327:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1327:5
 warning | PreCheck/SchemaMissingType | The schema 'PreconfiguredEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1344:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/networkexperiment.json:1344:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-11-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Profile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from Profile
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Experiment' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Experiment
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PreconfiguredEndpoint' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from PreconfiguredEndpoint
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -146,83 +140,81 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:866:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:866:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:881:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:881:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:946:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:946:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:984:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:984:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1017:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1017:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1041:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1041:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1055:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1055:5
 warning | PreCheck/SchemaMissingType | The schema 'RouteConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1140:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1140:5
 warning | PreCheck/SchemaMissingType | The schema 'ForwardingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1152:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1152:5
 warning | PreCheck/SchemaMissingType | The schema 'RedirectConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1188:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1188:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1328:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1328:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1352:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1352:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1366:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1366:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1401:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1401:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1425:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1425:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1439:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1439:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1507:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1507:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1552:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1552:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1566:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1566:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1721:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1721:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1745:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1745:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1837:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1837:5
 warning | PreCheck/SchemaMissingType | The schema 'HeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1879:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1879:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineMatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1909:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:1909:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2001:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2001:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2024:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2024:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2050:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2050:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2067:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2067:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2081:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/frontdoor.json:2081:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-05-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -236,116 +228,113 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:262:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:262:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:281:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:281:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:336:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:336:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:353:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:353:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:395:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:395:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:407:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:407:5
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:489:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:489:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:562:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:562:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:606:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:606:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:632:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:632:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:659:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:659:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:676:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:676:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:691:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:691:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:724:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:724:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:747:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:747:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleExclusion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:772:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/webapplicationfirewall.json:772:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/network.json:138:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:866:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:866:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:881:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:881:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:946:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:946:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:984:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:984:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1017:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1017:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1041:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1041:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1055:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1055:5
 warning | PreCheck/SchemaMissingType | The schema 'RouteConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1140:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1140:5
 warning | PreCheck/SchemaMissingType | The schema 'ForwardingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1152:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1152:5
 warning | PreCheck/SchemaMissingType | The schema 'RedirectConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1188:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1188:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1320:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1320:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1344:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1344:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1358:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1358:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1393:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1393:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1417:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1417:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1431:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1431:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1499:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1499:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1544:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1544:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1558:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1558:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1713:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1713:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1737:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1737:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1829:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1829:5
 warning | PreCheck/SchemaMissingType | The schema 'HeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1871:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1871:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineMatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1901:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1901:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1993:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:1993:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2016:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2016:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2042:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2042:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2059:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2059:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2073:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-04-01/frontdoor.json:2073:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.network-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -359,83 +348,81 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/network.json:138:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:866:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:866:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:881:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:881:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:946:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:946:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:984:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:984:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1017:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1017:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1041:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1041:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1055:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1055:5
 warning | PreCheck/SchemaMissingType | The schema 'RouteConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1130:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1130:5
 warning | PreCheck/SchemaMissingType | The schema 'ForwardingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1142:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1142:5
 warning | PreCheck/SchemaMissingType | The schema 'RedirectConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1178:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1178:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1310:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1310:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1334:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1334:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1348:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1348:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1383:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1383:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1407:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1407:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1421:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1421:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1489:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1489:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1534:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1534:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1548:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1548:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1703:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1703:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1727:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1727:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1819:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1819:5
 warning | PreCheck/SchemaMissingType | The schema 'HeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1861:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1861:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineMatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1891:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1891:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1983:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:1983:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngine' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2006:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2006:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2032:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2032:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2049:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2049:5
 warning | PreCheck/SchemaMissingType | The schema 'RulesEngineRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2063:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2020-01-01/frontdoor.json:2063:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -449,45 +436,44 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:262:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:262:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:281:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:281:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:328:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:328:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:345:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:345:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:387:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:387:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:399:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:399:5
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:481:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:481:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:554:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:554:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:598:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:598:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:624:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:624:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:651:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:651:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:668:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:668:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:683:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:683:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:716:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:716:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:739:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:739:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleExclusion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:764:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-10-01/webapplicationfirewall.json:764:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -501,69 +487,67 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:646:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:646:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:661:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:661:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:726:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:726:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:750:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:750:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:783:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:783:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:807:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:807:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:821:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:821:5
 warning | PreCheck/SchemaMissingType | The schema 'RouteConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:892:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:892:5
 warning | PreCheck/SchemaMissingType | The schema 'ForwardingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:904:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:904:5
 warning | PreCheck/SchemaMissingType | The schema 'RedirectConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:940:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:940:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1048:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1048:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1072:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1072:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1086:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1086:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1121:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1121:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1145:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1145:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1159:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1159:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1227:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1227:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1272:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1272:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1286:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1286:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1430:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1430:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1454:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1454:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1546:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/frontdoor.json:1546:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-05-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -577,43 +561,42 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:262:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:262:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:281:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:281:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:328:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:328:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:345:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:345:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:387:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:387:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:399:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:399:5
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:481:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:481:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:554:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:554:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:591:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:591:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:610:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:610:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:630:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:630:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:647:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:647:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:662:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:662:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:695:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:695:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:718:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-03-01/webapplicationfirewall.json:718:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -627,69 +610,67 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:646:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:646:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:661:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:661:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:726:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:726:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:750:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:750:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:783:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:783:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:807:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:807:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:821:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:821:5
 warning | PreCheck/SchemaMissingType | The schema 'RouteConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:892:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:892:5
 warning | PreCheck/SchemaMissingType | The schema 'ForwardingConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:904:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:904:5
 warning | PreCheck/SchemaMissingType | The schema 'RedirectConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:940:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:940:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1048:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1048:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1072:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1072:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1086:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1086:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1121:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1121:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1145:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1145:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1159:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1159:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1202:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1202:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1247:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1247:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1261:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1261:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1388:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1388:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1412:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1412:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1504:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/frontdoor.json:1504:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/stable/2019-04-01/network.json:138:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2018-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -703,77 +684,77 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:646:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:646:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:661:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:661:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:722:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:722:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontDoorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:746:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:746:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:779:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:779:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:803:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:803:5
 warning | PreCheck/SchemaMissingType | The schema 'RoutingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:817:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:817:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:963:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:963:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:987:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:987:5
 warning | PreCheck/SchemaMissingType | The schema 'LoadBalancingSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1001:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1001:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1036:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1036:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1060:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1060:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeSettingsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1074:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1074:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1117:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1117:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1162:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1162:5
 warning | PreCheck/SchemaMissingType | The schema 'BackendPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1176:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1176:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1303:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1303:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1327:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1327:5
 warning | PreCheck/SchemaMissingType | The schema 'FrontendEndpointsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1419:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/frontdoor.json:1419:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:40:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:40:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:53:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:53:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureAsyncOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:75:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:96:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:96:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:128:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:138:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/network.json:138:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:247:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:247:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:266:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:266:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:305:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:305:5
 warning | PreCheck/SchemaMissingType | The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:322:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:322:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:351:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:351:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:363:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:363:5
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:452:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:452:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSets' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:515:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:515:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureManagedOverrideRuleGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:569:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2018-08-01-preview/webapplicationfirewall.json:569:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'WebApplicationFirewallPolicy' (7 differences):
   - properties: {"properties":{"x-ms-client-flatten":true,"$ref":"#/components/schemas/schemas:152","description":"Properties of the web application firewall policy."},"etag":{"$ref":"#/components/schemas/schemas:151","description":"Gets a unique read-only string that changes whenever the resource is updated."}} => <none>
@@ -789,12 +770,9 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MatchCondition' (5 
   - type: "object" => "string"
   - enum: <none> => ["RemoteAddr","RequestMethod","QueryString","PostArgs","RequestUri","RequestHeader","RequestBody"]
   - x-ms-enum: <none> => {"name":"MatchCondition","modelAsString":true}
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MatchCondition' -> 'MatchConditionAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'WebApplicationFirewallPolicy' -> 'WebApplicationFirewallPolicyAutoGenerated'
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.network-2019-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -808,41 +786,40 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.22.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:262:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:262:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:281:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:281:5
 warning | PreCheck/SchemaMissingType | The schema 'WebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:328:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:328:5
 warning | PreCheck/SchemaMissingType | The schema 'PolicySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:345:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:345:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:387:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:387:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:399:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:399:5
 warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:478:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:478:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:550:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:550:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:587:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:587:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:606:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:606:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:634:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:634:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:651:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:651:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:665:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:665:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:693:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:693:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:716:5
+    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/frontdoor/resource-manager/Microsoft.Network/preview/2019-03-01-preview/webapplicationfirewall.json:716:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | UnkownSecurityScheme | Security scheme azure_auth is unknown and will not be processed. Only supported types are AADToken,AzureKey,Anonymous
-info    | autorest.bicep took 2ms
-info    | Generation Complete
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 7.71s. 22 files generated.
