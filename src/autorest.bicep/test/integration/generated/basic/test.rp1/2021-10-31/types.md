@@ -1,5 +1,17 @@
 # Test.Rp1 @ 2021-10-31
 
+## Resource Test.Rp1/readOnlyTestType@2021-10-31
+* **Valid Scope(s)**: ResourceGroup
+* **Attributes**: Readable
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Test.Rp1/readOnlyTestType' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Test.Rp1/testType1@2021-10-31
 * **Valid Scope(s)**: ResourceGroup
 * **Attributes**: Readable, Writable
@@ -55,4 +67,3 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
