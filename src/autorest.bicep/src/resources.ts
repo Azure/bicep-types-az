@@ -186,7 +186,9 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return apiVersions.flatMap(v => getProviderDefinitionsForApiVersion(v));
   }
 
-  function getExtensions(schema: ComplexSchema): Record<string, any> {
+  function getExtensions(schema: ComplexSchema) {
+    // extensions are defined as Record<string, any> in autorest
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const extensions: Record<string, any> = {};
     if (isObjectSchema(schema)) {
       for (const parent of schema.parents?.all || []) {
@@ -293,14 +295,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       for (const descriptor of parseResult.value) {
         addProviderDefinition(descriptor.namespace);
 
-        const resource: ResourceDefinition = {
+        const resource = {
           descriptor,
           putOperation: toResourceOperationDefintion(putData),
-          getOperation: toResourceOperationDefintion(getData)!, // if we've gotten this far, at least one of `putData`
-                                                                // and `getData` will be non-nullish, so one or both
-                                                                // invocations of toResourceOperationDefintion will
-                                                                // return a non-nullish result
-        };
+          getOperation: toResourceOperationDefintion(getData),
+        } as ResourceDefinition;
+
 
         const lcNamespace = descriptor.namespace.toLowerCase();
         resourcesByProvider[lcNamespace] = [

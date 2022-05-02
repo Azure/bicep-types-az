@@ -59,7 +59,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
 
     let resourceDefinition: TypeReference;
-    let schema = putSchema ?? getSchema;
+    const schema = putSchema ?? getSchema;
     if (schema) {
       resourceDefinition = createObject(getFullyQualifiedType(descriptor), schema, resourceProperties);
     } else {
