@@ -1,5 +1,14 @@
 # Microsoft.Network @ 2018-02-01
 
+## Resource Microsoft.Network/trafficManagerGeographicHierarchies@2018-02-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [GeographicHierarchyProperties](#geographichierarchyproperties) (ReadOnly): Class representing the properties of the Geographic hierarchy used with the Geographic traffic routing method.
+* **type**: 'Microsoft.Network/trafficManagerGeographicHierarchies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Network/trafficmanagerprofiles@2018-02-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -10,6 +19,16 @@
 * **properties**: [ProfileProperties](#profileproperties): Class representing the Traffic Manager profile properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
+
+## GeographicHierarchyProperties
+### Properties
+* **geographicHierarchy**: [Region](#region) (ReadOnly): Class representing a region in the Geographic hierarchy used with the Geographic traffic routing method.
+
+## Region
+### Properties
+* **code**: string (ReadOnly): The code of the region
+* **name**: string (ReadOnly): The name of the region
+* **regions**: [Region](#region)[] (ReadOnly): The list of Regions grouped under this Region in the Geographic Hierarchy.
 
 ## ProfileProperties
 ### Properties

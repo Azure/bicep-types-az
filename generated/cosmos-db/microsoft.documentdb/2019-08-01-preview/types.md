@@ -9,6 +9,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2019-08-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **groupId**: string: Group id of the private endpoint.
@@ -25,4 +34,10 @@
 * **actionsRequired**: string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource required zone names.
 

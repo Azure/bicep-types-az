@@ -22,6 +22,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Insights/diagnosticSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Insights/diagnosticSettingsCategories@2021-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DiagnosticSettingsCategory](#diagnosticsettingscategory) (ReadOnly): The diagnostic settings Category.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Insights/diagnosticSettingsCategories' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AutoscaleSetting
 ### Properties
 * **enabled**: bool: the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
@@ -168,4 +178,9 @@
 * **enabled**: bool (Required): a value indicating whether this category is enabled.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Specifies the retention policy for the log.
 * **timeGrain**: string: the timegrain of the metric in ISO8601 format.
+
+## DiagnosticSettingsCategory
+### Properties
+* **categoryGroups**: string[] (ReadOnly): the collection of what category groups are supported.
+* **categoryType**: 'Logs' | 'Metrics' (ReadOnly): The type of the diagnostic settings category.
 

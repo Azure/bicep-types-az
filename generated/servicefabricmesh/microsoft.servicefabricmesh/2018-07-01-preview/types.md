@@ -11,6 +11,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceFabricMesh/applications' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ServiceFabricMesh/applications/services@2018-07-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceResourceProperties](#serviceresourceproperties) (ReadOnly): This type describes properties of a service resource.
+* **type**: 'Microsoft.ServiceFabricMesh/applications/services' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ServiceFabricMesh/networks@2018-07-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

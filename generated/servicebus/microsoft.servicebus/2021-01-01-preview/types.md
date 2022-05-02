@@ -34,6 +34,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2021-01-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties) (ReadOnly): AuthorizationRule properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2021-01-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties

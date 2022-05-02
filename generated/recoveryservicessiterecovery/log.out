@@ -1,14 +1,14 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2022-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -17,11 +17,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 19ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 75ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2022-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -29,11 +31,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 13ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 74ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -41,11 +45,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 14ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 52ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -53,11 +59,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 14ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 42ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -65,11 +73,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 12ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 33ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -77,11 +87,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 11ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 55ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -89,11 +101,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 13ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 42ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -101,11 +115,13 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 11ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 42ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -113,13 +129,15 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-04-01/service.json:20191:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-04-01/service.json:20191:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 11ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 53ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -127,15 +145,17 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationProtectionIntent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-03-01/service.json:18210:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-03-01/service.json:18210:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-03-01/service.json:18425:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-03-01/service.json:18425:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 48ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-02-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -143,13 +163,15 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-02-10/service.json:20191:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2021-02-10/service.json:20191:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 11ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 44ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2018-07-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -157,15 +179,17 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationProtectionIntent' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-07-10/service.json:18210:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-07-10/service.json:18210:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-07-10/service.json:18425:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-07-10/service.json:18425:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 37ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2018-01-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -173,13 +197,14 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-01-10/service.json:14658:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-01-10/service.json:14658:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 26ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2016-08-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -187,11 +212,12 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2016-08-10/service.json:11607:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2016-08-10/service.json:11607:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
-info    | Autorest completed in 81.77s. 28 files generated.
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 109ms
+info    | Autorest completed in 213.38s. 28 files generated.

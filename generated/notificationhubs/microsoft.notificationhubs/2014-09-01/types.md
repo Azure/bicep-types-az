@@ -11,14 +11,14 @@
 * **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags): Gets or sets Namespace tags.
 * **type**: 'Microsoft.NotificationHubs/namespaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01
+## Resource Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Gets or sets Namespace data center location.
+* **location**: string (WriteOnly): Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required, WriteOnly): SharedAccessAuthorizationRule properties.
 * **type**: 'Microsoft.NotificationHubs/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2014-09-01
@@ -32,14 +32,14 @@
 * **tags**: [NotificationHubCreateOrUpdateParametersTags](#notificationhubcreateorupdateparameterstags): Gets or sets NotificationHub tags.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01
+## Resource Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules@2014-09-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Gets or sets Namespace data center location.
+* **location**: string (WriteOnly): Gets or sets Namespace data center location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required): SharedAccessAuthorizationRule properties.
+* **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties) (Required, WriteOnly): SharedAccessAuthorizationRule properties.
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/AuthorizationRules@2014-09-01)
@@ -73,15 +73,15 @@
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
-* **claimType**: string: The type of the claim.
-* **claimValue**: string: The value of the claim.
-* **createdTime**: string: The time at which the authorization rule was created.
-* **keyName**: string: The name of the key that was used.
-* **modifiedTime**: string: The most recent time the rule was updated.
-* **primaryKey**: string: The primary key that was used.
-* **revision**: int: The revision number for the rule.
-* **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
-* **secondaryKey**: string: The secondary key that was used.
+* **claimType**: string (WriteOnly): The type of the claim.
+* **claimValue**: string (WriteOnly): The value of the claim.
+* **createdTime**: string (WriteOnly): The time at which the authorization rule was created.
+* **keyName**: string (WriteOnly): The name of the key that was used.
+* **modifiedTime**: string (WriteOnly): The most recent time the rule was updated.
+* **primaryKey**: string (WriteOnly): The primary key that was used.
+* **revision**: int (WriteOnly): The revision number for the rule.
+* **rights**: 'Listen' | 'Manage' | 'Send'[] (WriteOnly): The rights associated with the rule.
+* **secondaryKey**: string (WriteOnly): The secondary key that was used.
 
 ## NotificationHubProperties
 ### Properties

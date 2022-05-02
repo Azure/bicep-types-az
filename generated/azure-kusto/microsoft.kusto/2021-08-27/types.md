@@ -121,6 +121,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Kusto/clusters/privateLinkResources@2021-08-27 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-08-27' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.Kusto/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listFollowerDatabases (Microsoft.Kusto/clusters@2021-08-27)
 * **Resource**: Microsoft.Kusto/clusters
 * **ApiVersion**: 2021-08-27
@@ -360,6 +370,12 @@
 * **actionsRequired**: string (ReadOnly): Any action that is required beyond basic workflow (approve/ reject/ disconnect)
 * **description**: string: The private link service connection description.
 * **status**: string: The private link service connection status.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource required zone names.
 
 ## FollowerDatabaseListResult
 ### Properties

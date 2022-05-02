@@ -1,5 +1,14 @@
 # Microsoft.Authorization @ 2020-09-01
 
+## Resource Microsoft.Authorization/dataPolicyManifests@2020-09-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DataPolicyManifestProperties](#datapolicymanifestproperties) (ReadOnly): The properties of the data policy manifest.
+* **type**: 'Microsoft.Authorization/dataPolicyManifests' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Authorization/policyAssignments@2020-09-01
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -12,7 +21,7 @@
 * **type**: 'Microsoft.Authorization/policyAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policyDefinitions@2020-09-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,13 +30,72 @@
 * **type**: 'Microsoft.Authorization/policyDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/policySetDefinitions@2020-09-01
-* **Valid Scope(s)**: ManagementGroup, Subscription
+* **Valid Scope(s)**: Tenant, ManagementGroup, Subscription
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PolicySetDefinitionProperties](#policysetdefinitionproperties): The policy set definition properties.
 * **type**: 'Microsoft.Authorization/policySetDefinitions' (ReadOnly, DeployTimeConstant): The resource type
+
+## DataPolicyManifestProperties
+### Properties
+* **effects**: [DataEffect](#dataeffect)[] (ReadOnly): The effect definition.
+* **fieldValues**: string[] (ReadOnly): The non-alias field accessor values that can be used in the policy rule.
+* **isBuiltInOnly**: bool (ReadOnly): A value indicating whether policy mode is allowed only in built-in definitions.
+* **namespaces**: string[] (ReadOnly): The list of namespaces for the data policy manifest.
+* **policyMode**: string (ReadOnly): The policy mode of the data policy manifest.
+* **resourceFunctions**: [DataManifestResourceFunctionsDefinition](#datamanifestresourcefunctionsdefinition) (ReadOnly): The resource functions supported by a manifest
+* **resourceTypeAliases**: [ResourceTypeAliases](#resourcetypealiases)[] (ReadOnly): An array of resource type aliases.
+
+## DataEffect
+### Properties
+* **detailsSchema**: any (ReadOnly): Any object
+* **name**: string (ReadOnly): The data effect name.
+
+## DataManifestResourceFunctionsDefinition
+### Properties
+* **custom**: [DataManifestCustomResourceFunctionDefinition](#datamanifestcustomresourcefunctiondefinition)[] (ReadOnly): An array of data manifest custom resource definition.
+* **standard**: string[] (ReadOnly): The standard resource functions (subscription and/or resourceGroup).
+
+## DataManifestCustomResourceFunctionDefinition
+### Properties
+* **allowCustomProperties**: bool (ReadOnly): A value indicating whether the custom properties within the property bag are allowed. Needs api-version to be specified in the policy rule eg - vault('2019-06-01').
+* **defaultProperties**: string[] (ReadOnly): The top-level properties that can be selected on the function's output. eg - [ "name", "location" ] if vault().name and vault().location are supported
+* **fullyQualifiedResourceType**: string (ReadOnly): The fully qualified control plane resource type that this function represents. eg - 'Microsoft.KeyVault/vaults'.
+* **name**: string (ReadOnly): The function name as it will appear in the policy rule. eg - 'vault'.
+
+## ResourceTypeAliases
+### Properties
+* **aliases**: [Alias](#alias)[] (ReadOnly): The aliases for property names.
+* **resourceType**: string (ReadOnly): The resource type name.
+
+## Alias
+### Properties
+* **defaultMetadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
+* **defaultPath**: string (ReadOnly): The default path for an alias.
+* **defaultPattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
+* **name**: string (ReadOnly): The alias name.
+* **paths**: [AliasPath](#aliaspath)[] (ReadOnly): The paths for an alias.
+* **type**: 'Mask' | 'NotSpecified' | 'PlainText' (ReadOnly): The type of the alias.
+
+## AliasPathMetadata
+### Properties
+* **attributes**: 'Modifiable' | 'None' (ReadOnly): The attributes of the token that the alias path is referring to.
+* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' (ReadOnly): The type of the token that the alias path is referring to.
+
+## AliasPattern
+### Properties
+* **phrase**: string (ReadOnly): The alias pattern phrase.
+* **type**: 'Extract' | 'NotSpecified' (ReadOnly): The type of alias pattern
+* **variable**: string (ReadOnly): The alias pattern variable.
+
+## AliasPath
+### Properties
+* **apiVersions**: string[] (ReadOnly): The API versions.
+* **metadata**: [AliasPathMetadata](#aliaspathmetadata) (ReadOnly)
+* **path**: string (ReadOnly): The path of an alias.
+* **pattern**: [AliasPattern](#aliaspattern) (ReadOnly): The type of the pattern for an alias path.
 
 ## Identity
 ### Properties

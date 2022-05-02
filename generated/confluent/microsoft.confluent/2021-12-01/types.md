@@ -1,13 +1,13 @@
 # Microsoft.Confluent @ 2021-12-01
 
-## Resource Microsoft.Confluent/agreements@2021-12-01
+## Resource Microsoft.Confluent/agreements@2021-12-01 (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties): Terms properties for Marketplace and Confluent.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **properties**: [ConfluentAgreementProperties](#confluentagreementproperties) (WriteOnly): Terms properties for Marketplace and Confluent.
+* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2021-12-01
@@ -24,23 +24,23 @@
 
 ## ConfluentAgreementProperties
 ### Properties
-* **accepted**: bool: If any version of the terms have been accepted, otherwise false.
-* **licenseTextLink**: string: Link to HTML with Microsoft and Publisher terms.
-* **plan**: string: Plan identifier string.
-* **privacyPolicyLink**: string: Link to the privacy policy of the publisher.
-* **product**: string: Product identifier string.
-* **publisher**: string: Publisher identifier string.
-* **retrieveDatetime**: string: Date and time in UTC of when the terms were accepted. This is empty if Accepted is false.
-* **signature**: string: Terms signature.
+* **accepted**: bool (WriteOnly): If any version of the terms have been accepted, otherwise false.
+* **licenseTextLink**: string (WriteOnly): Link to HTML with Microsoft and Publisher terms.
+* **plan**: string (WriteOnly): Plan identifier string.
+* **privacyPolicyLink**: string (WriteOnly): Link to the privacy policy of the publisher.
+* **product**: string (WriteOnly): Product identifier string.
+* **publisher**: string (WriteOnly): Publisher identifier string.
+* **retrieveDatetime**: string (WriteOnly): Date and time in UTC of when the terms were accepted. This is empty if Accepted is false.
+* **signature**: string (WriteOnly): Terms signature.
 
 ## SystemData
 ### Properties
-* **createdAt**: string: The timestamp of resource creation (UTC).
-* **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
-* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
-* **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdAt**: string (WriteOnly): The timestamp of resource creation (UTC).
+* **createdBy**: string (WriteOnly): The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (WriteOnly): The type of identity that created the resource.
+* **lastModifiedAt**: string (WriteOnly): The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string (WriteOnly): The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (WriteOnly): The type of identity that created the resource.
 
 ## OrganizationResourceProperties
 ### Properties

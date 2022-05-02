@@ -5,211 +5,214 @@ WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2020-01-01
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.dbformariadb-2018-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1524:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1524:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1585:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1585:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1624:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1624:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForDefaultCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1663:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1688:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1688:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForGeoRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1712:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1712:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForReplica' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1730:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1730:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1748:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1748:5
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1816:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1816:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1839:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1839:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1868:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1868:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1874:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1874:9
 warning | PreCheck/SchemaMissingType | The schema 'ServerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1915:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1915:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1927:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1927:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1946:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1946:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1964:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:1964:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2044:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2044:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2057:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2057:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2072:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2072:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2084:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2084:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2117:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2117:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2132:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2132:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2144:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2144:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2170:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2170:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2208:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2208:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2220:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2220:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2251:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2251:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2270:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2270:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierServiceLevelObjectives' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2282:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2282:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2324:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2324:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2370:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2370:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2382:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2382:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2398:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2398:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2483:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2483:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2511:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/preview/2018-06-01-preview/mariadb.json:2511:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
-info    | autorest.bicep took 5ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.dbformariadb/servers/{servername}/recoverableservers': Found mismatch between type segments (2) and name segments (1)
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.dbformariadb-2018-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ServerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1601:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1601:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1674:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1674:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1713:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1713:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForDefaultCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1756:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1756:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1781:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1781:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForGeoRestore' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1805:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1805:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerPropertiesForReplica' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1823:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1823:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1841:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1841:5
 warning | PreCheck/SchemaMissingType | The schema 'Server' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1880:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1880:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerForCreate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1899:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1899:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1928:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1928:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUpdateParameters-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1934:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1934:9
 warning | PreCheck/SchemaMissingType | The schema 'ServerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1979:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1979:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1991:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:1991:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2010:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2010:5
 warning | PreCheck/SchemaMissingType | The schema 'FirewallRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2028:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2028:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2108:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2108:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2121:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2121:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2136:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2136:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2148:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2148:5
 warning | PreCheck/SchemaMissingType | The schema 'Configuration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2181:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2181:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigurationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2196:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2196:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2208:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2208:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2234:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2234:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2272:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2272:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2287:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2287:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2318:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2318:5
 warning | PreCheck/SchemaMissingType | The schema 'LogFileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2337:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2337:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierServiceLevelObjectives' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2349:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2349:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2391:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2391:5
 warning | PreCheck/SchemaMissingType | The schema 'PerformanceTierListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2437:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2437:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailabilityRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2449:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2449:5
 warning | PreCheck/SchemaMissingType | The schema 'NameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2465:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2465:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2482:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json:2482:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTextProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:380:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:380:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryText' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:393:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:393:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueryStatisticsInputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:427:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:427:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueryStatisticsInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:467:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:467:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatisticProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:480:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:480:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:532:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:532:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatisticsInputProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:566:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:566:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatisticsInput' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:590:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:590:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatisticProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:603:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:603:5
 warning | PreCheck/SchemaMissingType | The schema 'WaitStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:650:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:650:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:706:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/QueryPerformanceInsights.json:706:5
 warning | PreCheck/SchemaMissingType | The schema 'AdvisorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:336:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:336:5
 warning | PreCheck/SchemaMissingType | The schema 'Advisor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:340:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:340:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendationActionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:374:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:374:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:417:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:417:5
 warning | PreCheck/SchemaMissingType | The schema 'RecommendedActionSessionsOperationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:451:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PerformanceRecommendations.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PrivateEndpointConnections.json:384:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PrivateEndpointConnections.json:384:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PrivateEndpointConnections.json:393:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PrivateEndpointConnections.json:393:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PrivateLinkResources.json:187:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/PrivateLinkResources.json:187:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'LogFile' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from LogFile
 warning | ? | Operation 'TopQueryStatistics/ListByServer' really should not have a media type (because there should be no body)
 warning | ? | Operation 'WaitStatistics/ListByServer' really should not have a media type (because there should be no body)
-info    | autorest.bicep took 2ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.dbformariadb/servers/{servername}/recoverableservers': Found mismatch between type segments (2) and name segments (1)
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.dbformariadb-2020-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2020-01-01/Servers.json:107:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2020-01-01/Servers.json:107:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 0ms
-info    | Autorest completed in 3.58s. 4 files generated.
+info    | Autorest completed in 8.81s. 4 files generated.

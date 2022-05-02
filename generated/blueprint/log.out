@@ -1,13 +1,13 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.blueprint-2017-11-11-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -15,59 +15,58 @@ warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:725:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:725:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:738:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:738:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:746:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json:746:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ParameterDefinition-defaultValue' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-defaultValue
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-defaultValue
 warning | Modeler/MissingType | The schema 'ParameterDefinition-allowedValuesItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-allowedValuesItem
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-allowedValuesItem
 warning | Modeler/MissingType | The schema 'RoleAssignmentArtifactProperties-principalIds' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/RoleAssignmentArtifactProperties-principalIds
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/RoleAssignmentArtifactProperties-principalIds
 warning | Modeler/MissingType | The schema 'ParameterValue-value' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterValue-value
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintAssignment.json#/components/schemas/ParameterValue-value
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintDefinition.json#/components/schemas/ParameterValue-value
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2017-11-11-preview/blueprintAssignment.json#/components/schemas/ParameterValue-value
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | Resource type microsoft.blueprint/blueprints/versions under path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Blueprint/blueprints/{blueprintName}/versions/{versionId}' has no body defined.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.blueprint-2018-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:860:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:860:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:873:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:873:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:881:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:881:9
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:1389:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json:1389:5
 warning | PreCheck/SchemaMissingType | The schema 'WhoIsBlueprintContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintAssignment.json:640:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintAssignment.json:640:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ParameterDefinition-defaultValue' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-defaultValue
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-defaultValue
 warning | Modeler/MissingType | The schema 'ParameterDefinition-allowedValuesItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-allowedValuesItem
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/ParameterDefinition-allowedValuesItem
 warning | Modeler/MissingType | The schema 'RoleAssignmentArtifactProperties-principalIds' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/RoleAssignmentArtifactProperties-principalIds
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/blueprint/resource-manager/Microsoft.Blueprint/preview/2018-11-01-preview/blueprintDefinition.json#/components/schemas/RoleAssignmentArtifactProperties-principalIds
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 2.72s. 4 files generated.
+info    | autorest.bicep took 5ms
+info    | Autorest completed in 5.92s. 4 files generated.

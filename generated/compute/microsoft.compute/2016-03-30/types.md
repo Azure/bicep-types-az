@@ -11,6 +11,28 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions@2016-03-30 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The supported Azure location of the resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineImageProperties](#virtualmachineimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Image.
+* **tags**: [VirtualMachineImageResourceTags](#virtualmachineimageresourcetags) (ReadOnly): Specifies the tags that are assigned to the virtual machine. For more information about using tags, see [Using tags to organize your Azure resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags.md).
+* **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2016-03-30 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VirtualMachineExtensionImageProperties](#virtualmachineextensionimageproperties) (ReadOnly): Describes the properties of a Virtual Machine Extension Image.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Compute/virtualMachines@2016-03-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -49,6 +71,21 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2016-03-30 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **instanceId**: string (ReadOnly): The virtual machine instance ID.
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan) (ReadOnly): Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+* **properties**: [VirtualMachineScaleSetVMProperties](#virtualmachinescalesetvmproperties) (ReadOnly): Describes the properties of a virtual machine scale set virtual machine.
+* **resources**: [VirtualMachineExtension](#virtualmachineextension)[] (ReadOnly): The virtual machine child extension resources.
+* **sku**: [Sku](#sku) (ReadOnly): Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AvailabilitySetProperties
 ### Properties
 * **platformFaultDomainCount**: int: Fault Domain count.
@@ -67,6 +104,44 @@
 ## SubResource
 ### Properties
 * **id**: string: Resource Id
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineImageProperties
+### Properties
+* **dataDiskImages**: [DataDiskImage](#datadiskimage)[] (ReadOnly): Array of DataDiskImage
+* **osDiskImage**: [OSDiskImage](#osdiskimage) (ReadOnly): Contains the os disk image information.
+* **plan**: [PurchasePlan](#purchaseplan) (ReadOnly): Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+
+## DataDiskImage
+### Properties
+* **lun**: int (ReadOnly): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+
+## OSDiskImage
+### Properties
+* **operatingSystem**: 'Linux' | 'Windows' (ReadOnly): The operating system of the osDiskImage.
+
+## PurchasePlan
+### Properties
+* **name**: string (ReadOnly): The plan ID.
+* **product**: string (ReadOnly): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+* **publisher**: string (ReadOnly): The publisher ID.
+
+## VirtualMachineImageResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineExtensionImageProperties
+### Properties
+* **computeRole**: string (ReadOnly): The type of role (IaaS or PaaS) this extension supports.
+* **handlerSchema**: string (ReadOnly): The schema defined by publisher, where extension consumers should provide settings in a matching schema.
+* **operatingSystem**: string (ReadOnly): The operating system this extension supports.
+* **supportsMultipleExtensions**: bool (ReadOnly): Whether the handler can support multiple extensions.
+* **vmScaleSetEnabled**: bool (ReadOnly): Whether the extension can be used on xRP VMScaleSets. By default existing extensions are usable on scalesets, but there might be cases where a publisher wants to explicitly indicate the extension is only enabled for CRP VMs but not VMSS.
 
 ## ResourceTags
 ### Properties
@@ -419,6 +494,36 @@
 * **capacity**: int: Specifies the number of virtual machines in the scale set.
 * **name**: string: The sku name.
 * **tier**: string: Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## VirtualMachineScaleSetVMProperties
+### Properties
+* **availabilitySet**: [SubResource](#subresource) (ReadOnly)
+* **diagnosticsProfile**: [DiagnosticsProfile](#diagnosticsprofile) (ReadOnly): Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
+* **hardwareProfile**: [HardwareProfile](#hardwareprofile) (ReadOnly): Specifies the hardware settings for the virtual machine.
+* **instanceView**: [VirtualMachineScaleSetVMInstanceView](#virtualmachinescalesetvminstanceview) (ReadOnly): The instance view of a virtual machine scale set VM.
+* **latestModelApplied**: bool (ReadOnly): Specifies whether the latest model has been applied to the virtual machine.
+* **licenseType**: string (ReadOnly): Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15
+* **networkProfile**: [NetworkProfile](#networkprofile) (ReadOnly): Specifies the network interfaces of the virtual machine.
+* **osProfile**: [OSProfile](#osprofile) (ReadOnly): Specifies the operating system settings for the virtual machine.
+* **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
+* **storageProfile**: [StorageProfile](#storageprofile) (ReadOnly): Specifies the storage settings for the virtual machine disks.
+* **vmId**: string (ReadOnly): Azure VM unique ID.
+
+## VirtualMachineScaleSetVMInstanceView
+### Properties
+* **bootDiagnostics**: [BootDiagnosticsInstanceView](#bootdiagnosticsinstanceview) (ReadOnly): The instance view of a virtual machine boot diagnostics.
+* **disks**: [DiskInstanceView](#diskinstanceview)[] (ReadOnly): The disks information.
+* **extensions**: [VirtualMachineExtensionInstanceView](#virtualmachineextensioninstanceview)[] (ReadOnly): The extensions information.
+* **platformFaultDomain**: int (ReadOnly): The Fault Domain count.
+* **platformUpdateDomain**: int (ReadOnly): The Update Domain count.
+* **rdpThumbPrint**: string (ReadOnly): The Remote desktop certificate thumbprint.
+* **statuses**: [InstanceViewStatus](#instanceviewstatus)[] (ReadOnly): The resource status information.
+* **vmAgent**: [VirtualMachineAgentInstanceView](#virtualmachineagentinstanceview) (ReadOnly): The instance view of the VM Agent running on the virtual machine.
 
 ## ResourceTags
 ### Properties

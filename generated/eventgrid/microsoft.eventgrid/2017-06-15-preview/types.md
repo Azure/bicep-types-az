@@ -20,6 +20,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/topicTypes@2017-06-15-preview (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2017-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of a topic type.
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.EventGrid/topics@2017-06-15-preview)
 * **Resource**: Microsoft.EventGrid/topics
 * **ApiVersion**: 2017-06-15-preview
@@ -64,6 +73,14 @@ Wildcard characters are not supported in this path.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TopicTypeProperties
+### Properties
+* **description**: string (ReadOnly): Description of the topic type.
+* **displayName**: string (ReadOnly): Display Name for the topic type.
+* **provider**: string (ReadOnly): Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' (ReadOnly): Region type of the resource.
 
 ## TopicSharedAccessKeys
 ### Properties

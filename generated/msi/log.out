@@ -1,79 +1,79 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.managedidentity-2021-09-30-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:411:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:411:5
 warning | PreCheck/SchemaMissingType | The schema 'IdentityUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:427:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:427:5
 warning | PreCheck/SchemaMissingType | The schema 'SystemAssignedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:463:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:463:5
 warning | PreCheck/SchemaMissingType | The schema 'UserAssignedIdentitiesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:618:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:618:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:634:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:634:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:644:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:644:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:686:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:686:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:712:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2021-09-30-preview/ManagedIdentity.json:712:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.managedidentity-2018-11-30"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:354:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:354:5
 warning | PreCheck/SchemaMissingType | The schema 'IdentityUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:370:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:370:5
 warning | PreCheck/SchemaMissingType | The schema 'SystemAssignedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:406:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:406:5
 warning | PreCheck/SchemaMissingType | The schema 'UserAssignedIdentitiesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:500:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:500:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:516:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:516:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:526:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:526:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:571:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:571:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:597:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json:597:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.managedidentity-2015-08-31-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:354:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:354:5
 warning | PreCheck/SchemaMissingType | The schema 'SystemAssignedIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:370:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:370:5
 warning | PreCheck/SchemaMissingType | The schema 'UserAssignedIdentitiesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:439:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:439:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:455:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:455:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:465:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:465:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationDisplay' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:507:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:507:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:533:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2015-08-31-preview/ManagedIdentity.json:533:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 2.36s. 6 files generated.
+info    | autorest.bicep took 5ms
+info    | Autorest completed in 8.41s. 6 files generated.

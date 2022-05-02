@@ -12,6 +12,16 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ContainerRegistry/registries/runs@2019-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RunProperties](#runproperties) (ReadOnly): The properties for a run.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -83,6 +93,69 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## RunProperties
+### Properties
+* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
+* **agentPoolName**: string: The dedicated agent pool for the run.
+* **createTime**: string: The time the run was scheduled.
+* **customRegistries**: string[]: The list of custom registries that were logged in during this run.
+* **finishTime**: string: The time the run finished.
+* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger): The image update trigger that caused a build.
+* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled or not.
+* **lastUpdatedTime**: string: The last updated time for the run.
+* **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly): Properties for a registry image.
+* **outputImages**: [ImageDescriptor](#imagedescriptor)[]: The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+* **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of this agent pool
+* **runErrorMessage**: string (ReadOnly): The error message received from backend systems after the run is scheduled.
+* **runId**: string: The unique identifier for the run.
+* **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun': The type of run.
+* **sourceRegistryAuth**: string: The scope of the credentials that were used to login to the source registry during this run.
+* **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor): The source trigger that caused a run.
+* **startTime**: string: The time the run started.
+* **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout': The current status of the run.
+* **task**: string: The task against which run was scheduled.
+* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor)
+* **updateTriggerToken**: string: The update trigger token passed for the Run.
+
+## AgentProperties
+### Properties
+* **cpu**: int: The CPU configuration in terms of number of cores required for the run.
+
+## ImageUpdateTrigger
+### Properties
+* **id**: string: The unique ID of the trigger.
+* **images**: [ImageDescriptor](#imagedescriptor)[]: The list of image updates that caused the build.
+* **timestamp**: string: The timestamp when the image update happened.
+
+## ImageDescriptor
+### Properties
+* **digest**: string: The sha256-based digest of the image manifest.
+* **registry**: string: The registry login server.
+* **repository**: string: The repository name.
+* **tag**: string: The tag name.
+
+## PlatformProperties
+### Properties
+* **architecture**: '386' | 'amd64' | 'arm' | 'arm64' | 'x86': The OS architecture.
+* **os**: 'Linux' | 'Windows' (Required): The OS of agent machine
+* **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU.
+
+## SourceTriggerDescriptor
+### Properties
+* **branchName**: string: The branch name in the repository.
+* **commitId**: string: The unique ID that identifies a commit.
+* **eventType**: string: The event type of the trigger.
+* **id**: string: The unique ID of the trigger.
+* **providerType**: string: The source control provider type.
+* **pullRequestId**: string: The unique ID that identifies pull request.
+* **repositoryUrl**: string: The repository URL.
+
+## TimerTriggerDescriptor
+### Properties
+* **scheduleOccurrence**: string: The occurrence that triggered the run.
+* **timerTriggerName**: string: The timer trigger name that caused the run.
 
 ## IdentityProperties
 ### Properties
@@ -167,10 +240,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
 * **type**: 'TaskRunRequest' (Required): The type of the run request.
 
 
-## AgentProperties
-### Properties
-* **cpu**: int: The CPU configuration in terms of number of cores required for the run.
-
 ## Argument
 ### Properties
 * **isSecret**: bool: Flag to indicate whether the argument represents a secret and want to be removed from build logs.
@@ -213,12 +282,6 @@ used as is without any modification.
 will be generated using the given scope. These credentials will be used to login to
 the source registry during the run.
 
-## PlatformProperties
-### Properties
-* **architecture**: '386' | 'amd64' | 'arm' | 'arm64' | 'x86': The OS architecture.
-* **os**: 'Linux' | 'Windows' (Required): The OS of agent machine
-* **variant**: 'v6' | 'v7' | 'v8': Variant of the CPU.
-
 ## SetValue
 ### Properties
 * **isSecret**: bool: Flag to indicate whether the value represents a secret or not.
@@ -242,59 +305,6 @@ executing a build step.
 * **properties**: [RunProperties](#runproperties): The properties for a run.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The type of the resource.
-
-## RunProperties
-### Properties
-* **agentConfiguration**: [AgentProperties](#agentproperties): The properties that determine the run agent configuration.
-* **agentPoolName**: string: The dedicated agent pool for the run.
-* **createTime**: string: The time the run was scheduled.
-* **customRegistries**: string[]: The list of custom registries that were logged in during this run.
-* **finishTime**: string: The time the run finished.
-* **imageUpdateTrigger**: [ImageUpdateTrigger](#imageupdatetrigger): The image update trigger that caused a build.
-* **isArchiveEnabled**: bool: The value that indicates whether archiving is enabled or not.
-* **lastUpdatedTime**: string: The last updated time for the run.
-* **logArtifact**: [ImageDescriptor](#imagedescriptor) (ReadOnly): Properties for a registry image.
-* **outputImages**: [ImageDescriptor](#imagedescriptor)[]: The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
-* **platform**: [PlatformProperties](#platformproperties): The platform properties against which the run has to happen.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The provisioning state of this agent pool
-* **runErrorMessage**: string (ReadOnly): The error message received from backend systems after the run is scheduled.
-* **runId**: string: The unique identifier for the run.
-* **runType**: 'AutoBuild' | 'AutoRun' | 'QuickBuild' | 'QuickRun': The type of run.
-* **sourceRegistryAuth**: string: The scope of the credentials that were used to login to the source registry during this run.
-* **sourceTrigger**: [SourceTriggerDescriptor](#sourcetriggerdescriptor): The source trigger that caused a run.
-* **startTime**: string: The time the run started.
-* **status**: 'Canceled' | 'Error' | 'Failed' | 'Queued' | 'Running' | 'Started' | 'Succeeded' | 'Timeout': The current status of the run.
-* **task**: string: The task against which run was scheduled.
-* **timerTrigger**: [TimerTriggerDescriptor](#timertriggerdescriptor)
-* **updateTriggerToken**: string: The update trigger token passed for the Run.
-
-## ImageUpdateTrigger
-### Properties
-* **id**: string: The unique ID of the trigger.
-* **images**: [ImageDescriptor](#imagedescriptor)[]: The list of image updates that caused the build.
-* **timestamp**: string: The timestamp when the image update happened.
-
-## ImageDescriptor
-### Properties
-* **digest**: string: The sha256-based digest of the image manifest.
-* **registry**: string: The registry login server.
-* **repository**: string: The repository name.
-* **tag**: string: The tag name.
-
-## SourceTriggerDescriptor
-### Properties
-* **branchName**: string: The branch name in the repository.
-* **commitId**: string: The unique ID that identifies a commit.
-* **eventType**: string: The event type of the trigger.
-* **id**: string: The unique ID of the trigger.
-* **providerType**: string: The source control provider type.
-* **pullRequestId**: string: The unique ID that identifies pull request.
-* **repositoryUrl**: string: The repository URL.
-
-## TimerTriggerDescriptor
-### Properties
-* **scheduleOccurrence**: string: The occurrence that triggered the run.
-* **timerTriggerName**: string: The timer trigger name that caused the run.
 
 ## TaskProperties
 ### Properties

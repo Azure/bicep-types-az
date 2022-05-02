@@ -20,6 +20,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.Insights/privateLinkScopes/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Insights/privateLinkScopes/privateLinkResources@2019-10-17-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Insights/privateLinkScopes/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Insights/privateLinkScopes/scopedResources@2019-10-17-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -61,6 +70,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
 
 ## ScopedResourceProperties
 ### Properties

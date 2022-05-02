@@ -1,5 +1,15 @@
 # Microsoft.CostManagement @ 2020-06-01
 
+## Resource Microsoft.CostManagement/alerts@2020-06-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AlertProperties](#alertproperties) (ReadOnly)
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.CostManagement/exports@2020-06-01
 * **Valid Scope(s)**: Unknown
 ### Properties
@@ -19,6 +29,50 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ViewProperties](#viewproperties): The properties of the view.
 * **type**: 'Microsoft.CostManagement/views' (ReadOnly, DeployTimeConstant): The resource type
+
+## AlertProperties
+### Properties
+* **closeTime**: string (ReadOnly): dateTime in which alert was closed
+* **costEntityId**: string (ReadOnly): related budget
+* **creationTime**: string (ReadOnly): dateTime in which alert was created
+* **definition**: [AlertPropertiesDefinition](#alertpropertiesdefinition) (ReadOnly): defines the type of alert
+* **description**: string (ReadOnly): Alert description
+* **details**: [AlertPropertiesDetails](#alertpropertiesdetails) (ReadOnly): Alert details
+* **modificationTime**: string (ReadOnly): dateTime in which alert was last modified
+* **source**: 'Preset' | 'User' (ReadOnly): Source of alert
+* **status**: 'Active' | 'Dismissed' | 'None' | 'Overridden' | 'Resolved' (ReadOnly): alert status
+* **statusModificationTime**: string (ReadOnly): dateTime in which the alert status was last modified
+* **statusModificationUserName**: string (ReadOnly)
+
+## AlertPropertiesDefinition
+### Properties
+* **category**: 'Billing' | 'Cost' | 'System' | 'Usage' (ReadOnly): Alert category
+* **criteria**: 'CostThresholdExceeded' | 'CreditThresholdApproaching' | 'CreditThresholdReached' | 'CrossCloudCollectionError' | 'CrossCloudNewDataAvailable' | 'ForecastCostThresholdExceeded' | 'ForecastUsageThresholdExceeded' | 'GeneralThresholdError' | 'InvoiceDueDateApproaching' | 'InvoiceDueDateReached' | 'MultiCurrency' | 'QuotaThresholdApproaching' | 'QuotaThresholdReached' | 'UsageThresholdExceeded' (ReadOnly): Criteria that triggered alert
+* **type**: 'Budget' | 'BudgetForecast' | 'Credit' | 'General' | 'Invoice' | 'Quota' | 'xCloud' (ReadOnly): type of alert
+
+## AlertPropertiesDetails
+### Properties
+* **amount**: int (ReadOnly): budget threshold amount
+* **contactEmails**: string[] (ReadOnly): list of emails to contact
+* **contactGroups**: string[] (ReadOnly): list of action groups to broadcast to
+* **contactRoles**: string[] (ReadOnly): list of contact roles
+* **currentSpend**: int (ReadOnly): current spend
+* **meterFilter**: any[] (ReadOnly): array of meters to filter by
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LessThan' | 'LessThanOrEqualTo' | 'None' (ReadOnly): operator used to compare currentSpend with amount
+* **overridingAlert**: string (ReadOnly): overriding alert
+* **periodStartDate**: string (ReadOnly): datetime of periodStartDate
+* **resourceFilter**: any[] (ReadOnly): array of resources to filter by
+* **resourceGroupFilter**: any[] (ReadOnly): array of resourceGroups to filter by
+* **tagFilter**: any (ReadOnly): Any object
+* **threshold**: int (ReadOnly): notification threshold percentage as a decimal which activated this alert
+* **timeGrainType**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'None' | 'Quarterly' (ReadOnly): Type of timegrain cadence
+* **triggeredBy**: string (ReadOnly): notificationId that triggered this alert
+* **unit**: string (ReadOnly): unit of currency being used
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ExportProperties
 ### Properties

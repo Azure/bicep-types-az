@@ -22,6 +22,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: 'Microsoft.Databricks/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Databricks/workspaces/privateLinkResources@2021-04-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupIdInformationProperties](#groupidinformationproperties) (ReadOnly): The properties for a group information object
+* **type**: 'Microsoft.Databricks/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2021-04-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -172,6 +181,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## GroupIdInformationProperties
+### Properties
+* **groupId**: string (ReadOnly): The group id
+* **requiredMembers**: string[] (ReadOnly): The required members for a specific group id
+* **requiredZoneNames**: string[] (ReadOnly): The required DNS zones for a specific group id
 
 ## VirtualNetworkPeeringPropertiesFormat
 ### Properties

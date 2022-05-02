@@ -23,6 +23,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HealthcareApis/services/privateLinkResources@2020-03-30 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.HealthcareApis/services/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ServicesResourceIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
@@ -94,4 +103,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
 

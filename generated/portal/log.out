@@ -1,53 +1,53 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.portal-2020-09-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2020-09-01-preview/portal.json:682:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2020-09-01-preview/portal.json:682:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/providers/Microsoft.Portal/listTenantConfigurationViolations': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.portal-2019-01-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2019-01-01-preview/portal.json:606:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2019-01-01-preview/portal.json:606:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.portal-2018-10-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2018-10-01-preview/portal.json:595:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2018-10-01-preview/portal.json:595:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.portal-2015-08-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2015-08-01-preview/portal.json:595:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/portal/resource-manager/Microsoft.Portal/preview/2015-08-01-preview/portal.json:595:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 0ms
-info    | Autorest completed in 2.79s. 8 files generated.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 7.02s. 8 files generated.

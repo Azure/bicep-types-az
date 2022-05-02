@@ -185,6 +185,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DocumentDB/databaseAccounts/privateLinkResources@2021-10-15 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.DocumentDB/databaseAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-10-15
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -301,6 +310,15 @@
 * **properties**: [ThroughputSettingsUpdateProperties](#throughputsettingsupdateproperties) (Required): Properties to update Azure Cosmos DB resource throughput.
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DocumentDB/locations@2021-10-15 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-10-15' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LocationProperties](#locationproperties) (ReadOnly): Cosmos DB location metadata
+* **type**: 'Microsoft.DocumentDB/locations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listConnectionInfo (Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2021-10-15)
 * **Resource**: Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces
@@ -836,6 +854,12 @@
 * **notebookServerEndpoint**: string (ReadOnly): Specifies the endpoint of Notebook server.
 * **status**: string (ReadOnly): Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
 
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource required zone names.
+
 ## SqlDatabaseCreateUpdateProperties
 ### Properties
 * **options**: [CreateUpdateOptions](#createupdateoptions): CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
@@ -983,6 +1007,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## LocationProperties
+### Properties
+* **backupStorageRedundancies**: 'Geo' | 'Local' | 'Zone'[] (ReadOnly): The properties of available backup storage redundancies.
+* **isResidencyRestricted**: bool (ReadOnly): Flag indicating whether the location is residency sensitive.
+* **supportsAvailabilityZone**: bool (ReadOnly): Flag indicating whether the location supports availability zones or not.
 
 ## NotebookWorkspaceConnectionInfoResult
 ### Properties

@@ -47,6 +47,15 @@
 * **properties**: [AddStorageAccountProperties](#addstorageaccountproperties) (Required): The Azure Storage account properties to use when adding a new Azure Storage account.
 * **type**: 'Microsoft.DataLakeAnalytics/accounts/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers@2019-11-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [StorageContainerProperties](#storagecontainerproperties) (ReadOnly): Azure Storage blob container properties information.
+* **type**: 'Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listSasTokens (Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers@2019-11-01-preview)
 * **Resource**: Microsoft.DataLakeAnalytics/accounts/storageAccounts/containers
 * **ApiVersion**: 2019-11-01-preview
@@ -177,6 +186,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## StorageContainerProperties
+### Properties
+* **lastModifiedTime**: string (ReadOnly): The last modified time of the blob container.
 
 ## SasTokenInformationListResult
 ### Properties

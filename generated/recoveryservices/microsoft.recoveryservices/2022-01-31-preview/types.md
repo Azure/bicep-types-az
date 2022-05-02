@@ -15,13 +15,13 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/certificates@2022-01-31-preview
+## Resource Microsoft.RecoveryServices/vaults/certificates@2022-01-31-preview (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RawCertificateData](#rawcertificatedata): Raw certificate data.
+* **properties**: [RawCertificateData](#rawcertificatedata) (WriteOnly): Raw certificate data.
 * **type**: 'Microsoft.RecoveryServices/vaults/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/extendedInformation@2022-01-31-preview
@@ -33,6 +33,21 @@
 * **name**: 'vaultExtendedInfo' (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultExtendedInfo](#vaultextendedinfo): Vault extended information.
 * **type**: 'Microsoft.RecoveryServices/vaults/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.RecoveryServices/vaults/operationResults@2022-01-31-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Optional ETag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [IdentityData](#identitydata) (ReadOnly): Identity for the resource.
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VaultProperties](#vaultproperties) (ReadOnly): Properties of the vault.
+* **sku**: [Sku](#sku) (ReadOnly): Identifies the unique system identifier for each Azure resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.RecoveryServices/vaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## IdentityData
 ### Properties
@@ -146,8 +161,8 @@
 
 ## RawCertificateData
 ### Properties
-* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid': Specifies the authentication type.
-* **certificate**: any: The base64 encoded certificate raw data string
+* **authType**: 'AAD' | 'ACS' | 'AccessControlService' | 'AzureActiveDirectory' | 'Invalid' (WriteOnly): Specifies the authentication type.
+* **certificate**: any (WriteOnly): The base64 encoded certificate raw data string
 
 ## VaultExtendedInfo
 ### Properties
@@ -155,4 +170,9 @@
 * **encryptionKey**: string: Encryption key.
 * **encryptionKeyThumbprint**: string: Encryption key thumbprint.
 * **integrityKey**: string: Integrity key.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 

@@ -42,6 +42,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/extensionTopics@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [ExtensionTopicProperties](#extensiontopicproperties) (ReadOnly): Properties of the Extension Topic
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventGrid/systemTopics@2021-12-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -86,6 +96,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.EventGrid/topicTypes@2021-12-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of a topic type.
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.EventGrid/domains@2021-12-01)
 * **Resource**: Microsoft.EventGrid/domains
@@ -496,6 +515,11 @@ Wildcard characters are not supported in this path.
 * **eventTimeToLiveInMinutes**: int: Time To Live (in minutes) for events.
 * **maxDeliveryAttempts**: int: Maximum number of delivery retry attempts for events.
 
+## ExtensionTopicProperties
+### Properties
+* **description**: string (ReadOnly): Description of the extension topic.
+* **systemTopic**: string (ReadOnly): System topic resource id which is mapped to the source.
+
 ## SystemTopicProperties
 ### Properties
 * **metricResourceId**: string (ReadOnly): Metric resource id for the system topic.
@@ -525,6 +549,17 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TopicTypeProperties
+### Properties
+* **description**: string (ReadOnly): Description of the topic type.
+* **displayName**: string (ReadOnly): Display Name for the topic type.
+* **provider**: string (ReadOnly): Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' (ReadOnly): Region type of the resource.
+* **sourceResourceFormat**: string (ReadOnly): Source resource format.
+* **supportedLocations**: string[] (ReadOnly): List of locations supported by this topic type.
+* **supportedScopesForSource**: 'AzureSubscription' | 'Resource' | 'ResourceGroup'[] (ReadOnly): Supported source scopes.
 
 ## DomainSharedAccessKeys
 ### Properties

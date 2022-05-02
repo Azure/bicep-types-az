@@ -1,7 +1,7 @@
 # Microsoft.Media @ 2020-05-01
 
 ## Resource Microsoft.Media/mediaservices@2020-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Valid Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -82,6 +82,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.Media/mediaservices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Media/mediaservices/privateLinkResources@2020-05-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Media/mediaservices/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Media/mediaservices/streamingEndpoints@2020-05-01
 * **Valid Scope(s)**: ResourceGroup
@@ -516,6 +525,12 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
 
 ## StreamingEndpointProperties
 ### Properties

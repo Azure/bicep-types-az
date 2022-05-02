@@ -39,14 +39,14 @@
 * **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KeyVault/vaults/accessPolicies@2021-10-01
+## Resource Microsoft.KeyVault/vaults/accessPolicies@2021-10-01 (WriteOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): The resource type of the access policy.
+* **location**: string (ReadOnly, WriteOnly): The resource type of the access policy.
 * **name**: 'add' | 'remove' | 'replace' (Required, DeployTimeConstant): The resource name
-* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required): Properties of the vault access policy
+* **properties**: [VaultAccessPolicyProperties](#vaultaccesspolicyproperties) (Required, WriteOnly): Properties of the vault access policy
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/keys@2021-10-01
@@ -59,6 +59,17 @@
 * **properties**: [KeyProperties](#keyproperties) (Required): The properties of the key.
 * **tags**: [KeyCreateParametersTags](#keycreateparameterstags): The tags that will be assigned to the key.
 * **type**: 'Microsoft.KeyVault/vaults/keys' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.KeyVault/vaults/keys/versions@2021-10-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Azure location of the key vault resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [KeyProperties](#keyproperties) (ReadOnly): The properties of the key.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Tags assigned to the key vault resource.
+* **type**: 'Microsoft.KeyVault/vaults/keys/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2021-10-01
 * **Valid Scope(s)**: ResourceGroup
@@ -242,7 +253,7 @@
 
 ## VaultAccessPolicyProperties
 ### Properties
-* **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+* **accessPolicies**: [AccessPolicyEntry](#accesspolicyentry)[] (Required, WriteOnly): An array of 0 to 16 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
 
 ## KeyProperties
 ### Properties
@@ -265,6 +276,11 @@
 * **updated**: int (ReadOnly): Last updated time in seconds since 1970-01-01T00:00:00Z.
 
 ## KeyCreateParametersTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

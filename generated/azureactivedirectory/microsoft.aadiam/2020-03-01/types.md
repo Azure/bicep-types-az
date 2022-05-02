@@ -24,6 +24,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource microsoft.aadiam/privateLinkForAzureAd/privateLinkResources@2020-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'microsoft.aadiam/privateLinkForAzureAd/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## PrivateLinkPolicyTags
 ### Properties
 ### Additional Properties
@@ -54,4 +63,9 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private endpoint connection status.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
 

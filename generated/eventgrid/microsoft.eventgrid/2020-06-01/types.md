@@ -62,6 +62,15 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/topics/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventGrid/topicTypes@2020-06-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TopicTypeProperties](#topictypeproperties) (ReadOnly): Properties of a topic type.
+* **type**: 'Microsoft.EventGrid/topicTypes' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.EventGrid/domains@2020-06-01)
 * **Resource**: Microsoft.EventGrid/domains
 * **ApiVersion**: 2020-06-01
@@ -370,6 +379,16 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TopicTypeProperties
+### Properties
+* **description**: string (ReadOnly): Description of the topic type.
+* **displayName**: string (ReadOnly): Display Name for the topic type.
+* **provider**: string (ReadOnly): Namespace of the provider of the topic type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic type
+* **resourceRegionType**: 'GlobalResource' | 'RegionalResource' (ReadOnly): Region type of the resource.
+* **sourceResourceFormat**: string (ReadOnly): Source resource format.
+* **supportedLocations**: string[] (ReadOnly): List of locations supported by this topic type.
 
 ## DomainSharedAccessKeys
 ### Properties

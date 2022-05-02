@@ -37,6 +37,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HDInsight/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.HDInsight/clusters/privateLinkResources@2021-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.HDInsight/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listHosts (Microsoft.HDInsight/clusters@2021-06-01)
 * **Resource**: Microsoft.HDInsight/clusters
 * **ApiVersion**: 2021-06-01
@@ -385,6 +395,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
 
 ## HostInfo
 ### Properties

@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -10,7 +10,7 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.aadiam-2017-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -21,29 +21,29 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:254:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'RetentionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:275:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:294:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:294:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:322:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:322:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:370:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:370:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:382:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:382:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:391:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:391:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategory' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:484:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:484:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategoryResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:517:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2017-04-01-preview/azureactivedirectory.json:517:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.aadiam-2020-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -53,17 +53,17 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AzureADMetricsPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-07-01-preview/azureADMetrics.json:339:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-07-01-preview/azureADMetrics.json:339:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-07-01-preview/azureADMetrics.json:370:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-07-01-preview/azureADMetrics.json:370:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-07-01-preview/azureADMetrics.json:379:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-07-01-preview/azureADMetrics.json:379:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.aadiam-2020-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -73,16 +73,16 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-03-01-preview/privateLinkForAzureAD.json:410:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-03-01-preview/privateLinkForAzureAD.json:410:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-03-01-preview/privateLinkForAzureAD.json:419:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/preview/2020-03-01-preview/privateLinkForAzureAD.json:419:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'privateLinkPolicy' has a property 'name' that is already declared the parent schema 'AzureResourceBase' but 'readonly' has been changed -- this is not permitted. The property has been removed from privateLinkPolicy
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.aadiam-2020-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -92,7 +92,7 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -109,27 +109,27 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:254:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'RetentionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:275:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:294:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:294:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:322:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:322:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:370:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:370:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:382:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:382:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:391:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:391:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategory' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:480:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:480:5
 warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategoryResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:513:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azureactivedirectory/resource-manager/Microsoft.Aadiam/stable/2017-04-01/azureactivedirectory.json:513:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
-info    | Autorest completed in 3.19s. 10 files generated.
+info    | Autorest completed in 11.18s. 10 files generated.

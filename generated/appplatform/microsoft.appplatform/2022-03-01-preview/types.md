@@ -77,6 +77,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.AppPlatform/Spring/buildServices@2022-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BuildServiceProperties](#buildserviceproperties) (ReadOnly): Build service resource properties payload
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.AppPlatform/Spring/buildServices' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.AppPlatform/Spring/buildServices/agentPools@2022-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -116,6 +126,36 @@
 * **properties**: [BuildProperties](#buildproperties): Build resource properties payload
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/buildServices/builds' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AppPlatform/Spring/buildServices/builds/results@2022-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BuildResultProperties](#buildresultproperties) (ReadOnly): Build result resource properties payload
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.AppPlatform/Spring/buildServices/builds/results' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AppPlatform/Spring/buildServices/supportedBuildpacks@2022-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SupportedBuildpackResourceProperties](#supportedbuildpackresourceproperties) (ReadOnly): Supported buildpack resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.AppPlatform/Spring/buildServices/supportedBuildpacks' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.AppPlatform/Spring/buildServices/supportedStacks@2022-03-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SupportedStackResourceProperties](#supportedstackresourceproperties) (ReadOnly): Supported stack resource properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.AppPlatform/Spring/buildServices/supportedStacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppPlatform/Spring/certificates@2022-03-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -493,6 +533,17 @@ the relative path to the target module/project.
 * **certName**: string: The bound certificate name of domain.
 * **thumbprint**: string: The thumbprint of bound certificate.
 
+## BuildServiceProperties
+### Properties
+* **kPackVersion**: string (ReadOnly): The installed KPack version in this build service.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the KPack build result
+* **resourceRequests**: [BuildServicePropertiesResourceRequests](#buildservicepropertiesresourcerequests) (ReadOnly): The runtime resource configuration of this build service.
+
+## BuildServicePropertiesResourceRequests
+### Properties
+* **cpu**: string (ReadOnly): vCPU allocated to the entire build service node pool.
+* **memory**: string (ReadOnly): Memory allocated to the entire build service node pool.
+
 ## BuildServiceAgentPoolProperties
 ### Properties
 * **poolSize**: [BuildServiceAgentPoolSizeProperties](#buildserviceagentpoolsizeproperties): Build service agent pool size properties
@@ -562,6 +613,27 @@ the relative path to the target module/project.
 ## TriggeredBuildResult
 ### Properties
 * **id**: string: The unique build id of this build result
+
+## BuildResultProperties
+### Properties
+* **buildPodName**: string (ReadOnly): The build pod name which can be used to get the build log streaming.
+* **buildStages**: [BuildStageProperties](#buildstageproperties)[] (ReadOnly): All of the build stage (init-container and container) resources in build pod.
+* **name**: string (ReadOnly): The name of this build result
+* **provisioningState**: 'Building' | 'Deleting' | 'Failed' | 'Queuing' | 'Succeeded' (ReadOnly): Provisioning state of the KPack build result
+
+## BuildStageProperties
+### Properties
+* **name**: string (ReadOnly): The name of this build stage resource.
+* **status**: 'Failed' | 'NotStarted' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of this build stage resource.
+
+## SupportedBuildpackResourceProperties
+### Properties
+* **buildpackId**: string (ReadOnly): The id of supported buildpack
+
+## SupportedStackResourceProperties
+### Properties
+* **stackId**: string (ReadOnly): The id of supported stack
+* **version**: string (ReadOnly): The version of supported stack
 
 ## CertificateProperties
 * **Discriminator**: type

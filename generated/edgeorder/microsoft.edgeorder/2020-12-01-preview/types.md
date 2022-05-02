@@ -12,6 +12,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EdgeOrder/addresses' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EdgeOrder/locations/orders@2020-12-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [OrderProperties](#orderproperties) (ReadOnly): Represents order details.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.EdgeOrder/locations/orders' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EdgeOrder/orderItems@2020-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -64,6 +74,19 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## OrderProperties
+### Properties
+* **currentStage**: [StageDetails](#stagedetails) (ReadOnly): Resource stage details.
+* **orderItemIds**: string[] (ReadOnly): List of order item ARM Ids which are part of an order.
+* **orderStageHistory**: [StageDetails](#stagedetails)[] (ReadOnly): Order status history.
+
+## StageDetails
+### Properties
+* **displayName**: string (ReadOnly): Display name of the resource stage.
+* **stageName**: 'Cancelled' | 'Confirmed' | 'Delivered' | 'InReview' | 'InUse' | 'Placed' | 'ReadyToShip' | 'ReturnCompleted' | 'ReturnInitiated' | 'ReturnPickedUp' | 'ReturnedToMicrosoft' | 'Shipped' (ReadOnly): Stage name
+* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' (ReadOnly): Stage status.
+* **startTime**: string (ReadOnly): Stage start time
+
 ## OrderItemProperties
 ### Properties
 * **addressDetails**: [AddressDetails](#addressdetails) (Required): Address details for an order item.
@@ -94,13 +117,6 @@
 * **returnReason**: string (ReadOnly): Return reason.
 * **returnStatus**: 'NotReturnable' | 'Returnable' | 'ReturnableWithFee' (ReadOnly): Describes whether the order item is returnable or not.
 * **reverseShippingDetails**: [ReverseShippingDetails](#reverseshippingdetails) (ReadOnly): Reverse shipment details.
-
-## StageDetails
-### Properties
-* **displayName**: string (ReadOnly): Display name of the resource stage.
-* **stageName**: 'Cancelled' | 'Confirmed' | 'Delivered' | 'InReview' | 'InUse' | 'Placed' | 'ReadyToShip' | 'ReturnCompleted' | 'ReturnInitiated' | 'ReturnPickedUp' | 'ReturnedToMicrosoft' | 'Shipped' (ReadOnly): Stage name
-* **stageStatus**: 'Cancelled' | 'Cancelling' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' (ReadOnly): Stage status.
-* **startTime**: string (ReadOnly): Stage start time
 
 ## ErrorDetail
 ### Properties

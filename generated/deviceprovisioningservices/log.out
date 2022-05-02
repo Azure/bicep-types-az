@@ -1,135 +1,135 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.devices-2022-02-05"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2202:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2202:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2238:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2238:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2265:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2265:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2405:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2405:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2407:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2022-02-05/iotdps.json:2407:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.devices-2020-09-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2256:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2256:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2292:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2292:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2319:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2319:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2459:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2459:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2461:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2020-09-01-preview/iotdps.json:2461:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.devices-2020-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2174:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2174:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2210:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2210:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2237:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2237:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2377:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2377:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2379:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-03-01/iotdps.json:2379:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.devices-2017-08-21-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2017-08-21-preview/iotdps.json:1555:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2017-08-21-preview/iotdps.json:1555:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2017-08-21-preview/iotdps.json:1591:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2017-08-21-preview/iotdps.json:1591:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2017-08-21-preview/iotdps.json:1618:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/preview/2017-08-21-preview/iotdps.json:1618:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.devices-2017-11-15"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1633:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1633:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1669:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1669:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1696:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1696:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1836:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1836:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1838:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2017-11-15/iotdps.json:1838:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.devices-2018-01-22"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1633:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1633:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1669:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1669:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1696:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1696:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1836:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1836:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1838:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2018-01-22/iotdps.json:1838:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.devices-2020-01-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1690:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1690:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1726:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1726:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1753:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1753:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1893:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1893:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1895:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2020-01-01/iotdps.json:1895:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.devices-2021-10-15"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2190:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2190:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2226:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2226:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2253:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2253:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2393:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2393:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2395:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/stable/2021-10-15/iotdps.json:2395:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 6.16s. 16 files generated.
+info    | autorest.bicep took 3ms
+info    | Autorest completed in 15.37s. 16 files generated.

@@ -13,6 +13,18 @@
 * **tags**: [Tags](#tags): Resource tags
 * **type**: 'Microsoft.MachineLearning/commitmentPlans' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.MachineLearning/commitmentPlans/commitmentAssociations@2016-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): An entity tag used to enforce optimistic concurrency.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CommitmentAssociationProperties](#commitmentassociationproperties) (ReadOnly): Properties of an Azure ML commitment association.
+* **tags**: [Tags](#tags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.MachineLearning/commitmentPlans/commitmentAssociations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.MachineLearning/webServices@2016-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -54,6 +66,17 @@
 * **capacity**: int: The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
 * **name**: string: The SKU name. Along with tier, uniquely identifies the SKU.
 * **tier**: string: The SKU tier. Along with name, uniquely identifies the SKU.
+
+## Tags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## CommitmentAssociationProperties
+### Properties
+* **associatedResourceId**: string (ReadOnly): The ID of the resource this association points to, such as the ARM ID of an Azure ML web service.
+* **commitmentPlanId**: string (ReadOnly): The ARM ID of the parent Azure ML commitment plan.
+* **creationDate**: string (ReadOnly): The date at which this commitment association was created, in ISO 8601 format.
 
 ## Tags
 ### Properties

@@ -42,6 +42,16 @@
 * **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Certificate properties for create operations
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Batch/batchAccounts/detectors@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DetectorResponseProperties](#detectorresponseproperties) (ReadOnly): Detector response properties.
+* **type**: 'Microsoft.Batch/batchAccounts/detectors' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Batch/batchAccounts/pools@2022-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -52,6 +62,26 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties): Pool properties.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Batch/batchAccounts/privateEndpointConnections@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (ReadOnly): Private endpoint connection properties.
+* **type**: 'Microsoft.Batch/batchAccounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Batch/batchAccounts/privateLinkResources@2022-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Private link resource properties.
+* **type**: 'Microsoft.Batch/batchAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listKeys (Microsoft.Batch/batchAccounts@2022-01-01)
 * **Resource**: Microsoft.Batch/batchAccounts
@@ -190,6 +220,10 @@
 * **details**: [DeleteCertificateError](#deletecertificateerror)[] (ReadOnly): A list of additional details about the error.
 * **message**: string (ReadOnly): A message describing the error, intended to be suitable for display in a user interface.
 * **target**: string (ReadOnly): The target of the particular error. For example, the name of the property in error.
+
+## DetectorResponseProperties
+### Properties
+* **value**: string (ReadOnly): A base64 encoded string that represents the content of a detector.
 
 ## BatchPoolIdentity
 ### Properties
@@ -509,6 +543,12 @@
 ## WindowsUserConfiguration
 ### Properties
 * **loginMode**: 'Batch' | 'Interactive': Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The group id is used to establish the private link connection.
+* **requiredMembers**: string[] (ReadOnly): The list of required members that are used to establish the private link connection.
+* **requiredZoneNames**: string[] (ReadOnly): The list of required zone names for the private DNS resource name
 
 ## BatchAccountKeys
 ### Properties

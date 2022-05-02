@@ -1,143 +1,143 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.resourcegraph-2021-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'QueryRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:191:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:191:5
 warning | PreCheck/SchemaMissingType | The schema 'FacetRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:263:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:263:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:546:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:546:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:558:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:558:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:565:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2021-06-01-preview/resourcegraph.json:565:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.resourcegraph-2020-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangeData-beforeSnapshot' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-09-01-preview/resourcechanges.json:217:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-09-01-preview/resourcechanges.json:217:9
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangeData-afterSnapshot' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-09-01-preview/resourcechanges.json:225:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-09-01-preview/resourcechanges.json:225:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ResourceChangeList-$skipToken' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-09-01-preview/resourcechanges.json#/components/schemas/ResourceChangeList-$skipToken
-info    | autorest.bicep took 0ms
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-09-01-preview/resourcechanges.json#/components/schemas/ResourceChangeList-$skipToken
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resourcegraph-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'QueryRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:191:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:191:5
 warning | PreCheck/SchemaMissingType | The schema 'FacetRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:248:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:248:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:530:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:530:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:542:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:542:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:549:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2021-03-01/resourcegraph.json:549:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.resourcegraph-2020-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'QueryRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:187:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:187:5
 warning | PreCheck/SchemaMissingType | The schema 'FacetRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:238:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:238:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:520:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:520:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:532:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:532:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:539:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcegraph.json:539:9
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangeData-beforeSnapshot' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcechanges.json:195:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcechanges.json:195:9
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangeData-afterSnapshot' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcechanges.json:203:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcechanges.json:203:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ResourceChangeList-$skipToken' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcechanges.json#/components/schemas/ResourceChangeList-$skipToken
-info    | autorest.bicep took 0ms
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2020-04-01-preview/resourcechanges.json#/components/schemas/ResourceChangeList-$skipToken
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resourcegraph-2019-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'QueryRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:178:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:178:5
 warning | PreCheck/SchemaMissingType | The schema 'FacetRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:229:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:229:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:511:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:511:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:523:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:523:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:530:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/stable/2019-04-01/resourcegraph.json:530:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.resourcegraph-2018-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'QueryRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:268:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:268:5
 warning | PreCheck/SchemaMissingType | The schema 'FacetRequestOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:307:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:307:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangesRequestParameters-interval' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:536:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:536:9
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangeData-beforeSnapshot' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:585:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:585:9
 warning | PreCheck/SchemaMissingType | The schema 'ResourceChangeData-afterSnapshot' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:593:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:593:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:725:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:725:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:741:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:741:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:748:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json:748:9
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:258:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:258:5
 warning | PreCheck/SchemaMissingType | The schema 'GraphQueryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:295:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:295:5
 warning | PreCheck/SchemaMissingType | The schema 'GraphQueryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:312:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:312:5
 warning | PreCheck/SchemaMissingType | The schema 'GraphQueryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:327:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:327:5
 warning | PreCheck/SchemaMissingType | The schema 'GraphQueryUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:361:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:361:5
 warning | PreCheck/SchemaMissingType | The schema 'GraphQueryPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:382:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:382:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorFieldContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:395:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:395:5
 warning | PreCheck/SchemaMissingType | The schema 'GraphQueryError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:412:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/graphquery.json:412:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'ResourceChangeList-$skipToken' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json#/components/schemas/ResourceChangeList-$skipToken
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 3.78s. 2 files generated.
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/preview/2018-09-01-preview/resourcegraph.json#/components/schemas/ResourceChangeList-$skipToken
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 10.71s. 2 files generated.

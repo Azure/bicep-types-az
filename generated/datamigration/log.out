@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -26,7 +26,7 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.datamigration-2022-03-30-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -53,23 +53,23 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/Common.json:181:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/Common.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:20:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:20:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:100:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:100:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:137:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:137:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapabilities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:158:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuRestrictions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:173:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:173:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:211:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/ResourceSkus.json:211:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlMigrationService' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from SqlMigrationService
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
@@ -79,10 +79,10 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'Project' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataMigrationService' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from DataMigrationService
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutput' but isn't significantly different. The property has been removed from MigrateMySqlAzureDbForMySqlOfflineTaskOutputError
 warning | Modeler/MissingType | The schema 'components·1n054gc·schemas·migratepostgresqlazuredbforpostgresqlsyncdatabaseinput·properties·migrationsetting·additionalproperties' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/MigratePostgreSqlAzureDbForPostgreSqlSyncTask.json#/components/schemas/components·1n054gc·schemas·migratepostgresqlazuredbforpostgresqlsyncdatabaseinput·properties·migrationsetting·additionalproperties
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-03-30-preview/definitions/MigratePostgreSqlAzureDbForPostgreSqlSyncTask.json#/components/schemas/components·1n054gc·schemas·migratepostgresqlazuredbforpostgresqlsyncdatabaseinput·properties·migrationsetting·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 19ms
+info    | autorest.bicep took 48ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2022-01-30-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -108,23 +108,23 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/Common.json:181:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/Common.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:20:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:20:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:100:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:100:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:137:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:137:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapabilities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:158:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuRestrictions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:173:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:173:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:211:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/ResourceSkus.json:211:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlMigrationService' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from SqlMigrationService
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
@@ -134,10 +134,10 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'Project' has a propert
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataMigrationService' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from DataMigrationService
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutput' but isn't significantly different. The property has been removed from MigrateMySqlAzureDbForMySqlOfflineTaskOutputError
 warning | Modeler/MissingType | The schema 'components·1n054gc·schemas·migratepostgresqlazuredbforpostgresqlsyncdatabaseinput·properties·migrationsetting·additionalproperties' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/MigratePostgreSqlAzureDbForPostgreSqlSyncTask.json#/components/schemas/components·1n054gc·schemas·migratepostgresqlazuredbforpostgresqlsyncdatabaseinput·properties·migrationsetting·additionalproperties
+   file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2022-01-30-preview/definitions/MigratePostgreSqlAzureDbForPostgreSqlSyncTask.json#/components/schemas/components·1n054gc·schemas·migratepostgresqlazuredbforpostgresqlsyncdatabaseinput·properties·migrationsetting·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 31ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2021-10-30-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -163,23 +163,23 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/Common.json:181:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/Common.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:20:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:20:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:100:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:100:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:137:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:137:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapabilities' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:158:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuRestrictions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:173:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:173:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:211:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2021-10-30-preview/definitions/ResourceSkus.json:211:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlMigrationService' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from SqlMigrationService
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
@@ -190,7 +190,7 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataMigrationService' 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutput' but isn't significantly different. The property has been removed from MigrateMySqlAzureDbForMySqlOfflineTaskOutputError
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 26ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2021-06-30"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -216,11 +216,11 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/stable/2021-06-30/definitions/Common.json:181:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/stable/2021-06-30/definitions/Common.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -234,7 +234,7 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMIT
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Project' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from Project
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DataMigrationService' has a property 'systemData' that is already declared the parent schema 'TrackedResource' but isn't significantly different. The property has been removed from DataMigrationService
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateMySqlAzureDbForMySqlOfflineTaskOutput' but isn't significantly different. The property has been removed from MigrateMySqlAzureDbForMySqlOfflineTaskOutputError
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 30ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2018-04-19"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -260,13 +260,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/stable/2018-04-19/definitions/Common.json:187:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/stable/2018-04-19/definitions/Common.json:187:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/stable/2018-04-19/definitions/Common.json:208:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/stable/2018-04-19/definitions/Common.json:208:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -277,7 +277,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMITaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMITaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMITaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMISyncTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMISyncTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMISyncTaskOutputError
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2018-07-15-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -303,13 +303,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-07-15-preview/definitions/Common.json:176:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-07-15-preview/definitions/Common.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-07-15-preview/definitions/Common.json:197:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-07-15-preview/definitions/Common.json:197:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -320,7 +320,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMISyncTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMISyncTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMISyncTaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMITaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMITaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMITaskOutputError
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2018-03-31-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -346,13 +346,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-31-preview/definitions/Common.json:172:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-31-preview/definitions/Common.json:172:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-31-preview/definitions/Common.json:193:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-31-preview/definitions/Common.json:193:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -362,7 +362,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an u
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMITaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMITaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMITaskOutputError
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2018-03-15-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -388,13 +388,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-15-preview/definitions/Common.json:172:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-15-preview/definitions/Common.json:172:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-15-preview/definitions/Common.json:193:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2018-03-15-preview/definitions/Common.json:193:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -404,7 +404,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an u
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlMITaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlMITaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlMITaskOutputError
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.datamigration-2017-11-15-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -430,13 +430,13 @@ warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2017-11-15-preview/definitions/Common.json:172:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2017-11-15-preview/definitions/Common.json:172:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2017-11-15-preview/definitions/Common.json:193:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/datamigration/resource-manager/Microsoft.DataMigration/preview/2017-11-15-preview/definitions/Common.json:193:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCapacity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuCosts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -445,5 +445,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceSkuRestrictions' with
 warning | PreCheck/SchemaMissingType | The schema 'ResourceSkusResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MigrateSqlServerSqlDbTaskOutputError' has a property 'id' that is already declared the parent schema 'MigrateSqlServerSqlDbTaskOutput' but isn't significantly different. The property has been removed from MigrateSqlServerSqlDbTaskOutputError
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 21.65s. 18 files generated.
+info    | autorest.bicep took 5ms
+info    | Autorest completed in 50.66s. 18 files generated.

@@ -1,21 +1,13 @@
 # Microsoft.Maintenance @ 2020-07-01-preview
 
-## Resource Microsoft.Maintenance/applyUpdates@2020-07-01-preview
+## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview (WriteOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Maintenance/configurationAssignments@2020-07-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Location of the resource
+* **location**: string (WriteOnly): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties for configuration assignment
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties) (WriteOnly): Properties for configuration assignment
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2020-07-01-preview
@@ -29,10 +21,21 @@
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Maintenance/publicMaintenanceConfigurations@2020-07-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Gets or sets location of the resource
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceConfigurationProperties](#maintenanceconfigurationproperties) (ReadOnly): Properties for maintenance configuration
+* **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags) (ReadOnly): Gets or sets tags of the resource
+* **type**: 'Microsoft.Maintenance/publicMaintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ConfigurationAssignmentProperties
 ### Properties
-* **maintenanceConfigurationId**: string: The maintenance configuration Id
-* **resourceId**: string: The unique resourceId
+* **maintenanceConfigurationId**: string (WriteOnly): The maintenance configuration Id
+* **resourceId**: string (WriteOnly): The unique resourceId
 
 ## MaintenanceConfigurationProperties
 ### Properties
@@ -54,6 +57,11 @@
 * **recurEvery**: string: Rate at which a Maintenance window is expected to recur. The rate can be expressed as daily, weekly, or monthly schedules. Daily schedule are formatted as recurEvery: [Frequency as integer]['Day(s)']. If no frequency is provided, the default frequency is 1. Daily schedule examples are recurEvery: Day, recurEvery: 3Days.  Weekly schedule are formatted as recurEvery: [Frequency as integer]['Week(s)'] [Optional comma separated list of weekdays Monday-Sunday]. Weekly schedule examples are recurEvery: 3Weeks, recurEvery: Week Saturday,Sunday. Monthly schedules are formatted as [Frequency as integer]['Month(s)'] [Comma separated list of month days] or [Frequency as integer]['Month(s)'] [Week of Month (First, Second, Third, Fourth, Last)] [Weekday Monday-Sunday]. Monthly schedule examples are recurEvery: Month, recurEvery: 2Months, recurEvery: Month day23,day24, recurEvery: Month Last Sunday, recurEvery: Month Fourth Monday.
 * **startDateTime**: string: Effective start date of the maintenance window in YYYY-MM-DD hh:mm format. The start date can be set to either the current date or future date. The window will be created in the time zone provided and adjusted to daylight savings according to that time zone.
 * **timeZone**: string: Name of the timezone. List of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell. Example: Pacific Standard Time, UTC, W. Europe Standard Time, Korea Standard Time, Cen. Australia Standard Time.
+
+## MaintenanceConfigurationTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## MaintenanceConfigurationTags
 ### Properties

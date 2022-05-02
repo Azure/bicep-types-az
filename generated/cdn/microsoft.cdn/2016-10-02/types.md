@@ -34,6 +34,17 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2016-10-02 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2016-10-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [OriginProperties](#originproperties) (ReadOnly): The JSON object that contains the properties of the origin to create.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
+
 ## ProfileProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Provisioning status of the profile.
@@ -93,6 +104,19 @@
 * **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 * **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## OriginProperties
+### Properties
+* **hostName**: string (ReadOnly): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
+* **httpPort**: int (ReadOnly): The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int (ReadOnly): The value of the https port. Must be between 1 and 65535.
+* **provisioningState**: string (ReadOnly): Provisioning status of the origin.
+* **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the origin.
 
 ## ResourceTags
 ### Properties

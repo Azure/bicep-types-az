@@ -11,6 +11,17 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2017-08-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccessProfile](#accessprofile) (ReadOnly): Profile for enabling a user to access a managed cluster.
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
+* **type**: 'Microsoft.ContainerService/managedClusters/accessProfiles' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listCredential (Microsoft.ContainerService/managedClusters/accessProfiles@2017-08-31)
 * **Resource**: Microsoft.ContainerService/managedClusters/accessProfiles
 * **ApiVersion**: 2017-08-31
@@ -69,6 +80,15 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## AccessProfile
+### Properties
+* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ManagedClusterAccessProfile
 ### Properties
 * **id**: string (ReadOnly): Resource Id
@@ -77,10 +97,6 @@
 * **properties**: [AccessProfile](#accessprofile) (ReadOnly): Profile for enabling a user to access a managed cluster.
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: string (ReadOnly): Resource type
-
-## AccessProfile
-### Properties
-* **kubeConfig**: any (ReadOnly): Base64-encoded Kubernetes configuration file.
 
 ## ResourceTags
 ### Properties

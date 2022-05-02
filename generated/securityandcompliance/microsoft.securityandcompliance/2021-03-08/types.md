@@ -25,6 +25,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -49,6 +59,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365ComplianceCenter/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
@@ -75,6 +95,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForM365SecurityCenter/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -99,6 +129,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateLinkResources@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForMIPPolicySync/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
@@ -125,6 +165,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForO365ManagementActivityAPI/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell@2021-03-08
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -149,6 +199,16 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources@2021-03-08 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-08' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.SecurityAndCompliance/privateLinkServicesForSCCPowershell/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServicesResourceIdentity
 ### Properties
@@ -231,6 +291,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): The private link resource Private link DNS zone name.
 
 ## ServicesResourceTags
 ### Properties

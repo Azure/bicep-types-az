@@ -1,5 +1,14 @@
 # Microsoft.Storage @ 2021-09-01
 
+## Resource Microsoft.Storage/locations/deletedAccounts@2021-09-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DeletedAccountProperties](#deletedaccountproperties) (ReadOnly): Attributes of a deleted storage account.
+* **type**: 'Microsoft.Storage/locations/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Storage/storageAccounts@2021-09-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -178,6 +187,14 @@
 * **ApiVersion**: 2021-09-01
 * **Input**: [ServiceSasParameters](#servicesasparameters)
 * **Output**: [ListServiceSasResponse](#listservicesasresponse)
+
+## DeletedAccountProperties
+### Properties
+* **creationTime**: string (ReadOnly): Creation time of the deleted account.
+* **deletionTime**: string (ReadOnly): Deletion time of the deleted account.
+* **location**: string (ReadOnly): Location of the deleted account.
+* **restoreReference**: string (ReadOnly): Can be used to attempt recovering this deleted account via PutStorageAccount API.
+* **storageAccountResourceId**: string (ReadOnly): Full resource id of the original storage account.
 
 ## ExtendedLocation
 ### Properties

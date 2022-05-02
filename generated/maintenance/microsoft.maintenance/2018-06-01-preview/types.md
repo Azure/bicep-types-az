@@ -1,21 +1,13 @@
 # Microsoft.Maintenance @ 2018-06-01-preview
 
-## Resource Microsoft.Maintenance/applyUpdates@2018-06-01-preview
+## Resource Microsoft.Maintenance/configurationAssignments@2018-06-01-preview (WriteOnly)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Maintenance/configurationAssignments@2018-06-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Location of the resource
+* **location**: string (WriteOnly): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties for configuration assignment
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties) (WriteOnly): Properties for configuration assignment
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2018-06-01-preview
@@ -31,8 +23,8 @@
 
 ## ConfigurationAssignmentProperties
 ### Properties
-* **maintenanceConfigurationId**: string: The maintenance configuration Id
-* **resourceId**: string: The unique resourceId
+* **maintenanceConfigurationId**: string (WriteOnly): The maintenance configuration Id
+* **resourceId**: string (WriteOnly): The unique resourceId
 
 ## MaintenanceConfigurationProperties
 ### Properties

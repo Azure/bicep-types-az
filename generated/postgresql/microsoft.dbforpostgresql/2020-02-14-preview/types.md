@@ -13,6 +13,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBForPostgreSql/flexibleServers/configurations@2020-02-14-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of a configuration.
+* **type**: 'Microsoft.DBForPostgreSql/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2020-02-14-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -92,6 +101,15 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **dataType**: 'Boolean' | 'Enumeration' | 'Integer' | 'Numeric' (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **source**: string (ReadOnly): Source of the configuration.
+* **value**: string (ReadOnly): Value of the configuration.
 
 ## FirewallRuleProperties
 ### Properties

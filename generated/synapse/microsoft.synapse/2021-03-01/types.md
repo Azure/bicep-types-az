@@ -11,6 +11,15 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/privateLinkHubs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/privateLinkHubs/privateLinkResources@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Synapse/privateLinkHubs/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -100,6 +109,16 @@
 * **properties**: [KeyProperties](#keyproperties): Key properties
 * **type**: 'Microsoft.Synapse/workspaces/keys' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/libraries@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource Etag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [LibraryInfo](#libraryinfo) (ReadOnly): Library/package information of a Big Data pool powered by Apache Spark
+* **type**: 'Microsoft.Synapse/workspaces/libraries' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -117,6 +136,34 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.Synapse/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/privateLinkResources@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.Synapse/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/recoverableSqlPools@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecoverableSqlPoolProperties](#recoverablesqlpoolproperties) (ReadOnly): The properties of a recoverable sql pool
+* **type**: 'Microsoft.Synapse/workspaces/recoverableSqlPools' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/restorableDroppedSqlPools@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorableDroppedSqlPoolProperties](#restorabledroppedsqlpoolproperties) (ReadOnly): The properties of a restorable dropped Sql pool
+* **type**: 'Microsoft.Synapse/workspaces/restorableDroppedSqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/securityAlertPolicies@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -158,6 +205,17 @@
 * **properties**: [SqlPoolBlobAuditingPolicyProperties](#sqlpoolblobauditingpolicyproperties): Properties of a Sql pool blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/sqlPools/connectionPolicies@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Resource kind.
+* **location**: string (ReadOnly): Resource location.
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [SqlPoolConnectionPolicyProperties](#sqlpoolconnectionpolicyproperties) (ReadOnly): Properties of a Sql pool connection policy.
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -181,6 +239,15 @@
 * **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties): The properties of a Sql pool data masking rule.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/sqlPools/dataWarehouseUserActivities@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [DataWarehouseUserActivitiesProperties](#datawarehouseuseractivitiesproperties) (ReadOnly): User activities of a data warehouse. This currently includes the count of running or suspended queries. For more information, please view the sys.dm_pdw_exec_requests dynamic management view (DMV).
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/dataWarehouseUserActivities' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -201,6 +268,15 @@
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Synapse/workspaces/sqlPools/maintenanceWindowOptions@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceWindowOptionsProperties](#maintenancewindowoptionsproperties) (ReadOnly): Maintenance window options properties.
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/maintenanceWindowOptions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.Synapse/workspaces/sqlPools/maintenancewindows@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -218,6 +294,51 @@
 * **name**: 'config' (Required, DeployTimeConstant): The resource name
 * **properties**: [MetadataSyncConfigProperties](#metadatasyncconfigproperties): Metadata Sync Config properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/metadataSync' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/replicationLinks@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Location of the workspace that contains this firewall rule.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ReplicationLinkProperties](#replicationlinkproperties) (ReadOnly): Represents the properties of a Sql pool replication link.
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/replicationLinks' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/restorePoints@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RestorePointProperties](#restorepointproperties) (ReadOnly): Properties of a database restore point
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/restorePoints' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SqlPoolColumnProperties](#sqlpoolcolumnproperties) (ReadOnly): Sql pool column properties.
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/schemas/tables/columns/sensitivityLabels@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -265,6 +386,15 @@
 * **name**: 'default' | 'master' (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolVulnerabilityAssessmentRuleBaselineProperties](#sqlpoolvulnerabilityassessmentrulebaselineproperties): Properties of a Sql pool vulnerability assessment rule baseline.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans@2021-03-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
+* **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups@2021-03-01
 * **Valid Scope(s)**: ResourceGroup
@@ -328,6 +458,12 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+* **requiredZoneNames**: string[] (ReadOnly): Required DNS zone names of the the private link resource.
 
 ## ManagedIdentity
 ### Properties
@@ -840,6 +976,24 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state
 * **desiredState**: 'Disabled' | 'Enabled': Desired state
 
+## RecoverableSqlPoolProperties
+### Properties
+* **edition**: string (ReadOnly): The edition of the database
+* **elasticPoolName**: string (ReadOnly): The elastic pool name of the database
+* **lastAvailableBackupDate**: string (ReadOnly): The last available backup date of the database (ISO8601 format)
+* **serviceLevelObjective**: string (ReadOnly): The service level objective name of the database
+
+## RestorableDroppedSqlPoolProperties
+### Properties
+* **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format)
+* **databaseName**: string (ReadOnly): The name of the database
+* **deletionDate**: string (ReadOnly): The deletion date of the database (ISO8601 format)
+* **earliestRestoreDate**: string (ReadOnly): The earliest restore date of the database (ISO8601 format)
+* **edition**: string (ReadOnly): The edition of the database
+* **elasticPoolName**: string (ReadOnly): The elastic pool name of the database
+* **maxSizeBytes**: string (ReadOnly): The max size in bytes of the database
+* **serviceLevelObjective**: string (ReadOnly): The service level objective name of the database
+
 ## ServerSecurityAlertPolicyProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Specifies the UTC creation time of the policy.
@@ -960,6 +1114,16 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint is required.
 
+## SqlPoolConnectionPolicyProperties
+### Properties
+* **proxyDnsName**: string (ReadOnly): The fully qualified host name of the auditing proxy.
+* **proxyPort**: string (ReadOnly): The port number of the auditing proxy.
+* **redirectionState**: string (ReadOnly): The state of proxy redirection.
+* **securityEnabledAccess**: string (ReadOnly): The state of security access.
+* **state**: string (ReadOnly): The connection policy state.
+* **useServerDefault**: string (ReadOnly): Whether server default is enabled or disabled.
+* **visibility**: string (ReadOnly): The visibility of the auditing proxy.
+
 ## DataMaskingPolicyProperties
 ### Properties
 * **applicationPrincipals**: string (ReadOnly): The list of the application principals. This is a legacy parameter and is no longer used.
@@ -981,6 +1145,10 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **schemaName**: string (Required): The schema name on which the data masking rule is applied.
 * **suffixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
 * **tableName**: string (Required): The table name on which the data masking rule is applied.
+
+## DataWarehouseUserActivitiesProperties
+### Properties
+* **activeQueriesCount**: int (ReadOnly): Count of running and suspended queries.
 
 ## ExtendedSqlPoolBlobAuditingPolicyProperties
 ### Properties
@@ -1072,9 +1240,15 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **state**: 'Disabled' | 'Enabled' (Required): The state of the geo backup policy.
 * **storageType**: string (ReadOnly): The storage type of the geo backup policy.
 
-## MaintenanceWindowsProperties
+## MaintenanceWindowOptionsProperties
 ### Properties
-* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Array of MaintenanceWindowTimeRange
+* **allowMultipleMaintenanceWindowsPerCycle**: bool (ReadOnly): Whether we allow multiple maintenance windows per cycle.
+* **defaultDurationInMinutes**: int (ReadOnly): Default duration for maintenance window.
+* **isEnabled**: bool (ReadOnly): Whether maintenance windows are enabled for the database.
+* **maintenanceWindowCycles**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[] (ReadOnly): Available maintenance cycles e.g. {Saturday, 0, 48*60}, {Wednesday, 0, 24*60}.
+* **minCycles**: int (ReadOnly): Minimum number of maintenance windows cycles to be set on the database.
+* **minDurationInMinutes**: int (ReadOnly): Minimum duration of maintenance window.
+* **timeGranularityInMinutes**: int (ReadOnly): Time granularity in minutes for maintenance windows.
 
 ## MaintenanceWindowTimeRange
 ### Properties
@@ -1082,10 +1256,39 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **duration**: string: Duration of maintenance window in minutes.
 * **startTime**: string: Start time minutes offset from 12am.
 
+## MaintenanceWindowsProperties
+### Properties
+* **timeRanges**: [MaintenanceWindowTimeRange](#maintenancewindowtimerange)[]: Array of MaintenanceWindowTimeRange
+
 ## MetadataSyncConfigProperties
 ### Properties
 * **enabled**: bool: Indicates whether the metadata sync is enabled or disabled
 * **syncIntervalInMinutes**: int: The Sync Interval in minutes.
+
+## ReplicationLinkProperties
+### Properties
+* **isTerminationAllowed**: bool (ReadOnly): Legacy value indicating whether termination is allowed.  Currently always returns true.
+* **partnerDatabase**: string (ReadOnly): The name of the partner Sql pool.
+* **partnerLocation**: string (ReadOnly): The Azure Region of the partner Sql pool.
+* **partnerRole**: 'Copy' | 'NonReadableSecondary' | 'Primary' | 'Secondary' | 'Source' (ReadOnly): The role of the Sql pool in the replication link.
+* **partnerServer**: string (ReadOnly): The name of the workspace hosting the partner Sql pool.
+* **percentComplete**: int (ReadOnly): The percentage of seeding complete for the replication link.
+* **replicationMode**: string (ReadOnly): Replication mode of this replication link.
+* **replicationState**: 'CATCH_UP' | 'PENDING' | 'SEEDING' | 'SUSPENDED' (ReadOnly): The replication state for the replication link.
+* **role**: 'Copy' | 'NonReadableSecondary' | 'Primary' | 'Secondary' | 'Source' (ReadOnly): The role of the Sql pool in the replication link.
+* **startTime**: string (ReadOnly): The start time for the replication link.
+
+## RestorePointProperties
+### Properties
+* **earliestRestoreDate**: string (ReadOnly): The earliest time to which this database can be restored
+* **restorePointCreationDate**: string (ReadOnly): The time the backup was taken
+* **restorePointLabel**: string (ReadOnly): The label of restore point for backup request by user
+* **restorePointType**: 'CONTINUOUS' | 'DISCRETE' (ReadOnly): The type of restore point
+
+## SqlPoolColumnProperties
+### Properties
+* **columnType**: 'bigint' | 'binary' | 'bit' | 'char' | 'date' | 'datetime' | 'datetime2' | 'datetimeoffset' | 'decimal' | 'float' | 'geography' | 'geometry' | 'hierarchyid' | 'image' | 'int' | 'money' | 'nchar' | 'ntext' | 'numeric' | 'nvarchar' | 'real' | 'smalldatetime' | 'smallint' | 'smallmoney' | 'sql_variant' | 'sysname' | 'text' | 'time' | 'timestamp' | 'tinyint' | 'uniqueidentifier' | 'varbinary' | 'varchar' | 'xml' (ReadOnly): The column data type.
+* **isComputed**: bool (ReadOnly): Indicates whether column value is computed or not
 
 ## SensitivityLabelProperties
 ### Properties
@@ -1134,6 +1337,22 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SqlPoolVulnerabilityAssessmentRuleBaselineItem
 ### Properties
 * **result**: string[] (Required): The rule baseline result
+
+## VulnerabilityAssessmentScanRecordProperties
+### Properties
+* **endTime**: string (ReadOnly): The scan end time (UTC).
+* **errors**: [VulnerabilityAssessmentScanError](#vulnerabilityassessmentscanerror)[] (ReadOnly): The scan errors.
+* **numberOfFailedSecurityChecks**: int (ReadOnly): The number of failed security checks.
+* **scanId**: string (ReadOnly): The scan ID.
+* **startTime**: string (ReadOnly): The scan start time (UTC).
+* **state**: 'Failed' | 'FailedToRun' | 'InProgress' | 'Passed' (ReadOnly): The scan status.
+* **storageContainerPath**: string (ReadOnly): The scan results storage container path.
+* **triggerType**: 'OnDemand' | 'Recurring' (ReadOnly): The scan trigger type.
+
+## VulnerabilityAssessmentScanError
+### Properties
+* **code**: string (ReadOnly): The error code.
+* **message**: string (ReadOnly): The error message.
 
 ## WorkloadGroupProperties
 ### Properties

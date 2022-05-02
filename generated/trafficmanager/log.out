@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -12,7 +12,7 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.network-2018-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -25,58 +25,57 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:957:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:957:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:968:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:968:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1085:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1085:5
 warning | PreCheck/SchemaMissingType | The schema 'UserMetricsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1100:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1100:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryExperience' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1115:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1115:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficFlow' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1137:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1137:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1163:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1163:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1192:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1192:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1205:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1205:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1220:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1220:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1233:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1233:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1252:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1252:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1345:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1345:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1431:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1431:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1446:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1446:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1458:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1458:5
 warning | PreCheck/SchemaMissingType | The schema 'Region' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1483:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1483:5
 warning | PreCheck/SchemaMissingType | The schema 'GeographicHierarchyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1503:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1503:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerGeographicHierarchy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1512:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1512:5
 warning | PreCheck/SchemaMissingType | The schema 'UserMetricsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1527:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1527:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1536:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1536:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1554:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1554:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1584:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-08-01/trafficmanager.json:1584:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | Resource type microsoft.network/trafficmanagerusermetricskeys under path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default' has no body defined.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.network-2018-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -88,59 +87,58 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:902:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:902:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:913:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:913:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1020:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1020:5
 warning | PreCheck/SchemaMissingType | The schema 'UserMetricsModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1035:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1035:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryExperience' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1050:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1050:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficFlow' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1072:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1072:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1098:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1098:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1127:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1127:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1140:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1140:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1155:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1155:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1168:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1168:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1187:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1187:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1280:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1280:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1345:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1345:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1360:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1360:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1372:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1372:5
 warning | PreCheck/SchemaMissingType | The schema 'Region' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1397:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1397:5
 warning | PreCheck/SchemaMissingType | The schema 'GeographicHierarchyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1417:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1417:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerGeographicHierarchy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1426:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1426:5
 warning | PreCheck/SchemaMissingType | The schema 'UserMetricsProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1441:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1441:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1450:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1450:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1468:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1468:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1498:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-04-01/trafficmanager.json:1498:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-info    | Resource type microsoft.network/trafficmanagerusermetricskeys under path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/trafficManagerUserMetricsKeys/default' has no body defined.
-info    | autorest.bicep took 1ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.network/trafficmanagerprofiles/{profilename}/{endpointtype}/{endpointname}': Parameter reference {endpointType} is not defined as an enum
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.network-2018-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -152,54 +150,54 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:792:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:792:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:803:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:803:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:888:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:888:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryExperience' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:903:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:903:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficFlow' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:925:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:925:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:951:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:951:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:980:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:980:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:993:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:993:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1008:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1008:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1021:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1021:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1040:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1040:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1133:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1133:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1191:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1191:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1206:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1206:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1218:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1218:5
 warning | PreCheck/SchemaMissingType | The schema 'Region' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1243:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1243:5
 warning | PreCheck/SchemaMissingType | The schema 'GeographicHierarchyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1263:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1263:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerGeographicHierarchy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1272:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1272:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1287:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1287:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1305:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1305:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1335:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-03-01/trafficmanager.json:1335:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-info    | autorest.bicep took 1ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.network/trafficmanagerprofiles/{profilename}/{endpointtype}/{endpointname}': Parameter reference {endpointType} is not defined as an enum
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.network-2018-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -211,44 +209,44 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:690:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:690:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:701:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:701:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:768:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:768:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:783:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:783:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:796:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:796:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:815:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:815:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:872:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:872:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:930:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:930:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:945:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:945:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:957:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:957:5
 warning | PreCheck/SchemaMissingType | The schema 'Region' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:982:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:982:5
 warning | PreCheck/SchemaMissingType | The schema 'GeographicHierarchyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1002:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1002:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerGeographicHierarchy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1011:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1011:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1026:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1026:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1047:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1047:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1077:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2018-02-01/trafficmanager.json:1077:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-info    | autorest.bicep took 0ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.network/trafficmanagerprofiles/{profilename}/{endpointtype}/{endpointname}': Parameter reference {endpointType} is not defined as an enum
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.network-2017-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -260,34 +258,34 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:220:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:220:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:231:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:231:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:252:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:252:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:282:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:282:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:327:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:327:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:356:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryExperience' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:369:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:369:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficFlow' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:391:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:391:5
 warning | PreCheck/SchemaMissingType | The schema 'HeatMapModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:417:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:417:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerUserMetricsKeyModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:432:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/preview/2017-09-01-preview/trafficmanageranalytics.json:432:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrafficManagerUserMetricsKeyModel' has a property 'id' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from TrafficManagerUserMetricsKeyModel
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrafficManagerUserMetricsKeyModel' has a property 'name' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from TrafficManagerUserMetricsKeyModel
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrafficManagerUserMetricsKeyModel' has a property 'type' that is already declared the parent schema 'Resource' but 'readonly' has been changed -- this is not permitted. The property has been removed from TrafficManagerUserMetricsKeyModel
-warning | Skipping path '/subscriptions/{subscriptionId}/providers/Microsoft.Network/trafficManagerUserMetricsKeys': Found mismatch between type segments (1) and name segments (0)
+warning | Skipping path '/subscriptions/{subscriptionid}/providers/microsoft.network/trafficmanagerusermetricskeys': Found mismatch between type segments (1) and name segments (0)
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.network-2017-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -300,44 +298,44 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:690:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:690:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:701:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:701:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:768:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:768:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:783:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:783:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:796:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:796:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:815:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:815:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:872:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:872:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:918:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:918:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:933:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:933:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:945:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:945:5
 warning | PreCheck/SchemaMissingType | The schema 'Region' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:970:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:970:5
 warning | PreCheck/SchemaMissingType | The schema 'GeographicHierarchyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:990:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:990:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerGeographicHierarchy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:999:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:999:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:1014:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:1014:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:1035:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:1035:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:1065:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-05-01/trafficmanager.json:1065:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-info    | autorest.bicep took 1ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.network/trafficmanagerprofiles/{profilename}/{endpointtype}/{endpointname}': Parameter reference {endpointType} is not defined as an enum
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.network-2017-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -349,42 +347,42 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeleteOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:624:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:624:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:635:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:635:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:682:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:682:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:703:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:703:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:716:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:716:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:734:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:734:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:756:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:756:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:784:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:784:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:798:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:798:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:810:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:810:5
 warning | PreCheck/SchemaMissingType | The schema 'Region' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:835:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:835:5
 warning | PreCheck/SchemaMissingType | The schema 'GeographicHierarchyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:855:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:855:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerGeographicHierarchy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:864:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:864:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:878:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:878:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:910:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2017-03-01/trafficmanager.json:910:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-info    | autorest.bicep took 1ms
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.network/trafficmanagerprofiles/{profilename}/{endpointtype}/{endpointname}': Parameter reference {endpointType} is not defined as an enum
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.network-2015-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -396,32 +394,32 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:520:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:520:5
 warning | PreCheck/SchemaMissingType | The schema 'Endpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:560:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:560:5
 warning | PreCheck/SchemaMissingType | The schema 'CheckTrafficManagerRelativeDnsNameAvailabilityParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:581:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:581:5
 warning | PreCheck/SchemaMissingType | The schema 'DnsConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:594:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:594:5
 warning | PreCheck/SchemaMissingType | The schema 'MonitorConfig' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:612:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:612:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:634:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:634:5
 warning | PreCheck/SchemaMissingType | The schema 'Profile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:662:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:662:5
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:676:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:676:5
 warning | PreCheck/SchemaMissingType | The schema 'TrafficManagerNameAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:688:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:688:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:713:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:713:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:744:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json:744:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/{endpointType}/{endpointName}': Parameter reference {endpointType} is not defined as an enum
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 5.09s. 14 files generated.
+warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.network/trafficmanagerprofiles/{profilename}/{endpointtype}/{endpointname}': Parameter reference {endpointType} is not defined as an enum
+info    | autorest.bicep took 3ms
+info    | Autorest completed in 13.76s. 16 files generated.

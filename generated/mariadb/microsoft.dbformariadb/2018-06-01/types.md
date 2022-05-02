@@ -12,6 +12,24 @@
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMariaDB/servers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMariaDB/servers/advisors@2018-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: any (ReadOnly): Any object
+* **type**: 'Microsoft.DBforMariaDB/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMariaDB/servers/advisors/recommendedActions@2018-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecommendationActionProperties](#recommendationactionproperties) (ReadOnly): The properties of a recommendation action.
+* **type**: 'Microsoft.DBforMariaDB/servers/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMariaDB/servers/configurations@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -48,6 +66,24 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of a private endpoint connection.
 * **type**: 'Microsoft.DBforMariaDB/servers/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMariaDB/servers/privateLinkResources@2018-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
+* **type**: 'Microsoft.DBforMariaDB/servers/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMariaDB/servers/queryTexts@2018-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QueryTextProperties](#querytextproperties) (ReadOnly): The properties of a query text.
+* **type**: 'Microsoft.DBforMariaDB/servers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -57,6 +93,15 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.DBforMariaDB/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMariaDB/servers/topQueryStatistics@2018-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QueryStatisticProperties](#querystatisticproperties) (ReadOnly): The properties of a query statistic.
+* **type**: 'Microsoft.DBforMariaDB/servers/topQueryStatistics' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -65,6 +110,15 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties of a virtual network rule.
 * **type**: 'Microsoft.DBforMariaDB/servers/virtualNetworkRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMariaDB/servers/waitStatistics@2018-06-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [WaitStatisticProperties](#waitstatisticproperties) (ReadOnly): The properties of a wait statistic.
+* **type**: 'Microsoft.DBforMariaDB/servers/waitStatistics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ServerPropertiesForCreate
 * **Discriminator**: createMode
@@ -147,6 +201,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## RecommendationActionProperties
+### Properties
+* **actionId**: int (ReadOnly): Recommendation action identifier.
+* **advisorName**: string (ReadOnly): Advisor name.
+* **createdTime**: string (ReadOnly): Recommendation action creation time.
+* **details**: [RecommendationActionPropertiesDetails](#recommendationactionpropertiesdetails) (ReadOnly): Recommendation action details.
+* **expirationTime**: string (ReadOnly): Recommendation action expiration time.
+* **reason**: string (ReadOnly): Recommendation action reason.
+* **recommendationType**: string (ReadOnly): Recommendation action type.
+* **sessionId**: string (ReadOnly): Recommendation action session identifier.
+
+## RecommendationActionPropertiesDetails
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly): Allowed values of the configuration.
@@ -178,6 +248,16 @@
 * **description**: string (Required): The private link service connection description.
 * **status**: string (Required): The private link service connection status.
 
+## PrivateLinkResourceProperties
+### Properties
+* **groupId**: string (ReadOnly): The private link resource group id.
+* **requiredMembers**: string[] (ReadOnly): The private link resource required member names.
+
+## QueryTextProperties
+### Properties
+* **queryId**: string (ReadOnly): Query identifier unique to the server.
+* **queryText**: string (ReadOnly): Query text.
+
 ## SecurityAlertPolicyProperties
 ### Properties
 * **disabledAlerts**: string[]: Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
@@ -188,9 +268,34 @@
 * **storageAccountAccessKey**: string: Specifies the identifier key of the Threat Detection audit storage account.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
 
+## QueryStatisticProperties
+### Properties
+* **aggregationFunction**: string (ReadOnly): Aggregation function name.
+* **databaseNames**: string[] (ReadOnly): The list of database names.
+* **endTime**: string (ReadOnly): Observation end time.
+* **metricDisplayName**: string (ReadOnly): Metric display name.
+* **metricName**: string (ReadOnly): Metric name.
+* **metricValue**: int (ReadOnly): Metric value.
+* **metricValueUnit**: string (ReadOnly): Metric value unit.
+* **queryExecutionCount**: int (ReadOnly): Number of query executions in this time interval.
+* **queryId**: string (ReadOnly): Database query identifier.
+* **startTime**: string (ReadOnly): Observation start time.
+
 ## VirtualNetworkRuleProperties
 ### Properties
 * **ignoreMissingVnetServiceEndpoint**: bool: Create firewall rule before the virtual network has vnet service endpoint enabled.
 * **state**: 'Deleting' | 'InProgress' | 'Initializing' | 'Ready' | 'Unknown' (ReadOnly): Virtual Network Rule State
 * **virtualNetworkSubnetId**: string (Required): The ARM resource id of the virtual network subnet.
+
+## WaitStatisticProperties
+### Properties
+* **count**: int (ReadOnly): Wait event count observed in this time interval.
+* **databaseName**: string (ReadOnly): Database Name.
+* **endTime**: string (ReadOnly): Observation end time.
+* **eventName**: string (ReadOnly): Wait event name.
+* **eventTypeName**: string (ReadOnly): Wait event type name.
+* **queryId**: int (ReadOnly): Database query identifier.
+* **startTime**: string (ReadOnly): Observation start time.
+* **totalTimeInMs**: int (ReadOnly): Total time of wait in milliseconds in this time interval.
+* **userId**: int (ReadOnly): Database user identifier.
 

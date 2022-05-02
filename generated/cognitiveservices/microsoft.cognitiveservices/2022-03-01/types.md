@@ -50,6 +50,22 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.CognitiveServices/accounts/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2022-03-01 (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource Etag.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
+* **kind**: string (ReadOnly): The kind (type) of cognitive service account.
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AccountProperties](#accountproperties) (ReadOnly): Properties of Cognitive Services account.
+* **sku**: [Sku](#sku) (ReadOnly): The resource model definition representing SKU
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [AccountTags](#accounttags) (ReadOnly): Resource tags.
+* **type**: 'Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.CognitiveServices/accounts@2022-03-01)
 * **Resource**: Microsoft.CognitiveServices/accounts
 * **ApiVersion**: 2022-03-01
@@ -278,6 +294,11 @@
 * **activeCapacity**: int (ReadOnly): Deployment active capacity. This value might be different from `capacity` if customer recently updated `capacity`.
 * **capacity**: int: Deployment capacity.
 * **scaleType**: 'Manual': Deployment scale type.
+
+## AccountTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ApiKeys
 ### Properties

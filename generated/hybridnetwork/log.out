@@ -1,13 +1,123 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 info    | Processing batch task - {"tag":"microsoft.hybridnetwork-2022-01-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+info    | autorest.bicep took 20ms
+info    | Processing batch task - {"tag":"microsoft.hybridnetwork-2021-05-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:38:5
+warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:82:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkInterface' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:94:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:128:5
+warning | PreCheck/SchemaMissingType | The schema 'OsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:203:5
+warning | PreCheck/SchemaMissingType | The schema 'LinuxConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:225:5
+warning | PreCheck/SchemaMissingType | The schema 'SshConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:234:5
+warning | PreCheck/SchemaMissingType | The schema 'SshPublicKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:246:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:333:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:357:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:414:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionUserConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:431:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionUserConfiguration-osProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:448:9
+warning | PreCheck/SchemaMissingType | The schema 'Device' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:379:5
+warning | PreCheck/SchemaMissingType | The schema 'DevicePropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:418:5
+warning | PreCheck/SchemaMissingType | The schema 'DeviceRegistrationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:467:5
+warning | PreCheck/SchemaMissingType | The schema 'DeviceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:477:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/operation.json:82:9
+warning | PreCheck/SchemaMissingType | The schema 'Vendor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:692:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:712:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:730:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorSkuPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:750:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorSkuListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:806:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:823:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionTemplate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:840:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionRoleConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:852:5
+warning | PreCheck/SchemaMissingType | The schema 'ImageReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:937:5
+warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:962:5
+warning | PreCheck/SchemaMissingType | The schema 'OsDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:982:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualHardDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1013:5
+warning | PreCheck/SchemaMissingType | The schema 'DataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1027:5
+warning | PreCheck/SchemaMissingType | The schema 'CustomProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1053:5
+warning | PreCheck/SchemaMissingType | The schema 'PreviewSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1062:5
+warning | PreCheck/SchemaMissingType | The schema 'PreviewSubscriptionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1104:5
+warning | PreCheck/SchemaMissingType | The schema 'SkuOverview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:177:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:190:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:211:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:227:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:237:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuRoleDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:254:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:278:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:558:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:575:5
+warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunctionPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:595:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendorConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:626:5
+warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionRoleInstanceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:651:5
+warning | PreCheck/SchemaMissingType | The schema 'RoleInstance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:669:5
+warning | PreCheck/SchemaMissingType | The schema 'RoleInstanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:697:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -18,216 +128,106 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 6ms
-info    | Processing batch task - {"tag":"microsoft.hybridnetwork-2021-05-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:38:5
-warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:82:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkInterface' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:94:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:128:5
-warning | PreCheck/SchemaMissingType | The schema 'OsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:203:5
-warning | PreCheck/SchemaMissingType | The schema 'LinuxConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:225:5
-warning | PreCheck/SchemaMissingType | The schema 'SshConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:234:5
-warning | PreCheck/SchemaMissingType | The schema 'SshPublicKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/common.json:246:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:333:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:357:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:414:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionUserConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:431:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionUserConfiguration-osProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunction.json:448:9
-warning | PreCheck/SchemaMissingType | The schema 'Device' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:379:5
-warning | PreCheck/SchemaMissingType | The schema 'DevicePropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:418:5
-warning | PreCheck/SchemaMissingType | The schema 'DeviceRegistrationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:467:5
-warning | PreCheck/SchemaMissingType | The schema 'DeviceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/device.json:477:5
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/operation.json:82:9
-warning | PreCheck/SchemaMissingType | The schema 'Vendor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:692:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:712:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:730:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorSkuPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:750:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorSkuListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:806:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:823:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionTemplate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:840:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionRoleConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:852:5
-warning | PreCheck/SchemaMissingType | The schema 'ImageReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:937:5
-warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:962:5
-warning | PreCheck/SchemaMissingType | The schema 'OsDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:982:5
-warning | PreCheck/SchemaMissingType | The schema 'VirtualHardDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1013:5
-warning | PreCheck/SchemaMissingType | The schema 'DataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1027:5
-warning | PreCheck/SchemaMissingType | The schema 'CustomProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1053:5
-warning | PreCheck/SchemaMissingType | The schema 'PreviewSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1062:5
-warning | PreCheck/SchemaMissingType | The schema 'PreviewSubscriptionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendor.json:1104:5
-warning | PreCheck/SchemaMissingType | The schema 'SkuOverview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:177:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:190:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:211:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:227:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:237:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuRoleDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:254:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/networkFunctionVendor.json:278:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:558:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:575:5
-warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunctionPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:595:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendorConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:626:5
-warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionRoleInstanceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:651:5
-warning | PreCheck/SchemaMissingType | The schema 'RoleInstance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:669:5
-warning | PreCheck/SchemaMissingType | The schema 'RoleInstanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/stable/2021-05-01/vendorNetworkFunction.json:697:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.hybridnetwork-2020-01-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:38:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:38:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:82:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:82:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkInterface' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:94:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:94:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkInterfaceIPConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:128:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'OsProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:203:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:203:5
 warning | PreCheck/SchemaMissingType | The schema 'LinuxConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:225:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:225:5
 warning | PreCheck/SchemaMissingType | The schema 'SshConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:234:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:234:5
 warning | PreCheck/SchemaMissingType | The schema 'SshPublicKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:246:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/common.json:246:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:333:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:333:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:352:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:352:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:405:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:405:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionUserConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:422:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:422:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionUserConfiguration-osProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:439:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunction.json:439:9
 warning | PreCheck/SchemaMissingType | The schema 'Device' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:379:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:379:5
 warning | PreCheck/SchemaMissingType | The schema 'DevicePropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:413:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:413:5
 warning | PreCheck/SchemaMissingType | The schema 'DeviceRegistrationKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:462:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:462:5
 warning | PreCheck/SchemaMissingType | The schema 'DeviceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:472:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/device.json:472:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/operation.json:82:9
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/operation.json:82:9
 warning | PreCheck/SchemaMissingType | The schema 'Vendor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:692:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:692:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:707:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:707:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:725:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:725:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorSkuPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:740:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:740:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorSkuListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:783:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:783:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:800:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:800:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionTemplate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:817:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:817:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionRoleConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:829:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:829:5
 warning | PreCheck/SchemaMissingType | The schema 'ImageReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:914:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:914:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:939:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:939:5
 warning | PreCheck/SchemaMissingType | The schema 'OsDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:959:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:959:5
 warning | PreCheck/SchemaMissingType | The schema 'VirtualHardDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:990:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:990:5
 warning | PreCheck/SchemaMissingType | The schema 'DataDisk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1004:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1004:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1030:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1030:5
 warning | PreCheck/SchemaMissingType | The schema 'PreviewSubscription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1039:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1039:5
 warning | PreCheck/SchemaMissingType | The schema 'PreviewSubscriptionsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1060:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendor.json:1060:5
 warning | PreCheck/SchemaMissingType | The schema 'SkuOverview' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:177:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:177:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:190:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:190:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:211:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:211:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:227:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:227:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:237:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:237:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuRoleDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:254:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:254:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionSkuListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:278:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/networkFunctionVendor.json:278:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:558:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:558:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:575:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:575:5
 warning | PreCheck/SchemaMissingType | The schema 'VendorNetworkFunctionPropertiesFormat' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:590:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:590:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionVendorConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:621:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:621:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkFunctionRoleInstanceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:646:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:646:5
 warning | PreCheck/SchemaMissingType | The schema 'RoleInstance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:664:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:664:5
 warning | PreCheck/SchemaMissingType | The schema 'RoleInstanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:687:5
+    - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridnetwork/resource-manager/Microsoft.HybridNetwork/preview/2020-01-01-preview/vendorNetworkFunction.json:687:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -236,5 +236,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 3.93s. 6 files generated.
+info    | autorest.bicep took 7ms
+info    | Autorest completed in 9.95s. 6 files generated.

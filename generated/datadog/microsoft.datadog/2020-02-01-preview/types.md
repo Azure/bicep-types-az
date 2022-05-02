@@ -1,12 +1,12 @@
 # Microsoft.Datadog @ 2020-02-01-preview
 
-## Resource Microsoft.Datadog/agreements@2020-02-01-preview
+## Resource Microsoft.Datadog/agreements@2020-02-01-preview (WriteOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [DatadogAgreementProperties](#datadogagreementproperties): Terms properties.
+* **properties**: [DatadogAgreementProperties](#datadogagreementproperties) (WriteOnly): Terms properties.
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview
@@ -62,14 +62,14 @@
 
 ## DatadogAgreementProperties
 ### Properties
-* **accepted**: bool: If any version of the terms have been accepted, otherwise false.
-* **licenseTextLink**: string: Link to HTML with Microsoft and Publisher terms.
-* **plan**: string: Plan identifier string.
-* **privacyPolicyLink**: string: Link to the privacy policy of the publisher.
-* **product**: string: Product identifier string.
-* **publisher**: string: Publisher identifier string.
-* **retrieveDatetime**: string: Date and time in UTC of when the terms were accepted. This is empty if Accepted is false.
-* **signature**: string: Terms signature.
+* **accepted**: bool (WriteOnly): If any version of the terms have been accepted, otherwise false.
+* **licenseTextLink**: string (WriteOnly): Link to HTML with Microsoft and Publisher terms.
+* **plan**: string (WriteOnly): Plan identifier string.
+* **privacyPolicyLink**: string (WriteOnly): Link to the privacy policy of the publisher.
+* **product**: string (WriteOnly): Product identifier string.
+* **publisher**: string (WriteOnly): Publisher identifier string.
+* **retrieveDatetime**: string (WriteOnly): Date and time in UTC of when the terms were accepted. This is empty if Accepted is false.
+* **signature**: string (WriteOnly): Terms signature.
 
 ## IdentityProperties
 ### Properties
