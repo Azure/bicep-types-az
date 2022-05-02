@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Nodes;
 using Azure.Bicep.Types.Concrete;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -69,7 +70,7 @@ namespace Azure.Bicep.Types.UnitTests
             var intType = factory.Create(() => new BuiltInType(BuiltInTypeKind.Int));
             var objectType = factory.Create(() => new ObjectType("steven", new Dictionary<string, ObjectProperty>(), null));
             var arrayType = factory.Create(() => new ArrayType(factory.GetReference(objectType)));
-            var resourceType = factory.Create(() => new ResourceType("gerrard", ScopeType.ResourceGroup, factory.GetReference(objectType), ResourceFlags.Readable | ResourceFlags.Writable));
+            var resourceType = factory.Create(() => new ResourceType("gerrard", ScopeType.ResourceGroup, factory.GetReference(objectType), ResourceFlags.None));
             var unionType = factory.Create(() => new UnionType(new [] { factory.GetReference(intType), factory.GetReference(objectType) }));
             var stringLiteralType = factory.Create(() => new StringLiteralType("abcdef"));
             var discriminatedObjectType = factory.Create(() => new DiscriminatedObjectType("disctest", "disctest", new Dictionary<string, ObjectProperty>(), new Dictionary<string, ITypeReference>()));
@@ -96,6 +97,28 @@ namespace Azure.Bicep.Types.UnitTests
             ((StringLiteralType)deserialized[5]).Value.Should().Be(stringLiteralType.Value);
             ((DiscriminatedObjectType)deserialized[6]).Name.Should().Be(discriminatedObjectType.Name);
             ((ResourceFunctionType)deserialized[7]).Name.Should().Be(resourceFunctionType.Name);
+        }
+
+        [TestMethod]
+        public void Resources_without_flags_can_be_deserialized()
+        {
+            var factory = new TypeFactory(Enumerable.Empty<TypeBase>());
+            var objectType = factory.Create(() => new ObjectType("steven", new Dictionary<string, ObjectProperty>(), null));
+            var resourceType = factory.Create(() => new ResourceType("gerrard", ScopeType.ResourceGroup, factory.GetReference(objectType), ResourceFlags.ReadOnly));
+            var serialized = TypeSerializer.Serialize(factory.GetTypes());
+
+            var deserializedNode = JsonNode.Parse(serialized)!;
+            deserializedNode.AsArray()[1]?.AsObject()["4"]?.AsObject().Remove("Flags").Should().BeTrue();
+            serialized = deserializedNode.ToJsonString();
+
+            var deserialized = TypeSerializer.Deserialize(serialized);
+
+            deserialized[0].Should().BeOfType<ObjectType>();
+            deserialized[1].Should().BeOfType<ResourceType>();
+
+            ((ObjectType)deserialized[0]).Name.Should().Be(objectType.Name);
+            ((ResourceType)deserialized[1]).Name.Should().Be(resourceType.Name);
+            ((ResourceType)deserialized[1]).Flags.Should().Be(ResourceFlags.None);
         }
     }
 }
