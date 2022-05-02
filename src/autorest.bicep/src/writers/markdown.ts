@@ -117,11 +117,9 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
     switch (type.Type) {
       case TypeBaseKind.ResourceType: {
         const resourceType = type as ResourceType;
-        writeHeading(nesting, `Resource ${resourceType.Name}`);
+        const flagsString = resourceType.Flags ? ` (${getResourceFlagsLabels(resourceType.Flags).join(', ')})` : '';
+        writeHeading(nesting, `Resource ${resourceType.Name}${flagsString}`);
         writeBullet("Valid Scope(s)", `${getScopeTypeLabels(resourceType.ScopeType).join(', ') || 'Unknown'}`);
-        if (resourceType.Flags) {
-          writeBullet("Attributes", getResourceFlagsLabels(resourceType.Flags).join(', '));
-        }
         writeComplexType(types, types[resourceType.Body.Index], nesting, false);
 
         return;

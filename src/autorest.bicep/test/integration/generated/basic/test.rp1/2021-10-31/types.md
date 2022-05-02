@@ -1,8 +1,7 @@
 # Test.Rp1 @ 2021-10-31
 
-## Resource Test.Rp1/readOnlyTestType@2021-10-31
+## Resource Test.Rp1/readOnlyTestType@2021-10-31 (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
-* **Attributes**: Readable
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +13,6 @@
 
 ## Resource Test.Rp1/testType1@2021-10-31
 * **Valid Scope(s)**: ResourceGroup
-* **Attributes**: Readable, Writable
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
