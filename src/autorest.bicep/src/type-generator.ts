@@ -150,11 +150,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       const { descriptor, bodyType } = output;
       let flags = ResourceFlags.None;
-      if (descriptor.readable) {
-        flags |= ResourceFlags.Readable;
+      if (descriptor.readable && !descriptor.writable) {
+        flags |= ResourceFlags.ReadOnly;
       }
-      if (descriptor.writable) {
-        flags |= ResourceFlags.Writable;
+      if (descriptor.writable && !descriptor.readable) {
+        flags |= ResourceFlags.WriteOnly;
       }
 
       factory.addType(new ResourceType(

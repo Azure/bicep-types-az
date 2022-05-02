@@ -8,8 +8,8 @@ namespace Azure.Bicep.Types.Concrete
     public enum ResourceFlags
     {
         None = 0,
-        Readable = 1 << 0,
-        Writable = 1 << 1,
+        ReadOnly = 1 << 0,
+        WriteOnly = 1 << 1,
     }
 
     public class ResourceType : TypeBase
