@@ -382,9 +382,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
     if (!putProperty || putProperty.readOnly) {
       flags |= ObjectPropertyFlags.ReadOnly;
-    }
-
-    if (!getProperty) {
+    } else if (!getProperty) {
       flags |= ObjectPropertyFlags.WriteOnly;
     }
 
