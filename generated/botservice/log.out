@@ -111,7 +111,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionList
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.BotService/listAuthServiceProviders': Unable to find type segments
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 26ms
 info    | Processing batch task - {"tag":"microsoft.botservice-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -195,7 +195,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2021-03-01/botservice.json:2667:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.BotService/listAuthServiceProviders': Unable to find type segments
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.botservice-2020-06-02"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -361,7 +361,7 @@ warning | PreCheck/SchemaMissingType | The schema 'EnterpriseChannelNode' with a
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2018-07-12/botservice.json:2522:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.BotService/listAuthServiceProviders': Unable to find type segments
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.botservice-2017-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -439,4 +439,4 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | ? | Operation 'Bots/GetCheckNameAvailability' really should not have a media type (because there should be no body)
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.BotService/listAuthServiceProviders': Unable to find type segments
 info    | autorest.bicep took 8ms
-info    | Autorest completed in 11.8s. 10 files generated.
+info    | Autorest completed in 15.01s. 10 files generated.

@@ -22,5 +22,5 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/serialconsole/resource-manager/Microsoft.SerialConsole/stable/2018-05-01/serialport.json:445:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 9ms
-info    | Autorest completed in 3.5s. 2 files generated.
+info    | autorest.bicep took 10ms
+info    | Autorest completed in 3.48s. 2 files generated.

@@ -126,8 +126,8 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly, WriteOnly): The kind of Data Masking Rule. Metadata, used for Azure portal.
-* **location**: string (ReadOnly, WriteOnly): The location of the data masking rule.
+* **kind**: string (ReadOnly): The kind of Data Masking Rule. Metadata, used for Azure portal.
+* **location**: string (ReadOnly): The location of the data masking rule.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties) (WriteOnly): The properties of a database data masking rule.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
@@ -512,7 +512,7 @@ The list of SKUs may vary by region and support offer. To determine the service 
 ### Properties
 * **aliasName**: string (WriteOnly): The alias name. This is a legacy parameter and is no longer used.
 * **columnName**: string (Required, WriteOnly): The column name on which the data masking rule is applied.
-* **id**: string (ReadOnly, WriteOnly): The rule Id.
+* **id**: string (ReadOnly): The rule Id.
 * **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required, WriteOnly): The masking function that is used for the data masking rule.
 * **numberFrom**: string (WriteOnly): The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
 * **numberTo**: string (WriteOnly): The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.

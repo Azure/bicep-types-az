@@ -18,7 +18,7 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionConfig' with 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridkubernetes/resource-manager/Microsoft.Kubernetes/preview/2020-01-01-preview/connectedClusters.json:755:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.kubernetes-2021-04-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -58,5 +58,5 @@ warning | PreCheck/SchemaMissingType | The schema 'HybridConnectionConfig' with 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/hybridkubernetes/resource-manager/Microsoft.Kubernetes/stable/2021-10-01/connectedClusters.json:701:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 8.77s. 8 files generated.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 7.03s. 8 files generated.

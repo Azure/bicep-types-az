@@ -37,7 +37,7 @@ warning | Modeler/MissingType | The schema 'ParameterValue-value' has no type or
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.blueprint-2018-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -68,5 +68,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 5.92s. 4 files generated.
+info    | autorest.bicep took 8ms
+info    | Autorest completed in 7.26s. 4 files generated.

@@ -528,7 +528,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly, WriteOnly): A unique read-only string that changes whenever the resource is updated.
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [InboundSecurityRuleProperties](#inboundsecurityruleproperties) (WriteOnly): Properties of the Inbound Security Rules resource.
@@ -3655,7 +3655,7 @@
 
 ## InboundSecurityRuleProperties
 ### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly, WriteOnly): The current provisioning state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
 * **rules**: [InboundSecurityRules](#inboundsecurityrules)[] (WriteOnly): List of allowed rules.
 
 ## InboundSecurityRules

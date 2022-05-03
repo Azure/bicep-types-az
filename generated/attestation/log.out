@@ -26,7 +26,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationSpe
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/attestation/resource-manager/Microsoft.Attestation/stable/2018-09-01-preview/attestation.json:591:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/providers/microsoft.attestation/locations/{location}/defaultprovider': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.attestation-2020-10-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -49,7 +49,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationSpe
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/attestation/resource-manager/Microsoft.Attestation/stable/2020-10-01/attestation.json:802:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/providers/microsoft.attestation/locations/{location}/defaultprovider': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.attestation-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -72,5 +72,5 @@ warning | PreCheck/SchemaMissingType | The schema 'AttestationServiceCreationSpe
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/attestation/resource-manager/Microsoft.Attestation/preview/2021-06-01-preview/attestation.json:859:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/providers/microsoft.attestation/locations/{location}/defaultprovider': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 5.91s. 6 files generated.
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 8s. 6 files generated.

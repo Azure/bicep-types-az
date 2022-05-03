@@ -495,8 +495,8 @@
 * **contentValue**: string (WriteOnly): Content value when Importing an API.
 * **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
 * **displayName**: string (WriteOnly): API name.
-* **isCurrent**: bool (ReadOnly, WriteOnly): Indicates if API revision is current api revision.
-* **isOnline**: bool (ReadOnly, WriteOnly): Indicates if API revision is accessible via the gateway.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
 * **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
 * **protocols**: 'http' | 'https'[] (WriteOnly): Describes on which protocols the operations in this API can be invoked.
 * **serviceUrl**: string (WriteOnly): Absolute URL of the backend service implementing this API.

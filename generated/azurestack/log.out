@@ -57,5 +57,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ProductLog' with an undefined
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azurestack/resource-manager/Microsoft.AzureStack/preview/2020-06-01-preview/Product.json:731:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/providers/microsoft.azurestack/cloudmanifestfiles': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 7.59s. 6 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 8.37s. 6 files generated.

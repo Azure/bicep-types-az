@@ -669,7 +669,7 @@ dictionary key references will be ARM resource ids in the form:
 * **displayName**: string (WriteOnly): API name. Must be 1 to 300 characters long.
 * **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly): Format of the Content in which the API is getting imported.
 * **isCurrent**: bool (WriteOnly): Indicates if API revision is current api revision.
-* **isOnline**: bool (ReadOnly, WriteOnly): Indicates if API revision is accessible via the gateway.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
 * **license**: [ApiLicenseInformation](#apilicenseinformation) (WriteOnly): API license information
 * **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
 * **protocols**: 'http' | 'https' | 'ws' | 'wss'[] (WriteOnly): Describes on which protocols the operations in this API can be invoked.

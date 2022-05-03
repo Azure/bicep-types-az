@@ -5,4 +5,4 @@ https://aka.ms/autorest
 info    |    Loading AutoRest core      '/home/jeskew/Workspaces/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
-info    | Autorest completed in 1.49s. 0 files generated.
+info    | Autorest completed in 2.17s. 0 files generated.

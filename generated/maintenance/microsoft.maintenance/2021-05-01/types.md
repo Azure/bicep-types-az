@@ -8,7 +8,7 @@
 * **location**: string (WriteOnly): Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties) (WriteOnly): Properties for configuration assignment
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2021-05-01

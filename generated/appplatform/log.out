@@ -18,7 +18,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 20ms
+info    | autorest.bicep took 31ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2022-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -30,7 +30,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2021-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -44,7 +44,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/preview/2021-09-01-preview/appplatform.json:5395:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2021-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -58,7 +58,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/preview/2021-06-01-preview/appplatform.json:4600:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2020-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -72,7 +72,7 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/preview/2020-11-01-preview/appplatform.json:4520:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 27ms
 info    | Processing batch task - {"tag":"microsoft.appplatform-2020-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -86,5 +86,5 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/appplatform/resource-manager/Microsoft.AppPlatform/stable/2020-07-01/appplatform.json:4529:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
-info    | Autorest completed in 22.35s. 12 files generated.
+info    | autorest.bicep took 6ms
+info    | Autorest completed in 37.46s. 12 files generated.

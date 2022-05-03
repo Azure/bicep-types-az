@@ -88,7 +88,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 19ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.avs-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -320,7 +320,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PSCredentialExecutionParamete
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/vmware/resource-manager/Microsoft.AVS/stable/2021-06-01/vmware.json:7011:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.avs-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -797,4 +797,4 @@ warning | PreCheck/SchemaMissingType | The schema 'HcxEnterpriseSiteProperties' 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ClusterProperties' has a property 'provisioningState' that is already declared the parent schema 'ManagementCluster' but isn't significantly different. The property has been removed from ClusterProperties
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 17.79s. 10 files generated.
+info    | Autorest completed in 16.96s. 10 files generated.

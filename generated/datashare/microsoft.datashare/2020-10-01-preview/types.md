@@ -695,7 +695,7 @@ invitations to specific users or applications in an AD tenant.
 * **startTime**: string (WriteOnly): start time of synchronization
 * **status**: string (WriteOnly): Raw Status
 * **synchronizationId**: string (WriteOnly): Synchronization id
-* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly, WriteOnly): Synchronization mode
+* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly): Synchronization mode
 
 ## SynchronizationDetailsList
 ### Properties
@@ -722,13 +722,13 @@ invitations to specific users or applications in an AD tenant.
 
 ## ShareSubscriptionSynchronization
 ### Properties
-* **durationMs**: int (ReadOnly, WriteOnly): Synchronization duration
-* **endTime**: string (ReadOnly, WriteOnly): End time of synchronization
-* **message**: string (ReadOnly, WriteOnly): message of Synchronization
-* **startTime**: string (ReadOnly, WriteOnly): start time of synchronization
-* **status**: string (ReadOnly, WriteOnly): Raw Status
+* **durationMs**: int (ReadOnly): Synchronization duration
+* **endTime**: string (ReadOnly): End time of synchronization
+* **message**: string (ReadOnly): message of Synchronization
+* **startTime**: string (ReadOnly): start time of synchronization
+* **status**: string (ReadOnly): Raw Status
 * **synchronizationId**: string (Required, WriteOnly): Synchronization id
-* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly, WriteOnly): Synchronization mode
+* **synchronizationMode**: 'FullSync' | 'Incremental' (ReadOnly): Synchronization mode
 
 ## SynchronizationDetailsList
 ### Properties

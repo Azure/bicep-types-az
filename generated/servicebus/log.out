@@ -135,7 +135,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'KeyVaultProperties'
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 18ms
+info    | autorest.bicep took 31ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -458,7 +458,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'KeyVaultProperties'
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2017-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -585,7 +585,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'sqlExpression' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'compatibilityLevel' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'SqlRuleAction' has a property 'requiresPreprocessing' that is already declared the parent schema 'Action' but isn't significantly different. The property has been removed from SqlRuleAction
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.servicebus-2015-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -650,5 +650,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an un
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json:2730:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 22.14s. 12 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 22.46s. 12 files generated.

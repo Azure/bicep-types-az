@@ -12,5 +12,5 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
 warning | Modeler/MissingType | The schema 'Resource' has no type or format information whatsoever. Location:
    file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/cloudshell/resource-manager/Microsoft.Portal/stable/2018-10-01/CloudShell.json#/components/schemas/Resource
-info    | autorest.bicep took 10ms
-info    | Autorest completed in 3.45s. 2 files generated.
+info    | autorest.bicep took 13ms
+info    | Autorest completed in 5.76s. 2 files generated.

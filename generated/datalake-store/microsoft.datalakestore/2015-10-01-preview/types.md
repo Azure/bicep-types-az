@@ -24,21 +24,21 @@
 
 ## EncryptionIdentity
 ### Properties
-* **principalId**: string (ReadOnly, WriteOnly): The principal identifier associated with the encryption.
-* **tenantId**: string (ReadOnly, WriteOnly): The tenant identifier associated with the encryption.
+* **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
+* **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
 * **type**: 'SystemAssigned' (WriteOnly): The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
 
 ## DataLakeStoreAccountProperties
 ### Properties
-* **creationTime**: string (ReadOnly, WriteOnly): the account creation time.
+* **creationTime**: string (ReadOnly): the account creation time.
 * **defaultGroup**: string (WriteOnly): the default owner group for all new folders and files created in the Data Lake Store account.
 * **encryptionConfig**: [EncryptionConfig](#encryptionconfig) (WriteOnly)
-* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly, WriteOnly): The current state of encryption provisioning for this Data Lake store account.
+* **encryptionProvisioningState**: 'Creating' | 'Succeeded' (ReadOnly): The current state of encryption provisioning for this Data Lake store account.
 * **encryptionState**: 'Disabled' | 'Enabled' (WriteOnly): The current state of encryption for this Data Lake store account.
 * **endpoint**: string (WriteOnly): the gateway host.
-* **lastModifiedTime**: string (ReadOnly, WriteOnly): the account last modified time.
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly, WriteOnly): the status of the Data Lake Store account while being provisioned.
-* **state**: 'active' | 'suspended' (ReadOnly, WriteOnly): the status of the Data Lake Store account after provisioning has completed.
+* **lastModifiedTime**: string (ReadOnly): the account last modified time.
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' (ReadOnly): the status of the Data Lake Store account while being provisioned.
+* **state**: 'active' | 'suspended' (ReadOnly): the status of the Data Lake Store account after provisioning has completed.
 
 ## EncryptionConfig
 ### Properties

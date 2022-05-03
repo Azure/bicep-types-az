@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **backupReviewers**: [AccessReviewReviewer](#accessreviewreviewer)[] (WriteOnly): This is the collection of backup reviewers.
-* **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly, WriteOnly): Details of the actor identity
+* **createdBy**: [AccessReviewActorIdentity](#accessreviewactoridentity) (ReadOnly): Details of the actor identity
 * **descriptionForAdmins**: string (WriteOnly): The description provided by the access review creator and visible to admins.
 * **descriptionForReviewers**: string (WriteOnly): The description provided by the access review creator to be shown to reviewers.
 * **displayName**: string (WriteOnly): The display name for the schedule definition.
@@ -14,10 +14,10 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessReviewScheduleDefinitionProperties](#accessreviewscheduledefinitionproperties) (ReadOnly): Access Review.
 * **reviewers**: [AccessReviewReviewer](#accessreviewreviewer)[] (WriteOnly): This is the collection of reviewers.
-* **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly, WriteOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
-* **scope**: [AccessReviewScope](#accessreviewscope) (ReadOnly, WriteOnly): Descriptor for what needs to be reviewed
+* **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
+* **scope**: [AccessReviewScope](#accessreviewscope) (ReadOnly): Descriptor for what needs to be reviewed
 * **settings**: [AccessReviewScheduleSettings](#accessreviewschedulesettings) (WriteOnly): Settings of an Access Review.
-* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly): This read-only field specifies the status of an accessReview.
+* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly): This read-only field specifies the status of an accessReview.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/accessReviewScheduleDefinitions/instances@2021-07-01-preview
@@ -30,9 +30,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessReviewInstanceProperties](#accessreviewinstanceproperties) (ReadOnly): Access Review Instance properties.
 * **reviewers**: [AccessReviewReviewer](#accessreviewreviewer)[] (WriteOnly): This is the collection of reviewers.
-* **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly, WriteOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
+* **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
 * **startDateTime**: string (WriteOnly): The DateTime when the review instance is scheduled to be start.
-* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly): This read-only field specifies the status of an access review instance.
+* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly): This read-only field specifies the status of an access review instance.
 * **type**: 'Microsoft.Authorization/accessReviewScheduleDefinitions/instances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Authorization/accessReviewScheduleDefinitions/instances/decisions@2021-07-01-preview (ReadOnly)
@@ -66,30 +66,30 @@
 ## AccessReviewReviewer
 ### Properties
 * **principalId**: string (WriteOnly): The id of the reviewer(user/servicePrincipal)
-* **principalType**: 'servicePrincipal' | 'user' (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
+* **principalType**: 'servicePrincipal' | 'user' (ReadOnly): The identity type : user/servicePrincipal
 
 ## AccessReviewActorIdentity
 ### Properties
-* **principalId**: string (ReadOnly, WriteOnly): The identity id
-* **principalName**: string (ReadOnly, WriteOnly): The identity display name
-* **principalType**: 'servicePrincipal' | 'user' (ReadOnly, WriteOnly): The identity type : user/servicePrincipal
-* **userPrincipalName**: string (ReadOnly, WriteOnly): The user principal name(if valid)
+* **principalId**: string (ReadOnly): The identity id
+* **principalName**: string (ReadOnly): The identity display name
+* **principalType**: 'servicePrincipal' | 'user' (ReadOnly): The identity type : user/servicePrincipal
+* **userPrincipalName**: string (ReadOnly): The user principal name(if valid)
 
 ## AccessReviewInstance
 ### Properties
-* **id**: string (ReadOnly, WriteOnly): The access review instance id.
-* **name**: string (ReadOnly, WriteOnly): The access review instance name.
+* **id**: string (ReadOnly): The access review instance id.
+* **name**: string (ReadOnly): The access review instance name.
 * **properties**: [AccessReviewInstanceProperties](#accessreviewinstanceproperties) (WriteOnly): Access Review Instance properties.
-* **type**: string (ReadOnly, WriteOnly): The resource type.
+* **type**: string (ReadOnly): The resource type.
 
 ## AccessReviewInstanceProperties
 ### Properties
 * **backupReviewers**: [AccessReviewReviewer](#accessreviewreviewer)[] (WriteOnly): This is the collection of backup reviewers.
 * **endDateTime**: string (WriteOnly): The DateTime when the review instance is scheduled to end.
 * **reviewers**: [AccessReviewReviewer](#accessreviewreviewer)[] (WriteOnly): This is the collection of reviewers.
-* **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly, WriteOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
+* **reviewersType**: 'Assigned' | 'Managers' | 'Self' (ReadOnly): This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
 * **startDateTime**: string (WriteOnly): The DateTime when the review instance is scheduled to be start.
-* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly, WriteOnly): This read-only field specifies the status of an access review instance.
+* **status**: 'Applied' | 'Applying' | 'AutoReviewed' | 'AutoReviewing' | 'Completed' | 'Completing' | 'InProgress' | 'Initializing' | 'NotStarted' | 'Scheduled' | 'Starting' (ReadOnly): This read-only field specifies the status of an access review instance.
 
 ## AccessReviewScheduleDefinitionProperties
 ### Properties
@@ -107,12 +107,12 @@
 
 ## AccessReviewScope
 ### Properties
-* **assignmentState**: 'active' | 'eligible' (ReadOnly, WriteOnly): The role assignment state eligible/active to review
+* **assignmentState**: 'active' | 'eligible' (ReadOnly): The role assignment state eligible/active to review
 * **expandNestedMemberships**: bool (WriteOnly): Flag to indicate whether to expand nested memberships or not.
 * **inactiveDuration**: string (WriteOnly): Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-* **principalType**: 'guestUser' | 'redeemedGuestUser' | 'servicePrincipal' | 'user' | 'user,group' (ReadOnly, WriteOnly): The identity type user/servicePrincipal to review
-* **resourceId**: string (ReadOnly, WriteOnly): ResourceId in which this review is getting created
-* **roleDefinitionId**: string (ReadOnly, WriteOnly): This is used to indicate the role being reviewed
+* **principalType**: 'guestUser' | 'redeemedGuestUser' | 'servicePrincipal' | 'user' | 'user,group' (ReadOnly): The identity type user/servicePrincipal to review
+* **resourceId**: string (ReadOnly): ResourceId in which this review is getting created
+* **roleDefinitionId**: string (ReadOnly): This is used to indicate the role being reviewed
 
 ## AccessReviewScheduleSettings
 ### Properties

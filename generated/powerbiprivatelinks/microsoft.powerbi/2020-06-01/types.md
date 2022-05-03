@@ -8,7 +8,7 @@
 * **location**: string (WriteOnly): Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TenantProperties](#tenantproperties) (WriteOnly): TenantProperties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TenantResourceTags](#tenantresourcetags) (WriteOnly): Specifies the tags of the resource.
 * **type**: 'Microsoft.PowerBI/privateLinkServicesForPowerBI' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,11 +29,11 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly, WriteOnly): Specifies the id of the resource.
-* **name**: string (ReadOnly, WriteOnly): Specifies the name of the resource.
+* **id**: string (ReadOnly): Specifies the id of the resource.
+* **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (WriteOnly): PrivateEndpointConnectionProperties
-* **systemData**: [SystemData](#systemdata) (ReadOnly, WriteOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly, WriteOnly): Specifies the type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): Specifies the type of the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
