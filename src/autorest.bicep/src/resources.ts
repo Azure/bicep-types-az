@@ -34,34 +34,17 @@ export interface ProviderDefinition {
 
 export interface ResourceOperationDefintion {
   request: HttpRequest;
+  response?: HttpResponse;
   parameters: Parameter[];
-  schema?: ObjectSchema;
+  requestSchema?: ObjectSchema;
+  responseSchema?: ObjectSchema;
 }
 
-export interface ResourceDefinitionBase {
+export interface ResourceDefinition {
   descriptor: ResourceDescriptor;
   putOperation?: ResourceOperationDefintion;
   getOperation?: ResourceOperationDefintion;
 }
-
-export interface WriteOnlyResourceDefintion extends ResourceDefinitionBase {
-  getOperation?: undefined;
-  putOperation: ResourceOperationDefintion;
-}
-
-export interface ReadOnlyResourceDefintion extends ResourceDefinitionBase {
-  getOperation: ResourceOperationDefintion;
-  putOperation?: undefined;
-}
-
-export interface ReadWriteResourceDefinition extends ResourceDefinitionBase {
-  getOperation: ResourceOperationDefintion;
-  putOperation: ResourceOperationDefintion;
-}
-
-export type ResourceDefinition = ReadWriteResourceDefinition
-  | ReadOnlyResourceDefintion
-  | WriteOnlyResourceDefintion;
 
 export interface ResourceListActionDefinition {
   actionName: string;
@@ -115,13 +98,13 @@ function getHttpRequests(requests: Request[] | undefined) {
   return requests?.map(x => x.protocol.http as HttpRequest).filter(x => !!x) ?? [];
 }
 
-function hasStatusCode(response: Response, statusCode: string) {
+function hasStatusCode(response: Response, ...statusCodesSought: string[]) {
   const statusCodes = (response.protocol.http as HttpResponse)?.statusCodes;
   if (!statusCodes) {
     return;
   }
 
-  return (statusCodes as string[]).includes(statusCode);
+  return statusCodesSought.filter(s => (statusCodes as string[]).includes(s)).length > 0;
 }
 
 function getNormalizedMethodPath(path: string) {
@@ -209,20 +192,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     return schema && getExtensions(schema)['x-ms-azure-resource'];
   }
 
-  function toResourceOperationDefintion(
-    operationData?: {request: HttpRequest, parameters: Parameter[], schema?: ComplexSchema}
-  ): ResourceOperationDefintion|undefined {
-    if (!operationData) {
-      return;
-    }
-    const {request, parameters, schema} = operationData;
-    return {
-      request,
-      parameters,
-      schema: schema && isObjectSchema(schema) ? schema : undefined,
-    };
-  }
-
   function getProviderDefinitionsForApiVersion(apiVersion: string) {
     const providerDefinitions: Dictionary<ProviderDefinition> = {};
     const operations = codeModel.operationGroups.flatMap(x => x.operations);
@@ -280,7 +249,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       let parseResult: Result<ResourceDescriptor[], string>;
       if (putData) {
         parseResult = parseResourceMethod(putData.request.path, putData.parameters, apiVersion, !!getData, true);
-      } else if (getData && isResourceSchema(getData.schema)) {
+      } else if (getData && isResourceSchema(getData.responseSchema)) {
         parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false);
       } else {
         // A non-resource get with no corresponding put is most likely a list endpoint
@@ -295,11 +264,23 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       for (const descriptor of parseResult.value) {
         addProviderDefinition(descriptor.namespace);
 
-        const resource = {
+        const resource: ResourceDefinition = {
           descriptor,
-          putOperation: toResourceOperationDefintion(putData),
-          getOperation: toResourceOperationDefintion(getData),
-        } as ResourceDefinition;
+          putOperation: putData
+            ? {
+              ...putData,
+              requestSchema: (putData?.requestSchema instanceof ObjectSchema) ? putData.requestSchema : undefined,
+              responseSchema: (putData?.responseSchema instanceof ObjectSchema) ? putData.responseSchema : undefined,
+            }
+            : undefined,
+          getOperation: getData
+            ? {
+              ...getData,
+              requestSchema: (getData?.requestSchema instanceof ObjectSchema) ? getData.requestSchema : undefined,
+              responseSchema: (getData?.responseSchema instanceof ObjectSchema) ? getData.responseSchema : undefined,
+            }
+            : undefined
+        };
 
 
         const lcNamespace = descriptor.namespace.toLowerCase();
@@ -382,8 +363,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   function getResponseSchema(operation?: Operation) {
     const responses = operation?.responses ?? [];
     const validResponses = [
-      // order 200 responses before default
-      ...responses.filter(r => hasStatusCode(r, "200")),
+      // order 20x responses before default
+      ...responses.filter(r => hasStatusCode(r, "200", "201", "202")),
       ...responses.filter(r => hasStatusCode(r, "default")),
     ];
 
@@ -422,17 +403,29 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     return {
       request: requestSchema.request,
-      parameters: requestSchema.parameters,
       response: responseSchema.response,
-      schema: responseSchema.schema
+      parameters: requestSchema.parameters,
+      requestSchema: requestSchema.schema,
+      responseSchema: responseSchema.schema,
     };
   }
 
   function getPutSchema(operation?: Operation) {
     const requests = operation?.requests ?? [];
     const validRequests = requests.filter(r => (r.protocol.http as HttpRequest)?.method === HttpMethod.Put);
+    const requestSchema = getRequestSchema(operation, validRequests);
+    const responseSchema = getResponseSchema(operation);
+    if (!requestSchema) {
+      return;
+    }
 
-    return getRequestSchema(operation, validRequests);
+    return {
+      request: requestSchema.request,
+      response: responseSchema?.response,
+      parameters: requestSchema.parameters,
+      requestSchema: requestSchema.schema,
+      responseSchema: responseSchema?.schema,
+    };
   }
 
   function getPostSchema(operation?: Operation) {
@@ -448,6 +441,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     return {
       request: request.request,
+      response: response.response,
       parameters: request.parameters,
       requestSchema: request.schema,
       responseSchema: response.schema,

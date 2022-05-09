@@ -24,26 +24,36 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       return {
         request: definition.putOperation.request,
         parameters: definition.putOperation.parameters,
-        putSchema: definition.putOperation.schema,
-        getSchema: definition.getOperation?.schema,
+        putRequestSchema: definition.putOperation.requestSchema,
+        putResponseSchema: definition.putOperation.responseSchema,
+        getResponseSchema: definition.getOperation?.responseSchema,
+      }
+    } else if (definition.getOperation) {
+      return {
+        request: definition.getOperation.request,
+        parameters: definition.getOperation.parameters,
+        getResponseSchema: definition.getOperation.responseSchema,
       }
     }
 
-    return {
-      request: definition.getOperation.request,
-      parameters: definition.getOperation.parameters,
-      getSchema: definition.getOperation.schema,
-    }
+    return;
   }
 
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition) {
     const {descriptor} = definition;
-    const {request, parameters, putSchema, getSchema} = getHttpProperties(definition);
+    const httpProperties = getHttpProperties(definition);
+
+    if (!httpProperties) {
+      logWarning(`Skipping resource type ${fullyQualifiedType} as it has no defined HTTP operations.`);
+      return;
+    }
+
+    const {request, parameters, putRequestSchema, putResponseSchema, getResponseSchema} = httpProperties;
 
     const nameSchemaResult = parseNameSchema(
       request,
       parameters,
-      schema => parseType(schema, schema),
+      schema => parseType(schema, schema, schema),
       (name) => factory.addType(new StringLiteralType(name)));
 
     if (!nameSchemaResult.success) {
@@ -59,31 +69,31 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const resourceProperties = getStandardizedResourceProperties(descriptor, nameSchemaResult.value);
 
     let resourceDefinition: TypeReference;
-    const schema = putSchema ?? getSchema;
+    const schema = putRequestSchema ?? getResponseSchema;
     if (schema) {
       resourceDefinition = createObject(getFullyQualifiedType(descriptor), schema, resourceProperties);
     } else {
-      logInfo(`Resource type ${fullyQualifiedType} under path '${request.path}' has no body defined.`);
+      logInfo(`Resource type ${fullyQualifiedType} under path '${httpProperties.request.path}' has no body defined.`);
       resourceDefinition = factory.addType(new ObjectType(getFullyQualifiedType(descriptor), resourceProperties));
     }
 
-    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, true)) {
+    for (const { propertyName, putRequestProperty, putResponseProperty, getResponseProperty } of getObjectTypeProperties(putRequestSchema, putResponseSchema, getResponseSchema, true)) {
       if (resourceProperties[propertyName]) {
         continue;
       }
 
-      const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
+      const propertyDefinition = parseType(putRequestProperty?.schema, putResponseProperty?.schema, getResponseProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
-        const flags = parsePropertyFlags(putProperty, getProperty);
+        const description = (putRequestProperty?.schema ?? getResponseProperty?.schema)?.language.default?.description;
+        const flags = parsePropertyFlags(putRequestProperty, putResponseProperty, getResponseProperty);
         resourceProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
     }
 
-    if (putSchema?.discriminator || getSchema?.discriminator) {
+    if (putRequestSchema?.discriminator || putResponseSchema?.discriminator || getResponseSchema?.discriminator) {
       const discriminatedObjectType = factory.lookupType(resourceDefinition) as DiscriminatedObjectType;
 
-      handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
+      handlePolymorphicType(discriminatedObjectType, putRequestSchema, putResponseSchema, getResponseSchema);
     }
 
     return resourceDefinition;
@@ -93,7 +103,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (definitions.length > 1) {
       for (const definition of definitions) {
         if (!definition.descriptor.constantName) {
-          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getHttpProperties(definitions[0]).request.path}': Found multiple definitions for the same type`);
+          logWarning(`Skipping resource type ${fullyQualifiedType} under path '${getHttpProperties(definitions[0])?.request.path}': Found multiple definitions for the same type`);
           return null;
         }
       }
@@ -167,7 +177,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     for (const action of resourceActions) {
       let request: TypeReference | undefined;
       if (action.requestSchema) {
-        request = parseType(action.requestSchema, undefined);
+        request = parseType(action.requestSchema, undefined, undefined);
         if (!request) {
           continue;
         }
@@ -178,7 +188,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         continue;
       }
 
-      const response = parseType(undefined, action.responseSchema);
+      const response = parseType(undefined, action.responseSchema, undefined);
       if (!response) {
         continue;
       }
@@ -200,10 +210,10 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const type = factory.addType(new StringLiteralType(getFullyQualifiedType(descriptor)));
 
     return {
-      id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
-      name: createObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant, 'The resource name'),
-      type: createObjectProperty(type, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
-      apiVersion: createObjectProperty(factory.addType(new StringLiteralType(descriptor.apiVersion)), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
+      id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
+      name: createObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant | ObjectPropertyFlags.AcceptedOnWrite | ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite, 'The resource name'),
+      type: createObjectProperty(type, ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
+      apiVersion: createObjectProperty(factory.addType(new StringLiteralType(descriptor.apiVersion)), ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
     };
   }
 
@@ -219,13 +229,14 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return factory.addType(new ObjectType(definitionName, properties, additionalProperties));
   }
 
-  function combineAndThrowIfNull<TSchema extends Schema>(putSchema: TSchema | undefined, getSchema: TSchema | undefined) {
-    const output = putSchema ?? getSchema;
-    if (!output) {
-      throw 'Unable to find PUT or GET type';
+  function combineAndThrowIfNull<TSchema extends Schema>(...schemata: Array<TSchema | undefined>) {
+    for (const schema of schemata) {
+      if (schema) {
+        return schema;
+      }
     }
 
-    return output;
+    throw 'Unable to find PUT or GET type';
   }
 
   function getSchemaProperties(schema: ObjectSchema, includeBaseProperties: boolean): Dictionary<Property> {
@@ -241,20 +252,28 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return keyBy(flatMap(objects, o => o.properties || []), p => p.serializedName);
   }
 
-  function* getObjectTypeProperties(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
-    const putProperties = putSchema ? getSchemaProperties(putSchema, includeBaseProperties) : {};
-    const getProperties = getSchema ? getSchemaProperties(getSchema, includeBaseProperties) : {};
+  function* getObjectTypeProperties(
+    putRequestSchema: ObjectSchema | undefined,
+    putResponseSchema: ObjectSchema | undefined,
+    getResponseSchema: ObjectSchema | undefined,
+    includeBaseProperties: boolean
+  ) {
+    const putRequestProperties = putRequestSchema ? getSchemaProperties(putRequestSchema, includeBaseProperties) : {};
+    const putResponseProperties = putResponseSchema ? getSchemaProperties(putResponseSchema, includeBaseProperties) : {};
+    const getResponseProperties = getResponseSchema ? getSchemaProperties(getResponseSchema, includeBaseProperties) : {};
 
-    for (const propertyName of uniq([...keys(putProperties), ...keys(getProperties)])) {
-      if ((putSchema?.discriminator?.property && putSchema.discriminator.property === putProperties[propertyName]) ||
-        (getSchema?.discriminator?.property && getSchema.discriminator.property === getProperties[propertyName])) {
+    for (const propertyName of uniq([...keys(putRequestProperties), ...keys(putResponseProperties), ...keys(getResponseProperties)])) {
+      if ((putRequestSchema?.discriminator?.property && putRequestSchema.discriminator.property === putRequestProperties[propertyName]) ||
+        (getResponseSchema?.discriminator?.property && getResponseSchema.discriminator.property === getResponseProperties[propertyName])) {
         continue;
       }
 
-      const putProperty = putProperties[propertyName] as Property | undefined
-      const getProperty = getProperties[propertyName] as Property | undefined
-
-      yield { propertyName, putProperty, getProperty };
+      yield {
+        propertyName,
+        putRequestProperty: putRequestProperties[propertyName],
+        putResponseProperty: putResponseProperties[propertyName],
+        getResponseProperty: getResponseProperties[propertyName],
+      };
     }
   }
 
@@ -289,55 +308,65 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return output;
   }
 
-  function* getDiscriminatedSubTypes(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined) {
-    const putSubTypes = flattenDiscriminatorSubTypes(putSchema);
-    const getSubTypes = flattenDiscriminatorSubTypes(getSchema);
+  function* getDiscriminatedSubTypes(
+    putRequestSchema: ObjectSchema | undefined,
+    putResponseSchema: ObjectSchema | undefined,
+    getResponseSchema: ObjectSchema | undefined
+  ) {
+    const putRequestSubTypes = flattenDiscriminatorSubTypes(putRequestSchema);
+    const putResponseSubTypes = flattenDiscriminatorSubTypes(putResponseSchema);
+    const getResponseSubTypes = flattenDiscriminatorSubTypes(getResponseSchema);
 
-    for (const subTypeName of uniq([...keys(putSubTypes), ...keys(getSubTypes)])) {
+    for (const subTypeName of uniq([...keys(putRequestSubTypes), ...keys(putResponseSubTypes), ...keys(getResponseSubTypes)])) {
       yield {
         subTypeName,
-        putSubType: putSubTypes[subTypeName],
-        getSubType: getSubTypes[subTypeName],
+        putRequestSubType: putRequestSubTypes[subTypeName],
+        putResponseSubType: putRequestSubTypes[subTypeName],
+        getResponseSubType: getResponseSubTypes[subTypeName],
       };
     }
   }
 
-  function parseType(putSchema: Schema | undefined, getSchema: Schema | undefined): TypeReference | undefined {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+  function parseType(
+    putRequestSchema: Schema | undefined,
+    putResponseSchema: Schema | undefined,
+    getResponseSchema: Schema | undefined
+  ): TypeReference | undefined {
+    const combinedSchema = combineAndThrowIfNull(putRequestSchema, putResponseSchema, getResponseSchema);
 
     // A schema that matches a JSON object with specific properties, such as
     // { "name": { "type": "string" }, "age": { "type": "number" } }
     if (combinedSchema instanceof ObjectSchema) {
-      return parseObjectType(putSchema as ObjectSchema, getSchema as ObjectSchema, true);
+      return parseObjectType(putRequestSchema as ObjectSchema, putResponseSchema as ObjectSchema, getResponseSchema as ObjectSchema, true);
     }
 
     // A schema that matches a "dictionary" JSON object, such as
     // { "additionalProperties": { "type": "string" } }
     if (combinedSchema instanceof DictionarySchema) {
-      return parseDictionaryType(putSchema as DictionarySchema, getSchema as DictionarySchema);
+      return parseDictionaryType(putRequestSchema as DictionarySchema, putResponseSchema as DictionarySchema, getResponseSchema as DictionarySchema);
     }
 
     // A schema that matches a single value from a given set of values, such as
     // { "enum": [ "a", "b" ] }
     if (combinedSchema instanceof ChoiceSchema) {
-      return parseEnumType(putSchema as ChoiceSchema, getSchema as ChoiceSchema);
+      return parseEnumType(putRequestSchema as ChoiceSchema, putResponseSchema as ChoiceSchema, getResponseSchema as ChoiceSchema);
     }
     if (combinedSchema instanceof SealedChoiceSchema) {
-      return parseEnumType(putSchema as SealedChoiceSchema, getSchema as SealedChoiceSchema);
+      return parseEnumType(putRequestSchema as SealedChoiceSchema, putResponseSchema as SealedChoiceSchema, getResponseSchema as SealedChoiceSchema);
     }
     if (combinedSchema instanceof ConstantSchema) {
-      return parseConstant(putSchema as ConstantSchema, getSchema as ConstantSchema);
+      return parseConstant(putRequestSchema as ConstantSchema, putResponseSchema as ConstantSchema, getResponseSchema as ConstantSchema);
     }
 
     // A schema that matches an array of values, such as
     // { "items": { "type": "number" } }
     if (combinedSchema instanceof ArraySchema) {
-      return parseArrayType(putSchema as ArraySchema, getSchema as ArraySchema);
+      return parseArrayType(putRequestSchema as ArraySchema, putResponseSchema as ArraySchema, getResponseSchema as ArraySchema);
     }
 
     // A schema that matches simple values, such as { "type": "number" }
     if (combinedSchema instanceof PrimitiveSchema) {
-      return parsePrimaryType(putSchema as PrimitiveSchema, getSchema as PrimitiveSchema);
+      return parsePrimaryType(putRequestSchema as PrimitiveSchema, putResponseSchema as PrimitiveSchema, getResponseSchema as PrimitiveSchema);
     }
 
     // The 'any' type
@@ -351,46 +380,58 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
   function getMutabilityFlags(property: Property | undefined) {
     const mutability = property?.extensions?.["x-ms-mutability"] as string[];
-    if (!mutability) {
-      return ObjectPropertyFlags.None;
-    }
-
-    const writable = mutability.includes('create') || mutability.includes('update');
-    const readable = mutability.includes('read');
-
-    if (writable && !readable) {
-      return ObjectPropertyFlags.WriteOnly;
-    }
-
-    if (readable && !writable) {
-      return ObjectPropertyFlags.ReadOnly;
-    }
-
-    return ObjectPropertyFlags.None;
-  }
-
-  function parsePropertyFlags(putProperty: Property | undefined, getProperty: Property | undefined) {
     let flags = ObjectPropertyFlags.None;
 
-    if (putProperty && putProperty.required) {
-      flags |= ObjectPropertyFlags.Required;
-    }
+    if (mutability) {
+      if (mutability.includes('create') || mutability.includes('update')) {
+        flags |= ObjectPropertyFlags.AcceptedOnWrite;
+      }
 
-    if (putProperty && getProperty) {
-      flags |= getMutabilityFlags(putProperty);
-    }
-
-    if (!putProperty || putProperty.readOnly) {
-      flags |= ObjectPropertyFlags.ReadOnly;
-    } else if (!getProperty) {
-      flags |= ObjectPropertyFlags.WriteOnly;
+      if (mutability.includes('read')) {
+        flags |= ObjectPropertyFlags.ReturnedOnRead;
+        flags |= ObjectPropertyFlags.ReturnedOnWrite;
+      }
     }
 
     return flags;
   }
 
-  function parsePrimaryType(putSchema: PrimitiveSchema | undefined, getSchema: PrimitiveSchema | undefined) {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+  function parsePropertyFlags(
+    putRequestProperty: Property | undefined,
+    putResponseProperty: Property | undefined,
+    getResponseProperty: Property | undefined
+  ) {
+    let flags = ObjectPropertyFlags.None;
+
+    if (putRequestProperty && putRequestProperty.required) {
+      flags |= ObjectPropertyFlags.Required;
+    }
+
+    if (putRequestProperty && (putResponseProperty || getResponseProperty)) {
+      flags |= getMutabilityFlags(putRequestProperty);
+    }
+
+    if (putRequestProperty && !putRequestProperty.readOnly) {
+      flags |= ObjectPropertyFlags.AcceptedOnWrite;
+    }
+
+    if (putResponseProperty) {
+      flags |= ObjectPropertyFlags.ReturnedOnWrite;
+    }
+
+    if (getResponseProperty) {
+      flags |= ObjectPropertyFlags.ReturnedOnRead;
+    }
+
+    return flags;
+  }
+
+  function parsePrimaryType(
+    putRequestSchema: PrimitiveSchema | undefined,
+    putResponseSchema: PrimitiveSchema | undefined,
+    getResponseSchema: PrimitiveSchema | undefined
+  ) {
+    const combinedSchema = combineAndThrowIfNull(putRequestSchema, putResponseSchema, getResponseSchema);
 
     switch (combinedSchema.type) {
       case SchemaType.Boolean:
@@ -418,15 +459,20 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     }
   }
 
-  function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, putSchema?: ObjectSchema, getSchema?: ObjectSchema) {
-    for (const { putSubType, getSubType } of getDiscriminatedSubTypes(putSchema, getSchema)) {
-      const combinedSubType = combineAndThrowIfNull(putSubType, getSubType);
+  function handlePolymorphicType(
+    discriminatedObjectType: DiscriminatedObjectType,
+    putRequestSchema?: ObjectSchema,
+    putResponseSchema?: ObjectSchema,
+    getResponseSchema?: ObjectSchema
+  ) {
+    for (const { putRequestSubType, putResponseSubType, getResponseSubType } of getDiscriminatedSubTypes(putRequestSchema, putResponseSchema, getResponseSchema)) {
+      const combinedSubType = combineAndThrowIfNull(putRequestSubType, putResponseSubType, getResponseSubType);
 
       if (!combinedSubType.discriminatorValue) {
         continue;
       }
 
-      const objectTypeRef = parseObjectType(putSubType, getSubType, false);
+      const objectTypeRef = parseObjectType(putRequestSubType, putResponseSubType, getResponseSubType, false);
       const objectType = factory.lookupType(objectTypeRef);
       if (!(objectType instanceof ObjectType)) {
         logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.Name}'`)
@@ -435,7 +481,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       discriminatedObjectType.Elements[combinedSubType.discriminatorValue] = objectTypeRef;
 
-      const description = (putSchema ?? getSchema)?.discriminator?.property.language.default.description;
+      const description = (putRequestSchema ?? putResponseSchema ?? getResponseSchema)?.discriminator?.property.language.default.description;
       objectType.Properties[discriminatedObjectType.Discriminator] = createObjectProperty(
         factory.addType(new StringLiteralType(combinedSubType.discriminatorValue)),
         ObjectPropertyFlags.Required,
@@ -443,8 +489,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     }
   }
 
-  function parseObjectType(putSchema: ObjectSchema | undefined, getSchema: ObjectSchema | undefined, includeBaseProperties: boolean) {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+  function parseObjectType(
+    putRequestSchema: ObjectSchema | undefined,
+    putResponseSchema: ObjectSchema | undefined,
+    getResponseSchema: ObjectSchema | undefined,
+    includeBaseProperties: boolean
+  ) {
+    const combinedSchema = combineAndThrowIfNull(putRequestSchema, putResponseSchema, getResponseSchema);
     const definitionName = getSerializedName(combinedSchema);
 
     if (includeBaseProperties && namedDefinitions[definitionName]) {
@@ -455,11 +506,12 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
     let additionalProperties: TypeReference | undefined;
     if (includeBaseProperties) {
-      const putParentDictionary = (putSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
-      const getParentDictionary = (getSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
+      const putParentDictionary = (putRequestSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
+      const putResponseParentDictionary = (putResponseSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
+      const getParentDictionary = (getResponseSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
 
       if (putParentDictionary || getParentDictionary) {
-        additionalProperties = parseType(putParentDictionary?.elementType, getParentDictionary?.elementType);
+        additionalProperties = parseType(putParentDictionary?.elementType, putResponseParentDictionary?.elementType, getParentDictionary?.elementType);
       }
     }
 
@@ -470,11 +522,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       namedDefinitions[definitionName] = definition;
     }
 
-    for (const { propertyName, putProperty, getProperty } of getObjectTypeProperties(putSchema, getSchema, includeBaseProperties)) {
-      const propertyDefinition = parseType(putProperty?.schema, getProperty?.schema);
+    for (const { propertyName, putRequestProperty, putResponseProperty, getResponseProperty } of getObjectTypeProperties(putRequestSchema, putResponseSchema, getResponseSchema, includeBaseProperties)) {
+      const propertyDefinition = parseType(putRequestProperty?.schema, putResponseProperty?.schema, getResponseProperty?.schema);
       if (propertyDefinition) {
-        const description = (putProperty?.schema ?? getProperty?.schema)?.language.default?.description;
-        const flags = parsePropertyFlags(putProperty, getProperty);
+        const description = (putRequestProperty?.schema ?? putResponseProperty?.schema ?? getResponseProperty?.schema)?.language.default?.description;
+        const flags = parsePropertyFlags(putRequestProperty, putResponseProperty, getResponseProperty);
         definitionProperties[propertyName] = createObjectProperty(propertyDefinition, flags, description);
       }
     }
@@ -482,18 +534,22 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (combinedSchema.discriminator) {
       const discriminatedObjectType = factory.lookupType(definition) as DiscriminatedObjectType;
 
-      handlePolymorphicType(discriminatedObjectType, putSchema, getSchema);
+      handlePolymorphicType(discriminatedObjectType, putRequestSchema, getResponseSchema);
     }
 
     return definition;
   }
 
-  function parseEnumType(putSchema: ChoiceSchema | SealedChoiceSchema | undefined, getSchema: ChoiceSchema | SealedChoiceSchema | undefined) {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+  function parseEnumType(
+    putRequestSchema: ChoiceSchema | SealedChoiceSchema | undefined,
+    putResponseSchema: ChoiceSchema | SealedChoiceSchema | undefined,
+    getResponseSchema: ChoiceSchema | SealedChoiceSchema | undefined
+  ) {
+    const combinedSchema = combineAndThrowIfNull(putRequestSchema, putResponseSchema, getResponseSchema);
 
     if (!(combinedSchema.choiceType instanceof StringSchema)) {
       // we can only handle string enums right now
-      return parseType(putSchema?.choiceType, getSchema?.choiceType);
+      return parseType(putRequestSchema?.choiceType, putResponseSchema?.choiceType, getResponseSchema?.choiceType);
     }
 
     const enumTypes = [];
@@ -509,22 +565,34 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return factory.addType(new UnionType(enumTypes));
   }
 
-  function parseConstant(putSchema: ConstantSchema | undefined, getSchema: ConstantSchema | undefined) {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
+  function parseConstant(
+    putRequestSchema: ConstantSchema | undefined,
+    putResponseSchema: ConstantSchema | undefined,
+    getResponseSchema: ConstantSchema | undefined
+  ) {
+    const combinedSchema = combineAndThrowIfNull(putRequestSchema, putResponseSchema, getResponseSchema);
     const constantValue = combinedSchema.value;
 
     return factory.addType(new StringLiteralType(constantValue.value.toString()));
   }
 
-  function parseDictionaryType(putSchema: DictionarySchema | undefined, getSchema: DictionarySchema | undefined) {
-    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
-    const additionalPropertiesType = parseType(putSchema?.elementType, getSchema?.elementType);
+  function parseDictionaryType(
+    putRequestSchema: DictionarySchema | undefined,
+    putResponseSchema: DictionarySchema | undefined,
+    getResponseSchema: DictionarySchema | undefined
+  ) {
+    const combinedSchema = combineAndThrowIfNull(putRequestSchema, putResponseSchema, getResponseSchema);
+    const additionalPropertiesType = parseType(putRequestSchema?.elementType, putResponseSchema?.elementType, getResponseSchema?.elementType);
 
     return factory.addType(new ObjectType(getSerializedName(combinedSchema), {}, additionalPropertiesType));
   }
 
-  function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {
-    const itemType = parseType(putSchema?.elementType, getSchema?.elementType);
+  function parseArrayType(
+    putRequestSchema: ArraySchema | undefined,
+    putResponseSchema: ArraySchema | undefined,
+    getResponseSchema: ArraySchema | undefined
+  ) {
+    const itemType = parseType(putRequestSchema?.elementType, putResponseSchema?.elementType, getResponseSchema?.elementType);
     if (!itemType) {
       return factory.lookupBuiltInType(BuiltInTypeKind.Array);
     }
