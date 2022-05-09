@@ -39,7 +39,8 @@ export function writeMarkdown(provider: string, apiVersion: string, types: TypeB
   }
 
   function writeTypeProperty(types: TypeBase[], name: string, property: ObjectProperty) {
-    const flagsString = property.Flags ? ` (${getObjectPropertyFlagsLabels(property.Flags).join(', ')})` : '';
+    const flags = getObjectPropertyFlagsLabels(property.Flags).join(', ');
+    const flagsString = flags ? ` (${flags})` : '';
     const descriptionString = property.Description ? `: ${property.Description}` : '';
     writeBullet(name, `${getTypeName(types, property.Type)}${flagsString}${descriptionString}`);
   }
