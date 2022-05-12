@@ -59,29 +59,29 @@ export function getScopeTypeLabels(input: ScopeType) {
 export enum ObjectPropertyFlags {
   None = 0,
   Required = 1 << 0,
-  DeployTimeConstant = 1 << 1,
-  AcceptedOnWrite = 1 << 2,
-  ReturnedOnWrite = 1 << 3,
-  ReturnedOnRead = 1 << 4,
+  ReadOnly = 1 << 1,
+  WriteOnly = 1 << 2,
+  DeployTimeConstant = 1 << 3,
+  OnlyReturnedOnRead = 1 << 4,
+  OnlyReturnedOnWrite = 1 << 5,
 }
 
-const ObjectPropertyFlagLabels: Array<[ObjectPropertyFlags, ObjectPropertyFlags, string]> = [
-  [ObjectPropertyFlags.Required, ObjectPropertyFlags.Required, 'Required'],
-  [ObjectPropertyFlags.AcceptedOnWrite | ObjectPropertyFlags.ReturnedOnWrite, ObjectPropertyFlags.ReturnedOnWrite, 'ReadOnly'],
-  [ObjectPropertyFlags.AcceptedOnWrite | ObjectPropertyFlags.ReturnedOnRead, ObjectPropertyFlags.ReturnedOnRead, 'ReadOnly'],
-  [ObjectPropertyFlags.AcceptedOnWrite | ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite, ObjectPropertyFlags.AcceptedOnWrite, 'WriteOnly'],
-  [ObjectPropertyFlags.DeployTimeConstant, ObjectPropertyFlags.DeployTimeConstant, 'DeployTimeConstant'],
-];
+const ObjectPropertyFlagsLabel = new Map<ObjectPropertyFlags, string>([
+  [ObjectPropertyFlags.Required, 'Required'],
+  [ObjectPropertyFlags.ReadOnly, 'ReadOnly'],
+  [ObjectPropertyFlags.WriteOnly, 'WriteOnly'],
+  [ObjectPropertyFlags.DeployTimeConstant, 'DeployTimeConstant'],
+]);
 
 export function getObjectPropertyFlagsLabels(input: ObjectPropertyFlags) {
-  const labels = new Set<string>();
-  for (const [mask, expected, label] of ObjectPropertyFlagLabels) {
-    if ((mask & input) === expected) {
-      labels.add(label);
+  const types = [];
+  for (const [key, value] of ObjectPropertyFlagsLabel) {
+    if ((key & input) === key) {
+      types.push(value);
     }
   }
 
-  return [...labels];
+  return types;
 }
 
 export enum TypeBaseKind {
