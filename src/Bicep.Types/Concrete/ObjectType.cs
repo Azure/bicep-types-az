@@ -33,6 +33,10 @@ namespace Azure.Bicep.Types.Concrete
         WriteOnly = 1 << 2,
 
         DeployTimeConstant = 1 << 3,
+
+        OnlyReturnedOnRead = 1 << 4,
+
+        OnlyReturnedOnWrite = 1 << 5,
     }
 
     public class ObjectProperty
