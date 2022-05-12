@@ -18,6 +18,7 @@
 
 ## RedisProperties
 ### Properties
+* **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): Redis cache access keys.
 * **enableNonSslPort**: bool: If the value is true, then the non-SLL Redis server port (6379) will be enabled.
 * **hostName**: string (ReadOnly): Redis host name.
 * **port**: int (ReadOnly): Redis non-SSL port.
@@ -31,6 +32,11 @@
 * **subnet**: string: Required when deploying a Redis cache inside an existing Azure Virtual Network.
 * **tenantSettings**: [RedisPropertiesTenantSettings](#redispropertiestenantsettings): tenantSettings
 * **virtualNetwork**: string: The exact ARM resource ID of the virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.ClassicNetwork/VirtualNetworks/vnet1
+
+## RedisAccessKeys
+### Properties
+* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
+* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 
 ## RedisPropertiesRedisConfiguration
 ### Properties

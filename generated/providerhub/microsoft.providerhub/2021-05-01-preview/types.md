@@ -43,6 +43,7 @@
 * **contents**: [OperationsDefinition](#operationsdefinition)[] (Required, WriteOnly): Array of OperationsDefinition
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [OperationsDefinition](#operationsdefinition) (ReadOnly)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2021-05-01-preview

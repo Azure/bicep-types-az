@@ -495,7 +495,7 @@
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly): Contains the database information after successful export.
+* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties): Contains the database information after successful export.
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/maintenanceWindowOptions@2020-11-01-preview (ReadOnly)
@@ -1855,7 +1855,14 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## DatabaseExtensionsProperties
 ### Properties
+* **databaseName**: string (ReadOnly): Database name.
+* **errorMessage**: string (ReadOnly): Error message.
+* **lastModifiedTime**: string (ReadOnly): Last modified time.
 * **operationMode**: 'PolybaseImport' (Required, WriteOnly): Operation Mode.
+* **requestId**: string (ReadOnly): Request Id.
+* **requestType**: string (ReadOnly): Request type.
+* **serverName**: string (ReadOnly): Server name.
+* **status**: string (ReadOnly): Operation status.
 * **storageKey**: string (Required, WriteOnly): Storage key.
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): Storage key type.
 * **storageUri**: string (Required, WriteOnly): Storage Uri.

@@ -1378,9 +1378,9 @@
 
 ## KeyVaultReference
 ### Properties
-* **id**: string (ReadOnly): The resource id.
-* **name**: string (ReadOnly): Gets the resource name.
-* **type**: string (ReadOnly): Gets the resource type.
+* **id**: string (ReadOnly, WriteOnly): The resource id.
+* **name**: string (ReadOnly, WriteOnly): Gets the resource name.
+* **type**: string (ReadOnly, WriteOnly): Gets the resource type.
 
 ## KeyVaultKeyCollection
 ### Properties

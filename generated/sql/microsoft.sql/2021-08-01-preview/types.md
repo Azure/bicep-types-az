@@ -525,7 +525,7 @@
 * **apiVersion**: '2021-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties) (WriteOnly): Contains the database information after a successful Import, Export, or PolybaseImport
+* **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties): Contains the database information after a successful Import, Export, or PolybaseImport
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/ledgerDigestUploads@2021-08-01-preview
@@ -1999,11 +1999,21 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **administratorLogin**: string (WriteOnly): Administrator login name.
 * **administratorLoginPassword**: string (WriteOnly): Administrator login password.
 * **authenticationType**: string (WriteOnly): Authentication type: SQL authentication or AD password.
+* **blobUri**: string (ReadOnly): Blob URI.
 * **databaseEdition**: string (WriteOnly): Database edition for the newly created database in the case of an import operation.
+* **databaseName**: string (ReadOnly): Database name.
+* **errorMessage**: string (ReadOnly): Error message.
+* **lastModifiedTime**: string (ReadOnly): Last modified time.
 * **maxSizeBytes**: string (WriteOnly): Database max size in bytes for the newly created database in the case of an import operation.
 * **networkIsolation**: [NetworkIsolationSettings](#networkisolationsettings) (WriteOnly): Contains the ARM resources for which to create private endpoint connection.
 * **operationMode**: 'Export' | 'Import' | 'PolybaseImport' (Required, WriteOnly): Operation mode of the operation: Import, Export, or PolybaseImport.
+* **privateEndpointConnections**: [PrivateEndpointConnectionRequestStatus](#privateendpointconnectionrequeststatus)[] (ReadOnly): Gets the status of private endpoints associated with this request.
+* **queuedTime**: string (ReadOnly): Queued time.
+* **requestId**: string (ReadOnly): Request Id.
+* **requestType**: string (ReadOnly): Request type.
+* **serverName**: string (ReadOnly): Server name.
 * **serviceObjectiveName**: string (WriteOnly): Database service level objective for the newly created database in the case of an import operation.
+* **status**: string (ReadOnly): Operation status.
 * **storageKey**: string (Required, WriteOnly): Storage key for the storage account.
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): Storage key type: StorageAccessKey or SharedAccessKey.
 * **storageUri**: string (Required, WriteOnly): Storage Uri for the storage account.
@@ -2012,6 +2022,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **sqlServerResourceId**: string (WriteOnly): The resource id for the SQL server which is the target of this request. If set, private endpoint connection will be created for the SQL server. Must match server which is target of the operation.
 * **storageAccountResourceId**: string (WriteOnly): The resource id for the storage account used to store BACPAC file. If set, private endpoint connection will be created for the storage account. Must match storage account used for StorageUri parameter.
+
+## PrivateEndpointConnectionRequestStatus
+### Properties
+* **privateEndpointConnectionName**: string (ReadOnly): The connection name for the private endpoint.
+* **privateLinkServiceId**: string (ReadOnly): Resource id for which the private endpoint is created.
+* **status**: string (ReadOnly): Status of this private endpoint connection.
 
 ## LedgerDigestUploadsProperties
 ### Properties

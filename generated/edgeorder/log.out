@@ -12,7 +12,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/listProductFamilies': Unable to find type segments
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/listConfigurations': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 19ms
 info    | Processing batch task - {"tag":"microsoft.edgeorder-2020-12-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -22,4 +22,4 @@ warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/pr
 warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.EdgeOrder/listConfigurations': Unable to find type segments
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 8ms
-info    | Autorest completed in 8.92s. 4 files generated.
+info    | Autorest completed in 8.26s. 4 files generated.

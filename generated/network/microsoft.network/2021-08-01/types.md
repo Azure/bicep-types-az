@@ -550,7 +550,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [InboundSecurityRuleProperties](#inboundsecurityruleproperties) (WriteOnly): Properties of the Inbound Security Rules resource.
+* **properties**: [InboundSecurityRuleProperties](#inboundsecurityruleproperties): Properties of the Inbound Security Rules resource.
 * **type**: 'Microsoft.Network/networkVirtualAppliances/inboundSecurityRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/networkVirtualAppliances/virtualApplianceSites@2021-08-01
@@ -3800,13 +3800,13 @@
 ## InboundSecurityRuleProperties
 ### Properties
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
-* **rules**: [InboundSecurityRules](#inboundsecurityrules)[] (WriteOnly): List of allowed rules.
+* **rules**: [InboundSecurityRules](#inboundsecurityrules)[]: List of allowed rules.
 
 ## InboundSecurityRules
 ### Properties
-* **destinationPortRange**: int (WriteOnly): NVA port ranges to be opened up. One needs to provide specific ports.
-* **protocol**: 'TCP' | 'UDP' (WriteOnly): Protocol. This should be either TCP or UDP.
-* **sourceAddressPrefix**: string (WriteOnly): The CIDR or source IP range. Only /30, /31 and /32 Ip ranges are allowed.
+* **destinationPortRange**: int: NVA port ranges to be opened up. One needs to provide specific ports.
+* **protocol**: 'TCP' | 'UDP': Protocol. This should be either TCP or UDP.
+* **sourceAddressPrefix**: string: The CIDR or source IP range. Only /30, /31 and /32 Ip ranges are allowed.
 
 ## VirtualApplianceSiteProperties
 ### Properties

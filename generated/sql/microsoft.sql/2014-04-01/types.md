@@ -129,7 +129,7 @@
 * **kind**: string (ReadOnly): The kind of Data Masking Rule. Metadata, used for Azure portal.
 * **location**: string (ReadOnly): The location of the data masking rule.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties) (WriteOnly): The properties of a database data masking rule.
+* **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties): The properties of a database data masking rule.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/extensions@2014-04-01
@@ -138,7 +138,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'import' (Required, DeployTimeConstant): The resource name
-* **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly): Represents the properties for an import operation
+* **properties**: [ImportExtensionProperties](#importextensionproperties): Represents the properties for an import operation
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/geoBackupPolicies@2014-04-01
@@ -510,25 +510,34 @@ The list of SKUs may vary by region and support offer. To determine the service 
 
 ## DataMaskingRuleProperties
 ### Properties
-* **aliasName**: string (WriteOnly): The alias name. This is a legacy parameter and is no longer used.
-* **columnName**: string (Required, WriteOnly): The column name on which the data masking rule is applied.
+* **aliasName**: string: The alias name. This is a legacy parameter and is no longer used.
+* **columnName**: string (Required): The column name on which the data masking rule is applied.
 * **id**: string (ReadOnly): The rule Id.
-* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required, WriteOnly): The masking function that is used for the data masking rule.
-* **numberFrom**: string (WriteOnly): The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
-* **numberTo**: string (WriteOnly): The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
-* **prefixSize**: string (WriteOnly): If maskingFunction is set to Text, the number of characters to show unmasked in the beginning of the string. Otherwise, this parameter will be ignored.
-* **replacementString**: string (WriteOnly): If maskingFunction is set to Text, the character to use for masking the unexposed part of the string. Otherwise, this parameter will be ignored.
-* **ruleState**: 'Disabled' | 'Enabled' (WriteOnly): The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState.
-* **schemaName**: string (Required, WriteOnly): The schema name on which the data masking rule is applied.
-* **suffixSize**: string (WriteOnly): If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
-* **tableName**: string (Required, WriteOnly): The table name on which the data masking rule is applied.
+* **maskingFunction**: 'CCN' | 'Default' | 'Email' | 'Number' | 'SSN' | 'Text' (Required): The masking function that is used for the data masking rule.
+* **numberFrom**: string: The numberFrom property of the masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
+* **numberTo**: string: The numberTo property of the data masking rule. Required if maskingFunction is set to Number, otherwise this parameter will be ignored.
+* **prefixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked in the beginning of the string. Otherwise, this parameter will be ignored.
+* **replacementString**: string: If maskingFunction is set to Text, the character to use for masking the unexposed part of the string. Otherwise, this parameter will be ignored.
+* **ruleState**: 'Disabled' | 'Enabled': The rule state. Used to delete a rule. To delete an existing rule, specify the schemaName, tableName, columnName, maskingFunction, and specify ruleState as disabled. However, if the rule doesn't already exist, the rule will be created with ruleState set to enabled, regardless of the provided value of ruleState.
+* **schemaName**: string (Required): The schema name on which the data masking rule is applied.
+* **suffixSize**: string: If maskingFunction is set to Text, the number of characters to show unmasked at the end of the string. Otherwise, this parameter will be ignored.
+* **tableName**: string (Required): The table name on which the data masking rule is applied.
 
 ## ImportExtensionProperties
 ### Properties
 * **administratorLogin**: string (Required, WriteOnly): The name of the SQL administrator.
 * **administratorLoginPassword**: string (Required, WriteOnly): The password of the SQL administrator.
 * **authenticationType**: 'ADPassword' | 'SQL' (WriteOnly): The authentication type.
+* **blobUri**: string (ReadOnly): The blob uri.
+* **databaseName**: string (ReadOnly): The name of the database.
+* **errorMessage**: string (ReadOnly): The error message returned from the server.
+* **lastModifiedTime**: string (ReadOnly): The operation status last modified time.
 * **operationMode**: 'Import' (Required, WriteOnly): The type of import operation being performed. This is always Import.
+* **queuedTime**: string (ReadOnly): The operation queued time.
+* **requestId**: string (ReadOnly): The request type of the operation.
+* **requestType**: string (ReadOnly): The request type of the operation.
+* **serverName**: string (ReadOnly): The name of the server.
+* **status**: string (ReadOnly): The status message returned from the server.
 * **storageKey**: string (Required, WriteOnly): The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?."
 * **storageKeyType**: 'SharedAccessKey' | 'StorageAccessKey' (Required, WriteOnly): The type of the storage key to use.
 * **storageUri**: string (Required, WriteOnly): The storage uri to use.

@@ -14,4 +14,4 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an unde
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/windowsesu/resource-manager/Microsoft.WindowsESU/preview/2019-09-16-preview/windowsesu.json:541:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 9ms
-info    | Autorest completed in 3.57s. 2 files generated.
+info    | Autorest completed in 4.01s. 2 files generated.

@@ -86,5 +86,5 @@ warning | PreCheck/SchemaMissingType | The schema 'FlaggedEnrolledAppProperties'
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedEnrolledAppError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2476:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 12ms
-info    | Autorest completed in 4.13s. 2 files generated.
+info    | autorest.bicep took 14ms
+info    | Autorest completed in 5.32s. 2 files generated.

@@ -5,9 +5,9 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (WriteOnly): Location of the resource
+* **location**: string: Location of the resource
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties) (WriteOnly): Properties for configuration assignment
+* **properties**: [ConfigurationAssignmentProperties](#configurationassignmentproperties): Properties for configuration assignment
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2018-06-01-preview
@@ -23,8 +23,8 @@
 
 ## ConfigurationAssignmentProperties
 ### Properties
-* **maintenanceConfigurationId**: string (WriteOnly): The maintenance configuration Id
-* **resourceId**: string (WriteOnly): The unique resourceId
+* **maintenanceConfigurationId**: string: The maintenance configuration Id
+* **resourceId**: string: The unique resourceId
 
 ## MaintenanceConfigurationProperties
 ### Properties

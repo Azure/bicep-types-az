@@ -31,5 +31,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 6.23s. 4 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 7.04s. 4 files generated.

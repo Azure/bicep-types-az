@@ -9,7 +9,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.addons-2017-05-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -18,4 +18,4 @@ warning | PreCheck/SchemaMissingType | The schema 'CanonicalSupportPlanStatusIte
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/addons/resource-manager/Microsoft.Addons/preview/2017-05-15/Addons.json:300:7
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 4s. 4 files generated.
+info    | Autorest completed in 4.3s. 4 files generated.

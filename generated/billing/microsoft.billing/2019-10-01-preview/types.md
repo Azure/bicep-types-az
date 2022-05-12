@@ -333,7 +333,7 @@
 
 ## AzurePlan
 ### Properties
-* **skuDescription**: string (ReadOnly): The sku description.
+* **skuDescription**: string (ReadOnly, WriteOnly): The sku description.
 * **skuId**: string (WriteOnly): The sku id.
 
 ## IndirectRelationshipInfo

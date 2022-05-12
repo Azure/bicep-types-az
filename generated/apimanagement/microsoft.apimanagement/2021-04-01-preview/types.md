@@ -33,7 +33,7 @@
 * **format**: 'openapi-link' | 'swagger-link-json' | 'wadl-link-json' | 'wsdl-link+xml' (ReadOnly): Format in which the API Details are exported to the Storage Blob with Sas Key valid for 5 minutes.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties) (WriteOnly): API Create or Update Properties.
+* **properties**: [ApiCreateOrUpdateProperties](#apicreateorupdateproperties): API Create or Update Properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 * **value**: [ApiExportResultValue](#apiexportresultvalue) (ReadOnly): The object defining the schema of the exported API Detail
 
@@ -232,7 +232,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AssociationContractProperties](#associationcontractproperties) (WriteOnly): Association entity contract properties.
+* **properties**: [AssociationContractProperties](#associationcontractproperties): Association entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/certificateAuthorities@2021-04-01-preview
@@ -268,6 +268,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UserContractProperties](#usercontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2021-04-01-preview
@@ -321,6 +322,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientEmailContractProperties](#recipientemailcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2021-04-01-preview (WriteOnly)
@@ -329,6 +331,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [RecipientUsersContractProperties](#recipientuserscontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2021-04-01-preview
@@ -421,6 +424,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiContractProperties](#apicontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groups@2021-04-01-preview (WriteOnly)
@@ -429,6 +433,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupContractProperties](#groupcontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2021-04-01-preview
@@ -718,75 +723,75 @@ dictionary key references will be ARM resource ids in the form:
 
 ## ApiCreateOrUpdateProperties
 ### Properties
-* **apiRevision**: string (WriteOnly): Describes the revision of the API. If no value is provided, default revision 1 is created
-* **apiRevisionDescription**: string (WriteOnly): Description of the API Revision.
+* **apiRevision**: string: Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string: Description of the API Revision.
 * **apiType**: 'graphql' | 'http' | 'soap' | 'websocket' (WriteOnly): Type of API to create. 
  * `http` creates a REST API 
  * `soap` creates a SOAP pass-through API  
  * `websocket` creates websocket API 
  * `graphql` creates GraphQL API.
-* **apiVersion**: string (WriteOnly): Indicates the version identifier of the API if the API is versioned
-* **apiVersionDescription**: string (WriteOnly): Description of the API Version.
-* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (WriteOnly): An API Version Set contains the common configuration for a set of API Versions relating
-* **apiVersionSetId**: string (WriteOnly): A resource identifier for the related ApiVersionSet.
-* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (WriteOnly): API Authentication Settings.
-* **contact**: [ApiContactInformation](#apicontactinformation) (WriteOnly): API contact information
-* **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
-* **displayName**: string (WriteOnly): API name. Must be 1 to 300 characters long.
+* **apiVersion**: string: Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string: Description of the API Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string: A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): API Authentication Settings.
+* **contact**: [ApiContactInformation](#apicontactinformation): API contact information
+* **description**: string: Description of the API. May include HTML formatting tags.
+* **displayName**: string: API name. Must be 1 to 300 characters long.
 * **format**: 'graphql-link' | 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' (WriteOnly): Format of the Content in which the API is getting imported.
-* **isCurrent**: bool (WriteOnly): Indicates if API revision is current api revision.
+* **isCurrent**: bool: Indicates if API revision is current api revision.
 * **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
-* **license**: [ApiLicenseInformation](#apilicenseinformation) (WriteOnly): API license information
-* **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-* **protocols**: 'http' | 'https' | 'ws' | 'wss'[] (WriteOnly): Describes on which protocols the operations in this API can be invoked.
-* **serviceUrl**: string (WriteOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-* **sourceApiId**: string (WriteOnly): API identifier of the source API.
-* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Subscription key parameter names details.
-* **subscriptionRequired**: bool (WriteOnly): Specifies whether an API or Product subscription is required for accessing the API.
-* **termsOfServiceUrl**: string (WriteOnly): A URL to the Terms of Service for the API. MUST be in the format of a URL.
-* **type**: 'graphql' | 'http' | 'soap' | 'websocket' (WriteOnly): Type of API.
+* **license**: [ApiLicenseInformation](#apilicenseinformation): API license information
+* **path**: string (Required): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https' | 'ws' | 'wss'[]: Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string: API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract): Subscription key parameter names details.
+* **subscriptionRequired**: bool: Specifies whether an API or Product subscription is required for accessing the API.
+* **termsOfServiceUrl**: string: A URL to the Terms of Service for the API. MUST be in the format of a URL.
+* **type**: 'graphql' | 'http' | 'soap' | 'websocket': Type of API.
 * **value**: string (WriteOnly): Content value when Importing an API.
 * **wsdlSelector**: [ApiCreateOrUpdatePropertiesWsdlSelector](#apicreateorupdatepropertieswsdlselector) (WriteOnly): Criteria to limit import of WSDL to a subset of the document.
 
 ## ApiVersionSetContractDetails
 ### Properties
-* **description**: string (WriteOnly): Description of API Version Set.
-* **id**: string (WriteOnly): Identifier for existing API Version Set. Omit this value to create a new Version Set.
-* **name**: string (WriteOnly): The display Name of the API Version Set.
-* **versionHeaderName**: string (WriteOnly): Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-* **versioningScheme**: 'Header' | 'Query' | 'Segment' (WriteOnly): An value that determines where the API Version identifier will be located in a HTTP request.
-* **versionQueryName**: string (WriteOnly): Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+* **description**: string: Description of API Version Set.
+* **id**: string: Identifier for existing API Version Set. Omit this value to create a new Version Set.
+* **name**: string: The display Name of the API Version Set.
+* **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+* **versioningScheme**: 'Header' | 'Query' | 'Segment': An value that determines where the API Version identifier will be located in a HTTP request.
+* **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## AuthenticationSettingsContract
 ### Properties
-* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
-* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract) (WriteOnly): API OAuth2 Authentication settings details.
+* **oAuth2**: [OAuth2AuthenticationSettingsContract](#oauth2authenticationsettingscontract): API OAuth2 Authentication settings details.
+* **openid**: [OpenIdAuthenticationSettingsContract](#openidauthenticationsettingscontract): API OAuth2 Authentication settings details.
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
-* **authorizationServerId**: string (WriteOnly): OAuth authorization server identifier.
-* **scope**: string (WriteOnly): operations scope.
+* **authorizationServerId**: string: OAuth authorization server identifier.
+* **scope**: string: operations scope.
 
 ## OpenIdAuthenticationSettingsContract
 ### Properties
-* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[] (WriteOnly): How to send token to the server.
-* **openidProviderId**: string (WriteOnly): OAuth authorization server identifier.
+* **bearerTokenSendingMethods**: 'authorizationHeader' | 'query'[]: How to send token to the server.
+* **openidProviderId**: string: OAuth authorization server identifier.
 
 ## ApiContactInformation
 ### Properties
-* **email**: string (WriteOnly): The email address of the contact person/organization. MUST be in the format of an email address
-* **name**: string (WriteOnly): The identifying name of the contact person/organization
-* **url**: string (WriteOnly): The URL pointing to the contact information. MUST be in the format of a URL
+* **email**: string: The email address of the contact person/organization. MUST be in the format of an email address
+* **name**: string: The identifying name of the contact person/organization
+* **url**: string: The URL pointing to the contact information. MUST be in the format of a URL
 
 ## ApiLicenseInformation
 ### Properties
-* **name**: string (WriteOnly): The license name used for the API
-* **url**: string (WriteOnly): A URL to the license used for the API. MUST be in the format of a URL
+* **name**: string: The license name used for the API
+* **url**: string: A URL to the license used for the API. MUST be in the format of a URL
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties
-* **header**: string (WriteOnly): Subscription key header name.
-* **query**: string (WriteOnly): Subscription key query string parameter name.
+* **header**: string: Subscription key header name.
+* **query**: string: Subscription key query string parameter name.
 
 ## ApiCreateOrUpdatePropertiesWsdlSelector
 ### Properties
@@ -1108,7 +1113,28 @@ dictionary key references will be ARM resource ids in the form:
 
 ## AssociationContractProperties
 ### Properties
+* **apiRevision**: string (ReadOnly): Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the API Revision.
+* **apiVersion**: string (ReadOnly): Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the API Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **contact**: [ApiContactInformation](#apicontactinformation) (ReadOnly): API contact information
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name. Must be 1 to 300 characters long.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **license**: [ApiLicenseInformation](#apilicenseinformation) (ReadOnly): API license information
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https' | 'ws' | 'wss'[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
 * **provisioningState**: 'created' (WriteOnly): Provisioning state.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (ReadOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (ReadOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **termsOfServiceUrl**: string (ReadOnly): A URL to the Terms of Service for the API. MUST be in the format of a URL.
+* **type**: 'graphql' | 'http' | 'soap' | 'websocket' (ReadOnly): Type of API.
 
 ## GatewayCertificateAuthorityContractProperties
 ### Properties
@@ -1130,6 +1156,30 @@ dictionary key references will be ARM resource ids in the form:
 * **displayName**: string (Required): Group name.
 * **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
 * **type**: 'custom' | 'external' | 'system': Group type.
+
+## UserContractProperties
+### Properties
+* **email**: string (ReadOnly): Email address.
+* **firstName**: string (ReadOnly): First name.
+* **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
+* **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
+* **lastName**: string (ReadOnly): Last name.
+* **note**: string (ReadOnly): Optional note about a user set by the administrator.
+* **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+* **state**: 'active' | 'blocked' | 'deleted' | 'pending' (ReadOnly): Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+
+## GroupContractProperties
+### Properties
+* **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
+* **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
+* **displayName**: string (ReadOnly): Group name.
+* **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
+* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
+
+## UserIdentityContract
+### Properties
+* **id**: string (ReadOnly): Identifier value within provider.
+* **provider**: string (ReadOnly): Identity provider name.
 
 ## IdentityProviderCreateContractProperties
 ### Properties
@@ -1176,6 +1226,14 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **emails**: string[] (ReadOnly): List of Emails subscribed for the notification.
 * **users**: string[] (ReadOnly): List of Users subscribed for the notification.
+
+## RecipientEmailContractProperties
+### Properties
+* **email**: string (ReadOnly): User Email subscribed to notification.
+
+## RecipientUsersContractProperties
+### Properties
+* **userId**: string (ReadOnly): API Management UserId subscribed to notification.
 
 ## OpenidConnectProviderContractProperties
 ### Properties
@@ -1250,6 +1308,30 @@ Instrumentation key for applicationInsights logger.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
 * **terms**: string: Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
 
+## ApiContractProperties
+### Properties
+* **apiRevision**: string (ReadOnly): Describes the revision of the API. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string (ReadOnly): Description of the API Revision.
+* **apiVersion**: string (ReadOnly): Indicates the version identifier of the API if the API is versioned
+* **apiVersionDescription**: string (ReadOnly): Description of the API Version.
+* **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails) (ReadOnly): An API Version Set contains the common configuration for a set of API Versions relating
+* **apiVersionSetId**: string (ReadOnly): A resource identifier for the related ApiVersionSet.
+* **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract) (ReadOnly): API Authentication Settings.
+* **contact**: [ApiContactInformation](#apicontactinformation) (ReadOnly): API contact information
+* **description**: string (ReadOnly): Description of the API. May include HTML formatting tags.
+* **displayName**: string (ReadOnly): API name. Must be 1 to 300 characters long.
+* **isCurrent**: bool (ReadOnly): Indicates if API revision is current api revision.
+* **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
+* **license**: [ApiLicenseInformation](#apilicenseinformation) (ReadOnly): API license information
+* **path**: string (ReadOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **protocols**: 'http' | 'https' | 'ws' | 'wss'[] (ReadOnly): Describes on which protocols the operations in this API can be invoked.
+* **serviceUrl**: string (ReadOnly): Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **sourceApiId**: string (ReadOnly): API identifier of the source API.
+* **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (ReadOnly): Subscription key parameter names details.
+* **subscriptionRequired**: bool (ReadOnly): Specifies whether an API or Product subscription is required for accessing the API.
+* **termsOfServiceUrl**: string (ReadOnly): A URL to the Terms of Service for the API. MUST be in the format of a URL.
+* **type**: 'graphql' | 'http' | 'soap' | 'websocket' (ReadOnly): Type of API.
+
 ## SchemaContractProperties
 ### Properties
 * **description**: string: Free-form schema entity description.
@@ -1318,19 +1400,6 @@ Instrumentation key for applicationInsights logger.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'blocked' | 'deleted' | 'pending': Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-
-## GroupContractProperties
-### Properties
-* **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-* **description**: string (ReadOnly): Group description. Can contain HTML formatting tags.
-* **displayName**: string (ReadOnly): Group name.
-* **externalId**: string (ReadOnly): For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-* **type**: 'custom' | 'external' | 'system' (ReadOnly): Group type.
-
-## UserIdentityContract
-### Properties
-* **id**: string: Identifier value within provider.
-* **provider**: string: Identity provider name.
 
 ## SubscriptionContractProperties
 ### Properties

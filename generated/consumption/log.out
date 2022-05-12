@@ -122,7 +122,7 @@ warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingac
 warning | Skipping path '/{resourcescope}/providers/microsoft.consumption/reservationrecommendationdetails': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2021-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -242,7 +242,7 @@ warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingac
 warning | Skipping path '/{scope}/providers/microsoft.consumption/reservationrecommendationdetails': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -359,7 +359,7 @@ warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingac
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/{resourcescope}/providers/microsoft.consumption/reservationrecommendationdetails': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -479,7 +479,7 @@ warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingac
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/{billingscope}/providers/microsoft.consumption/reservationrecommendationdetails': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -552,7 +552,7 @@ warning | Skipping path '/{scope}/providers/microsoft.consumption/charges': Foun
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -619,7 +619,7 @@ warning | Skipping path '/{scope}/providers/microsoft.consumption/charges': Foun
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -688,7 +688,7 @@ warning | Skipping path '/{scope}/providers/microsoft.consumption/charges': Foun
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -757,7 +757,7 @@ warning | Skipping path '/{scope}/providers/microsoft.consumption/charges': Foun
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -816,7 +816,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2018-11-01-preview/consumption.json:1391:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/UnknownFormatType | Integer schema 'schemas:49' with unknown format: 'date-time' is not valid.  Treating it as 'int32'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2019-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -881,7 +881,7 @@ warning | Skipping path '/{scope}/providers/microsoft.consumption/charges': Foun
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2017-11-30"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1025,7 +1025,7 @@ warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingac
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.costmanagement/billingaccounts/{billingaccountid}/providers/microsoft.consumption/tags': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-05-31"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1118,7 +1118,7 @@ warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingac
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/balances': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.costmanagement/billingaccounts/{billingaccountid}/providers/microsoft.consumption/tags': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-08-31"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1184,7 +1184,7 @@ warning | Skipping path '/providers/microsoft.costmanagement/billingaccounts/{bi
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/enrollmentaccounts/{enrollmentaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/charges': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/departments/{departmentid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/charges': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2018-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1254,7 +1254,7 @@ warning | Skipping path '/providers/microsoft.costmanagement/billingaccounts/{bi
 warning | Skipping path '/providers/microsoft.management/managementgroups/{managementgroupid}/providers/microsoft.consumption/aggregatedcost': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/enrollmentaccounts/{enrollmentaccountid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/charges': Found mismatch between type segments (1) and name segments (0)
 warning | Skipping path '/providers/microsoft.billing/billingaccounts/{billingaccountid}/departments/{departmentid}/providers/microsoft.billing/billingperiods/{billingperiodname}/providers/microsoft.consumption/charges': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.consumption-2017-04-24-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1302,5 +1302,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefin
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/consumption/resource-manager/Microsoft.Consumption/preview/2017-12-30-preview/consumption.json:502:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 53.89s. 54 files generated.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 53.44s. 54 files generated.
