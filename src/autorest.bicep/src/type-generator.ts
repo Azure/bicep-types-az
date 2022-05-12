@@ -188,7 +188,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         continue;
       }
 
-      const response = parseType(undefined, action.responseSchema, undefined);
+      // Functions only have one possible HTTP operation from which they may be returned, so pass the same response schema as both the GET and PUT response
+      // schemata to ensure the `OnlyReturnedOn(Read|Write)` flags are not applied.
+      const response = parseType(undefined, action.responseSchema, action.responseSchema);
       if (!response) {
         continue;
       }
@@ -210,10 +212,10 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const type = factory.addType(new StringLiteralType(getFullyQualifiedType(descriptor)));
 
     return {
-      id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
-      name: createObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant | ObjectPropertyFlags.AcceptedOnWrite | ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite, 'The resource name'),
-      type: createObjectProperty(type, ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
-      apiVersion: createObjectProperty(factory.addType(new StringLiteralType(descriptor.apiVersion)), ObjectPropertyFlags.ReturnedOnRead | ObjectPropertyFlags.ReturnedOnWrite | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
+      id: createObjectProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource id'),
+      name: createObjectProperty(resourceName, ObjectPropertyFlags.Required | ObjectPropertyFlags.DeployTimeConstant, 'The resource name'),
+      type: createObjectProperty(type, ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource type'),
+      apiVersion: createObjectProperty(factory.addType(new StringLiteralType(descriptor.apiVersion)), ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.DeployTimeConstant, 'The resource api version'),
     };
   }
 
@@ -321,7 +323,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       yield {
         subTypeName,
         putRequestSubType: putRequestSubTypes[subTypeName],
-        putResponseSubType: putRequestSubTypes[subTypeName],
+        putResponseSubType: putResponseSubTypes[subTypeName],
         getResponseSubType: getResponseSubTypes[subTypeName],
       };
     }
@@ -380,20 +382,21 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
   function getMutabilityFlags(property: Property | undefined) {
     const mutability = property?.extensions?.["x-ms-mutability"] as string[];
-    let flags = ObjectPropertyFlags.None;
-
-    if (mutability) {
-      if (mutability.includes('create') || mutability.includes('update')) {
-        flags |= ObjectPropertyFlags.AcceptedOnWrite;
-      }
-
-      if (mutability.includes('read')) {
-        flags |= ObjectPropertyFlags.ReturnedOnRead;
-        flags |= ObjectPropertyFlags.ReturnedOnWrite;
-      }
+    if (!mutability) {
+      return ObjectPropertyFlags.None;
     }
 
-    return flags;
+    const writable = mutability.includes('create') || mutability.includes('update');
+    const readable = mutability.includes('read');
+    if (writable && !readable) {
+      return ObjectPropertyFlags.WriteOnly;
+    }
+
+    if (readable && !writable) {
+      return ObjectPropertyFlags.ReadOnly;
+    }
+
+    return ObjectPropertyFlags.None;
   }
 
   function parsePropertyFlags(
@@ -401,6 +404,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     putResponseProperty: Property | undefined,
     getResponseProperty: Property | undefined
   ) {
+    if (putRequestProperty?.schema?.apiVersions?.at(0)?.version === "2021-11-16-preview" && putRequestProperty?.serializedName == "createdBy") {
+      debugger;
+    }
     let flags = ObjectPropertyFlags.None;
 
     if (putRequestProperty && putRequestProperty.required) {
@@ -411,16 +417,32 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       flags |= getMutabilityFlags(putRequestProperty);
     }
 
-    if (putRequestProperty && !putRequestProperty.readOnly) {
-      flags |= ObjectPropertyFlags.AcceptedOnWrite;
+    const writable = putRequestProperty && !putRequestProperty.readOnly;
+    const readable = putResponseProperty || getResponseProperty;
+
+    if (writable && !readable) {
+      flags |= ObjectPropertyFlags.WriteOnly;
     }
 
-    if (putResponseProperty) {
-      flags |= ObjectPropertyFlags.ReturnedOnWrite;
+    if (readable && !writable) {
+      flags |= ObjectPropertyFlags.ReadOnly;
     }
 
-    if (getResponseProperty) {
-      flags |= ObjectPropertyFlags.ReturnedOnRead;
+    if (!readable && !writable) {
+      // surprisingly, this situation occurs, usually due to errors in the provider swagger.
+      // an example of when this might happen is if a property is marked as readOnly on the PUT body but is not
+      // returned by either a GET or a PUT (such as `createdBy` on the
+      // Microsoft.Authorization/accessReviewHistoryDefinitions@2021-11-16-preview resource)
+      logWarning(`Encounter a property [${putRequestProperty?.serializedName}] that cannot be read or written in API version [${putRequestProperty?.schema?.apiVersions?.at(0)?.version}]`);
+      flags |= ObjectPropertyFlags.ReadOnly | ObjectPropertyFlags.WriteOnly;
+    }
+
+    if (putResponseProperty && !getResponseProperty) {
+      flags |= ObjectPropertyFlags.OnlyReturnedOnWrite;
+    }
+
+    if (getResponseProperty && !putResponseProperty) {
+      flags |= ObjectPropertyFlags.OnlyReturnedOnRead;
     }
 
     return flags;
@@ -534,7 +556,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (combinedSchema.discriminator) {
       const discriminatedObjectType = factory.lookupType(definition) as DiscriminatedObjectType;
 
-      handlePolymorphicType(discriminatedObjectType, putRequestSchema, getResponseSchema);
+      handlePolymorphicType(discriminatedObjectType, putRequestSchema, putResponseSchema, getResponseSchema);
     }
 
     return definition;
