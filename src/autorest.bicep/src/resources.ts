@@ -23,6 +23,7 @@ export interface ResourceDescriptor {
   constantName?: string;
   readable: boolean;
   writable: boolean;
+  provisionedAsynchronously: boolean;
 }
 
 export interface ProviderDefinition {
@@ -243,14 +244,23 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     const resourcesByProvider: Dictionary<ResourceDefinition[]> = {};
     for (const lcPath of new Set<string>([...Object.keys(putOperationsByPath), ...Object.keys(getOperationsByPath)])) {
-      const putData = getPutSchema(putOperationsByPath[lcPath]);
-      const getData = getGetSchema(getOperationsByPath[lcPath]);
+      const putOperation = putOperationsByPath[lcPath];
+      const getOperation = getOperationsByPath[lcPath];
+      const putData = getPutSchema(putOperation);
+      const getData = getGetSchema(getOperation);
 
       let parseResult: Result<ResourceDescriptor[], string>;
       if (putData) {
-        parseResult = parseResourceMethod(putData.request.path, putData.parameters, apiVersion, !!getData, true);
+        parseResult = parseResourceMethod(
+          putData.request.path,
+          putData.parameters,
+          apiVersion,
+          !!getData,
+          true,
+          !!(putOperation?.extensions ?? {})['x-ms-long-running-operation']
+        );
       } else if (getData && isResourceSchema(getData.responseSchema)) {
-        parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false);
+        parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false, false);
       } else {
         // A non-resource get with no corresponding put is most likely a list endpoint
         continue;
@@ -470,7 +480,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     scopeType: ScopeType,
     routingScope: string,
     readable: boolean,
-    writable: boolean
+    writable: boolean,
+    provisionedAsynchronously: boolean
   ): Result<ResourceDescriptor[], string> {
     const namespace = routingScope.substr(0, routingScope.indexOf('/'));
     if (isPathVariable(namespace)) {
@@ -492,7 +503,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       apiVersion,
       constantName,
       readable,
-      writable
+      writable,
+      provisionedAsynchronously,
     }));
 
     return success(descriptors);
@@ -503,7 +515,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     parameters: Parameter[],
     apiVersion: string,
     readable: boolean,
-    writable: boolean
+    writable: boolean,
+    asyncProvisioning: boolean
   ) {
     const resourceScopeResult = parseResourceScopes(path);
 
@@ -513,7 +526,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     const { scopeType, routingScope } = resourceScopeResult.value;
 
-    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, readable, writable);
+    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, readable, writable, asyncProvisioning);
   }
 
   function parseResourceActionMethod(path: string, parameters: Parameter[], apiVersion: string) {
@@ -528,7 +541,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     const routingScope = actionRoutingScope.substr(0, actionRoutingScope.lastIndexOf('/'));
     const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
 
-    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, false, true);
+    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, false, true, false);
     if (!resourceDescriptorsResult.success) {
       return failure(resourceDescriptorsResult.error);
     }
