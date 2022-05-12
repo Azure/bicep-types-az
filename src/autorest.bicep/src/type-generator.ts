@@ -404,9 +404,6 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     putResponseProperty: Property | undefined,
     getResponseProperty: Property | undefined
   ) {
-    if (putRequestProperty?.schema?.apiVersions?.at(0)?.version === "2021-11-16-preview" && putRequestProperty?.serializedName == "createdBy") {
-      debugger;
-    }
     let flags = ObjectPropertyFlags.None;
 
     if (putRequestProperty && putRequestProperty.required) {
