@@ -11,7 +11,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Test.Rp1/readOnlyTestType' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Test.Rp1/testType1@2021-10-31
+## Resource Test.Rp1/testType1@2021-10-31 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
