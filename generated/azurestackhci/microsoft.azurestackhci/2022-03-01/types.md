@@ -22,7 +22,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AzureStackHCI/clusters/arcSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2022-03-01
+## Resource Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2022-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version

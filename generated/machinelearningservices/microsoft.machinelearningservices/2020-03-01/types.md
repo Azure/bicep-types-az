@@ -1,6 +1,6 @@
 # Microsoft.MachineLearningServices @ 2020-03-01
 
-## Resource Microsoft.MachineLearningServices/workspaces@2020-03-01
+## Resource Microsoft.MachineLearningServices/workspaces@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-03-01
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version

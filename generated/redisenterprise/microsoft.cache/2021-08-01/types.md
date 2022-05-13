@@ -1,6 +1,6 @@
 # Microsoft.Cache @ 2021-08-01
 
-## Resource Microsoft.Cache/redisEnterprise@2021-08-01
+## Resource Microsoft.Cache/redisEnterprise@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **type**: 'Microsoft.Cache/redisEnterprise' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Availability Zones where this cluster will be deployed.
 
-## Resource Microsoft.Cache/redisEnterprise/databases@2021-08-01
+## Resource Microsoft.Cache/redisEnterprise/databases@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [DatabaseProperties](#databaseproperties): Properties of RedisEnterprise databases, as opposed to general resource properties like location, tags
 * **type**: 'Microsoft.Cache/redisEnterprise/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cache/redisEnterprise/privateEndpointConnections@2021-08-01
+## Resource Microsoft.Cache/redisEnterprise/privateEndpointConnections@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version

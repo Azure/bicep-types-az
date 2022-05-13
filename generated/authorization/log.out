@@ -82,7 +82,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministratorListResul
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:113:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleassignmentid}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -105,7 +105,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2022-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -128,7 +128,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-11-16-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -188,7 +188,7 @@ warning | Encounter a property [status] that cannot be read or written in API ve
 warning | Encounter a property [reviewersType] that cannot be read or written in API version [2021-11-16-preview]
 warning | Encounter a property [status] that cannot be read or written in API version [2021-11-16-preview]
 warning | Encounter a property [reviewersType] that cannot be read or written in API version [2021-11-16-preview]
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -235,7 +235,7 @@ warning | Encounter a property [status] that cannot be read or written in API ve
 warning | Encounter a property [reviewersType] that cannot be read or written in API version [2021-07-01-preview]
 warning | Encounter a property [status] that cannot be read or written in API version [2021-07-01-preview]
 warning | Encounter a property [reviewersType] that cannot be read or written in API version [2021-07-01-preview]
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -321,7 +321,7 @@ warning | Encounter a property [id] that cannot be read or written in API versio
 warning | Encounter a property [name] that cannot be read or written in API version [2021-03-01-preview]
 warning | Encounter a property [type] that cannot be read or written in API version [2021-03-01-preview]
 warning | Encounter a property [status] that cannot be read or written in API version [2021-03-01-preview]
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -366,7 +366,7 @@ warning | Encounter a property [principalName] that cannot be read or written in
 warning | Encounter a property [userPrincipalName] that cannot be read or written in API version [2021-01-01-preview]
 warning | Encounter a property [reviewedBy] that cannot be read or written in API version [2021-01-01-preview]
 warning | Encounter a property [reviewedDateTime] that cannot be read or written in API version [2021-01-01-preview]
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-05-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -409,7 +409,7 @@ warning | Encounter a property [id] that cannot be read or written in API versio
 warning | Encounter a property [name] that cannot be read or written in API version [2018-05-01-preview]
 warning | Encounter a property [type] that cannot be read or written in API version [2018-05-01-preview]
 warning | Encounter a property [status] that cannot be read or written in API version [2018-05-01-preview]
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2018-07-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -468,7 +468,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentCreateParameter
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2018-01-01-preview/authorization-RoleAssignmentsCalls.json:643:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleid}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-10-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -492,7 +492,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleassignmentid}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2019-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -515,7 +515,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2015-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -586,7 +586,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleid}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.authorization-2020-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -682,5 +682,5 @@ warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentCreateParameter
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2017-10-01-preview/authorization-RoleAssignmentsCalls.json:643:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleassignmentid}': Unable to locate "/providers/" segment
-info    | autorest.bicep took 0ms
-info    | Autorest completed in 32.26s. 30 files generated.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 30.24s. 30 files generated.

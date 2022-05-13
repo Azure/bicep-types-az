@@ -1,6 +1,6 @@
 # Microsoft.EventGrid @ 2018-09-15-preview
 
-## Resource Microsoft.EventGrid/domains@2018-09-15-preview
+## Resource Microsoft.EventGrid/domains@2018-09-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -19,7 +19,7 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/eventSubscriptions@2018-09-15-preview
+## Resource Microsoft.EventGrid/eventSubscriptions@2018-09-15-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -28,7 +28,7 @@
 * **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics@2018-09-15-preview
+## Resource Microsoft.EventGrid/topics@2018-09-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

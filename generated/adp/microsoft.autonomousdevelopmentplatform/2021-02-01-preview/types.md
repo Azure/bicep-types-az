@@ -1,6 +1,6 @@
 # Microsoft.AutonomousDevelopmentPlatform @ 2021-02-01-preview
 
-## Resource Microsoft.AutonomousDevelopmentPlatform/accounts@2021-02-01-preview
+## Resource Microsoft.AutonomousDevelopmentPlatform/accounts@2021-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools@2021-02-01-preview
+## Resource Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools@2021-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

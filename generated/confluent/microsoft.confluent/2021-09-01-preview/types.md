@@ -10,7 +10,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Confluent/organizations@2021-09-01-preview
+## Resource Microsoft.Confluent/organizations@2021-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

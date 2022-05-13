@@ -42,7 +42,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/Connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.BotService/enterpriseChannels@2018-07-12
+## Resource Microsoft.BotService/enterpriseChannels@2018-07-12 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-07-12' (ReadOnly, DeployTimeConstant): The resource api version

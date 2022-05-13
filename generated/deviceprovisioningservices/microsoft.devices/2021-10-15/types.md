@@ -1,6 +1,6 @@
 # Microsoft.Devices @ 2021-10-15
 
-## Resource Microsoft.Devices/provisioningServices@2021-10-15
+## Resource Microsoft.Devices/provisioningServices@2021-10-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2021-10-15
+## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2021-10-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-15' (ReadOnly, DeployTimeConstant): The resource api version

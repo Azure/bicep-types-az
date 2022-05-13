@@ -1,6 +1,6 @@
 # Microsoft.ServiceFabric @ 2019-06-01-preview
 
-## Resource Microsoft.ServiceFabric/clusters@2019-06-01-preview
+## Resource Microsoft.ServiceFabric/clusters@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/clusters/applications@2019-06-01-preview
+## Resource Microsoft.ServiceFabric/clusters/applications@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/clusters/applications/services@2019-06-01-preview
+## Resource Microsoft.ServiceFabric/clusters/applications/services@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/clusters/applicationTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-06-01-preview
+## Resource Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

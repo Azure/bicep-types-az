@@ -1,6 +1,6 @@
 # Microsoft.Sql @ 2017-10-01-preview
 
-## Resource Microsoft.Sql/locations/instanceFailoverGroups@2017-10-01-preview
+## Resource Microsoft.Sql/locations/instanceFailoverGroups@2017-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -36,7 +36,7 @@
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview
+## Resource Microsoft.Sql/managedInstances/encryptionProtector@2017-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/keys@2017-10-01-preview
+## Resource Microsoft.Sql/managedInstances/keys@2017-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **properties**: [RecoverableManagedDatabaseProperties](#recoverablemanageddatabaseproperties) (ReadOnly): The recoverable managed database's properties.
 * **type**: 'Microsoft.Sql/managedInstances/recoverableDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases@2017-10-01-preview
+## Resource Microsoft.Sql/servers/databases@2017-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -79,7 +79,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2017-10-01-preview
+## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2017-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -97,7 +97,7 @@
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/elasticPools@2017-10-01-preview
+## Resource Microsoft.Sql/servers/elasticPools@2017-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

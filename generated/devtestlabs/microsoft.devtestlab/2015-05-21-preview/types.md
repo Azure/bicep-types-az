@@ -1,6 +1,6 @@
 # Microsoft.DevTestLab @ 2015-05-21-preview
 
-## Resource Microsoft.DevTestLab/labs@2015-05-21-preview
+## Resource Microsoft.DevTestLab/labs@2015-05-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -55,7 +55,7 @@
 * **tags**: [CostTags](#costtags) (ReadOnly): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/customimages@2015-05-21-preview
+## Resource Microsoft.DevTestLab/labs/customimages@2015-05-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -66,7 +66,7 @@
 * **tags**: [CustomImageTags](#customimagetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/formulas@2015-05-21-preview
+## Resource Microsoft.DevTestLab/labs/formulas@2015-05-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -88,7 +88,7 @@
 * **tags**: [PolicyTags](#policytags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/policysets/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/schedules@2015-05-21-preview
+## Resource Microsoft.DevTestLab/labs/schedules@2015-05-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -99,7 +99,7 @@
 * **tags**: [ScheduleTags](#scheduletags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview
+## Resource Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -110,7 +110,7 @@
 * **tags**: [LabVirtualMachineTags](#labvirtualmachinetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview
+## Resource Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-21-preview' (ReadOnly, DeployTimeConstant): The resource api version

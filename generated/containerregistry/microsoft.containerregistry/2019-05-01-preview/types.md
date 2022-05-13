@@ -1,6 +1,6 @@
 # Microsoft.ContainerRegistry @ 2019-05-01-preview
 
-## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2019-05-01-preview
+## Resource Microsoft.ContainerRegistry/registries/scopeMaps@2019-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -10,7 +10,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/scopeMaps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/tokens@2019-05-01-preview
+## Resource Microsoft.ContainerRegistry/registries/tokens@2019-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

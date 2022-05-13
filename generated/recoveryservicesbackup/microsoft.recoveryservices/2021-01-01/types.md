@@ -132,7 +132,7 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupPolicies/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-01-01
+## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version

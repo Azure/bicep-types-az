@@ -1,6 +1,6 @@
 # Microsoft.ServiceFabric @ 2016-09-01
 
-## Resource Microsoft.ServiceFabric/clusters@2016-09-01
+## Resource Microsoft.ServiceFabric/clusters@2016-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version

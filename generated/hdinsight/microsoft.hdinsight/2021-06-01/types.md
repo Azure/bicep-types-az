@@ -1,6 +1,6 @@
 # Microsoft.HDInsight @ 2021-06-01
 
-## Resource Microsoft.HDInsight/clusters@2021-06-01
+## Resource Microsoft.HDInsight/clusters@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -15,7 +15,7 @@
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The availability zones.
 
-## Resource Microsoft.HDInsight/clusters/applications@2021-06-01
+## Resource Microsoft.HDInsight/clusters/applications@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **tags**: [ApplicationTags](#applicationtags): The tags for the application.
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HDInsight/clusters/privateEndpointConnections@2021-06-01
+## Resource Microsoft.HDInsight/clusters/privateEndpointConnections@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version

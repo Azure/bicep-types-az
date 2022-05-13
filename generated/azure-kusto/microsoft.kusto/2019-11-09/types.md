@@ -1,6 +1,6 @@
 # Microsoft.Kusto @ 2019-11-09
 
-## Resource Microsoft.Kusto/clusters@2019-11-09
+## Resource Microsoft.Kusto/clusters@2019-11-09 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: An array represents the availability zones of the cluster.
 
-## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2019-11-09
+## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2019-11-09 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): Class representing the an attached database configuration properties of kind specific.
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases@2019-11-09
+## Resource Microsoft.Kusto/clusters/databases@2019-11-09 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -45,7 +45,7 @@
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
-## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-11-09
+## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-11-09 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -71,7 +71,7 @@
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 
-## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2019-11-09
+## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2019-11-09 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant): The resource api version
@@ -80,7 +80,7 @@
 * **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): A class representing database principal property.
 * **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/principalAssignments@2019-11-09
+## Resource Microsoft.Kusto/clusters/principalAssignments@2019-11-09 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-09' (ReadOnly, DeployTimeConstant): The resource api version

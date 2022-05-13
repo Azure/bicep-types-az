@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
 * **type**: 'Microsoft.PowerBIDedicated/autoScaleVCores' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.PowerBIDedicated/capacities@2021-01-01
+## Resource Microsoft.PowerBIDedicated/capacities@2021-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version

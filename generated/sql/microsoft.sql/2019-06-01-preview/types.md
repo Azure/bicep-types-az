@@ -1,6 +1,6 @@
 # Microsoft.Sql @ 2019-06-01-preview
 
-## Resource Microsoft.Sql/managedInstances/databases@2019-06-01-preview
+## Resource Microsoft.Sql/managedInstances/databases@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): The properties of a managed instance operation.
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers@2019-06-01-preview
+## Resource Microsoft.Sql/servers@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -42,7 +42,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview
+## Resource Microsoft.Sql/servers/administrators@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -51,7 +51,7 @@
 * **properties**: [AdministratorProperties](#administratorproperties): Properties of a active directory administrator.
 * **type**: 'Microsoft.Sql/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases@2019-06-01-preview
+## Resource Microsoft.Sql/servers/databases@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview
+## Resource Microsoft.Sql/servers/databases/syncGroups@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -74,7 +74,7 @@
 * **properties**: [SyncGroupProperties](#syncgroupproperties): Properties of a sync group.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview
+## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -83,7 +83,7 @@
 * **properties**: [SyncMemberProperties](#syncmemberproperties): Properties of a sync member.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview
+## Resource Microsoft.Sql/servers/databases/workloadGroups@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -92,7 +92,7 @@
 * **properties**: [WorkloadGroupProperties](#workloadgroupproperties): Workload group definition. For more information look at sys.workload_management_workload_groups (DMV).
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview
+## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

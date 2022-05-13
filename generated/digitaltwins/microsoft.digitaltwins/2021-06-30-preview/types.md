@@ -1,6 +1,6 @@
 # Microsoft.DigitalTwins @ 2021-06-30-preview
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances@2021-06-30-preview
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances@2021-06-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2021-06-30-preview
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2021-06-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2021-06-30-preview
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2021-06-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -33,7 +33,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances/timeSeriesDatabaseConnections@2021-06-30-preview
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances/timeSeriesDatabaseConnections@2021-06-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version

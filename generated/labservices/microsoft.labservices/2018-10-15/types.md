@@ -33,7 +33,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.LabServices/labaccounts/labs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15
+## Resource Microsoft.LabServices/labaccounts/labs/environmentsettings@2018-10-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-10-15' (ReadOnly, DeployTimeConstant): The resource api version

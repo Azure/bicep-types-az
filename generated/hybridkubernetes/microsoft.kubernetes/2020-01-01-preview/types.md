@@ -1,6 +1,6 @@
 # Microsoft.Kubernetes @ 2020-01-01-preview
 
-## Resource Microsoft.Kubernetes/connectedClusters@2020-01-01-preview
+## Resource Microsoft.Kubernetes/connectedClusters@2020-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Batch @ 2017-09-01
 
-## Resource Microsoft.Batch/batchAccounts@2017-09-01
+## Resource Microsoft.Batch/batchAccounts@2017-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -37,7 +37,7 @@
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 * **version**: string (ReadOnly): The version of the application package.
 
-## Resource Microsoft.Batch/batchAccounts/certificates@2017-09-01
+## Resource Microsoft.Batch/batchAccounts/certificates@2017-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -47,7 +47,7 @@
 * **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties): Certificate properties for create operations
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Batch/batchAccounts/pools@2017-09-01
+## Resource Microsoft.Batch/batchAccounts/pools@2017-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-09-01' (ReadOnly, DeployTimeConstant): The resource api version

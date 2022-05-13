@@ -1,6 +1,6 @@
 # Microsoft.App @ 2022-01-01-preview
 
-## Resource Microsoft.App/containerApps@2022-01-01-preview
+## Resource Microsoft.App/containerApps@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -43,7 +43,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.App/containerApps/revisions/replicas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/sourcecontrols@2022-01-01-preview
+## Resource Microsoft.App/containerApps/sourcecontrols@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -53,7 +53,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.App/containerApps/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments@2022-01-01-preview
+## Resource Microsoft.App/managedEnvironments@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

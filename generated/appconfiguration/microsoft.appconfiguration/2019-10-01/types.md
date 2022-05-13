@@ -1,6 +1,6 @@
 # Microsoft.AppConfiguration @ 2019-10-01
 
-## Resource Microsoft.AppConfiguration/configurationStores@2019-10-01
+## Resource Microsoft.AppConfiguration/configurationStores@2019-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Network @ 2019-11-01
 
-## Resource Microsoft.Network/NetworkExperimentProfiles@2019-11-01
+## Resource Microsoft.Network/NetworkExperimentProfiles@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01
+## Resource Microsoft.Network/NetworkExperimentProfiles/Experiments@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version

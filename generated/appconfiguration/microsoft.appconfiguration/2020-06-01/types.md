@@ -1,6 +1,6 @@
 # Microsoft.AppConfiguration @ 2020-06-01
 
-## Resource Microsoft.AppConfiguration/configurationStores@2020-06-01
+## Resource Microsoft.AppConfiguration/configurationStores@2020-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2020-06-01
+## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2020-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version

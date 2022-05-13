@@ -1,6 +1,6 @@
 # Microsoft.HealthcareApis @ 2021-11-01
 
-## Resource Microsoft.HealthcareApis/services@2021-11-01
+## Resource Microsoft.HealthcareApis/services@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -15,7 +15,7 @@
 * **tags**: [ServicesResourceTags](#servicesresourcetags): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2021-11-01
+## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -35,7 +35,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/services/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces@2021-11-01
+## Resource Microsoft.HealthcareApis/workspaces@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -48,7 +48,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.HealthcareApis/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces/dicomservices@2021-11-01
+## Resource Microsoft.HealthcareApis/workspaces/dicomservices@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -62,7 +62,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.HealthcareApis/workspaces/dicomservices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces/fhirservices@2021-11-01
+## Resource Microsoft.HealthcareApis/workspaces/fhirservices@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -77,7 +77,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.HealthcareApis/workspaces/fhirservices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces/iotconnectors@2021-11-01
+## Resource Microsoft.HealthcareApis/workspaces/iotconnectors@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -91,7 +91,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.HealthcareApis/workspaces/iotconnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations@2021-11-01
+## Resource Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -103,7 +103,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/workspaces/privateEndpointConnections@2021-11-01
+## Resource Microsoft.HealthcareApis/workspaces/privateEndpointConnections@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version

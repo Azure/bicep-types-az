@@ -1,6 +1,6 @@
 # Microsoft.EdgeOrder @ 2020-12-01-preview
 
-## Resource Microsoft.EdgeOrder/addresses@2020-12-01-preview
+## Resource Microsoft.EdgeOrder/addresses@2020-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EdgeOrder/locations/orders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EdgeOrder/orderItems@2020-12-01-preview
+## Resource Microsoft.EdgeOrder/orderItems@2020-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

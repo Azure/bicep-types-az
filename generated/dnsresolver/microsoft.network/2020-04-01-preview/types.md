@@ -1,6 +1,6 @@
 # Microsoft.Network @ 2020-04-01-preview
 
-## Resource Microsoft.Network/dnsForwardingRulesets@2020-04-01-preview
+## Resource Microsoft.Network/dnsForwardingRulesets@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Network/dnsForwardingRulesets/forwardingRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/dnsForwardingRulesets/virtualNetworkLinks@2020-04-01-preview
+## Resource Microsoft.Network/dnsForwardingRulesets/virtualNetworkLinks@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -35,7 +35,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Network/dnsForwardingRulesets/virtualNetworkLinks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/dnsResolvers@2020-04-01-preview
+## Resource Microsoft.Network/dnsResolvers@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -48,7 +48,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/dnsResolvers/inboundEndpoints@2020-04-01-preview
+## Resource Microsoft.Network/dnsResolvers/inboundEndpoints@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -61,7 +61,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsResolvers/inboundEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/dnsResolvers/outboundEndpoints@2020-04-01-preview
+## Resource Microsoft.Network/dnsResolvers/outboundEndpoints@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

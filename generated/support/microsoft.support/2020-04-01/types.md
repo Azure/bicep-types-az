@@ -1,6 +1,6 @@
 # Microsoft.Support @ 2020-04-01
 
-## Resource Microsoft.Support/supportTickets@2020-04-01
+## Resource Microsoft.Support/supportTickets@2020-04-01 (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -9,7 +9,7 @@
 * **properties**: [SupportTicketDetailsProperties](#supportticketdetailsproperties): Describes the properties of a support ticket.
 * **type**: 'Microsoft.Support/supportTickets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Support/supportTickets/communications@2020-04-01
+## Resource Microsoft.Support/supportTickets/communications@2020-04-01 (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version

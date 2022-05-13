@@ -13,7 +13,7 @@
 * **tags**: [MoveCollectionTags](#movecollectiontags): Resource tags.
 * **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/moveCollections/moveResources@2019-10-01-preview
+## Resource Microsoft.Migrate/moveCollections/moveResources@2019-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

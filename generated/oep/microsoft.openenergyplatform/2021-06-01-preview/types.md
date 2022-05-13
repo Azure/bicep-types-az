@@ -1,6 +1,6 @@
 # Microsoft.OpenEnergyPlatform @ 2021-06-01-preview
 
-## Resource Microsoft.OpenEnergyPlatform/energyServices@2021-06-01-preview
+## Resource Microsoft.OpenEnergyPlatform/energyServices@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

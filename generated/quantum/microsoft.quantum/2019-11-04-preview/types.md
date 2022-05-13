@@ -1,6 +1,6 @@
 # Microsoft.Quantum @ 2019-11-04-preview
 
-## Resource Microsoft.Quantum/workspaces@2019-11-04-preview
+## Resource Microsoft.Quantum/workspaces@2019-11-04-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-04-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Cdn @ 2016-04-02
 
-## Resource Microsoft.Cdn/profiles@2016-04-02
+## Resource Microsoft.Cdn/profiles@2016-04-02 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ProfileCreateParametersTags](#profilecreateparameterstags): Profile tags
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints@2016-04-02
+## Resource Microsoft.Cdn/profiles/endpoints@2016-04-02 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **tags**: [EndpointCreateParametersTags](#endpointcreateparameterstags): Endpoint tags
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2016-04-02
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2016-04-02 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters)
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/origins@2016-04-02
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2016-04-02 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-02' (ReadOnly, DeployTimeConstant): The resource api version

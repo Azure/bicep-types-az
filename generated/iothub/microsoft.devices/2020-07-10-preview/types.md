@@ -1,6 +1,6 @@
 # Microsoft.Devices @ 2020-07-10-preview
 
-## Resource Microsoft.Devices/IotHubs@2020-07-10-preview
+## Resource Microsoft.Devices/IotHubs@2020-07-10-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-10-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -34,7 +34,7 @@
 * **properties**: [EventHubConsumerGroupName](#eventhubconsumergroupname): The EventHub consumer group name.
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2020-07-10-preview
+## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2020-07-10-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-10-preview' (ReadOnly, DeployTimeConstant): The resource api version

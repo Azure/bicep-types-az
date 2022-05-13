@@ -1,6 +1,6 @@
 # Microsoft.HealthBot @ 2020-12-08
 
-## Resource Microsoft.HealthBot/healthBots@2020-12-08
+## Resource Microsoft.HealthBot/healthBots@2020-12-08 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-08' (ReadOnly, DeployTimeConstant): The resource api version

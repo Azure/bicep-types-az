@@ -1,6 +1,6 @@
 # Microsoft.DeviceUpdate @ 2020-03-01-preview
 
-## Resource Microsoft.DeviceUpdate/accounts@2020-03-01-preview
+## Resource Microsoft.DeviceUpdate/accounts@2020-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeviceUpdate/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceUpdate/accounts/instances@2020-03-01-preview
+## Resource Microsoft.DeviceUpdate/accounts/instances@2020-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeviceUpdate/accounts/instances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies@2020-03-01-preview
+## Resource Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies@2020-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DeviceUpdate/accounts/privateEndpointConnectionProxies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceUpdate/accounts/privateEndpointConnections@2020-03-01-preview
+## Resource Microsoft.DeviceUpdate/accounts/privateEndpointConnections@2020-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

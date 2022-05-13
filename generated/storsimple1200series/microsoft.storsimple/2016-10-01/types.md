@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags attached to the Manager
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/accessControlRecords@2016-10-01
+## Resource Microsoft.StorSimple/managers/accessControlRecords@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -31,7 +31,7 @@
 * **properties**: [RawCertificateData](#rawcertificatedata) (Required): Raw Certificate Data From IDM
 * **type**: 'Microsoft.StorSimple/managers/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,7 +40,7 @@
 * **properties**: [AlertSettingsProperties](#alertsettingsproperties) (Required): Class containing the properties of AlertSettings
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/backupScheduleGroups@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/backupScheduleGroups@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **properties**: [BackupScheduleGroupProperties](#backupschedulegroupproperties) (Required): The Backup Schedule Group Properties
 * **type**: 'Microsoft.StorSimple/managers/devices/backupScheduleGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/chapSettings@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/chapSettings@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **properties**: [ChapProperties](#chapproperties) (Required): Chap properties
 * **type**: 'Microsoft.StorSimple/managers/devices/chapSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/fileservers@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/fileservers@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -67,7 +67,7 @@
 * **properties**: [FileServerProperties](#fileserverproperties) (Required): The file server properties.
 * **type**: 'Microsoft.StorSimple/managers/devices/fileservers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/fileservers/shares@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/fileservers/shares@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -76,7 +76,7 @@
 * **properties**: [FileShareProperties](#fileshareproperties) (Required): The File Share.
 * **type**: 'Microsoft.StorSimple/managers/devices/fileservers/shares' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/iscsiservers@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/iscsiservers@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -85,7 +85,7 @@
 * **properties**: [IscsiServerProperties](#iscsiserverproperties) (Required): The iSCSI server properties.
 * **type**: 'Microsoft.StorSimple/managers/devices/iscsiservers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01
+## Resource Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -104,7 +104,7 @@
 * **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties) (Required): Properties of the ManagerExtendedInfo
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2016-10-01
+## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -113,7 +113,7 @@
 * **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required): Storage account properties
 * **type**: 'Microsoft.StorSimple/managers/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/storageDomains@2016-10-01
+## Resource Microsoft.StorSimple/managers/storageDomains@2016-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-10-01' (ReadOnly, DeployTimeConstant): The resource api version

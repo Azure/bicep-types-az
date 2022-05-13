@@ -1,6 +1,6 @@
 # Microsoft.Network @ 2015-05-01-preview
 
-## Resource Microsoft.Network/applicationGateways@2015-05-01-preview
+## Resource Microsoft.Network/applicationGateways@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/connections@2015-05-01-preview
+## Resource Microsoft.Network/connections@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits@2015-05-01-preview
+## Resource Microsoft.Network/expressRouteCircuits@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -37,7 +37,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/authorizations@2015-05-01-preview
+## Resource Microsoft.Network/expressRouteCircuits/authorizations@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -47,7 +47,7 @@
 * **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings@2015-05-01-preview
+## Resource Microsoft.Network/expressRouteCircuits/peerings@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -57,7 +57,7 @@
 * **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/loadBalancers@2015-05-01-preview
+## Resource Microsoft.Network/loadBalancers@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -69,7 +69,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/loadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/localNetworkGateways@2015-05-01-preview
+## Resource Microsoft.Network/localNetworkGateways@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -81,7 +81,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkInterfaces@2015-05-01-preview
+## Resource Microsoft.Network/networkInterfaces@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -93,7 +93,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups@2015-05-01-preview
+## Resource Microsoft.Network/networkSecurityGroups@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -105,7 +105,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/networkSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups/securityRules@2015-05-01-preview
+## Resource Microsoft.Network/networkSecurityGroups/securityRules@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -115,7 +115,7 @@
 * **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat)
 * **type**: 'Microsoft.Network/networkSecurityGroups/securityRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/publicIPAddresses@2015-05-01-preview
+## Resource Microsoft.Network/publicIPAddresses@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -127,7 +127,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables@2015-05-01-preview
+## Resource Microsoft.Network/routeTables@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -139,7 +139,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables/routes@2015-05-01-preview
+## Resource Microsoft.Network/routeTables/routes@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -149,7 +149,7 @@
 * **properties**: [RoutePropertiesFormat](#routepropertiesformat): Route resource
 * **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualnetworkgateways@2015-05-01-preview
+## Resource Microsoft.Network/virtualnetworkgateways@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -161,7 +161,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/virtualnetworkgateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualnetworks@2015-05-01-preview
+## Resource Microsoft.Network/virtualnetworks@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -173,7 +173,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Network/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualnetworks/subnets@2015-05-01-preview
+## Resource Microsoft.Network/virtualnetworks/subnets@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

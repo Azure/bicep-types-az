@@ -100,7 +100,7 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/integrationServiceEnvironments@2019-05-01
+## Resource Microsoft.Logic/integrationServiceEnvironments@2019-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -113,7 +113,7 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/integrationServiceEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/integrationServiceEnvironments/managedApis@2019-05-01
+## Resource Microsoft.Logic/integrationServiceEnvironments/managedApis@2019-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version

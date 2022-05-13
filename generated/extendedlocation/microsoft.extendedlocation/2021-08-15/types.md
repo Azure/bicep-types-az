@@ -1,6 +1,6 @@
 # Microsoft.ExtendedLocation @ 2021-08-15
 
-## Resource Microsoft.ExtendedLocation/customLocations@2021-08-15
+## Resource Microsoft.ExtendedLocation/customLocations@2021-08-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-15' (ReadOnly, DeployTimeConstant): The resource api version

@@ -20,7 +20,7 @@
 * **properties**: [AuthorizationPolicy](#authorizationpolicy): The authorization policy.
 * **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/connectors@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/connectors@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **properties**: [ConnectorMapping](#connectormapping): The connector mapping definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/interactions@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/interactions@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -47,7 +47,7 @@
 * **properties**: [InteractionTypeDefinition](#interactiontypedefinition): The Interaction Type Definition
 * **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/kpi@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/kpi@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -56,7 +56,7 @@
 * **properties**: [KpiDefinition](#kpidefinition): Defines the KPI Threshold limits.
 * **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/links@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/links@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **properties**: [LinkDefinition](#linkdefinition): The definition of Link.
 * **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/predictions@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/predictions@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -74,7 +74,7 @@
 * **properties**: [Prediction](#prediction): The prediction definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/predictions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/profiles@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/profiles@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -83,7 +83,7 @@
 * **properties**: [ProfileTypeDefinition](#profiletypedefinition): The profile type definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/relationshipLinks@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/relationshipLinks@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -92,7 +92,7 @@
 * **properties**: [RelationshipLinkDefinition](#relationshiplinkdefinition): The definition of relationship link.
 * **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/relationships@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/relationships@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
@@ -101,7 +101,7 @@
 * **properties**: [RelationshipDefinition](#relationshipdefinition): The definition of Relationship.
 * **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomerInsights/hubs/roleAssignments@2017-04-26
+## Resource Microsoft.CustomerInsights/hubs/roleAssignments@2017-04-26 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version

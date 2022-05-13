@@ -1,6 +1,6 @@
 # Microsoft.Quota @ 2021-03-15-preview
 
-## Resource Microsoft.Quota/quotas@2021-03-15-preview
+## Resource Microsoft.Quota/quotas@2021-03-15-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

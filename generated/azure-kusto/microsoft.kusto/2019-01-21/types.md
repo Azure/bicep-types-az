@@ -1,6 +1,6 @@
 # Microsoft.Kusto @ 2019-01-21
 
-## Resource Microsoft.Kusto/clusters@2019-01-21
+## Resource Microsoft.Kusto/clusters@2019-01-21 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases@2019-01-21
+## Resource Microsoft.Kusto/clusters/databases@2019-01-21 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-21' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [DatabaseProperties](#databaseproperties): Class representing the Kusto database properties.
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-01-21
+## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-01-21 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 

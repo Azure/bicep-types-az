@@ -1,6 +1,6 @@
 # Microsoft.MachineLearningCompute @ 2017-08-01-preview
 
-## Resource Microsoft.MachineLearningCompute/operationalizationClusters@2017-08-01-preview
+## Resource Microsoft.MachineLearningCompute/operationalizationClusters@2017-08-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

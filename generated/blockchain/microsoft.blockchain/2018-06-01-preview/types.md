@@ -1,6 +1,6 @@
 # Microsoft.Blockchain @ 2018-06-01-preview
 
-## Resource Microsoft.Blockchain/blockchainMembers@2018-06-01-preview
+## Resource Microsoft.Blockchain/blockchainMembers@2018-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describes the resource.
 * **type**: 'Microsoft.Blockchain/blockchainMembers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview
+## Resource Microsoft.Blockchain/blockchainMembers/transactionNodes@2018-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

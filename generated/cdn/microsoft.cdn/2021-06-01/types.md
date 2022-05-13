@@ -1,6 +1,6 @@
 # Microsoft.Cdn @ 2021-06-01
 
-## Resource Microsoft.Cdn/cdnWebApplicationFirewallPolicies@2021-06-01
+## Resource Microsoft.Cdn/cdnWebApplicationFirewallPolicies@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/cdnWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles@2021-06-01
+## Resource Microsoft.Cdn/profiles@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -52,7 +52,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/afdEndpoints@2021-06-01
+## Resource Microsoft.Cdn/profiles/afdEndpoints@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -64,7 +64,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/afdEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/afdEndpoints/routes@2021-06-01
+## Resource Microsoft.Cdn/profiles/afdEndpoints/routes@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -74,7 +74,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/afdEndpoints/routes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/customDomains@2021-06-01
+## Resource Microsoft.Cdn/profiles/customDomains@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -84,7 +84,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints@2021-06-01
+## Resource Microsoft.Cdn/profiles/endpoints@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -96,7 +96,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2021-06-01
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -106,7 +106,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2021-06-01
+## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -116,7 +116,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/origins@2021-06-01
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -126,7 +126,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/endpoints/origins' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/originGroups@2021-06-01
+## Resource Microsoft.Cdn/profiles/originGroups@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -136,7 +136,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/originGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/originGroups/origins@2021-06-01
+## Resource Microsoft.Cdn/profiles/originGroups/origins@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -156,7 +156,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/ruleSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/ruleSets/rules@2021-06-01
+## Resource Microsoft.Cdn/profiles/ruleSets/rules@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -166,7 +166,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/ruleSets/rules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/secrets@2021-06-01
+## Resource Microsoft.Cdn/profiles/secrets@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -176,7 +176,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
 * **type**: 'Microsoft.Cdn/profiles/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/securityPolicies@2021-06-01
+## Resource Microsoft.Cdn/profiles/securityPolicies@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version

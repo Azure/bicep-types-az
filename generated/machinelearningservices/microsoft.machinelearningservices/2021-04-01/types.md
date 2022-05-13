@@ -1,6 +1,6 @@
 # Microsoft.MachineLearningServices @ 2021-04-01
 
-## Resource Microsoft.MachineLearningServices/workspaces@2021-04-01
+## Resource Microsoft.MachineLearningServices/workspaces@2021-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/computes@2021-04-01
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2021-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -51,7 +51,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/services@2021-04-01
+## Resource Microsoft.MachineLearningServices/workspaces/services@2021-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: computeType
 

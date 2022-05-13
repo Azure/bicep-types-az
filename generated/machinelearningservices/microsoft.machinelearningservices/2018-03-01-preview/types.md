@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2018-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/machines/extensions@2020-08-02
+## Resource Microsoft.HybridCompute/machines/extensions@2020-08-02 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-02' (ReadOnly, DeployTimeConstant): The resource api version

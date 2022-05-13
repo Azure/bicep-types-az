@@ -1,6 +1,6 @@
 # Microsoft.ApiManagement @ 2018-01-01
 
-## Resource Microsoft.ApiManagement/service@2018-01-01
+## Resource Microsoft.ApiManagement/service@2018-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version

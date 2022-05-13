@@ -1,6 +1,6 @@
 # Microsoft.EventHub @ 2014-09-01
 
-## Resource Microsoft.EventHub/namespaces@2014-09-01
+## Resource Microsoft.EventHub/namespaces@2014-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version

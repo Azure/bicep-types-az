@@ -10,7 +10,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.NetApp/locations/quotaLimits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -33,7 +33,7 @@
 * **properties**: [BackupProperties](#backupproperties) (ReadOnly): Backup properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/accountBackups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -59,7 +59,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -72,7 +72,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -82,7 +82,7 @@
 * **properties**: [BackupProperties](#backupproperties) (Required): Backup properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -92,7 +92,7 @@
 * **properties**: [SnapshotProperties](#snapshotproperties): Snapshot properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -115,7 +115,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/volumeGroups@2021-10-01
+## Resource Microsoft.NetApp/netAppAccounts/volumeGroups@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

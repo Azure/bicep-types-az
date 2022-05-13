@@ -1,6 +1,6 @@
 # Microsoft.Relay @ 2016-07-01
 
-## Resource Microsoft.Relay/namespaces@2016-07-01
+## Resource Microsoft.Relay/namespaces@2016-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version

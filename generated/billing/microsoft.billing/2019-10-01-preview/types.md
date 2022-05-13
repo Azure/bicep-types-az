@@ -18,7 +18,7 @@
 * **properties**: [AgreementProperties](#agreementproperties) (ReadOnly): The properties of an agreement.
 * **type**: 'Microsoft.Billing/billingAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview
+## Resource Microsoft.Billing/billingAccounts/billingProfiles@2019-10-01-preview (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **address**: [AddressDetails](#addressdetails) (WriteOnly): Address details.
@@ -77,7 +77,7 @@
 * **properties**: [InvoiceProperties](#invoiceproperties) (ReadOnly): The properties of the invoice.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2019-10-01-preview (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

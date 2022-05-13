@@ -1,6 +1,6 @@
 # Microsoft.HealthcareApis @ 2020-03-30
 
-## Resource Microsoft.HealthcareApis/services@2020-03-30
+## Resource Microsoft.HealthcareApis/services@2020-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ServicesResourceTags](#servicesresourcetags): The resource tags.
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2020-03-30
+## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2020-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version

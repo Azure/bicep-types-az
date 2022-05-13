@@ -1,6 +1,6 @@
 # Microsoft.AppPlatform @ 2020-07-01
 
-## Resource Microsoft.AppPlatform/Spring@2020-07-01
+## Resource Microsoft.AppPlatform/Spring@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.AppPlatform/Spring' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/apps@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/apps@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **properties**: [AppResourceProperties](#appresourceproperties): App resource properties payload
 * **type**: 'Microsoft.AppPlatform/Spring/apps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/apps/bindings@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/apps/bindings@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **properties**: [BindingResourceProperties](#bindingresourceproperties): Binding resource properties payload
 * **type**: 'Microsoft.AppPlatform/Spring/apps/bindings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/apps/deployments@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/apps/deployments@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -42,7 +42,7 @@
 * **sku**: [Sku](#sku): Sku of Azure Spring Cloud
 * **type**: 'Microsoft.AppPlatform/Spring/apps/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/apps/domains@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/apps/domains@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -51,7 +51,7 @@
 * **properties**: [CustomDomainProperties](#customdomainproperties): Custom domain of app resource payload.
 * **type**: 'Microsoft.AppPlatform/Spring/apps/domains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/certificates@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/certificates@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -60,7 +60,7 @@
 * **properties**: [CertificateProperties](#certificateproperties): Certificate resource payload.
 * **type**: 'Microsoft.AppPlatform/Spring/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/configServers@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/configServers@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -69,7 +69,7 @@
 * **properties**: [ConfigServerProperties](#configserverproperties): Config server git properties payload
 * **type**: 'Microsoft.AppPlatform/Spring/configServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppPlatform/Spring/monitoringSettings@2020-07-01
+## Resource Microsoft.AppPlatform/Spring/monitoringSettings@2020-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01' (ReadOnly, DeployTimeConstant): The resource api version

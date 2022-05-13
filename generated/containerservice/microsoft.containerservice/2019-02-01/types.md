@@ -1,6 +1,6 @@
 # Microsoft.ContainerService @ 2019-02-01
 
-## Resource Microsoft.ContainerService/managedClusters@2019-02-01
+## Resource Microsoft.ContainerService/managedClusters@2019-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerService/managedClusters/agentPools@2019-02-01
+## Resource Microsoft.ContainerService/managedClusters/agentPools@2019-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-02-01' (ReadOnly, DeployTimeConstant): The resource api version

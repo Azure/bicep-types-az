@@ -1,6 +1,6 @@
 # Microsoft.Cache @ 2021-06-01
 
-## Resource Microsoft.Cache/redis@2021-06-01
+## Resource Microsoft.Cache/redis@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): Specifies a range of IP addresses permitted to connect to the cache
 * **type**: 'Microsoft.Cache/redis/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cache/redis/linkedServers@2021-06-01
+## Resource Microsoft.Cache/redis/linkedServers@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -41,7 +41,7 @@
 * **properties**: [ScheduleEntries](#scheduleentries) (Required): List of patch schedules for a Redis cache.
 * **type**: 'Microsoft.Cache/redis/patchSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cache/redis/privateEndpointConnections@2021-06-01
+## Resource Microsoft.Cache/redis/privateEndpointConnections@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version

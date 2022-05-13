@@ -1,6 +1,6 @@
 # Microsoft.KeyVault @ 2021-06-01-preview
 
-## Resource Microsoft.KeyVault/managedHSMs@2021-06-01-preview
+## Resource Microsoft.KeyVault/managedHSMs@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **tags**: [ManagedHsmResourceTags](#managedhsmresourcetags): Resource tags
 * **type**: 'Microsoft.KeyVault/managedHSMs/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KeyVault/vaults@2021-06-01-preview
+## Resource Microsoft.KeyVault/vaults@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.RecoveryServices @ 2022-01-31-preview
 
-## Resource Microsoft.RecoveryServices/vaults@2022-01-31-preview
+## Resource Microsoft.RecoveryServices/vaults@2022-01-31-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-31-preview' (ReadOnly, DeployTimeConstant): The resource api version

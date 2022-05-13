@@ -64,7 +64,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ListOperationsResponse' with 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/storageimportexport/resource-manager/Microsoft.ImportExport/preview/2021-01-01/storageimportexport.json:1271:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.importexport-2016-11-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -125,7 +125,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ListOperationsResponse' with 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/storageimportexport/resource-manager/Microsoft.ImportExport/stable/2016-11-01/storageimportexport.json:1281:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.importexport-2020-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -187,4 +187,4 @@ warning | PreCheck/SchemaMissingType | The schema 'ListOperationsResponse' with 
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 4ms
-info    | Autorest completed in 8.05s. 6 files generated.
+info    | Autorest completed in 7.96s. 6 files generated.

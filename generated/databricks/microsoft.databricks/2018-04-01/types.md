@@ -1,6 +1,6 @@
 # Microsoft.Databricks @ 2018-04-01
 
-## Resource Microsoft.Databricks/workspaces@2018-04-01
+## Resource Microsoft.Databricks/workspaces@2018-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2018-04-01
+## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2018-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-01' (ReadOnly, DeployTimeConstant): The resource api version

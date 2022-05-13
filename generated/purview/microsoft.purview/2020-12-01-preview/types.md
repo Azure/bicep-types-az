@@ -1,6 +1,6 @@
 # Microsoft.Purview @ 2020-12-01-preview
 
-## Resource Microsoft.Purview/accounts@2020-12-01-preview
+## Resource Microsoft.Purview/accounts@2020-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags on the azure resource.
 * **type**: 'Microsoft.Purview/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Purview/accounts/privateEndpointConnections@2020-12-01-preview
+## Resource Microsoft.Purview/accounts/privateEndpointConnections@2020-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

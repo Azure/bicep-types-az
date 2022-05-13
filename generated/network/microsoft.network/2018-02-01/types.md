@@ -20,7 +20,7 @@
 * **properties**: [ApplicationGatewaySslPredefinedPolicyPropertiesFormat](#applicationgatewaysslpredefinedpolicypropertiesformat) (ReadOnly): Properties of ApplicationGatewaySslPredefinedPolicy
 * **type**: 'Microsoft.Network/applicationGatewayAvailableSslOptions/predefinedPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/applicationGateways@2018-02-01
+## Resource Microsoft.Network/applicationGateways@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/applicationGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/applicationSecurityGroups@2018-02-01
+## Resource Microsoft.Network/applicationSecurityGroups@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -44,7 +44,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/applicationSecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/connections@2018-02-01
+## Resource Microsoft.Network/connections@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -56,7 +56,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/ddosProtectionPlans@2018-02-01
+## Resource Microsoft.Network/ddosProtectionPlans@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -68,7 +68,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ddosProtectionPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits@2018-02-01
+## Resource Microsoft.Network/expressRouteCircuits@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -81,7 +81,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCircuits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/authorizations@2018-02-01
+## Resource Microsoft.Network/expressRouteCircuits/authorizations@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -91,7 +91,7 @@
 * **properties**: [AuthorizationPropertiesFormat](#authorizationpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings@2018-02-01
+## Resource Microsoft.Network/expressRouteCircuits/peerings@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -101,7 +101,7 @@
 * **properties**: [ExpressRouteCircuitPeeringPropertiesFormat](#expressroutecircuitpeeringpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCircuits/peerings/connections@2018-02-01
+## Resource Microsoft.Network/expressRouteCircuits/peerings/connections@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -111,7 +111,7 @@
 * **properties**: [ExpressRouteCircuitConnectionPropertiesFormat](#expressroutecircuitconnectionpropertiesformat)
 * **type**: 'Microsoft.Network/expressRouteCircuits/peerings/connections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCrossConnections@2018-02-01
+## Resource Microsoft.Network/expressRouteCrossConnections@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -123,7 +123,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/expressRouteCrossConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2018-02-01
+## Resource Microsoft.Network/expressRouteCrossConnections/peerings@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -133,7 +133,7 @@
 * **properties**: [ExpressRouteCrossConnectionPeeringProperties](#expressroutecrossconnectionpeeringproperties)
 * **type**: 'Microsoft.Network/expressRouteCrossConnections/peerings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/loadBalancers@2018-02-01
+## Resource Microsoft.Network/loadBalancers@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -167,7 +167,7 @@
 * **type**: 'Microsoft.Network/loadBalancers/frontendIPConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): A list of availability zones denoting the IP allocated for the resource needs to come from.
 
-## Resource Microsoft.Network/loadBalancers/inboundNatRules@2018-02-01
+## Resource Microsoft.Network/loadBalancers/inboundNatRules@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -197,7 +197,7 @@
 * **properties**: [ProbePropertiesFormat](#probepropertiesformat) (ReadOnly): Load balancer probe resource.
 * **type**: 'Microsoft.Network/loadBalancers/probes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/localNetworkGateways@2018-02-01
+## Resource Microsoft.Network/localNetworkGateways@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -209,7 +209,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkInterfaces@2018-02-01
+## Resource Microsoft.Network/networkInterfaces@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -231,7 +231,7 @@
 * **properties**: [NetworkInterfaceIPConfigurationPropertiesFormat](#networkinterfaceipconfigurationpropertiesformat) (ReadOnly): Properties of IP configuration.
 * **type**: 'Microsoft.Network/networkInterfaces/ipConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups@2018-02-01
+## Resource Microsoft.Network/networkSecurityGroups@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -253,7 +253,7 @@
 * **properties**: [SecurityRulePropertiesFormat](#securityrulepropertiesformat) (ReadOnly): Security rule resource.
 * **type**: 'Microsoft.Network/networkSecurityGroups/defaultSecurityRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkSecurityGroups/securityRules@2018-02-01
+## Resource Microsoft.Network/networkSecurityGroups/securityRules@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -275,7 +275,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkWatchers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers/connectionMonitors@2018-02-01
+## Resource Microsoft.Network/networkWatchers/connectionMonitors@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -287,7 +287,7 @@
 * **tags**: [ConnectionMonitorTags](#connectionmonitortags): Connection monitor tags.
 * **type**: 'Microsoft.Network/networkWatchers/connectionMonitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkWatchers/packetCaptures@2018-02-01
+## Resource Microsoft.Network/networkWatchers/packetCaptures@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -297,7 +297,7 @@
 * **properties**: [PacketCaptureParameters](#packetcaptureparameters) (Required): Parameters that define the create packet capture operation.
 * **type**: 'Microsoft.Network/networkWatchers/packetCaptures' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/publicIPAddresses@2018-02-01
+## Resource Microsoft.Network/publicIPAddresses@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -311,7 +311,7 @@
 * **type**: 'Microsoft.Network/publicIPAddresses' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting the IP allocated for the resource needs to come from.
 
-## Resource Microsoft.Network/routeFilters@2018-02-01
+## Resource Microsoft.Network/routeFilters@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -323,7 +323,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeFilters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeFilters/routeFilterRules@2018-02-01
+## Resource Microsoft.Network/routeFilters/routeFilterRules@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -334,7 +334,7 @@
 * **properties**: [RouteFilterRulePropertiesFormat](#routefilterrulepropertiesformat): Route Filter Rule Resource
 * **type**: 'Microsoft.Network/routeFilters/routeFilterRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables@2018-02-01
+## Resource Microsoft.Network/routeTables@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -346,7 +346,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/routeTables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/routeTables/routes@2018-02-01
+## Resource Microsoft.Network/routeTables/routes@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -356,7 +356,7 @@
 * **properties**: [RoutePropertiesFormat](#routepropertiesformat): Route resource
 * **type**: 'Microsoft.Network/routeTables/routes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworkGateways@2018-02-01
+## Resource Microsoft.Network/virtualNetworkGateways@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -368,7 +368,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks@2018-02-01
+## Resource Microsoft.Network/virtualNetworks@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -380,7 +380,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks/subnets@2018-02-01
+## Resource Microsoft.Network/virtualNetworks/subnets@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -390,7 +390,7 @@
 * **properties**: [SubnetPropertiesFormat](#subnetpropertiesformat): Properties of the subnet.
 * **type**: 'Microsoft.Network/virtualNetworks/subnets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2018-02-01
+## Resource Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2018-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Dynamics365FraudProtection @ 2021-02-01-preview
 
-## Resource Microsoft.Dynamics365FraudProtection/instances@2021-02-01-preview
+## Resource Microsoft.Dynamics365FraudProtection/instances@2021-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

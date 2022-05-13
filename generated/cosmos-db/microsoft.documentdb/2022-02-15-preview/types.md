@@ -1,6 +1,6 @@
 # Microsoft.DocumentDB @ 2022-02-15-preview
 
-## Resource Microsoft.DocumentDB/cassandraClusters@2022-02-15-preview
+## Resource Microsoft.DocumentDB/cassandraClusters@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [BackupResourceProperties](#backupresourceproperties) (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/cassandraClusters/backups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/cassandraClusters/dataCenters@2022-02-15-preview
+## Resource Microsoft.DocumentDB/cassandraClusters/dataCenters@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -30,7 +30,7 @@
 * **properties**: [DataCenterResourceProperties](#datacenterresourceproperties): Properties of a managed Cassandra data center.
 * **type**: 'Microsoft.DocumentDB/cassandraClusters/dataCenters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -44,7 +44,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -56,7 +56,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -68,7 +68,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -80,7 +80,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -92,7 +92,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -104,7 +104,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -125,7 +125,7 @@
 * **properties**: [DataTransferJobProperties](#datatransferjobproperties) (Required): The properties of a DataTransfer Job
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/dataTransferJobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/graphs@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/graphs@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -137,7 +137,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/graphs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -149,7 +149,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -161,7 +161,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -173,7 +173,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -185,7 +185,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -197,7 +197,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -209,7 +209,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -221,7 +221,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -233,7 +233,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -242,7 +242,7 @@
 * **properties**: [MongoRoleDefinitionResource](#mongoroledefinitionresource): Azure Cosmos DB Mongo Role Definition resource object.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -251,7 +251,7 @@
 * **properties**: [MongoUserDefinitionResource](#mongouserdefinitionresource): Azure Cosmos DB Mongo User Definition resource object.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -260,7 +260,7 @@
 * **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties) (ReadOnly): Properties of a notebook workspace resource.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -278,7 +278,7 @@
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/services@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/services@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -287,7 +287,7 @@
 * **properties**: [ServiceResourceCreateUpdateProperties](#serviceresourcecreateupdateproperties): Properties in ServiceResourceCreateUpdateParameters.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/services' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -299,7 +299,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -308,7 +308,7 @@
 * **properties**: [ClientEncryptionKeyCreateUpdateProperties](#clientencryptionkeycreateupdateproperties) (Required): Properties to create and update ClientEncryptionKey.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -320,7 +320,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -332,7 +332,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -344,7 +344,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -356,7 +356,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -368,7 +368,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -380,7 +380,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -389,7 +389,7 @@
 * **properties**: [SqlRoleAssignmentResource](#sqlroleassignmentresource): Azure Cosmos DB SQL Role Assignment resource object.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -398,7 +398,7 @@
 * **properties**: [SqlRoleDefinitionResource](#sqlroledefinitionresource): Azure Cosmos DB SQL Role Definition resource object.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/tables@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/tables@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -410,7 +410,7 @@
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/tables' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2022-02-15-preview
+## Resource Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2022-02-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

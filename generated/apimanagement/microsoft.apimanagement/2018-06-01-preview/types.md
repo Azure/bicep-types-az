@@ -1,6 +1,6 @@
 # Microsoft.ApiManagement @ 2018-06-01-preview
 
-## Resource Microsoft.ApiManagement/service@2018-06-01-preview
+## Resource Microsoft.ApiManagement/service@2018-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **properties**: [ApiVersionSetContractProperties](#apiversionsetcontractproperties): Properties of an API Version Set.
 * **type**: 'Microsoft.ApiManagement/service/api-version-sets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis@2018-06-01-preview
+## Resource Microsoft.ApiManagement/service/apis@2018-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.ServiceLinker @ 2022-01-01-preview
 
-## Resource Microsoft.ServiceLinker/linkers@2022-01-01-preview
+## Resource Microsoft.ServiceLinker/linkers@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

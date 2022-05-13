@@ -1,6 +1,6 @@
 # Microsoft.DBforMySQL @ 2017-12-01
 
-## Resource Microsoft.DBforMySQL/servers@2017-12-01
+## Resource Microsoft.DBforMySQL/servers@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ServerForCreateTags](#serverforcreatetags): Application-specific metadata in the form of key-value pairs.
 * **type**: 'Microsoft.DBforMySQL/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/servers/administrators@2017-12-01
+## Resource Microsoft.DBforMySQL/servers/administrators@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [ServerAdministratorProperties](#serveradministratorproperties): The properties of an server Administrator.
 * **type**: 'Microsoft.DBforMySQL/servers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/servers/configurations@2017-12-01
+## Resource Microsoft.DBforMySQL/servers/configurations@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -31,7 +31,7 @@
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
 * **type**: 'Microsoft.DBforMySQL/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/servers/databases@2017-12-01
+## Resource Microsoft.DBforMySQL/servers/databases@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,7 +40,7 @@
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
 * **type**: 'Microsoft.DBforMySQL/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/servers/firewallRules@2017-12-01
+## Resource Microsoft.DBforMySQL/servers/firewallRules@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
 * **type**: 'Microsoft.DBforMySQL/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01
+## Resource Microsoft.DBforMySQL/servers/securityAlertPolicies@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.DBforMySQL/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/servers/virtualNetworkRules@2017-12-01
+## Resource Microsoft.DBforMySQL/servers/virtualNetworkRules@2017-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version

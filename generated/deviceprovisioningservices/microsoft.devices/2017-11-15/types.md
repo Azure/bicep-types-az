@@ -1,6 +1,6 @@
 # Microsoft.Devices @ 2017-11-15
 
-## Resource Microsoft.Devices/provisioningServices@2017-11-15
+## Resource Microsoft.Devices/provisioningServices@2017-11-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version

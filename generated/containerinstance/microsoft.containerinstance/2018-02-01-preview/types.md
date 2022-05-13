@@ -1,6 +1,6 @@
 # Microsoft.ContainerInstance @ 2018-02-01-preview
 
-## Resource Microsoft.ContainerInstance/containerGroups@2018-02-01-preview
+## Resource Microsoft.ContainerInstance/containerGroups@2018-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

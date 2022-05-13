@@ -1,6 +1,6 @@
 # Microsoft.Subscription @ 2021-10-01
 
-## Resource Microsoft.Subscription/aliases@2021-10-01
+## Resource Microsoft.Subscription/aliases@2021-10-01 (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

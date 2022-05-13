@@ -1,6 +1,6 @@
 # Microsoft.HybridNetwork @ 2020-01-01-preview
 
-## Resource Microsoft.HybridNetwork/devices@2020-01-01-preview
+## Resource Microsoft.HybridNetwork/devices@2020-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/devices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2020-01-01-preview
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2020-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **properties**: [RoleInstanceProperties](#roleinstanceproperties) (ReadOnly): The role instance properties of the network function.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview
+## Resource Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -41,7 +41,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/vendors@2020-01-01-preview
+## Resource Microsoft.HybridNetwork/vendors@2020-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -50,7 +50,7 @@
 * **properties**: [VendorPropertiesFormat](#vendorpropertiesformat): Vendor properties.
 * **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/vendors/vendorSkus@2020-01-01-preview
+## Resource Microsoft.HybridNetwork/vendors/vendorSkus@2020-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -59,7 +59,7 @@
 * **properties**: [VendorSkuPropertiesFormat](#vendorskupropertiesformat): Sku properties
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2020-01-01-preview
+## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2020-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

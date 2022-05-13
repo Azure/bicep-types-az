@@ -1,6 +1,6 @@
 # Microsoft.Network @ 2020-01-01
 
-## Resource Microsoft.Network/frontDoors@2020-01-01
+## Resource Microsoft.Network/frontDoors@2020-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **properties**: [FrontendEndpointProperties](#frontendendpointproperties) (ReadOnly): The JSON object that contains the properties required to create a frontend endpoint.
 * **type**: 'Microsoft.Network/frontDoors/frontendEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/frontDoors/rulesEngines@2020-01-01
+## Resource Microsoft.Network/frontDoors/rulesEngines@2020-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Cdn @ 2020-04-15
 
-## Resource Microsoft.Cdn/CdnWebApplicationFirewallPolicies@2020-04-15
+## Resource Microsoft.Cdn/CdnWebApplicationFirewallPolicies@2020-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/CdnWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles@2020-04-15
+## Resource Microsoft.Cdn/profiles@2020-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints@2020-04-15
+## Resource Microsoft.Cdn/profiles/endpoints@2020-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -36,7 +36,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2020-04-15
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2020-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -45,7 +45,7 @@
 * **properties**: [CustomDomainPropertiesParameters](#customdomainpropertiesparameters): The JSON object that contains the properties of the custom domain to create.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/customDomains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2020-04-15
+## Resource Microsoft.Cdn/profiles/endpoints/originGroups@2020-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -54,7 +54,7 @@
 * **properties**: [OriginGroupProperties](#origingroupproperties): The JSON object that contains the properties of the origin group.
 * **type**: 'Microsoft.Cdn/profiles/endpoints/originGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/origins@2020-04-15
+## Resource Microsoft.Cdn/profiles/endpoints/origins@2020-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-15' (ReadOnly, DeployTimeConstant): The resource api version

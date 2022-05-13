@@ -1,6 +1,6 @@
 # Microsoft.Relay @ 2018-01-01-preview
 
-## Resource Microsoft.Relay/namespaces@2018-01-01-preview
+## Resource Microsoft.Relay/namespaces@2018-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [NetworkRuleSetProperties](#networkrulesetproperties): NetworkRuleSet properties
 * **type**: 'Microsoft.Relay/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Relay/namespaces/privateEndpointConnections@2018-01-01-preview
+## Resource Microsoft.Relay/namespaces/privateEndpointConnections@2018-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

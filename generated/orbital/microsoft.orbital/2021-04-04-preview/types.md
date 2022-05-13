@@ -1,6 +1,6 @@
 # Microsoft.Orbital @ 2021-04-04-preview
 
-## Resource Microsoft.Orbital/contactProfiles@2021-04-04-preview
+## Resource Microsoft.Orbital/contactProfiles@2021-04-04-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Orbital/contactProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Orbital/spacecrafts@2021-04-04-preview
+## Resource Microsoft.Orbital/spacecrafts@2021-04-04-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Orbital/spacecrafts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Orbital/spacecrafts/contacts@2021-04-04-preview
+## Resource Microsoft.Orbital/spacecrafts/contacts@2021-04-04-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-04-preview' (ReadOnly, DeployTimeConstant): The resource api version

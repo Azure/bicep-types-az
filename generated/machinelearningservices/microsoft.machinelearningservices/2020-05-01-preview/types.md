@@ -1,6 +1,6 @@
 # Microsoft.MachineLearningServices @ 2020-05-01-preview
 
-## Resource Microsoft.MachineLearningServices/workspaces@2020-05-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-05-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/computes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/datasets@2020-05-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/datasets@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -44,7 +44,7 @@
 * **timeSeries**: [DatasetCreateRequestTimeSeries](#datasetcreaterequesttimeseries) (WriteOnly)
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/datastores@2020-05-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/datastores@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **accountKey**: string (WriteOnly): Account Key of storage account.
@@ -109,7 +109,7 @@
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/services@2020-05-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/services@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: computeType
 

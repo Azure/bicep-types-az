@@ -18,7 +18,7 @@
 * **properties**: [AgreementProperties](#agreementproperties) (ReadOnly): The properties of the agreement.
 * **type**: 'Microsoft.Billing/billingAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles@2018-11-01-preview
+## Resource Microsoft.Billing/billingAccounts/billingProfiles@2018-11-01-preview (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -90,7 +90,7 @@
 * **properties**: [EnrollmentAccountProperties](#enrollmentaccountproperties) (ReadOnly): The properties of the account.
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/invoiceSections@2018-11-01-preview
+## Resource Microsoft.Billing/billingAccounts/invoiceSections@2018-11-01-preview (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -117,7 +117,7 @@
 * **properties**: [ProductSummaryProperties](#productsummaryproperties) (ReadOnly): The properties of the product summary.
 * **type**: 'Microsoft.Billing/billingAccounts/invoiceSections/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/lineOfCredit@2018-11-01-preview
+## Resource Microsoft.Billing/billingAccounts/lineOfCredit@2018-11-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

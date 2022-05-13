@@ -1,6 +1,6 @@
 # Microsoft.ContainerService @ 2017-01-31
 
-## Resource Microsoft.ContainerService/containerServices@2017-01-31
+## Resource Microsoft.ContainerService/containerServices@2017-01-31 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-31' (ReadOnly, DeployTimeConstant): The resource api version

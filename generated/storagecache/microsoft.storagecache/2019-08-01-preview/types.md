@@ -1,6 +1,6 @@
 # Microsoft.StorageCache @ 2019-08-01-preview
 
-## Resource Microsoft.StorageCache/caches@2019-08-01-preview
+## Resource Microsoft.StorageCache/caches@2019-08-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: any: Any object
 * **type**: 'Microsoft.StorageCache/caches' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageCache/caches/storageTargets@2019-08-01-preview
+## Resource Microsoft.StorageCache/caches/storageTargets@2019-08-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

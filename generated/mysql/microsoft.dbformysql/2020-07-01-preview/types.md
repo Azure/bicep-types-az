@@ -1,6 +1,6 @@
 # Microsoft.DBForMySql @ 2020-07-01-preview
 
-## Resource Microsoft.DBForMySql/flexibleServers@2020-07-01-preview
+## Resource Microsoft.DBForMySql/flexibleServers@2020-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of a configuration.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview
+## Resource Microsoft.DBForMySql/flexibleServers/databases@2020-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -31,7 +31,7 @@
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMySql/flexibleServers/firewallRules@2020-07-01-preview
+## Resource Microsoft.DBForMySql/flexibleServers/firewallRules@2020-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,7 +40,7 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
 * **type**: 'Microsoft.DBForMySql/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForMySql/flexibleServers/keys@2020-07-01-preview
+## Resource Microsoft.DBForMySql/flexibleServers/keys@2020-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

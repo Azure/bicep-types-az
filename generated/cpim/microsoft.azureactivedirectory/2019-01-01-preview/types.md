@@ -1,6 +1,6 @@
 # Microsoft.AzureActiveDirectory @ 2019-01-01-preview
 
-## Resource Microsoft.AzureActiveDirectory/b2cDirectories@2019-01-01-preview
+## Resource Microsoft.AzureActiveDirectory/b2cDirectories@2019-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

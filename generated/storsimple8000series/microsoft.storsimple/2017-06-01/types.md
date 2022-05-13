@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags attached to the resource.
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/accessControlRecords@2017-06-01
+## Resource Microsoft.StorSimple/managers/accessControlRecords@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [AccessControlRecordProperties](#accesscontrolrecordproperties) (Required): The properties of access control record.
 * **type**: 'Microsoft.StorSimple/managers/accessControlRecords' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/bandwidthSettings@2017-06-01
+## Resource Microsoft.StorSimple/managers/bandwidthSettings@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **properties**: [BandwidthRateSettingProperties](#bandwidthratesettingproperties) (Required): The properties of the bandwidth setting.
 * **type**: 'Microsoft.StorSimple/managers/bandwidthSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/alertSettings@2017-06-01
+## Resource Microsoft.StorSimple/managers/devices/alertSettings@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -42,7 +42,7 @@
 * **properties**: [AlertNotificationProperties](#alertnotificationproperties) (Required): The properties of the alert notification settings.
 * **type**: 'Microsoft.StorSimple/managers/devices/alertSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/backupPolicies@2017-06-01
+## Resource Microsoft.StorSimple/managers/devices/backupPolicies@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -52,7 +52,7 @@
 * **properties**: [BackupPolicyProperties](#backuppolicyproperties) (Required): The properties of the backup policy.
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/backupPolicies/schedules@2017-06-01
+## Resource Microsoft.StorSimple/managers/devices/backupPolicies/schedules@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -62,7 +62,7 @@
 * **properties**: [BackupScheduleProperties](#backupscheduleproperties) (Required): The properties of the backup schedule.
 * **type**: 'Microsoft.StorSimple/managers/devices/backupPolicies/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/timeSettings@2017-06-01
+## Resource Microsoft.StorSimple/managers/devices/timeSettings@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -72,7 +72,7 @@
 * **properties**: [TimeSettingsProperties](#timesettingsproperties) (Required): The properties of time settings of a device.
 * **type**: 'Microsoft.StorSimple/managers/devices/timeSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/volumeContainers@2017-06-01
+## Resource Microsoft.StorSimple/managers/devices/volumeContainers@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -82,7 +82,7 @@
 * **properties**: [VolumeContainerProperties](#volumecontainerproperties) (Required): The properties of volume container.
 * **type**: 'Microsoft.StorSimple/managers/devices/volumeContainers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/devices/volumeContainers/volumes@2017-06-01
+## Resource Microsoft.StorSimple/managers/devices/volumeContainers/volumes@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -103,7 +103,7 @@
 * **properties**: [ManagerExtendedInfoProperties](#managerextendedinfoproperties): The properties of the manager extended info.
 * **type**: 'Microsoft.StorSimple/managers/extendedInformation' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2017-06-01
+## Resource Microsoft.StorSimple/managers/storageAccountCredentials@2017-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-01' (ReadOnly, DeployTimeConstant): The resource api version

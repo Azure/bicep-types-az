@@ -1,6 +1,6 @@
 # Microsoft.ContainerRegistry @ 2019-06-01-preview
 
-## Resource Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview
+## Resource Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview
+## Resource Microsoft.ContainerRegistry/registries/taskRuns@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -34,7 +34,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview
+## Resource Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

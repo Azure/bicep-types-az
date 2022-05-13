@@ -1,6 +1,6 @@
 # Microsoft.TestBase @ 2020-12-16-preview
 
-## Resource Microsoft.TestBase/testBaseAccounts@2020-12-16-preview
+## Resource Microsoft.TestBase/testBaseAccounts@2020-12-16-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.TestBase/testBaseAccounts/availableOSs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview
+## Resource Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -53,7 +53,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.TestBase/testBaseAccounts/flightingRings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview
+## Resource Microsoft.TestBase/testBaseAccounts/packages@2020-12-16-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-16-preview' (ReadOnly, DeployTimeConstant): The resource api version

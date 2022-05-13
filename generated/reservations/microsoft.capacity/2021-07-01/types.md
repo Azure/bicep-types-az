@@ -1,6 +1,6 @@
 # Microsoft.Capacity @ 2021-07-01
 
-## Resource Microsoft.Capacity/reservationOrders@2021-07-01
+## Resource Microsoft.Capacity/reservationOrders@2021-07-01 (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version

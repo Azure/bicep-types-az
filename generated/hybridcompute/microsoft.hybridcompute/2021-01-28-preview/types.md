@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/machines/extensions@2021-01-28-preview
+## Resource Microsoft.HybridCompute/machines/extensions@2021-01-28-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-28-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -37,7 +37,7 @@
 * **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
 * **type**: 'Microsoft.HybridCompute/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2021-01-28-preview
+## Resource Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2021-01-28-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-28-preview' (ReadOnly, DeployTimeConstant): The resource api version

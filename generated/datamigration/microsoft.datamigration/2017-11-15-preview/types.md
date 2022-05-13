@@ -1,6 +1,6 @@
 # Microsoft.DataMigration @ 2017-11-15-preview
 
-## Resource Microsoft.DataMigration/services@2017-11-15-preview
+## Resource Microsoft.DataMigration/services@2017-11-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

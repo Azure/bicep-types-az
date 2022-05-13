@@ -1,6 +1,6 @@
 # Microsoft.ConnectedVMwarevSphere @ 2020-10-01-preview
 
-## Resource Microsoft.ConnectedVMwarevSphere/clusters@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/clusters@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ClusterTags](#clustertags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/datastores@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/datastores@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -28,7 +28,7 @@
 * **tags**: [DatastoreTags](#datastoretags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/hosts@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/hosts@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -42,7 +42,7 @@
 * **tags**: [HostTags](#hosttags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/resourcePools@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/resourcePools@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -56,7 +56,7 @@
 * **tags**: [ResourcePoolTags](#resourcepooltags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/resourcePools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/vcenters@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/vcenters@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -81,7 +81,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/vcenters/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -96,7 +96,7 @@
 * **tags**: [VirtualMachineTags](#virtualmachinetags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/extensions@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/extensions@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -108,7 +108,7 @@
 * **tags**: [MachineExtensionTags](#machineextensiontags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/guestAgents@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/virtualMachines/guestAgents@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -128,7 +128,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -142,7 +142,7 @@
 * **tags**: [VirtualMachineTemplateTags](#virtualmachinetemplatetags): Gets or sets the Resource tags.
 * **type**: 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ConnectedVMwarevSphere/virtualNetworks@2020-10-01-preview
+## Resource Microsoft.ConnectedVMwarevSphere/virtualNetworks@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

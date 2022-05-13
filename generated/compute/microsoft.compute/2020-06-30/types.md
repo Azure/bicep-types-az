@@ -1,6 +1,6 @@
 # Microsoft.Compute @ 2020-06-30
 
-## Resource Microsoft.Compute/diskAccesses@2020-06-30
+## Resource Microsoft.Compute/diskAccesses@2020-06-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/diskEncryptionSets@2020-06-30
+## Resource Microsoft.Compute/diskEncryptionSets@2020-06-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/disks@2020-06-30
+## Resource Microsoft.Compute/disks@2020-06-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
 
-## Resource Microsoft.Compute/snapshots@2020-06-30
+## Resource Microsoft.Compute/snapshots@2020-06-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-30' (ReadOnly, DeployTimeConstant): The resource api version

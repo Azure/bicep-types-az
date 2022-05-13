@@ -1,6 +1,6 @@
 # Microsoft.CognitiveServices @ 2021-04-30
 
-## Resource Microsoft.CognitiveServices/accounts@2021-04-30
+## Resource Microsoft.CognitiveServices/accounts@2021-04-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -16,7 +16,7 @@
 * **tags**: [AccountTags](#accounttags): Resource tags.
 * **type**: 'Microsoft.CognitiveServices/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2021-04-30
+## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2021-04-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-30' (ReadOnly, DeployTimeConstant): The resource api version

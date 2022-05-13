@@ -156,7 +156,7 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-02-01-preview
+## Resource Microsoft.RecoveryServices/vaults/privateEndpointConnections@2021-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

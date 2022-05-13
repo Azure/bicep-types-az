@@ -1,6 +1,6 @@
 # Microsoft.Compute @ 2021-10-01
 
-## Resource Microsoft.Compute/galleries@2021-10-01
+## Resource Microsoft.Compute/galleries@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/galleries/applications@2021-10-01
+## Resource Microsoft.Compute/galleries/applications@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/galleries/applications/versions@2021-10-01
+## Resource Microsoft.Compute/galleries/applications/versions@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -33,7 +33,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/galleries/images@2021-10-01
+## Resource Microsoft.Compute/galleries/images@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -44,7 +44,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/galleries/images' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/galleries/images/versions@2021-10-01
+## Resource Microsoft.Compute/galleries/images/versions@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

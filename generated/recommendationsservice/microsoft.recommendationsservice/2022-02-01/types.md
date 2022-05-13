@@ -1,6 +1,6 @@
 # Microsoft.RecommendationsService @ 2022-02-01
 
-## Resource Microsoft.RecommendationsService/accounts@2022-02-01
+## Resource Microsoft.RecommendationsService/accounts@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecommendationsService/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecommendationsService/accounts/modeling@2022-02-01
+## Resource Microsoft.RecommendationsService/accounts/modeling@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.RecommendationsService/accounts/modeling' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecommendationsService/accounts/serviceEndpoints@2022-02-01
+## Resource Microsoft.RecommendationsService/accounts/serviceEndpoints@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.ApiManagement @ 2019-01-01
 
-## Resource Microsoft.ApiManagement/service@2019-01-01
+## Resource Microsoft.ApiManagement/service@2019-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ApimResourceTags](#apimresourcetags): Resource tags.
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis@2019-01-01
+## Resource Microsoft.ApiManagement/service/apis@2019-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version

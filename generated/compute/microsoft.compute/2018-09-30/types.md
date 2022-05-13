@@ -1,6 +1,6 @@
 # Microsoft.Compute @ 2018-09-30
 
-## Resource Microsoft.Compute/disks@2018-09-30
+## Resource Microsoft.Compute/disks@2018-09-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
 
-## Resource Microsoft.Compute/snapshots@2018-09-30
+## Resource Microsoft.Compute/snapshots@2018-09-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-30' (ReadOnly, DeployTimeConstant): The resource api version

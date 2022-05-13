@@ -1,6 +1,6 @@
 # Microsoft.VMwareCloudSimple @ 2019-04-01
 
-## Resource Microsoft.VMwareCloudSimple/dedicatedCloudNodes@2019-04-01
+## Resource Microsoft.VMwareCloudSimple/dedicatedCloudNodes@2019-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **tags**: [Tags](#tags): Tags model
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01
+## Resource Microsoft.VMwareCloudSimple/virtualMachines@2019-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version

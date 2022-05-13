@@ -10,7 +10,7 @@
 * **properties**: [DeletedServiceContractProperties](#deletedservicecontractproperties) (ReadOnly)
 * **type**: 'Microsoft.ApiManagement/locations/deletedservices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service@2021-08-01
+## Resource Microsoft.ApiManagement/service@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **type**: 'Microsoft.ApiManagement/service' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
-## Resource Microsoft.ApiManagement/service/apis@2021-08-01
+## Resource Microsoft.ApiManagement/service/apis@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -118,7 +118,7 @@
 * **properties**: [ApiReleaseContractProperties](#apireleasecontractproperties): API Release details
 * **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/apis/schemas@2021-08-01
+## Resource Microsoft.ApiManagement/service/apis/schemas@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -298,7 +298,7 @@
 * **properties**: [LoggerContractProperties](#loggercontractproperties): The Logger entity in API Management represents an event sink that you can use to log API Management events. Currently the Logger entity supports logging API Management events to Azure Event Hubs.
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/namedValues@2021-08-01
+## Resource Microsoft.ApiManagement/service/namedValues@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -352,7 +352,7 @@
 * **properties**: [PolicyContractProperties](#policycontractproperties): Policy contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/portalRevisions@2021-08-01
+## Resource Microsoft.ApiManagement/service/portalRevisions@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -391,7 +391,7 @@
 * **type**: 'Microsoft.ApiManagement/service/portalsettings' (ReadOnly, DeployTimeConstant): The resource type
 
 
-## Resource Microsoft.ApiManagement/service/privateEndpointConnections@2021-08-01
+## Resource Microsoft.ApiManagement/service/privateEndpointConnections@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -454,7 +454,7 @@
 * **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag contract Properties.
 * **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/schemas@2021-08-01
+## Resource Microsoft.ApiManagement/service/schemas@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version

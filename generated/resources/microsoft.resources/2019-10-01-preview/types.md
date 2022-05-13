@@ -1,6 +1,6 @@
 # Microsoft.Resources @ 2019-10-01-preview
 
-## Resource Microsoft.Resources/deploymentScripts@2019-10-01-preview
+## Resource Microsoft.Resources/deploymentScripts@2019-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 

@@ -16,7 +16,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/{resourcenamespace}/{resourcetype}/{resourcename}/providers/microsoft.workloadmonitor/notificationsettings': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.workloadmonitor-2020-01-13-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -31,5 +31,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
-info    | Autorest completed in 7.04s. 4 files generated.
+info    | autorest.bicep took 3ms
+info    | Autorest completed in 8.75s. 4 files generated.

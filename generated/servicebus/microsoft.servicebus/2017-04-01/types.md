@@ -1,6 +1,6 @@
 # Microsoft.ServiceBus @ 2017-04-01
 
-## Resource Microsoft.ServiceBus/namespaces@2017-04-01
+## Resource Microsoft.ServiceBus/namespaces@2017-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -39,7 +39,7 @@
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties) (ReadOnly): AuthorizationRule properties.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01
+## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2017-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -30,7 +30,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/mediaServices/assets/assetFilters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaServices/assets/tracks@2021-11-01
+## Resource Microsoft.Media/mediaServices/assets/tracks@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaservices/liveEvents@2021-11-01
+## Resource Microsoft.Media/mediaservices/liveEvents@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -70,7 +70,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2021-11-01
+## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -80,7 +80,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaservices/streamingEndpoints@2021-11-01
+## Resource Microsoft.Media/mediaservices/streamingEndpoints@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version

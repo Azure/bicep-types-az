@@ -1,6 +1,6 @@
 # Microsoft.ContainerRegistry @ 2019-12-01-preview
 
-## Resource Microsoft.ContainerRegistry/registries@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/exportPipelines@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries/exportPipelines@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/exportPipelines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/importPipelines@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries/importPipelines@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/importPipelines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/pipelineRuns@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries/pipelineRuns@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -48,7 +48,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/pipelineRuns' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/privateEndpointConnections@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries/privateEndpointConnections@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/replications@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries/replications@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -70,7 +70,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/webhooks@2019-12-01-preview
+## Resource Microsoft.ContainerRegistry/registries/webhooks@2019-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

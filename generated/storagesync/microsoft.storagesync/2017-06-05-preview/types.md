@@ -11,7 +11,7 @@
 * **tags**: any: Any object
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2017-06-05-preview
+## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2017-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **properties**: [SyncGroupProperties](#syncgroupproperties): SyncGroup Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2017-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **properties**: [CloudEndpointProperties](#cloudendpointproperties): CloudEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2017-06-05-preview
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2017-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version

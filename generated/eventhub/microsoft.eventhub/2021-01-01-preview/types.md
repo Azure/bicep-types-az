@@ -1,6 +1,6 @@
 # Microsoft.EventHub @ 2021-01-01-preview
 
-## Resource Microsoft.EventHub/namespaces@2021-01-01-preview
+## Resource Microsoft.EventHub/namespaces@2021-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

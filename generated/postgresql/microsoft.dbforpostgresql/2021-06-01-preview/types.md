@@ -1,6 +1,6 @@
 # Microsoft.DBforPostgreSQL @ 2021-06-01-preview
 
-## Resource Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01-preview
+## Resource Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: any (ReadOnly): Any object
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/flexibleServers/configurations@2021-06-01-preview
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/configurations@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2021-06-01-preview
+## Resource Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

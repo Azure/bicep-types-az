@@ -1,6 +1,6 @@
 # Microsoft.Solutions @ 2020-08-21-preview
 
-## Resource Microsoft.Solutions/applicationDefinitions@2020-08-21-preview
+## Resource Microsoft.Solutions/applicationDefinitions@2020-08-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Solutions/applications@2020-08-21-preview
+## Resource Microsoft.Solutions/applications@2020-08-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-21-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Solutions/jitRequests@2020-08-21-preview
+## Resource Microsoft.Solutions/jitRequests@2020-08-21-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-21-preview' (ReadOnly, DeployTimeConstant): The resource api version

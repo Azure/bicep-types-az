@@ -181,5 +181,5 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
 warning | Modeler/MissingType | The schema 'AzureInternalMonitoringPipelineSinkDescription-fluentdConfigUrl' has no type or format information whatsoever. Location:
    file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/servicefabricmesh/resource-manager/Microsoft.ServiceFabricMesh/preview/2018-07-01-preview/servicefabricmesh.json#/components/schemas/AzureInternalMonitoringPipelineSinkDescription-fluentdConfigUrl
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 7.56s. 4 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 7.39s. 4 files generated.

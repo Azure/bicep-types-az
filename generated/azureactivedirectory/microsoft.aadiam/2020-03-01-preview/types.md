@@ -1,6 +1,6 @@
 # microsoft.aadiam @ 2020-03-01-preview
 
-## Resource microsoft.aadiam/privateLinkForAzureAd@2020-03-01-preview
+## Resource microsoft.aadiam/privateLinkForAzureAd@2020-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **allTenants**: bool: Flag indicating whether all tenants are allowed

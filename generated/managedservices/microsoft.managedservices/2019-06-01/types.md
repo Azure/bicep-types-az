@@ -1,6 +1,6 @@
 # Microsoft.ManagedServices @ 2019-06-01
 
-## Resource Microsoft.ManagedServices/registrationAssignments@2019-06-01
+## Resource Microsoft.ManagedServices/registrationAssignments@2019-06-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -9,7 +9,7 @@
 * **properties**: [RegistrationAssignmentProperties](#registrationassignmentproperties): Properties of a registration assignment.
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedServices/registrationDefinitions@2019-06-01
+## Resource Microsoft.ManagedServices/registrationDefinitions@2019-06-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version

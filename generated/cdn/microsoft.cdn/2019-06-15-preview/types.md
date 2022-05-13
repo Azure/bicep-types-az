@@ -1,6 +1,6 @@
 # Microsoft.Cdn @ 2019-06-15-preview
 
-## Resource Microsoft.Cdn/CdnWebApplicationFirewallPolicies@2019-06-15-preview
+## Resource Microsoft.Cdn/CdnWebApplicationFirewallPolicies@2019-06-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/CdnWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles@2019-06-15-preview
+## Resource Microsoft.Cdn/profiles@2019-06-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints@2019-06-15-preview
+## Resource Microsoft.Cdn/profiles/endpoints@2019-06-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -36,7 +36,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-06-15-preview
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-06-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

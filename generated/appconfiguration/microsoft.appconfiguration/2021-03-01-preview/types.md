@@ -1,6 +1,6 @@
 # Microsoft.AppConfiguration @ 2021-03-01-preview
 
-## Resource Microsoft.AppConfiguration/configurationStores@2021-03-01-preview
+## Resource Microsoft.AppConfiguration/configurationStores@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **properties**: [KeyValueProperties](#keyvalueproperties): All key-value properties.
 * **type**: 'Microsoft.AppConfiguration/configurationStores/keyValues' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2021-03-01-preview
+## Resource Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

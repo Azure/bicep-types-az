@@ -13,5 +13,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse-error' with an 
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/marketplacenotifications/resource-manager/Microsoft.MarketplaceNotifications/stable/2021-03-03/MarketplaceNotifications.json:313:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 8ms
-info    | Autorest completed in 4.79s. 2 files generated.
+info    | autorest.bicep took 17ms
+info    | Autorest completed in 6.29s. 2 files generated.

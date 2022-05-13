@@ -17,7 +17,7 @@ warning | PreCheck/SchemaMissingType | The schema 'customLocationOperationValueD
 warning | PreCheck/SchemaMissingType | The schema 'customLocationOperationsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/preview/2021-03-15-preview/customlocations.json:593:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.extendedlocation-2021-08-15"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -38,4 +38,4 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 3ms
-info    | Autorest completed in 8.02s. 6 files generated.
+info    | Autorest completed in 5.76s. 6 files generated.

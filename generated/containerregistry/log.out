@@ -19,7 +19,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an un
 warning | PreCheck/SchemaMissingType | The schema 'InnerErrorDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-12-01-preview/containerregistry.json:6000:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 24ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2019-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -35,7 +35,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefi
 warning | PreCheck/SchemaMissingType | The schema 'InnerErrorDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2019-06-01-preview/containerregistry_build.json:3128:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2021-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -51,7 +51,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an un
 warning | PreCheck/SchemaMissingType | The schema 'InnerErrorDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json:3269:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 9ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2021-08-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -67,7 +67,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an un
 warning | PreCheck/SchemaMissingType | The schema 'InnerErrorDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-08-01-preview/containerregistry.json:5791:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -83,7 +83,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an un
 warning | PreCheck/SchemaMissingType | The schema 'InnerErrorDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2021-06-01-preview/containerregistry.json:5775:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 13ms
+info    | autorest.bicep took 17ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2020-11-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -99,7 +99,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseBody' with an un
 warning | PreCheck/SchemaMissingType | The schema 'InnerErrorDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2020-11-01-preview/containerregistry.json:5748:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2019-12-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -117,7 +117,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2019-05-01-preview/containerregistry_scopemap.json:535:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2019-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -143,7 +143,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2017-10-01/containerregistry.json:2427:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2018-09-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -153,7 +153,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2018-09-01/containerregistry_build.json:1837:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2018-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -163,7 +163,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2018-02-01-preview/containerregistry_build.json:1765:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2017-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -251,7 +251,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Source' with an undefined typ
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2017-06-01-preview/containerregistry.json:1928:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2017-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -295,7 +295,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RegenerateCredentialParameter
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2017-03-01/containerregistry.json:750:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.containerregistry-2016-06-27-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -322,4 +322,4 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2016-06-27-preview/containerregistry.json:474:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
-info    | Autorest completed in 41.53s. 32 files generated.
+info    | Autorest completed in 49.5s. 32 files generated.

@@ -1,6 +1,6 @@
 # Microsoft.Network @ 2020-06-01
 
-## Resource Microsoft.Network/privateDnsZones@2020-06-01
+## Resource Microsoft.Network/privateDnsZones@2020-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -92,7 +92,7 @@
 * **properties**: [RecordSetProperties](#recordsetproperties): Represents the properties of the records in the record set.
 * **type**: 'Microsoft.Network/privateDnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01
+## Resource Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-01' (ReadOnly, DeployTimeConstant): The resource api version

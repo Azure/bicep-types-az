@@ -10,7 +10,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': Found multiple definitions for the same type
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 19ms
 info    | Processing batch task - {"tag":"microsoft.maintenance-2021-05-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -24,14 +24,14 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': Found multiple definitions for the same type
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.maintenance-2020-07-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': Found multiple definitions for the same type
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.maintenance-2020-04-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -46,4 +46,4 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping resource type microsoft.maintenance/applyupdates under path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{providerName}/{resourceParentType}/{resourceParentName}/{resourceType}/{resourceName}/providers/Microsoft.Maintenance/applyUpdates/default': Found multiple definitions for the same type
 info    | autorest.bicep took 2ms
-info    | Autorest completed in 14.76s. 12 files generated.
+info    | Autorest completed in 17.8s. 12 files generated.

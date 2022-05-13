@@ -1,6 +1,6 @@
 # Microsoft.ContainerRegistry @ 2019-05-01
 
-## Resource Microsoft.ContainerRegistry/registries@2019-05-01
+## Resource Microsoft.ContainerRegistry/registries@2019-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/replications@2019-05-01
+## Resource Microsoft.ContainerRegistry/registries/replications@2019-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/replications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/webhooks@2019-05-01
+## Resource Microsoft.ContainerRegistry/registries/webhooks@2019-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version

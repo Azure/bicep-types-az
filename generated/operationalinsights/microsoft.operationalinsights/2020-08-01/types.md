@@ -1,6 +1,6 @@
 # Microsoft.OperationalInsights @ 2020-08-01
 
-## Resource Microsoft.OperationalInsights/clusters@2020-08-01
+## Resource Microsoft.OperationalInsights/clusters@2020-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces@2020-08-01
+## Resource Microsoft.OperationalInsights/workspaces@2020-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **tags**: [DataSourceTags](#datasourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataSources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2020-08-01
+## Resource Microsoft.OperationalInsights/workspaces/linkedServices@2020-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -15,7 +15,7 @@ warning | PreCheck/SchemaMissingType | The schema 'MarketplaceProductLogUpdate' 
 warning | PreCheck/SchemaMissingType | The schema 'ProductLog' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azurestack/resource-manager/Microsoft.AzureStack/stable/2016-01-01/Product.json:728:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 10ms
 info    | Processing batch task - {"tag":"microsoft.azurestack-2017-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -57,5 +57,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ProductLog' with an undefined
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/azurestack/resource-manager/Microsoft.AzureStack/preview/2020-06-01-preview/Product.json:731:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/providers/microsoft.azurestack/cloudmanifestfiles': Found mismatch between type segments (1) and name segments (0)
-info    | autorest.bicep took 6ms
-info    | Autorest completed in 7.47s. 6 files generated.
+info    | autorest.bicep took 5ms
+info    | Autorest completed in 7.89s. 6 files generated.

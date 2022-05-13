@@ -1,6 +1,6 @@
 # Microsoft.PowerBIDedicated @ 2017-10-01
 
-## Resource Microsoft.PowerBIDedicated/capacities@2017-10-01
+## Resource Microsoft.PowerBIDedicated/capacities@2017-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant): The resource api version

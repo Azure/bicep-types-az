@@ -1,6 +1,6 @@
 # Microsoft.Resources @ 2016-09-01
 
-## Resource Microsoft.Resources/deployments@2016-09-01
+## Resource Microsoft.Resources/deployments@2016-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-09-01' (ReadOnly, DeployTimeConstant): The resource api version

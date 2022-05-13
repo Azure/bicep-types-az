@@ -1,6 +1,6 @@
 # Microsoft.Capacity @ 2020-10-25
 
-## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25
+## Resource Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25 (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-10-25' (ReadOnly, DeployTimeConstant): The resource api version

@@ -24,7 +24,7 @@
 * **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30
+## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
 

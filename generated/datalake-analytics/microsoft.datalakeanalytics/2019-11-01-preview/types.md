@@ -1,6 +1,6 @@
 # Microsoft.DataLakeAnalytics @ 2019-11-01-preview
 
-## Resource Microsoft.DataLakeAnalytics/accounts@2019-11-01-preview
+## Resource Microsoft.DataLakeAnalytics/accounts@2019-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

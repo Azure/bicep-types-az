@@ -1,6 +1,6 @@
 # Microsoft.OperationalInsights @ 2021-12-01-preview
 
-## Resource Microsoft.OperationalInsights/workspaces@2021-12-01-preview
+## Resource Microsoft.OperationalInsights/workspaces@2021-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/tables@2021-12-01-preview
+## Resource Microsoft.OperationalInsights/workspaces/tables@2021-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

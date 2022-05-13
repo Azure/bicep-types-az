@@ -1,6 +1,6 @@
 # Microsoft.DataShare @ 2018-11-01-preview
 
-## Resource Microsoft.DataShare/accounts@2018-11-01-preview
+## Resource Microsoft.DataShare/accounts@2018-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -193,7 +193,7 @@
 * **properties**: [SqlDWTableDataSetMappingProperties](#sqldwtabledatasetmappingproperties) (Required): Properties of the SQL DW table data set mapping.
 
 
-## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2018-11-01-preview
+## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2018-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 

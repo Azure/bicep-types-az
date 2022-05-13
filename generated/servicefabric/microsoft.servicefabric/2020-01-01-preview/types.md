@@ -1,6 +1,6 @@
 # Microsoft.ServiceFabric @ 2020-01-01-preview
 
-## Resource Microsoft.ServiceFabric/managedClusters@2020-01-01-preview
+## Resource Microsoft.ServiceFabric/managedClusters@2020-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview
+## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2020-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

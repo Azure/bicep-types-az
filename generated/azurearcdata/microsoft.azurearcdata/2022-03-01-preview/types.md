@@ -1,6 +1,6 @@
 # Microsoft.AzureArcData @ 2022-03-01-preview
 
-## Resource Microsoft.AzureArcData/dataControllers@2022-03-01-preview
+## Resource Microsoft.AzureArcData/dataControllers@2022-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/dataControllers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureArcData/dataControllers/activeDirectoryConnectors@2022-03-01-preview
+## Resource Microsoft.AzureArcData/dataControllers/activeDirectoryConnectors@2022-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AzureArcData/dataControllers/activeDirectoryConnectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureArcData/postgresInstances@2022-03-01-preview
+## Resource Microsoft.AzureArcData/postgresInstances@2022-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -37,7 +37,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/postgresInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureArcData/sqlManagedInstances@2022-03-01-preview
+## Resource Microsoft.AzureArcData/sqlManagedInstances@2022-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -51,7 +51,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureArcData/sqlManagedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureArcData/sqlServerInstances@2022-03-01-preview
+## Resource Microsoft.AzureArcData/sqlServerInstances@2022-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

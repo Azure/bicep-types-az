@@ -11,7 +11,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Automanage/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview
+## Resource Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview (Async)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2020-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Cache @ 2019-07-01
 
-## Resource Microsoft.Cache/Redis@2019-07-01
+## Resource Microsoft.Cache/Redis@2019-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [RedisFirewallRuleProperties](#redisfirewallruleproperties) (Required): Specifies a range of IP addresses permitted to connect to the cache
 * **type**: 'Microsoft.Cache/Redis/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cache/Redis/linkedServers@2019-07-01
+## Resource Microsoft.Cache/Redis/linkedServers@2019-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-07-01' (ReadOnly, DeployTimeConstant): The resource api version

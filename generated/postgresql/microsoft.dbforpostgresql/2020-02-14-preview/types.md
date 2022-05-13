@@ -1,6 +1,6 @@
 # Microsoft.DBForPostgreSql @ 2020-02-14-preview
 
-## Resource Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview
+## Resource Microsoft.DBForPostgreSql/flexibleServers@2020-02-14-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of a configuration.
 * **type**: 'Microsoft.DBForPostgreSql/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2020-02-14-preview
+## Resource Microsoft.DBForPostgreSql/flexibleServers/firewallRules@2020-02-14-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version

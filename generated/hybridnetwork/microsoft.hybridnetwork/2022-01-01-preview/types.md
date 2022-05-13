@@ -1,6 +1,6 @@
 # Microsoft.HybridNetwork @ 2022-01-01-preview
 
-## Resource Microsoft.HybridNetwork/devices@2022-01-01-preview
+## Resource Microsoft.HybridNetwork/devices@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/devices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2022-01-01-preview
+## Resource Microsoft.HybridNetwork/locations/vendors/networkFunctions@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HybridNetwork/locations/vendors/networkFunctions/roleInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/networkFunctions@2022-01-01-preview
+## Resource Microsoft.HybridNetwork/networkFunctions@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -45,7 +45,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/vendors@2022-01-01-preview
+## Resource Microsoft.HybridNetwork/vendors@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -55,7 +55,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HybridNetwork/vendors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/vendors/vendorSkus@2022-01-01-preview
+## Resource Microsoft.HybridNetwork/vendors/vendorSkus@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HybridNetwork/vendors/vendorSkus' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2022-01-01-preview
+## Resource Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

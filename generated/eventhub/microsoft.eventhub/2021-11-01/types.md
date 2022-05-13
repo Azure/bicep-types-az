@@ -1,6 +1,6 @@
 # Microsoft.EventHub @ 2021-11-01
 
-## Resource Microsoft.EventHub/clusters@2021-11-01
+## Resource Microsoft.EventHub/clusters@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.EventHub/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventHub/namespaces@2021-11-01
+## Resource Microsoft.EventHub/namespaces@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version

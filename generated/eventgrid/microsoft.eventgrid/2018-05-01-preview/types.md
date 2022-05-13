@@ -1,6 +1,6 @@
 # Microsoft.EventGrid @ 2018-05-01-preview
 
-## Resource Microsoft.EventGrid/eventSubscriptions@2018-05-01-preview
+## Resource Microsoft.EventGrid/eventSubscriptions@2018-05-01-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -9,7 +9,7 @@
 * **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics@2018-05-01-preview
+## Resource Microsoft.EventGrid/topics@2018-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.SqlVirtualMachine @ 2021-11-01-preview
 
-## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2021-11-01-preview
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2021-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2021-11-01-preview
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2021-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2021-11-01-preview
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2021-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

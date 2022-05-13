@@ -29,7 +29,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.azurearcdata-2021-08-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -41,7 +41,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.azurearcdata-2021-07-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -50,7 +50,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.azurearcdata-2021-06-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -60,4 +60,4 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 info    | autorest.bicep took 6ms
-info    | Autorest completed in 11.19s. 10 files generated.
+info    | Autorest completed in 12.64s. 10 files generated.

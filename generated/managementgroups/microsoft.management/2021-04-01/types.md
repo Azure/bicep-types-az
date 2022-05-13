@@ -1,6 +1,6 @@
 # Microsoft.Management @ 2021-04-01
 
-## Resource Microsoft.Management/managementGroups@2021-04-01
+## Resource Microsoft.Management/managementGroups@2021-04-01 (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version

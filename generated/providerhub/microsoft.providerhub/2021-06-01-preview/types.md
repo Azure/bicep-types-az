@@ -1,6 +1,6 @@
 # Microsoft.ProviderHub @ 2021-06-01-preview
 
-## Resource Microsoft.ProviderHub/providerRegistrations@2021-06-01-preview
+## Resource Microsoft.ProviderHub/providerRegistrations@2021-06-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/customRollouts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2021-06-01-preview
+## Resource Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2021-06-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **properties**: [OperationsPutContentProperties](#operationsputcontentproperties)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/operations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2021-06-01-preview
+## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2021-06-01-preview (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.DelegatedNetwork @ 2021-03-15
 
-## Resource Microsoft.DelegatedNetwork/controller@2021-03-15
+## Resource Microsoft.DelegatedNetwork/controller@2021-03-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [ControllerResourceTags](#controllerresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DelegatedNetwork/delegatedSubnets@2021-03-15
+## Resource Microsoft.DelegatedNetwork/delegatedSubnets@2021-03-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **tags**: [DelegatedSubnetResourceTags](#delegatedsubnetresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/delegatedSubnets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DelegatedNetwork/orchestrators@2021-03-15
+## Resource Microsoft.DelegatedNetwork/orchestrators@2021-03-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version

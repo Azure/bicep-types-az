@@ -11,7 +11,7 @@
 * **tags**: [PrivateLinkScopesResourceTags](#privatelinkscopesresourcetags): Resource tags
 * **type**: 'microsoft.insights/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/privateLinkScopes/privateEndpointConnections@2019-10-17-preview
+## Resource Microsoft.Insights/privateLinkScopes/privateEndpointConnections@2019-10-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
 * **type**: 'Microsoft.Insights/privateLinkScopes/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Insights/privateLinkScopes/scopedResources@2019-10-17-preview
+## Resource Microsoft.Insights/privateLinkScopes/scopedResources@2019-10-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-17-preview' (ReadOnly, DeployTimeConstant): The resource api version

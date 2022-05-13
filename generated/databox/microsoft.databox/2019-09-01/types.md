@@ -1,6 +1,6 @@
 # Microsoft.DataBox @ 2019-09-01
 
-## Resource Microsoft.DataBox/jobs@2019-09-01
+## Resource Microsoft.DataBox/jobs@2019-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version

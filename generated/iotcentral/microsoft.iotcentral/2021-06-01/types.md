@@ -1,6 +1,6 @@
 # Microsoft.IoTCentral @ 2021-06-01
 
-## Resource Microsoft.IoTCentral/iotApps@2021-06-01
+## Resource Microsoft.IoTCentral/iotApps@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version

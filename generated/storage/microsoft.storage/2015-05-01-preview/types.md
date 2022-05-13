@@ -1,6 +1,6 @@
 # Microsoft.Storage @ 2015-05-01-preview
 
-## Resource Microsoft.Storage/storageAccounts@2015-05-01-preview
+## Resource Microsoft.Storage/storageAccounts@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

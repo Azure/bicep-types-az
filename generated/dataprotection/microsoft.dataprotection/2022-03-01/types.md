@@ -1,6 +1,6 @@
 # Microsoft.DataProtection @ 2022-03-01
 
-## Resource Microsoft.DataProtection/backupVaults@2022-03-01
+## Resource Microsoft.DataProtection/backupVaults@2022-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [DppTrackedResourceTags](#dpptrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataProtection/backupVaults/backupInstances@2022-03-01
+## Resource Microsoft.DataProtection/backupVaults/backupInstances@2022-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version

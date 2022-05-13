@@ -18,7 +18,7 @@
 * **properties**: [RecommendationActionProperties](#recommendationactionproperties) (ReadOnly): The properties of a recommendation action.
 * **type**: 'Microsoft.DBforPostgreSQL/servers/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforPostgreSQL/servers/privateEndpointConnections@2018-06-01
+## Resource Microsoft.DBforPostgreSQL/servers/privateEndpointConnections@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version

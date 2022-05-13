@@ -9,7 +9,7 @@
 * **properties**: [PaymentMethodLinkProperties](#paymentmethodlinkproperties) (ReadOnly): The properties of a payment method link.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2021-10-01
+## Resource Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2021-10-01 (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -21,7 +21,7 @@
 * **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties) (Required): The properties of the create certificate operation.
 * **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/compilationjobs@2019-06-01
+## Resource Microsoft.Automation/automationAccounts/compilationjobs@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -101,7 +101,7 @@
 * **tags**: [ModuleCreateOrUpdateParametersTags](#modulecreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2019-06-01
+## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -144,7 +144,7 @@
 * **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2019-06-01
+## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: name
 

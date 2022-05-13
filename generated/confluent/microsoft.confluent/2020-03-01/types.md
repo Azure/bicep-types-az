@@ -9,7 +9,7 @@
 * **properties**: [ConfluentAgreementProperties](#confluentagreementproperties): Terms properties for Marketplace and Confluent.
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Confluent/organizations@2020-03-01
+## Resource Microsoft.Confluent/organizations@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version

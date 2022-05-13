@@ -20,7 +20,7 @@
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Properties of a private link resource.
 * **type**: 'Microsoft.Synapse/privateLinkHubs/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/administrators@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/administrators@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -41,7 +41,7 @@
 * **properties**: [AadAdminProperties](#aadadminproperties): Workspace active directory administrator properties
 * **type**: 'Microsoft.Synapse/workspaces/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/auditingSettings@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/auditingSettings@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -50,7 +50,7 @@
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/bigDataPools@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/bigDataPools@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -61,7 +61,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/bigDataPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/encryptionProtector@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/encryptionProtector@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -72,7 +72,7 @@
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Synapse/workspaces/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/extendedAuditingSettings@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/extendedAuditingSettings@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -81,7 +81,7 @@
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/firewallRules@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/firewallRules@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -90,7 +90,7 @@
 * **properties**: [IpFirewallRuleProperties](#ipfirewallruleproperties): IP firewall rule properties
 * **type**: 'Microsoft.Synapse/workspaces/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/integrationRuntimes@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -109,7 +109,7 @@
 * **properties**: [KeyProperties](#keyproperties): Key properties
 * **type**: 'Microsoft.Synapse/workspaces/keys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/kustoPools@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/kustoPools@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -123,7 +123,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/kustoPools/databases@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/kustoPools/databases@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -140,7 +140,7 @@
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
-## Resource Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/kustoPools/databases/dataConnections@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -167,7 +167,7 @@
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 
-## Resource Microsoft.Synapse/workspaces/kustoPools/databases/principalAssignments@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/kustoPools/databases/principalAssignments@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -177,7 +177,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Synapse/workspaces/kustoPools/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/kustoPools/principalAssignments@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/kustoPools/principalAssignments@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -197,7 +197,7 @@
 * **properties**: [LibraryInfo](#libraryinfo) (ReadOnly): Library/package information of a Big Data pool powered by Apache Spark
 * **type**: 'Microsoft.Synapse/workspaces/libraries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -206,7 +206,7 @@
 * **properties**: [ManagedIdentitySqlControlSettingsModelProperties](#managedidentitysqlcontrolsettingsmodelproperties): Sql Control Settings for workspace managed identity
 * **type**: 'Microsoft.Synapse/workspaces/managedIdentitySqlControlSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/privateEndpointConnections@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -243,7 +243,7 @@
 * **properties**: [RestorableDroppedSqlPoolProperties](#restorabledroppedsqlpoolproperties) (ReadOnly): The properties of a restorable dropped Sql pool
 * **type**: 'Microsoft.Synapse/workspaces/restorableDroppedSqlPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/securityAlertPolicies@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/securityAlertPolicies@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -252,7 +252,7 @@
 * **properties**: [ServerSecurityAlertPolicyProperties](#serversecurityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Synapse/workspaces/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlAdministrators@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/sqlAdministrators@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -261,7 +261,7 @@
 * **properties**: [AadAdminProperties](#aadadminproperties): Workspace active directory administrator properties
 * **type**: 'Microsoft.Synapse/workspaces/sqlAdministrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/sqlPools@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -474,7 +474,7 @@
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -483,7 +483,7 @@
 * **properties**: [WorkloadGroupProperties](#workloadgroupproperties): Workload group definition. For more information look at sys.workload_management_workload_groups (DMV).
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups/workloadClassifiers@2021-04-01-preview
+## Resource Microsoft.Synapse/workspaces/sqlPools/workloadGroups/workloadClassifiers@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

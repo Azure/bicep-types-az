@@ -20,7 +20,7 @@
 * **properties**: [ManagementConfigurationProperties](#managementconfigurationproperties): ManagementConfiguration properties supported by the OperationsManagement resource provider.
 * **type**: 'Microsoft.OperationsManagement/ManagementConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview
+## Resource Microsoft.OperationsManagement/solutions@2015-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

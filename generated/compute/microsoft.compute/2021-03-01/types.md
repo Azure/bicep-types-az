@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/cloudServices@2021-03-01
+## Resource Microsoft.Compute/cloudServices@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **tags**: [CloudServiceTags](#cloudservicetags): Resource tags.
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/cloudServices/updateDomains@2021-03-01
+## Resource Microsoft.Compute/cloudServices/updateDomains@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -43,7 +43,7 @@
 * **type**: 'Microsoft.Compute/hostGroups' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
 
-## Resource Microsoft.Compute/hostGroups/hosts@2021-03-01
+## Resource Microsoft.Compute/hostGroups/hosts@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -55,7 +55,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/hostGroups/hosts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/images@2021-03-01
+## Resource Microsoft.Compute/images@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -124,7 +124,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/restorePointCollections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/restorePointCollections/restorePoints@2021-03-01
+## Resource Microsoft.Compute/restorePointCollections/restorePoints@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -144,7 +144,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/sshPublicKeys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachines@2021-03-01
+## Resource Microsoft.Compute/virtualMachines@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -160,7 +160,7 @@
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The virtual machine zones.
 
-## Resource Microsoft.Compute/virtualMachines/extensions@2021-03-01
+## Resource Microsoft.Compute/virtualMachines/extensions@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -171,7 +171,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachines/runCommands@2021-03-01
+## Resource Microsoft.Compute/virtualMachines/runCommands@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -182,7 +182,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachines/runCommands' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets@2021-03-01
+## Resource Microsoft.Compute/virtualMachineScaleSets@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -198,7 +198,7 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2021-03-01
+## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -218,7 +218,7 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-03-01
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualmachines@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -234,7 +234,7 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualmachines' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): The virtual machine zones.
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions@2021-03-01
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -243,7 +243,7 @@
 * **properties**: [VirtualMachineExtensionProperties](#virtualmachineextensionproperties): Describes the properties of a Virtual Machine Extension.
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands@2021-03-01
+## Resource Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version

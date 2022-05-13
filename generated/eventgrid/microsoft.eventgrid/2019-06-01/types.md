@@ -1,6 +1,6 @@
 # Microsoft.EventGrid @ 2019-06-01
 
-## Resource Microsoft.EventGrid/domains@2019-06-01
+## Resource Microsoft.EventGrid/domains@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/topics@2019-06-01
+## Resource Microsoft.EventGrid/domains/topics@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **properties**: [DomainTopicProperties](#domaintopicproperties) (ReadOnly): Properties of the Domain Topic.
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/eventSubscriptions@2019-06-01
+## Resource Microsoft.EventGrid/eventSubscriptions@2019-06-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **properties**: [EventSubscriptionProperties](#eventsubscriptionproperties): Properties of the Event Subscription
 * **type**: 'Microsoft.EventGrid/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics@2019-06-01
+## Resource Microsoft.EventGrid/topics@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version

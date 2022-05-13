@@ -1,6 +1,6 @@
 # Microsoft.Devices @ 2020-09-01-preview
 
-## Resource Microsoft.Devices/provisioningServices@2020-09-01-preview
+## Resource Microsoft.Devices/provisioningServices@2020-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2020-09-01-preview
+## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2020-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

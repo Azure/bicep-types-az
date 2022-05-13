@@ -10,7 +10,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2020-02-14"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -140,7 +140,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/preview/2019-05-01-preview/imagebuilder.json:1248:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2018-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -189,7 +189,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/preview/2018-02-01-preview/imagebuilder.json:993:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.virtualmachineimages-2019-02-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -244,5 +244,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ApiError' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/preview/2019-02-01-preview/imagebuilder.json:1087:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
-info    | autorest.bicep took 2ms
-info    | Autorest completed in 10.55s. 10 files generated.
+info    | autorest.bicep took 3ms
+info    | Autorest completed in 8.85s. 10 files generated.

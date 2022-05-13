@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Media/locations/videoAnalyzerOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/videoAnalyzers@2021-11-01-preview
+## Resource Microsoft.Media/videoAnalyzers@2021-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

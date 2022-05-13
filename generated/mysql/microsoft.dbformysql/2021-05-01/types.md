@@ -1,6 +1,6 @@
 # Microsoft.DBforMySQL @ 2021-05-01
 
-## Resource Microsoft.DBforMySQL/flexibleServers@2021-05-01
+## Resource Microsoft.DBforMySQL/flexibleServers@2021-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -34,7 +34,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/flexibleServers/databases@2021-05-01
+## Resource Microsoft.DBforMySQL/flexibleServers/databases@2021-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -44,7 +44,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/flexibleServers/firewallRules@2021-05-01
+## Resource Microsoft.DBforMySQL/flexibleServers/firewallRules@2021-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.DigitalTwins @ 2020-12-01
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances@2020-12-01
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances@2020-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-12-01
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances/endpoints@2020-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): Properties related to Digital Twins Endpoint
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2020-12-01
+## Resource Microsoft.DigitalTwins/digitalTwinsInstances/privateEndpointConnections@2020-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-12-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.HealthBot @ 2020-10-20-preview
 
-## Resource Microsoft.HealthBot/healthBots@2020-10-20-preview
+## Resource Microsoft.HealthBot/healthBots@2020-10-20-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-20-preview' (ReadOnly, DeployTimeConstant): The resource api version

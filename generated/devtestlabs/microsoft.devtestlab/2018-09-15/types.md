@@ -1,6 +1,6 @@
 # Microsoft.DevTestLab @ 2018-09-15
 
-## Resource Microsoft.DevTestLab/labs@2018-09-15
+## Resource Microsoft.DevTestLab/labs@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -55,7 +55,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/costs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/customimages@2018-09-15
+## Resource Microsoft.DevTestLab/labs/customimages@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -66,7 +66,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/customimages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/formulas@2018-09-15
+## Resource Microsoft.DevTestLab/labs/formulas@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -121,7 +121,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/servicerunners' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/users@2018-09-15
+## Resource Microsoft.DevTestLab/labs/users@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -132,7 +132,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/users/disks@2018-09-15
+## Resource Microsoft.DevTestLab/labs/users/disks@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -143,7 +143,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/disks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/users/environments@2018-09-15
+## Resource Microsoft.DevTestLab/labs/users/environments@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -154,7 +154,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/environments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/users/secrets@2018-09-15
+## Resource Microsoft.DevTestLab/labs/users/secrets@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -165,7 +165,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15
+## Resource Microsoft.DevTestLab/labs/users/servicefabrics@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -187,7 +187,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/servicefabrics/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
+## Resource Microsoft.DevTestLab/labs/virtualmachines@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -209,7 +209,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualmachines/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15
+## Resource Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-15' (ReadOnly, DeployTimeConstant): The resource api version

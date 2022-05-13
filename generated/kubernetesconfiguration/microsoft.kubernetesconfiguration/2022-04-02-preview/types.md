@@ -1,6 +1,6 @@
 # Microsoft.KubernetesConfiguration @ 2022-04-02-preview
 
-## Resource Microsoft.KubernetesConfiguration/extensions@2022-04-02-preview
+## Resource Microsoft.KubernetesConfiguration/extensions@2022-04-02-preview (Async)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-04-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.KubernetesConfiguration/privateLinkScopes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KubernetesConfiguration/privateLinkScopes/privateEndpointConnections@2022-04-02-preview
+## Resource Microsoft.KubernetesConfiguration/privateLinkScopes/privateEndpointConnections@2022-04-02-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-02-preview' (ReadOnly, DeployTimeConstant): The resource api version

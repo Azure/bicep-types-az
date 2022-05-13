@@ -1,6 +1,6 @@
 # Microsoft.SignalRService @ 2022-02-01
 
-## Resource Microsoft.SignalRService/signalR@2022-02-01
+## Resource Microsoft.SignalRService/signalR@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -15,7 +15,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/signalR' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SignalRService/signalR/customCertificates@2022-02-01
+## Resource Microsoft.SignalRService/signalR/customCertificates@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/signalR/customCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SignalRService/signalR/customDomains@2022-02-01
+## Resource Microsoft.SignalRService/signalR/customDomains@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -45,7 +45,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2022-02-01
+## Resource Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version

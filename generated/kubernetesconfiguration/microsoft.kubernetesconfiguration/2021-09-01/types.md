@@ -1,6 +1,6 @@
 # Microsoft.KubernetesConfiguration @ 2021-09-01
 
-## Resource Microsoft.KubernetesConfiguration/extensions@2021-09-01
+## Resource Microsoft.KubernetesConfiguration/extensions@2021-09-01 (Async)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Search @ 2020-03-13
 
-## Resource Microsoft.Search/searchServices@2020-03-13
+## Resource Microsoft.Search/searchServices@2020-03-13 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant): The resource api version

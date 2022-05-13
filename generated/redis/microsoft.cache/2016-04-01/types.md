@@ -1,6 +1,6 @@
 # Microsoft.Cache @ 2016-04-01
 
-## Resource Microsoft.Cache/Redis@2016-04-01
+## Resource Microsoft.Cache/Redis@2016-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-04-01' (ReadOnly, DeployTimeConstant): The resource api version

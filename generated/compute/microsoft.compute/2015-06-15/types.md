@@ -33,7 +33,7 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachines@2015-06-15
+## Resource Microsoft.Compute/virtualMachines@2015-06-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachines/extensions@2015-06-15
+## Resource Microsoft.Compute/virtualMachines/extensions@2015-06-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -57,7 +57,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets@2015-06-15
+## Resource Microsoft.Compute/virtualMachineScaleSets@2015-06-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version

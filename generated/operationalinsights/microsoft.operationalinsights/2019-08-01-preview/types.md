@@ -1,6 +1,6 @@
 # Microsoft.OperationalInsights @ 2019-08-01-preview
 
-## Resource Microsoft.OperationalInsights/clusters@2019-08-01-preview
+## Resource Microsoft.OperationalInsights/clusters@2019-08-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview
+## Resource Microsoft.OperationalInsights/workspaces/dataExports@2019-08-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

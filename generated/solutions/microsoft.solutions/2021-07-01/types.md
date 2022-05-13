@@ -1,6 +1,6 @@
 # Microsoft.Solutions @ 2021-07-01
 
-## Resource Microsoft.Solutions/applicationDefinitions@2021-07-01
+## Resource Microsoft.Solutions/applicationDefinitions@2021-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applicationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Solutions/applications@2021-07-01
+## Resource Microsoft.Solutions/applications@2021-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -31,7 +31,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Solutions/jitRequests@2021-07-01
+## Resource Microsoft.Solutions/jitRequests@2021-07-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01' (ReadOnly, DeployTimeConstant): The resource api version

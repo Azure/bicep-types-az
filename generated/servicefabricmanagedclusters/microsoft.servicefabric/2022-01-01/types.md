@@ -1,6 +1,6 @@
 # Microsoft.ServiceFabric @ 2022-01-01
 
-## Resource Microsoft.ServiceFabric/managedClusters@2022-01-01
+## Resource Microsoft.ServiceFabric/managedClusters@2022-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedclusters/applications@2022-01-01
+## Resource Microsoft.ServiceFabric/managedclusters/applications@2022-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedclusters/applications/services@2022-01-01
+## Resource Microsoft.ServiceFabric/managedclusters/applications/services@2022-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -51,7 +51,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2022-01-01
+## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2022-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -63,7 +63,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2022-01-01
+## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2022-01-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01' (ReadOnly, DeployTimeConstant): The resource api version

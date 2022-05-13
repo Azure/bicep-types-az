@@ -1,6 +1,6 @@
 # Microsoft.HanaOnAzure @ 2017-11-03-preview
 
-## Resource Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview
+## Resource Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-03-preview' (ReadOnly, DeployTimeConstant): The resource api version

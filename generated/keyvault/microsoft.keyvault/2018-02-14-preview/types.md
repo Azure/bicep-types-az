@@ -1,6 +1,6 @@
 # Microsoft.KeyVault @ 2018-02-14-preview
 
-## Resource Microsoft.KeyVault/vaults@2018-02-14-preview
+## Resource Microsoft.KeyVault/vaults@2018-02-14-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-14-preview' (ReadOnly, DeployTimeConstant): The resource api version

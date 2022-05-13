@@ -1,6 +1,6 @@
 # Microsoft.Devices @ 2018-12-01-preview
 
-## Resource Microsoft.Devices/IotHubs@2018-12-01-preview
+## Resource Microsoft.Devices/IotHubs@2018-12-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

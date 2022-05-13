@@ -1,6 +1,6 @@
 # Microsoft.AnalysisServices @ 2016-05-16
 
-## Resource Microsoft.AnalysisServices/servers@2016-05-16
+## Resource Microsoft.AnalysisServices/servers@2016-05-16 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-16' (ReadOnly, DeployTimeConstant): The resource api version

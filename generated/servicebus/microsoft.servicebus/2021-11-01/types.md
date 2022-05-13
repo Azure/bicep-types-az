@@ -1,6 +1,6 @@
 # Microsoft.ServiceBus @ 2021-11-01
 
-## Resource Microsoft.ServiceBus/namespaces@2021-11-01
+## Resource Microsoft.ServiceBus/namespaces@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -47,7 +47,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2021-11-01
+## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2021-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.CustomProviders @ 2018-09-01-preview
 
-## Resource Microsoft.CustomProviders/associations@2018-09-01-preview
+## Resource Microsoft.CustomProviders/associations@2018-09-01-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -9,7 +9,7 @@
 * **properties**: [AssociationProperties](#associationproperties): The properties of the association.
 * **type**: 'Microsoft.CustomProviders/associations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CustomProviders/resourceProviders@2018-09-01-preview
+## Resource Microsoft.CustomProviders/resourceProviders@2018-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

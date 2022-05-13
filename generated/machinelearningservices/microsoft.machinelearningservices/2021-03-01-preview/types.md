@@ -1,6 +1,6 @@
 # Microsoft.MachineLearningServices @ 2021-03-01-preview
 
-## Resource Microsoft.MachineLearningServices/workspaces@2021-03-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -62,7 +62,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -146,7 +146,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/labelingJobs@2021-03-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/labelingJobs@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -176,7 +176,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2021-03-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -190,7 +190,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/onlineEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2021-03-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2021-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

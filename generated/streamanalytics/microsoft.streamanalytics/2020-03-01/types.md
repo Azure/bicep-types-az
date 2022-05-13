@@ -1,6 +1,6 @@
 # Microsoft.StreamAnalytics @ 2020-03-01
 
-## Resource Microsoft.StreamAnalytics/clusters@2020-03-01
+## Resource Microsoft.StreamAnalytics/clusters@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **properties**: [PrivateEndpointProperties](#privateendpointproperties): The properties associated with a private endpoint.
 * **type**: 'Microsoft.StreamAnalytics/clusters/privateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StreamAnalytics/streamingjobs@2020-03-01
+## Resource Microsoft.StreamAnalytics/streamingjobs@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version

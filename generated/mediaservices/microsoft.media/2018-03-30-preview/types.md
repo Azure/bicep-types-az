@@ -29,7 +29,7 @@
 * **properties**: [ContentKeyPolicyProperties](#contentkeypolicyproperties): The properties of the Content Key Policy.
 * **type**: 'Microsoft.Media/mediaServices/contentKeyPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaservices/liveEvents@2018-03-30-preview
+## Resource Microsoft.Media/mediaservices/liveEvents@2018-03-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,7 +40,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2018-03-30-preview
+## Resource Microsoft.Media/mediaservices/liveEvents/liveOutputs@2018-03-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **properties**: [LiveOutputProperties](#liveoutputproperties): The JSON object that contains the properties required to create a Live Output.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Media/mediaservices/streamingEndpoints@2018-03-30-preview
+## Resource Microsoft.Media/mediaservices/streamingEndpoints@2018-03-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-03-30-preview' (ReadOnly, DeployTimeConstant): The resource api version

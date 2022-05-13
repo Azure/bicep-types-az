@@ -1,6 +1,6 @@
 # Microsoft.Solutions @ 2016-09-01-preview
 
-## Resource Microsoft.Solutions/applianceDefinitions@2016-09-01-preview
+## Resource Microsoft.Solutions/applianceDefinitions@2016-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Solutions/applianceDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Solutions/appliances@2016-09-01-preview
+## Resource Microsoft.Solutions/appliances@2016-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

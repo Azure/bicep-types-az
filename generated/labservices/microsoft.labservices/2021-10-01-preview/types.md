@@ -1,6 +1,6 @@
 # Microsoft.LabServices @ 2021-10-01-preview
 
-## Resource Microsoft.LabServices/labPlans@2021-10-01-preview
+## Resource Microsoft.LabServices/labPlans@2021-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.LabServices/labPlans/images' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.LabServices/labs@2021-10-01-preview
+## Resource Microsoft.LabServices/labs@2021-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -44,7 +44,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.LabServices/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.LabServices/labs/users@2021-10-01-preview
+## Resource Microsoft.LabServices/labs/users@2021-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

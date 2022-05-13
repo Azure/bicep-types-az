@@ -1,6 +1,6 @@
 # Microsoft.Elastic @ 2021-10-01-preview
 
-## Resource Microsoft.Elastic/monitors@2021-10-01-preview
+## Resource Microsoft.Elastic/monitors@2021-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

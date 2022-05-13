@@ -1,6 +1,6 @@
 # Microsoft.Cdn @ 2019-04-15
 
-## Resource Microsoft.Cdn/profiles@2019-04-15
+## Resource Microsoft.Cdn/profiles@2019-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints@2019-04-15
+## Resource Microsoft.Cdn/profiles/endpoints@2019-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Cdn/profiles/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-04-15
+## Resource Microsoft.Cdn/profiles/endpoints/customDomains@2019-04-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-15' (ReadOnly, DeployTimeConstant): The resource api version

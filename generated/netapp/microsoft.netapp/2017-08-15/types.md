@@ -1,6 +1,6 @@
 # Microsoft.NetApp @ 2017-08-15
 
-## Resource Microsoft.NetApp/netAppAccounts@2017-08-15
+## Resource Microsoft.NetApp/netAppAccounts@2017-08-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: any: Any object
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2017-08-15
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2017-08-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **tags**: any: Any object
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2017-08-15
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2017-08-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -33,7 +33,7 @@
 * **tags**: any: Any object
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2017-08-15
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2017-08-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-08-15' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.SqlVirtualMachine @ 2017-03-01-preview
 
-## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2017-03-01-preview
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2017-03-01-preview
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **properties**: [AvailabilityGroupListenerProperties](#availabilitygrouplistenerproperties): The properties of an availability group listener.
 * **type**: 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2017-03-01-preview
+## Resource Microsoft.SqlVirtualMachine/sqlVirtualMachines@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

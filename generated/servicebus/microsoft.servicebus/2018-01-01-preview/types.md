@@ -1,6 +1,6 @@
 # Microsoft.ServiceBus @ 2018-01-01-preview
 
-## Resource Microsoft.ServiceBus/namespaces@2018-01-01-preview
+## Resource Microsoft.ServiceBus/namespaces@2018-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **properties**: [IpFilterRuleProperties](#ipfilterruleproperties): Properties supplied to create or update IpFilterRules
 * **type**: 'Microsoft.ServiceBus/namespaces/ipfilterrules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2018-01-01-preview
+## Resource Microsoft.ServiceBus/namespaces/migrationConfigurations@2018-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

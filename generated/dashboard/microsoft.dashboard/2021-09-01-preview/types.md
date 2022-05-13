@@ -1,6 +1,6 @@
 # Microsoft.Dashboard @ 2021-09-01-preview
 
-## Resource Microsoft.Dashboard/grafana@2021-09-01-preview
+## Resource Microsoft.Dashboard/grafana@2021-09-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

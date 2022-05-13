@@ -88,7 +88,7 @@ warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an unde
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.eventhub/namespaces/{namespacename}/messagingplan': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2015-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
@@ -146,7 +146,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NamespaceUpdateParameter' wit
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2015-08-01/EventHub.json:1898:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2014-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
@@ -204,7 +204,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NamespaceUpdateParameter' wit
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2014-09-01/EventHub.json:1708:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'TrackedResource' has a property 'location' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from TrackedResource
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2021-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
@@ -402,7 +402,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'KeyVaultProperties'
   - items: {"$ref":"#/components/schemas/schemas:52"} => <none>
   - x-ms-client-name: "KeyVaultProperties" => <none>
   - properties: <none> => {"keyName":{"x-ms-client-name":"KeyName","$ref":"#/components/schemas/schemas:53","description":"Name of the Key from KeyVault"},"keyVaultUri":{"x-ms-client-name":"KeyVaultUri","$ref":"#/components/schemas/schemas:54","description":"Uri of KeyVault"},"keyVersion":{"x-ms-client-name":"KeyVersion","$ref":"#/components/schemas/schemas:55","description":"Key Version"},"identity":{"$ref":"#/components/schemas/schemas:80"}}
-info    | autorest.bicep took 10ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2018-01-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
@@ -532,7 +532,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'KeyVaultProperties'
   - items: {"$ref":"#/components/schemas/schemas:52"} => <none>
   - x-ms-client-name: "KeyVaultProperties" => <none>
   - properties: <none> => {"keyName":{"x-ms-client-name":"KeyName","$ref":"#/components/schemas/schemas:53","description":"Name of the Key from KeyVault"},"keyVaultUri":{"x-ms-client-name":"KeyVaultUri","$ref":"#/components/schemas/schemas:54","description":"Uri of KeyVault"},"keyVersion":{"x-ms-client-name":"KeyVersion","$ref":"#/components/schemas/schemas:55","description":"Key Version"}}
-info    | autorest.bicep took 15ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.eventhub-2021-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
@@ -628,5 +628,5 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'KeyVaultProperties'
   - items: {"$ref":"#/components/schemas/schemas:53"} => <none>
   - x-ms-client-name: "KeyVaultProperties" => <none>
   - properties: <none> => {"keyName":{"x-ms-client-name":"KeyName","$ref":"#/components/schemas/schemas:54","description":"Name of the Key from KeyVault"},"keyVaultUri":{"x-ms-client-name":"KeyVaultUri","$ref":"#/components/schemas/schemas:55","description":"Uri of KeyVault"},"keyVersion":{"x-ms-client-name":"KeyVersion","$ref":"#/components/schemas/schemas:56","description":"Key Version"},"identity":{"$ref":"#/components/schemas/schemas:81"}}
-info    | autorest.bicep took 13ms
-info    | Autorest completed in 26.21s. 14 files generated.
+info    | autorest.bicep took 8ms
+info    | Autorest completed in 17.69s. 14 files generated.

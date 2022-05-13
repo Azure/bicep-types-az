@@ -1,6 +1,6 @@
 # Microsoft.CognitiveServices @ 2021-10-01
 
-## Resource Microsoft.CognitiveServices/accounts@2021-10-01
+## Resource Microsoft.CognitiveServices/accounts@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.CognitiveServices/accounts/commitmentPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/accounts/deployments@2021-10-01
+## Resource Microsoft.CognitiveServices/accounts/deployments@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.CognitiveServices/accounts/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2021-10-01
+## Resource Microsoft.CognitiveServices/accounts/privateEndpointConnections@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.StreamAnalytics @ 2016-03-01
 
-## Resource Microsoft.StreamAnalytics/streamingjobs@2016-03-01
+## Resource Microsoft.StreamAnalytics/streamingjobs@2016-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-03-01' (ReadOnly, DeployTimeConstant): The resource api version

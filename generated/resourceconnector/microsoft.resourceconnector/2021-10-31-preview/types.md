@@ -1,6 +1,6 @@
 # Microsoft.ResourceConnector @ 2021-10-31-preview
 
-## Resource Microsoft.ResourceConnector/appliances@2021-10-31-preview
+## Resource Microsoft.ResourceConnector/appliances@2021-10-31-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-31-preview' (ReadOnly, DeployTimeConstant): The resource api version

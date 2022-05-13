@@ -1,6 +1,6 @@
 # Microsoft.StoragePool @ 2021-04-01-preview
 
-## Resource Microsoft.StoragePool/diskPools@2021-04-01-preview
+## Resource Microsoft.StoragePool/diskPools@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
 * **type**: 'Microsoft.StoragePool/diskPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StoragePool/diskPools/iscsiTargets@2021-04-01-preview
+## Resource Microsoft.StoragePool/diskPools/iscsiTargets@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

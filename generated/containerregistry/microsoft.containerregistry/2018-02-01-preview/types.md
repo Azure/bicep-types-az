@@ -9,7 +9,7 @@
 * **properties**: [BuildProperties](#buildproperties) (ReadOnly): The properties for a build.
 * **type**: 'Microsoft.ContainerRegistry/registries/builds' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview
+## Resource Microsoft.ContainerRegistry/registries/buildTasks@2018-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview
+## Resource Microsoft.ContainerRegistry/registries/buildTasks/steps@2018-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

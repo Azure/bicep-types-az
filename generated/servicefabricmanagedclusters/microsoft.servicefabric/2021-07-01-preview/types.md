@@ -1,6 +1,6 @@
 # Microsoft.ServiceFabric @ 2021-07-01-preview
 
-## Resource Microsoft.ServiceFabric/managedClusters@2021-07-01-preview
+## Resource Microsoft.ServiceFabric/managedClusters@2021-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedclusters/applications@2021-07-01-preview
+## Resource Microsoft.ServiceFabric/managedclusters/applications@2021-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedclusters/applications/services@2021-07-01-preview
+## Resource Microsoft.ServiceFabric/managedclusters/applications/services@2021-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -51,7 +51,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-07-01-preview
+## Resource Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -63,7 +63,7 @@
 * **tags**: [ProxyResourceTags](#proxyresourcetags): Azure resource tags.
 * **type**: 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-07-01-preview
+## Resource Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-07-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

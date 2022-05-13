@@ -1,6 +1,6 @@
 # Microsoft.EventGrid @ 2021-12-01
 
-## Resource Microsoft.EventGrid/domains@2021-12-01
+## Resource Microsoft.EventGrid/domains@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2021-12-01
+## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/topics@2021-12-01
+## Resource Microsoft.EventGrid/domains/topics@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -32,7 +32,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/eventSubscriptions@2021-12-01
+## Resource Microsoft.EventGrid/eventSubscriptions@2021-12-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -52,7 +52,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/systemTopics@2021-12-01
+## Resource Microsoft.EventGrid/systemTopics@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2021-12-01
+## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -75,7 +75,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics@2021-12-01
+## Resource Microsoft.EventGrid/topics@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -88,7 +88,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2021-12-01
+## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2021-12-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01' (ReadOnly, DeployTimeConstant): The resource api version

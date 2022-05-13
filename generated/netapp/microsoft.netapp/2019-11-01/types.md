@@ -1,6 +1,6 @@
 # Microsoft.NetApp @ 2019-11-01
 
-## Resource Microsoft.NetApp/netAppAccounts@2019-11-01
+## Resource Microsoft.NetApp/netAppAccounts@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2019-11-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-11-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -33,7 +33,7 @@
 * **tags**: [ResourceTags](#resourcetags): Tags are a list of key-value pairs that describe the resource
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2019-11-01
+## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version

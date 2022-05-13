@@ -16,7 +16,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2022-02-01/vaults.json:1746:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2022-01-31-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -42,7 +42,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2022-01-01/vaults.json:1746:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-12-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -55,7 +55,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-12-01/vaults.json:1732:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 7ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-11-01-preview"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -81,7 +81,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-08-01/vaults.json:1732:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 20ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-07-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -94,7 +94,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-07-01/vaults.json:1732:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -120,7 +120,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-04-01/vaults.json:1732:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-03-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -133,7 +133,7 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-03-01/vaults.json:1651:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-02-10"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -146,14 +146,14 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-02-10/vaults.json:1651:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2016-06-01"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2020-02-02"} .
 info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Workspaces/bicep-types-az/src/autorest.bicep)
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
@@ -192,5 +192,5 @@ warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an 
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/stable/2021-01-01/vaults.json:1651:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 35.17s. 30 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 43.69s. 30 files generated.

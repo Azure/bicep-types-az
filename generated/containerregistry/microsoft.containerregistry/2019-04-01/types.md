@@ -9,7 +9,7 @@
 * **properties**: [RunProperties](#runproperties) (ReadOnly): The properties for a run.
 * **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ContainerRegistry/registries/tasks@2019-04-01
+## Resource Microsoft.ContainerRegistry/registries/tasks@2019-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version

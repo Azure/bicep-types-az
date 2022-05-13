@@ -1,6 +1,6 @@
 # Microsoft.ProviderHub @ 2020-11-20
 
-## Resource Microsoft.ProviderHub/providerRegistrations@2020-11-20
+## Resource Microsoft.ProviderHub/providerRegistrations@2020-11-20 (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-11-20' (ReadOnly, DeployTimeConstant): The resource api version
@@ -18,7 +18,7 @@
 * **properties**: [CustomRolloutProperties](#customrolloutproperties) (Required): Properties of the rollout.
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/customRollouts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2020-11-20
+## Resource Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2020-11-20 (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-11-20' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **properties**: [OperationsDefinition](#operationsdefinition) (ReadOnly)
 * **type**: 'Microsoft.ProviderHub/providerRegistrations/operations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2020-11-20
+## Resource Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2020-11-20 (Async)
 * **Valid Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-11-20' (ReadOnly, DeployTimeConstant): The resource api version

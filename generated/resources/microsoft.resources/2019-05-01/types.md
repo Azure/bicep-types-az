@@ -1,6 +1,6 @@
 # Microsoft.Resources @ 2019-05-01
 
-## Resource Microsoft.Resources/deployments@2019-05-01
+## Resource Microsoft.Resources/deployments@2019-05-01 (Async)
 * **Valid Scope(s)**: ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2019-05-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -9,7 +9,7 @@
 * **properties**: [DeletedAccountProperties](#deletedaccountproperties) (ReadOnly): Attributes of a deleted storage account.
 * **type**: 'Microsoft.Storage/locations/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Storage/storageAccounts@2021-08-01
+## Resource Microsoft.Storage/storageAccounts@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version

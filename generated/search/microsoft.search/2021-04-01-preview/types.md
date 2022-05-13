@@ -1,6 +1,6 @@
 # Microsoft.Search @ 2021-04-01-preview
 
-## Resource Microsoft.Search/searchServices@2021-04-01-preview
+## Resource Microsoft.Search/searchServices@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
 * **type**: 'Microsoft.Search/searchServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Search/searchServices/sharedPrivateLinkResources@2021-04-01-preview
+## Resource Microsoft.Search/searchServices/sharedPrivateLinkResources@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

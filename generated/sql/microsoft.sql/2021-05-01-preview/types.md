@@ -1,6 +1,6 @@
 # Microsoft.Sql @ 2021-05-01-preview
 
-## Resource Microsoft.Sql/instancePools@2021-05-01-preview
+## Resource Microsoft.Sql/instancePools@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [DeletedServerProperties](#deletedserverproperties) (ReadOnly): The properties of a deleted server.
 * **type**: 'Microsoft.Sql/locations/deletedServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/instanceFailoverGroups@2021-05-01-preview
+## Resource Microsoft.Sql/locations/instanceFailoverGroups@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -48,7 +48,7 @@
 * **properties**: [LongTermRetentionBackupProperties](#longtermretentionbackupproperties) (ReadOnly): Properties of a long term retention backup
 * **type**: 'Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/locations/serverTrustGroups@2021-05-01-preview
+## Resource Microsoft.Sql/locations/serverTrustGroups@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -75,7 +75,7 @@
 * **properties**: [SubscriptionUsageProperties](#subscriptionusageproperties) (ReadOnly): Properties of a subscription usage.
 * **type**: 'Microsoft.Sql/locations/usages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -88,7 +88,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/administrators@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/administrators@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -97,7 +97,7 @@
 * **properties**: [ManagedInstanceAdministratorProperties](#managedinstanceadministratorproperties): The properties of a managed instance administrator.
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/azureADOnlyAuthentications@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/azureADOnlyAuthentications@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -106,7 +106,7 @@
 * **properties**: [ManagedInstanceAzureADOnlyAuthProperties](#managedinstanceazureadonlyauthproperties): Properties of a active directory only authentication for Managed Instance.
 * **type**: 'Microsoft.Sql/managedInstances/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/databases@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -117,7 +117,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -126,7 +126,7 @@
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties): Properties of a long term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -234,7 +234,7 @@
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
 * **type**: 'Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/distributedAvailabilityGroups@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -243,7 +243,7 @@
 * **properties**: [DistributedAvailabilityGroupProperties](#distributedavailabilitygroupproperties): The properties of a distributed availability group.
 * **type**: 'Microsoft.Sql/managedInstances/distributedAvailabilityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/encryptionProtector@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/encryptionProtector@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -253,7 +253,7 @@
 * **properties**: [ManagedInstanceEncryptionProtectorProperties](#managedinstanceencryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/managedInstances/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/keys@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/keys@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -272,7 +272,7 @@
 * **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): The properties of a managed instance operation.
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/privateEndpointConnections@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/privateEndpointConnections@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -310,7 +310,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -319,7 +319,7 @@
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -329,7 +329,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/serverTrustCertificates@2021-05-01-preview
+## Resource Microsoft.Sql/managedInstances/serverTrustCertificates@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -356,7 +356,7 @@
 * **properties**: [ManagedInstanceVulnerabilityAssessmentProperties](#managedinstancevulnerabilityassessmentproperties): Properties of a managed instance vulnerability assessment.
 * **type**: 'Microsoft.Sql/managedInstances/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers@2021-05-01-preview
+## Resource Microsoft.Sql/servers@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -369,7 +369,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/administrators@2021-05-01-preview
+## Resource Microsoft.Sql/servers/administrators@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -389,7 +389,7 @@
 * **properties**: [AdvisorProperties](#advisorproperties) (ReadOnly): Properties for a Database, Server or Elastic Pool Advisor.
 * **type**: 'Microsoft.Sql/servers/advisors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/auditingSettings@2021-05-01-preview
+## Resource Microsoft.Sql/servers/auditingSettings@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -407,7 +407,7 @@
 * **properties**: [AutomaticTuningServerProperties](#automatictuningserverproperties) (ReadOnly): Server-level Automatic Tuning properties.
 * **type**: 'Microsoft.Sql/servers/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2021-05-01-preview
+## Resource Microsoft.Sql/servers/azureADOnlyAuthentications@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -416,7 +416,7 @@
 * **properties**: [AzureADOnlyAuthProperties](#azureadonlyauthproperties): Properties of a active directory only authentication.
 * **type**: 'Microsoft.Sql/servers/azureADOnlyAuthentications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/connectionPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/servers/connectionPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -427,7 +427,7 @@
 * **properties**: [ServerConnectionPolicyProperties](#serverconnectionpolicyproperties): The properties of a server connection policy.
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -483,7 +483,7 @@
 * **properties**: [DatabaseAutomaticTuningProperties](#databaseautomatictuningproperties) (ReadOnly): Database-level Automatic Tuning properties.
 * **type**: 'Microsoft.Sql/servers/databases/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -492,7 +492,7 @@
 * **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties): Properties of a long term retention policy
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -519,7 +519,7 @@
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties): Properties of an extended database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/extensions@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/extensions@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -528,7 +528,7 @@
 * **properties**: [DatabaseExtensionsProperties](#databaseextensionsproperties): Contains the database information after a successful Import, Export, or PolybaseImport
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/ledgerDigestUploads@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/ledgerDigestUploads@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -620,7 +620,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/syncGroups@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/syncGroups@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -630,7 +630,7 @@
 * **sku**: [Sku](#sku): An ARM Resource SKU.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -675,7 +675,7 @@
 * **properties**: [VulnerabilityAssessmentScanRecordProperties](#vulnerabilityassessmentscanrecordproperties) (ReadOnly): Properties of a vulnerability assessment scan record.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/workloadGroups@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/workloadGroups@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -684,7 +684,7 @@
 * **properties**: [WorkloadGroupProperties](#workloadgroupproperties): Workload group definition. For more information look at sys.workload_management_workload_groups (DMV).
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2021-05-01-preview
+## Resource Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -693,7 +693,7 @@
 * **properties**: [WorkloadClassifierProperties](#workloadclassifierproperties): Workload classifier definition. For more information look at sys.workload_management_workload_classifiers (DMV).
 * **type**: 'Microsoft.Sql/servers/databases/workloadGroups/workloadClassifiers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/devOpsAuditingSettings@2021-05-01-preview
+## Resource Microsoft.Sql/servers/devOpsAuditingSettings@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -703,7 +703,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/devOpsAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/dnsAliases@2021-05-01-preview
+## Resource Microsoft.Sql/servers/dnsAliases@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -712,7 +712,7 @@
 * **properties**: [ServerDnsAliasProperties](#serverdnsaliasproperties) (ReadOnly): Properties of a server DNS alias.
 * **type**: 'Microsoft.Sql/servers/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/elasticPools@2021-05-01-preview
+## Resource Microsoft.Sql/servers/elasticPools@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -725,7 +725,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers/elasticPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/encryptionProtector@2021-05-01-preview
+## Resource Microsoft.Sql/servers/encryptionProtector@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -736,7 +736,7 @@
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/extendedAuditingSettings@2021-05-01-preview
+## Resource Microsoft.Sql/servers/extendedAuditingSettings@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -745,7 +745,7 @@
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/failoverGroups@2021-05-01-preview
+## Resource Microsoft.Sql/servers/failoverGroups@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -765,7 +765,7 @@
 * **properties**: [ServerFirewallRuleProperties](#serverfirewallruleproperties): The properties of a server firewall rule.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents@2021-05-01-preview
+## Resource Microsoft.Sql/servers/jobAgents@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -795,7 +795,7 @@
 * **properties**: [JobProperties](#jobproperties): Properties of a job.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2021-05-01-preview
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -857,7 +857,7 @@
 * **properties**: [JobTargetGroupProperties](#jobtargetgroupproperties): Properties of job target group.
 * **type**: 'Microsoft.Sql/servers/jobAgents/targetGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/keys@2021-05-01-preview
+## Resource Microsoft.Sql/servers/keys@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -868,7 +868,7 @@
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a server key execution.
 * **type**: 'Microsoft.Sql/servers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/outboundFirewallRules@2021-05-01-preview
+## Resource Microsoft.Sql/servers/outboundFirewallRules@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -877,7 +877,7 @@
 * **properties**: [OutboundFirewallRuleProperties](#outboundfirewallruleproperties) (ReadOnly): The properties of an outbound firewall rule.
 * **type**: 'Microsoft.Sql/servers/outboundFirewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/privateEndpointConnections@2021-05-01-preview
+## Resource Microsoft.Sql/servers/privateEndpointConnections@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -907,7 +907,7 @@
 * **tags**: [RestorableDroppedDatabaseTags](#restorabledroppeddatabasetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Sql/servers/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/securityAlertPolicies@2021-05-01-preview
+## Resource Microsoft.Sql/servers/securityAlertPolicies@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -917,7 +917,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/syncAgents@2021-05-01-preview
+## Resource Microsoft.Sql/servers/syncAgents@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -926,7 +926,7 @@
 * **properties**: [SyncAgentProperties](#syncagentproperties): Properties of an Azure SQL Database sync agent.
 * **type**: 'Microsoft.Sql/servers/syncAgents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/virtualNetworkRules@2021-05-01-preview
+## Resource Microsoft.Sql/servers/virtualNetworkRules@2021-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

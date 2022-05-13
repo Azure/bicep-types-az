@@ -1,6 +1,6 @@
 # Microsoft.Kusto @ 2019-09-07
 
-## Resource Microsoft.Kusto/clusters@2019-09-07
+## Resource Microsoft.Kusto/clusters@2019-09-07 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-07' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: An array represents the availability zones of the cluster.
 
-## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2019-09-07
+## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2019-09-07 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-07' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): Class representing the an attached database configuration properties of kind specific.
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases@2019-09-07
+## Resource Microsoft.Kusto/clusters/databases@2019-09-07 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -45,7 +45,7 @@
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
-## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-09-07
+## Resource Microsoft.Kusto/clusters/databases/dataConnections@2019-09-07 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 

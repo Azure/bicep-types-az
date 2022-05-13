@@ -1,6 +1,6 @@
 # Microsoft.PolicyInsights @ 2021-01-01
 
-## Resource Microsoft.PolicyInsights/attestations@2021-01-01
+## Resource Microsoft.PolicyInsights/attestations@2021-01-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.Kusto @ 2022-02-01
 
-## Resource Microsoft.Kusto/clusters@2022-02-01
+## Resource Microsoft.Kusto/clusters@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -16,7 +16,7 @@
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: An array represents the availability zones of the cluster.
 
-## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2022-02-01
+## Resource Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): Class representing the an attached database configuration properties of kind specific.
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases@2022-02-01
+## Resource Microsoft.Kusto/clusters/databases@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -47,7 +47,7 @@
 * **properties**: [ReadWriteDatabaseProperties](#readwritedatabaseproperties): Class representing the Kusto database properties.
 
 
-## Resource Microsoft.Kusto/clusters/databases/dataConnections@2022-02-01
+## Resource Microsoft.Kusto/clusters/databases/dataConnections@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -73,7 +73,7 @@
 * **properties**: [IotHubConnectionProperties](#iothubconnectionproperties): Class representing the Kusto Iot hub connection properties.
 
 
-## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2022-02-01
+## Resource Microsoft.Kusto/clusters/databases/principalAssignments@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -82,7 +82,7 @@
 * **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): A class representing database principal property.
 * **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases/scripts@2022-02-01
+## Resource Microsoft.Kusto/clusters/databases/scripts@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -92,7 +92,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/databases/scripts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/managedPrivateEndpoints@2022-02-01
+## Resource Microsoft.Kusto/clusters/managedPrivateEndpoints@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -102,7 +102,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/principalAssignments@2022-02-01
+## Resource Microsoft.Kusto/clusters/principalAssignments@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -111,7 +111,7 @@
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): A class representing cluster principal property.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/privateEndpointConnections@2022-02-01
+## Resource Microsoft.Kusto/clusters/privateEndpointConnections@2022-02-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.SignalRService @ 2021-06-01-preview
 
-## Resource Microsoft.SignalRService/signalR@2021-06-01-preview
+## Resource Microsoft.SignalRService/signalR@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/signalR/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2021-06-01-preview
+## Resource Microsoft.SignalRService/signalR/sharedPrivateLinkResources@2021-06-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

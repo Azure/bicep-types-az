@@ -1,6 +1,6 @@
 # Microsoft.ElasticSan @ 2021-11-20-preview
 
-## Resource Microsoft.ElasticSan/elasticSans@2021-11-20-preview
+## Resource Microsoft.ElasticSan/elasticSans@2021-11-20-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ElasticSan/elasticSans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ElasticSan/elasticSans/volumegroups@2021-11-20-preview
+## Resource Microsoft.ElasticSan/elasticSans/volumegroups@2021-11-20-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ElasticSan/elasticSans/volumegroups/volumes@2021-11-20-preview
+## Resource Microsoft.ElasticSan/elasticSans/volumegroups/volumes@2021-11-20-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version

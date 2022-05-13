@@ -57,7 +57,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResour
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
-info    | autorest.bicep took 46ms
+info    | autorest.bicep took 66ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2022-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -109,7 +109,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResour
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
-info    | autorest.bicep took 32ms
+info    | autorest.bicep took 27ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -161,7 +161,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResour
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
-info    | autorest.bicep took 19ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-11-15"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -170,7 +170,7 @@ info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/providers/microsoft.recoveryservices/locations/{azureregion}/backupaadproperties': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2018-12-20"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -197,7 +197,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with a
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2018-12-20/bms.json:4131:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/providers/microsoft.recoveryservices/locations/{azureregion}/backupaadproperties': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -249,7 +249,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResour
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
-info    | autorest.bicep took 48ms
+info    | autorest.bicep took 27ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -299,7 +299,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-08-01/bms.json:11612:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 25ms
+info    | autorest.bicep took 18ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -349,7 +349,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-07-01/bms.json:11639:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 25ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -397,7 +397,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-06-01/bms.json:11102:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 27ms
+info    | autorest.bicep took 17ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -449,7 +449,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-04-01/bms.json:11287:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 24ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -497,7 +497,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-03-01/bms.json:11044:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 35ms
+info    | autorest.bicep took 29ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-02-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -545,7 +545,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-02-10/bms.json:11040:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 18ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-02-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -595,7 +595,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResour
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGuardProxyBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2021-02-01-preview/bms.json:11553:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-02-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -643,7 +643,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-02-01/bms.json:11040:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 16ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -689,7 +689,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2021-01-01/bms.json:9953:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 17ms
+info    | autorest.bicep took 16ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -731,7 +731,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2020-12-01/bms.json:9475:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 14ms
+info    | autorest.bicep took 12ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -773,7 +773,7 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2020-10-01/bms.json:9461:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 11ms
+info    | autorest.bicep took 58ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2020-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -815,7 +815,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with a
 warning | PreCheck/SchemaMissingType | The schema 'RestoreRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2019-06-15/bms.json:4718:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 24ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2019-05-13"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -837,7 +837,7 @@ warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with a
 warning | PreCheck/SchemaMissingType | The schema 'RestoreRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2019-05-13/bms.json:4604:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 9ms
+info    | autorest.bicep took 35ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2017-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -879,7 +879,7 @@ warning | PreCheck/SchemaMissingType | The schema 'BackupEngineBaseResource' wit
 warning | PreCheck/SchemaMissingType | The schema 'OperationResultInfoBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2016-06-01/recoveryservicesbackup.json:4423:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 29ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2016-08-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -887,7 +887,7 @@ info    |    Loading local AutoRest extension '@autorest/bicep' (/home/jeskew/Wo
 info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
+info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2016-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -911,5 +911,5 @@ warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2016-12-01/bms.json:3588:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
-info    | Autorest completed in 150.25s. 46 files generated.
+info    | autorest.bicep took 4ms
+info    | Autorest completed in 154.51s. 46 files generated.

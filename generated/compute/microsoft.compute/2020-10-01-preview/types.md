@@ -1,6 +1,6 @@
 # Microsoft.Compute @ 2020-10-01-preview
 
-## Resource Microsoft.Compute/cloudServices@2020-10-01-preview
+## Resource Microsoft.Compute/cloudServices@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [CloudServiceTags](#cloudservicetags): Resource tags.
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/cloudServices/updateDomains@2020-10-01-preview
+## Resource Microsoft.Compute/cloudServices/updateDomains@2020-10-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

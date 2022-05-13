@@ -1,6 +1,6 @@
 # Microsoft.Capacity @ 2020-10-01-preview
 
-## Resource Microsoft.Capacity/reservationOrders@2020-10-01-preview
+## Resource Microsoft.Capacity/reservationOrders@2020-10-01-preview (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

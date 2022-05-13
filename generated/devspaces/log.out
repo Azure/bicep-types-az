@@ -51,5 +51,5 @@ warning | PreCheck/SchemaMissingType | The schema 'DevSpacesErrorResponse' with 
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/devspaces/resource-manager/Microsoft.DevSpaces/stable/2019-04-01/devspaces.json:763:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 13ms
-info    | Autorest completed in 4.14s. 2 files generated.
+info    | autorest.bicep took 8ms
+info    | Autorest completed in 3.43s. 2 files generated.

@@ -1,6 +1,6 @@
 # Microsoft.DataShare @ 2020-09-01
 
-## Resource Microsoft.DataShare/accounts@2020-09-01
+## Resource Microsoft.DataShare/accounts@2020-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-09-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -211,7 +211,7 @@
 * **properties**: [SynapseWorkspaceSqlPoolTableDataSetMappingProperties](#synapseworkspacesqlpooltabledatasetmappingproperties) (Required): Properties of the Synapse Workspace SQL Pool Table data set mapping
 
 
-## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2020-09-01
+## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2020-09-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 

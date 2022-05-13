@@ -25,7 +25,7 @@
 * **tags**: [ExtensionResourceRequestTags](#extensionresourcerequesttags): A dictionary of user-defined tags to be stored with the extension resource.
 * **type**: 'microsoft.visualstudio/account/extension' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource microsoft.visualstudio/account/project@2014-04-01-preview
+## Resource microsoft.visualstudio/account/project@2014-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.DataMigration @ 2021-06-30
 
-## Resource Microsoft.DataMigration/services@2021-06-30
+## Resource Microsoft.DataMigration/services@2021-06-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-30' (ReadOnly, DeployTimeConstant): The resource api version

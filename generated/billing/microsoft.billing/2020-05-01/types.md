@@ -18,7 +18,7 @@
 * **properties**: [AgreementProperties](#agreementproperties) (ReadOnly): The properties of an agreement.
 * **type**: 'Microsoft.Billing/billingAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles@2020-05-01
+## Resource Microsoft.Billing/billingAccounts/billingProfiles@2020-05-01 (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -63,7 +63,7 @@
 * **properties**: [InstructionProperties](#instructionproperties): A billing instruction used during invoice generation.
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/instructions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2020-05-01
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2020-05-01 (Async)
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version

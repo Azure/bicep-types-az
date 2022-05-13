@@ -1,6 +1,6 @@
 # Microsoft.Quota @ 2021-03-15
 
-## Resource Microsoft.Quota/quotaLimits@2021-03-15
+## Resource Microsoft.Quota/quotaLimits@2021-03-15 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version

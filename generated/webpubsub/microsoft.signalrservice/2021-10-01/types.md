@@ -1,6 +1,6 @@
 # Microsoft.SignalRService @ 2021-10-01
 
-## Resource Microsoft.SignalRService/webPubSub@2021-10-01
+## Resource Microsoft.SignalRService/webPubSub@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SignalRService/webPubSub/hubs@2021-10-01
+## Resource Microsoft.SignalRService/webPubSub/hubs@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -34,7 +34,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.SignalRService/webPubSub/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources@2021-10-01
+## Resource Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.DataLakeStore @ 2016-11-01
 
-## Resource Microsoft.DataLakeStore/accounts@2016-11-01
+## Resource Microsoft.DataLakeStore/accounts@2016-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-11-01' (ReadOnly, DeployTimeConstant): The resource api version

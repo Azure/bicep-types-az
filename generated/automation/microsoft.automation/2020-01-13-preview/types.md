@@ -22,7 +22,7 @@
 * **properties**: [CertificateCreateOrUpdateProperties](#certificatecreateorupdateproperties) (Required): The properties of the create certificate operation.
 * **type**: 'Microsoft.Automation/automationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/compilationjobs@2020-01-13-preview
+## Resource Microsoft.Automation/automationAccounts/compilationjobs@2020-01-13-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -81,7 +81,7 @@
 * **tags**: [ModuleCreateOrUpdateParametersTags](#modulecreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/modules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview
+## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -100,7 +100,7 @@
 * **properties**: [DscNodeProperties](#dscnodeproperties) (ReadOnly): The properties of a DscNode
 * **type**: 'Microsoft.Automation/automationAccounts/nodes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview
+## Resource Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-01-13-preview' (ReadOnly, DeployTimeConstant): The resource api version

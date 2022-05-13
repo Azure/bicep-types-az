@@ -1,6 +1,6 @@
 # Microsoft.DevSpaces @ 2019-04-01
 
-## Resource Microsoft.DevSpaces/controllers@2019-04-01
+## Resource Microsoft.DevSpaces/controllers@2019-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version

@@ -1,6 +1,6 @@
 # Microsoft.AVS @ 2020-03-20
 
-## Resource Microsoft.AVS/privateClouds@2020-03-20
+## Resource Microsoft.AVS/privateClouds@2020-03-20 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/authorizations@2020-03-20
+## Resource Microsoft.AVS/privateClouds/authorizations@2020-03-20 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [ExpressRouteAuthorizationProperties](#expressrouteauthorizationproperties) (ReadOnly): The properties of an ExpressRoute Circuit Authorization resource
 * **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/clusters@2020-03-20
+## Resource Microsoft.AVS/privateClouds/clusters@2020-03-20 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-20' (ReadOnly, DeployTimeConstant): The resource api version

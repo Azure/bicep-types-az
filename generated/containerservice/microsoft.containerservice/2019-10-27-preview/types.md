@@ -1,6 +1,6 @@
 # Microsoft.ContainerService @ 2019-10-27-preview
 
-## Resource Microsoft.ContainerService/openShiftManagedClusters@2019-10-27-preview
+## Resource Microsoft.ContainerService/openShiftManagedClusters@2019-10-27-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-10-27-preview' (ReadOnly, DeployTimeConstant): The resource api version

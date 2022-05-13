@@ -1,6 +1,6 @@
 # Microsoft.HDInsight @ 2015-03-01-preview
 
-## Resource Microsoft.HDInsight/clusters@2015-03-01-preview
+## Resource Microsoft.HDInsight/clusters@2015-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ClusterCreateParametersExtendedTags](#clustercreateparametersextendedtags): The resource tags.
 * **type**: 'Microsoft.HDInsight/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HDInsight/clusters/applications@2015-03-01-preview
+## Resource Microsoft.HDInsight/clusters/applications@2015-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

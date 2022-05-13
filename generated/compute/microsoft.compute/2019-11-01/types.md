@@ -1,6 +1,6 @@
 # Microsoft.Compute @ 2019-11-01
 
-## Resource Microsoft.Compute/diskEncryptionSets@2019-11-01
+## Resource Microsoft.Compute/diskEncryptionSets@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/disks@2019-11-01
+## Resource Microsoft.Compute/disks@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -27,7 +27,7 @@
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
 
-## Resource Microsoft.Compute/snapshots@2019-11-01
+## Resource Microsoft.Compute/snapshots@2019-11-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version

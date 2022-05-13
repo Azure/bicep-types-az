@@ -1,6 +1,6 @@
 # Microsoft.Communication @ 2020-08-20
 
-## Resource Microsoft.Communication/communicationServices@2020-08-20
+## Resource Microsoft.Communication/communicationServices@2020-08-20 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-20' (ReadOnly, DeployTimeConstant): The resource api version

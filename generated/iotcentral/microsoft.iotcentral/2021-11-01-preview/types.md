@@ -1,6 +1,6 @@
 # Microsoft.IoTCentral @ 2021-11-01-preview
 
-## Resource Microsoft.IoTCentral/iotApps@2021-11-01-preview
+## Resource Microsoft.IoTCentral/iotApps@2021-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.IoTCentral/iotApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.IoTCentral/iotApps/privateEndpointConnections@2021-11-01-preview
+## Resource Microsoft.IoTCentral/iotApps/privateEndpointConnections@2021-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

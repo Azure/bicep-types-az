@@ -25,7 +25,7 @@
 * **tags**: [Tags](#tags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.MachineLearning/commitmentPlans/commitmentAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearning/webServices@2016-05-01-preview
+## Resource Microsoft.MachineLearning/webServices@2016-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

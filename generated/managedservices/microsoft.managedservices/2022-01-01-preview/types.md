@@ -10,7 +10,7 @@
 * **properties**: [MarketplaceRegistrationDefinitionProperties](#marketplaceregistrationdefinitionproperties) (ReadOnly): The properties of the marketplace registration definition.
 * **type**: 'Microsoft.ManagedServices/marketplaceRegistrationDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedServices/registrationAssignments@2022-01-01-preview
+## Resource Microsoft.ManagedServices/registrationAssignments@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ManagedServices/registrationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedServices/registrationDefinitions@2022-01-01-preview
+## Resource Microsoft.ManagedServices/registrationDefinitions@2022-01-01-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

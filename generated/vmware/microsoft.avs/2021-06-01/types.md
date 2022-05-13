@@ -1,6 +1,6 @@
 # Microsoft.AVS @ 2021-06-01
 
-## Resource Microsoft.AVS/privateClouds@2021-06-01
+## Resource Microsoft.AVS/privateClouds@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/addons@2021-06-01
+## Resource Microsoft.AVS/privateClouds/addons@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [AddonProperties](#addonproperties): The properties of an addon
 * **type**: 'Microsoft.AVS/privateClouds/addons' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/authorizations@2021-06-01
+## Resource Microsoft.AVS/privateClouds/authorizations@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -30,7 +30,7 @@
 * **properties**: [ExpressRouteAuthorizationProperties](#expressrouteauthorizationproperties) (ReadOnly): The properties of an ExpressRoute Circuit Authorization resource
 * **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/cloudLinks@2021-06-01
+## Resource Microsoft.AVS/privateClouds/cloudLinks@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -39,7 +39,7 @@
 * **properties**: [CloudLinkProperties](#cloudlinkproperties): The properties of a cloud link.
 * **type**: 'Microsoft.AVS/privateClouds/cloudLinks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/clusters@2021-06-01
+## Resource Microsoft.AVS/privateClouds/clusters@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
 * **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/clusters/datastores@2021-06-01
+## Resource Microsoft.AVS/privateClouds/clusters/datastores@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **properties**: [DatastoreProperties](#datastoreproperties): The properties of a datastore
 * **type**: 'Microsoft.AVS/privateClouds/clusters/datastores' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/globalReachConnections@2021-06-01
+## Resource Microsoft.AVS/privateClouds/globalReachConnections@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -76,7 +76,7 @@
 * **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/scriptExecutions@2021-06-01
+## Resource Microsoft.AVS/privateClouds/scriptExecutions@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -103,7 +103,7 @@
 * **properties**: [ScriptCmdletProperties](#scriptcmdletproperties) (ReadOnly): Properties of a pre-canned script
 * **type**: 'Microsoft.AVS/privateClouds/scriptPackages/scriptCmdlets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -112,7 +112,7 @@
 * **properties**: [WorkloadNetworkDhcpEntity](#workloadnetworkdhcpentity): Base class for WorkloadNetworkDhcpServer and WorkloadNetworkDhcpRelay to inherit from
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsServices@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsServices@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -121,7 +121,7 @@
 * **properties**: [WorkloadNetworkDnsServiceProperties](#workloadnetworkdnsserviceproperties): NSX DNS Service Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -139,7 +139,7 @@
 * **properties**: [WorkloadNetworkGatewayProperties](#workloadnetworkgatewayproperties) (ReadOnly): Properties of a NSX Gateway.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -148,7 +148,7 @@
 * **properties**: [WorkloadNetworkPortMirroringProperties](#workloadnetworkportmirroringproperties): NSX Port Mirroring Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/publicIPs@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/publicIPs@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -157,7 +157,7 @@
 * **properties**: [WorkloadNetworkPublicIPProperties](#workloadnetworkpublicipproperties): NSX Public IP Block Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/publicIPs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/segments@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/segments@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -175,7 +175,7 @@
 * **properties**: [WorkloadNetworkVirtualMachineProperties](#workloadnetworkvirtualmachineproperties) (ReadOnly): NSX Virtual Machine Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2021-06-01
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2021-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-06-01' (ReadOnly, DeployTimeConstant): The resource api version

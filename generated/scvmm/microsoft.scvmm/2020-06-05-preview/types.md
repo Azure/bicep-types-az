@@ -1,6 +1,6 @@
 # Microsoft.ScVmm @ 2020-06-05-preview
 
-## Resource Microsoft.ScVmm/availabilitySets@2020-06-05-preview
+## Resource Microsoft.ScVmm/availabilitySets@2020-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [AvailabilitySetTags](#availabilitysettags): Resource tags
 * **type**: 'Microsoft.ScVmm/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ScVmm/clouds@2020-06-05-preview
+## Resource Microsoft.ScVmm/clouds@2020-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **tags**: [CloudTags](#cloudtags): Resource tags
 * **type**: 'Microsoft.ScVmm/clouds' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ScVmm/virtualMachines@2020-06-05-preview
+## Resource Microsoft.ScVmm/virtualMachines@2020-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -39,7 +39,7 @@
 * **tags**: [VirtualMachineTags](#virtualmachinetags): Resource tags
 * **type**: 'Microsoft.ScVmm/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ScVmm/virtualMachineTemplates@2020-06-05-preview
+## Resource Microsoft.ScVmm/virtualMachineTemplates@2020-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -52,7 +52,7 @@
 * **tags**: [VirtualMachineTemplateTags](#virtualmachinetemplatetags): Resource tags
 * **type**: 'Microsoft.ScVmm/virtualMachineTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ScVmm/virtualNetworks@2020-06-05-preview
+## Resource Microsoft.ScVmm/virtualNetworks@2020-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **tags**: [VirtualNetworkTags](#virtualnetworktags): Resource tags
 * **type**: 'Microsoft.ScVmm/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ScVmm/vmmServers@2020-06-05-preview
+## Resource Microsoft.ScVmm/vmmServers@2020-06-05-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-06-05-preview' (ReadOnly, DeployTimeConstant): The resource api version

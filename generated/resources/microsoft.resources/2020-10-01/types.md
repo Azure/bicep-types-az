@@ -1,6 +1,6 @@
 # Microsoft.Resources @ 2020-10-01
 
-## Resource Microsoft.Resources/deployments@2020-10-01
+## Resource Microsoft.Resources/deployments@2020-10-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Resources/deploymentScripts@2020-10-01
+## Resource Microsoft.Resources/deploymentScripts@2020-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 

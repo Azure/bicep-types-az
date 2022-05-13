@@ -9,7 +9,7 @@
 * **properties**: [LongTermRetentionBackupProperties](#longtermretentionbackupproperties) (ReadOnly): Properties of a long term retention backup
 * **type**: 'Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/administrators@2017-03-01-preview
+## Resource Microsoft.Sql/managedInstances/administrators@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -18,7 +18,7 @@
 * **properties**: [ManagedInstanceAdministratorProperties](#managedinstanceadministratorproperties): The properties of a managed instance administrator.
 * **type**: 'Microsoft.Sql/managedInstances/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases@2017-03-01-preview
+## Resource Microsoft.Sql/managedInstances/databases@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -29,7 +29,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2017-03-01-preview
+## Resource Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2017-03-01-preview
+## Resource Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -67,7 +67,7 @@
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2017-03-01-preview
+## Resource Microsoft.Sql/managedInstances/securityAlertPolicies@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -76,7 +76,7 @@
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/auditingSettings@2017-03-01-preview
+## Resource Microsoft.Sql/servers/auditingSettings@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -94,7 +94,7 @@
 * **properties**: [AutomaticTuningServerProperties](#automatictuningserverproperties) (ReadOnly): Server-level Automatic Tuning properties.
 * **type**: 'Microsoft.Sql/servers/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases@2017-03-01-preview
+## Resource Microsoft.Sql/servers/databases@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -117,7 +117,7 @@
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Properties of a database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2017-03-01-preview
+## Resource Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -181,7 +181,7 @@
 * **properties**: [DatabaseVulnerabilityAssessmentRuleBaselineProperties](#databasevulnerabilityassessmentrulebaselineproperties): Properties of a database Vulnerability Assessment rule baseline.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/dnsAliases@2017-03-01-preview
+## Resource Microsoft.Sql/servers/dnsAliases@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -190,7 +190,7 @@
 * **properties**: [ServerDnsAliasProperties](#serverdnsaliasproperties) (ReadOnly): Properties of a server DNS alias.
 * **type**: 'Microsoft.Sql/servers/dnsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/extendedAuditingSettings@2017-03-01-preview
+## Resource Microsoft.Sql/servers/extendedAuditingSettings@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -199,7 +199,7 @@
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents@2017-03-01-preview
+## Resource Microsoft.Sql/servers/jobAgents@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -229,7 +229,7 @@
 * **properties**: [JobProperties](#jobproperties): Properties of a job.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2017-03-01-preview
+## Resource Microsoft.Sql/servers/jobAgents/jobs/executions@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -291,7 +291,7 @@
 * **properties**: [JobTargetGroupProperties](#jobtargetgroupproperties): Properties of job target group.
 * **type**: 'Microsoft.Sql/servers/jobAgents/targetGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/securityAlertPolicies@2017-03-01-preview
+## Resource Microsoft.Sql/servers/securityAlertPolicies@2017-03-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

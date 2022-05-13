@@ -1,6 +1,6 @@
 # Microsoft.VirtualMachineImages @ 2021-10-01
 
-## Resource Microsoft.VirtualMachineImages/imageTemplates@2021-10-01
+## Resource Microsoft.VirtualMachineImages/imageTemplates@2021-10-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version

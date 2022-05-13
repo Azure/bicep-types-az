@@ -1,6 +1,6 @@
 # Microsoft.Logz @ 2022-01-01-preview
 
-## Resource Microsoft.Logz/monitors@2022-01-01-preview
+## Resource Microsoft.Logz/monitors@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [LogzMonitorResourceTags](#logzmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Logz/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logz/monitors/accounts@2022-01-01-preview
+## Resource Microsoft.Logz/monitors/accounts@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -36,7 +36,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Logz/monitors/accounts/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logz/monitors/metricsSource@2022-01-01-preview
+## Resource Microsoft.Logz/monitors/metricsSource@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -59,7 +59,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Logz/monitors/metricsSource/tagRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logz/monitors/singleSignOnConfigurations@2022-01-01-preview
+## Resource Microsoft.Logz/monitors/singleSignOnConfigurations@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

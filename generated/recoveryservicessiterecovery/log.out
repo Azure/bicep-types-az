@@ -23,7 +23,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 148ms
+info    | autorest.bicep took 80ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2022-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -37,7 +37,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 38ms
+info    | autorest.bicep took 62ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -51,7 +51,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 41ms
+info    | autorest.bicep took 102ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-11-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -65,7 +65,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 42ms
+info    | autorest.bicep took 70ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -79,7 +79,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 38ms
+info    | autorest.bicep took 69ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -93,7 +93,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 48ms
+info    | autorest.bicep took 62ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-07-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -107,7 +107,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 38ms
+info    | autorest.bicep took 49ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -121,7 +121,7 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 40ms
+info    | autorest.bicep took 43ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-04-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -137,7 +137,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 35ms
+info    | autorest.bicep took 37ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -155,7 +155,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 35ms
+info    | autorest.bicep took 49ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2021-02-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -171,7 +171,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 39ms
+info    | autorest.bicep took 42ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2018-07-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -189,7 +189,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationsupportedoperatingsystems': Found mismatch between type segments (2) and name segments (1)
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 50ms
+info    | autorest.bicep took 47ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2018-01-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -204,7 +204,7 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2018-01-10/service.json:14658:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 30ms
+info    | autorest.bicep took 33ms
 info    | Processing batch task - {"tag":"microsoft.recoveryservices-2016-08-10"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -219,5 +219,5 @@ warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined t
     - file:///home/jeskew/Workspaces/azure-rest-api-specs/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/stable/2016-08-10/service.json:11607:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft.recoveryservices/vaults/{resourcename}/replicationvaulthealth': Found mismatch between type segments (2) and name segments (1)
-info    | autorest.bicep took 39ms
-info    | Autorest completed in 195.5s. 28 files generated.
+info    | autorest.bicep took 23ms
+info    | Autorest completed in 223.28s. 28 files generated.

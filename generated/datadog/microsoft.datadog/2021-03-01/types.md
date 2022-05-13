@@ -10,7 +10,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Datadog/monitors@2021-03-01
+## Resource Microsoft.Datadog/monitors@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@
 * **tags**: [DatadogMonitorResourceTags](#datadogmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2021-03-01
+## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version

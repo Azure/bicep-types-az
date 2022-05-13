@@ -1,6 +1,6 @@
 # Microsoft.HybridData @ 2019-06-01
 
-## Resource Microsoft.HybridData/dataManagers@2019-06-01
+## Resource Microsoft.HybridData/dataManagers@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -15,7 +15,7 @@ region is specified on update the request will succeed.
 (across resource groups).
 * **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2019-06-01
+## Resource Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -24,7 +24,7 @@ region is specified on update the request will succeed.
 * **properties**: [JobDefinitionProperties](#jobdefinitionproperties) (Required): Job Definition
 * **type**: 'Microsoft.HybridData/dataManagers/dataServices/jobDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridData/dataManagers/dataStores@2019-06-01
+## Resource Microsoft.HybridData/dataManagers/dataStores@2019-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version

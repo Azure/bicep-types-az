@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/servers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/administrators@2014-04-01
+## Resource Microsoft.Sql/servers/administrators@2014-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -43,7 +43,7 @@
 * **properties**: [ServerTableAuditingPolicyProperties](#servertableauditingpolicyproperties): Properties of a server table auditing policy.
 * **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/communicationLinks@2014-04-01
+## Resource Microsoft.Sql/servers/communicationLinks@2014-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -65,7 +65,7 @@
 * **properties**: [ServerConnectionPolicyProperties](#serverconnectionpolicyproperties): The properties of a server secure connection policy.
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases@2014-04-01
+## Resource Microsoft.Sql/servers/databases@2014-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -132,7 +132,7 @@
 * **properties**: [DataMaskingRuleProperties](#datamaskingruleproperties): The properties of a database data masking rule.
 * **type**: 'Microsoft.Sql/servers/databases/dataMaskingPolicies/rules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/extensions@2014-04-01
+## Resource Microsoft.Sql/servers/databases/extensions@2014-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -192,7 +192,7 @@
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01
+## Resource Microsoft.Sql/servers/disasterRecoveryConfiguration@2014-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -202,7 +202,7 @@
 * **properties**: [DisasterRecoveryConfigurationProperties](#disasterrecoveryconfigurationproperties) (ReadOnly): Represents the properties of a disaster recovery configuration.
 * **type**: 'Microsoft.Sql/servers/disasterRecoveryConfiguration' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/elasticPools@2014-04-01
+## Resource Microsoft.Sql/servers/elasticPools@2014-04-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version

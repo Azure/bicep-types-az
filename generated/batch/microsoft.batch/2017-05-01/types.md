@@ -1,6 +1,6 @@
 # Microsoft.Batch @ 2017-05-01
 
-## Resource Microsoft.Batch/batchAccounts@2017-05-01
+## Resource Microsoft.Batch/batchAccounts@2017-05-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-05-01' (ReadOnly, DeployTimeConstant): The resource api version

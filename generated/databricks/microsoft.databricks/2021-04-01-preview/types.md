@@ -1,6 +1,6 @@
 # Microsoft.Databricks @ 2021-04-01-preview
 
-## Resource Microsoft.Databricks/workspaces@2021-04-01-preview
+## Resource Microsoft.Databricks/workspaces@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Databricks/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Databricks/workspaces/privateEndpointConnections@2021-04-01-preview
+## Resource Microsoft.Databricks/workspaces/privateEndpointConnections@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -31,7 +31,7 @@
 * **properties**: [GroupIdInformationProperties](#groupidinformationproperties) (ReadOnly): The properties for a group information object
 * **type**: 'Microsoft.Databricks/workspaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2021-04-01-preview
+## Resource Microsoft.Databricks/workspaces/virtualNetworkPeerings@2021-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

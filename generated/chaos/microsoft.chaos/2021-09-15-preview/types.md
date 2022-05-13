@@ -1,6 +1,6 @@
 # Microsoft.Chaos @ 2021-09-15-preview
 
-## Resource Microsoft.Chaos/experiments@2021-09-15-preview
+## Resource Microsoft.Chaos/experiments@2021-09-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

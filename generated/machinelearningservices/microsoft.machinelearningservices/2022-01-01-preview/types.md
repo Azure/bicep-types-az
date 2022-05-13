@@ -1,6 +1,6 @@
 # Microsoft.MachineLearningServices @ 2022-01-01-preview
 
-## Resource Microsoft.MachineLearningServices/workspaces@2022-01-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [WorkspaceTags](#workspacetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningServices/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearningServices/workspaces/computes@2022-01-01-preview
+## Resource Microsoft.MachineLearningServices/workspaces/computes@2022-01-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

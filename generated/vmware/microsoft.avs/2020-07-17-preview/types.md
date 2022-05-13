@@ -1,6 +1,6 @@
 # Microsoft.AVS @ 2020-07-17-preview
 
-## Resource Microsoft.AVS/privateClouds@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AVS/privateClouds' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/addons@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/addons@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -21,7 +21,7 @@
 * **properties**: [AddonProperties](#addonproperties): The properties of an addon that may be updated
 * **type**: 'Microsoft.AVS/privateClouds/addons' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/authorizations@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/authorizations@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -30,7 +30,7 @@
 * **properties**: [ExpressRouteAuthorizationProperties](#expressrouteauthorizationproperties) (ReadOnly): The properties of an ExpressRoute Circuit Authorization resource
 * **type**: 'Microsoft.AVS/privateClouds/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/clusters@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/clusters@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,7 +40,7 @@
 * **sku**: [Sku](#sku) (Required): The resource model definition representing SKU
 * **type**: 'Microsoft.AVS/privateClouds/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/globalReachConnections@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/globalReachConnections@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -58,7 +58,7 @@
 * **properties**: [HcxEnterpriseSiteProperties](#hcxenterprisesiteproperties) (ReadOnly): The properties of an HCX Enterprise Site
 * **type**: 'Microsoft.AVS/privateClouds/hcxEnterpriseSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -67,7 +67,7 @@
 * **properties**: [WorkloadNetworkDhcpEntity](#workloadnetworkdhcpentity): Base class for WorkloadNetworkDhcpServer and WorkloadNetworkDhcpRelay to inherit from
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsServices@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsServices@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -76,7 +76,7 @@
 * **properties**: [WorkloadNetworkDnsServiceProperties](#workloadnetworkdnsserviceproperties): NSX DNS Service Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/dnsServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -94,7 +94,7 @@
 * **properties**: [WorkloadNetworkGatewayProperties](#workloadnetworkgatewayproperties) (ReadOnly): Properties of a NSX Gateway.
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -103,7 +103,7 @@
 * **properties**: [WorkloadNetworkPortMirroringProperties](#workloadnetworkportmirroringproperties): NSX Port Mirroring Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/segments@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/segments@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -121,7 +121,7 @@
 * **properties**: [WorkloadNetworkVirtualMachineProperties](#workloadnetworkvirtualmachineproperties) (ReadOnly): NSX Virtual Machine Properties
 * **type**: 'Microsoft.AVS/privateClouds/workloadNetworks/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2020-07-17-preview
+## Resource Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2020-07-17-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version

@@ -12,7 +12,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/disks@2017-03-30
+## Resource Microsoft.Compute/disks@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -26,7 +26,7 @@
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
 
-## Resource Microsoft.Compute/images@2017-03-30
+## Resource Microsoft.Compute/images@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -59,7 +59,7 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Compute/locations/publishers/artifacttypes/types/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/snapshots@2017-03-30
+## Resource Microsoft.Compute/snapshots@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -72,7 +72,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachines@2017-03-30
+## Resource Microsoft.Compute/virtualMachines@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -87,7 +87,7 @@
 * **type**: 'Microsoft.Compute/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The virtual machine zones.
 
-## Resource Microsoft.Compute/virtualMachines/extensions@2017-03-30
+## Resource Microsoft.Compute/virtualMachines/extensions@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -98,7 +98,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Compute/virtualMachines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Compute/virtualMachineScaleSets@2017-03-30
+## Resource Microsoft.Compute/virtualMachineScaleSets@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version
@@ -113,7 +113,7 @@
 * **type**: 'Microsoft.Compute/virtualMachineScaleSets' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set.
 
-## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2017-03-30
+## Resource Microsoft.Compute/virtualMachineScaleSets/extensions@2017-03-30 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-03-30' (ReadOnly, DeployTimeConstant): The resource api version

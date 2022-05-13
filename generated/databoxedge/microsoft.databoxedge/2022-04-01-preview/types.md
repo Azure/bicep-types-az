@@ -26,7 +26,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/deviceCapacityInfo' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticProactiveLogCollectionSettings@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticProactiveLogCollectionSettings@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -56,7 +56,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticProactiveLogCollectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticRemoteSupportSettings@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/diagnosticRemoteSupportSettings@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -76,7 +76,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -87,7 +87,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -118,7 +118,7 @@
 * **properties**: [MECRoleProperties](#mecroleproperties): MEC role properties.
 
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/addons@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -134,7 +134,7 @@
 * **properties**: [ArcAddonProperties](#arcaddonproperties) (Required): Arc addon properties.
 
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -144,7 +144,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles/monitoringConfig' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -154,7 +154,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -164,7 +164,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -174,7 +174,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -184,7 +184,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -215,7 +215,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2022-04-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2022-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

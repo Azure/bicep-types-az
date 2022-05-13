@@ -1,6 +1,6 @@
 # Microsoft.Automation @ 2018-01-15
 
-## Resource Microsoft.Automation/automationAccounts/compilationjobs@2018-01-15
+## Resource Microsoft.Automation/automationAccounts/compilationjobs@2018-01-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2018-01-15
+## Resource Microsoft.Automation/automationAccounts/nodeConfigurations@2018-01-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-01-15' (ReadOnly, DeployTimeConstant): The resource api version

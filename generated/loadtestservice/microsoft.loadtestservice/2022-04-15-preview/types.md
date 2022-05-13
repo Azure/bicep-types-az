@@ -1,6 +1,6 @@
 # Microsoft.LoadTestService @ 2022-04-15-preview
 
-## Resource Microsoft.LoadTestService/loadTests@2022-04-15-preview
+## Resource Microsoft.LoadTestService/loadTests@2022-04-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

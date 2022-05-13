@@ -1,6 +1,6 @@
 # Microsoft.Synapse @ 2020-04-01-preview
 
-## Resource Microsoft.Synapse/workspaces/sqlDatabases@2020-04-01-preview
+## Resource Microsoft.Synapse/workspaces/sqlDatabases@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Synapse/workspaces/sqlDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview
+## Resource Microsoft.Synapse/workspaces/sqlPools@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

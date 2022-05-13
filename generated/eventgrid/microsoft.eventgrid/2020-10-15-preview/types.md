@@ -1,6 +1,6 @@
 # Microsoft.EventGrid @ 2020-10-15-preview
 
-## Resource Microsoft.EventGrid/domains@2020-10-15-preview
+## Resource Microsoft.EventGrid/domains@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -14,7 +14,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/domains' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2020-10-15-preview
+## Resource Microsoft.EventGrid/domains/privateEndpointConnections@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -23,7 +23,7 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the private endpoint connection resource.
 * **type**: 'Microsoft.EventGrid/domains/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/domains/topics@2020-10-15-preview
+## Resource Microsoft.EventGrid/domains/topics@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -33,7 +33,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/domains/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/eventSubscriptions@2020-10-15-preview
+## Resource Microsoft.EventGrid/eventSubscriptions@2020-10-15-preview (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -52,7 +52,7 @@
 * **properties**: [ExtensionTopicProperties](#extensiontopicproperties) (ReadOnly): Properties of the Extension Topic
 * **type**: 'Microsoft.EventGrid/extensionTopics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/partnerNamespaces@2020-10-15-preview
+## Resource Microsoft.EventGrid/partnerNamespaces@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -99,7 +99,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/partnerTopics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/partnerTopics/eventSubscriptions@2020-10-15-preview
+## Resource Microsoft.EventGrid/partnerTopics/eventSubscriptions@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -109,7 +109,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/partnerTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/systemTopics@2020-10-15-preview
+## Resource Microsoft.EventGrid/systemTopics@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -122,7 +122,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/systemTopics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2020-10-15-preview
+## Resource Microsoft.EventGrid/systemTopics/eventSubscriptions@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -132,7 +132,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.EventGrid/systemTopics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics@2020-10-15-preview
+## Resource Microsoft.EventGrid/topics@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -148,7 +148,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
 * **type**: 'Microsoft.EventGrid/topics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2020-10-15-preview
+## Resource Microsoft.EventGrid/topics/privateEndpointConnections@2020-10-15-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-10-15-preview' (ReadOnly, DeployTimeConstant): The resource api version

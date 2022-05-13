@@ -1,6 +1,6 @@
 # Microsoft.Network @ 2018-08-01
 
-## Resource Microsoft.Network/frontDoors@2018-08-01
+## Resource Microsoft.Network/frontDoors@2018-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version

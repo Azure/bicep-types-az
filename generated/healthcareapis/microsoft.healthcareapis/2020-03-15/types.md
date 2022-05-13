@@ -1,6 +1,6 @@
 # Microsoft.HealthcareApis @ 2020-03-15
 
-## Resource Microsoft.HealthcareApis/services@2020-03-15
+## Resource Microsoft.HealthcareApis/services@2020-03-15 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-15' (ReadOnly, DeployTimeConstant): The resource api version

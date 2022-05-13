@@ -20,7 +20,7 @@
 * **properties**: [EventProperties](#eventproperties) (ReadOnly): The properties of a monitoring event.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationEvents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -50,7 +50,7 @@
 * **properties**: [NetworkProperties](#networkproperties) (ReadOnly): Network Properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -60,7 +60,7 @@
 * **properties**: [CreateNetworkMappingInputProperties](#createnetworkmappinginputproperties) (Required): Common input details for network mapping operation.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -70,7 +70,7 @@
 * **properties**: [CreateProtectionContainerInputProperties](#createprotectioncontainerinputproperties): Create protection container input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationMigrationItems@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -100,7 +100,7 @@
 * **properties**: [ProtectableItemProperties](#protectableitemproperties) (ReadOnly): Replication protected item custom data details.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectableItems' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -120,7 +120,7 @@
 * **properties**: [RecoveryPointProperties](#recoverypointproperties) (ReadOnly): Recovery point properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -130,7 +130,7 @@
 * **properties**: [CreateProtectionContainerMappingInputProperties](#createprotectioncontainermappinginputproperties): Configure pairing input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationRecoveryServicesProviders@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -150,7 +150,7 @@
 * **properties**: [StorageClassificationProperties](#storageclassificationproperties) (ReadOnly): Storage object properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -160,7 +160,7 @@
 * **properties**: [StorageMappingInputProperties](#storagemappinginputproperties): Storage mapping input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationStorageClassifications/replicationStorageClassificationMappings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationFabrics/replicationvCenters@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -180,7 +180,7 @@
 * **properties**: [JobProperties](#jobproperties) (ReadOnly): Job custom data details.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationJobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationPolicies@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationPolicies@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -200,7 +200,7 @@
 * **properties**: [CreateProtectionIntentProperties](#createprotectionintentproperties): Create protection intent input properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationProtectionIntents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationRecoveryPlans@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationRecoveryPlans@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -210,7 +210,7 @@
 * **properties**: [CreateRecoveryPlanInputProperties](#createrecoveryplaninputproperties) (Required): Recovery plan creation properties.
 * **type**: 'Microsoft.RecoveryServices/vaults/replicationRecoveryPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.RecoveryServices/vaults/replicationVaultSettings@2021-08-01
+## Resource Microsoft.RecoveryServices/vaults/replicationVaultSettings@2021-08-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version

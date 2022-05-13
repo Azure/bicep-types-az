@@ -1,6 +1,6 @@
 # Microsoft.Resources @ 2021-04-01
 
-## Resource Microsoft.Resources/deployments@2021-04-01
+## Resource Microsoft.Resources/deployments@2021-04-01 (Async)
 * **Valid Scope(s)**: Unknown
 ### Properties
 * **apiVersion**: '2021-04-01' (ReadOnly, DeployTimeConstant): The resource api version

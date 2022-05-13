@@ -1,6 +1,6 @@
 # Microsoft.StorageSync @ 2020-03-01
 
-## Resource Microsoft.StorageSync/storageSyncServices@2020-03-01
+## Resource Microsoft.StorageSync/storageSyncServices@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **tags**: [StorageSyncServiceCreateParametersTags](#storagesyncservicecreateparameterstags): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
 * **type**: 'Microsoft.StorageSync/storageSyncServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/privateEndpointConnections@2020-03-01
+## Resource Microsoft.StorageSync/storageSyncServices/privateEndpointConnections@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -20,7 +20,7 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Properties of the PrivateEndpointConnectProperties.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2020-03-01
+## Resource Microsoft.StorageSync/storageSyncServices/registeredServers@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -38,7 +38,7 @@
 * **properties**: any: Any object
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2020-03-01
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -47,7 +47,7 @@
 * **properties**: [CloudEndpointCreateParametersProperties](#cloudendpointcreateparametersproperties): CloudEndpoint Properties object.
 * **type**: 'Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2020-03-01
+## Resource Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2020-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version

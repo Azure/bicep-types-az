@@ -1,6 +1,6 @@
 # Microsoft.AAD @ 2021-03-01
 
-## Resource Microsoft.AAD/domainServices@2021-03-01
+## Resource Microsoft.AAD/domainServices@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.AAD/domainServices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Aad/domainServices/ouContainer@2021-03-01
+## Resource Microsoft.Aad/domainServices/ouContainer@2021-03-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **accountName**: string (WriteOnly): The account name

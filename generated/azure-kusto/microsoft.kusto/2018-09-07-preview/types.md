@@ -1,6 +1,6 @@
 # Microsoft.Kusto @ 2018-09-07-preview
 
-## Resource Microsoft.Kusto/clusters@2018-09-07-preview
+## Resource Microsoft.Kusto/clusters@2018-09-07-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -13,7 +13,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases@2018-09-07-preview
+## Resource Microsoft.Kusto/clusters/databases@2018-09-07-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -25,7 +25,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Kusto/clusters/databases/eventhubconnections@2018-09-07-preview
+## Resource Microsoft.Kusto/clusters/databases/eventhubconnections@2018-09-07-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-09-07-preview' (ReadOnly, DeployTimeConstant): The resource api version

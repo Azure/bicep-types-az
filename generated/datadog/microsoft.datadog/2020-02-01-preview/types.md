@@ -9,7 +9,7 @@
 * **properties**: [DatadogAgreementProperties](#datadogagreementproperties): Terms properties.
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Datadog/monitors@2020-02-01-preview
+## Resource Microsoft.Datadog/monitors@2020-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **tags**: [DatadogMonitorResourceTags](#datadogmonitorresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2020-02-01-preview
+## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2020-02-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

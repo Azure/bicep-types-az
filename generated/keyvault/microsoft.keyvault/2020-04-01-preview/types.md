@@ -1,6 +1,6 @@
 # Microsoft.KeyVault @ 2020-04-01-preview
 
-## Resource Microsoft.KeyVault/managedHSMs@2020-04-01-preview
+## Resource Microsoft.KeyVault/managedHSMs@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -12,7 +12,7 @@
 * **tags**: [ManagedHsmResourceTags](#managedhsmresourcetags): Resource tags
 * **type**: 'Microsoft.KeyVault/managedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KeyVault/vaults@2020-04-01-preview
+## Resource Microsoft.KeyVault/vaults@2020-04-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

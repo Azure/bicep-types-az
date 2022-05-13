@@ -1,6 +1,6 @@
 # Microsoft.ContainerService @ 2015-11-01-preview
 
-## Resource Microsoft.ContainerService/containerServices@2015-11-01-preview
+## Resource Microsoft.ContainerService/containerServices@2015-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

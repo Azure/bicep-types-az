@@ -1,6 +1,6 @@
 # Microsoft.KubernetesConfiguration @ 2022-03-01
 
-## Resource Microsoft.KubernetesConfiguration/extensions@2022-03-01
+## Resource Microsoft.KubernetesConfiguration/extensions@2022-03-01 (Async)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -11,7 +11,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.KubernetesConfiguration/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KubernetesConfiguration/fluxConfigurations@2022-03-01
+## Resource Microsoft.KubernetesConfiguration/fluxConfigurations@2022-03-01 (Async)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2022-03-01' (ReadOnly, DeployTimeConstant): The resource api version

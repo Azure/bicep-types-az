@@ -1,6 +1,6 @@
 # Microsoft.DataMigration @ 2021-10-30-preview
 
-## Resource Microsoft.DataMigration/databaseMigrations@2021-10-30-preview
+## Resource Microsoft.DataMigration/databaseMigrations@2021-10-30-preview (Async)
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -10,7 +10,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.DataMigration/databaseMigrations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataMigration/services@2021-10-30-preview
+## Resource Microsoft.DataMigration/services@2021-10-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -71,7 +71,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly)
 * **type**: 'Microsoft.DataMigration/services/serviceTasks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataMigration/sqlMigrationServices@2021-10-30-preview
+## Resource Microsoft.DataMigration/sqlMigrationServices@2021-10-30-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version

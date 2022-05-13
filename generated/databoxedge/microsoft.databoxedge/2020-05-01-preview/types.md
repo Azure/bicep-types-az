@@ -1,6 +1,6 @@
 # Microsoft.DataBoxEdge @ 2020-05-01-preview
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): Properties of alert.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/bandwidthSchedules@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -40,7 +40,7 @@
 * **properties**: [NetworkSettingsProperties](#networksettingsproperties) (ReadOnly): The properties of network settings.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/networkSettings' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -49,7 +49,7 @@
 * **properties**: [OrderProperties](#orderproperties): Order properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/roles@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -64,7 +64,7 @@
 * **properties**: [IoTRoleProperties](#iotroleproperties): IoT role properties.
 
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -73,7 +73,7 @@
 * **properties**: [ShareProperties](#shareproperties) (Required): The share properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/shares' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -82,7 +82,7 @@
 * **properties**: [StorageAccountCredentialProperties](#storageaccountcredentialproperties) (Required): The storage account credential properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccountCredentials' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -91,7 +91,7 @@
 * **properties**: [StorageAccountProperties](#storageaccountproperties) (Required): The storage account properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -100,7 +100,7 @@
 * **properties**: [ContainerProperties](#containerproperties) (Required): The container properties.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/storageAccounts/containers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/triggers@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
@@ -129,7 +129,7 @@
 * **properties**: [UpdateSummaryProperties](#updatesummaryproperties) (ReadOnly): The device update information summary.
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/updateSummary' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2020-05-01-preview
+## Resource Microsoft.DataBoxEdge/dataBoxEdgeDevices/users@2020-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

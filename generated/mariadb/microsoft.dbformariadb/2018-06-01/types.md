@@ -1,6 +1,6 @@
 # Microsoft.DBforMariaDB @ 2018-06-01
 
-## Resource Microsoft.DBforMariaDB/servers@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -30,7 +30,7 @@
 * **properties**: [RecommendationActionProperties](#recommendationactionproperties) (ReadOnly): The properties of a recommendation action.
 * **type**: 'Microsoft.DBforMariaDB/servers/advisors/recommendedActions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/configurations@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/configurations@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -39,7 +39,7 @@
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
 * **type**: 'Microsoft.DBforMariaDB/servers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/databases@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/databases@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -48,7 +48,7 @@
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
 * **type**: 'Microsoft.DBforMariaDB/servers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -57,7 +57,7 @@
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a server firewall rule.
 * **type**: 'Microsoft.DBforMariaDB/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/privateEndpointConnections@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -84,7 +84,7 @@
 * **properties**: [QueryTextProperties](#querytextproperties) (ReadOnly): The properties of a query text.
 * **type**: 'Microsoft.DBforMariaDB/servers/queryTexts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/securityAlertPolicies@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -102,7 +102,7 @@
 * **properties**: [QueryStatisticProperties](#querystatisticproperties) (ReadOnly): The properties of a query statistic.
 * **type**: 'Microsoft.DBforMariaDB/servers/topQueryStatistics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01
+## Resource Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01 (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version

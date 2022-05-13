@@ -1,6 +1,6 @@
 # Microsoft.ConfidentialLedger @ 2021-05-13-preview
 
-## Resource Microsoft.ConfidentialLedger/ledgers@2021-05-13-preview
+## Resource Microsoft.ConfidentialLedger/ledgers@2021-05-13-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version

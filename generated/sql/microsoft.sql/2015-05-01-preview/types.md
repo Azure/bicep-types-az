@@ -9,7 +9,7 @@
 * **properties**: [SubscriptionUsageProperties](#subscriptionusageproperties) (ReadOnly): Properties of a subscription usage.
 * **type**: 'Microsoft.Sql/locations/usages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/managedInstances@2015-05-01-preview
+## Resource Microsoft.Sql/managedInstances@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -22,7 +22,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Sql/managedInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers@2015-05-01-preview
+## Resource Microsoft.Sql/servers@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -87,7 +87,7 @@
 * **properties**: [DatabaseAutomaticTuningProperties](#databaseautomatictuningproperties) (ReadOnly): Database-level Automatic Tuning properties.
 * **type**: 'Microsoft.Sql/servers/databases/automaticTuning' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview
+## Resource Microsoft.Sql/servers/databases/syncGroups@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -96,7 +96,7 @@
 * **properties**: [SyncGroupProperties](#syncgroupproperties): Properties of a sync group.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2015-05-01-preview
+## Resource Microsoft.Sql/servers/databases/syncGroups/syncMembers@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -105,7 +105,7 @@
 * **properties**: [SyncMemberProperties](#syncmemberproperties): Properties of a sync member.
 * **type**: 'Microsoft.Sql/servers/databases/syncGroups/syncMembers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/encryptionProtector@2015-05-01-preview
+## Resource Microsoft.Sql/servers/encryptionProtector@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -116,7 +116,7 @@
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Sql/servers/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/failoverGroups@2015-05-01-preview
+## Resource Microsoft.Sql/servers/failoverGroups@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -136,7 +136,7 @@
 * **properties**: [ServerFirewallRuleProperties](#serverfirewallruleproperties): The properties of a server firewall rule.
 * **type**: 'Microsoft.Sql/servers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/keys@2015-05-01-preview
+## Resource Microsoft.Sql/servers/keys@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -147,7 +147,7 @@
 * **properties**: [ServerKeyProperties](#serverkeyproperties): Properties for a server key execution.
 * **type**: 'Microsoft.Sql/servers/keys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/syncAgents@2015-05-01-preview
+## Resource Microsoft.Sql/servers/syncAgents@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -156,7 +156,7 @@
 * **properties**: [SyncAgentProperties](#syncagentproperties): Properties of an Azure SQL Database sync agent.
 * **type**: 'Microsoft.Sql/servers/syncAgents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Sql/servers/virtualNetworkRules@2015-05-01-preview
+## Resource Microsoft.Sql/servers/virtualNetworkRules@2015-05-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version

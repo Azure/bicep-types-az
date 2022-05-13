@@ -1,6 +1,6 @@
 # Microsoft.OperationalInsights @ 2015-11-01-preview
 
-## Resource Microsoft.OperationalInsights/workspaces@2015-11-01-preview
+## Resource Microsoft.OperationalInsights/workspaces@2015-11-01-preview (Async)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
