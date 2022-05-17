@@ -207,7 +207,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
 }
 
 async function clearAutorestTempDir(logger: ILogger, verbose: boolean, waitForDebugger: boolean) {
-  const autoRestParams = applyCommonAutoRestParameters(['--clear-temp'], verbose, waitForDebugger);
+  const autoRestParams = applyCommonAutoRestParameters(['--clear-temp', '--allow-no-input'], verbose, waitForDebugger);
 
   return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
 }
