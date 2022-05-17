@@ -77,14 +77,14 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
           return null;
         }
       }
-        
+
       const polymorphicBodies: Dictionary<TypeReference> = {};
       for (const definition of definitions) {
         const bodyType = processResourceBody(fullyQualifiedType, definition);
         if (!bodyType || !definition.descriptor.constantName) {
           return null;
         }
-        
+
         polymorphicBodies[definition.descriptor.constantName] = bodyType;
       }
 
@@ -266,7 +266,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const getSubTypes = flattenDiscriminatorSubTypes(getSchema);
 
     for (const subTypeName of uniq([...keys(putSubTypes), ...keys(getSubTypes)])) {
-      yield { 
+      yield {
         subTypeName,
         putSubType: putSubTypes[subTypeName],
         getSubType: getSubTypes[subTypeName],
@@ -426,7 +426,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       // so construct the type on-the-fly, and don't cache it globally
       return namedDefinitions[definitionName];
     }
-    
+
     let additionalProperties: TypeReference | undefined;
     if (includeBaseProperties) {
       const putParentDictionary = (putSchema?.parents?.all || []).filter(x => x instanceof DictionarySchema).map(x => x as DictionarySchema)[0];
@@ -474,6 +474,10 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     for (const enumValue of combinedSchema.choices) {
       const stringLiteralType = factory.addType(new StringLiteralType(enumValue.value.toString()));
       enumTypes.push(stringLiteralType);
+    }
+
+    if (combinedSchema.type === SchemaType.Choice) {
+      enumTypes.push(factory.lookupBuiltInType(BuiltInTypeKind.String));
     }
 
     if (enumTypes.length === 1) {
