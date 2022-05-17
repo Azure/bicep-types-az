@@ -2,89 +2,89 @@ WARNING: Unable to parse swagger path "Microsoft.Intune/preview/2015-01-14-priva
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 info    | Processing batch task - {"tag":"microsoft.intune-2015-01-14-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1712:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1712:5
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1743:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1743:5
 warning | PreCheck/SchemaMissingType | The schema 'LocationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1757:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1757:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1767:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1767:5
 warning | PreCheck/SchemaMissingType | The schema 'LocationCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1781:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1781:5
 warning | PreCheck/SchemaMissingType | The schema 'GroupsCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1799:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1799:5
 warning | PreCheck/SchemaMissingType | The schema 'GroupItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1817:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1817:5
 warning | PreCheck/SchemaMissingType | The schema 'GroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1831:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1831:5
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1842:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1842:5
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1860:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1860:5
 warning | PreCheck/SchemaMissingType | The schema 'ApplicationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1874:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1874:5
 warning | PreCheck/SchemaMissingType | The schema 'IOSMAMPolicyCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1897:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1897:5
 warning | PreCheck/SchemaMissingType | The schema 'AndroidMAMPolicyCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1915:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1915:5
 warning | PreCheck/SchemaMissingType | The schema 'iOSMAMPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1933:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1933:5
 warning | PreCheck/SchemaMissingType | The schema 'AndroidMAMPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1947:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1947:5
 warning | PreCheck/SchemaMissingType | The schema 'MAMPolicyAppIdOrGroupIdPayload' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1961:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1961:5
 warning | PreCheck/SchemaMissingType | The schema 'MAMPolicyAppOrGroupIdProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1969:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1969:5
 warning | PreCheck/SchemaMissingType | The schema 'MAMPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1980:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:1980:5
 warning | PreCheck/SchemaMissingType | The schema 'iOSMAMPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2102:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2102:5
 warning | PreCheck/SchemaMissingType | The schema 'AndroidMAMPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2130:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2130:5
 warning | PreCheck/SchemaMissingType | The schema 'DeviceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2156:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2156:5
 warning | PreCheck/SchemaMissingType | The schema 'Device' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2174:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2174:5
 warning | PreCheck/SchemaMissingType | The schema 'DeviceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2188:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2188:5
 warning | PreCheck/SchemaMissingType | The schema 'WipeDeviceOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2214:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2214:5
 warning | PreCheck/SchemaMissingType | The schema 'WipeDeviceOperationResultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2228:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2228:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationResultCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2238:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2238:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2256:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationResultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2270:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2270:5
 warning | PreCheck/SchemaMissingType | The schema 'operationMetadataProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2298:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2298:5
 warning | PreCheck/SchemaMissingType | The schema 'StatusesDefault' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2312:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2312:5
 warning | PreCheck/SchemaMissingType | The schema 'StatusesProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2331:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2331:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedUserCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2372:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2372:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedUser' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2391:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2391:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedUserProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2405:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2405:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedEnrolledAppCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2417:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2417:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedEnrolledApp' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2436:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2436:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedEnrolledAppProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2450:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2450:5
 warning | PreCheck/SchemaMissingType | The schema 'FlaggedEnrolledAppError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2476:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/intune/resource-manager/Microsoft.Intune/preview/2015-01-14-preview/intune.json:2476:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 1.79s. 2 files generated.
+info    | autorest.bicep took 13ms
+info    | Autorest completed in 4.02s. 2 files generated.

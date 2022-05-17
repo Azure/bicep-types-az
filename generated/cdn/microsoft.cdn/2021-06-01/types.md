@@ -287,7 +287,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 ### Properties
 * **frontDoorId**: string (ReadOnly): The Id of the frontdoor.
 * **originResponseTimeoutSeconds**: int: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
-* **provisioningState**: string (ReadOnly): Provisioning status of the profile.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' (ReadOnly): Resource status of the profile.
 
 ## TrackedResourceTags
@@ -386,7 +386,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **originPath**: string: A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
 * **origins**: [DeepCreatedOrigin](#deepcreatedorigin)[] (Required): The source of the content being delivered via CDN.
 * **probePath**: string: Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
-* **provisioningState**: string (ReadOnly): Provisioning status of the endpoint.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the endpoint.
 * **queryStringCachingBehavior**: 'BypassCaching' | 'IgnoreQueryString' | 'NotSet' | 'UseQueryString': Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
 * **resourceState**: 'Creating' | 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Resource status of the endpoint.
 * **urlSigningKeys**: [UrlSigningKey](#urlsigningkey)[]: List of keys used to validate the signed URL hashes.
@@ -403,10 +403,10 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 ## CustomDomainProperties
 ### Properties
 * **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters): The JSON object that contains the properties to secure a custom domain.
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of the custom domain.
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **provisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of the custom domain.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 * **validationData**: string: Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
@@ -914,10 +914,10 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 ## CustomDomainPropertiesParameters
 ### Properties
 * **customHttpsParameters**: [CustomDomainHttpsParameters](#customdomainhttpsparameters) (ReadOnly): The JSON object that contains the properties to secure a custom domain.
-* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of Custom Https of the custom domain.
+* **customHttpsProvisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of the custom domain.
 * **customHttpsProvisioningSubstate**: 'CertificateDeleted' | 'CertificateDeployed' | 'DeletingCertificate' | 'DeployingCertificate' | 'DomainControlValidationRequestApproved' | 'DomainControlValidationRequestRejected' | 'DomainControlValidationRequestTimedOut' | 'IssuingCertificate' | 'PendingDomainControlValidationREquestApproval' | 'SubmittingDomainControlValidationRequest' (ReadOnly): Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
 * **hostName**: string (Required): The host name of the custom domain. Must be a domain name.
-* **provisioningState**: string (ReadOnly): Provisioning status of the custom domain.
+* **provisioningState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Failed' (ReadOnly): Provisioning status of the custom domain.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the custom domain.
 * **validationData**: string (ReadOnly): Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
 
@@ -925,7 +925,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 ### Properties
 * **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): The JSON object that contains the properties to send health probes to origin.
 * **origins**: [ResourceReference](#resourcereference)[]: The source of the content being delivered via CDN within given origin group.
-* **provisioningState**: string (ReadOnly): Provisioning status of the origin group.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the origin group.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the origin group.
 * **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.
 * **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
@@ -943,7 +943,7 @@ StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming
 * **privateLinkApprovalMessage**: string: A custom message to be included in the approval request to connect to the Private Link.
 * **privateLinkLocation**: string: The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
 * **privateLinkResourceId**: string: The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-* **provisioningState**: string (ReadOnly): Provisioning status of the origin.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the origin.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' (ReadOnly): Resource status of the origin.
 * **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 

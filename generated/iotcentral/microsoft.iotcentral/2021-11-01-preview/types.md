@@ -51,6 +51,7 @@
 
 ## NetworkRuleSetIpRule
 ### Properties
+* **action**: 'Allow' (ReadOnly): The network action for the IP mask.
 * **filterName**: string: The readable name of the IP rule.
 * **ipMask**: string: The CIDR block defining the IP range.
 

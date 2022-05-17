@@ -794,7 +794,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 ## ManagedInstanceEncryptionProtectorProperties
 ### Properties
 * **serverKeyName**: string: The name of the managed instance key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
 
@@ -1343,7 +1343,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## EncryptionProtectorProperties
 ### Properties
 * **serverKeyName**: string: The name of the server key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the encryption protector.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.

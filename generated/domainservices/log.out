@@ -1,113 +1,113 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 info    | Processing batch task - {"tag":"microsoft.aad-2021-05-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:356:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:401:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:401:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:416:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:416:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:433:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:433:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicaSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:521:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:521:5
 warning | PreCheck/SchemaMissingType | The schema 'LdapsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:587:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:587:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:642:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:642:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:662:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:662:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:704:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:704:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceForestSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:741:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:741:5
 warning | PreCheck/SchemaMissingType | The schema 'ForestTrust' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:757:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:757:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:783:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:783:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProgress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:803:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:803:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:817:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:817:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigDiagnostics' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:913:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:913:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigDiagnosticsValidatorResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:930:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:930:5
 warning | PreCheck/SchemaMissingType | The schema 'ConfigDiagnosticsValidatorResultIssue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:967:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:967:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:984:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:984:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:994:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/domainservices.json:994:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:334:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:334:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:379:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:379:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:396:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:396:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:411:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:411:5
 warning | PreCheck/SchemaMissingType | The schema 'ContainerAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:459:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-05-01/oucontainer.json:459:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.aad-2021-03-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:356:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:401:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:401:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:416:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:416:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:433:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:433:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicaSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:517:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:517:5
 warning | PreCheck/SchemaMissingType | The schema 'LdapsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:583:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:583:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:638:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:638:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:658:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:658:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:700:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:700:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceForestSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:737:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:737:5
 warning | PreCheck/SchemaMissingType | The schema 'ForestTrust' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:753:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:753:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:779:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:779:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProgress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:799:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:799:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:813:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:813:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:909:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:909:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:919:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/domainservices.json:919:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:334:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:334:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:379:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:379:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:396:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:396:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:411:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:411:5
 warning | PreCheck/SchemaMissingType | The schema 'ContainerAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:459:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:459:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:534:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:534:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:544:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2021-03-01/oucontainer.json:544:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'CloudError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:84" => "#/components/schemas/schemas:141"
@@ -115,57 +115,57 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'CloudErrorBody' (1 
   - properties.details.$ref: "#/components/schemas/schemas:88" => "#/components/schemas/schemas:145"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.aad-2020-01-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:356:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:396:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:396:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:411:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:411:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:428:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:428:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicaSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:512:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:512:5
 warning | PreCheck/SchemaMissingType | The schema 'LdapsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:578:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:578:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:633:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:633:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:653:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:653:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:695:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:695:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceForestSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:732:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:732:5
 warning | PreCheck/SchemaMissingType | The schema 'ForestTrust' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:748:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:748:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:774:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:774:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProgress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:794:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:794:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:808:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:808:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:878:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:878:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:888:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/domainservices.json:888:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:334:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:334:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:374:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:374:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:391:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:391:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:406:5
 warning | PreCheck/SchemaMissingType | The schema 'ContainerAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:454:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:529:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:529:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:539:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2020-01-01/oucontainer.json:539:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'CloudError' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:82" => "#/components/schemas/schemas:139"
@@ -173,77 +173,77 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'CloudErrorBody' (1 
   - properties.details.$ref: "#/components/schemas/schemas:86" => "#/components/schemas/schemas:143"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudError' -> 'CloudErrorAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'CloudErrorBody' -> 'CloudErrorBodyAutoGenerated'
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.aad-2017-06-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:356:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:356:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:396:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:396:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:411:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:411:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:428:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:428:5
 warning | PreCheck/SchemaMissingType | The schema 'LdapsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:546:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:546:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:606:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:606:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:626:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:626:5
 warning | PreCheck/SchemaMissingType | The schema 'NotificationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:668:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:668:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceForestSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:705:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:705:5
 warning | PreCheck/SchemaMissingType | The schema 'ForestTrust' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:721:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:721:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:747:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:747:5
 warning | PreCheck/SchemaMissingType | The schema 'MigrationProgress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:767:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:767:5
 warning | PreCheck/SchemaMissingType | The schema 'DomainSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:781:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:781:5
 warning | PreCheck/SchemaMissingType | The schema 'DefaultErrorResponse-error-detailsItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:935:15
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/domainservices.json:935:15
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:334:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:334:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:374:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:374:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainer' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:391:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:391:5
 warning | PreCheck/SchemaMissingType | The schema 'OuContainerProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:406:5
 warning | PreCheck/SchemaMissingType | The schema 'ContainerAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:454:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:529:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:529:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:539:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
-info    | Processing batch task - {"tag":"microsoft.aad-2017-01-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:314:5
-warning | PreCheck/SchemaMissingType | The schema 'DomainService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:354:5
-warning | PreCheck/SchemaMissingType | The schema 'DomainServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:369:5
-warning | PreCheck/SchemaMissingType | The schema 'DomainServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:386:5
-warning | PreCheck/SchemaMissingType | The schema 'LdapsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:481:5
-warning | PreCheck/SchemaMissingType | The schema 'HealthMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:539:5
-warning | PreCheck/SchemaMissingType | The schema 'HealthAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:559:5
-warning | PreCheck/SchemaMissingType | The schema 'NotificationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:601:5
-warning | PreCheck/SchemaMissingType | The schema 'DomainSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:638:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-06-01/oucontainer.json:539:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
-info    | Autorest completed in 4.16s. 10 files generated.
+info    | Processing batch task - {"tag":"microsoft.aad-2017-01-01"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:314:5
+warning | PreCheck/SchemaMissingType | The schema 'DomainService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:354:5
+warning | PreCheck/SchemaMissingType | The schema 'DomainServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:369:5
+warning | PreCheck/SchemaMissingType | The schema 'DomainServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:386:5
+warning | PreCheck/SchemaMissingType | The schema 'LdapsSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:481:5
+warning | PreCheck/SchemaMissingType | The schema 'HealthMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:539:5
+warning | PreCheck/SchemaMissingType | The schema 'HealthAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:559:5
+warning | PreCheck/SchemaMissingType | The schema 'NotificationSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:601:5
+warning | PreCheck/SchemaMissingType | The schema 'DomainSecuritySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/domainservices/resource-manager/Microsoft.AAD/stable/2017-01-01/domainservices.json:638:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 1ms
+info    | Autorest completed in 10.02s. 10 files generated.

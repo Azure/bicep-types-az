@@ -1,340 +1,340 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 info    | Processing batch task - {"tag":"microsoft.search-2020-08-01"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1271:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1271:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1286:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1286:5
 warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1301:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1301:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1320:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1345:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1345:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1359:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1359:5
 warning | PreCheck/SchemaMissingType | The schema 'IpRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1371:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1371:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1380:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1380:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties-privateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1382:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1382:9
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1423:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1423:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1442:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1442:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1456:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1456:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1510:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1510:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1528:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1528:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1542:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1542:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1557:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1557:5
 warning | PreCheck/SchemaMissingType | The schema 'ShareablePrivateLinkResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1591:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1591:5
 warning | PreCheck/SchemaMissingType | The schema 'ShareablePrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1606:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1606:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1626:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1626:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1652:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1652:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1696:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1696:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1799:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1799:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1883:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1883:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1911:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1911:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1929:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-08-01/search.json:1929:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 5ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.search-2020-03-13"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1042:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1042:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1057:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1057:5
 warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1072:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1072:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1091:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1091:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1116:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1116:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1147:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1147:5
 warning | PreCheck/SchemaMissingType | The schema 'IpRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1159:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1159:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1168:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1168:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties-privateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1170:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1170:9
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1211:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1211:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1230:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1230:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1244:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1244:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1269:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1269:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1295:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1295:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1317:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1317:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1412:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1412:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1431:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1431:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1526:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1526:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1554:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1554:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1572:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2020-03-13/search.json:1572:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+info    | autorest.bicep took 3ms
+info    | Processing batch task - {"tag":"microsoft.search-2015-08-19"} .
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:817:5
+warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:832:5
+warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:847:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:861:5
+warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:886:5
+warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:908:5
+warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:978:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:992:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:1087:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:1115:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:1133:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
-info    | Processing batch task - {"tag":"microsoft.search-2015-08-19"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:817:5
-warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:832:5
-warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:847:5
-warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:861:5
-warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:886:5
-warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:908:5
-warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:978:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:992:5
-warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:1087:9
-warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:1115:5
-warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-08-19/search.json:1133:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 0ms
 info    | Processing batch task - {"tag":"microsoft.search-2015-02-28"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:260:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:260:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:275:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:275:5
 warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:290:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:290:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:303:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:303:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:320:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceCreateOrUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:339:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:339:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceReadableProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:359:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:359:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:412:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:412:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:445:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:445:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:458:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:458:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:492:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json:492:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.search-2021-04-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1343:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1343:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1358:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1358:5
 warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1373:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1373:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1392:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1392:5
 warning | PreCheck/SchemaMissingType | The schema 'DataPlaneAuthOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1454:5
 warning | PreCheck/SchemaMissingType | The schema 'DataPlaneAadOrApiKeyAuthOption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1468:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1468:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1576:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1576:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1590:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1590:5
 warning | PreCheck/SchemaMissingType | The schema 'IpRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1626:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1626:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1635:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1635:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties-privateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1637:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1637:9
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1700:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1700:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1749:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1749:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1763:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1763:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1866:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1866:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1884:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1884:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1898:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1898:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1913:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1913:5
 warning | PreCheck/SchemaMissingType | The schema 'ShareablePrivateLinkResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1947:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1947:5
 warning | PreCheck/SchemaMissingType | The schema 'ShareablePrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1962:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1962:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1982:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:1982:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2008:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2008:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2052:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2052:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2264:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2264:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2352:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2352:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2396:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2396:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationServiceSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2406:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationMetricsSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2427:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2427:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationMetricDimension' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2474:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2474:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2490:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2490:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationLogsSpecification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2506:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2506:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2527:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2527:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2545:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2021-04-01-preview/search.json:2545:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.search-2020-08-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1271:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1271:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1286:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1286:5
 warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1301:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1301:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1320:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1345:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1345:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1359:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1359:5
 warning | PreCheck/SchemaMissingType | The schema 'IpRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1371:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1371:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1380:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1380:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties-privateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1382:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1382:9
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1423:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1423:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1442:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1442:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1456:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1456:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedPrivateLinkResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1510:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1510:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1528:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1528:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1542:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1542:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1557:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1557:5
 warning | PreCheck/SchemaMissingType | The schema 'ShareablePrivateLinkResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1591:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1591:5
 warning | PreCheck/SchemaMissingType | The schema 'ShareablePrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1606:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1606:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1626:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1626:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1652:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1652:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1696:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1696:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1799:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1799:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1883:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1883:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1911:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1911:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1929:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2020-08-01-preview/search.json:1929:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.search-2019-10-01-preview"} .
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdminKeyResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1036:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1051:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1051:5
 warning | PreCheck/SchemaMissingType | The schema 'ListQueryKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1066:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1066:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1080:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1080:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1105:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1105:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkRuleSet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1134:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1134:5
 warning | PreCheck/SchemaMissingType | The schema 'IpRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1159:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1159:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1168:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1168:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties-privateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1170:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1170:9
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1211:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1211:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1225:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1225:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1239:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1239:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1264:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1264:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1290:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1290:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1312:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1312:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1394:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1394:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1408:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1408:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1503:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1503:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1531:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1531:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1549:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/search/resource-manager/Microsoft.Search/preview/2019-10-01-preview/search.json:1549:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 5.12s. 14 files generated.
+info    | autorest.bicep took 5ms
+info    | Autorest completed in 13.18s. 14 files generated.

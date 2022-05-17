@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -20,8 +20,8 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 info    | Processing batch task - {"tag":"microsoft.synapse-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -41,83 +41,83 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5432:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5432:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5450:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5450:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5475:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5475:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5503:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5503:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5515:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5515:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5598:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5598:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5616:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5616:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5641:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5641:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5676:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5676:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5795:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5795:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5882:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5882:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5907:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:5907:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6040:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6040:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6056:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6056:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6303:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6303:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6346:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:6346:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7218:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7252:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7252:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7383:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7383:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7408:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7408:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7488:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlPool.json:7488:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlServer.json:1850:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlServer.json:1850:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlServer.json:1893:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/sqlServer.json:1893:5
 warning | PreCheck/SchemaMissingType | The schema 'CspWorkspaceAdminProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1176:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1402:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1402:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1437:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1437:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1485:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1485:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1505:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json:1505:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:1329:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:1329:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2030:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2030:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2073:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2073:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2108:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2108:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2319:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2319:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2893:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2893:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2952:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/integrationRuntime.json:2952:5
 warning | PreCheck/SchemaMissingType | The schema 'LibraryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/library.json:158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/library.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/library.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/library.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -129,7 +129,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConn
   - properties.properties.x-ms-client-flatten: true => <none>
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 warning | Modeler/MissingType | The schema 'KekIdentityProperties-useSystemAssignedIdentity' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PrivateEndpointConnectionForPrivateLinkHubBasic' -> 'PrivateEndpointConnectionForPrivateLinkHubBasicAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -142,7 +142,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 12ms
+info    | autorest.bicep took 23ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2021-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -162,85 +162,85 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'LibraryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/library.json:158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/library.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/library.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/library.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:1329:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:1329:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2020:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2020:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2063:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2063:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2098:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2098:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2321:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2895:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2895:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2954:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/integrationRuntime.json:2954:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sparkConfiguration.json:218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sparkConfiguration.json:218:5
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5410:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5410:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5429:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5429:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5454:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5482:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5482:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5494:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5494:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5577:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5577:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5595:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5595:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5620:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5620:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5655:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5655:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5774:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5774:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5861:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5861:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5886:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:5886:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6019:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6019:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6035:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6035:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6281:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6281:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6324:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:6324:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7196:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7196:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7230:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7230:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7361:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7361:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7386:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7386:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7466:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlPool.json:7466:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlServer.json:1846:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlServer.json:1846:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlServer.json:1889:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/sqlServer.json:1889:5
 warning | PreCheck/SchemaMissingType | The schema 'CspWorkspaceAdminProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1172:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1172:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1398:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1398:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1433:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1433:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1481:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1481:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1501:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json:1501:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -252,7 +252,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConn
   - properties.properties.x-ms-client-flatten: true => <none>
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 warning | Modeler/MissingType | The schema 'KekIdentityProperties-useSystemAssignedIdentity' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PrivateEndpointConnectionForPrivateLinkHubBasic' -> 'PrivateEndpointConnectionForPrivateLinkHubBasicAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -265,7 +265,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 30ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2021-05-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -285,83 +285,83 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:1329:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:1329:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:1993:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:1993:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2036:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2071:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2071:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2282:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2282:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2856:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2856:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2915:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/integrationRuntime.json:2915:5
 warning | PreCheck/SchemaMissingType | The schema 'LibraryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/library.json:158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/library.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/library.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/library.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5396:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5396:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5414:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5414:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5439:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5467:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5467:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5479:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5479:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5562:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5562:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5580:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5580:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5605:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5605:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5640:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5640:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5759:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5759:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5846:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5846:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5871:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:5871:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6004:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6004:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6020:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6020:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6266:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:6309:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7181:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7215:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7215:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7346:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7346:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7371:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7371:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlPool.json:7451:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlServer.json:1663:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlServer.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlServer.json:1706:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/sqlServer.json:1706:5
 warning | PreCheck/SchemaMissingType | The schema 'CspWorkspaceAdminProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1160:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1160:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1364:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1364:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1399:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1399:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1447:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1447:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1467:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json:1467:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -373,7 +373,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConn
   - properties.properties.x-ms-client-flatten: true => <none>
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 warning | Modeler/MissingType | The schema 'KekIdentityProperties-useSystemAssignedIdentity' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-05-01/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'SecurityAlertPolicyName' -> 'SecurityAlertPolicyNameAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PrivateEndpointConnectionForPrivateLinkHubBasic' -> 'PrivateEndpointConnectionForPrivateLinkHubBasicAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -385,7 +385,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 8ms
+info    | autorest.bicep took 15ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2021-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -405,125 +405,125 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:1277:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:1277:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:1937:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:1937:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:1980:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:1980:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2015:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2015:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2226:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2226:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2800:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2800:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2859:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/integrationRuntime.json:2859:5
 warning | PreCheck/SchemaMissingType | The schema 'LibraryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/library.json:158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/library.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/library.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/library.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5396:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5396:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5415:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5415:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5440:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5440:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5468:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5468:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5480:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5480:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5563:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5563:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5581:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5581:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5606:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5606:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5641:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5641:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5760:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5760:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5847:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5847:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5872:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:5872:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6005:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6005:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6021:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6021:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6267:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6267:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6310:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:6310:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7182:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7182:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7216:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7216:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7347:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7347:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7372:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7372:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7452:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlPool.json:7452:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlServer.json:1663:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlServer.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlServer.json:1706:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/sqlServer.json:1706:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1303:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1303:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1338:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1338:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1386:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1386:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/workspace.json:1406:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1364:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1364:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1390:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1390:9
 warning | PreCheck/SchemaMissingType | The schema 'KustoPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1423:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1423:5
 warning | PreCheck/SchemaMissingType | The schema 'KustoPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1497:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1497:5
 warning | PreCheck/SchemaMissingType | The schema 'KustoPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1557:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1557:5
 warning | PreCheck/SchemaMissingType | The schema 'KustoPoolUpdate' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1590:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1590:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1621:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1621:5
 warning | PreCheck/SchemaMissingType | The schema 'Database' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1633:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1633:5
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1669:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1669:5
 warning | PreCheck/SchemaMissingType | The schema 'ReadWriteDatabaseProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1685:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1685:5
 warning | PreCheck/SchemaMissingType | The schema 'DataConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1724:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1724:5
 warning | PreCheck/SchemaMissingType | The schema 'DataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1736:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1736:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1773:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1773:5
 warning | PreCheck/SchemaMissingType | The schema 'IotHubDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1789:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1789:5
 warning | PreCheck/SchemaMissingType | The schema 'EventGridDataConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1805:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1805:5
 warning | PreCheck/SchemaMissingType | The schema 'EventHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1821:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1821:5
 warning | PreCheck/SchemaMissingType | The schema 'IotHubConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1865:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1865:5
 warning | PreCheck/SchemaMissingType | The schema 'EventGridConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1910:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:1910:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2076:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2076:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2088:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2088:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2167:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2167:5
 warning | PreCheck/SchemaMissingType | The schema 'DatabasePrincipalAssignment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2179:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-04-01-preview/kustoPool.json:2179:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -545,7 +545,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 21ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2021-03-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -565,81 +565,81 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:1329:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:1329:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:1993:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:1993:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2036:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2071:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2071:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2282:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2282:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2856:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2856:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2915:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/integrationRuntime.json:2915:5
 warning | PreCheck/SchemaMissingType | The schema 'LibraryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/library.json:158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/library.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/library.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/library.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5396:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5396:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5414:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5414:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5439:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5467:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5467:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5479:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5479:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5562:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5562:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5580:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5580:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5605:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5605:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5640:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5640:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5759:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5759:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5846:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5846:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5871:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:5871:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6004:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6004:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6020:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6020:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6266:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:6309:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7181:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7215:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7215:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7346:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7346:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7371:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7371:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlPool.json:7451:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlServer.json:1663:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlServer.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlServer.json:1706:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/sqlServer.json:1706:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1302:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1302:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1337:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1337:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1385:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1385:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1405:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2021-03-01/workspace.json:1405:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -661,7 +661,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 6ms
+info    | autorest.bicep took 14ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2019-06-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -681,79 +681,79 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5322:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5322:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5341:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5366:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5394:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5394:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5406:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5489:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5489:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5507:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5507:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5532:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5532:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5567:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5567:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5686:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5686:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5773:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5773:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5798:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5798:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5931:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5931:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5947:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:5947:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:6193:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:6193:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:6236:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:6236:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7095:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7095:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7129:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7129:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7260:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7260:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7285:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7285:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7365:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlPool.json:7365:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1312:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1312:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1347:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1347:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1395:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1395:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1415:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/workspace.json:1415:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:1277:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:1277:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:1945:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:1945:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:1988:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:1988:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2023:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2023:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2234:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2234:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2808:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2808:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2867:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2867:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedVirtualNetworkReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2906:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/integrationRuntime.json:2906:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlServer.json:1334:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlServer.json:1334:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlServer.json:1377:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2019-06-01-preview/sqlServer.json:1377:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -775,7 +775,7 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 7ms
+info    | autorest.bicep took 13ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2020-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -795,11 +795,11 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.synapse-2020-12-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -819,81 +819,81 @@ warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetadataSyncConfig-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5392:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5392:9
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5411:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5411:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5436:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5436:5
 warning | PreCheck/SchemaMissingType | The schema 'GeoBackupPolicyListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5464:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5464:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueries' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5476:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5476:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStatistic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5559:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5559:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryInterval' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5577:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5577:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5602:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5602:5
 warning | PreCheck/SchemaMissingType | The schema 'TopQueriesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5637:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5637:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5756:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5756:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5843:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5843:5
 warning | PreCheck/SchemaMissingType | The schema 'ReplicationLinkListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5868:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:5868:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryptionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6001:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6001:5
 warning | PreCheck/SchemaMissingType | The schema 'TransparentDataEncryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6017:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6017:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6263:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6263:5
 warning | PreCheck/SchemaMissingType | The schema 'SqlPoolUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6306:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:6306:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7178:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7178:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7212:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7212:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7343:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7343:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7368:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7368:5
 warning | PreCheck/SchemaMissingType | The schema 'DataMaskingRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7448:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlPool.json:7448:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIdentitySqlControlSettingsModel-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1279:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1279:9
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1314:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1314:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPool' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1362:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1362:5
 warning | PreCheck/SchemaMissingType | The schema 'RestorableDroppedSqlPoolListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1382:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/workspace.json:1382:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:1329:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:1329:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:1993:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:1993:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2036:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagedIntegrationRuntimeError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2071:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2071:5
 warning | PreCheck/SchemaMissingType | The schema 'SelfHostedIntegrationRuntimeNode' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2282:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2282:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2856:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2856:5
 warning | PreCheck/SchemaMissingType | The schema 'IntegrationRuntimeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2915:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/integrationRuntime.json:2915:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlServer.json:1663:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlServer.json:1663:5
 warning | PreCheck/SchemaMissingType | The schema 'ServerUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlServer.json:1706:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/sqlServer.json:1706:5
 warning | PreCheck/SchemaMissingType | The schema 'LibraryResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/library.json:158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/library.json:158:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/library.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/stable/2020-12-01/library.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHubBasic' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
@@ -915,5 +915,5 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 5ms
-info    | Autorest completed in 34.91s. 16 files generated.
+info    | autorest.bicep took 17ms
+info    | Autorest completed in 80.49s. 16 files generated.

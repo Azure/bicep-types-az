@@ -76,12 +76,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Optional ETag.
+* **eTag**: string: Optional ETag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Resource location.
+* **location**: string: Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase) (ReadOnly)
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
+* **properties**: [ResourceGuardProxyBase](#resourceguardproxybase)
+* **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.RecoveryServices/vaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2022-02-01
@@ -638,15 +638,15 @@ will be deprecated once clients upgrade to consider this flag.
 
 ## ResourceGuardProxyBase
 ### Properties
-* **description**: string (ReadOnly)
-* **lastUpdatedTime**: string (ReadOnly)
-* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[] (ReadOnly): Array of ResourceGuardOperationDetail
-* **resourceGuardResourceId**: string (ReadOnly)
+* **description**: string
+* **lastUpdatedTime**: string
+* **resourceGuardOperationDetails**: [ResourceGuardOperationDetail](#resourceguardoperationdetail)[]: Array of ResourceGuardOperationDetail
+* **resourceGuardResourceId**: string
 
 ## ResourceGuardOperationDetail
 ### Properties
-* **defaultResourceRequest**: string (ReadOnly)
-* **vaultCriticalOperation**: string (ReadOnly)
+* **defaultResourceRequest**: string
+* **vaultCriticalOperation**: string
 
 ## ResourceTags
 ### Properties

@@ -135,7 +135,7 @@
 ## ManagedInstanceEncryptionProtectorProperties
 ### Properties
 * **serverKeyName**: string: The name of the managed instance key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required, WriteOnly): The key type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The key type like 'ServiceManaged', 'AzureKeyVault'.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
 

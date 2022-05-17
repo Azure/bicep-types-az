@@ -127,6 +127,7 @@
 * **globalParameters**: [GlobalParameterDefinitionSpecification](#globalparameterdefinitionspecification): Definition of all parameters for an entity.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the data factory.
+* **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview configuration.
 * **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Factory's git repo information.
 * **version**: string (ReadOnly): Version of the factory.
 
@@ -150,6 +151,10 @@
 ### Properties
 * **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' (Required): Global Parameter type.
 * **value**: any (Required): Any object
+
+## PurviewConfiguration
+### Properties
+* **purviewResourceId**: string: Purview resource id.
 
 ## FactoryRepoConfiguration
 * **Discriminator**: type
@@ -226,6 +231,7 @@
 * **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
+* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 
 ## DatasetReference
@@ -5113,6 +5119,7 @@
 * **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference type.
 * **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): Integration runtime reference type.
 * **runConcurrently**: any: Any object
+* **sourceStagingConcurrency**: any: Any object
 * **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
 * **traceLevel**: any: Any object
 
@@ -5274,6 +5281,7 @@
 * **queries**: [PowerQuerySinkMapping](#powerquerysinkmapping)[]: List of mapping for Power Query mashup query to sink dataset(s).
 * **runConcurrently**: any: Any object
 * **sinks**: [ExecutePowerQueryActivityTypePropertiesSinks](#executepowerqueryactivitytypepropertiessinks): (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
+* **sourceStagingConcurrency**: any: Any object
 * **staging**: [DataFlowStagingInfo](#dataflowstaginginfo): Staging info for execute data flow activity.
 * **traceLevel**: any: Any object
 
@@ -5289,6 +5297,7 @@
 * **flowlet**: [DataFlowReference](#dataflowreference): Data flow reference type.
 * **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **name**: string (Required): Transformation name.
+* **rejectedDataLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **schemaLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **script**: string: sink script.
 

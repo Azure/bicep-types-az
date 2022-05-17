@@ -1,0 +1,91 @@
+# Microsoft.NetworkFunction @ 2021-09-01-preview
+
+## Resource Microsoft.NetworkFunction/azureTrafficCollectors@2021-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: Resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [AzureTrafficCollectorPropertiesFormat](#azuretrafficcollectorpropertiesformat): Azure Traffic Collector resource properties.
+* **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies@2021-09-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Collection policy properties.
+* **systemData**: [CollectorPolicySystemData](#collectorpolicysystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies' (ReadOnly, DeployTimeConstant): The resource type
+
+## AzureTrafficCollectorPropertiesFormat
+### Properties
+* **collectorPolicies**: [CollectorPolicy](#collectorpolicy)[]: Collector Policies for Azure Traffic Collector.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **virtualHub**: [ResourceReference](#resourcereference): Resource reference properties.
+
+## CollectorPolicy
+### Properties
+* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
+* **id**: string (ReadOnly): Azure resource Id
+* **name**: string (ReadOnly): Azure resource name
+* **properties**: [CollectorPolicyPropertiesFormat](#collectorpolicypropertiesformat): Collection policy properties.
+* **systemData**: [CollectorPolicySystemData](#collectorpolicysystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **type**: string (ReadOnly): Azure resource type
+
+## CollectorPolicyPropertiesFormat
+### Properties
+* **emissionPolicies**: [EmissionPoliciesPropertiesFormat](#emissionpoliciespropertiesformat)[]: Emission policies.
+* **ingestionPolicy**: [IngestionPolicyPropertiesFormat](#ingestionpolicypropertiesformat): Ingestion Policy properties.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+
+## EmissionPoliciesPropertiesFormat
+### Properties
+* **emissionDestinations**: [EmissionPolicyDestination](#emissionpolicydestination)[]: Emission policy destinations.
+* **emissionType**: 'IPFIX': Emission format type.
+
+## EmissionPolicyDestination
+### Properties
+* **destinationType**: 'AzureMonitor': Emission destination type.
+
+## IngestionPolicyPropertiesFormat
+### Properties
+* **ingestionSources**: [IngestionSourcesPropertiesFormat](#ingestionsourcespropertiesformat)[]: Ingestion Sources.
+* **ingestionType**: 'IPFIX': The ingestion type.
+
+## IngestionSourcesPropertiesFormat
+### Properties
+* **resourceId**: string: Resource ID.
+* **sourceType**: 'Resource': Ingestion source type.
+
+## CollectorPolicySystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+
+## ResourceReference
+### Properties
+* **id**: string (ReadOnly): Resource ID.
+
+## TrackedResourceSystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+

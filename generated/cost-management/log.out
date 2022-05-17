@@ -1,7 +1,7 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -24,8 +24,8 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2022-02-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -49,11 +49,11 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2022-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -77,11 +77,11 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 3ms
+info    | autorest.bicep took 8ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2021-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -105,31 +105,31 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:256:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportOperationStatuses' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:304:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:304:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadURL' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:327:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:327:5
 warning | PreCheck/SchemaMissingType | The schema 'Status' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:341:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceGroupFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceGroupFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceGroupFilterItem
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceFilterItem
 warning | Modeler/MissingType | The schema 'AlertProperties-details-meterFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/AlertProperties-details-meterFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/AlertProperties-details-meterFilterItem
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
-info    | autorest.bicep took 2ms
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2021-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -153,31 +153,31 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:406:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:421:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:421:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:450:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:450:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:256:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportOperationStatuses' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:304:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:304:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadURL' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:327:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:327:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:341:5
 warning | PreCheck/SchemaMissingType | The schema 'Status' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.generatedetailedcostreport.json:366:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2020-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -201,83 +201,83 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1136:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1136:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1178:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1178:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1197:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1197:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1247:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1247:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1259:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1259:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSorting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1283:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1283:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1303:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1303:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1320:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1365:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1365:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1568:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1568:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1593:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1593:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1622:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1622:5
 warning | PreCheck/SchemaMissingType | The schema 'DismissAlertPayload' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1999:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1999:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2062:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2062:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2089:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2089:9
 warning | PreCheck/SchemaMissingType | The schema 'ForecastDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2111:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2111:5
 warning | PreCheck/SchemaMissingType | The schema 'ForecastDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2166:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2166:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2200:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2200:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2247:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2247:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2266:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2308:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2308:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2320:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2344:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2344:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2361:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2361:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:2406:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:396:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:396:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:438:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:438:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:457:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:457:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:507:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:507:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:519:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:519:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSorting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:543:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:543:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:563:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:563:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:580:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:580:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:625:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:625:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:669:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:669:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:684:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:684:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:713:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.exports.json:713:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ReportConfigDefinition' (1 differences):
   - properties.dataset.$ref: "#/components/schemas/schemas:6" => "#/components/schemas/schemas:204"
@@ -288,13 +288,13 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ReportConfigFilter'
   - properties.or.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:222"
   - properties.not.$ref: "#/components/schemas/schemas:22" => "#/components/schemas/schemas:220"
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceGroupFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceGroupFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceGroupFilterItem
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceFilterItem
 warning | Modeler/MissingType | The schema 'AlertProperties-details-meterFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/AlertProperties-details-meterFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/AlertProperties-details-meterFilterItem
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ReportConfigDefinition' -> 'ReportConfigDefinitionAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ReportConfigDataset' -> 'ReportConfigDatasetAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ReportConfigFilter' -> 'ReportConfigFilterAutoGenerated'
@@ -322,31 +322,31 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:406:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:406:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:421:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:421:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:450:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:450:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:256:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportOperationStatuses' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:304:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:304:5
 warning | PreCheck/SchemaMissingType | The schema 'DownloadURL' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:327:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:327:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:341:5
 warning | PreCheck/SchemaMissingType | The schema 'Status' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.generatedetailedcostreport.json:366:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2020-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -370,11 +370,11 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-03-01-preview/costallocation.json:253:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-03-01-preview/costallocation.json:253:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2019-11-01"} .
@@ -400,103 +400,103 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1439:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1486:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1486:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1505:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1505:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1555:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1555:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1567:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1567:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSorting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1594:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1594:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1614:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1614:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1631:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1631:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1680:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1680:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1997:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1997:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2022:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2022:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxySettingResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2051:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2051:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2078:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2078:5
 warning | PreCheck/SchemaMissingType | The schema 'DismissAlertPayload' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2455:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2455:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2532:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2532:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2559:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2559:9
 warning | PreCheck/SchemaMissingType | The schema 'ForecastDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2581:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2581:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2636:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2636:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2683:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2683:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2702:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2702:5
 warning | PreCheck/SchemaMissingType | The schema 'Status' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2740:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2740:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2758:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2758:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportURL' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2773:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2773:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2787:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2787:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2799:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2799:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2826:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2826:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2843:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2843:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2884:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:2884:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:382:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:382:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:407:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:407:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:436:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:436:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:461:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:461:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:507:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:507:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:526:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:526:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:568:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:568:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:580:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:580:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:607:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:607:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:624:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:624:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:665:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:665:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:698:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:698:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:742:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:742:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:770:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:770:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:808:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:808:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRecurrencePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:820:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:820:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryDestination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:838:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:838:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:859:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:859:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:888:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.exports.json:888:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'QueryDataset' (2 differences):
   - properties.filter.$ref: "#/components/schemas/schemas:191" => "#/components/schemas/schemas:268"
@@ -505,16 +505,16 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'QueryFilter' (2 dif
   - properties.and.$ref: "#/components/schemas/schemas:192" => "#/components/schemas/schemas:269"
   - properties.or.$ref: "#/components/schemas/schemas:193" => "#/components/schemas/schemas:270"
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceGroupFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceGroupFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceGroupFilterItem
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/AlertProperties-details-resourceFilterItem
 warning | Modeler/MissingType | The schema 'AlertProperties-details-meterFilterItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/AlertProperties-details-meterFilterItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/AlertProperties-details-meterFilterItem
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'QueryDataset' -> 'QueryDatasetAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'QueryFilter' -> 'QueryFilterAutoGenerated'
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2019-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -538,53 +538,53 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:678:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:678:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:703:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:703:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:870:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:870:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:897:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:897:9
 warning | PreCheck/SchemaMissingType | The schema 'QueryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:919:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:919:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:964:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:964:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:983:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:983:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1055:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1055:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1067:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1067:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1091:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1091:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1108:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1108:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1153:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1153:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1186:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1186:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1230:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1230:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1258:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1258:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1296:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1296:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRecurrencePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1308:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1308:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryDestination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1326:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1326:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1347:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1347:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1376:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:1376:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
-info    | autorest.bicep took 1ms
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2019-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -608,52 +608,52 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:609:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:609:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:634:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:634:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:792:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:792:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:819:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:819:9
 warning | PreCheck/SchemaMissingType | The schema 'QueryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:841:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:841:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:886:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:886:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:905:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:905:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:977:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:977:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:989:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:989:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1013:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1013:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1030:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1030:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1075:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1075:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1108:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1108:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1152:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1152:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1180:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1180:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1218:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRecurrencePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1230:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1230:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryDestination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1248:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1248:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1269:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1269:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1298:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:1298:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
 info    | autorest.bicep took 1ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2019-04-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -678,53 +678,53 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:594:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:594:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:614:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:614:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:650:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:650:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:679:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:679:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:704:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:704:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:746:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:746:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:765:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:765:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:815:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:815:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:827:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:827:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSorting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:851:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:851:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:871:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:871:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:888:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:888:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:933:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:933:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:967:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:967:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:994:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:994:9
 warning | PreCheck/SchemaMissingType | The schema 'BudgetsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1206:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1206:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetModel' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1224:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1224:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1239:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1239:5
 warning | PreCheck/SchemaMissingType | The schema 'BudgetTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1303:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1303:5
 warning | PreCheck/SchemaMissingType | The schema 'CurrentSpend' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1321:5
 warning | PreCheck/SchemaMissingType | The schema 'Notification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1337:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:1337:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2019-01-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -748,53 +748,53 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:585:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:585:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:610:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:610:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:768:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:768:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:795:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:795:9
 warning | PreCheck/SchemaMissingType | The schema 'QueryDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:817:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:817:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:864:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:864:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:883:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:883:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:955:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:955:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:967:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:967:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:991:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:991:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1008:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1008:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1053:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1053:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1086:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1086:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1130:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1130:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1158:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1158:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1196:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1196:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportRecurrencePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1208:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1208:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportDeliveryDestination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1226:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1226:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1247:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1247:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportExecutionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1276:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:1276:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
-info    | autorest.bicep took 1ms
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2019-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -818,62 +818,62 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1928:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1928:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1948:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1948:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1984:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1984:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2013:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2013:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2055:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2055:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2074:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2074:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2124:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2124:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2136:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2136:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSorting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2160:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2160:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2180:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2180:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2197:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2197:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2242:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2242:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectorDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2405:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2405:5
 warning | PreCheck/SchemaMissingType | The schema 'ExternalBillingAccountDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2702:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2702:5
 warning | PreCheck/SchemaMissingType | The schema 'ExternalSubscriptionDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2783:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2783:5
 warning | PreCheck/SchemaMissingType | The schema 'ExternalSubscriptionIdListRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2880:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2880:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2892:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2892:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2919:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2919:9
 warning | PreCheck/SchemaMissingType | The schema 'ShowbackRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2941:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2941:5
 warning | PreCheck/SchemaMissingType | The schema 'ShowbackRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2980:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:2980:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomPriceDetailsKind' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3077:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3077:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomPriceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3093:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3093:5
 warning | PreCheck/SchemaMissingType | The schema 'CostAllocationDetailsKind' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3125:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3125:5
 warning | PreCheck/SchemaMissingType | The schema 'CostAllocationDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3141:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:3141:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
 info    | Resource type microsoft.costmanagement/externalsubscriptions under path '/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' has no body defined.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2018-05-31"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -897,49 +897,49 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:811:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:811:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:836:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:836:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:865:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:865:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:894:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:894:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:926:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:926:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDeliveryInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:965:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:965:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:977:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:977:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigRecurrencePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1019:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1019:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDeliveryDestination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1037:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1037:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1058:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1058:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1077:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1077:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1119:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1119:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1131:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1131:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1155:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1155:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1172:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1172:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1217:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1217:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1370:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1370:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1397:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:1397:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
-info    | autorest.bicep took 1ms
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2018-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -963,61 +963,61 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2717:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2717:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2739:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2739:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2757:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2757:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2777:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2777:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2813:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2813:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2842:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2842:5
 warning | PreCheck/SchemaMissingType | The schema 'CommonReportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2886:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2886:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportSchedule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2914:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2914:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportDeliveryInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2952:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2952:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2964:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2964:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportRecurrencePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3005:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3005:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportDeliveryDestination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3023:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3023:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3044:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3044:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3063:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3063:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3106:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3106:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3118:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3118:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3142:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3142:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3159:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3159:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3204:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3204:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportExecutionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3237:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3237:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportExecutionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3266:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectorDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3446:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3446:5
 warning | PreCheck/SchemaMissingType | The schema 'AlertListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3659:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3659:5
 warning | PreCheck/SchemaMissingType | The schema 'AlertProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3703:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:3703:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
-info    | autorest.bicep took 0ms
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+info    | autorest.bicep took 2ms
 info    | Processing batch task - {"tag":"microsoft.costmanagement-2018-12-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1041,37 +1041,37 @@ warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.4)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1182:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1182:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1207:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1207:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1236:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1236:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigTimePeriod' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1278:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1278:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDataset' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1297:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1297:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDatasetConfiguration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1347:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1347:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigAggregation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1359:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1359:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigSorting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1383:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1383:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigGrouping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1403:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1403:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1420:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1420:5
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigComparisonExpression' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1465:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1465:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1628:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1628:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1655:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1655:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'QueryProperties-rows-itemsItem' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json#/components/schemas/QueryProperties-rows-itemsItem
 info    | autorest.bicep took 0ms
-info    | Autorest completed in 13.75s. 28 files generated.
+info    | Autorest completed in 33.3s. 28 files generated.

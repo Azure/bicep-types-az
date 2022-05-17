@@ -124,7 +124,7 @@ Any changes to this section Will result in a new revision being created
 
 ## Configuration
 ### Properties
-* **activeRevisionsMode**: 'multiple' | 'single': ActiveRevisionsMode controls how active revisions are handled for the Container app:
+* **activeRevisionsMode**: 'Multiple' | 'Single': ActiveRevisionsMode controls how active revisions are handled for the Container app:
 <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode. If no value if provided, this is the default.</item></list>
 * **dapr**: [Dapr](#dapr): Container App Dapr configuration.
 * **ingress**: [Ingress](#ingress): Container App Ingress configuration.
@@ -207,7 +207,7 @@ Any changes to this section Will result in a new revision being created
 * **tcpSocket**: [ContainerAppProbeTcpSocket](#containerappprobetcpsocket): TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported.
 * **terminationGracePeriodSeconds**: int: Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate. Maximum value is 3600 seconds (1 hour)
 * **timeoutSeconds**: int: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 240.
-* **type**: 'liveness' | 'readiness' | 'startup': The type of probe.
+* **type**: 'Liveness' | 'Readiness' | 'Startup': The type of probe.
 
 ## ContainerAppProbeHttpGet
 ### Properties
@@ -215,7 +215,7 @@ Any changes to this section Will result in a new revision being created
 * **httpHeaders**: [ContainerAppProbeHttpGetHttpHeadersItem](#containerappprobehttpgethttpheadersitem)[]: Custom headers to set in the request. HTTP allows repeated headers.
 * **path**: string: Path to access on the HTTP server.
 * **port**: int (Required): Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
-* **scheme**: string: Scheme to use for connecting to the host. Defaults to HTTP.
+* **scheme**: 'HTTP' | 'HTTPS': Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## ContainerAppProbeHttpGetHttpHeadersItem
 ### Properties
