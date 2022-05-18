@@ -27,7 +27,7 @@ const argsConfig = yargs
   .option('wait-for-debugger', { type: 'boolean', default: false, desc: 'Wait for a C# debugger to be attached before running the Autorest extension' });
 
 executeSynchronous(async () => {
-  const args = await argsConfig.parseAsync();  
+  const args = await argsConfig.parseAsync();
   const inputBaseDir = path.resolve(args['specs-dir']);
   const outputBaseDir = path.resolve(args['out-dir']);
   const verbose = args['verbose'];
@@ -81,9 +81,9 @@ executeSynchronous(async () => {
       await copyRecursive(tmpOutputDir, outputDir);
     } catch (err) {
       logErr(logger, err);
-      
+
       // Use markdown formatting as this summary will be included in the PR description
-      logOut(summaryLogger, 
+      logOut(summaryLogger,
 `<details>
   <summary>Failed to generate types for path '${basePath}'</summary>
 
@@ -94,8 +94,9 @@ ${err}
 `);
     }
 
-    // clean up temp dir
+    // clean up temp dirs
     await rm(tmpOutputDir, { recursive: true, force: true, });
+    await clearAutorestTempDir(logger, verbose, waitForDebugger);
     // clean up autorest readme.bicep.md files
     await rm(bicepReadmePath, { force: true });
   }
@@ -131,7 +132,7 @@ async function generateAutorestConfig(logger: ILogger, readmePath: string, bicep
       !node.info.trim().startsWith('yaml')) {
       continue;
     }
-    
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const yamlData = yaml.load(node.literal) as any;
     if (yamlData) {
@@ -195,11 +196,23 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--title=none',
     // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
     // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
-    // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types. 
+    // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types.
     `--skip-semantics-validation`,
     readme,
   ];
 
+  autoRestParams = applyCommonAutoRestParameters(autoRestParams, verbose, waitForDebugger);
+
+  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
+}
+
+async function clearAutorestTempDir(logger: ILogger, verbose: boolean, waitForDebugger: boolean) {
+  const autoRestParams = applyCommonAutoRestParameters(['--clear-temp', '--allow-no-input'], verbose, waitForDebugger);
+
+  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
+}
+
+function applyCommonAutoRestParameters(autoRestParams: string[], verbose: boolean, waitForDebugger: boolean) {
   if (verbose) {
     autoRestParams = autoRestParams.concat([
       `--debug`,
@@ -213,7 +226,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     ]);
   }
 
-  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
+  return autoRestParams;
 }
 
 async function findReadmePaths(specsPath: string) {
@@ -280,7 +293,7 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
   const typeFiles = await findRecursive(baseDir, filePath => {
     return path.basename(filePath) === 'types.json';
   });
-  
+
   const resourceTypes = new Set<string>();
   const resourceFunctions = new Set<string>();
   const resDictionary: Dictionary<TypeIndexEntry> = {};
@@ -300,19 +313,19 @@ async function buildIndex(logger: ILogger, baseDir: string): Promise<TypeIndex> 
           continue;
         }
         resourceTypes.add(resourceType.Name.toLowerCase());
-  
+
         resDictionary[resourceType.Name] = {
           RelativePath: path.relative(baseDir, typeFilePath),
           Index: types.indexOf(type),
         };
-        
+
         continue;
       }
 
       const resourceFunction = type[TypeBaseKind.ResourceFunctionType];
       if (resourceFunction) {
         const funcKey = `${resourceFunction.ResourceType}@${resourceFunction.ApiVersion}:${resourceFunction.Name}`.toLowerCase();
-        
+
         const resourceTypeLower = resourceFunction.ResourceType.toLowerCase();
         const apiVersionLower = resourceFunction.ApiVersion.toLowerCase();
         if (resourceFunctions.has(funcKey)) {
