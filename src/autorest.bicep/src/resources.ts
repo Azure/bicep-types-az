@@ -23,7 +23,6 @@ export interface ResourceDescriptor {
   constantName?: string;
   readable: boolean;
   writable: boolean;
-  provisionedAsynchronously: boolean;
 }
 
 export interface ProviderDefinition {
@@ -256,11 +255,10 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
           putData.parameters,
           apiVersion,
           !!getData,
-          true,
-          !!(putOperation?.extensions ?? {})['x-ms-long-running-operation']
+          true
         );
       } else if (getData && isResourceSchema(getData.responseSchema)) {
-        parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false, false);
+        parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false);
       } else {
         // A non-resource get with no corresponding put is most likely a list endpoint
         continue;
@@ -480,8 +478,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     scopeType: ScopeType,
     routingScope: string,
     readable: boolean,
-    writable: boolean,
-    provisionedAsynchronously: boolean
+    writable: boolean
   ): Result<ResourceDescriptor[], string> {
     const namespace = routingScope.substr(0, routingScope.indexOf('/'));
     if (isPathVariable(namespace)) {
@@ -504,7 +501,6 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       constantName,
       readable,
       writable,
-      provisionedAsynchronously,
     }));
 
     return success(descriptors);
@@ -515,8 +511,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     parameters: Parameter[],
     apiVersion: string,
     readable: boolean,
-    writable: boolean,
-    asyncProvisioning: boolean
+    writable: boolean
   ) {
     const resourceScopeResult = parseResourceScopes(path);
 
@@ -526,7 +521,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
 
     const { scopeType, routingScope } = resourceScopeResult.value;
 
-    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, readable, writable, asyncProvisioning);
+    return parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, readable, writable);
   }
 
   function parseResourceActionMethod(path: string, parameters: Parameter[], apiVersion: string) {
@@ -541,7 +536,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     const routingScope = actionRoutingScope.substr(0, actionRoutingScope.lastIndexOf('/'));
     const actionName = actionRoutingScope.substr(actionRoutingScope.lastIndexOf('/') + 1);
 
-    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, false, true, false);
+    const resourceDescriptorsResult = parseResourceDescriptors(parameters, apiVersion, scopeType, routingScope, false, true);
     if (!resourceDescriptorsResult.success) {
       return failure(resourceDescriptorsResult.error);
     }
