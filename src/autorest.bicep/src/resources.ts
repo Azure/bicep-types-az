@@ -241,6 +241,13 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       }
     });
 
+    // This plugin determines what resources are defined in a given ARM swagger definition via the following three
+    // heuristics:
+    //   1. If a path uses the PUT HTTP method, it represents an addressable resource that may be created and updated.
+    //   2. If a path uses the GET HTTP method whose response schema uses the `x-ms-azure-resource` Swagger extension,
+    //      it represents an addressable resource that may be read.
+    //   3. If a path uses the GET HTTP *and* ends in a path parameter, it most likely represents an addressable
+    //      resource that may be read.
     const resourcesByProvider: Dictionary<ResourceDefinition[]> = {};
     for (const lcPath of new Set<string>([...Object.keys(putOperationsByPath), ...Object.keys(getOperationsByPath)])) {
       const putOperation = putOperationsByPath[lcPath];
@@ -258,6 +265,10 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
           true
         );
       } else if (getData && isResourceSchema(getData.responseSchema)) {
+        parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false);
+      } else if (getData && parseResourceTypes(getData.parameters, getData.request.path).success) {
+        logWarning(`Assuming ${lcPath} is a resource due to the path pattern used. Response definition is missing`
+          + " the `x-ms-azure-resource` Swagger extension.");
         parseResult = parseResourceMethod(getData.request.path, getData.parameters, apiVersion, true, false);
       } else {
         // A non-resource get with no corresponding put is most likely a list endpoint
