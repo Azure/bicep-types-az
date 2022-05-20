@@ -166,9 +166,6 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       if (descriptor.writable && !descriptor.readable) {
         flags |= ResourceFlags.WriteOnly;
       }
-      if (descriptor.provisionedAsynchronously) {
-        flags |= ResourceFlags.Async;
-      }
 
       factory.addType(new ResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,

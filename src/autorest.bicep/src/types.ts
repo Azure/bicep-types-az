@@ -113,13 +113,11 @@ export enum ResourceFlags {
   None = 0,
   ReadOnly = 1 << 0,
   WriteOnly = 1 << 1,
-  Async = 1 << 2,
 }
 
 const ResourceFlagsLabels = new Map<ResourceFlags, string>([
   [ResourceFlags.ReadOnly, 'ReadOnly'],
   [ResourceFlags.WriteOnly, 'WriteOnly'],
-  [ResourceFlags.Async, 'Async'],
 ]);
 
 export function getResourceFlagsLabels(input: ResourceFlags) {
