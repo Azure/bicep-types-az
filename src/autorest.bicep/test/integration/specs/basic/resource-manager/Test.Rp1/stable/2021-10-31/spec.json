@@ -71,6 +71,9 @@
           },
           "description": "Description for a basic enum property.",
           "x-nullable": true
+        },
+        "skuTier": {
+          "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/SkuTier"
         }
       }
     },

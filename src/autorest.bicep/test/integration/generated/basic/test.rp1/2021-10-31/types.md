@@ -26,6 +26,7 @@
 ## TestType1Properties
 ### Properties
 * **basicString**: string: Description for a basic string property.
+* **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 
 ## SystemData
