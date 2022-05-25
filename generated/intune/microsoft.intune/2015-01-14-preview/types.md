@@ -62,24 +62,24 @@
 ### Properties
 * **accessRecheckOfflineTimeout**: string
 * **accessRecheckOnlineTimeout**: string
-* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps'
-* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps'
-* **authentication**: 'notRequired' | 'required'
-* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn'
-* **dataBackup**: 'allow' | 'block'
+* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps' | string
+* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps' | string
+* **authentication**: 'notRequired' | 'required' | string
+* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn' | string
+* **dataBackup**: 'allow' | 'block' | string
 * **description**: string
-* **deviceCompliance**: 'disable' | 'enable'
-* **fileEncryption**: 'notRequired' | 'required'
-* **fileSharingSaveAs**: 'allow' | 'block'
+* **deviceCompliance**: 'disable' | 'enable' | string
+* **fileEncryption**: 'notRequired' | 'required' | string
+* **fileSharingSaveAs**: 'allow' | 'block' | string
 * **friendlyName**: string (Required)
-* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly)
+* **groupStatus**: 'notTargeted' | 'targeted' | string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
-* **managedBrowser**: 'notRequired' | 'required'
+* **managedBrowser**: 'notRequired' | 'required' | string
 * **numOfApps**: int (ReadOnly)
 * **offlineWipeTimeout**: string
-* **pin**: 'notRequired' | 'required'
+* **pin**: 'notRequired' | 'required' | string
 * **pinNumRetry**: int
-* **screenCapture**: 'allow' | 'block'
+* **screenCapture**: 'allow' | 'block' | string
 
 ## ResourceTags
 ### Properties
@@ -94,24 +94,24 @@
 ### Properties
 * **accessRecheckOfflineTimeout**: string
 * **accessRecheckOnlineTimeout**: string
-* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps'
-* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps'
-* **authentication**: 'notRequired' | 'required'
-* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn'
-* **dataBackup**: 'allow' | 'block'
+* **appSharingFromLevel**: 'allApps' | 'none' | 'policyManagedApps' | string
+* **appSharingToLevel**: 'allApps' | 'none' | 'policyManagedApps' | string
+* **authentication**: 'notRequired' | 'required' | string
+* **clipboardSharingLevel**: 'allApps' | 'blocked' | 'policyManagedApps' | 'policyManagedAppsWithPasteIn' | string
+* **dataBackup**: 'allow' | 'block' | string
 * **description**: string
-* **deviceCompliance**: 'disable' | 'enable'
-* **fileEncryptionLevel**: 'afterDeviceRestart' | 'deviceLocked' | 'deviceLockedExceptFilesOpen' | 'useDeviceSettings'
-* **fileSharingSaveAs**: 'allow' | 'block'
+* **deviceCompliance**: 'disable' | 'enable' | string
+* **fileEncryptionLevel**: 'afterDeviceRestart' | 'deviceLocked' | 'deviceLockedExceptFilesOpen' | 'useDeviceSettings' | string
+* **fileSharingSaveAs**: 'allow' | 'block' | string
 * **friendlyName**: string (Required)
-* **groupStatus**: 'notTargeted' | 'targeted' (ReadOnly)
+* **groupStatus**: 'notTargeted' | 'targeted' | string (ReadOnly)
 * **lastModifiedTime**: string (ReadOnly)
-* **managedBrowser**: 'notRequired' | 'required'
+* **managedBrowser**: 'notRequired' | 'required' | string
 * **numOfApps**: int (ReadOnly)
 * **offlineWipeTimeout**: string
-* **pin**: 'notRequired' | 'required'
+* **pin**: 'notRequired' | 'required' | string
 * **pinNumRetry**: int
-* **touchId**: 'disable' | 'enable'
+* **touchId**: 'disable' | 'enable' | string
 
 ## ResourceTags
 ### Properties

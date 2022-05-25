@@ -27,7 +27,7 @@
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse': Indicates the type of database account. This can only be set at database account creation.
+* **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse' | string: Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseAccountCreateUpdateProperties](#databaseaccountcreateupdateproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
@@ -184,7 +184,7 @@
 ### Properties
 * **apiVersion**: '2021-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [NotebookWorkspaceProperties](#notebookworkspaceproperties) (ReadOnly): Properties of a notebook workspace resource.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -366,7 +366,7 @@
 
 ## ClusterResourceProperties
 ### Properties
-* **authenticationMethod**: 'Cassandra' | 'None': Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
+* **authenticationMethod**: 'Cassandra' | 'None' | string: Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
 * **cassandraVersion**: string: Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
 * **clientCertificates**: [Certificate](#certificate)[]: List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
 * **clusterNameOverride**: string: If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
@@ -377,7 +377,7 @@
 * **hoursBetweenBackups**: int: Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
 * **initialCassandraAdminPassword**: string (WriteOnly): Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
 * **prometheusEndpoint**: [SeedNode](#seednode)
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The status of the resource at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The status of the resource at the time the operation was called.
 * **repairEnabled**: bool: Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
 * **restoreFromBackupId**: string (WriteOnly): To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.
 * **seedNodes**: [SeedNode](#seednode)[] (ReadOnly): List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
@@ -401,7 +401,7 @@
 * **dataCenterLocation**: string: The region this data center should be created in.
 * **delegatedSubnetId**: string: Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.
 * **nodeCount**: int: The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The status of the resource at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The status of the resource at the time the operation was called.
 * **seedNodes**: [SeedNode](#seednode)[] (ReadOnly): IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
 
 ## DatabaseAccountCreateUpdateProperties
@@ -411,7 +411,7 @@
 * **apiProperties**: [ApiProperties](#apiproperties)
 * **backupPolicy**: [BackupPolicy](#backuppolicy): The object representing the policy for taking backups on an account.
 * **capabilities**: [Capability](#capability)[]: List of Cosmos DB capabilities for the account
-* **connectorOffer**: 'Small': The cassandra connector offer type for the Cosmos DB C* database account.
+* **connectorOffer**: 'Small' | string: The cassandra connector offer type for the Cosmos DB C* database account.
 * **consistencyPolicy**: [ConsistencyPolicy](#consistencypolicy): The consistency policy for the Cosmos DB database account.
 * **cors**: [CorsPolicy](#corspolicy)[]: The CORS policy for the Cosmos DB database account.
 * **databaseAccountOfferType**: 'Standard' (Required): The offer type for the Cosmos DB database account.
@@ -433,7 +433,7 @@
 * **networkAclBypassResourceIds**: string[]: An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the Cosmos DB account.
 * **provisioningState**: string (ReadOnly): The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether requests from Public Network are allowed
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether requests from Public Network are allowed
 * **readLocations**: [Location](#location)[] (ReadOnly): An array that contains of the read locations enabled for the Cosmos DB account.
 * **restoreParameters**: [RestoreParameters](#restoreparameters) (ReadOnly): Parameters to indicate the information about the restore.
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: List of Virtual Network ACL rules configured for the Cosmos DB account.
@@ -450,7 +450,7 @@
 
 ## ApiProperties
 ### Properties
-* **serverVersion**: '3.2' | '3.6' | '4.0': Describes the ServerVersion of an a MongoDB account.
+* **serverVersion**: '3.2' | '3.6' | '4.0' | string: Describes the ServerVersion of an a MongoDB account.
 
 ## BackupPolicy
 * **Discriminator**: type
@@ -470,7 +470,7 @@
 ### Properties
 * **backupIntervalInMinutes**: int: An integer representing the interval in minutes between two backups
 * **backupRetentionIntervalInHours**: int: An integer representing the time (in hours) that each backup is retained
-* **backupStorageRedundancy**: 'Geo' | 'Local' | 'Zone': Enum to indicate type of backup storage redundancy.
+* **backupStorageRedundancy**: 'Geo' | 'Local' | 'Zone' | string: Enum to indicate type of backup storage redundancy.
 
 ## Capability
 ### Properties
@@ -536,7 +536,7 @@
 ## RestoreParameters
 ### Properties
 * **databasesToRestore**: [DatabaseRestoreResource](#databaserestoreresource)[] (ReadOnly): List of specific databases available for restore.
-* **restoreMode**: 'PointInTime' (ReadOnly): Describes the mode of the restore.
+* **restoreMode**: 'PointInTime' | string (ReadOnly): Describes the mode of the restore.
 * **restoreSource**: string (ReadOnly): The id of the restorable database account from which the restore has to be initiated. For example: /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName}
 * **restoreTimestampInUtc**: string (ReadOnly): Time to which the account has to be restored (ISO-8601 format).
 
@@ -554,10 +554,10 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## Tags
 ### Properties
@@ -707,7 +707,7 @@
 ### Properties
 * **conflictResolutionPath**: string: The conflict resolution path in the case of LastWriterWins mode.
 * **conflictResolutionProcedure**: string: The procedure to resolve conflicts in the case of custom mode.
-* **mode**: 'Custom' | 'LastWriterWins': Indicates the conflict resolution mode.
+* **mode**: 'Custom' | 'LastWriterWins' | string: Indicates the conflict resolution mode.
 
 ## IndexingPolicy
 ### Properties
@@ -715,12 +715,12 @@
 * **compositeIndexes**: [CompositePath](#compositepath)[][]: List of composite path list
 * **excludedPaths**: [ExcludedPath](#excludedpath)[]: List of paths to exclude from indexing
 * **includedPaths**: [IncludedPath](#includedpath)[]: List of paths to include in the indexing
-* **indexingMode**: 'consistent' | 'lazy' | 'none': Indicates the indexing mode.
+* **indexingMode**: 'consistent' | 'lazy' | 'none' | string: Indicates the indexing mode.
 * **spatialIndexes**: [SpatialSpec](#spatialspec)[]: List of spatial specifics
 
 ## CompositePath
 ### Properties
-* **order**: 'ascending' | 'descending': Sort order for composite paths.
+* **order**: 'ascending' | 'descending' | string: Sort order for composite paths.
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
 
 ## ExcludedPath
@@ -734,18 +734,18 @@
 
 ## Indexes
 ### Properties
-* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String': The datatype for which the indexing behavior is applied to.
-* **kind**: 'Hash' | 'Range' | 'Spatial': Indicates the type of index.
+* **dataType**: 'LineString' | 'MultiPolygon' | 'Number' | 'Point' | 'Polygon' | 'String' | string: The datatype for which the indexing behavior is applied to.
+* **kind**: 'Hash' | 'Range' | 'Spatial' | string: Indicates the type of index.
 * **precision**: int: The precision of the index. -1 is maximum precision.
 
 ## SpatialSpec
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon'[]: List of path's spatial type
+* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string[]: List of path's spatial type
 
 ## ContainerPartitionKey
 ### Properties
-* **kind**: 'Hash' | 'MultiHash' | 'Range': Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+* **kind**: 'Hash' | 'MultiHash' | 'Range' | string: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
 * **paths**: string[]: List of paths using which data within the container can be partitioned
 * **systemKey**: bool (ReadOnly): Indicates if the container is using a system generated partition key
 * **version**: int: Indicates the version of the partition key definition
@@ -848,8 +848,8 @@
 ### Properties
 * **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
 * **instanceCount**: int: Instance count for the service.
-* **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s': Instance type for the service.
-* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' (ReadOnly): Describes the status of a service.
+* **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
+* **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -930,8 +930,8 @@
 * **_ts**: int (ReadOnly): A system generated property that denotes the last updated timestamp of the resource.
 * **body**: string: Body of the Trigger
 * **id**: string (Required): Name of the Cosmos DB SQL trigger
-* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update': The operation the trigger is associated with
-* **triggerType**: 'Post' | 'Pre': Type of the Trigger
+* **triggerOperation**: 'All' | 'Create' | 'Delete' | 'Replace' | 'Update' | string: The operation the trigger is associated with
+* **triggerType**: 'Post' | 'Pre' | string: Type of the Trigger
 
 ## Tags
 ### Properties

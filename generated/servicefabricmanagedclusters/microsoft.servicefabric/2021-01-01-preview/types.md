@@ -76,7 +76,7 @@
 
 ## ManagedClusterProperties
 ### Properties
-* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService'[]: List of add-on features to enable on the cluster.
+* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: List of add-on features to enable on the cluster.
 * **adminPassword**: string: VM admin user password.
 * **adminUserName**: string (Required): VM admin user name.
 * **allowRdpAccess**: bool: Setting this to true enables RDP access to the VM. The default NSG rule opens RDP port to internet which can be overridden with custom Network Security Rules. The default value for this setting is false.
@@ -87,7 +87,7 @@
 * **clusterCertificateThumbprints**: string[] (ReadOnly): List of thumbprints of the cluster certificates.
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
-* **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' (ReadOnly): The current state of the cluster.
+* **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' | string (ReadOnly): The current state of the cluster.
 
   - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
   - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
@@ -95,7 +95,7 @@
   - Upgrading - Indicates that the cluster is being upgraded with the user provided configuration.
   - UpgradeFailed - Indicates that the last upgrade for the cluster has failed.
   - Ready - Indicates that the cluster is in a stable state.
-* **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2': Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
+* **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2' | string: Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
 * **dnsName**: string (Required): The cluster dns name.
 * **enableAutoOSUpgrade**: bool: Setting this to true enables automatic OS upgrade for the node types that are created using any platform OS image with version 'latest'. The default value for this setting is false.
 * **fabricSettings**: [SettingsSectionDescription](#settingssectiondescription)[]: The list of custom fabric settings to configure the cluster.
@@ -104,7 +104,7 @@
 * **ipv4Address**: string (ReadOnly): The IPv4 address associated with the public load balancer of the cluster.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Load balancing rules that are applied to the public load balancer of the cluster.
 * **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: Custom Network Security Rules that are applied to the virtual network of the cluster.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
 
 ## ApplicationTypeVersionsCleanupPolicy
 ### Properties
@@ -137,26 +137,26 @@
 ### Properties
 * **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
 * **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
-* **probeProtocol**: 'http' | 'https' | 'tcp' (Required): the reference to the load balancer probe used by the load balancing rule.
+* **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
-* **protocol**: 'tcp' | 'udp' (Required): The reference to the transport protocol used by the load balancing rule.
+* **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
 
 ## NetworkSecurityRule
 ### Properties
-* **access**: 'allow' | 'deny' (Required): The network traffic is allowed or denied.
+* **access**: 'allow' | 'deny' | string (Required): The network traffic is allowed or denied.
 * **description**: string: Network security rule description.
 * **destinationAddressPrefixes**: string[]: The destination address prefixes. CIDR or destination IP ranges.
 * **destinationPortRanges**: string[]: The destination port ranges.
-* **direction**: 'inbound' | 'outbound' (Required): Network security rule direction.
+* **direction**: 'inbound' | 'outbound' | string (Required): Network security rule direction.
 * **name**: string (Required): Network security rule name.
 * **priority**: int (Required): The priority of the rule. The value can be in the range 1000 to 3000. Values outside this range are reserved for Service Fabric ManagerCluster Resource Provider. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-* **protocol**: 'ah' | 'esp' | 'http' | 'https' | 'icmp' | 'tcp' | 'udp' (Required): Network protocol this rule applies to.
+* **protocol**: 'ah' | 'esp' | 'http' | 'https' | 'icmp' | 'tcp' | 'udp' | string (Required): Network protocol this rule applies to.
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
 * **sourcePortRanges**: string[]: The source port ranges.
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Standard' (Required): Sku Name. Basic requires a minimum of 3 nodes and Standard a minimum of 5. Basic only allows 1 node type.
+* **name**: 'Basic' | 'Standard' | string (Required): Sku Name. Basic requires a minimum of 3 nodes and Standard a minimum of 5. Basic only allows 1 node type.
 
 ## SystemData
 ### Properties
@@ -216,7 +216,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **instanceCloseDelayDuration**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description.
 * **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed.
 * **rollingUpgradeMonitoringPolicy**: [RollingUpgradeMonitoringPolicy](#rollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
-* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto': The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
+* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto' | string: The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
 * **upgradeReplicaSetCheckTimeout**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
 
 ## ApplicationHealthPolicy
@@ -263,7 +263,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## RollingUpgradeMonitoringPolicy
 ### Properties
-* **failureAction**: 'Manual' | 'Rollback' (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
+* **failureAction**: 'Manual' | 'Rollback' | string (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
 * **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **healthCheckWaitDuration**: string (Required): The amount of time to wait after completing an upgrade domain before applying health policies. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
@@ -280,13 +280,13 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero': Specifies the move cost for the service.
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Specifies the move cost for the service.
 * **partitionDescription**: [Partition](#partition) (Required): Describes how the service is partitioned.
 * **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 * **scalingPolicies**: [ScalingPolicy](#scalingpolicy)[]: Scaling policies for this service.
 * **serviceLoadMetrics**: [ServiceLoadMetric](#serviceloadmetric)[]: The service load metrics is given as an array of ServiceLoadMetric objects.
-* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess': The activation Mode of the service package
+* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
 * **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string (Required): The name of the service type
 ### StatefulServiceProperties
@@ -310,7 +310,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## ServiceCorrelation
 ### Properties
-* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' (Required): The service correlation scheme.
+* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
 * **serviceName**: string (Required): The full ARM Resource ID describing the service resource
 
 ## Partition
@@ -388,7 +388,7 @@ should be split between the partition ‘Count’
 * **name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **primaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **secondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **weight**: 'High' | 'Low' | 'Medium' | 'Zero': Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
+* **weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
 
 ## ServicePlacementPolicy
 * **Discriminator**: type
@@ -451,7 +451,7 @@ should be split between the partition ‘Count’
 * **ephemeralPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **isPrimary**: bool (Required): The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
 * **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
 * **vmExtensions**: [VmssExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
 * **vmImageOffer**: string: The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
 * **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.

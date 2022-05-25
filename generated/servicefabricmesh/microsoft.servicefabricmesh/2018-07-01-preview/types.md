@@ -38,11 +38,11 @@
 * **debugParams**: string: Internal use.
 * **description**: string: User readable description of the application.
 * **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): The health state of a resource such as Application, Service, or Network.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): The health state of a resource such as Application, Service, or Network.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: describes the services in the application.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' (ReadOnly): Status of the application resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Ready' | 'Upgrading' | string (ReadOnly): Status of the application resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the application deployment.
 * **unhealthyEvaluation**: string (ReadOnly): When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
 
@@ -80,11 +80,11 @@
 * **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required): Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
 * **description**: string: User readable description of the service.
 * **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning': The health state of a resource such as Application, Service, or Network.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string: The health state of a resource such as Application, Service, or Network.
 * **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
-* **osType**: 'Linux' | 'Windows' (Required): The Operating system type required by the code in service.
+* **osType**: 'Linux' | 'Windows' | string (Required): The Operating system type required by the code in service.
 * **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
-* **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' (ReadOnly): Represents the status of the service.
+* **status**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Unknown' | 'Upgrading' | string (ReadOnly): Represents the status of the service.
 
 ## ContainerCodePackageProperties
 ### Properties
@@ -198,7 +198,7 @@
 ### Properties
 * **layer4**: [Layer4IngressConfig](#layer4ingressconfig)[]: Configuration for layer4 public connectivity for this network.
 * **publicIPAddress**: string (ReadOnly): The public IP address for reaching this network.
-* **qosLevel**: 'Bronze': The QoS tier for ingress.
+* **qosLevel**: 'Bronze' | string: The QoS tier for ingress.
 
 ## Layer4IngressConfig
 ### Properties
@@ -217,7 +217,7 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile): This type describes a volume provided by an Azure Files file share.
 * **description**: string: User readable description of the volume.
-* **provider**: 'SFAzureFile' (Required): Provider of the volume.
+* **provider**: 'SFAzureFile' | string (Required): Provider of the volume.
 * **provisioningState**: string (ReadOnly): State of the resource.
 
 ## VolumeProviderParametersAzureFile

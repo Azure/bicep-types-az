@@ -21,7 +21,7 @@
 *PT1M (per one minute)
 *PT1S (per one second).
 This parameter is optional because, for some resources like compute, the period is irrelevant.
-* **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard': Resource types. For extensibility, it is a string.
+* **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard' | string: Resource types. For extensibility, it is a string.
 * **unit**: string (ReadOnly): The quota limit units, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation.
 
 ## ResourceName

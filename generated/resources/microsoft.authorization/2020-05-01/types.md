@@ -31,7 +31,7 @@
 
 ## ManagementLockProperties
 ### Properties
-* **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly' (Required): The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+* **level**: 'CanNotDelete' | 'NotSpecified' | 'ReadOnly' | string (Required): The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
 * **notes**: string: Notes about the lock. Maximum of 512 characters.
 * **owners**: [ManagementLockOwner](#managementlockowner)[]: The owners of the lock.
 
@@ -43,15 +43,15 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## PrivateLinkAssociationProperties
 ### Properties
 * **privateLink**: string: The rmpl Resource ID.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string
 * **scope**: string (ReadOnly): The scope of the private link association.
 * **tenantID**: string (ReadOnly): The TenantID.
 

@@ -25,8 +25,8 @@
 
 ## ProfileProperties
 ### Properties
-* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Defines the server side resource status
+* **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Defines the server side resource status
 
 ## ResourceTags
 ### Properties
@@ -36,10 +36,10 @@
 ## ExperimentProperties
 ### Properties
 * **description**: string: The description of the details or intents of the Experiment
-* **enabledState**: 'Disabled' | 'Enabled': The state of the Experiment
+* **enabledState**: 'Disabled' | 'Enabled' | string: The state of the Experiment
 * **endpointA**: [Endpoint](#endpoint): Defines the endpoint properties
 * **endpointB**: [Endpoint](#endpoint): Defines the endpoint properties
-* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' (ReadOnly): Defines the server side resource status
+* **resourceState**: 'Creating' | 'Deleting' | 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | string (ReadOnly): Defines the server side resource status
 * **scriptFileUri**: string (ReadOnly): The uri to the Script used in the Experiment
 * **status**: string (ReadOnly): The description of Experiment status from the server side
 

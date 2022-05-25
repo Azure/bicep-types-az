@@ -36,7 +36,7 @@
 * **domainConfigurationType**: string: Domain Configuration Type
 * **domainName**: string: The name of the Azure domain that the user would like to deploy Domain Services to.
 * **domainSecuritySettings**: [DomainSecuritySettings](#domainsecuritysettings): Domain Security Settings
-* **filteredSync**: 'Disabled' | 'Enabled': Enabled or Disabled flag to turn on Group-based filtered sync
+* **filteredSync**: 'Disabled' | 'Enabled' | string: Enabled or Disabled flag to turn on Group-based filtered sync
 * **ldapsSettings**: [LdapsSettings](#ldapssettings): Secure LDAP Settings
 * **migrationProperties**: [MigrationProperties](#migrationproperties) (ReadOnly): Migration Properties
 * **notificationSettings**: [NotificationSettings](#notificationsettings): Settings for notification
@@ -57,7 +57,7 @@
 ### Properties
 * **issues**: [ConfigDiagnosticsValidatorResultIssue](#configdiagnosticsvalidatorresultissue)[]: List of resource config validation issues.
 * **replicaSetSubnetDisplayName**: string: Replica set location and subnet name
-* **status**: 'Failure' | 'None' | 'OK' | 'Running' | 'Skipped' | 'Warning': Status for individual validator after running diagnostics.
+* **status**: 'Failure' | 'None' | 'OK' | 'Running' | 'Skipped' | 'Warning' | string: Status for individual validator after running diagnostics.
 * **validatorId**: string: Validator identifier
 
 ## ConfigDiagnosticsValidatorResultIssue
@@ -67,20 +67,20 @@
 
 ## DomainSecuritySettings
 ### Properties
-* **kerberosArmoring**: 'Disabled' | 'Enabled': A flag to determine whether or not KerberosArmoring is enabled or disabled.
-* **kerberosRc4Encryption**: 'Disabled' | 'Enabled': A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
-* **ntlmV1**: 'Disabled' | 'Enabled': A flag to determine whether or not NtlmV1 is enabled or disabled.
-* **syncKerberosPasswords**: 'Disabled' | 'Enabled': A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
-* **syncNtlmPasswords**: 'Disabled' | 'Enabled': A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
-* **syncOnPremPasswords**: 'Disabled' | 'Enabled': A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
-* **tlsV1**: 'Disabled' | 'Enabled': A flag to determine whether or not TlsV1 is enabled or disabled.
+* **kerberosArmoring**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not KerberosArmoring is enabled or disabled.
+* **kerberosRc4Encryption**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+* **ntlmV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not NtlmV1 is enabled or disabled.
+* **syncKerberosPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+* **syncNtlmPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+* **syncOnPremPasswords**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+* **tlsV1**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not TlsV1 is enabled or disabled.
 
 ## LdapsSettings
 ### Properties
 * **certificateNotAfter**: string (ReadOnly): NotAfter DateTime of configure ldaps certificate.
 * **certificateThumbprint**: string (ReadOnly): Thumbprint of configure ldaps certificate.
-* **externalAccess**: 'Disabled' | 'Enabled': A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
-* **ldaps**: 'Disabled' | 'Enabled': A flag to determine whether or not Secure LDAP is enabled or disabled.
+* **externalAccess**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
+* **ldaps**: 'Disabled' | 'Enabled' | string: A flag to determine whether or not Secure LDAP is enabled or disabled.
 * **pfxCertificate**: string: The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
 * **pfxCertificatePassword**: string: The password to decrypt the provided Secure LDAP certificate pfx file.
 * **publicCertificate**: string (ReadOnly): Public certificate used to configure secure ldap.
@@ -99,8 +99,8 @@
 ## NotificationSettings
 ### Properties
 * **additionalRecipients**: string[]: The list of additional recipients
-* **notifyDcAdmins**: 'Disabled' | 'Enabled': Should domain controller admins be notified
-* **notifyGlobalAdmins**: 'Disabled' | 'Enabled': Should global admins be notified
+* **notifyDcAdmins**: 'Disabled' | 'Enabled' | string: Should domain controller admins be notified
+* **notifyGlobalAdmins**: 'Disabled' | 'Enabled' | string: Should global admins be notified
 
 ## ReplicaSet
 ### Properties
@@ -148,10 +148,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ResourceTags
 ### Properties

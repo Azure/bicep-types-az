@@ -54,32 +54,32 @@
 * **deviceQuota**: int (Required): Size of the device quota. Value is required to be in multiples of 100.
 * **evaluationEndTime**: string (ReadOnly): End time of the evaluation period, if such exist
 * **mdeIntegration**: [DefenderSettingsPropertiesMdeIntegration](#defendersettingspropertiesmdeintegration) (Required): MDE integration configuration
-* **onboardingKind**: 'Default' | 'Evaluation' | 'MigratedToAzure' | 'Purchased' (Required): The kind of onboarding for the subscription
+* **onboardingKind**: 'Default' | 'Evaluation' | 'MigratedToAzure' | 'Purchased' | string (Required): The kind of onboarding for the subscription
 * **sentinelWorkspaceResourceIds**: string[] (Required): Sentinel Workspace Resource Ids
 
 ## DefenderSettingsPropertiesMdeIntegration
 ### Properties
-* **status**: 'Disabled' | 'Enabled' (Required): Integration status
+* **status**: 'Disabled' | 'Enabled' | string (Required): Integration status
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## SensorProperties
 ### Properties
 * **connectivityTime**: string (ReadOnly): Last connectivity time of the IoT sensor
 * **dynamicLearning**: bool (ReadOnly): Dynamic mode status of the IoT sensor
 * **learningMode**: bool (ReadOnly): Learning mode status of the IoT sensor
-* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' (ReadOnly): Status of the IoT sensor
-* **sensorType**: 'Enterprise' | 'Ot': Type of sensor
+* **sensorStatus**: 'Disconnected' | 'Ok' | 'Unavailable' | string (ReadOnly): Status of the IoT sensor
+* **sensorType**: 'Enterprise' | 'Ot' | string: Type of sensor
 * **sensorVersion**: string (ReadOnly): Version of the IoT sensor
 * **tiAutomaticUpdates**: bool: TI Automatic mode status of the IoT sensor
-* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' (ReadOnly): TI Status of the IoT sensor
+* **tiStatus**: 'Failed' | 'InProgress' | 'Ok' | 'UpdateAvailable' | string (ReadOnly): TI Status of the IoT sensor
 * **tiVersion**: string (ReadOnly): TI Version of the IoT sensor
 * **zone**: string: Zone of the IoT sensor
 

@@ -40,7 +40,7 @@
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+* **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
 * **metadata**: any: Any object
 * **notScopes**: string[]: The policy's excluded scopes.
 * **parameters**: any: Any object
@@ -60,7 +60,7 @@
 * **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
 * **parameters**: any: Any object
 * **policyRule**: any: Any object
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicySetDefinitionProperties
 ### Properties
@@ -69,7 +69,7 @@
 * **metadata**: any: Any object
 * **parameters**: any: Any object
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified': The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, and Custom.
 
 ## PolicyDefinitionReference
 ### Properties

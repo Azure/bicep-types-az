@@ -25,7 +25,7 @@
 * **createdTime**: string (ReadOnly): Time when DigitalTwinsInstance was created.
 * **hostName**: string (ReadOnly): Api endpoint to work with DigitalTwinsInstance.
 * **lastUpdatedTime**: string (ReadOnly): Time when DigitalTwinsInstance was updated.
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
 
 ## DigitalTwinsResourceTags
 ### Properties
@@ -38,7 +38,7 @@
 ### Base Properties
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
 * **deadLetterSecret**: string: Dead letter storage secret. Will be obfuscated during read.
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
 ### EventGrid
 #### Properties
 * **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.

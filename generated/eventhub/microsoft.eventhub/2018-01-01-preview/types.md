@@ -131,7 +131,7 @@
 ## ClusterSku
 ### Properties
 * **capacity**: int: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
-* **name**: 'Dedicated' (Required): Name of this SKU.
+* **name**: 'Dedicated' | string (Required): Name of this SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -173,8 +173,8 @@
 ## Sku
 ### Properties
 * **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
-* **name**: 'Basic' | 'Standard' (Required): Name of this SKU.
-* **tier**: 'Basic' | 'Standard': The billing tier of this particular SKU.
+* **name**: 'Basic' | 'Standard' | string (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Standard' | string: The billing tier of this particular SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -183,7 +183,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
 
 ## ArmDisasterRecoveryProperties
 ### Properties
@@ -231,20 +231,20 @@
 
 ## IpFilterRuleProperties
 ### Properties
-* **action**: 'Accept' | 'Reject': The IP Filter Action
+* **action**: 'Accept' | 'Reject' | string: The IP Filter Action
 * **filterName**: string: IP Filter name
 * **ipMask**: string: IP Mask
 
 ## NetworkRuleSetProperties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 * **trustedServiceAccessEnabled**: bool: Value that indicates whether Trusted Service Access is Enabled or not.
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow' | string: The IP Filter Action
 * **ipMask**: string: IP Mask
 
 ## NWRuleSetVirtualNetworkRules
@@ -260,7 +260,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -269,7 +269,7 @@
 ## ConnectionState
 ### Properties
 * **description**: string: Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Status of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
 
 ## VirtualNetworkRuleProperties
 ### Properties

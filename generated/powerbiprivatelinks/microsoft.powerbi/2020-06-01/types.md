@@ -39,7 +39,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (WriteOnly): PrivateEndpoint
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate) (WriteOnly): ConnectionState information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (WriteOnly): Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (WriteOnly): Provisioning state of the Private Endpoint Connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -49,16 +49,16 @@
 ### Properties
 * **actionsRequired**: string (WriteOnly): Actions required (if any).
 * **description**: string (WriteOnly): Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (WriteOnly): Status of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (WriteOnly): Status of the connection.
 
 ## SystemData
 ### Properties
 * **createdAt**: string (WriteOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (WriteOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (WriteOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (WriteOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (WriteOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (WriteOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (WriteOnly): The type of identity that created the resource.
 
 ## TenantResourceTags
 ### Properties

@@ -16,7 +16,7 @@
 * **apiVersion**: '2019-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag).
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Linux' | 'Windows': The kind of the resource.
+* **kind**: 'Linux' | 'Windows' | string: The kind of the resource.
 * **location**: string (Required): The geo-location where the resource lives.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DataCollectionRuleResourceProperties](#datacollectionruleresourceproperties): Resource properties.
@@ -27,7 +27,7 @@
 ### Properties
 * **dataCollectionRuleId**: string: The resource ID of the data collection rule that is to be associated.
 * **description**: string: Description of the association.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The resource provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The resource provisioning state.
 
 ## DataCollectionRuleResourceProperties
 ### Properties
@@ -37,12 +37,12 @@ This property is optional and can be omitted if the rule is meant to be used via
 * **description**: string: Description of the data collection rule.
 * **destinations**: [DataCollectionRuleDestinations](#datacollectionruledestinations): The specification of destinations.
 * **immutableId**: string (ReadOnly): The immutable ID of this data collection rule. This property is READ-ONLY.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The resource provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The resource provisioning state.
 
 ## DataFlow
 ### Properties
 * **destinations**: string[]: List of destinations for this data flow.
-* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[]: List of streams for this data flow.
+* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent' | string[]: List of streams for this data flow.
 
 ## DataCollectionRuleDataSources
 ### Properties
@@ -58,7 +58,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 * **inputDataSources**: string[]: The list of data sources this extension needs data from.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent'[]: List of streams that this data source will be sent to.
+* **streams**: 'Microsoft-Event' | 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | 'Microsoft-Syslog' | 'Microsoft-WindowsEvent' | string[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 
 ## PerfCounterDataSource
@@ -69,23 +69,23 @@ To get a list of performance counters on Windows, run the command 'typeperf'.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
 * **samplingFrequencyInSeconds**: int: The number of seconds between consecutive counter measurements (samples).
-* **streams**: 'Microsoft-InsightsMetrics' | 'Microsoft-Perf'[]: List of streams that this data source will be sent to.
+* **streams**: 'Microsoft-InsightsMetrics' | 'Microsoft-Perf' | string[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 
 ## SyslogDataSource
 ### Properties
-* **facilityNames**: '*' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user' | 'uucp'[]: The list of facility names.
-* **logLevels**: '*' | 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning'[]: The log levels to collect.
+* **facilityNames**: '*' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user' | 'uucp' | string[]: The list of facility names.
+* **logLevels**: '*' | 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning' | string[]: The log levels to collect.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-Syslog'[]: List of streams that this data source will be sent to.
+* **streams**: 'Microsoft-Syslog' | string[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 
 ## WindowsEventLogDataSource
 ### Properties
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.
-* **streams**: 'Microsoft-Event' | 'Microsoft-WindowsEvent'[]: List of streams that this data source will be sent to.
+* **streams**: 'Microsoft-Event' | 'Microsoft-WindowsEvent' | string[]: List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
 * **xPathQueries**: string[]: A list of Windows Event Log queries in XPATH format.
 

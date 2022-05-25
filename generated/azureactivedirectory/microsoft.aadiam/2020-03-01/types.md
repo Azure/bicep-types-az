@@ -34,7 +34,7 @@
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
 * **privateLinkConnectionTags**: [TagsResource](#tagsresource) (WriteOnly): A container holding only the Tags for a resource, allowing the user to update the tags on a PrivateLinkConnection instance.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -53,5 +53,5 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 

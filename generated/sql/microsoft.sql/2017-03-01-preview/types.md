@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,7 +34,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Sql/managedInstances/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -43,7 +43,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedBackupShortTermRetentionPolicyProperties](#managedbackupshorttermretentionpolicyproperties): Properties of a short term retention policy
 * **type**: 'Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Sql/managedInstances/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -61,7 +61,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -84,7 +84,7 @@
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseBlobAuditingPolicyProperties](#databaseblobauditingpolicyproperties): Properties of a database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -93,7 +93,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [LongTermRetentionPolicyProperties](#longtermretentionpolicyproperties): Properties of a long term retention policy
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -102,7 +102,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedDatabaseBlobAuditingPolicyProperties](#extendeddatabaseblobauditingpolicyproperties): Properties of an extended database blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -120,7 +120,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseVulnerabilityAssessmentProperties](#databasevulnerabilityassessmentproperties): Properties of a database Vulnerability Assessment.
 * **type**: 'Microsoft.Sql/servers/databases/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -147,7 +147,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Sql/servers/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -213,22 +213,22 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Sql/servers/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ManagedInstanceAdministratorProperties
 ### Properties
-* **administratorType**: 'ActiveDirectory' (Required): Type of the managed instance administrator.
+* **administratorType**: 'ActiveDirectory' | string (Required): Type of the managed instance administrator.
 * **login**: string (Required): Login name of the managed instance administrator.
 * **sid**: string (Required): SID (object ID) of the managed instance administrator.
 * **tenantId**: string: Tenant ID of the managed instance administrator.
 
 ## ManagedDatabaseProperties
 ### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS' | string: Collation of the metadata catalog.
 * **collation**: string: Collation of the managed database.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup' (WriteOnly): Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'RestoreExternalBackup' | 'RestoreLongTermRetentionBackup' | string (WriteOnly): Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.
 * **creationDate**: string (ReadOnly): Creation date of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): Geo paired region.
 * **earliestRestorePoint**: string (ReadOnly): Earliest restore point in time for point in time restore.
@@ -238,7 +238,7 @@
 * **restorableDroppedDatabaseId**: string (WriteOnly): The restorable dropped database resource id to restore when creating this database.
 * **restorePointInTime**: string (WriteOnly): Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
 * **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
-* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' (ReadOnly): Status of the database.
+* **status**: 'Creating' | 'Inaccessible' | 'Offline' | 'Online' | 'Restoring' | 'Shutdown' | 'Updating' | string (ReadOnly): Status of the database.
 * **storageContainerSasToken**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
 * **storageContainerUri**: string (WriteOnly): Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
 
@@ -351,9 +351,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## DatabaseProperties
 ### Properties
-* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS': Collation of the metadata catalog.
+* **catalogCollation**: 'DATABASE_DEFAULT' | 'SQL_Latin1_General_CP1_CI_AS' | string: Collation of the metadata catalog.
 * **collation**: string: The collation of the database.
-* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary' (WriteOnly): Specifies the mode of database creation.
+* **createMode**: 'Copy' | 'Default' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreExternalBackup' | 'RestoreExternalBackupSecondary' | 'RestoreLongTermRetentionBackup' | 'Secondary' | string (WriteOnly): Specifies the mode of database creation.
 
 Default: regular database creation.
 
@@ -382,10 +382,10 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **recoveryServicesRecoveryPointId**: string (WriteOnly): The resource identifier of the recovery point associated with create operation of this database.
 * **restorableDroppedDatabaseId**: string (WriteOnly): The resource identifier of the restorable dropped database associated with create operation of this database.
 * **restorePointInTime**: string (WriteOnly): Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd' (WriteOnly): The name of the sample schema to apply when creating this database.
+* **sampleName**: 'AdventureWorksLT' | 'WideWorldImportersFull' | 'WideWorldImportersStd' | string (WriteOnly): The name of the sample schema to apply when creating this database.
 * **sourceDatabaseDeletionDate**: string (WriteOnly): Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string (WriteOnly): The resource identifier of the source database associated with create operation of this database.
-* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' (ReadOnly): The status of the database.
+* **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' | string (ReadOnly): The status of the database.
 * **zoneRedundant**: bool: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 
 ## Sku
@@ -708,7 +708,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## JobAgentProperties
 ### Properties
 * **databaseId**: string (Required): Resource ID of the database to store job metadata in.
-* **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' (ReadOnly): The state of the job agent.
+* **state**: 'Creating' | 'Deleting' | 'Disabled' | 'Ready' | 'Updating' | string (ReadOnly): The state of the job agent.
 
 ## TrackedResourceTags
 ### Properties
@@ -743,8 +743,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **jobExecutionId**: string (ReadOnly): The unique identifier of the job execution.
 * **jobVersion**: int (ReadOnly): The job version number.
 * **lastMessage**: string (ReadOnly): The last status or error message.
-* **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' (ReadOnly): The detailed state of the job execution.
-* **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The ARM provisioning state of the job execution.
+* **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' | string (ReadOnly): The detailed state of the job execution.
+* **provisioningState**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The ARM provisioning state of the job execution.
 * **startTime**: string (ReadOnly): The time that the job execution started.
 * **stepId**: int (ReadOnly): The job step id.
 * **stepName**: string (ReadOnly): The job step name.
@@ -754,7 +754,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **databaseName**: string (ReadOnly): The database name.
 * **serverName**: string (ReadOnly): The server name.
-* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (ReadOnly): The type of the target.
+* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' | string (ReadOnly): The type of the target.
 
 ## JobStepProperties
 ### Properties
@@ -767,8 +767,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## JobStepAction
 ### Properties
-* **source**: 'Inline': The source of the action to execute.
-* **type**: 'TSql': Type of action being executed by the job step.
+* **source**: 'Inline' | string: The source of the action to execute.
+* **type**: 'TSql' | string: Type of action being executed by the job step.
 * **value**: string (Required): The action value, for example the text of the T-SQL script to execute.
 
 ## JobStepExecutionOptions
@@ -788,7 +788,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **serverName**: string (Required): The output destination server name.
 * **subscriptionId**: string: The output destination subscription id.
 * **tableName**: string (Required): The output destination table.
-* **type**: 'SqlDatabase': The output destination type.
+* **type**: 'SqlDatabase' | string: The output destination type.
 
 ## JobTargetGroupProperties
 ### Properties
@@ -802,5 +802,5 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **refreshCredential**: string: The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
 * **serverName**: string: The target server name.
 * **shardMapName**: string: The target shard map.
-* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' (Required): The type of the target.
+* **type**: 'SqlDatabase' | 'SqlElasticPool' | 'SqlServer' | 'SqlShardMap' | 'TargetGroup' | string (Required): The type of the target.
 

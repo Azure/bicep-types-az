@@ -26,12 +26,12 @@
 ### Properties
 * **principalId**: string: Gets or sets the principal id.
 * **tenantId**: string: Gets or sets the tenant id.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': The type of identity used for the resource mover service.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: The type of identity used for the resource mover service.
 
 ## MoveCollectionProperties
 ### Properties
 * **errors**: [MoveCollectionPropertiesErrors](#movecollectionpropertieserrors) (ReadOnly): Defines the move collection errors.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Defines the provisioning states.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **sourceRegion**: string (Required): Gets or sets the source region.
 * **targetRegion**: string (Required): Gets or sets the target region.
 
@@ -59,7 +59,7 @@
 * **existingTargetId**: string: Gets or sets the existing target ARM Id of the resource.
 * **isResolveRequired**: bool (ReadOnly): Gets a value indicating whether the resolve action is required over the move collection.
 * **moveStatus**: [MoveResourcePropertiesMoveStatus](#moveresourcepropertiesmovestatus) (ReadOnly): Defines the move resource status.
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Defines the provisioning states.
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Defines the provisioning states.
 * **resourceSettings**: [ResourceSettings](#resourcesettings): Gets or sets the resource settings.
 * **sourceId**: string (Required): Gets or sets the Source ARM Id of the resource.
 * **sourceResourceSettings**: [ResourceSettings](#resourcesettings) (ReadOnly): Gets or sets the resource settings.
@@ -68,12 +68,12 @@
 ## MoveResourceDependency
 ### Properties
 * **automaticResolution**: [AutomaticResolutionProperties](#automaticresolutionproperties): Defines the properties for automatic resolution.
-* **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare': Defines the dependency type.
+* **dependencyType**: 'RequiredForMove' | 'RequiredForPrepare' | string: Defines the dependency type.
 * **id**: string: Gets the source ARM ID of the dependent resource.
 * **isOptional**: string: Gets or sets a value indicating whether the dependency is optional.
 * **manualResolution**: [ManualResolutionProperties](#manualresolutionproperties): Defines the properties for manual resolution.
 * **resolutionStatus**: string: Gets the dependency resolution status.
-* **resolutionType**: 'Automatic' | 'Manual': Defines the resolution type.
+* **resolutionType**: 'Automatic' | 'Manual' | string: Defines the resolution type.
 
 ## AutomaticResolutionProperties
 ### Properties
@@ -98,7 +98,7 @@ the dependent resource.
 ### Properties
 * **errors**: [MoveResourceError](#moveresourceerror): An error response from the azure resource mover service.
 * **jobStatus**: [JobStatus](#jobstatus): Defines the job status.
-* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted' (ReadOnly): Defines the MoveResource states.
+* **moveState**: 'AssignmentPending' | 'CommitFailed' | 'CommitInProgress' | 'CommitPending' | 'Committed' | 'DeleteSourcePending' | 'DiscardFailed' | 'DiscardInProgress' | 'MoveFailed' | 'MoveInProgress' | 'MovePending' | 'PrepareFailed' | 'PrepareInProgress' | 'PreparePending' | 'ResourceMoveCompleted' | string (ReadOnly): Defines the MoveResource states.
 
 ## MoveResourceError
 ### Properties
@@ -106,7 +106,7 @@ the dependent resource.
 
 ## JobStatus
 ### Properties
-* **jobName**: 'InitialSync' (ReadOnly): Defines the job name.
+* **jobName**: 'InitialSync' | string (ReadOnly): Defines the job name.
 * **jobProgress**: string (ReadOnly): Gets or sets the monitoring job percentage.
 
 ## ResourceSettings
@@ -128,7 +128,7 @@ the dependent resource.
 #### Properties
 * **resourceType**: 'Microsoft.Compute/virtualMachines' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
 * **targetAvailabilitySetId**: string: Gets or sets the target availability set id for virtual machines not in an availability set at source.
-* **targetAvailabilityZone**: '1' | '2' | '3' | 'NA': Gets or sets the target availability zone.
+* **targetAvailabilityZone**: '1' | '2' | '3' | 'NA' | string: Gets or sets the target availability zone.
 * **targetVmSize**: string: Gets or sets the target virtual machine size.
 
 ### KeyVaultResourceSettings
@@ -181,12 +181,12 @@ DDOS protection should be switched on.
 ### SqlDatabaseResourceSettings
 #### Properties
 * **resourceType**: 'Microsoft.Sql/servers/databases' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
+* **zoneRedundant**: 'Disable' | 'Enable' | string: Defines the zone redundant resource setting.
 
 ### SqlElasticPoolResourceSettings
 #### Properties
 * **resourceType**: 'Microsoft.Sql/servers/elasticPools' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **zoneRedundant**: 'Disable' | 'Enable': Defines the zone redundant resource setting.
+* **zoneRedundant**: 'Disable' | 'Enable' | string: Defines the zone redundant resource setting.
 
 ### ResourceGroupResourceSettings
 #### Properties

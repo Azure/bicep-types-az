@@ -87,7 +87,7 @@
 ## DnsForwardingRulesetProperties
 ### Properties
 * **dnsResolverOutboundEndpoints**: [SubResource](#subresource)[]: The reference to the DNS resolver outbound endpoints that are used to route DNS queries matching the forwarding rules in the ruleset to the target DNS servers.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): The resourceGuid for the DNS forwarding ruleset.
 
 ## SubResource
@@ -98,10 +98,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -111,9 +111,9 @@
 ## ForwardingRuleProperties
 ### Properties
 * **domainName**: string (Required): The domain name for the forwarding rule.
-* **forwardingRuleState**: 'Disabled' | 'Enabled': The state of forwarding rule.
+* **forwardingRuleState**: 'Disabled' | 'Enabled' | string: The state of forwarding rule.
 * **metadata**: [ForwardingRulePropertiesMetadata](#forwardingrulepropertiesmetadata): Metadata attached to the forwarding rule.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **targetDnsServers**: [TargetDnsServer](#targetdnsserver)[] (Required): DNS servers to forward the DNS query to.
 
 ## ForwardingRulePropertiesMetadata
@@ -129,7 +129,7 @@
 ## VirtualNetworkLinkProperties
 ### Properties
 * **metadata**: [VirtualNetworkLinkPropertiesMetadata](#virtualnetworklinkpropertiesmetadata): Metadata attached to the virtual network link.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **virtualNetwork**: [SubResource](#subresource): Reference to another ARM resource.
 
 ## VirtualNetworkLinkPropertiesMetadata
@@ -139,8 +139,8 @@
 
 ## DnsResolverProperties
 ### Properties
-* **dnsResolverState**: 'Connected' | 'Disconnected' (ReadOnly): The current status of the DNS resolver. This is a read-only property and any attempt to set this value will be ignored.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the resource.
+* **dnsResolverState**: 'Connected' | 'Disconnected' | string (ReadOnly): The current status of the DNS resolver. This is a read-only property and any attempt to set this value will be ignored.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): The Guid property of the resource.
 * **virtualNetwork**: [SubResource](#subresource) (Required): Reference to another ARM resource.
 
@@ -152,13 +152,13 @@
 ## InboundEndpointProperties
 ### Properties
 * **ipConfigurations**: [IpConfiguration](#ipconfiguration)[]: IP configurations for the inbound endpoint.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): The Guid property of the resource.
 
 ## IpConfiguration
 ### Properties
 * **privateIpAddress**: string: Private IP address of the IP configuration.
-* **privateIpAllocationMethod**: 'Dynamic' | 'Static': Private IP address allocation method.
+* **privateIpAllocationMethod**: 'Dynamic' | 'Static' | string: Private IP address allocation method.
 * **subnet**: [SubResource](#subresource): Reference to another ARM resource.
 
 ## TrackedResourceTags
@@ -168,7 +168,7 @@
 
 ## OutboundEndpointProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the resource.
 * **resourceGuid**: string (ReadOnly): The Guid property of the resource.
 * **subnet**: [SubResource](#subresource): Reference to another ARM resource.
 

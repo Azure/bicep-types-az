@@ -40,9 +40,9 @@
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
 * **parameters**: [WorkspaceCustomParameters](#workspacecustomparameters): Custom Parameters used for Cluster Creation.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections created on the workspace
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the workspace.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': The network access type for accessing workspace. Set value to disabled to access workspace only via private link.
-* **requiredNsgRules**: 'AllRules' | 'NoAzureDatabricksRules' | 'NoAzureServiceRules': Gets or sets a value indicating whether data plane (clusters) to control plane communication happen over private endpoint. Supported values are 'AllRules' and 'NoAzureDatabricksRules'. 'NoAzureServiceRules' value is for internal use only.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the workspace.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: The network access type for accessing workspace. Set value to disabled to access workspace only via private link.
+* **requiredNsgRules**: 'AllRules' | 'NoAzureDatabricksRules' | 'NoAzureServiceRules' | string: Gets or sets a value indicating whether data plane (clusters) to control plane communication happen over private endpoint. Supported values are 'AllRules' and 'NoAzureDatabricksRules'. 'NoAzureServiceRules' value is for internal use only.
 * **storageAccountIdentity**: [ManagedIdentityConfiguration](#managedidentityconfiguration): The Managed Identity details for storage account.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
 * **updatedBy**: [CreatedBy](#createdby): Provides details of the entity that created/updated the workspace.
@@ -70,7 +70,7 @@
 
 ## EncryptionV2
 ### Properties
-* **keySource**: 'Microsoft.Keyvault' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Keyvault
+* **keySource**: 'Microsoft.Keyvault' | string (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Keyvault
 * **keyVaultProperties**: [EncryptionV2KeyVaultProperties](#encryptionv2keyvaultproperties): Key Vault input properties for encryption.
 
 ## EncryptionV2KeyVaultProperties
@@ -100,29 +100,29 @@
 
 ## WorkspaceCustomStringParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' (ReadOnly): Provisioning status of the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
 * **value**: string (Required): The value which should be used for this field.
 
 ## WorkspaceCustomBooleanParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' (ReadOnly): Provisioning status of the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
 * **value**: bool (Required): The value which should be used for this field.
 
 ## WorkspaceEncryptionParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' (ReadOnly): Provisioning status of the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
 * **value**: [Encryption](#encryption): The object that contains details of encryption used on the workspace.
 
 ## Encryption
 ### Properties
 * **KeyName**: string: The name of KeyVault key.
-* **keySource**: 'Default' | 'Microsoft.Keyvault': The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+* **keySource**: 'Default' | 'Microsoft.Keyvault' | string: The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
 * **keyvaulturi**: string: The Uri of KeyVault.
 * **keyversion**: string: The version of KeyVault key.
 
 ## WorkspaceCustomObjectParameter
 ### Properties
-* **type**: 'Bool' | 'Object' | 'String' (ReadOnly): Provisioning status of the workspace.
+* **type**: 'Bool' | 'Object' | 'String' | string (ReadOnly): Provisioning status of the workspace.
 * **value**: any (Required): Any object
 
 ## PrivateEndpointConnection
@@ -136,7 +136,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint property of a private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The current state of a private endpoint connection
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -146,7 +146,7 @@
 ### Properties
 * **actionRequired**: string: Actions required for a private endpoint connection
 * **description**: string: The description for the current state of a private endpoint connection
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' (Required): The status of a private endpoint connection
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection
 
 ## ManagedIdentityConfiguration
 ### Properties
@@ -163,10 +163,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -180,8 +180,8 @@
 * **allowVirtualNetworkAccess**: bool: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
 * **databricksAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **databricksVirtualNetwork**: [VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork](#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork): The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
-* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' (ReadOnly): The status of the virtual network peering.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **peeringState**: 'Connected' | 'Disconnected' | 'Initiated' | string (ReadOnly): The status of the virtual network peering.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 * **remoteAddressSpace**: [AddressSpace](#addressspace): AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
 * **remoteVirtualNetwork**: [VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetwork](#virtualnetworkpeeringpropertiesformatremotevirtualnetwork) (Required): The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
 * **useRemoteGateways**: bool: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.

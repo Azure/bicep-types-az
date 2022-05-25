@@ -186,7 +186,7 @@
 
 ## IntegrationAccountSku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' (Required)
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Standard' | string (Required)
 
 ## ResourceTags
 ### Properties
@@ -256,7 +256,7 @@
 ### Properties
 * **dispositionNotificationTo**: string: The disposition notification to header value.
 * **mdnText**: string: The MDN text.
-* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' (Required)
+* **micHashingAlgorithm**: 'MD5' | 'None' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string (Required)
 * **needMDN**: bool (Required): The value indicating whether to send or request a MDN.
 * **receiptDeliveryUrl**: string: The receipt delivery URL.
 * **sendInboundMDNToMessageBox**: bool (Required): The value indicating whether to send inbound MDN to message box.
@@ -290,11 +290,11 @@
 * **checkCertificateRevocationListOnSend**: bool (Required): The value indicating whether to check for certificate revocation list on send.
 * **checkDuplicateMessage**: bool (Required): The value indicating whether to check for duplicate message.
 * **compressMessage**: bool (Required): The value indicating whether the message has to be compressed.
-* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' (Required)
+* **encryptionAlgorithm**: 'AES128' | 'AES192' | 'AES256' | 'DES3' | 'None' | 'NotSpecified' | 'RC2' | string (Required)
 * **encryptMessage**: bool (Required): The value indicating whether the message has to be encrypted.
 * **interchangeDuplicatesValidityDays**: int (Required): The number of days to look back for duplicate interchange.
 * **overrideMessageProperties**: bool (Required): The value indicating whether to override incoming message properties with those in agreement.
-* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512'
+* **signingAlgorithm**: 'Default' | 'NotSpecified' | 'SHA1' | 'SHA2256' | 'SHA2384' | 'SHA2512' | string
 * **signMessage**: bool (Required): The value indicating whether the message has to be signed.
 
 ## BusinessIdentity
@@ -421,7 +421,7 @@
 ## EdifactFramingSettings
 ### Properties
 * **characterEncoding**: string: The character encoding.
-* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' (Required)
+* **characterSet**: 'KECA' | 'NotSpecified' | 'UNOA' | 'UNOB' | 'UNOC' | 'UNOD' | 'UNOE' | 'UNOF' | 'UNOG' | 'UNOH' | 'UNOI' | 'UNOJ' | 'UNOK' | 'UNOX' | 'UNOY' | string (Required)
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
 * **decimalPointIndicator**: 'Comma' | 'Decimal' | 'NotSpecified' (Required)
@@ -434,7 +434,7 @@
 
 ## EdifactMessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required)
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' | string (Required)
 
 ## EdifactMessageIdentifier
 ### Properties
@@ -463,7 +463,7 @@
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to allow leading and trailing spaces and zeroes.
 * **enforceCharacterSet**: bool (Required): The value indicating whether to validate character Set.
 * **messageId**: string (Required): The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateEDITypes**: bool (Required): The value indicating whether to validate EDI types.
 * **validateXSDTypes**: bool (Required): The value indicating whether to validate XSD types.
@@ -475,7 +475,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required): The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool (Required): The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int (Required): The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
@@ -527,7 +527,7 @@
 
 ## X12EnvelopeOverride
 ### Properties
-* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required)
+* **dateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' | string (Required)
 * **functionalIdentifierCode**: string: The functional identifier code.
 * **headerVersion**: string (Required): The header version.
 * **messageId**: string (Required): The message id on which this envelope settings has to be applied.
@@ -536,7 +536,7 @@
 * **responsibleAgencyCode**: string (Required): The responsible agency code.
 * **senderApplicationId**: string (Required): The sender application id.
 * **targetNamespace**: string (Required): The target namespace on which this envelope settings has to be applied.
-* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required)
+* **timeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' | string (Required)
 
 ## X12EnvelopeSettings
 ### Properties
@@ -547,8 +547,8 @@
 * **groupControlNumberLowerBound**: int (Required): The group control number lower bound.
 * **groupControlNumberUpperBound**: int (Required): The group control number upper bound.
 * **groupHeaderAgencyCode**: string (Required): The group header agency code.
-* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' (Required)
-* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' (Required)
+* **groupHeaderDateFormat**: 'CCYYMMDD' | 'NotSpecified' | 'YYMMDD' | string (Required)
+* **groupHeaderTimeFormat**: 'HHMM' | 'HHMMSS' | 'HHMMSSd' | 'HHMMSSdd' | 'NotSpecified' | string (Required)
 * **groupHeaderVersion**: string (Required): The group header version.
 * **interchangeControlNumberLowerBound**: int (Required): The interchange  control number lower bound.
 * **interchangeControlNumberUpperBound**: int (Required): The interchange  control number upper bound.
@@ -562,12 +562,12 @@
 * **transactionSetControlNumberPrefix**: string: The transaction set control number prefix.
 * **transactionSetControlNumberSuffix**: string: The transaction set control number suffix.
 * **transactionSetControlNumberUpperBound**: int (Required): The transaction set control number upper bound.
-* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' (Required)
+* **usageIndicator**: 'Information' | 'NotSpecified' | 'Production' | 'Test' | string (Required)
 * **useControlStandardsIdAsRepetitionCharacter**: bool (Required): The value indicating whether to use control standards id as repetition character.
 
 ## X12FramingSettings
 ### Properties
-* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' (Required)
+* **characterSet**: 'Basic' | 'Extended' | 'NotSpecified' | 'UTF8' | string (Required)
 * **componentSeparator**: int (Required): The component separator.
 * **dataElementSeparator**: int (Required): The data element separator.
 * **replaceCharacter**: int (Required): The replacement character.
@@ -577,7 +577,7 @@
 
 ## X12MessageFilter
 ### Properties
-* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' (Required)
+* **messageFilterType**: 'Exclude' | 'Include' | 'NotSpecified' | string (Required)
 
 ## X12MessageIdentifier
 ### Properties
@@ -610,7 +610,7 @@
 ### Properties
 * **allowLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to allow leading and trailing spaces and zeroes.
 * **messageId**: string (Required): The message id on which the validation settings has to be applied.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character Set.
 * **validateEDITypes**: bool (Required): The value indicating whether to validate EDI types.
@@ -623,7 +623,7 @@
 * **checkDuplicateInterchangeControlNumber**: bool (Required): The value indicating whether to check for duplicate interchange control number.
 * **checkDuplicateTransactionSetControlNumber**: bool (Required): The value indicating whether to check for duplicate transaction set control number.
 * **interchangeControlNumberValidityDays**: int (Required): The validity period of interchange control number.
-* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' (Required)
+* **trailingSeparatorPolicy**: 'Mandatory' | 'NotAllowed' | 'NotSpecified' | 'Optional' | string (Required)
 * **trimLeadingAndTrailingSpacesAndZeroes**: bool (Required): The value indicating whether to trim leading and trailing spaces and zeroes.
 * **validateCharacterSet**: bool (Required): The value indicating whether to validate character set in the message.
 * **validateEDITypes**: bool (Required): The value indicating whether to Whether to validate EDI types.
@@ -694,7 +694,7 @@
 ## WorkflowTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year'
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Second' | 'Week' | 'Year' | string
 * **interval**: int: The interval.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
@@ -750,7 +750,7 @@
 * **contentLink**: [ContentLink](#contentlink) (ReadOnly): The content link.
 * **contentType**: string: The content type.
 * **createdTime**: string (ReadOnly): The created time.
-* **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' (Required)
+* **mapType**: 'Liquid' | 'NotSpecified' | 'Xslt' | 'Xslt20' | 'Xslt30' | string (Required)
 * **metadata**: any: Any object
 * **parametersSchema**: [IntegrationAccountMapPropertiesParametersSchema](#integrationaccountmappropertiesparametersschema): The parameters schema of integration account map.
 
@@ -769,7 +769,7 @@
 * **content**: [PartnerContent](#partnercontent) (Required): The integration account partner content.
 * **createdTime**: string (ReadOnly): The created time.
 * **metadata**: any: Any object
-* **partnerType**: 'B2B' | 'NotSpecified' (Required)
+* **partnerType**: 'B2B' | 'NotSpecified' | string (Required)
 
 ## PartnerContent
 ### Properties
@@ -794,7 +794,7 @@
 * **documentName**: string: The document name.
 * **fileName**: string: The file name.
 * **metadata**: any: Any object
-* **schemaType**: 'NotSpecified' | 'Xml' (Required)
+* **schemaType**: 'NotSpecified' | 'Xml' | string (Required)
 * **targetNamespace**: string: The target namespace of the schema.
 
 ## ResourceTags
@@ -821,9 +821,9 @@
 * **definition**: any: Any object
 * **integrationAccount**: [ResourceReference](#resourcereference): The resource reference.
 * **parameters**: [WorkflowPropertiesParameters](#workflowpropertiesparameters): The parameters.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' (ReadOnly)
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Completed' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Moving' | 'NotSpecified' | 'Ready' | 'Registered' | 'Registering' | 'Running' | 'Succeeded' | 'Unregistered' | 'Unregistering' | 'Updating' | string (ReadOnly)
 * **sku**: [Sku](#sku): The sku type.
-* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended'
+* **state**: 'Completed' | 'Deleted' | 'Disabled' | 'Enabled' | 'NotSpecified' | 'Suspended' | string
 * **version**: string (ReadOnly): Gets the version.
 
 ## ResourceReference
@@ -841,12 +841,12 @@
 ### Properties
 * **description**: string: The description.
 * **metadata**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String'
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'NotSpecified' | 'Object' | 'SecureObject' | 'SecureString' | 'String' | string
 * **value**: any: Any object
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' (Required): The sku name.
+* **name**: 'Basic' | 'Free' | 'NotSpecified' | 'Premium' | 'Shared' | 'Standard' | string (Required): The sku name.
 * **plan**: [ResourceReference](#resourcereference): The resource reference.
 
 ## ResourceTags
@@ -856,7 +856,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -887,7 +887,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -901,7 +901,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## CallbackUrl
@@ -919,7 +919,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -933,7 +933,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -947,7 +947,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl
@@ -961,7 +961,7 @@
 
 ## GetCallbackUrlParameters
 ### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' (WriteOnly)
+* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string (WriteOnly)
 * **notAfter**: string (WriteOnly): The expiry time.
 
 ## WorkflowTriggerCallbackUrl

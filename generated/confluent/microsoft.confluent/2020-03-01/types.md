@@ -36,7 +36,7 @@
 * **createdTime**: string (ReadOnly): The creation time of the resource.
 * **offerDetail**: [OrganizationResourcePropertiesOfferDetail](#organizationresourcepropertiesofferdetail): Confluent offer detail
 * **organizationId**: string (ReadOnly): Id of the Confluent organization.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' (ReadOnly): Provision states for confluent RP
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provision states for confluent RP
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [OrganizationResourcePropertiesUserDetail](#organizationresourcepropertiesuserdetail): Subscriber detail
 
@@ -46,7 +46,7 @@
 * **planId**: string: Offer Plan Id
 * **planName**: string: Offer Plan Name
 * **publisherId**: string: Publisher Id
-* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' (ReadOnly): SaaS Offer Status for confluent RP
+* **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status for confluent RP
 * **termUnit**: string: Offer Plan Term unit
 
 ## OrganizationResourcePropertiesUserDetail

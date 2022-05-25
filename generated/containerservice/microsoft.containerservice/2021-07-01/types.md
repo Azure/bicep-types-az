@@ -65,7 +65,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of extendedLocation.
+* **type**: 'EdgeZone' | string: The type of extendedLocation.
 
 ## ManagedClusterIdentity
 ### Properties
@@ -157,14 +157,14 @@
 * **enableFIPS**: bool: See [Add a FIPS-enabled node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool-preview) for more details.
 * **enableNodePublicIP**: bool: Some scenarios may require nodes in a node pool to receive their own dedicated public IP addresses. A common scenario is for gaming workloads, where a console needs to make a direct connection to a cloud virtual machine to minimize hops. For more information see [assigning a public IP per node](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#assign-a-public-ip-per-node-for-your-node-pools). The default is false.
 * **enableUltraSSD**: bool: Whether to enable UltraSSD
-* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g': GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU.
+* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU.
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
-* **kubeletDiskType**: 'OS' | 'Temporary': Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.
+* **kubeletDiskType**: 'OS' | 'Temporary' | string: Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.
 * **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
 * **maxCount**: int: The maximum number of nodes for auto-scaling
 * **maxPods**: int: The maximum number of pods that can run on a node.
 * **minCount**: int: The minimum number of nodes for auto-scaling
-* **mode**: 'System' | 'User': A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools
+* **mode**: 'System' | 'User' | string: A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools
 * **name**: string (Required): Windows agent pool names must be 6 characters or less.
 * **nodeImageVersion**: string (ReadOnly): The version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): The node labels to be persisted across all nodes in agent pool.
@@ -172,19 +172,19 @@
 * **nodeTaints**: string[]: The taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in the master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os).
-* **osSKU**: 'CBLMariner' | 'Ubuntu': Specifies an OS SKU. This value must not be specified if OSType is Windows.
-* **osType**: 'Linux' | 'Windows': The operating system type. The default is Linux.
+* **osDiskType**: 'Ephemeral' | 'Managed' | string: The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os).
+* **osSKU**: 'CBLMariner' | 'Ubuntu' | string: Specifies an OS SKU. This value must not be specified if OSType is Windows.
+* **osType**: 'Linux' | 'Windows' | string: The operating system type. The default is Linux.
 * **podSubnetID**: string: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
-* **scaleDownMode**: 'Deallocate' | 'Delete': Describes how VMs are added to or removed from Agent Pools. See [billing states](https://docs.microsoft.com/azure/virtual-machines/states-billing).
-* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete': The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see [spot VMs](https://docs.microsoft.com/azure/virtual-machines/spot-vms)
-* **scaleSetPriority**: 'Regular' | 'Spot': The Virtual Machine Scale Set priority.
+* **scaleDownMode**: 'Deallocate' | 'Delete' | string: Describes how VMs are added to or removed from Agent Pools. See [billing states](https://docs.microsoft.com/azure/virtual-machines/states-billing).
+* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see [spot VMs](https://docs.microsoft.com/azure/virtual-machines/spot-vms)
+* **scaleSetPriority**: 'Regular' | 'Spot' | string: The Virtual Machine Scale Set priority.
 * **spotMaxPrice**: int: Possible values are any decimal value greater than zero or -1 which indicates the willingness to pay any on-demand price. For more details on spot pricing, see [spot VMs pricing](https://docs.microsoft.com/azure/virtual-machines/spot-vms#pricing)
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): The tags to be persisted on the agent pool virtual machine scale set.
-* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets': The type of Agent Pool.
+* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: The type of Agent Pool.
 * **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
 * **vmSize**: string: VM size availability varies by region. If a node contains insufficient compute resources (memory, cpu, etc) pods might fail to run correctly. For more details on restricted VM sizes, see: https://docs.microsoft.com/azure/aks/quotas-skus-regions
 * **vnetSubnetID**: string: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
@@ -248,7 +248,7 @@
 
 ## PowerState
 ### Properties
-* **code**: 'Running' | 'Stopped': Tells whether the cluster is Running or Stopped
+* **code**: 'Running' | 'Stopped' | string: Tells whether the cluster is Running or Stopped
 
 ## ManagedClusterAgentPoolProfilePropertiesTags
 ### Properties
@@ -269,7 +269,7 @@
 ## ManagedClusterPropertiesAutoScalerProfile
 ### Properties
 * **balance-similar-node-groups**: string: Valid values are 'true' and 'false'
-* **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random': If not specified, the default is 'random'. See [expanders](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-are-expanders) for more information.
+* **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random' | string: If not specified, the default is 'random'. See [expanders](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-are-expanders) for more information.
 * **max-empty-bulk-delete**: string: The default is 10.
 * **max-graceful-termination-sec**: string: The default is 600.
 * **max-node-provision-time**: string: The default is '15m'. Values must be an integer followed by an 'm'. No unit of time other than minutes (m) is supported.
@@ -288,7 +288,7 @@
 
 ## ManagedClusterAutoUpgradeProfile
 ### Properties
-* **upgradeChannel**: 'node-image' | 'none' | 'patch' | 'rapid' | 'stable': For more information see [setting the AKS cluster auto-upgrade channel](https://docs.microsoft.com/azure/aks/upgrade-cluster#set-auto-upgrade-channel).
+* **upgradeChannel**: 'node-image' | 'none' | 'patch' | 'rapid' | 'stable' | string: For more information see [setting the AKS cluster auto-upgrade channel](https://docs.microsoft.com/azure/aks/upgrade-cluster#set-auto-upgrade-channel).
 
 ## ManagedClusterHttpProxyConfig
 ### Properties
@@ -326,12 +326,12 @@
 * **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
 * **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
 * **loadBalancerProfile**: [ManagedClusterLoadBalancerProfile](#managedclusterloadbalancerprofile): Profile of the managed cluster load balancer.
-* **loadBalancerSku**: 'basic' | 'standard': The default is 'standard'. See [Azure Load Balancer SKUs](https://docs.microsoft.com/azure/load-balancer/skus) for more information about the differences between load balancer SKUs.
+* **loadBalancerSku**: 'basic' | 'standard' | string: The default is 'standard'. See [Azure Load Balancer SKUs](https://docs.microsoft.com/azure/load-balancer/skus) for more information about the differences between load balancer SKUs.
 * **natGatewayProfile**: [ManagedClusterNATGatewayProfile](#managedclusternatgatewayprofile): Profile of the managed cluster NAT gateway.
-* **networkMode**: 'bridge' | 'transparent': This cannot be specified if networkPlugin is anything other than 'azure'.
-* **networkPlugin**: 'azure' | 'kubenet': Network plugin used for building the Kubernetes network.
-* **networkPolicy**: 'azure' | 'calico': Network policy used for building the Kubernetes network.
-* **outboundType**: 'loadBalancer' | 'managedNATGateway' | 'userAssignedNATGateway' | 'userDefinedRouting': This can only be set at cluster creation time and cannot be changed later. For more information see [egress outbound type](https://docs.microsoft.com/azure/aks/egress-outboundtype).
+* **networkMode**: 'bridge' | 'transparent' | string: This cannot be specified if networkPlugin is anything other than 'azure'.
+* **networkPlugin**: 'azure' | 'kubenet' | string: Network plugin used for building the Kubernetes network.
+* **networkPolicy**: 'azure' | 'calico' | string: Network policy used for building the Kubernetes network.
+* **outboundType**: 'loadBalancer' | 'managedNATGateway' | 'userAssignedNATGateway' | 'userDefinedRouting' | string: This can only be set at cluster creation time and cannot be changed later. For more information see [egress outbound type](https://docs.microsoft.com/azure/aks/egress-outboundtype).
 * **podCidr**: string: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
 * **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
 
@@ -384,7 +384,7 @@
 * **name**: string (Required): The name of the pod identity.
 * **namespace**: string (Required): The namespace of the pod identity.
 * **provisioningInfo**: [ManagedClusterPodIdentityProvisioningInfo](#managedclusterpodidentityprovisioninginfo) (ReadOnly)
-* **provisioningState**: 'Assigned' | 'Deleting' | 'Failed' | 'Updating' (ReadOnly): The current provisioning state of the pod identity.
+* **provisioningState**: 'Assigned' | 'Deleting' | 'Failed' | 'Updating' | string (ReadOnly): The current provisioning state of the pod identity.
 
 ## ManagedClusterPodIdentityProvisioningInfo
 ### Properties
@@ -440,12 +440,12 @@
 * **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
 * **adminUsername**: string (Required): Specifies the name of the administrator account. <br><br> **Restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
 * **enableCSIProxy**: bool: For more details on CSI proxy, see the [CSI proxy GitHub repo](https://github.com/kubernetes-csi/csi-proxy).
-* **licenseType**: 'None' | 'Windows_Server': The license type to use for Windows VMs. See [Azure Hybrid User Benefits](https://azure.microsoft.com/pricing/hybrid-benefit/faq/) for more details.
+* **licenseType**: 'None' | 'Windows_Server' | string: The license type to use for Windows VMs. See [Azure Hybrid User Benefits](https://azure.microsoft.com/pricing/hybrid-benefit/faq/) for more details.
 
 ## ManagedClusterSKU
 ### Properties
-* **name**: 'Basic': The name of a managed cluster SKU.
-* **tier**: 'Free' | 'Paid': If not specified, the default is 'Free'. See [uptime SLA](https://docs.microsoft.com/azure/aks/uptime-sla) for more details.
+* **name**: 'Basic' | string: The name of a managed cluster SKU.
+* **tier**: 'Free' | 'Paid' | string: If not specified, the default is 'Free'. See [uptime SLA](https://docs.microsoft.com/azure/aks/uptime-sla) for more details.
 
 ## ResourceTags
 ### Properties
@@ -461,33 +461,33 @@
 * **enableFIPS**: bool: See [Add a FIPS-enabled node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#add-a-fips-enabled-node-pool-preview) for more details.
 * **enableNodePublicIP**: bool: Some scenarios may require nodes in a node pool to receive their own dedicated public IP addresses. A common scenario is for gaming workloads, where a console needs to make a direct connection to a cloud virtual machine to minimize hops. For more information see [assigning a public IP per node](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#assign-a-public-ip-per-node-for-your-node-pools). The default is false.
 * **enableUltraSSD**: bool: Whether to enable UltraSSD
-* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g': GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU.
+* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU.
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
-* **kubeletDiskType**: 'OS' | 'Temporary': Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.
+* **kubeletDiskType**: 'OS' | 'Temporary' | string: Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.
 * **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
 * **maxCount**: int: The maximum number of nodes for auto-scaling
 * **maxPods**: int: The maximum number of pods that can run on a node.
 * **minCount**: int: The minimum number of nodes for auto-scaling
-* **mode**: 'System' | 'User': A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools
+* **mode**: 'System' | 'User' | string: A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools
 * **nodeImageVersion**: string (ReadOnly): The version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): The node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}
 * **nodeTaints**: string[]: The taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in the master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os).
-* **osSKU**: 'CBLMariner' | 'Ubuntu': Specifies an OS SKU. This value must not be specified if OSType is Windows.
-* **osType**: 'Linux' | 'Windows': The operating system type. The default is Linux.
+* **osDiskType**: 'Ephemeral' | 'Managed' | string: The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os).
+* **osSKU**: 'CBLMariner' | 'Ubuntu' | string: Specifies an OS SKU. This value must not be specified if OSType is Windows.
+* **osType**: 'Linux' | 'Windows' | string: The operating system type. The default is Linux.
 * **podSubnetID**: string: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
-* **scaleDownMode**: 'Deallocate' | 'Delete': Describes how VMs are added to or removed from Agent Pools. See [billing states](https://docs.microsoft.com/azure/virtual-machines/states-billing).
-* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete': The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see [spot VMs](https://docs.microsoft.com/azure/virtual-machines/spot-vms)
-* **scaleSetPriority**: 'Regular' | 'Spot': The Virtual Machine Scale Set priority.
+* **scaleDownMode**: 'Deallocate' | 'Delete' | string: Describes how VMs are added to or removed from Agent Pools. See [billing states](https://docs.microsoft.com/azure/virtual-machines/states-billing).
+* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see [spot VMs](https://docs.microsoft.com/azure/virtual-machines/spot-vms)
+* **scaleSetPriority**: 'Regular' | 'Spot' | string: The Virtual Machine Scale Set priority.
 * **spotMaxPrice**: int: Possible values are any decimal value greater than zero or -1 which indicates the willingness to pay any on-demand price. For more details on spot pricing, see [spot VMs pricing](https://docs.microsoft.com/azure/virtual-machines/spot-vms#pricing)
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): The tags to be persisted on the agent pool virtual machine scale set.
-* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets': The type of Agent Pool.
+* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: The type of Agent Pool.
 * **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
 * **vmSize**: string: VM size availability varies by region. If a node contains insufficient compute resources (memory, cpu, etc) pods might fail to run correctly. For more details on restricted VM sizes, see: https://docs.microsoft.com/azure/aks/quotas-skus-regions
 * **vnetSubnetID**: string: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
@@ -514,23 +514,23 @@
 
 ## TimeInWeek
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The weekday enum.
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: The weekday enum.
 * **hourSlots**: int[]: Each integer hour represents a time range beginning at 0m after the hour ending at the next hour (non-inclusive). 0 corresponds to 00:00 UTC, 23 corresponds to 23:00 UTC. Specifying [0, 1] means the 00:00 - 02:00 UTC time range.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The UTC timestamp of resource creation.
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The state of a private link service connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -539,7 +539,7 @@
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **description**: string: The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
 
 ## CredentialResults
 ### Properties

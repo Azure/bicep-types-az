@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: 'global' (Required): Location of the resource.
+* **location**: 'global' | string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegistrationParameterProperties](#registrationparameterproperties) (Required): Properties of the Azure Stack registration resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
@@ -37,14 +37,14 @@
 
 ## ExtendedProductProperties
 ### Properties
-* **computeRole**: 'IaaS' | 'None' | 'PaaS' (ReadOnly): Compute role type (IaaS or PaaS).
+* **computeRole**: 'IaaS' | 'None' | 'PaaS' | string (ReadOnly): Compute role type (IaaS or PaaS).
 * **dataDiskImages**: [DataDiskImage](#datadiskimage)[] (ReadOnly): List of attached data disks.
 * **isSystemExtension**: bool (ReadOnly): Specifies if product is a Virtual Machine Extension.
 * **osDiskImage**: [OsDiskImage](#osdiskimage) (ReadOnly): OS disk image.
 * **sourceBlob**: [Uri](#uri) (ReadOnly): The URI.
 * **supportMultipleExtensions**: bool (ReadOnly): Indicates if specified product supports multiple extensions.
 * **version**: string (ReadOnly): Specifies product version.
-* **vmOsType**: 'Linux' | 'None' | 'Windows' (ReadOnly): Operating system type (Windows or Linux).
+* **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
 ## DataDiskImage
@@ -54,7 +54,7 @@
 
 ## OsDiskImage
 ### Properties
-* **operatingSystem**: 'Linux' | 'None' | 'Windows' (ReadOnly): Operating system type (Windows or Linux).
+* **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
 ## Uri

@@ -34,28 +34,28 @@
 * **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
-* **createMode**: 'Default' | 'PointInTimeRestore' (WriteOnly): The mode to create a new PostgreSQL server.
+* **createMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): The mode to create a new PostgreSQL server.
 * **delegatedSubnetArguments**: [ServerPropertiesDelegatedSubnetArguments](#serverpropertiesdelegatedsubnetarguments)
 * **displayName**: string: The display name of a server.
 * **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **haEnabled**: 'Disabled' | 'Enabled': stand by count value can be either enabled or disabled
-* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): A state of a HA server that is visible to user.
+* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): A state of a HA server that is visible to user.
 * **logBackupStorageSku**: string: The log backup storage sku of the server.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **minorVersion**: string (ReadOnly): The minor version of the server.
 * **pointInTimeUTC**: string: Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **privateDnsZoneArguments**: [ServerPropertiesPrivateDnsZoneArguments](#serverpropertiesprivatednszonearguments)
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): public network access is enabled or not
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
 * **sourceResourceGroupName**: string: The resource group name of source serve PostgreSQL server name to restore from.
 * **sourceServerName**: string: The source PostgreSQL server name to restore from.
 * **sourceSubscriptionId**: string: The subscription id of source serve PostgreSQL server name to restore from.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
 * **standbyCount**: int: The number of standbys.
-* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): A state of a server that is visible to user.
+* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
-* **version**: '11' | '12': The version of a server.
+* **version**: '11' | '12' | string: The version of a server.
 
 ## ServerPropertiesDelegatedSubnetArguments
 ### Properties
@@ -75,7 +75,7 @@
 ## StorageProfile
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled': A value indicating whether Geo-Redundant backup is enabled on the server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: A value indicating whether Geo-Redundant backup is enabled on the server.
 * **storageMB**: int: Max storage allowed for a server.
 
 ## ServerPropertiesTags
@@ -86,7 +86,7 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. Burstable.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. Burstable.
 
 ## TrackedResourceTags
 ### Properties

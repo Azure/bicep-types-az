@@ -13,6 +13,6 @@
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' (Required): The key type like 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | string (Required): The key type like 'AzureKeyVault'.
 * **uri**: string: The URI of the key.
 

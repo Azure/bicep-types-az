@@ -100,21 +100,21 @@
 * **providerAuthentication**: [ResourceProviderManifestPropertiesProviderAuthentication](#resourceprovidermanifestpropertiesproviderauthentication)
 * **providerAuthorizations**: [ResourceProviderAuthorization](#resourceproviderauthorization)[]: Array of ResourceProviderAuthorization
 * **providerHubMetadata**: [ProviderRegistrationPropertiesProviderHubMetadata](#providerregistrationpropertiesproviderhubmetadata)
-* **providerType**: 'AuthorizationFree' | 'External' | 'Hidden' | 'Internal' | 'LegacyRegistrationRequired' | 'NotSpecified' | 'RegistrationFree' | 'TenantOnly'
+* **providerType**: 'AuthorizationFree' | 'External' | 'Hidden' | 'Internal' | 'LegacyRegistrationRequired' | 'NotSpecified' | 'RegistrationFree' | 'TenantOnly' | string
 * **providerVersion**: string
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 * **requestHeaderOptions**: [ResourceProviderManifestPropertiesRequestHeaderOptions](#resourceprovidermanifestpropertiesrequestheaderoptions)
 * **requiredFeatures**: string[]: Array of ResourceProviderManifestPropertiesRequiredFeaturesItem
 
 ## ResourceProviderCapabilities
 ### Properties
-* **effect**: 'Allow' | 'Disallow' | 'NotSpecified' (Required)
+* **effect**: 'Allow' | 'Disallow' | 'NotSpecified' | string (Required)
 * **quotaId**: string (Required)
 * **requiredFeatures**: string[]: Array of ResourceProviderCapabilitiesRequiredFeaturesItem
 
 ## ResourceProviderManifestPropertiesFeaturesRule
 ### Properties
-* **requiredFeaturesPolicy**: 'All' | 'Any' (Required)
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
 
 ## ResourceProviderManifestPropertiesManagement
 ### Properties
@@ -122,7 +122,7 @@
 * **incidentRoutingService**: string
 * **incidentRoutingTeam**: string
 * **manifestOwners**: string[]: Array of ResourceProviderManagementManifestOwnersItem
-* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified'
+* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified' | string
 * **resourceAccessRoles**: any[]: Array of any
 * **schemaOwners**: string[]: Array of ResourceProviderManagementSchemaOwnersItem
 * **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]: Array of ServiceTreeInfo
@@ -164,11 +164,11 @@
 
 ## ResourceProviderManifestPropertiesRequestHeaderOptions
 ### Properties
-* **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership'
+* **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership' | string
 
 ## CustomRolloutProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 * **specification**: [CustomRolloutPropertiesSpecification](#customrolloutpropertiesspecification) (Required)
 * **status**: [CustomRolloutPropertiesStatus](#customrolloutpropertiesstatus)
 
@@ -214,16 +214,16 @@
 * **linkedAccessChecks**: [LinkedAccessCheck](#linkedaccesscheck)[]: Array of LinkedAccessCheck
 * **loggingRules**: [LoggingRule](#loggingrule)[]: Array of LoggingRule
 * **management**: [ResourceTypeRegistrationPropertiesManagement](#resourcetyperegistrationpropertiesmanagement)
-* **marketplaceType**: 'AddOn' | 'Bypass' | 'NotSpecified' | 'Store'
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
-* **regionality**: 'Global' | 'NotSpecified' | 'Regional'
+* **marketplaceType**: 'AddOn' | 'Bypass' | 'NotSpecified' | 'Store' | string
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
+* **regionality**: 'Global' | 'NotSpecified' | 'Regional' | string
 * **requestHeaderOptions**: [ResourceTypeRegistrationPropertiesRequestHeaderOptions](#resourcetyperegistrationpropertiesrequestheaderoptions)
 * **requiredFeatures**: string[]: Array of ResourceTypeRegistrationPropertiesRequiredFeaturesItem
 * **resourceConcurrencyControlOptions**: [ResourceTypeRegistrationPropertiesResourceConcurrencyControlOptions](#resourcetyperegistrationpropertiesresourceconcurrencycontroloptions): Dictionary of <ResourceConcurrencyControlOption>
-* **resourceDeletionPolicy**: 'CascadeDeleteAll' | 'CascadeDeleteProxyOnlyChildren' | 'NotSpecified'
+* **resourceDeletionPolicy**: 'CascadeDeleteAll' | 'CascadeDeleteProxyOnlyChildren' | 'NotSpecified' | string
 * **resourceGraphConfiguration**: [ResourceTypeRegistrationPropertiesResourceGraphConfiguration](#resourcetyperegistrationpropertiesresourcegraphconfiguration)
 * **resourceMovePolicy**: [ResourceTypeRegistrationPropertiesResourceMovePolicy](#resourcetyperegistrationpropertiesresourcemovepolicy)
-* **routingType**: 'CascadeExtension' | 'Default' | 'Extension' | 'Failover' | 'Fanout' | 'HostBased' | 'LocationBased' | 'ProxyOnly' | 'Tenant'
+* **routingType**: 'CascadeExtension' | 'Default' | 'Extension' | 'Failover' | 'Fanout' | 'HostBased' | 'LocationBased' | 'ProxyOnly' | 'Tenant' | string
 * **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]: Array of ServiceTreeInfo
 * **subscriptionLifecycleNotificationSpecifications**: [ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications](#resourcetyperegistrationpropertiessubscriptionlifecyclenotificationspecifications)
 * **subscriptionStateRules**: [SubscriptionStateRule](#subscriptionstaterule)[]: Array of SubscriptionStateRule
@@ -254,12 +254,12 @@
 ## ResourceTypeExtension
 ### Properties
 * **endpointUri**: string
-* **extensionCategories**: 'NotSpecified' | 'ResourceCreationBegin' | 'ResourceCreationCompleted' | 'ResourceCreationValidate' | 'ResourceDeletionBegin' | 'ResourceDeletionCompleted' | 'ResourceDeletionValidate' | 'ResourceMoveBegin' | 'ResourceMoveCompleted' | 'ResourcePatchBegin' | 'ResourcePatchCompleted' | 'ResourcePatchValidate' | 'ResourcePostAction' | 'ResourceReadBegin' | 'ResourceReadValidate' | 'SubscriptionLifecycleNotification'[]: Array of ExtensionCategory
+* **extensionCategories**: 'NotSpecified' | 'ResourceCreationBegin' | 'ResourceCreationCompleted' | 'ResourceCreationValidate' | 'ResourceDeletionBegin' | 'ResourceDeletionCompleted' | 'ResourceDeletionValidate' | 'ResourceMoveBegin' | 'ResourceMoveCompleted' | 'ResourcePatchBegin' | 'ResourcePatchCompleted' | 'ResourcePatchValidate' | 'ResourcePostAction' | 'ResourceReadBegin' | 'ResourceReadValidate' | 'SubscriptionLifecycleNotification' | string[]: Array of ExtensionCategory
 * **timeout**: string
 
 ## ResourceTypeEndpointFeaturesRule
 ### Properties
-* **requiredFeaturesPolicy**: 'All' | 'Any' (Required)
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
 
 ## ExtendedLocationOptions
 ### Properties
@@ -272,17 +272,17 @@
 
 ## ResourceTypeExtensionOptionsResourceCreationBegin
 ### Properties
-* **request**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified'[]: Array of ExtensionOptionType
-* **response**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified'[]: Array of ExtensionOptionType
+* **request**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]: Array of ExtensionOptionType
+* **response**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]: Array of ExtensionOptionType
 
 ## ResourceTypeRegistrationPropertiesFeaturesRule
 ### Properties
-* **requiredFeaturesPolicy**: 'All' | 'Any' (Required)
+* **requiredFeaturesPolicy**: 'All' | 'Any' | string (Required)
 
 ## ResourceTypeRegistrationPropertiesIdentityManagement
 ### Properties
 * **applicationId**: string
-* **type**: 'Actor' | 'DelegatedResourceIdentity' | 'NotSpecified' | 'SystemAssigned' | 'UserAssigned'
+* **type**: 'Actor' | 'DelegatedResourceIdentity' | 'NotSpecified' | 'SystemAssigned' | 'UserAssigned' | string
 
 ## LinkedAccessCheck
 ### Properties
@@ -295,8 +295,8 @@
 ## LoggingRule
 ### Properties
 * **action**: string (Required)
-* **detailLevel**: 'Body' | 'None' (Required)
-* **direction**: 'None' | 'Request' | 'Response' (Required)
+* **detailLevel**: 'Body' | 'None' | string (Required)
+* **direction**: 'None' | 'Request' | 'Response' | string (Required)
 * **hiddenPropertyPaths**: [LoggingRuleHiddenPropertyPaths](#loggingrulehiddenpropertypaths)
 
 ## LoggingRuleHiddenPropertyPaths
@@ -310,14 +310,14 @@
 * **incidentRoutingService**: string
 * **incidentRoutingTeam**: string
 * **manifestOwners**: string[]: Array of ResourceProviderManagementManifestOwnersItem
-* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified'
+* **resourceAccessPolicy**: 'AcisActionAllowed' | 'AcisReadAllowed' | 'NotSpecified' | string
 * **resourceAccessRoles**: any[]: Array of any
 * **schemaOwners**: string[]: Array of ResourceProviderManagementSchemaOwnersItem
 * **serviceTreeInfos**: [ServiceTreeInfo](#servicetreeinfo)[]: Array of ServiceTreeInfo
 
 ## ResourceTypeRegistrationPropertiesRequestHeaderOptions
 ### Properties
-* **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership'
+* **optInHeaders**: 'ClientGroupMembership' | 'NotSpecified' | 'SignedAuxiliaryTokens' | 'SignedUserToken' | 'UnboundedClientGroupMembership' | string
 
 ## ResourceTypeRegistrationPropertiesResourceConcurrencyControlOptions
 ### Properties
@@ -326,7 +326,7 @@
 
 ## ResourceConcurrencyControlOption
 ### Properties
-* **policy**: 'NotSpecified' | 'SynchronizeBeginExtension'
+* **policy**: 'NotSpecified' | 'SynchronizeBeginExtension' | string
 
 ## ResourceTypeRegistrationPropertiesResourceGraphConfiguration
 ### Properties
@@ -346,13 +346,13 @@
 
 ## SubscriptionStateOverrideAction
 ### Properties
-* **action**: 'BillingCancellation' | 'DeleteAllResources' | 'NoOp' | 'NotDefined' | 'SoftDeleteAllResources' | 'UndoSoftDelete' (Required)
-* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'SuspendedToDeleted' | 'SuspendedToRegistered' | 'SuspendedToUnregistered' | 'SuspendedToWarned' | 'Unregistered' | 'Warned' | 'WarnedToDeleted' | 'WarnedToRegistered' | 'WarnedToSuspended' | 'WarnedToUnregistered' (Required)
+* **action**: 'BillingCancellation' | 'DeleteAllResources' | 'NoOp' | 'NotDefined' | 'SoftDeleteAllResources' | 'UndoSoftDelete' | string (Required)
+* **state**: 'Deleted' | 'Registered' | 'Suspended' | 'SuspendedToDeleted' | 'SuspendedToRegistered' | 'SuspendedToUnregistered' | 'SuspendedToWarned' | 'Unregistered' | 'Warned' | 'WarnedToDeleted' | 'WarnedToRegistered' | 'WarnedToSuspended' | 'WarnedToUnregistered' | string (Required)
 
 ## SubscriptionStateRule
 ### Properties
 * **allowedActions**: string[]: Array of SubscriptionStateRuleAllowedActionsItem
-* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotDefined' | 'PastDue' | 'Warned'
+* **state**: 'Deleted' | 'Disabled' | 'Enabled' | 'NotDefined' | 'PastDue' | 'Warned' | string
 
 ## SwaggerSpecification
 ### Properties
@@ -361,7 +361,7 @@
 
 ## ResourceTypeRegistrationPropertiesTemplateDeploymentOptions
 ### Properties
-* **preflightOptions**: 'ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None'[]: Array of PreflightOption
+* **preflightOptions**: 'ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string[]: Array of PreflightOption
 * **preflightSupported**: bool
 
 ## ThrottlingRule
@@ -374,7 +374,7 @@
 ### Properties
 * **interval**: string
 * **limit**: int (Required)
-* **type**: 'NotSpecified' | 'NumberOfRequests' | 'NumberOfResources' (Required)
+* **type**: 'NotSpecified' | 'NumberOfRequests' | 'NumberOfResources' | string (Required)
 
 ## CustomRolloutPropertiesStatus
 ### Properties
@@ -401,7 +401,7 @@
 
 ## DefaultRolloutProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 * **specification**: [DefaultRolloutPropertiesSpecification](#defaultrolloutpropertiesspecification)
 * **status**: [DefaultRolloutPropertiesStatus](#defaultrolloutpropertiesstatus)
 
@@ -462,9 +462,9 @@
 ### Properties
 * **completedRegions**: string[]: Array of RolloutStatusBaseCompletedRegionsItem
 * **failedOrSkippedRegions**: [RolloutStatusBaseFailedOrSkippedRegions](#rolloutstatusbasefailedorskippedregions): Dictionary of <ExtendedErrorInfo>
-* **nextTrafficRegion**: 'Canary' | 'HighTraffic' | 'LowTraffic' | 'MediumTraffic' | 'None' | 'NotSpecified' | 'RestOfTheWorldGroupOne' | 'RestOfTheWorldGroupTwo'
+* **nextTrafficRegion**: 'Canary' | 'HighTraffic' | 'LowTraffic' | 'MediumTraffic' | 'None' | 'NotSpecified' | 'RestOfTheWorldGroupOne' | 'RestOfTheWorldGroupTwo' | string
 * **nextTrafficRegionScheduledTime**: string
-* **subscriptionReregistrationResult**: 'ConditionalUpdate' | 'Failed' | 'ForcedUpdate' | 'NotApplicable'
+* **subscriptionReregistrationResult**: 'ConditionalUpdate' | 'Failed' | 'ForcedUpdate' | 'NotApplicable' | string
 
 ## RolloutStatusBaseFailedOrSkippedRegions
 ### Properties
@@ -474,10 +474,10 @@
 ## NotificationRegistrationProperties
 ### Properties
 * **includedEvents**: string[]: Array of NotificationRegistrationPropertiesIncludedEventsItem
-* **messageScope**: 'NotSpecified' | 'RegisteredSubscriptions'
+* **messageScope**: 'NotSpecified' | 'RegisteredSubscriptions' | string
 * **notificationEndpoints**: [NotificationEndpoint](#notificationendpoint)[]: Array of NotificationEndpoint
-* **notificationMode**: 'EventHub' | 'NotSpecified' | 'WebHook'
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **notificationMode**: 'EventHub' | 'NotSpecified' | 'WebHook' | string
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 
 ## NotificationEndpoint
 ### Properties
@@ -486,11 +486,11 @@
 
 ## OperationsDefinition
 ### Properties
-* **actionType**: 'Internal' | 'NotSpecified' (WriteOnly)
+* **actionType**: 'Internal' | 'NotSpecified' | string (WriteOnly)
 * **display**: [OperationsDefinitionDisplay](#operationsdefinitiondisplay) (Required, WriteOnly): Display information of the operation.
 * **isDataAction**: bool (WriteOnly): Indicates whether the operation applies to data-plane.
 * **name**: string (Required, WriteOnly): Name of the operation.
-* **origin**: 'NotSpecified' | 'System' | 'User' (WriteOnly)
+* **origin**: 'NotSpecified' | 'System' | 'User' | string (WriteOnly)
 * **properties**: any (WriteOnly): Anything
 
 ## OperationsDefinitionDisplay
@@ -502,7 +502,7 @@
 
 ## SkuResourceProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure'
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MovingResources' | 'NotSpecified' | 'RolloutInProgress' | 'Running' | 'Succeeded' | 'TransientFailure' | string
 * **skuSettings**: [SkuSetting](#skusetting)[] (Required): Array of SkuSetting
 
 ## SkuSetting
@@ -530,7 +530,7 @@
 * **default**: int
 * **maximum**: int
 * **minimum**: int (Required)
-* **scaleType**: 'Automatic' | 'Manual' | 'None'
+* **scaleType**: 'Automatic' | 'Manual' | 'None' | string
 
 ## SkuCost
 ### Properties
@@ -542,7 +542,7 @@
 ### Properties
 * **extendedLocations**: string[]: Array of SkuLocationInfoExtendedLocationsItem
 * **location**: string (Required)
-* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified'
+* **type**: 'ArcZone' | 'EdgeZone' | 'NotSpecified' | string
 * **zoneDetails**: [SkuZoneDetail](#skuzonedetail)[]: Array of SkuZoneDetail
 * **zones**: string[]: Array of SkuLocationInfoZonesItem
 

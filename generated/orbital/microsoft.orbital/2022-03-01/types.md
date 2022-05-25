@@ -51,16 +51,16 @@
 * **minimumElevationDegrees**: int: Minimum viable elevation for the contact in decimal degrees.
 * **minimumViableContactDuration**: string: Minimum viable contact duration in ISO 8601 format.
 * **networkConfiguration**: [ContactProfilesPropertiesNetworkConfiguration](#contactprofilespropertiesnetworkconfiguration) (Required): Network configuration of customer virtual network.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current state of the resource's creation, deletion, or modification
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
 
 ## ContactProfileLink
 ### Properties
 * **channels**: [ContactProfileLinkChannel](#contactprofilelinkchannel)[] (Required): Contact Profile Link Channel
-* **direction**: 'downlink' | 'uplink' (Required): Direction (uplink or downlink)
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
 * **eirpdBW**: int: Effective Isotropic Radiated Power (EIRP) in dBW.
 * **gainOverTemperature**: int: Gain To Noise Temperature in db/K.
 * **name**: string (Required): Link name
-* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' (Required): polarization. eg (RHCP, LHCP)
+* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
 
 ## ContactProfileLinkChannel
 ### Properties
@@ -78,7 +78,7 @@
 * **endPointName**: string (Required): Name of an end point.
 * **ipAddress**: string (Required): IP Address.
 * **port**: string (Required): TCP port to listen on to receive data.
-* **protocol**: 'TCP' | 'UDP' (Required): Protocol either UDP or TCP.
+* **protocol**: 'TCP' | 'UDP' | string (Required): Protocol either UDP or TCP.
 
 ## ContactProfilesPropertiesNetworkConfiguration
 ### Properties
@@ -88,10 +88,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -102,7 +102,7 @@
 ### Properties
 * **links**: [SpacecraftLink](#spacecraftlink)[]: Links of the Spacecraft
 * **noradId**: string (Required): NORAD ID of the spacecraft.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current state of the resource's creation, deletion, or modification
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
 * **titleLine**: string: Title line of Two Line Element (TLE).
 * **tleLine1**: string: Line 1 of Two Line Element (TLE).
 * **tleLine2**: string: Line 2 of Two Line Element (TLE).
@@ -112,9 +112,9 @@
 * **authorizations**: [AuthorizedGroundstation](#authorizedgroundstation)[] (ReadOnly): Authorized Ground Stations
 * **bandwidthMHz**: int (Required): Bandwidth in MHz
 * **centerFrequencyMHz**: int (Required): Center Frequency in MHz
-* **direction**: 'downlink' | 'uplink' (Required): Direction (uplink or downlink)
+* **direction**: 'downlink' | 'uplink' | string (Required): Direction (uplink or downlink)
 * **name**: string (Required): Link name
-* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' (Required): polarization. eg (RHCP, LHCP)
+* **polarization**: 'LHCP' | 'RHCP' | 'linearHorizontal' | 'linearVertical' | string (Required): polarization. eg (RHCP, LHCP)
 
 ## AuthorizedGroundstation
 ### Properties
@@ -135,7 +135,7 @@
 * **errorMessage**: string (ReadOnly): Any error message while scheduling a contact.
 * **groundStationName**: string (Required): Azure Ground Station name.
 * **maximumElevationDegrees**: int (ReadOnly): Maximum elevation of the antenna during the contact in decimal degrees.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': The current state of the resource's creation, deletion, or modification
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The current state of the resource's creation, deletion, or modification
 * **reservationEndTime**: string (Required): Reservation end time of a contact.
 * **reservationStartTime**: string (Required): Reservation start time of a contact.
 * **rxEndTime**: string (ReadOnly): Receive end time of a contact.

@@ -96,7 +96,7 @@
 * **creditLimit**: [Amount](#amount): The Amount.
 * **reason**: string (ReadOnly): The reason for the line of credit status when not approved.
 * **remainingBalance**: [Amount](#amount) (ReadOnly): The Amount.
-* **status**: 'Approved' | 'Rejected': The line of credit status.
+* **status**: 'Approved' | 'Rejected' | string: The line of credit status.
 
 ## Amount
 ### Properties

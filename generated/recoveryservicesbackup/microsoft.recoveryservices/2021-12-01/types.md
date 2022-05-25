@@ -110,13 +110,13 @@
 
 ## BackupResourceVaultConfig
 ### Properties
-* **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid': Enabled or Disabled.
+* **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Enabled or Disabled.
 * **isSoftDeleteFeatureStateEditable**: bool: Is soft delete feature state editable
 * **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
-* **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid': Soft Delete feature state
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
-* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
+* **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
 
 ## ResourceTags
 ### Properties
@@ -125,10 +125,10 @@
 
 ## BackupResourceEncryptionConfig
 ### Properties
-* **encryptionAtRestType**: 'CustomerManaged' | 'Invalid' | 'MicrosoftManaged': Encryption At Rest Type
-* **infrastructureEncryptionState**: 'Disabled' | 'Enabled' | 'Invalid'
+* **encryptionAtRestType**: 'CustomerManaged' | 'Invalid' | 'MicrosoftManaged' | string: Encryption At Rest Type
+* **infrastructureEncryptionState**: 'Disabled' | 'Enabled' | 'Invalid' | string
 * **keyUri**: string: Key Vault Key URI
-* **lastUpdateStatus**: 'Failed' | 'FirstInitialization' | 'Initialized' | 'Invalid' | 'NotEnabled' | 'PartiallyFailed' | 'PartiallySucceeded' | 'Succeeded'
+* **lastUpdateStatus**: 'Failed' | 'FirstInitialization' | 'Initialized' | 'Invalid' | 'NotEnabled' | 'PartiallyFailed' | 'PartiallySucceeded' | 'Succeeded' | string
 * **subscriptionId**: string: Key Vault Subscription Id
 * **userAssignedIdentity**: string (ReadOnly): User Assigned Identity Id
 * **useSystemAssignedIdentity**: bool (ReadOnly): bool to indicate whether to use system Assigned Identity or not
@@ -142,10 +142,10 @@
 * **Discriminator**: protectionIntentItemType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB': Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
 * **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
 * **policyId**: string: ID of the backup policy with which this item is backed up.
-* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed': Specifies whether the container is registered or not
+* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Specifies whether the container is registered or not
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
 ### AzureResourceProtectionIntent
 #### Properties
@@ -159,7 +159,7 @@
 ### AzureWorkloadSQLAutoProtectionIntent
 #### Properties
 * **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
-* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance': Workload item type of the item for which intent is to be set
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance' | string: Workload item type of the item for which intent is to be set
 
 
 ## ResourceTags
@@ -171,7 +171,7 @@
 * **Discriminator**: containerType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB': Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
 * **friendlyName**: string: Friendly name of the container.
 * **healthStatus**: string: Status of health of the container.
 * **protectableObjectType**: string: Type of the protectable object associated with this container
@@ -222,7 +222,7 @@ Backup is VMAppContainer
 
 ### AzureStorageContainer
 #### Properties
-* **acquireStorageAccountLock**: 'Acquire' | 'NotAcquire': Whether storage account lock is to be acquired for this container or not.
+* **acquireStorageAccountLock**: 'Acquire' | 'NotAcquire' | string: Whether storage account lock is to be acquired for this container or not.
 * **containerType**: 'StorageContainer' (Required): Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
@@ -275,7 +275,7 @@ Backup is VMAppContainer
 ## MabContainerExtendedInfo
 ### Properties
 * **backupItems**: string[]: List of backup items associated with this container.
-* **backupItemType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM': Type of backup items associated with this container.
+* **backupItemType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of backup items associated with this container.
 * **lastBackupStatus**: string: Latest backup status of this container.
 * **lastRefreshedAt**: string: Time stamp when this container was refreshed.
 * **policyName**: string: Backup policy associated with this container.
@@ -296,10 +296,10 @@ Backup is VMAppContainer
 * **Discriminator**: protectedItemType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB': Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
 * **backupSetName**: string: Name of the backup set the backup item belongs to
 * **containerName**: string: Unique name of container
-* **createMode**: 'Default' | 'Invalid' | 'Recover': Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+* **createMode**: 'Default' | 'Invalid' | 'Recover' | string: Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
 * **deferredDeleteTimeInUTC**: string: Time for deferred deletion in UTC
 * **deferredDeleteTimeRemaining**: string: Time remaining before the DS marked for deferred delete is permanently deleted
 * **isArchiveEnabled**: bool: Flag to identify whether datasource is protected in archive
@@ -311,7 +311,7 @@ Backup is VMAppContainer
 * **policyName**: string: Name of the policy used for protection
 * **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
-* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload this item represents.
+* **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload this item represents.
 ### AzureFileshareProtectedItem
 #### Properties
 * **extendedInfo**: [AzureFileshareProtectedItemExtendedInfo](#azurefileshareprotecteditemextendedinfo): Additional information about Azure File Share backup item.
@@ -320,7 +320,7 @@ Backup is VMAppContainer
 * **lastBackupStatus**: string: Last backup operation status. Possible values: Healthy, Unhealthy.
 * **lastBackupTime**: string: Timestamp of the last backup operation on this backup item.
 * **protectedItemType**: 'AzureFileShareProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
 * **protectionStatus**: string: Backup status of this backup item.
 
 ### AzureVmWorkloadSAPAseDatabaseProtectedItem
@@ -341,7 +341,7 @@ Backup is VMAppContainer
 * **extendedInfo**: [DPMProtectedItemExtendedInfo](#dpmprotecteditemextendedinfo): Additional information of DPM Protected item.
 * **friendlyName**: string: Friendly name of the managed item
 * **protectedItemType**: 'DPMProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
 
 ### GenericProtectedItem
 #### Properties
@@ -350,7 +350,7 @@ Backup is VMAppContainer
 * **policyState**: string: Indicates consistency of policy object and policy applied to this backup item.
 * **protectedItemId**: int: Data Plane Service ID of the protected item.
 * **protectedItemType**: 'GenericProtectedItem' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of this backup item.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of this backup item.
 * **sourceAssociations**: [GenericProtectedItemSourceAssociations](#genericprotecteditemsourceassociations): Loosely coupled (type, value) associations (example - parent of a protected item)
 
 ### MabFileFolderProtectedItem
@@ -377,7 +377,7 @@ Backup is VMAppContainer
 * **extendedInfo**: [AzureSqlProtectedItemExtendedInfo](#azuresqlprotecteditemextendedinfo): Additional information on Azure Sql specific protected item.
 * **protectedItemDataId**: string: Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
 * **protectedItemType**: 'Microsoft.Sql/servers/databases' (Required): backup item type.
-* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped': Backup state of the backed up item.
+* **protectionState**: 'IRPending' | 'Invalid' | 'Protected' | 'ProtectionError' | 'ProtectionPaused' | 'ProtectionStopped' | string: Backup state of the backed up item.
 
 
 ## AzureFileshareProtectedItemExtendedInfo
@@ -396,7 +396,7 @@ Backup is VMAppContainer
 ## KPIResourceHealthDetails
 ### Properties
 * **resourceHealthDetails**: [ResourceHealthDetails](#resourcehealthdetails)[]: Resource Health Status
-* **resourceHealthStatus**: 'Healthy' | 'Invalid' | 'PersistentDegraded' | 'PersistentUnhealthy' | 'TransientDegraded' | 'TransientUnhealthy': Resource Health Status
+* **resourceHealthStatus**: 'Healthy' | 'Invalid' | 'PersistentDegraded' | 'PersistentUnhealthy' | 'TransientDegraded' | 'TransientUnhealthy' | string: Resource Health Status
 
 ## ResourceHealthDetails
 ### Properties
@@ -460,7 +460,7 @@ Backup is VMAppContainer
 * **backupManagementType**: 'AzureIaasVM' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **instantRPDetails**: [InstantRPAdditionalDetails](#instantrpadditionaldetails)
 * **instantRpRetentionRangeInDays**: int: Instant RP retention policy range in days
-* **policyType**: 'Invalid' | 'V1' | 'V2'
+* **policyType**: 'Invalid' | 'V1' | 'V2' | string
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 * **tieringPolicy**: [AzureIaaSVMProtectionPolicyTieringPolicy](#azureiaasvmprotectionpolicytieringpolicy): Tiering policy to automatically move RPs to another tier
@@ -479,7 +479,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 * **timeZone**: string: TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload for the backup management
 
 ### AzureVmWorkloadProtectionPolicy
 #### Properties
@@ -487,7 +487,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 * **makePolicyConsistent**: bool: Fix the policy inconsistency
 * **settings**: [Settings](#settings): Common settings field for backup management
 * **subProtectionPolicy**: [SubProtectionPolicy](#subprotectionpolicy)[]: List of sub-protection policies which includes schedule and retention
-* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM': Type of workload for the backup management
+* **workLoadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Type of workload for the backup management
 
 ### GenericProtectionPolicy
 #### Properties
@@ -535,13 +535,13 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Properties
 * **count**: int: Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': Retention duration type of retention policy.
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
 
 ## MonthlyRetentionSchedule
 ### Properties
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
@@ -570,7 +570,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of months of year of yearly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format.
-* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format type for monthly retention policy.
+* **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly' | string: Retention schedule format type for monthly retention policy.
 * **retentionScheduleWeekly**: [WeeklyRetentionFormat](#weeklyretentionformat): Weekly retention format.
 * **retentionTimes**: string[]: Retention times of retention policy.
 
@@ -592,7 +592,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **hourlySchedule**: [HourlySchedule](#hourlyschedule)
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of week this schedule has to be run.
-* **scheduleRunFrequency**: 'Daily' | 'Hourly' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy.
+* **scheduleRunFrequency**: 'Daily' | 'Hourly' | 'Invalid' | 'Weekly' | string: Frequency of the schedule operation of this policy.
 * **scheduleRunTimes**: string[]: List of times of day this schedule has to be run.
 * **scheduleWeeklyFrequency**: int: At every number weeks this schedule has to be run.
 
@@ -601,7 +601,7 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 * **dailySchedule**: [DailySchedule](#dailyschedule)
 * **hourlySchedule**: [HourlySchedule](#hourlyschedule)
 * **schedulePolicyType**: 'SimpleSchedulePolicyV2' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **scheduleRunFrequency**: 'Daily' | 'Hourly' | 'Invalid' | 'Weekly': Frequency of the schedule operation of this policy.
+* **scheduleRunFrequency**: 'Daily' | 'Hourly' | 'Invalid' | 'Weekly' | string: Frequency of the schedule operation of this policy.
 * **weeklySchedule**: [WeeklySchedule](#weeklyschedule)
 
 
@@ -630,8 +630,8 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
 ### Properties
 * **duration**: int: Number of days/weeks/months/years to retain backups in current tier before tiering.
 Used only if TieringMode is set to TierAfter
-* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years': Retention duration type of retention policy.
-* **tieringMode**: 'DoNotTier' | 'Invalid' | 'TierAfter' | 'TierRecommended': Tiering Mode to control automatic tiering of recovery points. Supported values are:
+* **durationType**: 'Days' | 'Invalid' | 'Months' | 'Weeks' | 'Years' | string: Retention duration type of retention policy.
+* **tieringMode**: 'DoNotTier' | 'Invalid' | 'TierAfter' | 'TierRecommended' | string: Tiering Mode to control automatic tiering of recovery points. Supported values are:
 1. TierRecommended: Tier all recovery points recommended to be tiered
 2. TierAfter: Tier all recovery points after a fixed period, as specified in duration + durationType below.
 3. DoNotTier: Do not tier any recovery points
@@ -645,7 +645,7 @@ will be deprecated once clients upgrade to consider this flag.
 
 ## SubProtectionPolicy
 ### Properties
-* **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log': Type of backup policy type
+* **policyType**: 'CopyOnlyFull' | 'Differential' | 'Full' | 'Incremental' | 'Invalid' | 'Log' | string: Type of backup policy type
 * **retentionPolicy**: [RetentionPolicy](#retentionpolicy): Base class for retention policy.
 * **schedulePolicy**: [SchedulePolicy](#schedulepolicy): Base class for backup schedule.
 * **tieringPolicy**: [SubProtectionPolicyTieringPolicy](#subprotectionpolicytieringpolicy): Tiering policy to automatically move RPs to another tier.
@@ -682,11 +682,11 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ## BackupResourceConfig
 ### Properties
 * **crossRegionRestoreFlag**: bool: Opt in details of Cross Region Restore feature.
-* **dedupState**: 'Disabled' | 'Enabled' | 'Invalid': Vault Dedup state
-* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
-* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant': Storage type
-* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked': Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
-* **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid': Vault x-cool state
+* **dedupState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault Dedup state
+* **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type
+* **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
+* **xcoolState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Vault x-cool state
 
 ## ResourceTags
 ### Properties
@@ -697,7 +697,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint network resource that is linked to the Private Endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Private Link Service Connection State
-* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded': Gets or sets provisioning state of the private endpoint connection
+* **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
 
 ## PrivateEndpoint
 ### Properties
@@ -707,7 +707,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 ### Properties
 * **actionRequired**: string: Gets or sets actions required
 * **description**: string: Gets or sets description
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Gets or sets the status
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Gets or sets the status
 
 ## ResourceTags
 ### Properties

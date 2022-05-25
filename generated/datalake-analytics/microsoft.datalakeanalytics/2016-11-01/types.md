@@ -96,7 +96,7 @@
 * **maxDegreeOfParallelismPerJob**: int: The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
 * **minPriorityPerJob**: int: The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
 * **objectId**: string (Required): The AAD object identifier for the entity to create a policy for.
-* **objectType**: 'Group' | 'ServicePrincipal' | 'User' (Required): The type of AAD object the object identifier refers to.
+* **objectType**: 'Group' | 'ServicePrincipal' | 'User' | string (Required): The type of AAD object the object identifier refers to.
 
 ## AddDataLakeStoreWithAccountParameters
 ### Properties

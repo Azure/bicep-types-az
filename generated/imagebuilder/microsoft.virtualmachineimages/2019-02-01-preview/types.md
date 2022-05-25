@@ -17,7 +17,7 @@
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly)
 * **provisioningError**: [ProvisioningError](#provisioningerror) (ReadOnly)
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the resource
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource
 * **source**: [ImageTemplateSource](#imagetemplatesource) (Required)
 
 ## ImageTemplateCustomizer
@@ -78,14 +78,14 @@
 ### Properties
 * **endTime**: string: End time of the last run (UTC)
 * **message**: string: Verbose information about the last run state
-* **runState**: 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded': State of the last run
-* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued': Sub-state of the last run
+* **runState**: 'Failed' | 'PartiallySucceeded' | 'Running' | 'Succeeded' | string: State of the last run
+* **runSubState**: 'Building' | 'Customizing' | 'Distributing' | 'Queued' | string: Sub-state of the last run
 * **startTime**: string: Start time of the last run (UTC)
 
 ## ProvisioningError
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadISOSource' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadISOSource' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType' | string: Error code of the provisioning failure
 
 ## ImageTemplateSource
 * **Discriminator**: type

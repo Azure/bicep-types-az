@@ -16,11 +16,11 @@
 ### Properties
 * **description**: string: The description of the EnterpriseKnowledgeGraph
 * **metadata**: any: Any object
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded': The state of EnterpriseKnowledgeGraph provisioning
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string: The state of EnterpriseKnowledgeGraph provisioning
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' (Required): The name of SKU.
+* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
 
 ## ResourceTags
 ### Properties

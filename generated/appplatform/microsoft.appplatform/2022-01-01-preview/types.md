@@ -217,8 +217,8 @@
 ### Properties
 * **fqdn**: string (ReadOnly): Fully qualified dns name of the service instance
 * **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
-* **powerState**: 'Running' | 'Stopped' (ReadOnly): Power state of the Service
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Service
+* **powerState**: 'Running' | 'Stopped' | string (ReadOnly): Power state of the Service
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
 * **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
 * **zoneRedundant**: bool
@@ -239,7 +239,7 @@
 
 ## RequiredTraffic
 ### Properties
-* **direction**: 'Inbound' | 'Outbound' (ReadOnly): The direction of required traffic
+* **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
 * **fqdns**: string[] (ReadOnly): The FQDN list of required traffic
 * **ips**: string[] (ReadOnly): The ip list of required traffic
 * **port**: int (ReadOnly): The port of required traffic
@@ -255,10 +255,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -270,7 +270,7 @@
 * **gatewayIds**: string[]: The array of resource Ids of gateway to integrate with API portal.
 * **httpsOnly**: bool: Indicate if only https is allowed.
 * **instances**: [ApiPortalInstance](#apiportalinstance)[] (ReadOnly): Collection of instances belong to API portal.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of the API portal.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the API portal.
 * **public**: bool: Indicates whether the API portal exposes endpoint.
 * **resourceRequests**: [ApiPortalResourceRequests](#apiportalresourcerequests) (ReadOnly): Resource requests of the API portal
 * **sourceUrls**: string[]: Collection of OpenAPI source URL locations.
@@ -302,7 +302,7 @@
 ### Properties
 * **principalId**: string: Principal Id
 * **tenantId**: string: Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': Type of the managed identity
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: Type of the managed identity
 
 ## AppResourceProperties
 ### Properties
@@ -313,7 +313,7 @@
 * **httpsOnly**: bool: Indicate if only https is allowed.
 * **loadedCertificates**: [LoadedCertificate](#loadedcertificate)[]: Collection of loaded certificate resources list and a possible link for next page.
 * **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk payload
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the App
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the App
 * **public**: bool: Indicates whether the App exposes public endpoint
 * **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk payload
 * **url**: string (ReadOnly): URL of the App
@@ -383,9 +383,9 @@
 * **active**: bool: Indicates whether the Deployment is active
 * **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings payload
 * **instances**: [DeploymentInstance](#deploymentinstance)[] (ReadOnly): Collection of instances belong to the Deployment
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Deployment
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Deployment
 * **source**: [UserSourceInfo](#usersourceinfo): Source information for a deployment
-* **status**: 'Running' | 'Stopped' (ReadOnly): Status of the Deployment
+* **status**: 'Running' | 'Stopped' | string (ReadOnly): Status of the Deployment
 
 ## DeploymentSettings
 ### Properties
@@ -495,7 +495,7 @@ the relative path to the target module/project.
 ## BuilderProperties
 ### Properties
 * **buildpackGroups**: [BuildpacksGroupProperties](#buildpacksgroupproperties)[]: Builder buildpack groups.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Builder provision status.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Builder provision status.
 * **stack**: [StackProperties](#stackproperties): KPack ClusterStack properties payload
 
 ## BuildpacksGroupProperties
@@ -514,9 +514,9 @@ the relative path to the target module/project.
 
 ## BuildpackBindingProperties
 ### Properties
-* **bindingType**: 'ApacheSkyWalking' | 'AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic': Buildpack Binding Type
+* **bindingType**: 'ApacheSkyWalking' | 'AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic' | string: Buildpack Binding Type
 * **launchProperties**: [BuildpackBindingLaunchProperties](#buildpackbindinglaunchproperties): Buildpack Binding Launch Properties
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of the Buildpack Binding.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Buildpack Binding.
 
 ## BuildpackBindingLaunchProperties
 ### Properties
@@ -538,7 +538,7 @@ the relative path to the target module/project.
 * **agentPool**: string: The resource id of agent pool
 * **builder**: string: The resource id of builder to build the source code
 * **env**: [BuildPropertiesEnv](#buildpropertiesenv): The environment variables for this build
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the KPack build result
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the KPack build result
 * **relativePath**: string: The relative path of source code
 * **triggeredBuildResult**: [TriggeredBuildResult](#triggeredbuildresult) (ReadOnly): The build result triggered by a build
 
@@ -580,7 +580,7 @@ the relative path to the target module/project.
 ### Properties
 * **configServer**: [ConfigServerSettings](#configserversettings): The settings of config server.
 * **error**: [Error](#error): The error code compose of code and message.
-* **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly): State of the config server.
+* **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the config server.
 
 ## ConfigServerSettings
 ### Properties
@@ -621,7 +621,7 @@ the relative path to the target module/project.
 ## ConfigurationServiceProperties
 ### Properties
 * **instances**: [ConfigurationServiceInstance](#configurationserviceinstance)[] (ReadOnly): Collection of instances belong to Application Configuration Service.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of the Application Configuration Service.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Application Configuration Service.
 * **resourceRequests**: [ConfigurationServiceResourceRequests](#configurationserviceresourcerequests) (ReadOnly): Resource request payload of Application Configuration Service
 * **settings**: [ConfigurationServiceSettings](#configurationservicesettings): The settings of Application Configuration Service.
 
@@ -665,7 +665,7 @@ the relative path to the target module/project.
 * **httpsOnly**: bool: Indicate if only https is allowed.
 * **instances**: [GatewayInstance](#gatewayinstance)[] (ReadOnly): Collection of instances belong to Spring Cloud Gateway.
 * **operatorProperties**: [GatewayOperatorProperties](#gatewayoperatorproperties) (ReadOnly): Properties of the Spring Cloud Gateway Operator.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of the Spring Cloud Gateway.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Spring Cloud Gateway.
 * **public**: bool: Indicates whether the Spring Cloud Gateway exposes endpoint.
 * **resourceRequests**: [GatewayResourceRequests](#gatewayresourcerequests): Resource request payload of Spring Cloud Gateway.
 * **ssoProperties**: [SsoProperties](#ssoproperties): Single sign-on related configuration
@@ -716,7 +716,7 @@ the relative path to the target module/project.
 ## GatewayRouteConfigProperties
 ### Properties
 * **appResourceId**: string: The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of the Spring Cloud Gateway.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Spring Cloud Gateway.
 * **routes**: [GatewayApiRoute](#gatewayapiroute)[]: Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
 
 ## GatewayApiRoute
@@ -737,7 +737,7 @@ the relative path to the target module/project.
 * **appInsightsInstrumentationKey**: string: Target application insight instrumentation key, null or whitespace include empty will disable monitoringSettings
 * **appInsightsSamplingRate**: int: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
 * **error**: [Error](#error): The error code compose of code and message.
-* **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly): State of the Monitoring Setting.
+* **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
 
 ## ApplicationInsightsAgentVersions
@@ -747,7 +747,7 @@ the relative path to the target module/project.
 ## ServiceRegistryProperties
 ### Properties
 * **instances**: [ServiceRegistryInstance](#serviceregistryinstance)[] (ReadOnly): Collection of instances belong to Service Registry.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): State of the Service Registry.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Service Registry.
 * **resourceRequests**: [ServiceRegistryResourceRequests](#serviceregistryresourcerequests) (ReadOnly): Resource request payload of Service Registry
 
 ## ServiceRegistryInstance

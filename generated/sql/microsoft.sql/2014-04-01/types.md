@@ -39,7 +39,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerTableAuditingPolicyProperties](#servertableauditingpolicyproperties): Properties of a server table auditing policy.
 * **type**: 'Microsoft.Sql/servers/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -61,7 +61,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerConnectionPolicyProperties](#serverconnectionpolicyproperties): The properties of a server secure connection policy.
 * **type**: 'Microsoft.Sql/servers/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -95,7 +95,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseTableAuditingPolicyProperties](#databasetableauditingpolicyproperties): Properties of a database table auditing policy.
 * **type**: 'Microsoft.Sql/servers/databases/auditingPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -106,7 +106,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseConnectionPolicyProperties](#databaseconnectionpolicyproperties): Properties of a database connection policy.
 * **type**: 'Microsoft.Sql/servers/databases/connectionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -137,7 +137,7 @@
 ### Properties
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'import' (Required, DeployTimeConstant): The resource name
+* **name**: 'import' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ImportExtensionProperties](#importextensionproperties) (WriteOnly): Represents the properties for an import operation
 * **type**: 'Microsoft.Sql/servers/databases/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -148,7 +148,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of geo backup policy.  This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Backup policy location.
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Sql/servers/databases/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -159,7 +159,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
 * **location**: string: The geo-location where the resource lives
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseSecurityAlertPolicyProperties](#databasesecurityalertpolicyproperties): Properties for a database Threat Detection policy.
 * **type**: 'Microsoft.Sql/servers/databases/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -169,7 +169,7 @@
 * **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Sql/servers/databases/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -214,7 +214,7 @@
 * **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
-* **version**: '12.0' | '2.0': The version of the server.
+* **version**: '12.0' | '2.0' | string: The version of the server.
 
 ## TrackedResourceTags
 ### Properties
@@ -262,7 +262,7 @@
 ### Properties
 * **collation**: string: The collation of the database. If createMode is not Default, this value is ignored.
 * **containmentState**: int (ReadOnly): The containment state of the database.
-* **createMode**: 'Copy' | 'Default' | 'NonReadableSecondary' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreLongTermRetentionBackup' (WriteOnly): Specifies the mode of database creation.
+* **createMode**: 'Copy' | 'Default' | 'NonReadableSecondary' | 'OnlineSecondary' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | 'RestoreLongTermRetentionBackup' | string (WriteOnly): Specifies the mode of database creation.
 
 Default: regular database creation.
 
@@ -284,7 +284,7 @@ Copy, NonReadableSecondary, OnlineSecondary and RestoreLongTermRetentionBackup a
 * **databaseId**: string (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
-* **edition**: 'Basic' | 'Business' | 'BusinessCritical' | 'DataWarehouse' | 'Free' | 'GeneralPurpose' | 'Hyperscale' | 'Premium' | 'PremiumRS' | 'Standard' | 'Stretch' | 'System' | 'System2' | 'Web': The edition of the database. The DatabaseEditions enumeration contains all the valid editions. If createMode is NonReadableSecondary or OnlineSecondary, this value is ignored.
+* **edition**: 'Basic' | 'Business' | 'BusinessCritical' | 'DataWarehouse' | 'Free' | 'GeneralPurpose' | 'Hyperscale' | 'Premium' | 'PremiumRS' | 'Standard' | 'Stretch' | 'System' | 'System2' | 'Web' | string: The edition of the database. The DatabaseEditions enumeration contains all the valid editions. If createMode is NonReadableSecondary or OnlineSecondary, this value is ignored.
 
 The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
 
@@ -304,10 +304,10 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **requestedServiceObjectiveId**: string: The configured service level objective ID of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of currentServiceObjectiveId property. If requestedServiceObjectiveId and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveId overrides the value of requestedServiceObjectiveName.
 
 The list of SKUs may vary by region and support offer. To determine the service objective ids that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API.
-* **requestedServiceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L': The serviceLevelObjective for SLO usage metric.
+* **requestedServiceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string: The serviceLevelObjective for SLO usage metric.
 * **restorePointInTime**: string (WriteOnly): Conditional. If createMode is PointInTimeRestore, this value is required. If createMode is Restore, this value is optional. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value.
-* **sampleName**: 'AdventureWorksLT' (WriteOnly): Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.
-* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The serviceLevelObjective for SLO usage metric.
+* **sampleName**: 'AdventureWorksLT' | string (WriteOnly): Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.
+* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceTierAdvisors**: [ServiceTierAdvisor](#servicetieradvisor)[] (ReadOnly): The list of service tier advisors for this database. Expanded property
 * **sourceDatabaseDeletionDate**: string (WriteOnly): Conditional. If createMode is Restore and sourceDatabaseId is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database id), then this value is required. Specifies the time that the database was deleted.
 * **sourceDatabaseId**: string (WriteOnly): Conditional. If createMode is Copy, NonReadableSecondary, OnlineSecondary, PointInTimeRestore, Recovery, or Restore, then this value is required. Specifies the resource ID of the source database. If createMode is NonReadableSecondary or OnlineSecondary, the name of the source database must be the same as the new database being created.
@@ -376,7 +376,7 @@ The list of SKUs may vary by region and support offer. To determine the service 
 ## SloUsageMetric
 ### Properties
 * **inRangeTimeRatio**: int (ReadOnly): Gets or sets inRangeTimeRatio for SLO usage metric.
-* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' (ReadOnly): The serviceLevelObjective for SLO usage metric.
+* **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string (ReadOnly): The serviceLevelObjective for SLO usage metric.
 * **serviceLevelObjectiveId**: string (ReadOnly): The serviceLevelObjectiveId for SLO usage metric.
 
 ## TransparentDataEncryption
@@ -471,13 +471,13 @@ The list of SKUs may vary by region and support offer. To determine the service 
 
 ## DisasterRecoveryConfigurationProperties
 ### Properties
-* **autoFailover**: 'Off' | 'On' (ReadOnly): Whether or not failover can be done automatically.
-* **failoverPolicy**: 'Automatic' | 'Manual' (ReadOnly): How aggressive the automatic failover should be.
+* **autoFailover**: 'Off' | 'On' | string (ReadOnly): Whether or not failover can be done automatically.
+* **failoverPolicy**: 'Automatic' | 'Manual' | string (ReadOnly): How aggressive the automatic failover should be.
 * **logicalServerName**: string (ReadOnly): Logical name of the server.
 * **partnerLogicalServerName**: string (ReadOnly): Logical name of the partner server.
 * **partnerServerId**: string (ReadOnly): Id of the partner server.
-* **role**: 'None' | 'Primary' | 'Secondary' (ReadOnly): The role of the current server in the disaster recovery configuration.
-* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' (ReadOnly): The status of the disaster recovery configuration.
+* **role**: 'None' | 'Primary' | 'Secondary' | string (ReadOnly): The role of the current server in the disaster recovery configuration.
+* **status**: 'Creating' | 'Dropping' | 'FailingOver' | 'Ready' | string (ReadOnly): The status of the disaster recovery configuration.
 
 ## ElasticPoolProperties
 ### Properties
@@ -485,8 +485,8 @@ The list of SKUs may vary by region and support offer. To determine the service 
 * **databaseDtuMax**: int: The maximum DTU any one database can consume.
 * **databaseDtuMin**: int: The minimum DTU all databases are guaranteed.
 * **dtu**: int: The total shared DTU for the database elastic pool.
-* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard': The edition of the recommended elastic pool. The ElasticPoolEdition enumeration contains all the valid editions.
-* **state**: 'Creating' | 'Disabled' | 'Ready' (ReadOnly): The state of the elastic pool.
+* **edition**: 'Basic' | 'BusinessCritical' | 'GeneralPurpose' | 'Premium' | 'Standard' | string: The edition of the recommended elastic pool. The ElasticPoolEdition enumeration contains all the valid editions.
+* **state**: 'Creating' | 'Disabled' | 'Ready' | string (ReadOnly): The state of the elastic pool.
 * **storageMB**: int: Gets storage limit for the database elastic pool in MB.
 * **zoneRedundant**: bool: Whether or not this database elastic pool is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
 

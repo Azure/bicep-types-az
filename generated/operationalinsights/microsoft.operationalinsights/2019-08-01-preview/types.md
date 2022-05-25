@@ -51,7 +51,7 @@
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties)
 * **nextLink**: string: The link used to get the next page of recommendations.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' (ReadOnly): The provisioning state of the cluster.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | string (ReadOnly): The provisioning state of the cluster.
 
 ## KeyVaultProperties
 ### Properties
@@ -62,7 +62,7 @@
 ## Sku
 ### Properties
 * **capacity**: int: The capacity value
-* **name**: 'CapacityReservation': The name of the SKU.
+* **name**: 'CapacityReservation' | string: The name of the SKU.
 
 ## ResourceTags
 ### Properties
@@ -82,7 +82,7 @@
 ### Properties
 * **metaData**: [DestinationMetaData](#destinationmetadata): Destination meta data.
 * **resourceId**: string (Required): The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-* **type**: 'EventHub' | 'StorageAccount' (ReadOnly): The type of the destination resource
+* **type**: 'EventHub' | 'StorageAccount' | string (ReadOnly): The type of the destination resource
 
 ## DestinationMetaData
 ### Properties

@@ -23,10 +23,10 @@
 * **backupBlobContainerUri**: string: The SAS container URI to the backup container.
 * **gatewayDetails**: [GatewayDetails](#gatewaydetails): The gateway details.
 * **managedMode**: int: The managed mode of the server (0 = not managed, 1 = managed).
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
 * **serverFullName**: string (ReadOnly): The full name of the Analysis Services resource.
 * **serverMonitorMode**: int: The server monitor mode for AS server
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
 
 ## ServerAdministrators
 ### Properties
@@ -41,7 +41,7 @@
 ## ResourceSku
 ### Properties
 * **name**: string (Required): Name of the SKU level.
-* **tier**: 'Basic' | 'Development' | 'Standard': The name of the Azure pricing tier to which the SKU applies.
+* **tier**: 'Basic' | 'Development' | 'Standard' | string: The name of the Azure pricing tier to which the SKU applies.
 
 ## ResourceTags
 ### Properties

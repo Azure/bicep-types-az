@@ -22,15 +22,15 @@
 ### Properties
 * **dataPlaneFqdn**: string (ReadOnly): DNS name for accessing DataPlane services
 * **hostSuffix**: string (ReadOnly): DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Azure Dev Spaces Controller.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Azure Dev Spaces Controller.
 * **targetContainerHostApiServerFqdn**: string (ReadOnly): DNS of the target container host's API server
 * **targetContainerHostCredentialsBase64**: string (Required, WriteOnly): Credentials of the target container host (base64).
 * **targetContainerHostResourceId**: string (Required): Resource ID of the target container host
 
 ## Sku
 ### Properties
-* **name**: 'S1' (Required): The name of the SKU for Azure Dev Spaces Controller.
-* **tier**: 'Standard': The tier of the SKU for Azure Dev Spaces Controller.
+* **name**: 'S1' | string (Required): The name of the SKU for Azure Dev Spaces Controller.
+* **tier**: 'Standard' | string: The tier of the SKU for Azure Dev Spaces Controller.
 
 ## TrackedResourceTags
 ### Properties

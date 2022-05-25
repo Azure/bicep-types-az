@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BotProperties](#botproperties): The parameters to provide for the Bot.
@@ -21,7 +21,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
 * **name**: 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'MsTeamsChannel' | 'OutlookChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): Channel definition
@@ -36,7 +36,7 @@
 * **apiVersion**: '2021-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): Properties for a Connection Setting Item
@@ -91,12 +91,12 @@
 * **msaAppId**: string (Required): Microsoft App Id for the bot
 * **msaAppMSIResourceId**: string: Microsoft App Managed Identity Resource Id for the bot
 * **msaAppTenantId**: string: Microsoft App Tenant Id for the bot
-* **msaAppType**: 'MultiTenant' | 'SingleTenant' | 'UserAssignedMSI': Microsoft App Type for the bot
+* **msaAppType**: 'MultiTenant' | 'SingleTenant' | 'UserAssignedMSI' | string: Microsoft App Type for the bot
 * **openWithHint**: string: The hint to browser (e.g. protocol handler) on how to open the bot for authoring
 * **parameters**: [BotPropertiesParameters](#botpropertiesparameters): Contains resource parameters defined as key/value pairs.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the bot
 * **provisioningState**: string (ReadOnly): Provisioning state of the resource
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether the bot is in an isolated network
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether the bot is in an isolated network
 * **publishingCredentials**: string: Publishing credentials of the resource
 * **schemaTransformationVersion**: string: The channel schema transformation version for the bot
 * **storageResourceId**: string: The storage resourceId for the bot
@@ -122,7 +122,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -132,12 +132,12 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' (Required): The name of SKU.
-* **tier**: 'Free' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
+* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
+* **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## ResourceTags
 ### Properties
@@ -388,7 +388,7 @@
 * **entityTag**: string (ReadOnly): Entity tag of the resource
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [Channel](#channel) (ReadOnly): Channel definition
@@ -437,7 +437,7 @@
 ### Properties
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
+* **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item

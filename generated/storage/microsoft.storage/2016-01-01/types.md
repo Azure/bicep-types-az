@@ -40,7 +40,7 @@
 
 ## Encryption
 ### Properties
-* **keySource**: 'Microsoft.Storage' (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage
+* **keySource**: 'Microsoft.Storage' | string (Required): The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage
 * **services**: [EncryptionServices](#encryptionservices): A list of services that support encryption.
 
 ## EncryptionServices

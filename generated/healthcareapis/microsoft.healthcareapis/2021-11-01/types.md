@@ -59,7 +59,7 @@
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ServiceManagedIdentityIdentity](#servicemanagedidentityidentity): Setting indicating whether the service has a managed identity associated with it.
-* **kind**: 'fhir-R4' | 'fhir-Stu3': The kind of the service.
+* **kind**: 'fhir-R4' | 'fhir-Stu3' | string: The kind of the service.
 * **location**: string: The resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [FhirServiceProperties](#fhirserviceproperties): Fhir Service properties.
@@ -107,7 +107,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the resource.
-* **type**: 'None' | 'SystemAssigned': Type of identity being specified, currently SystemAssigned and None are allowed.
+* **type**: 'None' | 'SystemAssigned' | string: Type of identity being specified, currently SystemAssigned and None are allowed.
 
 ## ServicesProperties
 ### Properties
@@ -118,8 +118,8 @@
 * **cosmosDbConfiguration**: [ServiceCosmosDbConfigurationInfo](#servicecosmosdbconfigurationinfo): The settings for the Cosmos DB database backing the service.
 * **exportConfiguration**: [ServiceExportConfigurationInfo](#serviceexportconfigurationinfo): Export operation configuration information
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: The list of private endpoint connections that are set up for this resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 
 ## ServiceAccessPolicyEntry
 ### Properties
@@ -170,7 +170,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -180,16 +180,16 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ServicesResourceTags
 ### Properties
@@ -199,8 +199,8 @@
 ## WorkspaceProperties
 ### Properties
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections that are set up for this resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 
 ## ResourceTags
 ### Properties
@@ -211,7 +211,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): Type of identity being specified, currently SystemAssigned and None are allowed.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of identity being specified, currently SystemAssigned and None are allowed.
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## UserAssignedIdentities
@@ -228,8 +228,8 @@
 ### Properties
 * **authenticationConfiguration**: [DicomServiceAuthenticationConfiguration](#dicomserviceauthenticationconfiguration): Authentication configuration information
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections that are set up for this resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 * **serviceUrl**: string (ReadOnly): The url of the Dicom Services.
 
 ## DicomServiceAuthenticationConfiguration
@@ -248,11 +248,11 @@
 * **acrConfiguration**: [FhirServiceAcrConfiguration](#fhirserviceacrconfiguration): Azure container registry configuration information
 * **authenticationConfiguration**: [FhirServiceAuthenticationConfiguration](#fhirserviceauthenticationconfiguration): Authentication configuration information
 * **corsConfiguration**: [FhirServiceCorsConfiguration](#fhirservicecorsconfiguration): The settings for the CORS configuration of the service instance.
-* **eventState**: 'Disabled' | 'Enabled' | 'Updating' (ReadOnly): Indicates the current status of event support for the resource.
+* **eventState**: 'Disabled' | 'Enabled' | 'Updating' | string (ReadOnly): Indicates the current status of event support for the resource.
 * **exportConfiguration**: [FhirServiceExportConfiguration](#fhirserviceexportconfiguration): Export operation configuration information
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections that are set up for this resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' (ReadOnly): The provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 * **resourceVersionPolicyConfiguration**: [ResourceVersionPolicyConfiguration](#resourceversionpolicyconfiguration): The settings for history tracking for FHIR resources.
 
 ## FhirServiceAccessPolicyEntry
@@ -284,13 +284,13 @@
 
 ## ResourceVersionPolicyConfiguration
 ### Properties
-* **default**: 'no-version' | 'versioned' | 'versioned-update': Controls how resources are versioned on the FHIR service
+* **default**: 'no-version' | 'versioned' | 'versioned-update' | string: Controls how resources are versioned on the FHIR service
 * **resourceTypeOverrides**: [ResourceVersionPolicyConfigurationResourceTypeOverrides](#resourceversionpolicyconfigurationresourcetypeoverrides): A list of FHIR Resources and their version policy overrides.
 
 ## ResourceVersionPolicyConfigurationResourceTypeOverrides
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: 'no-version' | 'versioned' | 'versioned-update'
+* **Additional Properties Type**: 'no-version' | 'versioned' | 'versioned-update' | string
 
 ## ResourceTags
 ### Properties
@@ -301,7 +301,7 @@
 ### Properties
 * **deviceMapping**: [IotMappingProperties](#iotmappingproperties): The mapping content.
 * **ingestionEndpointConfiguration**: [IotEventHubIngestionEndpointConfiguration](#ioteventhubingestionendpointconfiguration): Event Hub ingestion endpoint configuration
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' (ReadOnly): The provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
 
 ## IotMappingProperties
 ### Properties
@@ -322,6 +322,6 @@
 ### Properties
 * **fhirMapping**: [IotMappingProperties](#iotmappingproperties) (Required): The mapping content.
 * **fhirServiceResourceId**: string (Required): Fully qualified resource id of the FHIR service to connect to.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' (ReadOnly): The provisioning state.
-* **resourceIdentityResolutionType**: 'Create' | 'Lookup' (Required): The type of IoT identity resolution to use with the destination.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Deprovisioned' | 'Failed' | 'Moving' | 'Succeeded' | 'Suspended' | 'SystemMaintenance' | 'Updating' | 'Verifying' | 'Warned' | string (ReadOnly): The provisioning state.
+* **resourceIdentityResolutionType**: 'Create' | 'Lookup' | string (Required): The type of IoT identity resolution to use with the destination.
 

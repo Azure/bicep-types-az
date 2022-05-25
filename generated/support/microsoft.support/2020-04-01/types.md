@@ -33,7 +33,7 @@
 * **serviceDisplayName**: string (ReadOnly): Localized name of the Azure service.
 * **serviceId**: string (Required): This is the resource Id of the Azure service resource associated with the support ticket.
 * **serviceLevelAgreement**: [ServiceLevelAgreement](#servicelevelagreement): Service Level Agreement details for a support ticket.
-* **severity**: 'critical' | 'highestcriticalimpact' | 'minimal' | 'moderate' (Required): A value that indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure. Note: 'Highest critical impact', also known as the 'Emergency - Severe impact' level in the Azure portal is reserved only for our Premium customers.
+* **severity**: 'critical' | 'highestcriticalimpact' | 'minimal' | 'moderate' | string (Required): A value that indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure. Note: 'Highest critical impact', also known as the 'Emergency - Severe impact' level in the Azure portal is reserved only for our Premium customers.
 * **status**: string (ReadOnly): Status of the support ticket.
 * **supportEngineer**: [SupportEngineer](#supportengineer): Support engineer information.
 * **supportPlanType**: string (ReadOnly): Support plan type associated with the support ticket.
@@ -48,7 +48,7 @@
 * **firstName**: string (Required): First name.
 * **lastName**: string (Required): Last name.
 * **phoneNumber**: string: Phone number. This is required if preferred contact method is phone.
-* **preferredContactMethod**: 'email' | 'phone' (Required): Preferred contact method.
+* **preferredContactMethod**: 'email' | 'phone' | string (Required): Preferred contact method.
 * **preferredSupportLanguage**: string (Required): Preferred language of support from Azure. Support languages vary based on the severity you choose for your support ticket. Learn more at [Azure Severity and responsiveness](https://azure.microsoft.com/support/plans/response). Use the standard language-country code. Valid values are 'en-us' for English, 'zh-hans' for Chinese, 'es-es' for Spanish, 'fr-fr' for French, 'ja-jp' for Japanese, 'ko-kr' for Korean, 'ru-ru' for Russian, 'pt-br' for Portuguese, 'it-it' for Italian, 'zh-tw' for Chinese and 'de-de' for German.
 * **preferredTimeZone**: string (Required): Time zone of the user. This is the name of the time zone from [Microsoft Time Zone Index Values](https://support.microsoft.com/help/973627/microsoft-time-zone-index-values).
 * **primaryEmailAddress**: string (Required): Primary email address.
@@ -81,8 +81,8 @@
 ## CommunicationDetailsProperties
 ### Properties
 * **body**: string (Required): Body of the communication.
-* **communicationDirection**: 'inbound' | 'outbound' (ReadOnly): Direction of communication.
-* **communicationType**: 'phone' | 'web' (ReadOnly): Communication type.
+* **communicationDirection**: 'inbound' | 'outbound' | string (ReadOnly): Direction of communication.
+* **communicationType**: 'phone' | 'web' | string (ReadOnly): Communication type.
 * **createdDate**: string (ReadOnly): Time in UTC (ISO 8601 format) when the communication was created.
 * **sender**: string: Email address of the sender. This property is required if called by a service principal.
 * **subject**: string (Required): Subject of the communication.

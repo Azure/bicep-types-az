@@ -49,7 +49,7 @@
 ## StorageInsightStatus
 ### Properties
 * **description**: string: Description of the state of the storage insight.
-* **state**: 'ERROR' | 'OK' (Required): The state of the storage insight connection to the workspace
+* **state**: 'ERROR' | 'OK' | string (Required): The state of the storage insight connection to the workspace
 
 ## StorageAccount
 ### Properties

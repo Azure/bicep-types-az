@@ -112,7 +112,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity.
 * **tenantId**: string (ReadOnly): The client tenant id of the identity.
-* **type**: 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): The identity type.
+* **type**: 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): The identity type.
 * **userAssignedIdentities**: [UserAssignedIdentitiesDefinitionSpecification](#userassignedidentitiesdefinitionspecification): Definition of all user assigned identities for a factory.
 
 ## UserAssignedIdentitiesDefinitionSpecification
@@ -126,7 +126,7 @@
 * **encryption**: [EncryptionConfiguration](#encryptionconfiguration): Definition of CMK for the factory.
 * **globalParameters**: [GlobalParameterDefinitionSpecification](#globalparameterdefinitionspecification): Definition of all parameters for an entity.
 * **provisioningState**: string (ReadOnly): Factory provisioning state, example Succeeded.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for the data factory.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for the data factory.
 * **repoConfiguration**: [FactoryRepoConfiguration](#factoryrepoconfiguration): Factory's git repo information.
 * **version**: string (ReadOnly): Version of the factory.
 
@@ -148,7 +148,7 @@
 
 ## GlobalParameterSpecification
 ### Properties
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' (Required): Global Parameter type.
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'String' | string (Required): Global Parameter type.
 * **value**: any (Required): Any object
 
 ## FactoryRepoConfiguration
@@ -232,7 +232,7 @@
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference dataset name.
-* **type**: 'DatasetReference' (Required): Dataset reference type.
+* **type**: 'DatasetReference' | string (Required): Dataset reference type.
 
 ## ParameterValueSpecification
 ### Properties
@@ -244,7 +244,7 @@
 * **datasetParameters**: any: Any object
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference data flow name.
-* **type**: 'DataFlowReference' (Required): Data flow reference type.
+* **type**: 'DataFlowReference' | string (Required): Data flow reference type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -257,7 +257,7 @@
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference LinkedService name.
-* **type**: 'LinkedServiceReference' (Required): Linked service reference type.
+* **type**: 'LinkedServiceReference' | string (Required): Linked service reference type.
 
 ## ParameterValueSpecification
 ### Properties
@@ -803,7 +803,7 @@
 ## ParameterSpecification
 ### Properties
 * **defaultValue**: any: Any object
-* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' (Required): Parameter type.
+* **type**: 'Array' | 'Bool' | 'Float' | 'Int' | 'Object' | 'SecureString' | 'String' | string (Required): Parameter type.
 
 ## GenericDatasetTypeProperties
 ### Properties
@@ -1328,7 +1328,7 @@
 ### ManagedIntegrationRuntime
 #### Properties
 * **managedVirtualNetwork**: [ManagedVirtualNetworkReference](#managedvirtualnetworkreference): Managed Virtual Network reference type.
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The state of integration runtime.
 * **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -1341,7 +1341,7 @@
 ## ManagedVirtualNetworkReference
 ### Properties
 * **referenceName**: string (Required): Reference ManagedVirtualNetwork name.
-* **type**: 'ManagedVirtualNetworkReference' (Required): Managed Virtual Network reference type.
+* **type**: 'ManagedVirtualNetworkReference' | string (Required): Managed Virtual Network reference type.
 
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
@@ -1363,7 +1363,7 @@
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
 * **cleanup**: bool: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
-* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
+* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized' | string: Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
@@ -1388,9 +1388,9 @@
 * **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
-* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime
+* **edition**: 'Enterprise' | 'Standard' | string: The edition for the SSIS Integration Runtime
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
+* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: License type for bringing your own license scenario.
 * **packageStores**: [PackageStore](#packagestore)[]: Package stores for the SSIS Integration Runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -1399,7 +1399,7 @@
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
-* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard' | string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
 * **dualStandbyPairName**: string: The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
 ### Additional Properties
@@ -1413,7 +1413,7 @@
 ## CredentialReference
 ### Properties
 * **referenceName**: string (Required): Reference credential name.
-* **type**: 'CredentialReference' (Required): Credential reference type.
+* **type**: 'CredentialReference' | string (Required): Credential reference type.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -1431,7 +1431,7 @@
 ## EntityReference
 ### Properties
 * **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
+* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference' | string: The type of this referenced entity.
 
 ## CustomSetupBase
 * **Discriminator**: type
@@ -2083,7 +2083,7 @@
 ### Properties
 * **parameters**: [ParameterValueSpecification](#parametervaluespecification): An object mapping parameter names to argument values.
 * **referenceName**: string (Required): Reference integration runtime name.
-* **type**: 'IntegrationRuntimeReference' (Required): Type of integration runtime.
+* **type**: 'IntegrationRuntimeReference' | string (Required): Type of integration runtime.
 
 ## ParameterValueSpecification
 ### Properties
@@ -2124,7 +2124,7 @@
 
 ## SqlAlwaysEncryptedProperties
 ### Properties
-* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' | 'UserAssignedManagedIdentity' (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' | 'UserAssignedManagedIdentity' | string (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **servicePrincipalId**: any: Any object
 * **servicePrincipalKey**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -2445,13 +2445,13 @@
 * **accountEndpoint**: any: Any object
 * **accountKey**: [SecretBase](#secretbase): The base definition of a secret type.
 * **azureCloudType**: any: Any object
-* **connectionMode**: 'Direct' | 'Gateway': The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
+* **connectionMode**: 'Direct' | 'Gateway' | string: The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
 * **connectionString**: any: Any object
 * **credential**: [CredentialReference](#credentialreference): Credential reference type.
 * **database**: any: Any object
 * **encryptedCredential**: any: Any object
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The base definition of a secret type.
-* **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey': The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey' | string: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: Any object
 * **tenant**: any: Any object
 
@@ -2474,7 +2474,7 @@
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic': AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
+* **authenticationType**: 'Basic' | string: AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
 * **certificateCommonName**: any: Any object
 * **connectionString**: any: Any object
 * **database**: any: Any object
@@ -2549,7 +2549,7 @@
 
 ## FtpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the FTP server.
+* **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the FTP server.
 * **enableServerCertificateValidation**: any: Any object
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
@@ -2560,7 +2560,7 @@
 
 ## GoogleAdWordsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication': The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string: The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
 * **clientCustomerID**: any: Any object
 * **clientId**: any: Any object
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -2576,7 +2576,7 @@
 ## GoogleBigQueryLinkedServiceTypeProperties
 ### Properties
 * **additionalProjects**: any: Any object
-* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
 * **clientId**: any: Any object
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **email**: any: Any object
@@ -2605,7 +2605,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Basic' (Required): The authentication mechanism to use to connect to the HBase server.
+* **authenticationType**: 'Anonymous' | 'Basic' | string (Required): The authentication mechanism to use to connect to the HBase server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
@@ -2682,16 +2682,16 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Hive server.
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
 * **httpPath**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **port**: any: Any object
-* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer': The type of Hive server.
+* **serverType**: 'HiveServer1' | 'HiveServer2' | 'HiveThriftServer' | string: The type of Hive server.
 * **serviceDiscoveryMode**: any: Any object
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer.
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
 * **trustedCertPath**: any: Any object
 * **useNativeQuery**: any: Any object
 * **username**: any: Any object
@@ -2700,7 +2700,7 @@
 
 ## HttpLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows': The authentication type to be used to connect to the HTTP server.
+* **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows' | string: The authentication type to be used to connect to the HTTP server.
 * **authHeaders**: any: Any object
 * **certThumbprint**: any: Any object
 * **embeddedCertData**: any: Any object
@@ -2725,7 +2725,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' (Required): The authentication type to use.
+* **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
@@ -2792,7 +2792,7 @@
 ## MongoDbLinkedServiceTypeProperties
 ### Properties
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Basic': The authentication type to be used to connect to the MongoDB database.
+* **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the MongoDB database.
 * **authSource**: any: Any object
 * **databaseName**: any (Required): Any object
 * **enableSsl**: any: Any object
@@ -2827,8 +2827,8 @@
 ## ODataLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any: Any object
-* **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey': Specify the credential type (key or cert) is used for service principal.
-* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows': Type of authentication used to connect to the OData service.
+* **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey' | string: Specify the credential type (key or cert) is used for service principal.
+* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows' | string: Type of authentication used to connect to the OData service.
 * **authHeaders**: any: Any object
 * **azureCloudType**: any: Any object
 * **encryptedCredential**: any: Any object
@@ -2895,7 +2895,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication mechanism used to connect to the Phoenix server.
+* **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication mechanism used to connect to the Phoenix server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
@@ -2916,7 +2916,7 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'LDAP' (Required): The authentication mechanism used to connect to the Presto server.
+* **authenticationType**: 'Anonymous' | 'LDAP' | string (Required): The authentication mechanism used to connect to the Presto server.
 * **catalog**: any (Required): Any object
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
@@ -2960,7 +2960,7 @@
 ## RestServiceLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any: Any object
-* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' (Required): Type of authentication used to connect to the REST service.
+* **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | string (Required): Type of authentication used to connect to the REST service.
 * **authHeaders**: any: Any object
 * **azureCloudType**: any: Any object
 * **credential**: [CredentialReference](#credentialreference): Credential reference type.
@@ -3027,7 +3027,7 @@
 
 ## SapHanaLinkedServiceProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': The authentication type to be used to connect to the SAP HANA server.
+* **authenticationType**: 'Basic' | 'Windows' | string: The authentication type to be used to connect to the SAP HANA server.
 * **connectionString**: any: Any object
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -3069,7 +3069,7 @@
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'OAuth2' (Required): The authentication type to use.
+* **authenticationType**: 'Basic' | 'OAuth2' | string (Required): The authentication type to use.
 * **clientId**: any: Any object
 * **clientSecret**: [SecretBase](#secretbase): The base definition of a secret type.
 * **encryptedCredential**: any: Any object
@@ -3082,7 +3082,7 @@
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey': The authentication type to be used to connect to the FTP server.
+* **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey' | string: The authentication type to be used to connect to the FTP server.
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
 * **hostKeyFingerprint**: any: Any object
@@ -3126,15 +3126,15 @@
 ### Properties
 * **allowHostNameCNMismatch**: any: Any object
 * **allowSelfSignedServerCert**: any: Any object
-* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' (Required): The authentication method used to access the Spark server.
+* **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Spark server.
 * **enableSsl**: any: Any object
 * **encryptedCredential**: any: Any object
 * **host**: any (Required): Any object
 * **httpPath**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **port**: any (Required): Any object
-* **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer': The type of Spark server.
-* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL': The transport protocol to use in the Thrift layer.
+* **serverType**: 'SharkServer' | 'SharkServer2' | 'SparkThriftServer' | string: The type of Spark server.
+* **thriftTransportProtocol**: 'Binary' | 'HTTP ' | 'SASL' | string: The transport protocol to use in the Thrift layer.
 * **trustedCertPath**: any: Any object
 * **username**: any: Any object
 * **useSystemTrustStore**: any: Any object
@@ -3161,7 +3161,7 @@
 
 ## SybaseLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
+* **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
 * **database**: any (Required): Any object
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -3172,7 +3172,7 @@
 ## TeamDeskLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **authenticationType**: 'Basic' | 'Token' (Required): The authentication type to use.
+* **authenticationType**: 'Basic' | 'Token' | string (Required): The authentication type to use.
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **url**: any (Required): Any object
@@ -3180,7 +3180,7 @@
 
 ## TeradataLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: 'Basic' | 'Windows': AuthenticationType to be used for connection.
+* **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
 * **connectionString**: any: Any object
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
@@ -3234,7 +3234,7 @@
 ## ZendeskLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase): The base definition of a secret type.
-* **authenticationType**: 'Basic' | 'Token' (Required): The authentication type to use.
+* **authenticationType**: 'Basic' | 'Token' | string (Required): The authentication type to use.
 * **encryptedCredential**: any: Any object
 * **password**: [SecretBase](#secretbase): The base definition of a secret type.
 * **url**: any (Required): Any object
@@ -3487,7 +3487,7 @@
 ## ActivityDependency
 ### Properties
 * **activity**: string (Required): Activity name.
-* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded'[] (Required): Match-Condition for the dependency.
+* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -3511,7 +3511,7 @@
 * **body**: any: Any object
 * **functionName**: any (Required): Any object
 * **headers**: any: Any object
-* **method**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' (Required): The list of HTTP methods supported by a AzureFunctionActivity.
+* **method**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string (Required): The list of HTTP methods supported by a AzureFunctionActivity.
 
 ## AzureMLBatchExecutionActivityTypeProperties
 ### Properties
@@ -3664,7 +3664,7 @@
 ### AzureSearchIndexSink
 #### Properties
 * **type**: 'AzureSearchIndexSink' (Required): Copy sink type.
-* **writeBehavior**: 'Merge' | 'Upload': Specify the write behavior when upserting documents into Azure Search Index.
+* **writeBehavior**: 'Merge' | 'Upload' | string: Specify the write behavior when upserting documents into Azure Search Index.
 
 ### AzureSqlSink
 #### Properties
@@ -3706,7 +3706,7 @@
 * **alternateKeyName**: any: Any object
 * **ignoreNullValues**: any: Any object
 * **type**: 'CommonDataServiceForAppsSink' (Required): Copy sink type.
-* **writeBehavior**: 'Upsert' (Required): Defines values for DynamicsSinkWriteBehavior.
+* **writeBehavior**: 'Upsert' | string (Required): Defines values for DynamicsSinkWriteBehavior.
 
 ### CosmosDbMongoDbApiSink
 #### Properties
@@ -3735,14 +3735,14 @@
 * **alternateKeyName**: any: Any object
 * **ignoreNullValues**: any: Any object
 * **type**: 'DynamicsCrmSink' (Required): Copy sink type.
-* **writeBehavior**: 'Upsert' (Required): Defines values for DynamicsSinkWriteBehavior.
+* **writeBehavior**: 'Upsert' | string (Required): Defines values for DynamicsSinkWriteBehavior.
 
 ### DynamicsSink
 #### Properties
 * **alternateKeyName**: any: Any object
 * **ignoreNullValues**: any: Any object
 * **type**: 'DynamicsSink' (Required): Copy sink type.
-* **writeBehavior**: 'Upsert' (Required): Defines values for DynamicsSinkWriteBehavior.
+* **writeBehavior**: 'Upsert' | string (Required): Defines values for DynamicsSinkWriteBehavior.
 
 ### FileSystemSink
 #### Properties
@@ -3811,20 +3811,20 @@
 * **externalIdFieldName**: any: Any object
 * **ignoreNullValues**: any: Any object
 * **type**: 'SalesforceServiceCloudSink' (Required): Copy sink type.
-* **writeBehavior**: 'Insert' | 'Upsert': The write behavior for the operation. Default is Insert.
+* **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
 
 ### SalesforceSink
 #### Properties
 * **externalIdFieldName**: any: Any object
 * **ignoreNullValues**: any: Any object
 * **type**: 'SalesforceSink' (Required): Copy sink type.
-* **writeBehavior**: 'Insert' | 'Upsert': The write behavior for the operation. Default is Insert.
+* **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
 
 ### SapCloudForCustomerSink
 #### Properties
 * **httpRequestTimeout**: any: Any object
 * **type**: 'SapCloudForCustomerSink' (Required): Copy sink type.
-* **writeBehavior**: 'Insert' | 'Update': The write behavior for the operation. Default is 'Insert'.
+* **writeBehavior**: 'Insert' | 'Update' | string: The write behavior for the operation. Default is 'Insert'.
 
 ### SnowflakeSink
 #### Properties
@@ -3952,7 +3952,7 @@
 
 ## StoredProcedureParameter
 ### Properties
-* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String': Stored procedure parameter type.
+* **type**: 'Boolean' | 'Date' | 'Decimal' | 'Guid' | 'Int' | 'Int64' | 'String' | string: Stored procedure parameter type.
 * **value**: any: Any object
 
 ## SqlUpsertSettings
@@ -4030,7 +4030,7 @@
 ## PolybaseSettings
 ### Properties
 * **rejectSampleValue**: any: Any object
-* **rejectType**: 'percentage' | 'value': Indicates whether the RejectValue property is specified as a literal value or a percentage.
+* **rejectType**: 'percentage' | 'value' | string: Indicates whether the RejectValue property is specified as a literal value or a percentage.
 * **rejectValue**: any: Any object
 * **useTypeDefault**: any: Any object
 ### Additional Properties
@@ -4177,7 +4177,7 @@
 
 ### CassandraSource
 #### Properties
-* **consistencyLevel**: 'ALL' | 'EACH_QUORUM' | 'LOCAL_ONE' | 'LOCAL_QUORUM' | 'LOCAL_SERIAL' | 'ONE' | 'QUORUM' | 'SERIAL' | 'THREE' | 'TWO': The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
+* **consistencyLevel**: 'ALL' | 'EACH_QUORUM' | 'LOCAL_ONE' | 'LOCAL_QUORUM' | 'LOCAL_SERIAL' | 'ONE' | 'QUORUM' | 'SERIAL' | 'THREE' | 'TWO' | string: The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
 * **query**: any: Any object
 * **type**: 'CassandraSource' (Required): Copy source type.
 
@@ -4499,13 +4499,13 @@
 #### Properties
 * **additionalColumns**: any: Any object
 * **query**: any: Any object
-* **readBehavior**: 'Query' | 'QueryAll': The read behavior for the operation. Default is Query.
+* **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
 * **type**: 'SalesforceServiceCloudSource' (Required): Copy source type.
 
 ### SalesforceSource
 #### Properties
 * **query**: any: Any object
-* **readBehavior**: 'Query' | 'QueryAll': The read behavior for the operation. Default is Query.
+* **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
 * **type**: 'SalesforceSource' (Required): Copy source type.
 
 ### SapBwSource
@@ -5147,7 +5147,7 @@
 ### Properties
 * **name**: string: Reference name.
 * **referenceName**: string (Required): Reference pipeline name.
-* **type**: 'PipelineReference' (Required): Pipeline reference type.
+* **type**: 'PipelineReference' | string (Required): Pipeline reference type.
 
 ## ExecuteSsisPackageActivityTypeProperties
 ### Properties
@@ -5173,7 +5173,7 @@
 ## SsisLogLocation
 ### Properties
 * **logPath**: any (Required): Any object
-* **type**: 'File' (Required): The type of SSIS log location.
+* **type**: 'File' | string (Required): The type of SSIS log location.
 * **typeProperties**: [SsisLogLocationTypeProperties](#ssisloglocationtypeproperties) (Required): SSIS package execution log location properties.
 
 ## SsisLogLocationTypeProperties
@@ -5204,7 +5204,7 @@
 ## SsisPackageLocation
 ### Properties
 * **packagePath**: any: Any object
-* **type**: 'File' | 'InlinePackage' | 'PackageStore' | 'SSISDB': The type of SSIS package location.
+* **type**: 'File' | 'InlinePackage' | 'PackageStore' | 'SSISDB' | string: The type of SSIS package location.
 * **typeProperties**: [SsisPackageLocationTypeProperties](#ssispackagelocationtypeproperties): SSIS package location properties.
 
 ## SsisPackageLocationTypeProperties
@@ -5309,7 +5309,7 @@
 
 ## Expression
 ### Properties
-* **type**: 'Expression' (Required): Expression type.
+* **type**: 'Expression' | string (Required): Expression type.
 * **value**: string (Required): Expression value.
 
 ## ForEachActivityTypeProperties
@@ -5360,7 +5360,7 @@
 ### Properties
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
 * **defines**: [HDInsightHiveActivityTypePropertiesDefines](#hdinsighthiveactivitytypepropertiesdefines): Allows user to specify defines for Hive job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **queryTimeout**: int: Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
 * **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **scriptPath**: any: Any object
@@ -5377,7 +5377,7 @@
 * **arguments**: any[]: User specified arguments to HDInsightActivity.
 * **className**: any (Required): Any object
 * **defines**: [HDInsightMapReduceActivityTypePropertiesDefines](#hdinsightmapreduceactivitytypepropertiesdefines): Allows user to specify defines for the MapReduce job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **jarFilePath**: any (Required): Any object
 * **jarLibs**: any[]: Jar libs.
 * **jarLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
@@ -5392,7 +5392,7 @@
 ### Properties
 * **arguments**: any: Any object
 * **defines**: [HDInsightPigActivityTypePropertiesDefines](#hdinsightpigactivitytypepropertiesdefines): Allows user to specify defines for Pig job request.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **scriptPath**: any: Any object
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
@@ -5407,7 +5407,7 @@
 * **arguments**: any[]: The user-specified arguments to HDInsightSparkActivity.
 * **className**: string: The application's Java/Spark main class.
 * **entryFilePath**: any (Required): Any object
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **proxyUser**: any: Any object
 * **rootPath**: any (Required): Any object
 * **sparkConfig**: [HDInsightSparkActivityTypePropertiesSparkConfig](#hdinsightsparkactivitytypepropertiessparkconfig): Spark configuration property.
@@ -5426,7 +5426,7 @@
 * **defines**: [HDInsightStreamingActivityTypePropertiesDefines](#hdinsightstreamingactivitytypepropertiesdefines): Allows user to specify defines for streaming job request.
 * **fileLinkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference type.
 * **filePaths**: any[] (Required): Paths to streaming job files. Can be directories.
-* **getDebugInfo**: 'Always' | 'Failure' | 'None': The HDInsightActivityDebugInfoOption settings to use.
+* **getDebugInfo**: 'Always' | 'Failure' | 'None' | string: The HDInsightActivityDebugInfoOption settings to use.
 * **input**: any (Required): Any object
 * **mapper**: any (Required): Any object
 * **output**: any (Required): Any object
@@ -5457,21 +5457,21 @@
 
 ## ScriptActivityTypePropertiesLogSettings
 ### Properties
-* **logDestination**: 'ActivityOutput' | 'ExternalStore' (Required): The destination of logs. Type: string.
+* **logDestination**: 'ActivityOutput' | 'ExternalStore' | string (Required): The destination of logs. Type: string.
 * **logLocationSettings**: [LogLocationSettings](#loglocationsettings): Log location settings.
 
 ## ScriptActivityScriptBlock
 ### Properties
 * **parameters**: [ScriptActivityParameter](#scriptactivityparameter)[]: Array of script parameters. Type: array.
 * **text**: any (Required): Any object
-* **type**: 'NonQuery' | 'Query' (Required): The type of the query. Type: string.
+* **type**: 'NonQuery' | 'Query' | string (Required): The type of the query. Type: string.
 
 ## ScriptActivityParameter
 ### Properties
-* **direction**: 'Input' | 'InputOutput' | 'Output': The direction of the parameter.
+* **direction**: 'Input' | 'InputOutput' | 'Output' | string: The direction of the parameter.
 * **name**: any: Any object
 * **size**: int: The size of the output direction parameter.
-* **type**: 'Boolean' | 'DateTime' | 'DateTimeOffset' | 'Decimal' | 'Double' | 'Guid' | 'Int16' | 'Int32' | 'Int64' | 'Single' | 'String' | 'Timespan': The type of the parameter.
+* **type**: 'Boolean' | 'DateTime' | 'DateTimeOffset' | 'Decimal' | 'Double' | 'Guid' | 'Int16' | 'Int32' | 'Int64' | 'Single' | 'String' | 'Timespan' | string: The type of the parameter.
 * **value**: any: Any object
 
 ## SetVariableActivityTypeProperties
@@ -5522,7 +5522,7 @@
 * **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
 * **headers**: any: Any object
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
-* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' (Required): The list of HTTP methods supported by a WebActivity.
+* **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): The list of HTTP methods supported by a WebActivity.
 * **url**: any (Required): Any object
 
 ## WebActivityAuthentication
@@ -5540,7 +5540,7 @@
 * **authentication**: [WebActivityAuthentication](#webactivityauthentication): Web activity authentication properties.
 * **body**: any: Any object
 * **headers**: any: Any object
-* **method**: 'POST' (Required): The list of HTTP methods supported by a WebHook activity.
+* **method**: 'POST' | string (Required): The list of HTTP methods supported by a WebHook activity.
 * **reportStatusOnCallBack**: any: Any object
 * **timeout**: string: The timeout within which the webhook should be called back. If there is no value specified, it defaults to 10 minutes. Type: string. Pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **url**: any (Required): Any object
@@ -5575,7 +5575,7 @@
 ## VariableSpecification
 ### Properties
 * **defaultValue**: any: Any object
-* **type**: 'Array' | 'Bool' | 'String' (Required): Variable type.
+* **type**: 'Array' | 'Bool' | 'String' | string (Required): Variable type.
 
 ## PrivateLinkConnectionApprovalRequest
 ### Properties
@@ -5599,7 +5599,7 @@
 ### Base Properties
 * **annotations**: any[]: List of tags that can be used for describing the trigger.
 * **description**: string: Trigger description.
-* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' (ReadOnly): Enumerates possible state of Triggers.
+* **runtimeState**: 'Disabled' | 'Started' | 'Stopped' | string (ReadOnly): Enumerates possible state of Triggers.
 ### BlobEventsTrigger
 #### Properties
 * **type**: 'BlobEventsTrigger' (Required): Trigger type.
@@ -5642,7 +5642,7 @@
 ### Properties
 * **blobPathBeginsWith**: string: The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
 * **blobPathEndsWith**: string: The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-* **events**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted'[] (Required): Blob event types.
+* **events**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string[] (Required): Blob event types.
 * **ignoreEmptyBlobs**: bool: If set to true, blobs with zero bytes will be ignored.
 * **scope**: string (Required): The ARM resource ID of the Storage Account.
 
@@ -5688,7 +5688,7 @@
 ## ScheduleTriggerRecurrence
 ### Properties
 * **endTime**: string: The end time.
-* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Week' | 'Year': Enumerates possible frequency option for the schedule trigger.
+* **frequency**: 'Day' | 'Hour' | 'Minute' | 'Month' | 'NotSpecified' | 'Week' | 'Year' | string: Enumerates possible frequency option for the schedule trigger.
 * **interval**: int: The interval.
 * **schedule**: [RecurrenceSchedule](#recurrenceschedule): The recurrence schedule.
 * **startTime**: string: The start time.
@@ -5718,7 +5718,7 @@
 * **delay**: any: Any object
 * **dependsOn**: [DependencyReference](#dependencyreference)[]: Triggers that this trigger depends on. Only tumbling window triggers are supported.
 * **endTime**: string: The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
-* **frequency**: 'Hour' | 'Minute' | 'Month' (Required): Enumerates possible frequency option for the tumbling window trigger.
+* **frequency**: 'Hour' | 'Minute' | 'Month' | string (Required): Enumerates possible frequency option for the tumbling window trigger.
 * **interval**: int (Required): The interval of the time windows. The minimum interval allowed is 15 Minutes.
 * **maxConcurrency**: int (Required): The max number of parallel time windows (ready for execution) for which a new run is triggered.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Execution policy for an activity.

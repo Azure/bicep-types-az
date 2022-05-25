@@ -55,7 +55,7 @@
 Only be used in response.
 * **tenantId**: string (ReadOnly): Get the tenant id for the system assigned identity.
 Only be used in response
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned': Represents the identity type: systemAssigned, userAssigned, None
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string: Represents the identity type: systemAssigned, userAssigned, None
 * **userAssignedIdentities**: [ManagedIdentityUserAssignedIdentities](#managedidentityuserassignedidentities): Get or set the user assigned identities
 
 ## ManagedIdentityUserAssignedIdentities
@@ -82,7 +82,7 @@ When set as true, connection with AccessKey=xxx won't work.
 * **liveTraceConfiguration**: [LiveTraceConfiguration](#livetraceconfiguration): Live trace configuration of a Microsoft.SignalRService resource.
 * **networkACLs**: [WebPubSubNetworkACLs](#webpubsubnetworkacls): Network ACLs for the resource
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the resource.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicNetworkAccess**: string: Enable or disable public network access. Default to "Enabled".
 When it's Enabled, network ACLs still apply.
 When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
@@ -113,20 +113,20 @@ Case insensitive.
 
 ## WebPubSubNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Azure Networking ACL Action.
+* **defaultAction**: 'Allow' | 'Deny' | string: Azure Networking ACL Action.
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
 ## PrivateEndpointACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 * **name**: string (Required): Name of the private endpoint connection
 
 ## NetworkACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -141,7 +141,7 @@ Case insensitive.
 * **groupIds**: string[] (ReadOnly): Group IDs
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -151,16 +151,16 @@ Case insensitive.
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ResourceLogConfiguration
 ### Properties
@@ -187,9 +187,9 @@ Case insensitive.
 ### Properties
 * **groupId**: string (Required): The group id from the provider of resource the shared private link resource is for
 * **privateLinkResourceId**: string (Required): The resource id of the resource the shared private link resource is for
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **requestMessage**: string: The request message for requesting approval of the shared private link resource
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' (ReadOnly): Status of the shared private link resource
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): Status of the shared private link resource
 
 ## WebPubSubTlsSettings
 ### Properties
@@ -207,7 +207,7 @@ If present, following values are allowed:
 
 Allowed values: Standard_S1, Free_F1
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.
 
@@ -236,7 +236,7 @@ There are 3 kind of patterns supported:
 ## UpstreamAuthSettings
 ### Properties
 * **managedIdentity**: [ManagedIdentitySettings](#managedidentitysettings): Managed identity settings for upstream.
-* **type**: 'ManagedIdentity' | 'None': Upstream auth type enum.
+* **type**: 'ManagedIdentity' | 'None' | string: Upstream auth type enum.
 
 ## ManagedIdentitySettings
 ### Properties

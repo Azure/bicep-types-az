@@ -26,10 +26,10 @@
 * **additionalCapabilities**: string[]: List of additional capabilities for a Disk pool.
 * **availabilityZones**: string[] (Required): Logical zone for Disk pool resource; example: ["1"].
 * **disks**: [Disk](#disk)[]: List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI target.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly): Operational status of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
 * **subnetId**: string (Required): Azure Resource ID of a Subnet for the Disk pool.
-* **tier**: 'Basic' | 'Premium' | 'Standard' (Required): SKU of the VM host part of the Disk pool deployment
+* **tier**: 'Basic' | 'Premium' | 'Standard' | string (Required): SKU of the VM host part of the Disk pool deployment
 
 ## Disk
 ### Properties
@@ -51,8 +51,8 @@
 
 ## IscsiTargetCreateProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI target.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' (ReadOnly): Operational status of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string (ReadOnly): Operational status of the resource.
 * **targetIqn**: string: iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
 * **tpgs**: [TargetPortalGroupCreate](#targetportalgroupcreate)[] (Required): List of iSCSI target portal groups. Can have 1 portal group at most.
 

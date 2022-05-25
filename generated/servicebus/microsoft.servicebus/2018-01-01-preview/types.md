@@ -45,7 +45,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: '$default' (Required, DeployTimeConstant): The resource name
+* **name**: '$default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrationConfigPropertiesProperties](#migrationconfigpropertiesproperties): Properties required to the Create Migration Configuration
 * **type**: 'Microsoft.ServiceBus/namespaces/migrationConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -202,7 +202,7 @@
 
 ## IpFilterRuleProperties
 ### Properties
-* **action**: 'Accept' | 'Reject': The IP Filter Action
+* **action**: 'Accept' | 'Reject' | string: The IP Filter Action
 * **filterName**: string: IP Filter name
 * **ipMask**: string: IP Mask
 
@@ -216,13 +216,13 @@
 
 ## NetworkRuleSetProperties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow' | string: The IP Filter Action
 * **ipMask**: string: IP Mask
 
 ## NWRuleSetVirtualNetworkRules
@@ -238,7 +238,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -247,7 +247,7 @@
 ## ConnectionState
 ### Properties
 * **description**: string: Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Status of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
 
 ## SBQueueProperties
 ### Properties

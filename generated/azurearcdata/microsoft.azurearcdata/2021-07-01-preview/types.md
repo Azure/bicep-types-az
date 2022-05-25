@@ -56,7 +56,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'CustomLocation': The type of extendedLocation.
+* **type**: 'CustomLocation' | string: The type of extendedLocation.
 
 ## DataControllerProperties
 ### Properties
@@ -103,10 +103,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC)
 * **createdBy**: string: An identifier for the identity that created the resource
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: An identifier for the identity that last modified the resource
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that creates/modifies resources
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that creates/modifies resources
 
 ## TrackedResourceTags
 ### Properties
@@ -153,7 +153,7 @@
 * **capacity**: int
 * **dev**: bool: Whether dev/test is enabled. When the dev field is set to true, the resource is used for dev/test purpose.
 * **family**: string
-* **name**: 'vCore' (Required): The name of the SKU.
+* **name**: 'vCore' | string (Required): The name of the SKU.
 * **size**: string: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
 * **tier**: 'BusinessCritical' | 'GeneralPurpose': The tier for this managed instance.
 

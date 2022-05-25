@@ -29,7 +29,7 @@
 * **errorInfo**: [ErrorDefinition](#errordefinition) (ReadOnly): Error definition.
 * **extensionType**: string: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
 * **identity**: [ConfigurationIdentity](#configurationidentity): Identity for the managed cluster.
-* **installState**: 'Failed' | 'Installed' | 'Pending' (ReadOnly): Status of installation of this instance of the extension.
+* **installState**: 'Failed' | 'Installed' | 'Pending' | string (ReadOnly): Status of installation of this instance of the extension.
 * **lastModifiedTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
 * **lastStatusTime**: string (ReadOnly): DateLiteral (per ISO8601) noting the time of last status from the agent.
 * **releaseTrain**: string: ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
@@ -75,7 +75,7 @@
 ### Properties
 * **code**: string: Status code provided by the Extension
 * **displayStatus**: string: Short description of status of this instance of the extension.
-* **level**: 'Error' | 'Information' | 'Warning': Level of the status.
+* **level**: 'Error' | 'Information' | 'Warning' | string: Level of the status.
 * **message**: string: Detailed message of the status from the Extension instance.
 * **time**: string: DateLiteral (per ISO8601) noting the time of installation status.
 
@@ -97,19 +97,19 @@
 * **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
 * **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
 * **operatorParams**: string: Any Parameters for the Operator instance in string format.
-* **operatorScope**: 'cluster' | 'namespace': Scope at which the operator will be installed.
-* **operatorType**: 'Flux': Type of the operator
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
+* **operatorScope**: 'cluster' | 'namespace' | string: Scope at which the operator will be installed.
+* **operatorType**: 'Flux' | string: Type of the operator
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.
 * **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
 
 ## ComplianceStatus
 ### Properties
-* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' (ReadOnly): The compliance state of the configuration.
+* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
 * **lastConfigApplied**: string: Datetime the configuration was last applied.
 * **message**: string: Message from when the configuration was applied.
-* **messageLevel**: 'Error' | 'Information' | 'Warning': Level of the message.
+* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
 
 ## ConfigurationProtectedSettings
 ### Properties

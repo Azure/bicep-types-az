@@ -14,7 +14,7 @@
 * **createdDate**: string (ReadOnly): Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
 * **description**: string: Description of a cost allocation rule.
 * **details**: [CostAllocationRuleDetails](#costallocationruledetails) (Required): Resource details of the cost allocation rule
-* **status**: 'Active' | 'NotActive' | 'Processing' (Required): Current status of the rule.
+* **status**: 'Active' | 'NotActive' | 'Processing' | string (Required): Current status of the rule.
 * **updatedDate**: string (ReadOnly): Time at which the rule was last updated.
 
 ## CostAllocationRuleDetails
@@ -25,14 +25,14 @@
 ## SourceCostAllocationResource
 ### Properties
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-* **resourceType**: 'Dimension' | 'Tag' (Required): Category of resource to use for allocation.
+* **resourceType**: 'Dimension' | 'Tag' | string (Required): Category of resource to use for allocation.
 * **values**: string[] (Required): Source Resources for cost allocation. This list cannot contain more than 25 values.
 
 ## TargetCostAllocationResource
 ### Properties
 * **name**: string (Required): If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-* **policyType**: 'FixedProportion' (Required): Method to use for allocating cost. FixedProportion indicates that cost will be split based on specified percentage values.
-* **resourceType**: 'Dimension' | 'Tag' (Required): Category of resource to use for allocation.
+* **policyType**: 'FixedProportion' | string (Required): Method to use for allocating cost. FixedProportion indicates that cost will be split based on specified percentage values.
+* **resourceType**: 'Dimension' | 'Tag' | string (Required): Category of resource to use for allocation.
 * **values**: [CostAllocationProportion](#costallocationproportion)[] (Required): Target resources for cost allocation. This list cannot contain more than 25 values.
 
 ## CostAllocationProportion

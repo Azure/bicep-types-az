@@ -36,7 +36,7 @@
 * **description**: string (ReadOnly): The description of the custom alert.
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
-* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
+* **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
 ### ConnectionFromIpNotAllowed
 #### Properties
 * **ruleType**: 'ConnectionFromIpNotAllowed' (Required): The type of the custom alert rule.
@@ -61,7 +61,7 @@
 * **displayName**: string (ReadOnly): The display name of the custom alert.
 * **isEnabled**: bool (Required): Status of the custom alert.
 * **ruleType**: string (Required): The type of the custom alert rule.
-* **valueType**: 'IpCidr' | 'String' (ReadOnly): The value type of the items in the list.
+* **valueType**: 'IpCidr' | 'String' | string (ReadOnly): The value type of the items in the list.
 
 ## ThresholdCustomAlertRule
 * **Discriminator**: ruleType
@@ -216,27 +216,27 @@
 ### Properties
 * **additionalWorkspaces**: [AdditionalWorkspacesProperties](#additionalworkspacesproperties)[]: List of additional workspaces
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData'[]: Disabled data sources. Disabling these data sources compromises the system.
+* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
 * **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents'[]: List of additional options for exporting to workspace data.
+* **export**: 'RawEvents' | string[]: List of additional options for exporting to workspace data.
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of the configuration status for each recommendation type.
-* **status**: 'Disabled' | 'Enabled': Status of the IoT Security solution.
-* **unmaskedIpLoggingStatus**: 'Disabled' | 'Enabled': Unmasked IP address logging status
+* **status**: 'Disabled' | 'Enabled' | string: Status of the IoT Security solution.
+* **unmaskedIpLoggingStatus**: 'Disabled' | 'Enabled' | string: Unmasked IP address logging status
 * **userDefinedResources**: [UserDefinedResourcesProperties](#userdefinedresourcesproperties): Properties of the IoT Security solution's user defined resources.
 * **workspace**: string: Workspace resource ID
 
 ## AdditionalWorkspacesProperties
 ### Properties
-* **dataTypes**: 'Alerts' | 'RawEvents'[]: List of data types sent to workspace
-* **type**: 'Sentinel': Workspace type.
+* **dataTypes**: 'Alerts' | 'RawEvents' | string[]: List of data types sent to workspace
+* **type**: 'Sentinel' | string: Workspace type.
 * **workspace**: string: Workspace resource id
 
 ## RecommendationConfigurationProperties
 ### Properties
 * **name**: string (ReadOnly)
-* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' (Required): The type of IoT Security recommendation.
-* **status**: 'Disabled' | 'Enabled' (Required): Recommendation status. When the recommendation status is disabled recommendations are not generated.
+* **recommendationType**: 'IoT_ACRAuthentication' | 'IoT_AgentSendsUnutilizedMessages' | 'IoT_Baseline' | 'IoT_EdgeHubMemOptimize' | 'IoT_EdgeLoggingOptions' | 'IoT_IPFilter_DenyAll' | 'IoT_IPFilter_PermissiveRule' | 'IoT_InconsistentModuleSettings' | 'IoT_InstallAgent' | 'IoT_OpenPorts' | 'IoT_PermissiveFirewallPolicy' | 'IoT_PermissiveInputFirewallRules' | 'IoT_PermissiveOutputFirewallRules' | 'IoT_PrivilegedDockerOptions' | 'IoT_SharedCredentials' | 'IoT_VulnerableTLSCipherSuite' | string (Required): The type of IoT Security recommendation.
+* **status**: 'Disabled' | 'Enabled' | string (Required): Recommendation status. When the recommendation status is disabled recommendations are not generated.
 
 ## UserDefinedResourcesProperties
 ### Properties
@@ -247,10 +247,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TagsResourceTags
 ### Properties

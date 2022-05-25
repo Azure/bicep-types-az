@@ -40,14 +40,14 @@
 ## AccessModeSettings
 ### Properties
 * **exclusions**: [AccessModeSettingsExclusion](#accessmodesettingsexclusion)[]: List of exclusions that override the default access mode settings for specific private endpoint connections.
-* **ingestionAccessMode**: 'Open' | 'PrivateOnly' (Required): Access mode types.
-* **queryAccessMode**: 'Open' | 'PrivateOnly' (Required): Access mode types.
+* **ingestionAccessMode**: 'Open' | 'PrivateOnly' | string (Required): Access mode types.
+* **queryAccessMode**: 'Open' | 'PrivateOnly' | string (Required): Access mode types.
 
 ## AccessModeSettingsExclusion
 ### Properties
-* **ingestionAccessMode**: 'Open' | 'PrivateOnly': Access mode types.
+* **ingestionAccessMode**: 'Open' | 'PrivateOnly' | string: Access mode types.
 * **privateEndpointConnectionName**: string: The private endpoint connection name associated to the private endpoint on which we want to apply the specific access mode settings.
-* **queryAccessMode**: 'Open' | 'PrivateOnly': Access mode types.
+* **queryAccessMode**: 'Open' | 'PrivateOnly' | string: Access mode types.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -60,7 +60,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -70,16 +70,16 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

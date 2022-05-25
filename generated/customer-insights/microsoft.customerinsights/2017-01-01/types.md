@@ -141,7 +141,7 @@
 * **connectorId**: int (ReadOnly): ID of the connector.
 * **connectorName**: string: Name of the connector.
 * **connectorProperties**: [ConnectorProperties](#connectorproperties) (Required): The connector properties.
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' (Required): Type of connector.
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' | string (Required): Type of connector.
 * **created**: string (ReadOnly): The created time.
 * **description**: string: Description of the connector.
 * **displayName**: string: Display name of the connector.
@@ -159,7 +159,7 @@
 ### Properties
 * **connectorMappingName**: string (ReadOnly): The connector mapping name
 * **connectorName**: string (ReadOnly): The connector name.
-* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce': Type of connector.
+* **connectorType**: 'AzureBlob' | 'CRM' | 'ExchangeOnline' | 'None' | 'Outbound' | 'Salesforce' | string: Type of connector.
 * **created**: string (ReadOnly): The created time.
 * **dataFormatId**: string (ReadOnly): The DataFormat ID.
 * **description**: string: The description of the connector mapping.
@@ -234,7 +234,7 @@
 * **mediumImage**: string: Medium Image associated with the Property or EntityType.
 * **participantProfiles**: [Participant](#participant)[]: Profiles that participated in the interaction.
 * **primaryParticipantProfilePropertyName**: string: The primary participant property name for an interaction ,This is used to logically represent the agent of the interaction, Specify the participant name here from ParticipantName.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
 * **smallImage**: string: Small Image associated with the Property or EntityType.
 * **tenantId**: string (ReadOnly): The hub name.
@@ -254,10 +254,10 @@
 ## DataSource
 ### Properties
 * **dataSourceReferenceId**: string (ReadOnly): The data source reference id.
-* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' (ReadOnly): The data source type.
+* **dataSourceType**: 'Connector' | 'LinkInteraction' | 'SystemDefault' | string (ReadOnly): The data source type.
 * **id**: int (ReadOnly): The data source ID.
 * **name**: string (ReadOnly): The data source name
-* **status**: 'Active' | 'Deleted' | 'None' (ReadOnly): The data source status.
+* **status**: 'Active' | 'Deleted' | 'None' | string (ReadOnly): The data source status.
 
 ## MetadataDefinitionBaseDescription
 ### Properties
@@ -349,7 +349,7 @@
 * **groupByMetadata**: [KpiGroupByMetadata](#kpigroupbymetadata)[] (ReadOnly): The KPI GroupByMetadata.
 * **kpiName**: string (ReadOnly): The KPI name.
 * **participantProfilesMetadata**: [KpiParticipantProfilesMetadata](#kpiparticipantprofilesmetadata)[] (ReadOnly): The participant profiles.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **tenantId**: string (ReadOnly): The hub name.
 * **thresHolds**: [KpiThresholds](#kpithresholds): Defines the KPI Threshold limits.
 * **unit**: string: The unit of measurement for the KPI.
@@ -403,7 +403,7 @@
 * **mappings**: [TypePropertiesMapping](#typepropertiesmapping)[]: The set of properties mappings between the source and target Types.
 * **operationType**: 'Delete' | 'Upsert': Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
 * **participantPropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The properties that represent the participating profile.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **referenceOnly**: bool: Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
 * **sourceInteractionType**: string (Required): Name of the source Interaction Type.
 * **targetProfileType**: string (Required): Name of the target Profile Type.
@@ -439,7 +439,7 @@
 * **lastChangedUtc**: string (ReadOnly): The last changed time for the type definition.
 * **localizedAttributes**: [MetadataDefinitionBaseLocalizedAttributes](#metadatadefinitionbaselocalizedattributes): Any custom localized attributes for the Type.
 * **mediumImage**: string: Medium Image associated with the Property or EntityType.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **schemaItemTypeLink**: string: The schema org link. This helps ACI identify and suggest semantic models.
 * **smallImage**: string: Small Image associated with the Property or EntityType.
 * **strongIds**: [StrongId](#strongid)[]: The strong IDs.
@@ -497,7 +497,7 @@
 * **linkName**: string (ReadOnly): The name of the Relationship Link.
 * **mappings**: [RelationshipLinkFieldMapping](#relationshiplinkfieldmapping)[]: The mappings between Interaction and Relationship fields.
 * **profilePropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references for the Profile of the Relationship.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **relatedProfilePropertyReferences**: [ParticipantPropertyReference](#participantpropertyreference)[] (Required): The property references for the Related Profile of the Relationship.
 * **relationshipGuidId**: string (ReadOnly): The relationship guid id.
 * **relationshipName**: string (Required): The Relationship associated with the Link.
@@ -528,7 +528,7 @@
 * **fields**: [PropertyDefinition](#propertydefinition)[]: The properties of the Relationship.
 * **lookupMappings**: [RelationshipTypeMapping](#relationshiptypemapping)[]: Optional property to be used to map fields in profile to their strong ids in related profile.
 * **profileType**: string (Required): Profile type.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **relatedProfileType**: string (Required): Related profile being referenced.
 * **relationshipGuidId**: string (ReadOnly): The relationship guid id.
 * **relationshipName**: string (ReadOnly): The Relationship name.
@@ -565,7 +565,7 @@
 * **links**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **principals**: [AssignmentPrincipal](#assignmentprincipal)[] (Required): The principals being assigned to.
 * **profiles**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
-* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Deleting' | 'Expiring' | 'Failed' | 'HumanIntervention' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **relationshipLinks**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **relationships**: [ResourceSetDescription](#resourcesetdescription): The resource set description.
 * **role**: 'Admin' | 'DataAdmin' | 'DataReader' | 'ManageAdmin' | 'ManageReader' | 'Reader' (Required): Type of roles.

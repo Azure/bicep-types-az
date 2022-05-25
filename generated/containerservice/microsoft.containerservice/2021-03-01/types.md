@@ -65,7 +65,7 @@
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.
-* **type**: 'EdgeZone': The type of extendedLocation.
+* **type**: 'EdgeZone' | string: The type of extendedLocation.
 
 ## ManagedClusterIdentity
 ### Properties
@@ -155,14 +155,14 @@
 * **enableEncryptionAtHost**: bool: Whether to enable EncryptionAtHost
 * **enableFIPS**: bool: Whether to use FIPS enabled OS
 * **enableNodePublicIP**: bool: Enable public IP for nodes
-* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g': GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): Kubelet configurations of agent nodes.
-* **kubeletDiskType**: 'OS' | 'Temporary': KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
+* **kubeletDiskType**: 'OS' | 'Temporary' | string: KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
 * **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): OS configurations of Linux agent nodes.
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
-* **mode**: 'System' | 'User': AgentPoolMode represents mode of an agent pool.
+* **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool.
 * **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
 * **nodeImageVersion**: string (ReadOnly): Version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
@@ -170,18 +170,18 @@
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': OSDiskType represents the type of an OS disk on an agent pool.
-* **osSKU**: 'CBLMariner' | 'Ubuntu': OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
-* **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+* **osDiskType**: 'Ephemeral' | 'Managed' | string: OSDiskType represents the type of an OS disk on an agent pool.
+* **osSKU**: 'CBLMariner' | 'Ubuntu' | string: OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+* **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
-* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete': ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
-* **scaleSetPriority**: 'Regular' | 'Spot': ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+* **scaleSetPriority**: 'Regular' | 'Spot' | string: ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
 * **spotMaxPrice**: int: SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): Agent pool tags to be persisted on the agent pool virtual machine scale set.
-* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets': AgentPoolType represents types of an agent pool.
+* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool.
 * **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
 * **vmSize**: string: Size of agent VMs.
 * **vnetSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
@@ -245,7 +245,7 @@
 
 ## PowerState
 ### Properties
-* **code**: 'Running' | 'Stopped': Tells whether the cluster is Running or Stopped
+* **code**: 'Running' | 'Stopped' | string: Tells whether the cluster is Running or Stopped
 
 ## ManagedClusterAgentPoolProfilePropertiesTags
 ### Properties
@@ -265,7 +265,7 @@
 ## ManagedClusterPropertiesAutoScalerProfile
 ### Properties
 * **balance-similar-node-groups**: string
-* **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random'
+* **expander**: 'least-waste' | 'most-pods' | 'priority' | 'random' | string
 * **max-empty-bulk-delete**: string
 * **max-graceful-termination-sec**: string
 * **max-node-provision-time**: string
@@ -284,7 +284,7 @@
 
 ## ManagedClusterAutoUpgradeProfile
 ### Properties
-* **upgradeChannel**: 'node-image' | 'none' | 'patch' | 'rapid' | 'stable': upgrade channel for auto upgrade.
+* **upgradeChannel**: 'node-image' | 'none' | 'patch' | 'rapid' | 'stable' | string: upgrade channel for auto upgrade.
 
 ## ManagedClusterHttpProxyConfig
 ### Properties
@@ -322,11 +322,11 @@
 * **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
 * **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
 * **loadBalancerProfile**: [ManagedClusterLoadBalancerProfile](#managedclusterloadbalancerprofile): Profile of the managed cluster load balancer.
-* **loadBalancerSku**: 'basic' | 'standard': The load balancer sku for the managed cluster.
-* **networkMode**: 'bridge' | 'transparent': Network mode used for building Kubernetes network.
-* **networkPlugin**: 'azure' | 'kubenet': Network plugin used for building Kubernetes network.
-* **networkPolicy**: 'azure' | 'calico': Network policy used for building Kubernetes network.
-* **outboundType**: 'loadBalancer' | 'userDefinedRouting': The outbound (egress) routing method.
+* **loadBalancerSku**: 'basic' | 'standard' | string: The load balancer sku for the managed cluster.
+* **networkMode**: 'bridge' | 'transparent' | string: Network mode used for building Kubernetes network.
+* **networkPlugin**: 'azure' | 'kubenet' | string: Network plugin used for building Kubernetes network.
+* **networkPolicy**: 'azure' | 'calico' | string: Network policy used for building Kubernetes network.
+* **outboundType**: 'loadBalancer' | 'userDefinedRouting' | string: The outbound (egress) routing method.
 * **podCidr**: string: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
 * **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
 
@@ -369,7 +369,7 @@
 * **name**: string (Required): Name of the pod identity.
 * **namespace**: string (Required): Namespace of the pod identity.
 * **provisioningInfo**: [ManagedClusterPodIdentityProvisioningInfo](#managedclusterpodidentityprovisioninginfo) (ReadOnly)
-* **provisioningState**: 'Assigned' | 'Deleting' | 'Failed' | 'Updating' (ReadOnly): The current provisioning state of the pod identity.
+* **provisioningState**: 'Assigned' | 'Deleting' | 'Failed' | 'Updating' | string (ReadOnly): The current provisioning state of the pod identity.
 
 ## UserAssignedIdentity
 ### Properties
@@ -422,12 +422,12 @@
 * **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
 * **adminUsername**: string (Required): Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
 * **enableCSIProxy**: bool: Whether to enable CSI proxy.
-* **licenseType**: 'None' | 'Windows_Server': The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.
+* **licenseType**: 'None' | 'Windows_Server' | string: The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.
 
 ## ManagedClusterSKU
 ### Properties
-* **name**: 'Basic': Name of a managed cluster SKU.
-* **tier**: 'Free' | 'Paid': Tier of a managed cluster SKU.
+* **name**: 'Basic' | string: Name of a managed cluster SKU.
+* **tier**: 'Free' | 'Paid' | string: Tier of a managed cluster SKU.
 
 ## ResourceTags
 ### Properties
@@ -442,32 +442,32 @@
 * **enableEncryptionAtHost**: bool: Whether to enable EncryptionAtHost
 * **enableFIPS**: bool: Whether to use FIPS enabled OS
 * **enableNodePublicIP**: bool: Enable public IP for nodes
-* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g': GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+* **gpuInstanceProfile**: 'MIG1g' | 'MIG2g' | 'MIG3g' | 'MIG4g' | 'MIG7g' | string: GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
 * **kubeletConfig**: [KubeletConfig](#kubeletconfig): Kubelet configurations of agent nodes.
-* **kubeletDiskType**: 'OS' | 'Temporary': KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
+* **kubeletDiskType**: 'OS' | 'Temporary' | string: KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Allowed values: 'OS', 'Temporary' (preview).
 * **linuxOSConfig**: [LinuxOSConfig](#linuxosconfig): OS configurations of Linux agent nodes.
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
-* **mode**: 'System' | 'User': AgentPoolMode represents mode of an agent pool.
+* **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool.
 * **nodeImageVersion**: string (ReadOnly): Version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
 * **nodePublicIPPrefixID**: string: Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
 * **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-* **osDiskType**: 'Ephemeral' | 'Managed': OSDiskType represents the type of an OS disk on an agent pool.
-* **osSKU**: 'CBLMariner' | 'Ubuntu': OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
-* **osType**: 'Linux' | 'Windows': OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+* **osDiskType**: 'Ephemeral' | 'Managed' | string: OSDiskType represents the type of an OS disk on an agent pool.
+* **osSKU**: 'CBLMariner' | 'Ubuntu' | string: OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+* **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **podSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
 * **powerState**: [PowerState](#powerstate) (ReadOnly): Describes the Power State of the cluster
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
-* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete': ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
-* **scaleSetPriority**: 'Regular' | 'Spot': ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+* **scaleSetEvictionPolicy**: 'Deallocate' | 'Delete' | string: ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+* **scaleSetPriority**: 'Regular' | 'Spot' | string: ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
 * **spotMaxPrice**: int: SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
 * **tags**: [ManagedClusterAgentPoolProfilePropertiesTags](#managedclusteragentpoolprofilepropertiestags): Agent pool tags to be persisted on the agent pool virtual machine scale set.
-* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets': AgentPoolType represents types of an agent pool.
+* **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool.
 * **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): Settings for upgrading an agentpool
 * **vmSize**: string: Size of agent VMs.
 * **vnetSubnetID**: string: specifies a subnet's resource id with subscription, resource group, vnet and subnet name
@@ -494,23 +494,23 @@
 
 ## TimeInWeek
 ### Properties
-* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The weekday enum.
+* **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: The weekday enum.
 * **hourSlots**: int[]: hour slots in a day.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint which a connection belongs to.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): The state of a private link service connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -519,7 +519,7 @@
 ## PrivateLinkServiceConnectionState
 ### Properties
 * **description**: string: The private link service connection description.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private link service connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private link service connection status.
 
 ## CredentialResults
 ### Properties

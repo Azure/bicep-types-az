@@ -40,19 +40,19 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration
 * **installPatches**: [InputPatchConfiguration](#inputpatchconfiguration): Input configuration for a patch run
-* **maintenanceScope**: 'Extension' | 'Host' | 'InGuestPatch' | 'OSImage' | 'SQLDB' | 'SQLManagedInstance': Gets or sets maintenanceScope of the configuration
+* **maintenanceScope**: 'Extension' | 'Host' | 'InGuestPatch' | 'OSImage' | 'SQLDB' | 'SQLManagedInstance' | string: Gets or sets maintenanceScope of the configuration
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Definition of a MaintenanceWindow
 * **namespace**: string: Gets or sets namespace of the resource
-* **visibility**: 'Custom' | 'Public': Gets or sets the visibility of the configuration. The default value is 'Custom'
+* **visibility**: 'Custom' | 'Public' | string: Gets or sets the visibility of the configuration. The default value is 'Custom'
 
 ## MaintenanceConfigurationPropertiesExtensionProperties
 ### Properties
@@ -62,7 +62,7 @@
 ## InputPatchConfiguration
 ### Properties
 * **linuxParameters**: [InputLinuxParameters](#inputlinuxparameters): Input properties for patching a Linux machine.
-* **rebootSetting**: 'Always' | 'IfRequired' | 'Never': Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed.
+* **rebootSetting**: 'Always' | 'IfRequired' | 'Never' | string: Possible reboot preference as defined by the user based on which it would be decided to reboot the machine or not after the patch operation is completed.
 * **tasks**: [SoftwareUpdateConfigurationTasks](#softwareupdateconfigurationtasks): Task properties of the software update configuration.
 * **windowsParameters**: [InputWindowsParameters](#inputwindowsparameters): Input properties for patching a Windows machine.
 
@@ -81,7 +81,7 @@
 ### Properties
 * **parameters**: [TaskPropertiesParameters](#taskpropertiesparameters): Gets or sets the parameters of the task.
 * **source**: string: Gets or sets the name of the runbook.
-* **taskScope**: 'Global' | 'Resource': Global Task execute once when schedule trigger. Resource task execute for each VM.
+* **taskScope**: 'Global' | 'Resource' | string: Global Task execute once when schedule trigger. Resource task execute for each VM.
 
 ## TaskPropertiesParameters
 ### Properties

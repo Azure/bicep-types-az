@@ -79,7 +79,7 @@
 * **parameter**: string (Required): Authentication Parameter value.
 * **password**: string: Password to connect to the WebProxy Server
 * **properties**: [BackendProperties](#backendproperties): Properties specific to a Backend.
-* **protocol**: 'http' | 'soap' (Required): Backend communication protocol.
+* **protocol**: 'http' | 'soap' | string (Required): Backend communication protocol.
 * **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery): Query Parameter description.
 * **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
 * **scheme**: string (Required): Authentication Scheme name.
@@ -128,7 +128,7 @@
 * **clientId**: string (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
 * **clientSecret**: string (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' (Required, DeployTimeConstant): The resource name
+* **name**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/loggers@2016-10-10

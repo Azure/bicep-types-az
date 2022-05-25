@@ -37,7 +37,7 @@
 ## MaintenanceConfigurationProperties
 ### Properties
 * **extensionProperties**: [MaintenanceConfigurationPropertiesExtensionProperties](#maintenanceconfigurationpropertiesextensionproperties): Gets or sets extensionProperties of the maintenanceConfiguration
-* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource': Gets or sets maintenanceScope of the configuration
+* **maintenanceScope**: 'All' | 'Host' | 'InResource' | 'Resource' | string: Gets or sets maintenanceScope of the configuration
 * **namespace**: string: Gets or sets namespace of the resource
 
 ## MaintenanceConfigurationPropertiesExtensionProperties

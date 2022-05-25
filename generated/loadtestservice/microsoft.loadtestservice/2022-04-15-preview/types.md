@@ -17,7 +17,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## UserAssignedIdentities
@@ -35,7 +35,7 @@
 * **dataPlaneURI**: string (ReadOnly): Resource data plane URI.
 * **description**: string: Description of the resource.
 * **encryption**: [EncryptionProperties](#encryptionproperties): Key and identity details for Customer Managed Key encryption of load test resource
-* **provisioningState**: 'Canceled' | 'Deleted' | 'Failed' | 'Succeeded' (ReadOnly): Load Test resources provisioning states.
+* **provisioningState**: 'Canceled' | 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Load Test resources provisioning states.
 
 ## EncryptionProperties
 ### Properties
@@ -45,16 +45,16 @@
 ## EncryptionPropertiesIdentity
 ### Properties
 * **resourceId**: string: user assigned identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId
-* **type**: 'SystemAssigned' | 'UserAssigned': Managed identity type to use for accessing encryption key Url
+* **type**: 'SystemAssigned' | 'UserAssigned' | string: Managed identity type to use for accessing encryption key Url
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

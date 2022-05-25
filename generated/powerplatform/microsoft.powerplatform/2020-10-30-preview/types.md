@@ -18,7 +18,7 @@
 * **apiVersion**: '2020-10-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [EnterprisePolicyIdentity](#enterprisepolicyidentity): The identity of the EnterprisePolicy.
-* **kind**: 'Encryption' | 'Lockbox' | 'NetworkInjection' | 'PrivateEndpoint' (Required): The Kind (type) of Enterprise Policy
+* **kind**: 'Encryption' | 'Lockbox' | 'NetworkInjection' | 'PrivateEndpoint' | string (Required): The Kind (type) of Enterprise Policy
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [Properties](#properties): The properties that define configuration for the enterprise policy.
@@ -44,10 +44,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -69,7 +69,7 @@
 ## PropertiesEncryption
 ### Properties
 * **keyVault**: [KeyVaultProperties](#keyvaultproperties): Settings concerning key vault encryption for a configuration store.
-* **state**: 'Disabled' | 'Enabled' | 'NotConfigured': The state of onboarding, which only appears in the response.
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured' | string: The state of onboarding, which only appears in the response.
 
 ## KeyVaultProperties
 ### Properties
@@ -83,7 +83,7 @@
 
 ## PropertiesLockbox
 ### Properties
-* **state**: 'Disabled' | 'Enabled' | 'NotConfigured': The state of onboarding, which only appears in the response.
+* **state**: 'Disabled' | 'Enabled' | 'NotConfigured' | string: The state of onboarding, which only appears in the response.
 
 ## PropertiesNetworkInjection
 ### Properties
@@ -112,7 +112,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -122,5 +122,5 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 

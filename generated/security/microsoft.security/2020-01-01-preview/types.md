@@ -18,8 +18,8 @@
 * **Discriminator**: authenticationType
 
 ### Base Properties
-* **authenticationProvisioningState**: 'Expired' | 'IncorrectPolicy' | 'Invalid' | 'Valid' (ReadOnly): State of the multi-cloud connector
-* **grantedPermissions**: 'AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::AmazonSSMAutomationRole' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer'[] (ReadOnly): The permissions detected in the cloud account.
+* **authenticationProvisioningState**: 'Expired' | 'IncorrectPolicy' | 'Invalid' | 'Valid' | string (ReadOnly): State of the multi-cloud connector
+* **grantedPermissions**: 'AWS::AWSSecurityHubReadOnlyAccess' | 'AWS::AmazonSSMAutomationRole' | 'AWS::SecurityAudit' | 'GCP::Security Center Admin Viewer' | string[] (ReadOnly): The permissions detected in the cloud account.
 ### AwAssumeRoleAuthenticationDetailsProperties
 #### Properties
 * **accountId**: string (ReadOnly): The ID of the cloud account
@@ -52,8 +52,8 @@
 
 ## HybridComputeSettingsProperties
 ### Properties
-* **autoProvision**: 'Off' | 'On' (Required): Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
-* **hybridComputeProvisioningState**: 'Expired' | 'Invalid' | 'Valid' (ReadOnly): State of the service principal and its secret
+* **autoProvision**: 'Off' | 'On' | string (Required): Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+* **hybridComputeProvisioningState**: 'Expired' | 'Invalid' | 'Valid' | string (ReadOnly): State of the service principal and its secret
 * **proxyServer**: [ProxyServerProperties](#proxyserverproperties): For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
 * **region**: string: The location where the metadata of machines will be stored
 * **resourceGroupName**: string: The name of the resource group where Arc (Hybrid Compute) connectors are connected.

@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [BotProperties](#botproperties): The parameters to provide for the Bot.
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
 * **name**: 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'MsTeamsChannel' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'WebChatChannel' (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): Channel definition
@@ -34,7 +34,7 @@
 * **apiVersion**: '2020-06-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk': Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string: Indicates the type of bot service
 * **location**: string: Specifies the location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): Properties for a Connection Setting Item
@@ -72,8 +72,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'F0' | 'S1' (Required): The name of SKU.
-* **tier**: 'Free' | 'Standard' (ReadOnly): Gets the sku tier. This is based on the SKU name.
+* **name**: 'F0' | 'S1' | string (Required): The name of SKU.
+* **tier**: 'Free' | 'Standard' | string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## ResourceTags
 ### Properties
@@ -308,7 +308,7 @@
 ### Properties
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [Channel](#channel) (ReadOnly): Channel definition
@@ -325,7 +325,7 @@
 ### Properties
 * **etag**: string (ReadOnly): Entity Tag
 * **id**: string (ReadOnly): Specifies the resource ID.
-* **kind**: 'bot' | 'designer' | 'function' | 'sdk' (ReadOnly): Indicates the type of bot service
+* **kind**: 'bot' | 'designer' | 'function' | 'sdk' | string (ReadOnly): Indicates the type of bot service
 * **location**: string (ReadOnly): Specifies the location of the resource.
 * **name**: string (ReadOnly): Specifies the name of the resource.
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties) (ReadOnly): Properties for a Connection Setting Item

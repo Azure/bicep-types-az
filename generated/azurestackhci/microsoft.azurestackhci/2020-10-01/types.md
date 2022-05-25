@@ -20,10 +20,10 @@
 * **cloudId**: string (ReadOnly): Unique, immutable resource id.
 * **lastBillingTimestamp**: string (ReadOnly): Most recent billing meter timestamp.
 * **lastSyncTimestamp**: string (ReadOnly): Most recent cluster sync timestamp.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **registrationTimestamp**: string (ReadOnly): First cluster sync timestamp.
 * **reportedProperties**: [ClusterReportedProperties](#clusterreportedproperties): Properties reported by cluster agent.
-* **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' (ReadOnly): Status of the cluster agent.
+* **status**: 'ConnectedRecently' | 'Disconnected' | 'Error' | 'NotConnectedRecently' | 'NotYetRegistered' | string (ReadOnly): Status of the cluster agent.
 * **trialDaysRemaining**: int (ReadOnly): Number of days remaining in the trial period.
 
 ## ClusterReportedProperties
@@ -50,10 +50,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

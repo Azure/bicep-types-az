@@ -22,7 +22,7 @@
 * **hostName**: string (ReadOnly): FQDN of the CommunicationService instance.
 * **immutableResourceId**: string (ReadOnly): The immutable resource Id of the communication service.
 * **notificationHubId**: string (ReadOnly): Resource ID of an Azure Notification Hub linked to this resource.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **version**: string (ReadOnly): Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
 
 ## TaggedResourceTags

@@ -46,7 +46,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of cluster identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the cluster. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
 * **userAssignedIdentities**: [ClusterIdentityUserAssignedIdentities](#clusteridentityuserassignedidentities): The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## ClusterIdentityUserAssignedIdentities
@@ -78,14 +78,14 @@
 * **kafkaRestProperties**: [KafkaRestProperties](#kafkarestproperties): The kafka rest proxy configuration which contains AAD security group information.
 * **minSupportedTlsVersion**: string: The minimal supported tls version.
 * **networkProperties**: [NetworkProperties](#networkproperties): The network properties.
-* **osType**: 'Linux' | 'Windows': The type of operating system.
+* **osType**: 'Linux' | 'Windows' | string: The type of operating system.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections.
 * **privateLinkConfigurations**: [PrivateLinkConfiguration](#privatelinkconfiguration)[]: The private link configurations.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The provisioning state, which only appears in the response.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The provisioning state, which only appears in the response.
 * **quotaInfo**: [QuotaInfo](#quotainfo) (ReadOnly): The quota properties for the cluster.
 * **securityProfile**: [SecurityProfile](#securityprofile): The security profile which contains Ssh public key for the HDInsight cluster.
 * **storageProfile**: [StorageProfile](#storageprofile): The storage profile.
-* **tier**: 'Premium' | 'Standard': The cluster tier.
+* **tier**: 'Premium' | 'Standard' | string: The cluster tier.
 
 ## ClusterDefinition
 ### Properties
@@ -139,7 +139,7 @@
 
 ## AutoscaleSchedule
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Days of the week for a schedule-based autoscale rule
+* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Days of the week for a schedule-based autoscale rule
 * **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity): Time and capacity request parameters
 
 ## AutoscaleTimeAndCapacity
@@ -197,7 +197,7 @@
 
 ## DiskEncryptionProperties
 ### Properties
-* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5': Algorithm identifier for encryption, default RSA-OAEP.
+* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5' | string: Algorithm identifier for encryption, default RSA-OAEP.
 * **encryptionAtHost**: bool: Indicates whether or not resource disk encryption is enabled.
 * **keyName**: string: Key name that is used for enabling disk encryption.
 * **keyVersion**: string: Specific key version that is used for enabling disk encryption.
@@ -235,8 +235,8 @@
 
 ## NetworkProperties
 ### Properties
-* **privateLink**: 'Disabled' | 'Enabled': Indicates whether or not private link is enabled.
-* **resourceProviderConnection**: 'Inbound' | 'Outbound': The direction for the resource provider connection.
+* **privateLink**: 'Disabled' | 'Enabled' | string: Indicates whether or not private link is enabled.
+* **resourceProviderConnection**: 'Inbound' | 'Outbound' | string: The direction for the resource provider connection.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -251,7 +251,7 @@
 * **linkIdentifier**: string (ReadOnly): The link identifier.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The private endpoint.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): The private link service connection state.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state, which only appears in the response.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state, which only appears in the response.
 
 ## PrivateEndpoint
 ### Properties
@@ -261,16 +261,16 @@
 ### Properties
 * **actionsRequired**: string (ReadOnly): Whether there is further actions.
 * **description**: string (ReadOnly): The optional description of the status.
-* **status**: 'Approved' | 'Pending' | 'Rejected' | 'Removed' (ReadOnly): The concrete private link service connection.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | 'Removed' | string (ReadOnly): The concrete private link service connection.
 
 ## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## PrivateLinkConfiguration
 ### Properties
@@ -283,7 +283,7 @@
 ### Properties
 * **groupId**: string (Required): The HDInsight private linkable sub-resource name to apply the private link configuration to. For example, 'headnode', 'gateway', 'edgenode'.
 * **ipConfigurations**: [IPConfiguration](#ipconfiguration)[] (Required): The IP configurations for the private link service.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The private link configuration provisioning state, which only appears in the response.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The private link configuration provisioning state, which only appears in the response.
 
 ## IPConfiguration
 ### Properties
@@ -296,8 +296,8 @@
 ### Properties
 * **primary**: bool: Indicates whether this IP configuration is primary for the corresponding NIC.
 * **privateIPAddress**: string: The IP address.
-* **privateIPAllocationMethod**: 'dynamic' | 'static': The method that private IP address is allocated.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The private link configuration provisioning state, which only appears in the response.
+* **privateIPAllocationMethod**: 'dynamic' | 'static' | string: The method that private IP address is allocated.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The private link configuration provisioning state, which only appears in the response.
 * **subnet**: [ResourceId](#resourceid): The azure resource id.
 
 ## ResourceId
@@ -312,7 +312,7 @@
 ### Properties
 * **aaddsResourceId**: string: The resource ID of the user's Azure Active Directory Domain Service.
 * **clusterUsersGroupDNs**: string[]: Optional. The Distinguished Names for cluster user groups
-* **directoryType**: 'ActiveDirectory': The directory type.
+* **directoryType**: 'ActiveDirectory' | string: The directory type.
 * **domain**: string: The organization's active directory domain.
 * **domainUsername**: string: The domain user account that will have admin privileges on the cluster.
 * **domainUserPassword**: string: The domain admin password.

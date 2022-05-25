@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'RawWebSockets' | 'SignalR': The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+* **kind**: 'RawWebSockets' | 'SignalR' | string: The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
 * **location**: string: The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SignalRProperties](#signalrproperties): A class that describes the properties of the SignalR service that should contain more read-only properties than AzSignalR.Models.SignalRCreateOrUpdateProperties
@@ -42,7 +42,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 * **networkACLs**: [SignalRNetworkACLs](#signalrnetworkacls): Network ACLs for SignalR
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections to the SignalR resource.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for browser/client side usage.
 * **serverPort**: int (ReadOnly): The publicly accessible port of the SignalR service which is designed for customer server side usage.
 * **upstream**: [ServerlessUpstreamSettings](#serverlessupstreamsettings): The settings for the Upstream when the Azure SignalR is in server-less mode.
@@ -54,7 +54,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 
 ## SignalRFeature
 ### Properties
-* **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' (Required): FeatureFlags is the supported features of Azure SignalR service.
+* **flag**: 'EnableConnectivityLogs' | 'EnableMessagingLogs' | 'ServiceMode' | string (Required): FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
 * **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
@@ -67,20 +67,20 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 
 ## SignalRNetworkACLs
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default action when no other rule matches
+* **defaultAction**: 'Allow' | 'Deny' | string: Default action when no other rule matches
 * **privateEndpoints**: [PrivateEndpointACL](#privateendpointacl)[]: ACLs for requests from private endpoints
 * **publicNetwork**: [NetworkACL](#networkacl): Network ACL
 
 ## PrivateEndpointACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 * **name**: string (Required): Name of the private endpoint connection
 
 ## NetworkACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace'[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -93,7 +93,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Connection state of the private endpoint connection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' (ReadOnly): Provisioning state of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
 ## PrivateEndpoint
 ### Properties
@@ -103,7 +103,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
 
 ## ServerlessUpstreamSettings
 ### Properties
@@ -141,7 +141,7 @@ If present, following values are allowed:
 
 Allowed values: Standard_S1, Free_F1
 * **size**: string (ReadOnly): Not used. Retained for future use.
-* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard': Optional tier of this particular SKU. 'Standard' or 'Free'. 
+* **tier**: 'Basic' | 'Free' | 'Premium' | 'Standard' | string: Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.
 

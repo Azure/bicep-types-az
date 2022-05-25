@@ -112,7 +112,7 @@
 * **numberOfRecordSets**: int (ReadOnly): The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
 * **numberOfVirtualNetworkLinks**: int (ReadOnly): The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
 * **numberOfVirtualNetworkLinksWithRegistration**: int (ReadOnly): The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
 
 ## TrackedResourceTags
 ### Properties
@@ -183,10 +183,10 @@
 
 ## VirtualNetworkLinkProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
 * **registrationEnabled**: bool: Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
 * **virtualNetwork**: [SubResource](#subresource): Reference to another subresource.
-* **virtualNetworkLinkState**: 'Completed' | 'InProgress' (ReadOnly): The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
+* **virtualNetworkLinkState**: 'Completed' | 'InProgress' | string (ReadOnly): The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
 
 ## SubResource
 ### Properties

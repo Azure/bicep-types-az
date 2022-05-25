@@ -24,12 +24,12 @@
 * **gatewayDetails**: [GatewayDetails](#gatewaydetails): The gateway details.
 * **ipV4FirewallSettings**: [IPv4FirewallSettings](#ipv4firewallsettings): An array of firewall rules.
 * **managedMode**: int: The managed mode of the server (0 = not managed, 1 = managed).
-* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
 * **querypoolConnectionMode**: 'All' | 'ReadOnly': How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
 * **serverFullName**: string (ReadOnly): The full name of the Analysis Services resource.
 * **serverMonitorMode**: int: The server monitor mode for AS server
 * **sku**: [ResourceSku](#resourcesku): Represents the SKU name and Azure pricing tier for Analysis Services resource.
-* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
+* **state**: 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Succeeded' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
 
 ## ServerAdministrators
 ### Properties
@@ -56,7 +56,7 @@
 ### Properties
 * **capacity**: int: The number of instances in the read only query pool.
 * **name**: string (Required): Name of the SKU level.
-* **tier**: 'Basic' | 'Development' | 'Standard': The name of the Azure pricing tier to which the SKU applies.
+* **tier**: 'Basic' | 'Development' | 'Standard' | string: The name of the Azure pricing tier to which the SKU applies.
 
 ## ResourceTags
 ### Properties

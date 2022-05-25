@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): The kind of the resource.
-* **location**: 'global' (Required): Location of the resource.
+* **location**: 'global' | string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedSubscriptionParameterProperties](#linkedsubscriptionparameterproperties) (Required): Properties of the Linked Subscription resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -21,7 +21,7 @@
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): The kind of the resource.
-* **location**: 'global' (Required): Location of the resource.
+* **location**: 'global' | string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RegistrationParameterProperties](#registrationparameterproperties) (Required): Properties of the Azure Stack registration resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -58,10 +58,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -92,14 +92,14 @@
 
 ## ExtendedProductProperties
 ### Properties
-* **computeRole**: 'IaaS' | 'None' | 'PaaS' (ReadOnly): Compute role type (IaaS or PaaS).
+* **computeRole**: 'IaaS' | 'None' | 'PaaS' | string (ReadOnly): Compute role type (IaaS or PaaS).
 * **dataDiskImages**: [DataDiskImage](#datadiskimage)[] (ReadOnly): List of attached data disks.
 * **isSystemExtension**: bool (ReadOnly): Specifies if product is a Virtual Machine Extension.
 * **osDiskImage**: [OsDiskImage](#osdiskimage) (ReadOnly): OS disk image.
 * **sourceBlob**: [Uri](#uri) (ReadOnly): The URI.
 * **supportMultipleExtensions**: bool (ReadOnly): Indicates if specified product supports multiple extensions.
 * **version**: string (ReadOnly): Specifies product version.
-* **vmOsType**: 'Linux' | 'None' | 'Windows' (ReadOnly): Operating system type (Windows or Linux).
+* **vmOsType**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **vmScaleSetEnabled**: bool (ReadOnly): Indicates if virtual machine Scale Set is enabled in the specified product.
 
 ## DataDiskImage
@@ -109,7 +109,7 @@
 
 ## OsDiskImage
 ### Properties
-* **operatingSystem**: 'Linux' | 'None' | 'Windows' (ReadOnly): Operating system type (Windows or Linux).
+* **operatingSystem**: 'Linux' | 'None' | 'Windows' | string (ReadOnly): Operating system type (Windows or Linux).
 * **sourceBlobSasUri**: string (ReadOnly): SAS key for source blob.
 
 ## Uri

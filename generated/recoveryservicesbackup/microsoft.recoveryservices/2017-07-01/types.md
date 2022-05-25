@@ -16,10 +16,10 @@
 * **Discriminator**: protectionIntentItemType
 
 ### Base Properties
-* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB': Backup management type to execute the current job.
+* **backupManagementType**: 'AzureBackupServer' | 'AzureIaasVM' | 'AzureSql' | 'AzureStorage' | 'AzureWorkload' | 'DPM' | 'DefaultBackup' | 'Invalid' | 'MAB' | string: Backup management type to execute the current job.
 * **itemId**: string: ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
 * **policyId**: string: ID of the backup policy with which this item is backed up.
-* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed': Specifies whether the container is registered or not
+* **protectionState**: 'Invalid' | 'NotProtected' | 'Protected' | 'Protecting' | 'ProtectionFailed' | string: Specifies whether the container is registered or not
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
 ### AzureResourceProtectionIntent
 #### Properties
@@ -29,7 +29,7 @@
 ### AzureWorkloadSQLAutoProtectionIntent
 #### Properties
 * **protectionIntentItemType**: 'AzureWorkloadSQLAutoProtectionIntent' (Required): backup protectionIntent type.
-* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance': Workload item type of the item for which intent is to be set
+* **workloadItemType**: 'Invalid' | 'SAPAseDatabase' | 'SAPAseSystem' | 'SAPHanaDatabase' | 'SAPHanaSystem' | 'SQLDataBase' | 'SQLInstance' | string: Workload item type of the item for which intent is to be set
 
 
 ## ResourceTags

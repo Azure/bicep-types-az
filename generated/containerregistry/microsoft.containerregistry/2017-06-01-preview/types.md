@@ -49,7 +49,7 @@
 * **adminUserEnabled**: bool: The value that indicates whether the admin user is enabled.
 * **creationDate**: string (ReadOnly): The creation date of the container registry in ISO8601 format.
 * **loginServer**: string (ReadOnly): The URL that can be used to log into the container registry.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
 * **storageAccount**: [StorageAccountProperties](#storageaccountproperties): The properties of a storage account for a container registry. Only applicable to Basic SKU.
 
@@ -65,8 +65,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Managed_Basic' | 'Managed_Premium' | 'Managed_Standard' (Required): The SKU name of the container registry. Required for registry creation.
-* **tier**: 'Basic' | 'Managed' (ReadOnly): The SKU tier based on the SKU name.
+* **name**: 'Basic' | 'Managed_Basic' | 'Managed_Premium' | 'Managed_Standard' | string (Required): The SKU name of the container registry. Required for registry creation.
+* **tier**: 'Basic' | 'Managed' | string (ReadOnly): The SKU tier based on the SKU name.
 
 ## ResourceTags
 ### Properties
@@ -75,7 +75,7 @@
 
 ## ReplicationProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
 * **status**: [Status](#status) (ReadOnly): The status of an Azure resource at the time the operation was called.
 
 ## ResourceTags
@@ -85,12 +85,12 @@
 
 ## WebhookPropertiesCreateParameters
 ### Properties
-* **actions**: 'delete' | 'push'[] (Required): The list of actions that trigger the webhook to post notifications.
+* **actions**: 'delete' | 'push' | string[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the container registry at the time the operation was called.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the container registry at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
 * **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
-* **status**: 'disabled' | 'enabled': The status of the webhook at the time the operation was called.
+* **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.
 
 ## WebhookPropertiesCreateParametersCustomHeaders
 ### Properties
