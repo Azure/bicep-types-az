@@ -62,8 +62,6 @@ export enum ObjectPropertyFlags {
   ReadOnly = 1 << 1,
   WriteOnly = 1 << 2,
   DeployTimeConstant = 1 << 3,
-  OnlyReturnedOnRead = 1 << 4,
-  OnlyReturnedOnWrite = 1 << 5,
 }
 
 const ObjectPropertyFlagsLabel = new Map<ObjectPropertyFlags, string>([
