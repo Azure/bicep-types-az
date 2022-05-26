@@ -182,7 +182,7 @@
 
 ## DiskEncryptionProperties
 ### Properties
-* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5': Algorithm identifier for encryption, default RSA-OAEP.
+* **encryptionAlgorithm**: 'RSA-OAEP' | 'RSA-OAEP-256' | 'RSA1_5' | string: Algorithm identifier for encryption, default RSA-OAEP.
 * **encryptionAtHost**: bool: Indicates whether or not resource disk encryption is enabled.
 * **keyName**: string: Key name that is used for enabling disk encryption.
 * **keyVersion**: string: Specific key version that is used for enabling disk encryption.
@@ -220,8 +220,8 @@
 
 ## NetworkProperties
 ### Properties
-* **privateLink**: 'Disabled' | 'Enabled': Indicates whether or not private link is enabled.
-* **resourceProviderConnection**: 'Inbound' | 'Outbound': The direction for the resource provider connection.
+* **privateLink**: 'Disabled' | 'Enabled' | string: Indicates whether or not private link is enabled.
+* **resourceProviderConnection**: 'Inbound' | 'Outbound' | string: The direction for the resource provider connection.
 
 ## QuotaInfo
 ### Properties

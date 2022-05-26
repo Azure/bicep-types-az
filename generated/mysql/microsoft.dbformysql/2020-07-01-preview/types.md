@@ -53,26 +53,26 @@
 * **administratorLoginPassword**: string (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica' (WriteOnly): The mode to create a new MySQL server.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Replica' | string (WriteOnly): The mode to create a new MySQL server.
 * **delegatedSubnetArguments**: [DelegatedSubnetArguments](#delegatedsubnetarguments): Delegated subnet arguments of a server
 * **earliestRestoreDate**: string (ReadOnly): Earliest restore point creation time (ISO8601 format)
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **haEnabled**: 'Disabled' | 'Enabled': Whether or not HA is enabled for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' (ReadOnly): The state of a HA server.
-* **infrastructureEncryption**: 'Disabled' | 'Enabled' (WriteOnly): Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
+* **haEnabled**: 'Disabled' | 'Enabled' | string: Whether or not HA is enabled for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **haState**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): The state of a HA server.
+* **infrastructureEncryption**: 'Disabled' | 'Enabled' | string (WriteOnly): Add a second layer of encryption for your data using new encryption algorithm which gives additional data protection. Value is optional but if passed in, must be 'Disabled' or 'Enabled'.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **privateDnsZoneArguments**: [PrivateDnsZoneArguments](#privatednszonearguments): Private DNS zone arguments of a server
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' (ReadOnly): Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: string: The replication role.
 * **restorePointInTime**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **sourceServerId**: string: The source MySQL server id.
-* **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
+* **sslEnforcement**: 'Disabled' | 'Enabled' | string: Enable ssl enforcement or not when connect to server.
 * **standbyAvailabilityZone**: string (ReadOnly): availability Zone information of the server.
-* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' (ReadOnly): The state of a server.
+* **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): The state of a server.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage Profile properties of a server
 * **tags**: [ServerPropertiesTags](#serverpropertiestags): Application-specific metadata in the form of key-value pairs.
-* **version**: '5.7': The version of a server.
+* **version**: '5.7' | string: The version of a server.
 
 ## DelegatedSubnetArguments
 ### Properties
@@ -93,7 +93,7 @@
 ### Properties
 * **backupRetentionDays**: int: Backup retention days for the server.
 * **fileStorageSkuName**: string (ReadOnly): The sku name of the file storage.
-* **storageAutogrow**: 'Disabled' | 'Enabled': Enable Storage Auto Grow.
+* **storageAutogrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow.
 * **storageIops**: int: Storage IOPS for a server.
 * **storageMB**: int: Max storage allowed for a server.
 
@@ -105,7 +105,7 @@
 ## Sku
 ### Properties
 * **name**: string (Required): The name of the sku, e.g. Standard_D32s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): The tier of the particular SKU, e.g. GeneralPurpose.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. GeneralPurpose.
 
 ## TrackedResourceTags
 ### Properties
@@ -125,6 +125,6 @@
 ## ServerKeyProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The key creation date.
-* **serverKeyType**: 'AzureKeyVault' (Required): The key type like 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | string (Required): The key type like 'AzureKeyVault'.
 * **uri**: string: The URI of the key.
 

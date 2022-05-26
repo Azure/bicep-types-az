@@ -22,7 +22,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): Specifies the principal id for the identity for the job.
 * **tenantId**: string (ReadOnly): Specifies the tenant id for the identity for the job.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (ReadOnly): The type of identity
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (ReadOnly): The type of identity
 
 ## JobDetails
 ### Properties
@@ -64,12 +64,12 @@
 * **manifestHash**: string: The Base16-encoded MD5 hash of the manifest file on the drive.
 * **manifestUri**: string: A URI that points to the blob containing the drive manifest file.
 * **percentComplete**: int: Percentage completed for the drive.
-* **state**: 'Completed' | 'CompletedMoreInfo' | 'NeverReceived' | 'Received' | 'ShippedBack' | 'Specified' | 'Transferring': The drive's current state.
+* **state**: 'Completed' | 'CompletedMoreInfo' | 'NeverReceived' | 'Received' | 'ShippedBack' | 'Specified' | 'Transferring' | string: The drive's current state.
 * **verboseLogUri**: string: A URI that points to the blob containing the verbose log for the data transfer operation.
 
 ## EncryptionKeyDetails
 ### Properties
-* **kekType**: 'CustomerManaged' | 'MicrosoftManaged': The type of kek encryption key
+* **kekType**: 'CustomerManaged' | 'MicrosoftManaged' | string: The type of kek encryption key
 * **kekUrl**: string: Specifies the url for kek encryption key.
 * **kekVaultResourceID**: string: Specifies the keyvault resource id for kek encryption key.
 
@@ -123,10 +123,10 @@
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## GetBitLockerKeysResponse
 ### Properties

@@ -42,7 +42,7 @@
 * **baseSizeTiB**: int (Required): Base size of the Elastic San appliance in TiB.
 * **extendedCapacitySizeTiB**: int (Required): Extended size of the Elastic San appliance in TiB.
 * **provisionedMBps**: int (ReadOnly): Provisioned MBps Elastic San appliance.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI Target.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
 * **sku**: [Sku](#sku): The SKU name. Required for account creation; optional for update.
 * **totalIops**: int (ReadOnly): Total Provisioned IOPS of the Elastic San appliance.
 * **totalMBps**: int (ReadOnly): Total Provisioned MBps Elastic San appliance.
@@ -51,17 +51,17 @@
 
 ## Sku
 ### Properties
-* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS': The sku name.
-* **tier**: 'Hero' | 'Hub' | 'Satellite': The sku tier.
+* **name**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: The sku name.
+* **tier**: 'Hero' | 'Hub' | 'Satellite' | string: The sku tier.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ResourceTags
 ### Properties
@@ -70,10 +70,10 @@
 
 ## VolumeGroupProperties
 ### Properties
-* **encryption**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' (Required): The type of key used to encrypt the data of the disk.
+* **encryption**: 'EncryptionAtRestWithCustomerKey' | 'EncryptionAtRestWithPlatformAndCustomerKeys' | 'EncryptionAtRestWithPlatformKey' | string (Required): The type of key used to encrypt the data of the disk.
 * **networkAcls**: [NetworkRuleSet](#networkruleset): A set of rules governing the network accessibility.
-* **protocolType**: 'Iscsi' | 'None' (Required): Storage Target type.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI Target.
+* **protocolType**: 'Iscsi' | 'None' | string (Required): Storage Target type.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
 
 ## NetworkRuleSet
 ### Properties
@@ -104,8 +104,8 @@
 
 ## IscsiTargetInfo
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the iSCSI Target.
-* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating': Operational status of the resource.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the iSCSI Target.
+* **status**: 'Healthy' | 'Invalid' | 'Running' | 'Stopped (deallocated)' | 'Stopped' | 'Unhealthy' | 'Unknown' | 'Updating' | string: Operational status of the resource.
 * **targetIqn**: string (ReadOnly): iSCSI Target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
 * **targetPortalHostname**: string (ReadOnly): iSCSI Target Portal Host Name
 * **targetPortalPort**: int (ReadOnly): iSCSI Target Portal Port

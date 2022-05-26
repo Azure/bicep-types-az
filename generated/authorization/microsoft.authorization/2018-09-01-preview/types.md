@@ -13,7 +13,7 @@
 ### Properties
 * **canDelegate**: bool: The delegation flag used for creating a role assignment
 * **principalId**: string (Required): The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.
-* **principalType**: 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User': The principal type of the assigned principal ID.
+* **principalType**: 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
 * **roleDefinitionId**: string (Required): The role definition ID used in the role assignment.
 * **scope**: string (ReadOnly): The role assignment scope.
 

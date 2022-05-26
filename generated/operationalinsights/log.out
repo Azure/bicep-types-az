@@ -1,214 +1,214 @@
 AutoRest code generation utility [cli version: 3.6.1; node: v16.15.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
-info    |    Loading AutoRest core      '/Users/shenglol/Repos/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.3)
+info    |    Loading AutoRest core      '/home/runner/work/bicep-types-az/bicep-types-az/src/generator/node_modules/@autorest/core/dist' (3.8.4)
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2015-11-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:234:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:234:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:246:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:246:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:265:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:265:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:277:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/LinkedServices.json:277:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:845:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:845:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:862:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:862:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:869:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:869:9
 warning | PreCheck/SchemaMissingType | The schema 'DataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:913:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:913:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:939:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:939:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:947:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:947:5
 warning | PreCheck/SchemaMissingType | The schema 'IntelligencePack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:963:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:963:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:980:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:980:5
 warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:993:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:993:5
 warning | PreCheck/SchemaMissingType | The schema 'UsageMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1006:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1006:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListUsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1038:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1038:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1050:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1050:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1090:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1090:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListManagementGroupsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1100:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1100:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1112:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1112:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1137:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1137:5
 warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1184:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1184:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1204:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1204:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1221:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1221:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1253:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2015-11-01-preview/OperationalInsights.json:1253:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
   - properties.tags: <none> => {"$ref":"#/components/schemas/schemas:87","description":"Resource tags"}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 4ms
+info    | autorest.bicep took 11ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2015-03-20"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:712:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:712:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:724:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:724:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:731:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:731:9
 warning | PreCheck/SchemaMissingType | The schema 'LinkTarget' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:750:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:750:5
 warning | PreCheck/SchemaMissingType | The schema 'Tag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:772:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:772:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:789:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:789:5
 warning | PreCheck/SchemaMissingType | The schema 'CoreSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:825:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:825:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchSort' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:842:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:842:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchMetadataSchema' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:863:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:863:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:877:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:877:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:964:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:964:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearchesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:997:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:997:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchSchemaValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1014:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1014:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchGetSchemaResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1055:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1055:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1072:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1072:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1089:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1089:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1113:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1113:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsight' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1144:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1144:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1164:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1164:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1181:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1216:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1216:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1243:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1243:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1263:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1263:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1283:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1283:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1295:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1295:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1315:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1315:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailableServiceTier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1328:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json:1328:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'WorkspacePurgeBodyFilters-value' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json#/components/schemas/WorkspacePurgeBodyFilters-value
-info    | autorest.bicep took 1ms
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2015-03-20/OperationalInsights.json#/components/schemas/WorkspacePurgeBodyFilters-value
+info    | autorest.bicep took 17ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2019-08-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:336:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:336:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:381:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:381:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:401:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:401:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:410:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:410:5
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:432:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:432:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:456:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:456:5
 warning | PreCheck/SchemaMissingType | The schema 'keyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:472:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:472:5
 warning | PreCheck/SchemaMissingType | The schema 'sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:488:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:488:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:508:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:508:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:538:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/Clusters.json:538:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:234:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:234:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:247:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:247:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:266:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:266:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:278:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/LinkedServices.json:278:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExport' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:426:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:426:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:442:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:442:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:454:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:490:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:490:5
 warning | PreCheck/SchemaMissingType | The schema 'DestinationMetaData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:516:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:516:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:535:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:535:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:555:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:555:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedStorageAccounts' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:601:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:601:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedStorageAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:620:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-08-01-preview/OperationalInsights.json:620:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2019-09-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'QueryPacksResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryPacksResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:427:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:427:9
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:440:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:440:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:442:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:442:9
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPackProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:469:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:469:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPackListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:496:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPacks_API.json:496:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:410:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:410:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPackQuery' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:435:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:435:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPackQueryProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPackQuerySearchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:539:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:539:5
 warning | PreCheck/SchemaMissingType | The schema 'LogAnalyticsQueryPackQueryListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:581:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2019-09-01-preview/QueryPackQueries_API.json:581:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
   - properties.error.$ref: "#/components/schemas/schemas:9" => "#/components/schemas/schemas:54"
@@ -217,417 +217,417 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorInfo' (1 diffe
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorInfo' -> 'ErrorInfoAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2020-03-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DataExport' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:245:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:245:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:261:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:261:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:309:5
 warning | PreCheck/SchemaMissingType | The schema 'DestinationMetaData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:339:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataExports.json:339:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataSources.json:276:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataSources.json:276:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataSources.json:313:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataSources.json:313:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataSources.json:321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataSources.json:321:5
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectorLog' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataCollectorLogs.json:199:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataCollectorLogs.json:199:5
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectorLogsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataCollectorLogs.json:214:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataCollectorLogs.json:214:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataCollectorLogs.json:226:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/DataCollectorLogs.json:226:5
 warning | PreCheck/SchemaMissingType | The schema 'IntelligencePack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/IntelligencePacks.json:161:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/IntelligencePacks.json:161:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedServices.json:223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedServices.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedServices.json:250:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedServices.json:250:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedServices.json:280:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedServices.json:280:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedStorageAccountsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedStorageAccounts.json:226:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedStorageAccounts.json:226:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedStorageAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedStorageAccounts.json:244:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/LinkedStorageAccounts.json:244:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/ManagementGroups.json:78:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/ManagementGroups.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/ManagementGroups.json:118:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/ManagementGroups.json:118:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListManagementGroupsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/ManagementGroups.json:128:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/ManagementGroups.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Operations.json:69:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Operations.json:69:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Operations.json:86:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Operations.json:86:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Operations.json:93:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Operations.json:93:9
 warning | PreCheck/SchemaMissingType | The schema 'SharedKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SharedKeys.json:111:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SharedKeys.json:111:5
 warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Usages.json:78:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Usages.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'UsageMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Usages.json:91:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Usages.json:91:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListUsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Usages.json:123:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Usages.json:123:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:354:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:354:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:395:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:395:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:453:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:453:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:511:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:511:5
 warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:524:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:524:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:543:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:543:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:570:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Workspaces.json:570:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:330:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:330:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:376:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:376:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:385:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:385:5
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:412:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:412:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:435:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:435:5
 warning | PreCheck/SchemaMissingType | The schema 'keyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:468:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:468:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:489:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Clusters.json:489:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:218:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:235:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:235:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:259:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:259:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsight' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:290:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:290:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/StorageInsightConfigs.json:321:5
 warning | PreCheck/SchemaMissingType | The schema 'Tag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:206:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:206:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:265:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:265:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearchesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:287:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/SavedSearches.json:287:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailableServiceTier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/AvailableServiceTiers.json:78:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/AvailableServiceTiers.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'CoreSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:75:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchSort' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:92:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:92:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchMetadataSchema' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:113:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:113:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:127:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:127:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchSchemaValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:214:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:214:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchGetSchemaResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:255:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Schema.json:255:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:123:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:123:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:143:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:143:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:163:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:163:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:175:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json:175:5
 warning | PreCheck/SchemaMissingType | The schema 'TableProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'Table' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:193:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:193:5
 warning | PreCheck/SchemaMissingType | The schema 'TablesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:208:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:208:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorContract' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:220:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/Tables.json:220:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorContract' (1 differences):
   - title: <none> => "Error details."
 warning | Modeler/MissingType | The schema 'WorkspacePurgeBodyFilters-value' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json#/components/schemas/WorkspacePurgeBodyFilters-value
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2020-03-01-preview/WorkspacePurge.json#/components/schemas/WorkspacePurgeBodyFilters-value
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorContract' -> 'ErrorContractAutoGenerated'
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 6ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2021-12-01-preview"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Operations.json:75:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Operations.json:95:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Operations.json:95:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Operations.json:102:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Operations.json:102:9
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:509:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:509:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceFeatures' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:592:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:592:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:623:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:623:5
 warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:636:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:636:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:659:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:659:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:686:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/preview/2021-12-01-preview/Workspaces.json:686:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2020-08-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DataExport' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:245:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:245:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExportListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:261:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:261:5
 warning | PreCheck/SchemaMissingType | The schema 'DataExportProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:273:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:309:5
 warning | PreCheck/SchemaMissingType | The schema 'DestinationMetaData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:339:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataExports.json:339:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataSources.json:276:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataSources.json:276:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataSources.json:313:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataSources.json:313:5
 warning | PreCheck/SchemaMissingType | The schema 'DataSourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataSources.json:321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/DataSources.json:321:5
 warning | PreCheck/SchemaMissingType | The schema 'IntelligencePack' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/IntelligencePacks.json:161:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/IntelligencePacks.json:161:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedServices.json:229:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedServices.json:229:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedService' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedServices.json:256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedServices.json:256:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedServiceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedServices.json:286:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedServices.json:286:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedStorageAccountsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedStorageAccounts.json:225:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedStorageAccounts.json:225:5
 warning | PreCheck/SchemaMissingType | The schema 'LinkedStorageAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedStorageAccounts.json:243:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/LinkedStorageAccounts.json:243:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/ManagementGroups.json:78:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/ManagementGroups.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'ManagementGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/ManagementGroups.json:118:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/ManagementGroups.json:118:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListManagementGroupsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/ManagementGroups.json:128:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/ManagementGroups.json:128:5
 warning | PreCheck/SchemaMissingType | The schema 'SharedKeys' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SharedKeys.json:111:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SharedKeys.json:111:5
 warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Usages.json:78:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Usages.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'UsageMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Usages.json:91:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Usages.json:91:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListUsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Usages.json:123:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Usages.json:123:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageAccount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:218:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightStatus' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:235:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:235:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:259:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:259:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsight' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:290:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:290:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageInsightListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:321:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/StorageInsightConfigs.json:321:5
 warning | PreCheck/SchemaMissingType | The schema 'Tag' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:206:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:206:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:223:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:268:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:268:5
 warning | PreCheck/SchemaMissingType | The schema 'SavedSearchesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:290:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/SavedSearches.json:290:5
 warning | PreCheck/SchemaMissingType | The schema 'AvailableServiceTier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/AvailableServiceTiers.json:78:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/AvailableServiceTiers.json:78:5
 warning | PreCheck/SchemaMissingType | The schema 'CoreSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:75:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchSort' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:92:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:92:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchMetadataSchema' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:113:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:113:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:127:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:127:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchSchemaValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:218:5
 warning | PreCheck/SchemaMissingType | The schema 'SearchGetSchemaResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:259:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Schema.json:259:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:123:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:123:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeBodyFilters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:144:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:144:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:164:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:164:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePurgeStatusResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:176:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json:176:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Operations.json:69:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Operations.json:69:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Operations.json:86:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Operations.json:86:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Operations.json:93:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Operations.json:93:9
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:444:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:444:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:502:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:502:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceFeatures' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:578:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:578:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:583:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:583:5
 warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:596:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:596:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:615:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:615:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:642:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Workspaces.json:642:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:330:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:330:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:366:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:366:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:375:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:375:5
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:425:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:425:5
 warning | PreCheck/SchemaMissingType | The schema 'keyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:441:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:441:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:458:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:458:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:479:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Clusters.json:479:5
 warning | PreCheck/SchemaMissingType | The schema 'TableProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Tables.json:181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Tables.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'Table' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Tables.json:191:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Tables.json:191:5
 warning | PreCheck/SchemaMissingType | The schema 'TablesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Tables.json:206:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/Tables.json:206:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'WorkspacePurgeBodyFilters-value' has no type or format information whatsoever. Location:
-   file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json#/components/schemas/WorkspacePurgeBodyFilters-value
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-08-01/WorkspacePurge.json#/components/schemas/WorkspacePurgeBodyFilters-value
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 2ms
+info    | autorest.bicep took 5ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2021-06-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:334:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:334:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:407:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:407:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:420:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:420:5
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:474:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:474:5
 warning | PreCheck/SchemaMissingType | The schema 'keyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:490:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:490:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:525:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:525:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:555:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:555:5
 warning | PreCheck/SchemaMissingType | The schema 'CapacityReservationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:635:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Clusters.json:635:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:451:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:451:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:509:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:509:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceFeatures' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:584:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:584:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:615:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:615:5
 warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:628:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:628:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:647:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:647:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:674:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json:674:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 3ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2020-10-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ClusterProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:333:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:333:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:403:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:403:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:416:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:416:5
 warning | PreCheck/SchemaMissingType | The schema 'Cluster' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:447:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:447:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:470:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:470:5
 warning | PreCheck/SchemaMissingType | The schema 'keyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:486:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:486:5
 warning | PreCheck/SchemaMissingType | The schema 'ClusterSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:521:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:521:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:542:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:542:5
 warning | PreCheck/SchemaMissingType | The schema 'CapacityReservationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:622:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Clusters.json:622:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Operations.json:75:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Operations.json:92:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Operations.json:92:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Operations.json:99:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Operations.json:99:9
 warning | PreCheck/SchemaMissingType | The schema 'TableProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Tables.json:181:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Tables.json:181:5
 warning | PreCheck/SchemaMissingType | The schema 'Table' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Tables.json:207:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Tables.json:207:5
 warning | PreCheck/SchemaMissingType | The schema 'TablesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Tables.json:222:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Tables.json:222:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:402:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:402:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceCapping' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:438:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:438:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:496:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:496:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceFeatures' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:571:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:571:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:602:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:602:5
 warning | PreCheck/SchemaMissingType | The schema 'Workspace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:615:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:615:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspacePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:634:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:634:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///Users/shenglol/Repos/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:661:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2020-10-01/Workspaces.json:661:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-info    | autorest.bicep took 1ms
+info    | autorest.bicep took 4ms
 info    | Processing batch task - {"tag":"microsoft.operationalinsights-2019-09-01"} .
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-info    |    Loading local AutoRest extension '@autorest/bicep' (/Users/shenglol/Repos/bicep-types-az/src/autorest.bicep)
-info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.2)
+info    |    Loading local AutoRest extension '@autorest/bicep' (/home/runner/work/bicep-types-az/bicep-types-az/src/autorest.bicep)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (*->4.23.5)
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
-info    | autorest.bicep took 1ms
-info    | Autorest completed in 9.37s. 20 files generated.
+info    | autorest.bicep took 2ms
+info    | Autorest completed in 30.58s. 20 files generated.

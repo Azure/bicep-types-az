@@ -47,7 +47,7 @@
 * **parameters**: any: Any object
 * **parametersLink**: [ParametersLink](#parameterslink): Entity representing the reference to the deployment parameters.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Denotes the state of provisioning.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Denotes the state of provisioning.
 * **template**: any (WriteOnly): Any object
 * **templateHash**: string (ReadOnly): The hash produced for the template.
 * **templateLink**: [TemplateLink](#templatelink): Entity representing the reference to the template.
@@ -86,7 +86,7 @@
 
 ## ExpressionEvaluationOptions
 ### Properties
-* **scope**: 'Inner' | 'NotSpecified' | 'Outer' (WriteOnly): The scope to be used for evaluation of parameters, variables and functions in a nested template.
+* **scope**: 'Inner' | 'NotSpecified' | 'Outer' | string (WriteOnly): The scope to be used for evaluation of parameters, variables and functions in a nested template.
 
 ## OnErrorDeployment
 ### Properties
@@ -107,7 +107,7 @@
 ### Properties
 * **id**: string (ReadOnly): The provider ID.
 * **namespace**: string (ReadOnly): The namespace of the resource provider.
-* **providerAuthorizationConsentState**: 'Consented' | 'NotRequired' | 'NotSpecified' | 'Required' (ReadOnly): The provider authorization consent state.
+* **providerAuthorizationConsentState**: 'Consented' | 'NotRequired' | 'NotSpecified' | 'Required' | string (ReadOnly): The provider authorization consent state.
 * **registrationPolicy**: string (ReadOnly): The registration policy of the resource provider.
 * **registrationState**: string (ReadOnly): The registration state of the resource provider.
 * **resourceTypes**: [ProviderResourceType](#providerresourcetype)[] (ReadOnly): The collection of provider resource types.
@@ -136,8 +136,8 @@
 
 ## AliasPathMetadata
 ### Properties
-* **attributes**: 'Modifiable' | 'None' (ReadOnly): The attributes of the token that the alias path is referring to.
-* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' (ReadOnly): The type of the token that the alias path is referring to.
+* **attributes**: 'Modifiable' | 'None' | string (ReadOnly): The attributes of the token that the alias path is referring to.
+* **type**: 'Any' | 'Array' | 'Boolean' | 'Integer' | 'NotSpecified' | 'Number' | 'Object' | 'String' | string (ReadOnly): The type of the token that the alias path is referring to.
 
 ## AliasPattern
 ### Properties

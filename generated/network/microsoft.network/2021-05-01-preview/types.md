@@ -217,7 +217,7 @@
 
 ## NetworkManagerConnectionProperties
 ### Properties
-* **connectionState**: 'Conflict' | 'Connected' | 'Pending' | 'Rejected' | 'Revoked' (ReadOnly): The current scope connection state.
+* **connectionState**: 'Conflict' | 'Connected' | 'Pending' | 'Rejected' | 'Revoked' | string (ReadOnly): The current scope connection state.
 * **description**: string: A description of the scope connection.
 * **networkManagerId**: string: Network Manager Id.
 
@@ -225,18 +225,18 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The type of identity that last modified the resource.
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## NetworkManagerProperties
 ### Properties
 * **description**: string: A description of the network manager.
 * **displayName**: string: A friendly name for the network manager.
-* **networkManagerScopeAccesses**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser'[] (Required): Scope Access.
+* **networkManagerScopeAccesses**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[] (Required): Scope Access.
 * **networkManagerScopes**: [NetworkManagerPropertiesNetworkManagerScopes](#networkmanagerpropertiesnetworkmanagerscopes) (Required): Scope of Network Manager.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## NetworkManagerPropertiesNetworkManagerScopes
 ### Properties
@@ -258,20 +258,20 @@
 ## ConnectivityConfigurationProperties
 ### Properties
 * **appliesToGroups**: [ConnectivityGroupItem](#connectivitygroupitem)[] (Required): Groups for configuration
-* **connectivityTopology**: 'HubAndSpoke' | 'Mesh' (Required): Connectivity topology type.
-* **deleteExistingPeering**: 'False' | 'True': Flag if need to remove current existing peerings.
+* **connectivityTopology**: 'HubAndSpoke' | 'Mesh' | string (Required): Connectivity topology type.
+* **deleteExistingPeering**: 'False' | 'True' | string: Flag if need to remove current existing peerings.
 * **description**: string: A description of the connectivity configuration.
 * **displayName**: string: A friendly name for the resource.
 * **hubs**: [Hub](#hub)[]: List of hubItems
-* **isGlobal**: 'False' | 'True': Flag if global mesh is supported.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **isGlobal**: 'False' | 'True' | string: Flag if global mesh is supported.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## ConnectivityGroupItem
 ### Properties
-* **groupConnectivity**: 'DirectlyConnected' | 'None' (Required): Group connectivity type.
-* **isGlobal**: 'False' | 'True': Flag if global mesh is supported.
+* **groupConnectivity**: 'DirectlyConnected' | 'None' | string (Required): Group connectivity type.
+* **isGlobal**: 'False' | 'True' | string: Flag if global mesh is supported.
 * **networkGroupId**: string (Required): Network group Id.
-* **useHubGateway**: 'False' | 'True': Flag if need to use hub gateway.
+* **useHubGateway**: 'False' | 'True' | string: Flag if need to use hub gateway.
 
 ## Hub
 ### Properties
@@ -283,7 +283,7 @@
 * **description**: string: A description of the network group.
 * **displayName**: string: A friendly name for the network group.
 * **memberType**: string (Required): Group member type.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## StaticMemberProperties
 ### Properties
@@ -291,26 +291,26 @@
 
 ## ScopeConnectionProperties
 ### Properties
-* **connectionState**: 'Conflict' | 'Connected' | 'Pending' | 'Rejected' | 'Revoked' (ReadOnly): The current scope connection state.
+* **connectionState**: 'Conflict' | 'Connected' | 'Pending' | 'Rejected' | 'Revoked' | string (ReadOnly): The current scope connection state.
 * **description**: string: A description of the scope connection.
 * **resourceId**: string: Resource ID.
 * **tenantId**: string: Tenant ID.
 
 ## SecurityConfigurationPropertiesFormat
 ### Properties
-* **applyOnNetworkIntentPolicyBasedServices**: 'All' | 'None'[]: Enum list of network intent policy based services.
-* **deleteExistingNSGs**: 'False' | 'True': Flag if need to delete existing network security groups.
+* **applyOnNetworkIntentPolicyBasedServices**: 'All' | 'None' | string[]: Enum list of network intent policy based services.
+* **deleteExistingNSGs**: 'False' | 'True' | string: Flag if need to delete existing network security groups.
 * **description**: string: A description of the security configuration.
 * **displayName**: string: A display name of the security configuration.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
-* **securityType**: 'AdminPolicy' | 'UserPolicy': Security Type.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
+* **securityType**: 'AdminPolicy' | 'UserPolicy' | string: Security Type.
 
 ## RuleCollectionPropertiesFormat
 ### Properties
 * **appliesToGroups**: [NetworkManagerSecurityGroupItem](#networkmanagersecuritygroupitem)[] (Required): Groups for configuration
 * **description**: string: A description of the rule collection.
 * **displayName**: string: A display name of the rule collection.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 
 ## NetworkManagerSecurityGroupItem
 ### Properties
@@ -318,35 +318,35 @@
 
 ## AdminPropertiesFormat
 ### Properties
-* **access**: 'Allow' | 'AlwaysAllow' | 'Deny' (Required): Whether network traffic is allowed or denied.
+* **access**: 'Allow' | 'AlwaysAllow' | 'Deny' | string (Required): Whether network traffic is allowed or denied.
 * **description**: string: A description for this rule. Restricted to 140 chars.
 * **destinationPortRanges**: string[]: The destination port ranges.
 * **destinations**: [AddressPrefixItem](#addressprefixitem)[]: The destination address prefixes. CIDR or destination IP ranges.
-* **direction**: 'Inbound' | 'Outbound' (Required): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
+* **direction**: 'Inbound' | 'Outbound' | string (Required): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
 * **displayName**: string: A friendly name for the rule.
 * **priority**: int (Required): The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' (Required): Network protocol this rule applies to.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' | string (Required): Network protocol this rule applies to.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 * **sourcePortRanges**: string[]: The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[]: The CIDR or source IP ranges.
 
 ## AddressPrefixItem
 ### Properties
 * **addressPrefix**: string: Address prefix.
-* **addressPrefixType**: 'IPPrefix' | 'ServiceTag': Address prefix type.
+* **addressPrefixType**: 'IPPrefix' | 'ServiceTag' | string: Address prefix type.
 
 ## DefaultAdminPropertiesFormat
 ### Properties
-* **access**: 'Allow' | 'AlwaysAllow' | 'Deny' (ReadOnly): Whether network traffic is allowed or denied.
+* **access**: 'Allow' | 'AlwaysAllow' | 'Deny' | string (ReadOnly): Whether network traffic is allowed or denied.
 * **description**: string (ReadOnly): A description for this rule. Restricted to 140 chars.
 * **destinationPortRanges**: string[] (ReadOnly): The destination port ranges.
 * **destinations**: [AddressPrefixItem](#addressprefixitem)[] (ReadOnly): The destination address prefixes. CIDR or destination IP ranges.
-* **direction**: 'Inbound' | 'Outbound' (ReadOnly): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
+* **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
 * **displayName**: string (ReadOnly): A friendly name for the rule.
 * **flag**: string: Default rule flag.
 * **priority**: int (ReadOnly): The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' (ReadOnly): Network protocol this rule applies to.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' | string (ReadOnly): Network protocol this rule applies to.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 * **sourcePortRanges**: string[] (ReadOnly): The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[] (ReadOnly): The CIDR or source IP ranges.
 
@@ -355,10 +355,10 @@
 * **description**: string: A description for this rule.
 * **destinationPortRanges**: string[]: The destination port ranges.
 * **destinations**: [AddressPrefixItem](#addressprefixitem)[]: The destination address prefixes. CIDR or destination IP ranges.
-* **direction**: 'Inbound' | 'Outbound' (Required): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
+* **direction**: 'Inbound' | 'Outbound' | string (Required): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
 * **displayName**: string: A friendly name for the rule.
-* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' (Required): Network protocol this rule applies to.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' | string (Required): Network protocol this rule applies to.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 * **sourcePortRanges**: string[]: The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[]: The CIDR or source IP ranges.
 
@@ -367,11 +367,11 @@
 * **description**: string (ReadOnly): A description for this rule. Restricted to 140 chars.
 * **destinationPortRanges**: string[] (ReadOnly): The destination port ranges.
 * **destinations**: [AddressPrefixItem](#addressprefixitem)[] (ReadOnly): The destination address prefixes. CIDR or destination IP ranges.
-* **direction**: 'Inbound' | 'Outbound' (ReadOnly): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
+* **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of the rule. The direction specifies if the rule will be evaluated on incoming or outgoing traffic.
 * **displayName**: string (ReadOnly): A friendly name for the rule.
 * **flag**: string: Default rule flag.
-* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' (ReadOnly): Network protocol this rule applies to.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state.
+* **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' | string (ReadOnly): Network protocol this rule applies to.
+* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state.
 * **sourcePortRanges**: string[] (ReadOnly): The source port ranges.
 * **sources**: [AddressPrefixItem](#addressprefixitem)[] (ReadOnly): The CIDR or source IP ranges.
 
@@ -468,7 +468,7 @@
 
 ## NetworkManagerDeploymentStatusParameter
 ### Properties
-* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser'[] (WriteOnly): List of deployment types.
+* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[] (WriteOnly): List of deployment types.
 * **regions**: string[] (WriteOnly): List of locations.
 * **skipToken**: string (WriteOnly): Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
 
@@ -481,8 +481,8 @@
 ### Properties
 * **commitTime**: string (ReadOnly): Commit Time.
 * **configurationIds**: string[] (ReadOnly): List of configuration ids.
-* **deploymentStatus**: 'Deployed' | 'Deploying' | 'Failed' | 'NotStarted' (ReadOnly): Deployment Status.
-* **deploymentType**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' (ReadOnly): Configuration Deployment Type.
+* **deploymentStatus**: 'Deployed' | 'Deploying' | 'Failed' | 'NotStarted' | string (ReadOnly): Deployment Status.
+* **deploymentType**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string (ReadOnly): Configuration Deployment Type.
 * **errorMessage**: string (ReadOnly): Error Message.
 * **region**: string (ReadOnly): Region Name.
 
@@ -500,7 +500,7 @@
 ### Properties
 * **id**: string (ReadOnly): Effective vnet Id.
 * **location**: string (ReadOnly): Location of vnet.
-* **membershipType**: 'Dynamic' | 'Static' (ReadOnly): Membership Type.
+* **membershipType**: 'Dynamic' | 'Static' | string (ReadOnly): Membership Type.
 
 ## QueryRequestOptions
 ### Properties

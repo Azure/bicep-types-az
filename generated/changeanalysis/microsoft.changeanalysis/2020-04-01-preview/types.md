@@ -16,7 +16,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
 * **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
-* **type**: 'None' | 'SystemAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
+* **type**: 'None' | 'SystemAssigned' | string: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
 
 ## ConfigurationProfileResourceProperties
 ### Properties
@@ -24,12 +24,12 @@
 
 ## NotificationSettings
 ### Properties
-* **activationState**: 'Disabled' | 'Enabled' | 'None': The state of notifications feature.
+* **activationState**: 'Disabled' | 'Enabled' | 'None' | string: The state of notifications feature.
 * **azureMonitorWorkspaceProperties**: [AzureMonitorWorkspaceProperties](#azuremonitorworkspaceproperties): Configuration properties of an Azure Monitor workspace that receives change notifications.
 
 ## AzureMonitorWorkspaceProperties
 ### Properties
-* **includeChangeDetails**: 'Exclude' | 'Include' | 'None': The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+* **includeChangeDetails**: 'Exclude' | 'Include' | 'None' | string: The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
 * **workspaceId**: string: The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
 * **workspaceResourceId**: string: The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
 

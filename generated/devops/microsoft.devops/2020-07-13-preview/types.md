@@ -41,11 +41,11 @@
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
 * **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
-* **repositoryType**: 'gitHub' | 'vstsGit' (Required): Type of code repository.
+* **repositoryType**: 'gitHub' | 'vstsGit' | string (Required): Type of code repository.
 
 ## Authorization
 ### Properties
-* **authorizationType**: 'personalAccessToken' (Required): Type of authorization.
+* **authorizationType**: 'personalAccessToken' | string (Required): Type of authorization.
 * **parameters**: [AuthorizationParameters](#authorizationparameters): Authorization parameters corresponding to the authorization type.
 
 ## AuthorizationParameters
@@ -82,10 +82,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ResourceTags
 ### Properties

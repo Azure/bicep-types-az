@@ -24,7 +24,7 @@
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of an export.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered. Currently only 'Csv' is supported.
+* **format**: 'Csv' | string: The format of the export being delivered. Currently only 'Csv' is supported.
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
 * **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): Result of listing the execution history of an export.
@@ -33,14 +33,14 @@
 ## ExportDefinition
 ### Properties
 * **dataSet**: [ExportDataset](#exportdataset): The definition for data in the export.
-* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
 * **timePeriod**: [ExportTimePeriod](#exporttimeperiod): The date range for data in the export. This should only be specified with timeFrame set to 'Custom'. The maximum date range is 3 months.
-* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required): The type of the query.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the query.
 
 ## ExportDataset
 ### Properties
 * **configuration**: [ExportDatasetConfiguration](#exportdatasetconfiguration): The export dataset configuration. Allows columns to be selected for the export. If not provided then the export will include all available columns.
-* **granularity**: 'Daily': The granularity of rows in the forecast.
+* **granularity**: 'Daily' | string: The granularity of rows in the forecast.
 
 ## ExportDatasetConfiguration
 ### Properties
@@ -78,12 +78,12 @@
 ## ExportExecutionProperties
 ### Properties
 * **error**: [ErrorDetails](#errordetails): The details of the error.
-* **executionType**: 'OnDemand' | 'Scheduled': The type of the export execution.
+* **executionType**: 'OnDemand' | 'Scheduled' | string: The type of the export execution.
 * **fileName**: string: The name of the exported file.
 * **processingEndTime**: string: The time when the export execution finished.
 * **processingStartTime**: string: The time when export was picked up to be executed.
 * **runSettings**: [CommonExportProperties](#commonexportproperties): The common properties of the export.
-* **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout': The last known status of the export execution.
+* **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout' | string: The last known status of the export execution.
 * **submittedBy**: string: The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
 * **submittedTime**: string: The time when export was queued to be executed.
 
@@ -96,16 +96,16 @@
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of an export.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered. Currently only 'Csv' is supported.
+* **format**: 'Csv' | string: The format of the export being delivered. Currently only 'Csv' is supported.
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
 * **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): Result of listing the execution history of an export.
 
 ## ExportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly': The schedule recurrence.
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string: The schedule recurrence.
 * **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the export's schedule. If 'Inactive', the export's schedule is paused.
+* **status**: 'Active' | 'Inactive' | string: The status of the export's schedule. If 'Inactive', the export's schedule is paused.
 
 ## ExportRecurrencePeriod
 ### Properties
@@ -114,14 +114,14 @@
 
 ## ViewProperties
 ### Properties
-* **accumulated**: 'false' | 'true': Show costs accumulated over time.
-* **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table': Chart type of the main view in Cost Analysis. Required.
+* **accumulated**: 'false' | 'true' | string: Show costs accumulated over time.
+* **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table' | string: Chart type of the main view in Cost Analysis. Required.
 * **createdOn**: string (ReadOnly): Date the user created this view.
 * **currency**: string (ReadOnly): Currency of the current view.
 * **dateRange**: string (ReadOnly): Date range of the current view.
 * **displayName**: string: User input name of the view. Required.
 * **kpis**: [KpiProperties](#kpiproperties)[]: List of KPIs to show in Cost Analysis UI.
-* **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost': Metric to use when displaying costs.
+* **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost' | string: Metric to use when displaying costs.
 * **modifiedOn**: string (ReadOnly): Date when the user last modified this view.
 * **pivots**: [PivotProperties](#pivotproperties)[]: Configuration of 3 sub-views in the Cost Analysis UI.
 * **query**: [ReportConfigDefinition](#reportconfigdefinition): The definition of a report config.
@@ -131,27 +131,27 @@
 ### Properties
 * **enabled**: bool: show the KPI in the UI?
 * **id**: string: ID of resource related to metric (budget).
-* **type**: 'Budget' | 'Forecast': KPI type (Forecast, Budget).
+* **type**: 'Budget' | 'Forecast' | string: KPI type (Forecast, Budget).
 
 ## PivotProperties
 ### Properties
 * **name**: string: Data field to show in view.
-* **type**: 'Dimension' | 'TagKey': Data type to show in view.
+* **type**: 'Dimension' | 'TagKey' | string: Data type to show in view.
 
 ## ReportConfigDefinition
 ### Properties
 * **dataSet**: [ReportConfigDataset](#reportconfigdataset): The definition of data present in the report.
 * **includeMonetaryCommitment**: bool: If true, report includes monetary commitment.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+* **timeframe**: 'Custom' | 'MonthToDate' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the report. If custom, then a specific time period must be provided.
 * **timePeriod**: [ReportConfigTimePeriod](#reportconfigtimeperiod): The start and end date for pulling data for the report.
-* **type**: 'Usage' (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+* **type**: 'Usage' | string (Required): The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
 
 ## ReportConfigDataset
 ### Properties
 * **aggregation**: [ReportConfigDatasetAggregation](#reportconfigdatasetaggregation): Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): The configuration of dataset in the report.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): The filter expression to be used in the report.
-* **granularity**: 'Daily' | 'Monthly': The granularity of rows in the report.
+* **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
 * **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
@@ -162,7 +162,7 @@
 
 ## ReportConfigAggregation
 ### Properties
-* **function**: 'Sum' (Required): The name of the aggregation function to use.
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## ReportConfigDatasetConfiguration
@@ -179,17 +179,17 @@
 ## ReportConfigComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'Contains' | 'In' (Required): The operator to use for comparison.
+* **operator**: 'Contains' | 'In' | string (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## ReportConfigGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group. This version supports subscription lowest possible grain.
-* **type**: 'Dimension' | 'Tag' (Required): The type of the column in the report.
+* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the report.
 
 ## ReportConfigSorting
 ### Properties
-* **direction**: 'Ascending' | 'Descending': Direction of sort.
+* **direction**: 'Ascending' | 'Descending' | string: Direction of sort.
 * **name**: string (Required): The name of the column to sort.
 
 ## ReportConfigTimePeriod

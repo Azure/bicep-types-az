@@ -74,7 +74,7 @@
 
 ## ClusterProperties
 ### Properties
-* **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService'[]: The list of add-on features to enable in the cluster.
+* **addOnFeatures**: 'BackupRestoreService' | 'DnsService' | 'RepairManager' | 'ResourceMonitorService' | string[]: The list of add-on features to enable in the cluster.
 * **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy)
 * **availableClusterVersions**: [ClusterVersionDetails](#clusterversiondetails)[] (ReadOnly): The Service Fabric runtime versions available for this cluster.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): The settings to enable AAD authentication on the cluster.
@@ -85,7 +85,7 @@
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterEndpoint**: string (ReadOnly): The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
-* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' (ReadOnly): The current state of the cluster.
+* **clusterState**: 'AutoScale' | 'BaselineUpgrade' | 'Deploying' | 'EnforcingClusterVersion' | 'Ready' | 'UpdatingInfrastructure' | 'UpdatingUserCertificate' | 'UpdatingUserConfiguration' | 'UpgradeServiceUnreachable' | 'WaitingForNodes' | string (ReadOnly): The current state of the cluster.
 
   - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
   - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
@@ -104,8 +104,8 @@
 * **managementEndpoint**: string (Required): The http management endpoint of the cluster.
 * **nodeTypes**: [NodeTypeDescription](#nodetypedescription)[] (Required): The list of node types in the cluster.
 * **notifications**: [Notification](#notification)[]: Indicates a list of notification channels for cluster events.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster resource.
-* **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver': The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster resource.
+* **reliabilityLevel**: 'Bronze' | 'Gold' | 'None' | 'Platinum' | 'Silver' | string: The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
   - None - Run the System services with a target replica set count of 1. This should only be used for test clusters.
   - Bronze - Run the System services with a target replica set count of 3. This should only be used for test clusters.
@@ -114,14 +114,14 @@
   - Platinum - Run the System services with a target replica set count of 9.
 * **reverseProxyCertificate**: [CertificateDescription](#certificatedescription): Describes the certificate details.
 * **reverseProxyCertificateCommonNames**: [ServerCertificateCommonNames](#servercertificatecommonnames): Describes a list of server certificates referenced by common name that are used to secure the cluster.
-* **sfZonalUpgradeMode**: 'Hierarchical' | 'Parallel': This property controls the logical grouping of VMs in upgrade domains (UDs). This property can't be modified if a node type with multiple Availability Zones is already present in the cluster.
+* **sfZonalUpgradeMode**: 'Hierarchical' | 'Parallel' | string: This property controls the logical grouping of VMs in upgrade domains (UDs). This property can't be modified if a node type with multiple Availability Zones is already present in the cluster.
 * **upgradeDescription**: [ClusterUpgradePolicy](#clusterupgradepolicy): Describes the policy used when upgrading the cluster.
-* **upgradeMode**: 'Automatic' | 'Manual': The upgrade mode of the cluster when new Service Fabric runtime version is available.
+* **upgradeMode**: 'Automatic' | 'Manual' | string: The upgrade mode of the cluster when new Service Fabric runtime version is available.
 * **upgradePauseEndTimestampUtc**: string: Indicates the end date and time to pause automatic runtime version upgrades on the cluster for an specific period of time on the cluster (UTC).
 * **upgradePauseStartTimestampUtc**: string: Indicates the start date and time to pause automatic runtime version upgrades on the cluster for an specific period of time on the cluster (UTC).
-* **upgradeWave**: 'Wave0' | 'Wave1' | 'Wave2': Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
+* **upgradeWave**: 'Wave0' | 'Wave1' | 'Wave2' | string: Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
 * **vmImage**: string: The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
-* **vmssZonalUpgradeMode**: 'Hierarchical' | 'Parallel': This property defines the upgrade mode for the virtual machine scale set, it is mandatory if a node type with multiple Availability Zones is added.
+* **vmssZonalUpgradeMode**: 'Hierarchical' | 'Parallel' | string: This property defines the upgrade mode for the virtual machine scale set, it is mandatory if a node type with multiple Availability Zones is added.
 * **waveUpgradePaused**: bool: Boolean to pause automatic runtime version upgrades to the cluster.
 
 ## ApplicationTypeVersionsCleanupPolicy
@@ -131,7 +131,7 @@
 ## ClusterVersionDetails
 ### Properties
 * **codeVersion**: string: The Service Fabric runtime version of the cluster.
-* **environment**: 'Linux' | 'Windows': Cluster operating system, the default will be Windows
+* **environment**: 'Linux' | 'Windows' | string: Cluster operating system, the default will be Windows
 * **supportExpiryUtc**: string: The date of expiry of support of the version.
 
 ## AzureActiveDirectory
@@ -144,12 +144,12 @@
 ### Properties
 * **thumbprint**: string (Required): Thumbprint of the primary certificate.
 * **thumbprintSecondary**: string: Thumbprint of the secondary certificate.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location.
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher' | string: The local certificate store location.
 
 ## ServerCertificateCommonNames
 ### Properties
 * **commonNames**: [ServerCertificateCommonName](#servercertificatecommonname)[]: The list of server certificates referenced by common name that are used to secure the cluster.
-* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher': The local certificate store location.
+* **x509StoreName**: 'AddressBook' | 'AuthRoot' | 'CertificateAuthority' | 'Disallowed' | 'My' | 'Root' | 'TrustedPeople' | 'TrustedPublisher' | string: The local certificate store location.
 
 ## ServerCertificateCommonName
 ### Properties
@@ -191,7 +191,7 @@
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): Port range details
 * **capacities**: [NodeTypeDescriptionCapacities](#nodetypedescriptioncapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **clientConnectionEndpointPort**: int (Required): The TCP cluster management endpoint port.
-* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver': The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+* **durabilityLevel**: 'Bronze' | 'Gold' | 'Silver' | string: The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
   - Bronze - No privileges. This is the default.
   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
@@ -224,13 +224,13 @@
 ## Notification
 ### Properties
 * **isEnabled**: bool (Required): Indicates if the notification is enabled.
-* **notificationCategory**: 'WaveProgress' (Required): The category of notification.
-* **notificationLevel**: 'All' | 'Critical' (Required): The level of notification.
+* **notificationCategory**: 'WaveProgress' | string (Required): The category of notification.
+* **notificationLevel**: 'All' | 'Critical' | string (Required): The level of notification.
 * **notificationTargets**: [NotificationTarget](#notificationtarget)[] (Required): List of targets that subscribe to the notification.
 
 ## NotificationTarget
 ### Properties
-* **notificationChannel**: 'EmailSubscription' | 'EmailUser' (Required): The notification channel indicates the type of receivers subscribed to the notification, either user or subscription.
+* **notificationChannel**: 'EmailSubscription' | 'EmailUser' | string (Required): The notification channel indicates the type of receivers subscribed to the notification, either user or subscription.
 * **receivers**: string[] (Required): List of targets that subscribe to the notification.
 
 ## ClusterUpgradePolicy
@@ -408,7 +408,7 @@ When creating a new application with application capacity defined, the product o
 * **forceRestart**: bool: If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
 * **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
 * **rollingUpgradeMonitoringPolicy**: [ArmRollingUpgradeMonitoringPolicy](#armrollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
-* **upgradeMode**: 'Invalid' | 'Monitored' | 'UnmonitoredAuto' | 'UnmonitoredManual': The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+* **upgradeMode**: 'Invalid' | 'Monitored' | 'UnmonitoredAuto' | 'UnmonitoredManual' | string: The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
 * **upgradeReplicaSetCheckTimeout**: string: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
 
 ## ArmApplicationHealthPolicy
@@ -440,7 +440,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ## ArmRollingUpgradeMonitoringPolicy
 ### Properties
-* **failureAction**: 'Manual' | 'Rollback': The activation Mode of the service package
+* **failureAction**: 'Manual' | 'Rollback' | string: The activation Mode of the service package
 * **healthCheckRetryTimeout**: string: The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
 * **healthCheckStableDuration**: string: The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
 * **healthCheckWaitDuration**: string: The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
@@ -457,13 +457,13 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelationDescription](#servicecorrelationdescription)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero': Specifies the move cost for the service.
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Specifies the move cost for the service.
 * **partitionDescription**: [PartitionSchemeDescription](#partitionschemedescription): Describes how the service is partitioned.
 * **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 * **serviceDnsName**: string: Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
 * **serviceLoadMetrics**: [ServiceLoadMetricDescription](#serviceloadmetricdescription)[]: The service load metrics is given as an array of ServiceLoadMetricDescription objects.
-* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess': The activation Mode of the service package
+* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
 * **servicePlacementPolicies**: [ServicePlacementPolicyDescription](#serviceplacementpolicydescription)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string: The name of the service type
 ### StatefulServiceProperties
@@ -485,7 +485,7 @@ If no policy is specified for a service type name, the DefaultServiceTypeHealthP
 
 ## ServiceCorrelationDescription
 ### Properties
-* **scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' (Required): The service correlation scheme.
+* **scheme**: 'Affinity' | 'AlignedAffinity' | 'Invalid' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
 * **serviceName**: string (Required): The full name of the service with 'fabric:' URI scheme.
 
 ## PartitionSchemeDescription
@@ -518,7 +518,7 @@ should be split between the partition ‘count’
 * **name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **primaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **secondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **weight**: 'High' | 'Low' | 'Medium' | 'Zero': Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
+* **weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
 
 ## ServicePlacementPolicyDescription
 * **Discriminator**: type

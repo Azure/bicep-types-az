@@ -28,7 +28,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' (Required): Type of managed service identity (either system assigned, or none).
+* **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
 
 ## AppProperties
 ### Properties
@@ -36,9 +36,9 @@
 * **displayName**: string: The display name of the application.
 * **networkRuleSets**: [NetworkRuleSets](#networkrulesets): Network Rule Set Properties of this IoT Central application.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private endpoint connections created on this IoT Central application.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the application.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether requests from the public network are allowed.
-* **state**: 'created' | 'suspended' (ReadOnly): The current state of the application.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the application.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether requests from the public network are allowed.
+* **state**: 'created' | 'suspended' | string (ReadOnly): The current state of the application.
 * **subdomain**: string: The subdomain of the application.
 * **template**: string: The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
 
@@ -46,7 +46,7 @@
 ### Properties
 * **applyToDevices**: bool: Whether these rules apply for device connectivity to IoT Hub and Device Provisioning service associated with this application.
 * **applyToIoTCentral**: bool: Whether these rules apply for connectivity via IoT Central web portal and APIs.
-* **defaultAction**: 'Allow' | 'Deny': Whether to allow or deny network traffic.
+* **defaultAction**: 'Allow' | 'Deny' | string: Whether to allow or deny network traffic.
 * **ipRules**: [NetworkRuleSetIpRule](#networkrulesetiprule)[]: List of IP rules.
 
 ## NetworkRuleSetIpRule
@@ -67,7 +67,7 @@
 * **groupIds**: string[] (ReadOnly): The group ids for the private endpoint resource.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The private endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -77,20 +77,20 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## AppSkuInfo
 ### Properties
-* **name**: 'ST0' | 'ST1' | 'ST2' (Required): The name of the SKU.
+* **name**: 'ST0' | 'ST1' | 'ST2' | string (Required): The name of the SKU.
 
 ## TrackedResourceTags
 ### Properties

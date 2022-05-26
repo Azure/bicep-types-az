@@ -44,9 +44,9 @@
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
-* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain.
+* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the domain.
 
 ## InputSchemaMapping
 * **Discriminator**: inputSchemaMappingType
@@ -85,11 +85,11 @@
 ### Properties
 * **deadLetterDestination**: [DeadLetterDestination](#deadletterdestination): Information about the dead letter destination for an event subscription. To configure a deadletter destination, do not directly instantiate an object of this class. Instead, instantiate an object of a derived class. Currently, StorageBlobDeadLetterDestination is the only class that derives from this class.
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
-* **eventDeliverySchema**: 'CloudEventV01Schema' | 'CustomInputSchema' | 'EventGridSchema': The event delivery schema for the event subscription.
+* **eventDeliverySchema**: 'CloudEventV01Schema' | 'CustomInputSchema' | 'EventGridSchema' | string: The event delivery schema for the event subscription.
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
 * **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
 * **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription.
+* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
@@ -238,9 +238,9 @@ Wildcard characters are not supported in this path.
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain.
+* **inputSchema**: 'CloudEventV01Schema' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
 
 ## TrackedResourceTags
 ### Properties

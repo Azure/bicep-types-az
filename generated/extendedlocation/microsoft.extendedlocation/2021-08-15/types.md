@@ -17,7 +17,7 @@
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
 * **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned': The identity type.
+* **type**: 'None' | 'SystemAssigned' | string: The identity type.
 
 ## CustomLocationProperties
 ### Properties
@@ -25,7 +25,7 @@
 * **clusterExtensionIds**: string[]: Contains the reference to the add-on that contains charts to deploy CRDs and operators.
 * **displayName**: string: Display name for the Custom Locations location.
 * **hostResourceId**: string: Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
-* **hostType**: 'Kubernetes': Type of host the Custom Locations is referencing (Kubernetes, etc...).
+* **hostType**: 'Kubernetes' | string: Type of host the Custom Locations is referencing (Kubernetes, etc...).
 * **namespace**: string: Kubernetes namespace that will be created on the specified cluster.
 * **provisioningState**: string: Provisioning State for the Custom Location.
 
@@ -38,10 +38,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

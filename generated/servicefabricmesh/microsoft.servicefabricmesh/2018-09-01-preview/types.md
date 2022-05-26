@@ -76,11 +76,11 @@
 * **debugParams**: string: Internal - used by Visual Studio to setup the debugging session on the local development environment.
 * **description**: string: User readable description of the application.
 * **diagnostics**: [DiagnosticsDescription](#diagnosticsdescription): Describes the diagnostics options available
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **serviceNames**: string[] (ReadOnly): Names of the services in the application.
 * **services**: [ServiceResourceDescription](#serviceresourcedescription)[]: Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the application.
 * **unhealthyEvaluation**: string (ReadOnly): When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
 
@@ -119,12 +119,12 @@
 * **codePackages**: [ContainerCodePackageProperties](#containercodepackageproperties)[] (Required): Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
 * **description**: string: User readable description of the service.
 * **diagnostics**: [DiagnosticsRef](#diagnosticsref): Reference to sinks in DiagnosticsDescription.
-* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
+* **healthState**: 'Error' | 'Invalid' | 'Ok' | 'Unknown' | 'Warning' | string (ReadOnly): The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc.
 * **networkRefs**: [NetworkRef](#networkref)[]: The names of the private networks that this service needs to be part of.
-* **osType**: 'Linux' | 'Windows' (Required): The operation system required by the code in service.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operation system required by the code in service.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **replicaCount**: int: The number of replicas of the service to create. Defaults to 1 if not specified.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the service.
 * **unhealthyEvaluation**: string (ReadOnly): When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
 
@@ -166,7 +166,7 @@
 ### AutoScalingResourceMetric
 #### Properties
 * **kind**: 'Resource' (Required): The type of auto scaling metric
-* **name**: 'cpu' | 'memoryInGB' (Required): Enumerates the resources that are used for triggering auto scaling.
+* **name**: 'cpu' | 'memoryInGB' | string (Required): Enumerates the resources that are used for triggering auto scaling.
 
 
 ## ContainerCodePackageProperties
@@ -283,7 +283,7 @@
 ### ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
 #### Properties
 * **kind**: 'ServiceFabricVolumeDisk' (Required): Specifies the application-scoped volume kind.
-* **sizeDisk**: 'Large' | 'Medium' | 'Small' (Required): Volume size
+* **sizeDisk**: 'Large' | 'Medium' | 'Small' | string (Required): Volume size
 
 
 ## NetworkRef
@@ -308,7 +308,7 @@
 * **ipAddress**: string (ReadOnly): IP address of the gateway. This is populated in the response and is ignored for incoming requests.
 * **provisioningState**: string (ReadOnly): State of the resource.
 * **sourceNetwork**: [NetworkRef](#networkref) (Required): Describes a network reference in a service.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the gateway.
 * **tcp**: [TcpConfig](#tcpconfig)[]: Configuration for tcp connectivity for this gateway.
 
@@ -343,13 +343,13 @@
 ## HttpRouteMatchHeader
 ### Properties
 * **name**: string (Required): Name of header to match in request.
-* **type**: 'exact': how to match header value
+* **type**: 'exact' | string: how to match header value
 * **value**: string: Value of header to match in request.
 
 ## HttpRouteMatchPath
 ### Properties
 * **rewrite**: string: replacement string for matched part of the Uri.
-* **type**: 'prefix' (Required): how to match value in the Uri
+* **type**: 'prefix' | string (Required): how to match value in the Uri
 * **value**: string (Required): Uri path to match for request.
 
 ## TcpConfig
@@ -369,7 +369,7 @@
 ### Base Properties
 * **description**: string: User readable description of the network.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the network.
 ### LocalNetworkResourceProperties
 #### Properties
@@ -389,7 +389,7 @@
 * **contentType**: string: The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
 * **description**: string: User readable description of the secret.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the secret.
 ### InlinedValueSecretResourceProperties
 #### Properties
@@ -415,9 +415,9 @@
 ### Properties
 * **azureFileParameters**: [VolumeProviderParametersAzureFile](#volumeproviderparametersazurefile): This type describes a volume provided by an Azure Files file share.
 * **description**: string: User readable description of the volume.
-* **provider**: 'SFAzureFile' (Required): Describes the provider of the volume resource.
+* **provider**: 'SFAzureFile' | string (Required): Describes the provider of the volume resource.
 * **provisioningState**: string (ReadOnly): State of the resource.
-* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the resource.
+* **status**: 'Creating' | 'Deleting' | 'Failed' | 'Ready' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the resource.
 * **statusDetails**: string (ReadOnly): Gives additional information about the current status of the volume.
 
 ## VolumeProviderParametersAzureFile

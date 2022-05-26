@@ -142,7 +142,7 @@
 
 ## GuestOsnicCustomization
 ### Properties
-* **allocation**: 'dynamic' | 'static': IP address allocation method
+* **allocation**: 'dynamic' | 'static' | string: IP address allocation method
 * **dnsServers**: string[]: List of dns servers to use
 * **gateway**: string[]: Gateway addresses assigned to nic
 * **ipAddress**: string

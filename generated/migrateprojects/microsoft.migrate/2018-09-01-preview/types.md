@@ -25,9 +25,9 @@
 ## MigrateProjectProperties
 ### Properties
 * **lastSummaryRefreshedTime**: string (ReadOnly): Gets the last time the project summary was refreshed.
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded': Provisioning state of the migrate project.
-* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' (ReadOnly): Gets the refresh summary state.
-* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto'[]: Gets or sets the list of tools registered with the migrate project.
+* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Succeeded' | string: Provisioning state of the migrate project.
+* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' | string (ReadOnly): Gets the refresh summary state.
+* **registeredTools**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string[]: Gets or sets the list of tools registered with the migrate project.
 * **summary**: [MigrateProjectPropertiesSummary](#migrateprojectpropertiessummary) (ReadOnly): Gets the summary of the migrate project.
 
 ## MigrateProjectPropertiesSummary
@@ -41,7 +41,7 @@
 ### Base Properties
 * **extendedSummary**: [ProjectSummaryExtendedSummary](#projectsummaryextendedsummary): Gets or sets the extended summary.
 * **lastSummaryRefreshedTime**: string: Gets or sets the time when summary was last refreshed.
-* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started': Gets or sets the state of refresh summary.
+* **refreshSummaryState**: 'Completed' | 'Failed' | 'InProgress' | 'Started' | string: Gets or sets the state of refresh summary.
 ### DatabaseProjectSummary
 #### Properties
 * **instanceType**: 'Databases' (Required): Gets the Instance type.
@@ -67,13 +67,13 @@
 
 ## SolutionProperties
 ### Properties
-* **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started': Gets or sets the cleanup state of the solution.
+* **cleanupState**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Started' | string: Gets or sets the cleanup state of the solution.
 * **details**: [SolutionDetails](#solutiondetails): Class representing the details of the solution.
-* **goal**: 'Databases' | 'Servers': Gets or sets the goal of the solution.
-* **purpose**: 'Assessment' | 'Discovery' | 'Migration': Gets or sets the purpose of the solution.
-* **status**: 'Active' | 'Inactive': Gets or sets the current status of the solution.
+* **goal**: 'Databases' | 'Servers' | string: Gets or sets the goal of the solution.
+* **purpose**: 'Assessment' | 'Discovery' | 'Migration' | string: Gets or sets the purpose of the solution.
+* **status**: 'Active' | 'Inactive' | string: Gets or sets the current status of the solution.
 * **summary**: [SolutionSummary](#solutionsummary): The solution summary class.
-* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto': Gets or sets the tool being used in the solution.
+* **tool**: 'Carbonite' | 'Cloudamize' | 'CorentTech' | 'DataMigrationAssistant' | 'DatabaseMigrationService' | 'ServerAssessment' | 'ServerAssessmentV1' | 'ServerDiscovery' | 'ServerMigration' | 'ServerMigration_Replication' | 'Turbonomic' | 'Zerto' | string: Gets or sets the tool being used in the solution.
 
 ## SolutionDetails
 ### Properties

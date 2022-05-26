@@ -34,12 +34,12 @@
 * **capacityAssigned**: int (ReadOnly): Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
 * **clusterId**: string (ReadOnly): Unique identifier for the cluster.
 * **createdDate**: string (ReadOnly): The date this cluster was created.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
 
 ## ClusterSku
 ### Properties
 * **capacity**: int: Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
-* **name**: 'Default': Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+* **name**: 'Default' | string: Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
 
 ## TrackedResourceTags
 ### Properties
@@ -76,6 +76,6 @@
 ## ClusterJob
 ### Properties
 * **id**: string (ReadOnly): Resource ID of the streaming job.
-* **jobState**: 'Created' | 'Degraded' | 'Deleting' | 'Failed' | 'Restarting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The current execution state of the streaming job.
+* **jobState**: 'Created' | 'Degraded' | 'Deleting' | 'Failed' | 'Restarting' | 'Running' | 'Scaling' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The current execution state of the streaming job.
 * **streamingUnits**: int (ReadOnly): The number of streaming units that are used by the streaming job.
 

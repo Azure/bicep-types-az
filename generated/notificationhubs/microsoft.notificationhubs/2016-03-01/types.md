@@ -76,7 +76,7 @@
 ### Properties
 * **capacity**: int: The capacity of the resource
 * **family**: string: The Sku Family
-* **name**: 'Basic' | 'Free' | 'Standard' (Required): Name of the notification hub sku
+* **name**: 'Basic' | 'Free' | 'Standard' | string (Required): Name of the notification hub sku
 * **size**: string: The Sku size
 * **tier**: string: The tier of particular sku
 

@@ -104,10 +104,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## AvailabilitySetTags
 ### Properties
@@ -178,11 +178,11 @@
 ## HardwareProfile
 ### Properties
 * **cpuCount**: int: Gets or sets the number of vCPUs for the vm.
-* **dynamicMemoryEnabled**: 'false' | 'true': Gets or sets a value indicating whether to enable dynamic memory or not.
+* **dynamicMemoryEnabled**: 'false' | 'true' | string: Gets or sets a value indicating whether to enable dynamic memory or not.
 * **dynamicMemoryMaxMB**: int: Gets or sets the max dynamic memory for the vm.
 * **dynamicMemoryMinMB**: int: Gets or sets the min dynamic memory for the vm.
 * **isHighlyAvailable**: string: Gets highly available property.
-* **limitCpuForMigration**: 'false' | 'true': Gets or sets a value indicating whether to enable processor compatibility mode for live migration of VMs.
+* **limitCpuForMigration**: 'false' | 'true' | string: Gets or sets a value indicating whether to enable processor compatibility mode for live migration of VMs.
 * **memoryMB**: int: MemoryMB is the size of a virtual machine's memory, in MB.
 
 ## NetworkProfile
@@ -193,11 +193,11 @@
 ### Properties
 * **displayName**: string (ReadOnly): Gets the display name of the network interface as shown in the vmmServer. This is the fallback label for a NIC when the name is not set.
 * **ipv4Addresses**: string[] (ReadOnly): Gets or sets the nic ipv4 addresses.
-* **ipv4AddressType**: 'Dynamic' | 'Static': Allocation method.
+* **ipv4AddressType**: 'Dynamic' | 'Static' | string: Allocation method.
 * **ipv6Addresses**: string[] (ReadOnly): Gets or sets the nic ipv6 addresses.
-* **ipv6AddressType**: 'Dynamic' | 'Static': Allocation method.
+* **ipv6AddressType**: 'Dynamic' | 'Static' | string: Allocation method.
 * **macAddress**: string: Gets or sets the nic MAC address.
-* **macAddressType**: 'Dynamic' | 'Static': Allocation method.
+* **macAddressType**: 'Dynamic' | 'Static' | string: Allocation method.
 * **name**: string: Gets or sets the name of the network interface.
 * **networkName**: string (ReadOnly): Gets or sets the name of the virtual network in vmmServer that the nic is connected to.
 * **nicId**: string: Gets or sets the nic id.
@@ -208,7 +208,7 @@
 * **adminPassword**: string (WriteOnly): Admin password of the virtual machine.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' (ReadOnly): Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Defines the different types of VM guest operating systems.
 
 ## StorageProfile
 ### Properties
@@ -218,7 +218,7 @@
 ### Properties
 * **bus**: int: Gets or sets the disk bus.
 * **busType**: string: Gets or sets the disk bus type.
-* **createDiffDisk**: 'false' | 'true': Gets or sets a value indicating diff disk.
+* **createDiffDisk**: 'false' | 'true' | string: Gets or sets a value indicating diff disk.
 * **diskId**: string: Gets or sets the disk id.
 * **diskSizeGB**: int: Gets or sets the disk total size.
 * **displayName**: string (ReadOnly): Gets the display name of the virtual disk as shown in the vmmServer. This is the fallback label for a disk when the name is not set.
@@ -246,18 +246,18 @@
 * **computerName**: string (ReadOnly): Gets or sets computer name.
 * **cpuCount**: int (ReadOnly): Gets or sets the desired number of vCPUs for the vm.
 * **disks**: [VirtualDisk](#virtualdisk)[] (ReadOnly): Gets or sets the disks of the template.
-* **dynamicMemoryEnabled**: 'false' | 'true' (ReadOnly): Gets or sets a value indicating whether to enable dynamic memory or not.
+* **dynamicMemoryEnabled**: 'false' | 'true' | string (ReadOnly): Gets or sets a value indicating whether to enable dynamic memory or not.
 * **dynamicMemoryMaxMB**: int (ReadOnly): Gets or sets the max dynamic memory for the vm.
 * **dynamicMemoryMinMB**: int (ReadOnly): Gets or sets the min dynamic memory for the vm.
 * **generation**: int (ReadOnly): Gets or sets the generation for the vm.
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the resource.
-* **isCustomizable**: 'false' | 'true' (ReadOnly): Gets or sets a value indicating whether the vm template is customizable or not.
+* **isCustomizable**: 'false' | 'true' | string (ReadOnly): Gets or sets a value indicating whether the vm template is customizable or not.
 * **isHighlyAvailable**: string (ReadOnly): Gets highly available property.
-* **limitCpuForMigration**: 'false' | 'true' (ReadOnly): Gets or sets a value indicating whether to enable processor compatibility mode for live migration of VMs.
+* **limitCpuForMigration**: 'false' | 'true' | string (ReadOnly): Gets or sets a value indicating whether to enable processor compatibility mode for live migration of VMs.
 * **memoryMB**: int (ReadOnly): MemoryMB is the desired size of a virtual machine's memory, in MB.
 * **networkInterfaces**: [NetworkInterfaces](#networkinterfaces)[] (ReadOnly): Gets or sets the network interfaces of the template.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' (ReadOnly): Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Defines the different types of VM guest operating systems.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **uuid**: string: Unique ID of the virtual machine template.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
@@ -319,7 +319,7 @@
 * **inventoryType**: 'VirtualMachine' (Required): They inventory type.
 * **ipAddresses**: string[]: Gets or sets the nic ip addresses.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' (ReadOnly): Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Defines the different types of VM guest operating systems.
 * **powerState**: string (ReadOnly): Gets the power state of the virtual machine.
 
 ### VirtualMachineTemplateInventoryItem
@@ -328,7 +328,7 @@
 * **inventoryType**: 'VirtualMachineTemplate' (Required): They inventory type.
 * **memoryMB**: int (ReadOnly): MemoryMB is the desired size of a virtual machine's memory, in MB.
 * **osName**: string (ReadOnly): Gets or sets os name.
-* **osType**: 'Linux' | 'Other' | 'Windows' (ReadOnly): Defines the different types of VM guest operating systems.
+* **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Defines the different types of VM guest operating systems.
 
 ### VirtualNetworkInventoryItem
 #### Properties

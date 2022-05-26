@@ -77,7 +77,7 @@
 
 ## ManagedClusterProperties
 ### Properties
-* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService'[]: List of add-on features to enable on the cluster.
+* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: List of add-on features to enable on the cluster.
 * **adminPassword**: string: VM admin user password.
 * **adminUserName**: string (Required): VM admin user name.
 * **allowRdpAccess**: bool: Setting this to true enables RDP access to the VM. The default NSG rule opens RDP port to Internet which can be overridden with custom Network Security Rules. The default value for this setting is false.
@@ -89,9 +89,9 @@
 * **clusterCertificateThumbprints**: string[] (ReadOnly): List of thumbprints of the cluster certificates.
 * **clusterCodeVersion**: string: The Service Fabric runtime version of the cluster. This property is required when **clusterUpgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
 * **clusterId**: string (ReadOnly): A service generated unique identifier for the cluster resource.
-* **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' (ReadOnly): The current state of the cluster.
-* **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2': Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
-* **clusterUpgradeMode**: 'Automatic' | 'Manual': The upgrade mode of the cluster when new Service Fabric runtime version is available.
+* **clusterState**: 'BaselineUpgrade' | 'Deploying' | 'Ready' | 'UpgradeFailed' | 'Upgrading' | 'WaitingForNodes' | string (ReadOnly): The current state of the cluster.
+* **clusterUpgradeCadence**: 'Wave0' | 'Wave1' | 'Wave2' | string: Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
+* **clusterUpgradeMode**: 'Automatic' | 'Manual' | string: The upgrade mode of the cluster when new Service Fabric runtime version is available.
 * **dnsName**: string (Required): The cluster dns name.
 * **enableAutoOSUpgrade**: bool: Setting this to true enables automatic OS upgrade for the node types that are created using any platform OS image with version 'latest'. The default value for this setting is false.
 * **enableIpv6**: bool: Setting this to true creates IPv6 address space for the default VNet used by the cluster. This setting cannot be changed once the cluster is created. The default value for this setting is false.
@@ -104,7 +104,7 @@
 * **ipv6Address**: string (ReadOnly): IPv6 address for the cluster if IPv6 is enabled.
 * **loadBalancingRules**: [LoadBalancingRule](#loadbalancingrule)[]: Load balancing rules that are applied to the public load balancer of the cluster.
 * **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: Custom Network Security Rules that are applied to the Virtual Network of the cluster.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
 * **serviceEndpoints**: [ServiceEndpoint](#serviceendpoint)[]: Service endpoints for subnets in the cluster.
 * **subnetId**: string: If specified, the node types for the cluster are created in this subnet instead of the default VNet. The **networkSecurityRules** specified for the cluster are also applied to this subnet. This setting cannot be changed once the cluster is created.
 * **zonalResiliency**: bool: Indicates if the cluster has zone resiliency.
@@ -118,8 +118,8 @@
 * **enableIpv6**: bool: Indicates wether to enable Ipv6 or not. If not provided, it will take the same configuration as the cluster.
 * **name**: string (Required): Subnet name.
 * **networkSecurityGroupId**: string: Full resource id for the network security group.
-* **privateEndpointNetworkPolicies**: 'disabled' | 'enabled': Enable or Disable apply network policies on private end point in the subnet.
-* **privateLinkServiceNetworkPolicies**: 'disabled' | 'enabled': Enable or Disable apply network policies on private link service in the subnet.
+* **privateEndpointNetworkPolicies**: 'disabled' | 'enabled' | string: Enable or Disable apply network policies on private end point in the subnet.
+* **privateLinkServiceNetworkPolicies**: 'disabled' | 'enabled' | string: Enable or Disable apply network policies on private link service in the subnet.
 
 ## AzureActiveDirectory
 ### Properties
@@ -155,22 +155,22 @@
 * **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
 * **loadDistribution**: string: The load distribution policy for this rule.
 * **probePort**: int: The prob port used by the load balancing rule. Acceptable values are between 1 and 65535.
-* **probeProtocol**: 'http' | 'https' | 'tcp' (Required): the reference to the load balancer probe used by the load balancing rule.
+* **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
-* **protocol**: 'tcp' | 'udp' (Required): The reference to the transport protocol used by the load balancing rule.
+* **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
 
 ## NetworkSecurityRule
 ### Properties
-* **access**: 'allow' | 'deny' (Required): The network traffic is allowed or denied.
+* **access**: 'allow' | 'deny' | string (Required): The network traffic is allowed or denied.
 * **description**: string: Network security rule description.
 * **destinationAddressPrefix**: string: The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
 * **destinationAddressPrefixes**: string[]: The destination address prefixes. CIDR or destination IP ranges.
 * **destinationPortRange**: string: he destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
 * **destinationPortRanges**: string[]: The destination port ranges.
-* **direction**: 'inbound' | 'outbound' (Required): Network security rule direction.
+* **direction**: 'inbound' | 'outbound' | string (Required): Network security rule direction.
 * **name**: string (Required): Network security rule name.
 * **priority**: int (Required): The priority of the rule. The value can be in the range 1000 to 3000. Values outside this range are reserved for Service Fabric ManagerCluster Resource Provider. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-* **protocol**: 'ah' | 'esp' | 'http' | 'https' | 'icmp' | 'tcp' | 'udp' (Required): Network protocol this rule applies to.
+* **protocol**: 'ah' | 'esp' | 'http' | 'https' | 'icmp' | 'tcp' | 'udp' | string (Required): Network protocol this rule applies to.
 * **sourceAddressPrefix**: string: The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
 * **sourcePortRange**: string: The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
@@ -183,7 +183,7 @@
 
 ## Sku
 ### Properties
-* **name**: 'Basic' | 'Standard' (Required): Sku Name.
+* **name**: 'Basic' | 'Standard' | string (Required): Sku Name.
 
 ## SystemData
 ### Properties
@@ -243,7 +243,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **instanceCloseDelayDuration**: int: Duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully. This would be effective when the instance is closing during the application/cluster upgrade, only for those instances which have a non-zero delay duration configured in the service description.
 * **recreateApplication**: bool: Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed.
 * **rollingUpgradeMonitoringPolicy**: [RollingUpgradeMonitoringPolicy](#rollingupgrademonitoringpolicy): The policy used for monitoring the application upgrade
-* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto': The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
+* **upgradeMode**: 'Monitored' | 'UnmonitoredAuto' | string: The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto.
 * **upgradeReplicaSetCheckTimeout**: int: The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
 
 ## ApplicationHealthPolicy
@@ -290,7 +290,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## RollingUpgradeMonitoringPolicy
 ### Properties
-* **failureAction**: 'Manual' | 'Rollback' (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
+* **failureAction**: 'Manual' | 'Rollback' | string (Required): The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.
 * **healthCheckRetryTimeout**: string (Required): The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **healthCheckStableDuration**: string (Required): The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
 * **healthCheckWaitDuration**: string (Required): The amount of time to wait after completing an upgrade domain before applying health policies. It is interpreted as a string representing an ISO 8601 duration with following format "hh:mm:ss.fff".
@@ -307,13 +307,13 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ### Base Properties
 * **correlationScheme**: [ServiceCorrelation](#servicecorrelation)[]: A list that describes the correlation of the service with other services.
-* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero': Specifies the move cost for the service.
+* **defaultMoveCost**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Specifies the move cost for the service.
 * **partitionDescription**: [Partition](#partition) (Required): Describes how the service is partitioned.
 * **placementConstraints**: string: The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 * **scalingPolicies**: [ScalingPolicy](#scalingpolicy)[]: Scaling policies for this service.
 * **serviceLoadMetrics**: [ServiceLoadMetric](#serviceloadmetric)[]: The service load metrics is given as an array of ServiceLoadMetric objects.
-* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess': The activation Mode of the service package
+* **servicePackageActivationMode**: 'ExclusiveProcess' | 'SharedProcess' | string: The activation Mode of the service package
 * **servicePlacementPolicies**: [ServicePlacementPolicy](#serviceplacementpolicy)[]: A list that describes the correlation of the service with other services.
 * **serviceTypeName**: string (Required): The name of the service type
 ### StatefulServiceProperties
@@ -337,7 +337,7 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## ServiceCorrelation
 ### Properties
-* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' (Required): The service correlation scheme.
+* **scheme**: 'AlignedAffinity' | 'NonAlignedAffinity' | string (Required): The service correlation scheme.
 * **serviceName**: string (Required): The full ARM Resource ID describing the service resource
 
 ## Partition
@@ -415,7 +415,7 @@ should be split between the partition ‘Count’
 * **name**: string (Required): The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
 * **primaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
 * **secondaryDefaultLoad**: int: Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
-* **weight**: 'High' | 'Low' | 'Medium' | 'Zero': Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
+* **weight**: 'High' | 'Low' | 'Medium' | 'Zero' | string: Determines the metric weight relative to the other metrics that are configured for this service. During runtime, if two metrics end up in conflict, the Cluster Resource Manager prefers the metric with the higher weight.
 
 ## ServicePlacementPolicy
 * **Discriminator**: type
@@ -477,7 +477,7 @@ should be split between the partition ‘Count’
 * **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 * **dataDiskLetter**: string: Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
 * **dataDiskSizeGB**: int: Disk size for the managed disk attached to the vms on the node type in GBs.
-* **dataDiskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS': Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
+* **dataDiskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string: Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
 * **enableAcceleratedNetworking**: bool: Specifies whether the network interface is accelerated networking-enabled.
 * **enableEncryptionAtHost**: bool: Enable or disable the Host Encryption for the virtual machines on the node type. This will enable the encryption for all the disks including Resource/Temp disk at host itself. Default: The Encryption at host will be disabled unless this property is set to true for the resource.
 * **enableOverProvisioning**: bool: Specifies whether the node type should be overprovisioned. It is only allowed for stateless node types.
@@ -488,7 +488,7 @@ should be split between the partition ‘Count’
 * **multiplePlacementGroups**: bool: Indicates if scale set associated with the node type can be composed of multiple placement groups.
 * **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: The Network Security Rules for this node type. This setting can only be specified for node types that are configured with frontend configurations.
 * **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the managed resource.
+* **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the managed resource.
 * **useDefaultPublicLoadBalancer**: bool: Specifies whether the use public load balancer. If not specified and the node type doesn't have its own frontend configuration, it will be attached to the default load balancer. If the node type uses its own Load balancer and useDefaultPublicLoadBalancer is true, then the frontend has to be an Internal Load Balancer. If the node type uses its own Load balancer and useDefaultPublicLoadBalancer is false or not set, then the custom load balancer must include a public load balancer to provide outbound connectivity.
 * **useTempDataDisk**: bool: Specifies whether to use the temporary disk for the service fabric data root, in which case no managed data disk will be attached and the temporary disk will be used. It is only allowed for stateless node types.
 * **vmExtensions**: [VmssExtension](#vmssextension)[]: Set of extensions that should be installed onto the virtual machines.
@@ -505,7 +505,7 @@ should be split between the partition ‘Count’
 ### Properties
 * **diskLetter**: string (Required): Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
 * **diskSizeGB**: int (Required): Disk size for each vm in the node type in GBs.
-* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' (Required): Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
+* **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string (Required): Managed data disk type. IOPS and throughput are given by the disk size, to see more information go to https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types.
 * **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM. Lun 0 is reserved for the service fabric data disk.
 
 ## EndpointRangeDescription
@@ -520,7 +520,7 @@ should be split between the partition ‘Count’
 
 ## FrontendConfiguration
 ### Properties
-* **ipAddressType**: 'IPv4' | 'IPv6': The IP address type.
+* **ipAddressType**: 'IPv4' | 'IPv6' | string: The IP address type.
 * **loadBalancerBackendAddressPoolId**: string: The resource Id of the Load Balancer backend address pool that the VM instances of the node type are associated with. The format of the resource Id is '/subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/loadBalancers/<loadBalancerName>/backendAddressPools/<backendAddressPoolName>'.
 * **loadBalancerInboundNatPoolId**: string: The resource Id of the Load Balancer inbound NAT pool that the VM instances of the node type are associated with. The format of the resource Id is '/subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName>/providers/Microsoft.Network/loadBalancers/<loadBalancerName>/inboundNatPools/<inboundNatPoolName>'.
 

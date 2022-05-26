@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'LogAlert' | 'LogToMetric': Indicates the type of scheduled query rule. The default is LogAlert.
+* **kind**: 'LogAlert' | 'LogToMetric' | string: Indicates the type of scheduled query rule. The default is LogAlert.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): scheduled query rule Definition
@@ -55,16 +55,16 @@
 * **failingPeriods**: [ConditionFailingPeriods](#conditionfailingperiods): The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.
 * **metricMeasureColumn**: string: The column containing the metric measure number. Relevant only for rules of the kind LogAlert.
 * **metricName**: string: The name of the metric to be sent. Relevant and required only for rules of the kind LogToMetric.
-* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': The criteria operator. Relevant and required only for rules of the kind LogAlert.
+* **operator**: 'Equals' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string: The criteria operator. Relevant and required only for rules of the kind LogAlert.
 * **query**: string: Log query alert
 * **resourceIdColumn**: string: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.
 * **threshold**: int: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.
-* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total': Aggregation type. Relevant and required only for rules of the kind LogAlert.
+* **timeAggregation**: 'Average' | 'Count' | 'Maximum' | 'Minimum' | 'Total' | string: Aggregation type. Relevant and required only for rules of the kind LogAlert.
 
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: 'Exclude' | 'Include' (Required): Operator for dimension values
+* **operator**: 'Exclude' | 'Include' | string (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
 
 ## ConditionFailingPeriods
@@ -76,10 +76,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

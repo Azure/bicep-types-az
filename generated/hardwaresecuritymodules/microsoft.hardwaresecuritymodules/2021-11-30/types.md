@@ -18,7 +18,7 @@
 ### Properties
 * **managementNetworkProfile**: [NetworkProfile](#networkprofile): The network profile definition.
 * **networkProfile**: [NetworkProfile](#networkprofile): The network profile definition.
-* **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Provisioning state.
+* **provisioningState**: 'Allocating' | 'CheckingQuota' | 'Connecting' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state.
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 
@@ -38,16 +38,16 @@
 
 ## Sku
 ### Properties
-* **name**: 'SafeNet Luna Network HSM A790' | 'payShield10K_LMK1_CPS250' | 'payShield10K_LMK1_CPS2500' | 'payShield10K_LMK1_CPS60' | 'payShield10K_LMK2_CPS250' | 'payShield10K_LMK2_CPS2500' | 'payShield10K_LMK2_CPS60': SKU of the dedicated HSM
+* **name**: 'SafeNet Luna Network HSM A790' | 'payShield10K_LMK1_CPS250' | 'payShield10K_LMK1_CPS2500' | 'payShield10K_LMK1_CPS60' | 'payShield10K_LMK2_CPS250' | 'payShield10K_LMK2_CPS2500' | 'payShield10K_LMK2_CPS60' | string: SKU of the dedicated HSM
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of dedicated hsm resource creation (UTC).
 * **createdBy**: string: The identity that created dedicated hsm resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity.
 * **lastModifiedAt**: string: The timestamp of dedicated hsm resource last modification (UTC).
 * **lastModifiedBy**: string: The identity that last modified dedicated hsm resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity.
 
 ## ResourceTags
 ### Properties

@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBlobAuditingPolicyProperties](#serverblobauditingpolicyproperties): Properties of a server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -59,7 +59,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of encryption protector. This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionProtectorProperties](#encryptionprotectorproperties): Properties for an encryption protector execution.
 * **type**: 'Microsoft.Synapse/workspaces/encryptionProtector' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,7 +68,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedServerBlobAuditingPolicyProperties](#extendedserverblobauditingpolicyproperties): Properties of an extended server blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -123,7 +123,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerSecurityAlertPolicyProperties](#serversecurityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Synapse/workspaces/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -154,7 +154,7 @@
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Resource kind.
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolBlobAuditingPolicyProperties](#sqlpoolblobauditingpolicyproperties): Properties of a Sql pool blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/auditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -186,7 +186,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtendedSqlPoolBlobAuditingPolicyProperties](#extendedsqlpoolblobauditingpolicyproperties): Properties of an extended Sql pool blob auditing policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/extendedAuditingSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -197,7 +197,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string (ReadOnly): Kind of geo backup policy.  This is metadata used for the Azure portal experience.
 * **location**: string (ReadOnly): Backup policy location.
-* **name**: 'Default' (Required, DeployTimeConstant): The resource name
+* **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [GeoBackupPolicyProperties](#geobackuppolicyproperties) (Required): The properties of the geo backup policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/geoBackupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -234,7 +234,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SecurityAlertPolicyProperties](#securityalertpolicyproperties): Properties of a security alert policy.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/securityAlertPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -244,7 +244,7 @@
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location.
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
+* **name**: 'current' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [TransparentDataEncryptionProperties](#transparentdataencryptionproperties): Represents the properties of a database transparent data encryption.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/transparentDataEncryption' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -253,7 +253,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlPoolVulnerabilityAssessmentProperties](#sqlpoolvulnerabilityassessmentproperties): Properties of a Sql pool Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/sqlPools/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -289,7 +289,7 @@
 ### Properties
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties): Properties of a server Vulnerability Assessment.
 * **type**: 'Microsoft.Synapse/workspaces/vulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -359,7 +359,7 @@
 * **managedVirtualNetworkSettings**: [ManagedVirtualNetworkSettings](#managedvirtualnetworksettings): Managed Virtual Network Settings
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: Private endpoint connections to the workspace
 * **provisioningState**: string (ReadOnly): Resource provisioning state
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Enable or Disable public network access to workspace
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Enable or Disable public network access to workspace
 * **purviewConfiguration**: [PurviewConfiguration](#purviewconfiguration): Purview Configuration
 * **sqlAdministratorLogin**: string: Login for workspace SQL active directory administrator
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password
@@ -549,8 +549,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **lastSucceededTimestamp**: string (ReadOnly): The time when the Big Data pool was updated successfully.
 * **libraryRequirements**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
 * **nodeCount**: int: The number of nodes in the Big Data pool.
-* **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge': The level of compute power that each node in the Big Data pool has.
-* **nodeSizeFamily**: 'HardwareAcceleratedFPGA' | 'HardwareAcceleratedGPU' | 'MemoryOptimized' | 'None': The kind of nodes that the Big Data pool provides.
+* **nodeSize**: 'Large' | 'Medium' | 'None' | 'Small' | 'XLarge' | 'XXLarge' | 'XXXLarge' | string: The level of compute power that each node in the Big Data pool has.
+* **nodeSizeFamily**: 'HardwareAcceleratedFPGA' | 'HardwareAcceleratedGPU' | 'MemoryOptimized' | 'None' | string: The kind of nodes that the Big Data pool provides.
 * **provisioningState**: string: The state of the Big Data pool.
 * **sessionLevelPackagesEnabled**: bool: Whether session level packages enabled.
 * **sparkConfigProperties**: [LibraryRequirements](#libraryrequirements): Library requirements for a Big Data pool powered by Apache Spark
@@ -596,7 +596,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## EncryptionProtectorProperties
 ### Properties
 * **serverKeyName**: string: The name of the server key.
-* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+* **serverKeyType**: 'AzureKeyVault' | 'ServiceManaged' | string (Required): The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
 * **subregion**: string (ReadOnly): Subregion of the encryption protector.
 * **thumbprint**: string (ReadOnly): Thumbprint of the server key.
 * **uri**: string (ReadOnly): The URI of the server key.
@@ -689,7 +689,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## IpFirewallRuleProperties
 ### Properties
 * **endIpAddress**: string: The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-* **provisioningState**: 'DeleteError' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' (ReadOnly): Resource provisioning state
+* **provisioningState**: 'DeleteError' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Resource provisioning state
 * **startIpAddress**: string: The start IP address of the firewall rule. Must be IPv4 format
 
 ## IntegrationRuntime
@@ -699,7 +699,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **description**: string: Integration runtime description.
 ### ManagedIntegrationRuntime
 #### Properties
-* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): The state of integration runtime.
+* **state**: 'AccessDenied' | 'Initial' | 'Limited' | 'NeedRegistration' | 'Offline' | 'Online' | 'Started' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The state of integration runtime.
 * **type**: 'Managed' (Required): Type of integration runtime.
 * **typeProperties**: [ManagedIntegrationRuntimeTypeProperties](#managedintegrationruntimetypeproperties) (Required): Managed integration runtime type properties.
 
@@ -727,7 +727,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## IntegrationRuntimeDataFlowProperties
 ### Properties
-* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized': Compute type of the cluster which will execute data flow job.
+* **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized' | string: Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
@@ -747,9 +747,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **catalogInfo**: [IntegrationRuntimeSsisCatalogInfo](#integrationruntimessiscataloginfo): Catalog information for managed dedicated integration runtime.
 * **customSetupScriptProperties**: [IntegrationRuntimeCustomSetupScriptProperties](#integrationruntimecustomsetupscriptproperties): Custom setup script properties for a managed dedicated integration runtime.
 * **dataProxyProperties**: [IntegrationRuntimeDataProxyProperties](#integrationruntimedataproxyproperties): Data proxy properties for a managed dedicated integration runtime.
-* **edition**: 'Enterprise' | 'Standard': The edition for the SSIS Integration Runtime
+* **edition**: 'Enterprise' | 'Standard' | string: The edition for the SSIS Integration Runtime
 * **expressCustomSetupProperties**: [CustomSetupBase](#customsetupbase)[]: Custom setup without script properties for a SSIS integration runtime.
-* **licenseType**: 'BasePrice' | 'LicenseIncluded': License type for bringing your own license scenario.
+* **licenseType**: 'BasePrice' | 'LicenseIncluded' | string: License type for bringing your own license scenario.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -757,7 +757,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): Azure Synapse secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
 * **catalogAdminUserName**: string: The administrator user name of catalog database.
-* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard': The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+* **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard' | string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -781,7 +781,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## EntityReference
 ### Properties
 * **referenceName**: string: The name of this referenced entity.
-* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference': The type of this referenced entity.
+* **type**: 'IntegrationRuntimeReference' | 'LinkedServiceReference' | string: The type of this referenced entity.
 
 ## CustomSetupBase
 * **Discriminator**: type
@@ -859,8 +859,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## ManagedIdentitySqlControlSettingsModelPropertiesGrantSqlControlToManagedIdentity
 ### Properties
-* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' (ReadOnly): Actual state
-* **desiredState**: 'Disabled' | 'Enabled': Desired state
+* **actualState**: 'Disabled' | 'Disabling' | 'Enabled' | 'Enabling' | 'Unknown' | string (ReadOnly): Actual state
+* **desiredState**: 'Disabled' | 'Enabled' | string: Desired state
 
 ## ServerSecurityAlertPolicyProperties
 ### Properties
@@ -876,7 +876,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SqlPoolResourceProperties
 ### Properties
 * **collation**: string: Collation mode
-* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore': Specifies the mode of sql pool creation.
+* **createMode**: 'Default' | 'PointInTimeRestore' | 'Recovery' | 'Restore' | string: Specifies the mode of sql pool creation.
 
 Default: regular sql pool creation.
 
@@ -892,7 +892,7 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 * **restorePointInTime**: string: Snapshot time to restore
 * **sourceDatabaseId**: string: Source database to create from
 * **status**: string: Resource status
-* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS': The storage account type used to store backups for this sql pool.
+* **storageAccountType**: 'GRS' | 'LRS' | 'ZRS' | string: The storage account type used to store backups for this sql pool.
 
 ## Sku
 ### Properties
@@ -1100,7 +1100,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## MaintenanceWindowTimeRange
 ### Properties
-* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of maintenance window.
+* **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Day of maintenance window.
 * **duration**: string: Duration of maintenance window in minutes.
 * **startTime**: string: Start time minutes offset from 12am.
 

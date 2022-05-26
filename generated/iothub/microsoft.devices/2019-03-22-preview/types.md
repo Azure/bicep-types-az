@@ -52,7 +52,7 @@
 * **deviceStreams**: [IotHubPropertiesDeviceStreams](#iothubpropertiesdevicestreams): The device streams properties of iothub.
 * **enableFileUploadNotifications**: bool: If True, file upload notifications are enabled.
 * **eventHubEndpoints**: [IotHubPropertiesEventHubEndpoints](#iothubpropertieseventhubendpoints): The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
-* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub.
+* **features**: 'DeviceManagement' | 'None' | string: The capabilities and features enabled for the IoT hub.
 * **hostName**: string (ReadOnly): The name of the host.
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
 * **locations**: [IotHubLocationDescription](#iothublocationdescription)[] (ReadOnly): Primary and secondary location for iot hub
@@ -107,7 +107,7 @@
 ## IotHubLocationDescription
 ### Properties
 * **location**: string: Azure Geo Regions
-* **role**: 'primary' | 'secondary': Specific Role assigned to this location
+* **role**: 'primary' | 'secondary' | string: Specific Role assigned to this location
 
 ## IotHubPropertiesMessagingEndpoints
 ### Properties
@@ -160,7 +160,7 @@
 * **batchFrequencyInSeconds**: int: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
 * **connectionString**: string (Required): The connection string of the storage account.
 * **containerName**: string (Required): The name of storage container in the storage account.
-* **encoding**: 'Avro' | 'AvroDeflate' | 'JSON': Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
+* **encoding**: 'Avro' | 'AvroDeflate' | 'JSON' | string: Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
 * **fileNameFormat**: string: File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
 * **maxChunkSizeInBytes**: int: Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
 * **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
@@ -179,7 +179,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled.
 * **name**: string: The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## RouteProperties
 ### Properties
@@ -187,7 +187,7 @@
 * **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether a route is enabled.
 * **name**: string (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
+* **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## IotHubPropertiesStorageEndpoints
 ### Properties
@@ -203,7 +203,7 @@
 ## IotHubSkuInfo
 ### Properties
 * **capacity**: int: The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-* **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
+* **name**: 'B1' | 'B2' | 'B3' | 'F1' | 'S1' | 'S2' | 'S3' | string (Required): The name of the SKU.
 * **tier**: 'Basic' | 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub.
 
 ## ResourceTags

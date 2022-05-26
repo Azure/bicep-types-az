@@ -100,8 +100,8 @@
 ## Sku
 ### Properties
 * **capacity**: int: The specified messaging units for the tier.
-* **name**: 'Basic' | 'Premium' | 'Standard': Name of this SKU.
-* **tier**: 'Basic' | 'Premium' | 'Standard' (Required): The billing tier of this particular SKU.
+* **name**: 'Basic' | 'Premium' | 'Standard' | string: Name of this SKU.
+* **tier**: 'Basic' | 'Premium' | 'Standard' | string (Required): The billing tier of this particular SKU.
 
 ## NamespaceCreateOrUpdateParametersTags
 ### Properties

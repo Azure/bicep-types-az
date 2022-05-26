@@ -45,7 +45,7 @@
 * **delegatedManagedIdentityResourceId**: string: Id of the delegated managed identity resource
 * **description**: string: Description of role assignment
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User': The principal type of the assigned principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string: The principal type of the assigned principal ID.
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scope**: string (ReadOnly): The role assignment scope.
 * **updatedBy**: string (ReadOnly): Id of the user who updated the assignment
@@ -61,13 +61,13 @@
 * **justification**: string: Justification for the role assignment
 * **linkedRoleEligibilityScheduleId**: string: The linked role eligibility schedule id - to activate an eligibility.
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
 * **requestorId**: string (ReadOnly): Id of the user who created this request
-* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
+* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' | string (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scheduleInfo**: [RoleAssignmentScheduleRequestPropertiesScheduleInfo](#roleassignmentschedulerequestpropertiesscheduleinfo): Schedule info of the role assignment schedule
 * **scope**: string (ReadOnly): The role assignment schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly): The status of the role assignment schedule.
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule.
 * **targetRoleAssignmentScheduleId**: string: The resultant role assignment schedule id or the role assignment schedule id being updated
 * **targetRoleAssignmentScheduleInstanceId**: string: The role assignment schedule instance id being updated
 * **ticketInfo**: [RoleAssignmentScheduleRequestPropertiesTicketInfo](#roleassignmentschedulerequestpropertiesticketinfo): Ticket Info of the role assignment
@@ -106,7 +106,7 @@
 ### Properties
 * **duration**: string: Duration of the role assignment schedule in TimeSpan.
 * **endDateTime**: string: End DateTime of the role assignment schedule.
-* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration': Type of the role assignment schedule expiration
+* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration' | string: Type of the role assignment schedule expiration
 
 ## RoleAssignmentScheduleRequestPropertiesTicketInfo
 ### Properties
@@ -122,13 +122,13 @@
 * **expandedProperties**: [ExpandedProperties](#expandedproperties) (ReadOnly)
 * **justification**: string: Justification for the role eligibility
 * **principalId**: string (Required): The principal ID.
-* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' (ReadOnly): The principal type of the assigned principal ID.
+* **principalType**: 'Device' | 'ForeignGroup' | 'Group' | 'ServicePrincipal' | 'User' | string (ReadOnly): The principal type of the assigned principal ID.
 * **requestorId**: string (ReadOnly): Id of the user who created this request
-* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
+* **requestType**: 'AdminAssign' | 'AdminExtend' | 'AdminRemove' | 'AdminRenew' | 'AdminUpdate' | 'SelfActivate' | 'SelfDeactivate' | 'SelfExtend' | 'SelfRenew' | string (Required): The type of the role assignment schedule request. Eg: SelfActivate, AdminAssign etc
 * **roleDefinitionId**: string (Required): The role definition ID.
 * **scheduleInfo**: [RoleEligibilityScheduleRequestPropertiesScheduleInfo](#roleeligibilityschedulerequestpropertiesscheduleinfo): Schedule info of the role eligibility schedule
 * **scope**: string (ReadOnly): The role eligibility schedule request scope.
-* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' (ReadOnly): The status of the role assignment schedule.
+* **status**: 'Accepted' | 'AdminApproved' | 'AdminDenied' | 'Canceled' | 'Denied' | 'Failed' | 'FailedAsResourceIsLocked' | 'Granted' | 'Invalid' | 'PendingAdminDecision' | 'PendingApproval' | 'PendingApprovalProvisioning' | 'PendingEvaluation' | 'PendingExternalProvisioning' | 'PendingProvisioning' | 'PendingRevocation' | 'PendingScheduleCreation' | 'Provisioned' | 'ProvisioningStarted' | 'Revoked' | 'ScheduleCreated' | 'TimedOut' | string (ReadOnly): The status of the role assignment schedule.
 * **targetRoleEligibilityScheduleId**: string: The resultant role eligibility schedule id or the role eligibility schedule id being updated
 * **targetRoleEligibilityScheduleInstanceId**: string: The role eligibility schedule instance id being updated
 * **ticketInfo**: [RoleEligibilityScheduleRequestPropertiesTicketInfo](#roleeligibilityschedulerequestpropertiesticketinfo): Ticket Info of the role eligibility
@@ -142,7 +142,7 @@
 ### Properties
 * **duration**: string: Duration of the role eligibility schedule in TimeSpan.
 * **endDateTime**: string: End DateTime of the role eligibility schedule.
-* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration': Type of the role assignment schedule expiration
+* **type**: 'AfterDateTime' | 'AfterDuration' | 'NoExpiration' | string: Type of the role assignment schedule expiration
 
 ## RoleEligibilityScheduleRequestPropertiesTicketInfo
 ### Properties

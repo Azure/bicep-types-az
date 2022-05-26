@@ -29,7 +29,7 @@
 
 ## ConnectorProperties
 ### Properties
-* **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial': Connector billing model
+* **billingModel**: 'autoUpgrade' | 'expired' | 'premium' | 'trial' | string: Connector billing model
 * **collectionInfo**: [ConnectorCollectionInfo](#connectorcollectioninfo) (ReadOnly): Collection and ingestion information
 * **createdOn**: string (ReadOnly): Connector definition creation datetime
 * **credentialsKey**: string: Credentials authentication key (eg AWS ARN)
@@ -42,7 +42,7 @@
 * **providerBillingAccountDisplayName**: string (ReadOnly): The display name of the providerBillingAccountId as defined on the external provider
 * **providerBillingAccountId**: string (ReadOnly): Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
 * **reportId**: string: Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-* **status**: 'active' | 'error' | 'expired' | 'warning' (ReadOnly): Connector status
+* **status**: 'active' | 'error' | 'expired' | 'warning' | string (ReadOnly): Connector status
 * **subscriptionId**: string: Billing SubscriptionId
 
 ## ConnectorCollectionInfo
@@ -68,7 +68,7 @@
 * **description**: string: Description of a showback rule.
 * **modificationTime**: string (ReadOnly): The current status when showback rule was modified.
 * **scopes**: [Scope](#scope)[]: List of authorized assigned scopes.
-* **status**: 'Active' | 'NotActive': The current status of the showback rule.
+* **status**: 'Active' | 'NotActive' | string: The current status of the showback rule.
 * **version**: int (ReadOnly): The current version of showback rule.
 ### CostAllocationDetailsKind
 #### Properties
@@ -90,11 +90,11 @@
 
 ## CostAllocationDetails
 ### Properties
-* **policy**: 'Evenly' | 'Fixed' | 'Proportional': Cost allocation policy.
+* **policy**: 'Evenly' | 'Fixed' | 'Proportional' | string: Cost allocation policy.
 
 ## CustomPriceDetails
 ### Properties
-* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum'[]: Array of benefits.
+* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum' | string[]: Array of benefits.
 * **markups**: [Markup](#markup)[]: List of markups.
 * **pricesheet**: string
 

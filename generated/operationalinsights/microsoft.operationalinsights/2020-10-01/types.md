@@ -45,7 +45,7 @@
 ## ClusterProperties
 ### Properties
 * **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]: The list of Log Analytics workspaces associated with the cluster
-* **billingType**: 'Cluster' | 'Workspaces': Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'
+* **billingType**: 'Cluster' | 'Workspaces' | string: Configures whether billing will be only on the cluster or each workspace will be billed by its proportional use. This does not change the overall billing, only how it will be distributed. Default value is 'Cluster'
 * **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties): The Capacity Reservation properties.
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **createdDate**: string (ReadOnly): The cluster creation time
@@ -53,7 +53,7 @@
 * **isDoubleEncryptionEnabled**: bool (WriteOnly): Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The key vault properties.
 * **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' (ReadOnly): The provisioning state of the cluster.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
 
 ## AssociatedWorkspace
 ### Properties
@@ -77,7 +77,7 @@
 ## ClusterSku
 ### Properties
 * **capacity**: int: The capacity value
-* **name**: 'CapacityReservation': The name of the SKU.
+* **name**: 'CapacityReservation' | string: The name of the SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -92,9 +92,9 @@
 * **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
 * **modifiedDate**: string (ReadOnly): Workspace modification date.
 * **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating': The provisioning state of the workspace.
-* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled': The network access type for operating on the Log Analytics Workspace. By default it is Enabled
-* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled': The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for operating on the Log Analytics Workspace. By default it is Enabled
 * **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU (tier) of a workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
@@ -118,12 +118,12 @@
 ### Properties
 * **capacityReservationLevel**: int: The capacity reservation level for this workspace, when CapacityReservation sku is selected.
 * **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
-* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' (Required): The name of the SKU.
+* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
 
 ## WorkspaceCapping
 ### Properties
 * **dailyQuotaGb**: int: The workspace daily quota for ingestion.
-* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' (ReadOnly): The status of data ingestion for this workspace.
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
 * **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
 
 ## TrackedResourceTags

@@ -21,7 +21,7 @@
 
 ## RegistrationAssignmentProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the registration definition.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the registration definition.
 * **registrationDefinition**: [RegistrationAssignmentPropertiesRegistrationDefinition](#registrationassignmentpropertiesregistrationdefinition) (ReadOnly): The registration definition associated with the registration assignment.
 * **registrationDefinitionId**: string (Required): The fully qualified path of the registration definition.
 
@@ -49,7 +49,7 @@
 * **managedByTenantName**: string: The name of the managedBy tenant.
 * **manageeTenantId**: string: The identifier of the managed tenant.
 * **manageeTenantName**: string: The name of the managed tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating': The current provisioning state of the registration definition.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string: The current provisioning state of the registration definition.
 * **registrationDefinitionName**: string: The name of the registration definition.
 
 ## Authorization
@@ -70,7 +70,7 @@
 ### Properties
 * **managedByTenantApprovers**: [EligibleApprover](#eligibleapprover)[]: The list of managedByTenant approvers for the eligible authorization.
 * **maximumActivationDuration**: string: The maximum access duration in ISO 8601 format for just-in-time access requests.
-* **multiFactorAuthProvider**: 'Azure' | 'None' (Required): The multi-factor authorization provider to be used for just-in-time access requests.
+* **multiFactorAuthProvider**: 'Azure' | 'None' | string (Required): The multi-factor authorization provider to be used for just-in-time access requests.
 
 ## EligibleApprover
 ### Properties
@@ -86,6 +86,6 @@
 * **managedByTenantName**: string (ReadOnly): The name of the managedBy tenant.
 * **manageeTenantId**: string (ReadOnly): The identifier of the managed tenant.
 * **manageeTenantName**: string (ReadOnly): The name of the managed tenant.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): The current provisioning state of the registration definition.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of the registration definition.
 * **registrationDefinitionName**: string: The name of the registration definition.
 

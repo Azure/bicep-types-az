@@ -13,7 +13,7 @@
 
 ## AzureADMetricsPropertiesFormat
 ### Properties
-* **provisioningState**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The provisioning state of the resource.
+* **provisioningState**: 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 
 ## TrackedResourceTags
 ### Properties

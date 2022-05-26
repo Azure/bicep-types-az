@@ -29,14 +29,14 @@
 * **aadProfile**: [ConnectedClusterAADProfile](#connectedclusteraadprofile) (Required): AAD profile of the connected cluster
 * **agentPublicKeyCertificate**: string (Required): Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
 * **agentVersion**: string (ReadOnly): Version of the agent running on the connected cluster resource
-* **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline': Represents the connectivity status of the connected cluster.
+* **connectivityStatus**: 'Connected' | 'Connecting' | 'Expired' | 'Offline' | string: Represents the connectivity status of the connected cluster.
 * **distribution**: string: The Kubernetes distribution running on this connected cluster.
 * **infrastructure**: string: The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
 * **kubernetesVersion**: string (ReadOnly): The Kubernetes version of the connected cluster resource
 * **lastConnectivityTime**: string (ReadOnly): Time representing the last instance when heart beat was received from the cluster
 * **managedIdentityCertificateExpirationTime**: string (ReadOnly): Expiration time of the managed identity certificate
 * **offering**: string (ReadOnly): Connected cluster offering
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating': The current deployment state of connectedClusters.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string: The current deployment state of connectedClusters.
 * **totalCoreCount**: int (ReadOnly): Number of CPU cores present in the connected cluster resource
 * **totalNodeCount**: int (ReadOnly): Number of nodes present in the connected cluster resource
 
@@ -53,7 +53,7 @@
 
 ## AuthenticationDetails
 ### Properties
-* **authenticationMethod**: 'Token' (Required, WriteOnly): The mode of client authentication.
+* **authenticationMethod**: 'Token' | string (Required, WriteOnly): The mode of client authentication.
 * **value**: [AuthenticationDetailsValue](#authenticationdetailsvalue) (Required, WriteOnly): Authentication token value.
 
 ## AuthenticationDetailsValue

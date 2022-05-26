@@ -42,8 +42,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Standard' (Required): Name of this SKU.
-* **tier**: 'Standard': The tier of this SKU.
+* **name**: 'Standard' | string (Required): Name of this SKU.
+* **tier**: 'Standard' | string: The tier of this SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -52,19 +52,19 @@
 
 ## NetworkRuleSetProperties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow' | string: The IP Filter Action
 * **ipMask**: string: IP Mask
 
 ## PrivateEndpointConnectionProperties
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Private endpoint object properties.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): An object that represents the approval state of the private link connection.
-* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'DeletingByProxy' | 'Succeeded' | 'Unknown' | 'Updating' | 'UpdatingByProxy' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -74,7 +74,7 @@
 ### Properties
 * **actionRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval or rejection.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## TrackedResourceTags
 ### Properties

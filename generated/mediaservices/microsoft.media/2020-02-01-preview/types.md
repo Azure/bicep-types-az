@@ -16,7 +16,7 @@
 * **lastModified**: string (ReadOnly): Date the Media Graph was last modified.
 * **sinks**: [MediaGraphSink](#mediagraphsink)[] (Required): Media Graph sinks.
 * **sources**: [MediaGraphSource](#mediagraphsource)[] (Required): Media Graph sources.
-* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' (ReadOnly): Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+* **state**: 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): Media Graph state which indicates the resource allocation status for running the media graph pipeline.
 
 ## MediaGraphSink
 * **Discriminator**: @odata.type
@@ -39,7 +39,7 @@
 #### Properties
 * **@odata.type**: '#Microsoft.Media.MediaGraphRtspSource' (Required): The discriminator for derived types.
 * **endpoint**: [MediaGraphEndpoint](#mediagraphendpoint) (Required): Base class for endpoints.
-* **transport**: 'Http' | 'Tcp' (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
+* **transport**: 'Http' | 'Tcp' | string (Required): Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
 
 
 ## MediaGraphEndpoint

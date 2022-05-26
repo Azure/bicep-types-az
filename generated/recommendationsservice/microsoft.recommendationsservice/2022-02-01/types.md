@@ -38,7 +38,7 @@
 
 ## AccountResourceProperties
 ### Properties
-* **configuration**: 'Capacity' | 'Free': Account configuration. This can only be set at RecommendationsService Account creation.
+* **configuration**: 'Capacity' | 'Free' | string: Account configuration. This can only be set at RecommendationsService Account creation.
 * **cors**: [CorsRule](#corsrule)[]: The list of CORS details.
 * **endpointAuthentications**: [EndpointAuthentication](#endpointauthentication)[]: The list of service endpoints authentication details.
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
@@ -56,16 +56,16 @@
 ### Properties
 * **aadTenantID**: string: AAD tenant ID.
 * **principalID**: string: AAD principal ID.
-* **principalType**: 'Application' | 'User': AAD principal type.
+* **principalType**: 'Application' | 'User' | string: AAD principal type.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -74,11 +74,11 @@
 
 ## ModelingResourceProperties
 ### Properties
-* **features**: 'Basic' | 'Premium' | 'Standard': Modeling features controls the set of supported scenarios\models being computed. This can only be set at Modeling creation.
-* **frequency**: 'High' | 'Low' | 'Medium': Modeling frequency controls the modeling compute frequency.
+* **features**: 'Basic' | 'Premium' | 'Standard' | string: Modeling features controls the set of supported scenarios\models being computed. This can only be set at Modeling creation.
+* **frequency**: 'High' | 'Low' | 'Medium' | string: Modeling frequency controls the modeling compute frequency.
 * **inputData**: [ModelingInputData](#modelinginputdata): The configuration to raw CDM data to be used as Modeling resource input.
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
-* **size**: 'Large' | 'Medium' | 'Small': Modeling size controls the maximum supported input data size.
+* **size**: 'Large' | 'Medium' | 'Small' | string: Modeling size controls the maximum supported input data size.
 
 ## ModelingInputData
 ### Properties

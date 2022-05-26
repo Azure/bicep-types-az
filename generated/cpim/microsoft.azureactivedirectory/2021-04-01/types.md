@@ -33,7 +33,7 @@
 
 ## B2CTenantResourcePropertiesBillingConfig
 ### Properties
-* **billingType**: 'Auths' | 'MAU' (ReadOnly): The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
+* **billingType**: 'Auths' | 'MAU' | string (ReadOnly): The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
 * **effectiveStartDateUtc**: string (ReadOnly): The data from which the billing type took effect
 
 ## CreateTenantProperties
@@ -43,17 +43,17 @@
 
 ## B2CResourceSKU
 ### Properties
-* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard': The name of the SKU for the tenant.
-* **tier**: 'A0': The tier of the tenant.
+* **name**: 'PremiumP1' | 'PremiumP2' | 'Standard' | string: The name of the SKU for the tenant.
+* **tier**: 'A0' | string: The tier of the tenant.
 
 ## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## CreateTenantRequestBodyTags
 ### Properties

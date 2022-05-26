@@ -117,7 +117,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Definition of an Extended Location
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): The identity information for the resource.
-* **kind**: 'Azure' | 'AzureArc': Kind of the resource.
+* **kind**: 'Azure' | 'AzureArc' | string: Kind of the resource.
 * **location**: string (Required): Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicProperties](#topicproperties): Properties of the Topic
@@ -154,7 +154,7 @@
 ### Properties
 * **principalId**: string: The principal ID of resource identity.
 * **tenantId**: string: The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
 * **userAssignedIdentities**: [IdentityInfoUserAssignedIdentities](#identityinfouserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 This property is currently not used and reserved for future usage.
@@ -173,17 +173,17 @@ This property is currently not used and reserved for future usage.
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain.
+* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the domain.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': This determines if traffic is allowed over public network. By default it is enabled. 
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the domain.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled. 
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
 
 ## InboundIpRule
 ### Properties
-* **action**: 'Allow': Action to perform based on the match or no match of the IpMask.
+* **action**: 'Allow' | string: Action to perform based on the match or no match of the IpMask.
 * **ipMask**: string: IP Address in CIDR notation e.g., 10.0.0.0/8.
 
 ## InputSchemaMapping
@@ -235,7 +235,7 @@ along with a default value to be used, and at least one of these two properties 
 * **groupIds**: string[]: GroupIds from the private link service resource.
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -245,20 +245,20 @@ along with a default value to be used, and at least one of these two properties 
 ### Properties
 * **actionsRequired**: string: Actions required (if any).
 * **description**: string: Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Status of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
 
 ## ResourceSku
 ### Properties
-* **name**: 'Basic' | 'Premium': The Sku name of the resource. The possible values are: Basic or Premium.
+* **name**: 'Basic' | 'Premium' | string: The Sku name of the resource. The possible values are: Basic or Premium.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -267,7 +267,7 @@ along with a default value to be used, and at least one of these two properties 
 
 ## DomainTopicProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain topic.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the domain topic.
 
 ## EventSubscriptionProperties
 ### Properties
@@ -275,11 +275,11 @@ along with a default value to be used, and at least one of these two properties 
 * **deadLetterWithResourceIdentity**: [DeadLetterWithResourceIdentity](#deadletterwithresourceidentity): Information about the deadletter destination with resource identity.
 * **deliveryWithResourceIdentity**: [DeliveryWithResourceIdentity](#deliverywithresourceidentity): Information about the delivery for an event subscription with resource identity.
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription.
-* **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema': The event delivery schema for the event subscription.
+* **eventDeliverySchema**: 'CloudEventSchemaV1_0' | 'CustomInputSchema' | 'EventGridSchema' | string: The event delivery schema for the event subscription.
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
 * **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription.
 * **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription.
+* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
@@ -305,7 +305,7 @@ along with a default value to be used, and at least one of these two properties 
 
 ## EventSubscriptionIdentity
 ### Properties
-* **type**: 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
+* **type**: 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
 * **userAssignedIdentity**: string: The user identity associated with the resource.
 
 ## DeliveryWithResourceIdentity
@@ -543,7 +543,7 @@ Wildcard characters are not supported in this path.
 * **endpoint**: string (ReadOnly): Endpoint for the partner namespace.
 * **partnerRegistrationFullyQualifiedId**: string: The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the partner namespace.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner namespace.
 
 ## TrackedResourceTags
 ### Properties
@@ -558,8 +558,8 @@ the event channel and corresponding partner topic are deleted.
 * **filter**: [EventChannelFilter](#eventchannelfilter): Filter for the Event Channel.
 * **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
-* **partnerTopicReadinessState**: 'ActivatedByUser' | 'DeactivatedByUser' | 'DeletedByUser' | 'NotActivatedByUserYet' (ReadOnly): The readiness state of the corresponding partner topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event channel.
+* **partnerTopicReadinessState**: 'ActivatedByUser' | 'DeactivatedByUser' | 'DeletedByUser' | 'NotActivatedByUserYet' | string (ReadOnly): The readiness state of the corresponding partner topic.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event channel.
 * **source**: [EventChannelSource](#eventchannelsource): Properties of the source of an event channel.
 
 ## EventChannelDestination
@@ -599,10 +599,10 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 * **partnerResourceTypeDescription**: string: Short description of the partner resource type. The length of this description should not exceed 256 characters.
 * **partnerResourceTypeDisplayName**: string: Display name of the partner resource type.
 * **partnerResourceTypeName**: string: Name of the partner resource type.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the partner registration.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner registration.
 * **setupUri**: string: URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.
-* **visibilityState**: 'GenerallyAvailable' | 'Hidden' | 'PublicPreview': Visibility state of the partner registration.
+* **visibilityState**: 'GenerallyAvailable' | 'Hidden' | 'PublicPreview' | string: Visibility state of the partner registration.
 
 ## TrackedResourceTags
 ### Properties
@@ -612,7 +612,7 @@ integration on an event source.
 ## SystemTopicProperties
 ### Properties
 * **metricResourceId**: string (ReadOnly): Metric resource id for the system topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Private Endpoint Connection.
 * **source**: string: Source for the system topic.
 * **topicType**: string: TopicType for the system topic.
 
@@ -630,12 +630,12 @@ integration on an event source.
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
 * **inboundIpRules**: [InboundIpRule](#inboundiprule)[]: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema': This determines the format that Event Grid should expect for incoming events published to the domain.
+* **inputSchema**: 'CloudEventSchemaV1_0' | 'CustomEventSchema' | 'EventGridSchema' | string: This determines the format that Event Grid should expect for incoming events published to the domain.
 * **inputSchemaMapping**: [InputSchemaMapping](#inputschemamapping): By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'.
 * **metricResourceId**: string (ReadOnly): Metric resource id for the topic.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Array of PrivateEndpointConnection
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': This determines if traffic is allowed over public network. By default it is enabled. 
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: This determines if traffic is allowed over public network. By default it is enabled. 
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
 
 ## TrackedResourceTags

@@ -53,7 +53,7 @@
 ## DomainProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the domain.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the domain.
 
 ## TrackedResourceTags
 ### Properties
@@ -62,7 +62,7 @@
 
 ## DomainTopicProperties
 ### Properties
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the domain topic.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the domain topic.
 
 ## EventSubscriptionProperties
 ### Properties
@@ -71,7 +71,7 @@
 * **expirationTimeUtc**: string: Expiration time of the event subscription.
 * **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription.
 * **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription.
+* **provisioningState**: 'AwaitingManualAction' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Information about the retry policy for an event subscription.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
@@ -228,7 +228,7 @@ Wildcard characters are not supported in this path.
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
 
 ## TrackedResourceTags
 ### Properties

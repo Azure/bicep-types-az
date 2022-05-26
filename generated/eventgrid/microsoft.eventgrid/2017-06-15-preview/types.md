@@ -30,12 +30,12 @@
 * **destination**: [EventSubscriptionDestination](#eventsubscriptiondestination): Information about the destination for an event subscription
 * **filter**: [EventSubscriptionFilter](#eventsubscriptionfilter): Filter for the Event Subscription
 * **labels**: string[]: List of user defined labels.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the event subscription.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the event subscription.
 * **topic**: string (ReadOnly): Name of the topic of the event subscription.
 
 ## EventSubscriptionDestination
 ### Properties
-* **endpointType**: 'WebHook': Type of the endpoint for the event subscription destination
+* **endpointType**: 'WebHook' | string: Type of the endpoint for the event subscription destination
 * **properties**: [EventSubscriptionDestinationProperties](#eventsubscriptiondestinationproperties): Properties of the event subscription destination
 
 ## EventSubscriptionDestinationProperties
@@ -58,7 +58,7 @@ Wildcard characters are not supported in this path.
 ## TopicProperties
 ### Properties
 * **endpoint**: string (ReadOnly): Endpoint for the topic.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the topic.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the topic.
 
 ## TrackedResourceTags
 ### Properties

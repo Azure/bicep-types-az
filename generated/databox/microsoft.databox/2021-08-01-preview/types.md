@@ -49,7 +49,7 @@
 * **isPrepareToShipEnabled**: bool (ReadOnly): Is Prepare To Ship Enabled on this job
 * **isShippingAddressEditable**: bool (ReadOnly): Describes whether the shipping address is editable or not.
 * **startTime**: string (ReadOnly): Time at which the job was started in UTC ISO 8601 format.
-* **status**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' (ReadOnly): Name of the stage which is in progress.
+* **status**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' | string (ReadOnly): Name of the stage which is in progress.
 * **transferType**: 'ExportFromAzure' | 'ImportToAzure' (Required): Type of the transfer.
 
 ## JobDeliveryInfo
@@ -65,7 +65,7 @@
 * **contactDetails**: [ContactDetails](#contactdetails) (Required): Contact Details.
 * **copyLogDetails**: [CopyLogDetails](#copylogdetails)[] (ReadOnly): List of copy log details.
 * **datacenterAddress**: [DatacenterAddressResponse](#datacenteraddressresponse) (ReadOnly): Datacenter address for given storage location.
-* **dataCenterCode**: 'AM2' | 'AMS06' | 'AMS20' | 'AUH20' | 'AdHoc' | 'BJB' | 'BL20' | 'BL7' | 'BN1' | 'BN7' | 'BOM01' | 'BY1' | 'BY2' | 'BY21' | 'BY24' | 'CBR20' | 'CH1' | 'CPQ02' | 'CPQ20' | 'CWL20' | 'CYS04' | 'DSM05' | 'FRA22' | 'HKG20' | 'Invalid' | 'JNB21' | 'JNB22' | 'LON24' | 'MAA01' | 'MEL23' | 'MNZ21' | 'MWH01' | 'ORK70' | 'OSA20' | 'PAR22' | 'PUS20' | 'SEL20' | 'SEL21' | 'SG2' | 'SHA03' | 'SIN20' | 'SN5' | 'SN6' | 'SN8' | 'SSE90' | 'SYD03' | 'SYD23' | 'TYO01' | 'TYO22' | 'YQB20' | 'YTO20' | 'YTO21' | 'ZRH20' (ReadOnly): DataCenter code.
+* **dataCenterCode**: 'AM2' | 'AMS06' | 'AMS20' | 'AUH20' | 'AdHoc' | 'BJB' | 'BL20' | 'BL7' | 'BN1' | 'BN7' | 'BOM01' | 'BY1' | 'BY2' | 'BY21' | 'BY24' | 'CBR20' | 'CH1' | 'CPQ02' | 'CPQ20' | 'CWL20' | 'CYS04' | 'DSM05' | 'FRA22' | 'HKG20' | 'Invalid' | 'JNB21' | 'JNB22' | 'LON24' | 'MAA01' | 'MEL23' | 'MNZ21' | 'MWH01' | 'ORK70' | 'OSA20' | 'PAR22' | 'PUS20' | 'SEL20' | 'SEL21' | 'SG2' | 'SHA03' | 'SIN20' | 'SN5' | 'SN6' | 'SN8' | 'SSE90' | 'SYD03' | 'SYD23' | 'TYO01' | 'TYO22' | 'YQB20' | 'YTO20' | 'YTO21' | 'ZRH20' | string (ReadOnly): DataCenter code.
 * **dataExportDetails**: [DataExportDetails](#dataexportdetails)[]: Details of the data to be exported from azure.
 * **dataImportDetails**: [DataImportDetails](#dataimportdetails)[]: Details of the data to be imported into azure.
 * **deliveryPackage**: [PackageShippingDetails](#packageshippingdetails) (ReadOnly): package shipping details
@@ -120,7 +120,7 @@
 ## NotificationPreference
 ### Properties
 * **sendNotification**: bool (Required): Notification is required or not.
-* **stageName**: 'AtAzureDC' | 'Created' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' | 'ShippedToCustomer' (Required): Name of the stage.
+* **stageName**: 'AtAzureDC' | 'Created' | 'DataCopy' | 'Delivered' | 'DevicePrepared' | 'Dispatched' | 'PickedUp' | 'ShippedToCustomer' | string (Required): Name of the stage.
 
 ## CopyLogDetails
 * **Discriminator**: copyLogDetailsType
@@ -266,7 +266,7 @@
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the job stage.
 * **jobStageDetails**: any (ReadOnly): Any object
-* **stageName**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' (ReadOnly): Name of the stage which is in progress.
+* **stageName**: 'Aborted' | 'AtAzureDC' | 'AwaitingShipmentDetails' | 'Cancelled' | 'Completed' | 'CompletedWithErrors' | 'CompletedWithWarnings' | 'Created' | 'DataCopy' | 'Delivered' | 'DeviceOrdered' | 'DevicePrepared' | 'Dispatched' | 'Failed_IssueDetectedAtAzureDC' | 'Failed_IssueReportedAtCustomer' | 'PickedUp' | 'PreparingToShipFromAzureDC' | 'ReadyToDispatchFromAzureDC' | 'ReadyToReceiveAtAzureDC' | 'ShippedToAzureDC' | 'ShippedToCustomer' | string (ReadOnly): Name of the stage which is in progress.
 * **stageStatus**: 'Cancelled' | 'Cancelling' | 'CustomerActionPerformedForCleanUp' | 'Failed' | 'InProgress' | 'None' | 'Succeeded' | 'SucceededWithErrors' | 'SucceededWithWarnings' | 'WaitingForCustomerAction' | 'WaitingForCustomerActionForCleanUp' | 'WaitingForCustomerActionForKek' (ReadOnly): Status of the job stage.
 * **stageTime**: string (ReadOnly): Time for the job stage in UTC ISO 8601 format.
 
@@ -343,7 +343,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
-* **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' (ReadOnly): The Status of the copy
+* **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Type of the account.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
@@ -399,7 +399,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **bytesCopied**: int (ReadOnly): Bytes copied during the copy of disk.
 * **percentComplete**: int (ReadOnly): Indicates the percentage completed for the copy of the disk.
 * **serialNumber**: string (ReadOnly): The serial number of the disk
-* **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' (ReadOnly): The Status of the copy
+* **status**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 
 ## DataBoxDiskJobDetailsDisksAndSizeDetails
 ### Properties

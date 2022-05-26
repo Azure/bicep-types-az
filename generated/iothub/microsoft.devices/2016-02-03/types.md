@@ -41,7 +41,7 @@
 * **comments**: string: Comments.
 * **enableFileUploadNotifications**: bool: If True, file upload notifications are enabled.
 * **eventHubEndpoints**: [IotHubPropertiesEventHubEndpoints](#iothubpropertieseventhubendpoints): The Event Hub-compatible endpoint properties. The possible keys to this dictionary are events and operationsMonitoringEvents. Both of these keys have to be present in the dictionary while making create or update calls for the IoT hub.
-* **features**: 'DeviceManagement' | 'None': The capabilities and features enabled for the IoT hub.
+* **features**: 'DeviceManagement' | 'None' | string: The capabilities and features enabled for the IoT hub.
 * **hostName**: string (ReadOnly): The name of the host.
 * **ipFilterRules**: [IpFilterRule](#ipfilterrule)[]: The IP filter rules.
 * **messagingEndpoints**: [IotHubPropertiesMessagingEndpoints](#iothubpropertiesmessagingendpoints): The messaging endpoint properties for the file upload notification queue.
@@ -105,7 +105,7 @@
 ## OperationsMonitoringPropertiesEvents
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: 'Error' | 'Error, Information' | 'Information' | 'None'
+* **Additional Properties Type**: 'Error' | 'Error, Information' | 'Information' | 'None' | string
 
 ## IotHubPropertiesStorageEndpoints
 ### Properties
@@ -121,7 +121,7 @@
 ## IotHubSkuInfo
 ### Properties
 * **capacity**: int (Required): The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-* **name**: 'F1' | 'S1' | 'S2' | 'S3' (Required): The name of the SKU.
+* **name**: 'F1' | 'S1' | 'S2' | 'S3' | string (Required): The name of the SKU.
 * **tier**: 'Free' | 'Standard' (ReadOnly): The billing tier for the IoT hub.
 
 ## ResourceTags

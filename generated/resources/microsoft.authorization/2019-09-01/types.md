@@ -40,7 +40,7 @@
 ### Properties
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
-* **enforcementMode**: 'Default' | 'DoNotEnforce': The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+* **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
 * **metadata**: any: Any object
 * **notScopes**: string[]: The policy's excluded scopes.
 * **parameters**: [ParameterValues](#parametervalues): The parameter values for the policy rule. The keys are the parameter names.
@@ -69,7 +69,7 @@
 * **mode**: string: The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
 * **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
 * **policyRule**: any: Any object
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
 ## ParameterDefinitions
 ### Properties
@@ -81,7 +81,7 @@
 * **allowedValues**: any[]: The allowed values for the parameter.
 * **defaultValue**: any: Any object
 * **metadata**: [ParameterDefinitionsValueMetadata](#parameterdefinitionsvaluemetadata): General metadata for the parameter.
-* **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String': The data type of the parameter.
+* **type**: 'Array' | 'Boolean' | 'DateTime' | 'Float' | 'Integer' | 'Object' | 'String' | string: The data type of the parameter.
 
 ## ParameterDefinitionsValueMetadata
 ### Properties
@@ -98,7 +98,7 @@
 * **parameters**: [ParameterDefinitions](#parameterdefinitions): The parameter definitions for parameters used in the policy. The keys are the parameter names.
 * **policyDefinitionGroups**: [PolicyDefinitionGroup](#policydefinitiongroup)[]: The metadata describing groups of policy definition references within the policy set definition.
 * **policyDefinitions**: [PolicyDefinitionReference](#policydefinitionreference)[] (Required): An array of policy definition references.
-* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static': The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+* **policyType**: 'BuiltIn' | 'Custom' | 'NotSpecified' | 'Static' | string: The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
 
 ## ParameterDefinitions
 ### Properties

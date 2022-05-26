@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
-* **kind**: 'Gen1' | 'Gen2': The Kind of the Maps Account.
+* **kind**: 'Gen1' | 'Gen2' | string: The Kind of the Maps Account.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [MapsAccountProperties](#mapsaccountproperties): Additional Map account properties
@@ -78,17 +78,17 @@
 
 ## Sku
 ### Properties
-* **name**: 'G2' | 'S0' | 'S1' (Required): The name of the SKU, in standard format (such as S0).
+* **name**: 'G2' | 'S0' | 'S1' | string (Required): The name of the SKU, in standard format (such as S0).
 * **tier**: string (ReadOnly): Gets the sku tier. This is based on the SKU name.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -118,7 +118,7 @@
 * **maxRatePerSecond**: int (Required, WriteOnly): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
 * **principalId**: string (Required, WriteOnly): The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
 * **regions**: string[] (WriteOnly): Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
-* **signingKey**: 'primaryKey' | 'secondaryKey' (Required, WriteOnly): The Map account key to use for signing.
+* **signingKey**: 'primaryKey' | 'secondaryKey' | string (Required, WriteOnly): The Map account key to use for signing.
 * **start**: string (Required, WriteOnly): The date time offset of when the token validity begins. For example "2017-05-24T10:42:03.1567373Z".
 
 ## MapsAccountSasToken

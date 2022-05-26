@@ -13,12 +13,12 @@
 ## BudgetProperties
 ### Properties
 * **amount**: int (Required): The total amount of cost to track with the budget
-* **category**: 'Cost' (Required): The category of the budget, whether the budget tracks cost or usage.
+* **category**: 'Cost' | string (Required): The category of the budget, whether the budget tracks cost or usage.
 * **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
 * **filter**: [BudgetFilter](#budgetfilter): May be used to filter budgets by resource group, resource, or meter.
 * **forecastSpend**: [ForecastSpend](#forecastspend) (ReadOnly): The forecasted cost which is being tracked for a budget.
 * **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications): Dictionary of notifications associated with the budget. Budget can have up to five notifications.
-* **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+* **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Monthly' | 'Quarterly' | string (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
 * **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The start and end date for a budget.
 
 ## CurrentSpend
@@ -41,7 +41,7 @@
 ## BudgetComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'In' (Required): The operator to use for comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## ForecastSpend
@@ -60,9 +60,9 @@
 * **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
-* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' (Required): The comparison operator.
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | string (Required): The comparison operator.
 * **threshold**: int (Required): Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
-* **thresholdType**: 'Actual' | 'Forecasted': The type of threshold
+* **thresholdType**: 'Actual' | 'Forecasted' | string: The type of threshold
 
 ## BudgetTimePeriod
 ### Properties

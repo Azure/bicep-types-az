@@ -86,7 +86,7 @@
 ## ClusterResourceProperties
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile): Service network profile payload
-* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Service
+* **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
 * **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
 
@@ -106,7 +106,7 @@
 
 ## RequiredTraffic
 ### Properties
-* **direction**: 'Inbound' | 'Outbound' (ReadOnly): The direction of required traffic
+* **direction**: 'Inbound' | 'Outbound' | string (ReadOnly): The direction of required traffic
 * **fqdns**: string[] (ReadOnly): The FQDN list of required traffic
 * **ips**: string[] (ReadOnly): The ip list of required traffic
 * **port**: int (ReadOnly): The port of required traffic
@@ -127,7 +127,7 @@
 ### Properties
 * **principalId**: string: Principal Id
 * **tenantId**: string: Tenant Id
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned': Type of the managed identity
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: Type of the managed identity
 
 ## AppResourceProperties
 ### Properties
@@ -137,7 +137,7 @@
 * **fqdn**: string: Fully qualified dns Name.
 * **httpsOnly**: bool: Indicate if only https is allowed.
 * **persistentDisk**: [PersistentDisk](#persistentdisk): Persistent disk payload
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the App
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the App
 * **public**: bool: Indicates whether the App exposes public endpoint
 * **temporaryDisk**: [TemporaryDisk](#temporarydisk): Temporary disk payload
 * **url**: string (ReadOnly): URL of the App
@@ -176,9 +176,9 @@
 * **createdTime**: string (ReadOnly): Date time when the resource is created
 * **deploymentSettings**: [DeploymentSettings](#deploymentsettings): Deployment settings payload
 * **instances**: [DeploymentInstance](#deploymentinstance)[] (ReadOnly): Collection of instances belong to the Deployment
-* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the Deployment
+* **provisioningState**: 'Creating' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Deployment
 * **source**: [UserSourceInfo](#usersourceinfo): Source information for a deployment
-* **status**: 'Allocating' | 'Compiling' | 'Failed' | 'Running' | 'Stopped' | 'Unknown' | 'Upgrading' (ReadOnly): Status of the Deployment
+* **status**: 'Allocating' | 'Compiling' | 'Failed' | 'Running' | 'Stopped' | 'Unknown' | 'Upgrading' | string (ReadOnly): Status of the Deployment
 
 ## DeploymentSettings
 ### Properties
@@ -187,7 +187,7 @@
 * **jvmOptions**: string: JVM parameter
 * **memoryInGB**: int: Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
 * **netCoreMainEntryPath**: string: The path to the .NET executable relative to zip root
-* **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31': Runtime version
+* **runtimeVersion**: 'Java_11' | 'Java_8' | 'NetCore_31' | string: Runtime version
 
 ## DeploymentSettingsEnvironmentVariables
 ### Properties
@@ -207,7 +207,7 @@
 * **artifactSelector**: string: Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.
 * **relativePath**: string: Relative path of the storage which stores the source
-* **type**: 'Jar' | 'NetCoreZip' | 'Source': Type of the source uploaded
+* **type**: 'Jar' | 'NetCoreZip' | 'Source' | string: Type of the source uploaded
 * **version**: string: Version of the source
 
 ## CustomDomainProperties
@@ -233,7 +233,7 @@ the relative path to the target module/project.
 ### Properties
 * **configServer**: [ConfigServerSettings](#configserversettings): The settings of config server.
 * **error**: [Error](#error): The error code compose of code and message.
-* **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly): State of the config server.
+* **provisioningState**: 'Deleted' | 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the config server.
 
 ## ConfigServerSettings
 ### Properties
@@ -277,7 +277,7 @@ the relative path to the target module/project.
 * **appInsightsInstrumentationKey**: string: Target application insight instrumentation key, null or whitespace include empty will disable monitoringSettings
 * **appInsightsSamplingRate**: int: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
 * **error**: [Error](#error): The error code compose of code and message.
-* **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' (ReadOnly): State of the Monitoring Setting.
+* **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
 
 ## ApplicationInsightsAgentVersions

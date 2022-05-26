@@ -16,7 +16,7 @@
 ### Properties
 * **description**: string: The description of a graph query.
 * **query**: string (Required): KQL query that will be graph.
-* **resultKind**: 'basic' (ReadOnly): Enum indicating a type of graph query.
+* **resultKind**: 'basic' | string (ReadOnly): Enum indicating a type of graph query.
 * **timeModified**: string (ReadOnly): Date and time in UTC of the last modification that was made to this graph query definition.
 
 ## ResourceTags

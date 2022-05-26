@@ -64,7 +64,7 @@
 ### Properties
 * **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
 * **size**: int: Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
 ## VolumeProperties
@@ -73,7 +73,7 @@
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Export policy rule
 * **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
 * **subnetId**: string: The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **usageThreshold**: int: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB.
 

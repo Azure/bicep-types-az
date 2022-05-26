@@ -97,7 +97,7 @@
 ### Properties
 * **backupConfiguration**: [BackupConfiguration](#backupconfiguration): Backup Configuration
 * **endedOn**: string (ReadOnly): Database migration end time.
-* **kind**: 'SqlMi' | 'SqlVm' (Required)
+* **kind**: 'SqlMi' | 'SqlVm' | string (Required)
 * **migrationFailureError**: [ErrorInfo](#errorinfo) (ReadOnly): Error details
 * **migrationOperationId**: string: ID tracking current migration operation.
 * **migrationService**: string: Resource Id of the Migration Service.
@@ -203,16 +203,16 @@
 ### Properties
 * **createdAt**: string
 * **createdBy**: string
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string
 * **lastModifiedAt**: string
 * **lastModifiedBy**: string
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User'
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string
 
 ## DataMigrationServiceProperties
 ### Properties
 * **autoStopDelay**: string: The time delay before the service is auto-stopped when idle.
 * **deleteResourcesOnStop**: bool: Whether service resources should be deleted when stopped. (Turned on by default)
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' (ReadOnly): The resource's provisioning state
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Deploying' | 'Failed' | 'FailedToStart' | 'FailedToStop' | 'Starting' | 'Stopped' | 'Stopping' | 'Succeeded' | string (ReadOnly): The resource's provisioning state
 * **publicKey**: string: The public key of the service, used to encrypt secrets sent to the service
 * **virtualNicId**: string: The ID of the Microsoft.Network/networkInterfaces resource which the service have
 * **virtualSubnetId**: string: The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
@@ -235,11 +235,11 @@
 * **azureAuthenticationInfo**: string: Field that defines the Azure active directory application info, used to connect to the target Azure resource
 * **creationTime**: string (ReadOnly): UTC Date and time when project was created
 * **databasesInfo**: [DatabaseInfo](#databaseinfo)[]: List of DatabaseInfo
-* **provisioningState**: 'Deleting' | 'Succeeded' (ReadOnly): The project's provisioning state
+* **provisioningState**: 'Deleting' | 'Succeeded' | string (ReadOnly): The project's provisioning state
 * **sourceConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' (Required): Source platform of the project
+* **sourcePlatform**: 'MongoDb' | 'MySQL' | 'PostgreSql' | 'SQL' | 'Unknown' | string (Required): Source platform of the project
 * **targetConnectionInfo**: [ConnectionInfo](#connectioninfo): Defines the connection properties of a server
-* **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' (Required): Target platform of the project
+* **targetPlatform**: 'AzureDbForMySql' | 'AzureDbForPostgreSql' | 'MongoDb' | 'SQLDB' | 'SQLMI' | 'Unknown' | string (Required): Target platform of the project
 
 ## DatabaseInfo
 ### Properties
@@ -294,10 +294,10 @@
 ### SqlConnectionInfo
 #### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication' | string: An enumeration of possible authentication types when connecting
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
-* **platform**: 'SqlOnPrem': An enumeration of source platform types
+* **platform**: 'SqlOnPrem' | string: An enumeration of source platform types
 * **port**: string: port for server
 * **resourceId**: string: Represents the ID of an HTTP resource represented by an Azure resource provider.
 * **serverName**: string: name of the server
@@ -325,7 +325,7 @@
 * **clientData**: [ProjectTaskPropertiesClientData](#projecttaskpropertiesclientdata): Key value pairs of client data to attach meta data information to task
 * **commands**: [CommandProperties](#commandproperties)[] (ReadOnly): Array of command properties.
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
-* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the task. This is ignored if submitted.
+* **state**: 'Canceled' | 'Failed' | 'FailedInputValidation' | 'Faulted' | 'Queued' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the task. This is ignored if submitted.
 ### ConnectToMongoDbTaskProperties
 #### Properties
 * **input**: [MongoDbConnectionInfo](#mongodbconnectioninfo): Describes a connection to a MongoDB data source
@@ -572,7 +572,7 @@
 
 ### Base Properties
 * **errors**: [ODataError](#odataerror)[] (ReadOnly): Array of errors. This is ignored if submitted.
-* **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' (ReadOnly): The state of the command. This is ignored if submitted.
+* **state**: 'Accepted' | 'Failed' | 'Running' | 'Succeeded' | 'Unknown' | string (ReadOnly): The state of the command. This is ignored if submitted.
 ### MongoDbCancelCommand
 #### Properties
 * **commandType**: 'cancel' (Required): Command type.
@@ -660,7 +660,7 @@
 ### Properties
 * **databases**: [MongoDbDatabaseInfo](#mongodbdatabaseinfo)[] (Required): A list of non-system databases in the cluster
 * **supportsSharding**: bool (Required): Whether the cluster supports sharded collections
-* **type**: 'BlobContainer' | 'CosmosDb' | 'MongoDb' (Required): The type of data source
+* **type**: 'BlobContainer' | 'CosmosDb' | 'MongoDb' | string (Required): The type of data source
 * **version**: string (Required): The version of the data source in the form x.y.z (e.g. 3.6.7). Not used if Type is BlobContainer.
 
 ## MongoDbDatabaseInfo
@@ -696,14 +696,14 @@
 ## MongoDbShardKeyField
 ### Properties
 * **name**: string (Required): The name of the field
-* **order**: 'Forward' | 'Hashed' | 'Reverse' (Required): The field ordering
+* **order**: 'Forward' | 'Hashed' | 'Reverse' | string (Required): The field ordering
 
 ## ConnectToSourceMySqlTaskInput
 ### Properties
 * **checkPermissionsGroup**: 'Default' | 'MigrationFromMySQLToAzureDBForMySQL' | 'MigrationFromSqlServerToAzureDB' | 'MigrationFromSqlServerToAzureMI': Permission group for validations. These groups will run a set of permissions for validating user activity. Select the permission group for the activity that you are performing.
 * **isOfflineMigration**: bool: Flag for whether or not the migration is offline
 * **sourceConnectionInfo**: [MySqlConnectionInfo](#mysqlconnectioninfo) (Required): Information for connecting to MySQL server
-* **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer': An enumeration of possible target types when migrating from MySQL
+* **targetPlatform**: 'AzureDbForMySQL' | 'SqlServer' | string: An enumeration of possible target types when migrating from MySQL
 
 ## MySqlConnectionInfo
 ### Properties
@@ -788,11 +788,11 @@
 ## SqlConnectionInfo
 ### Properties
 * **additionalSettings**: string: Additional connection settings
-* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication': An enumeration of possible authentication types when connecting
+* **authentication**: 'ActiveDirectoryIntegrated' | 'ActiveDirectoryPassword' | 'None' | 'SqlAuthentication' | 'WindowsAuthentication' | string: An enumeration of possible authentication types when connecting
 * **dataSource**: string (Required): Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
 * **encryptConnection**: bool: Whether to encrypt the connection
 * **password**: string: Password credential.
-* **platform**: 'SqlOnPrem': An enumeration of source platform types
+* **platform**: 'SqlOnPrem' | string: An enumeration of source platform types
 * **port**: string: port for server
 * **resourceId**: string: Represents the ID of an HTTP resource represented by an Azure resource provider.
 * **serverName**: string: name of the server
@@ -818,9 +818,9 @@
 
 ### ConnectToSourceSqlServerTaskOutputDatabaseLevel
 #### Properties
-* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' (ReadOnly): An enumeration of SQL Server database compatibility levels
+* **compatibilityLevel**: 'CompatLevel100' | 'CompatLevel110' | 'CompatLevel120' | 'CompatLevel130' | 'CompatLevel140' | 'CompatLevel80' | 'CompatLevel90' | string (ReadOnly): An enumeration of SQL Server database compatibility levels
 * **databaseFiles**: [DatabaseFileInfo](#databasefileinfo)[] (ReadOnly): The list of database files
-* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' (ReadOnly): An enumeration of SQL Server Database states
+* **databaseState**: 'Copying' | 'Emergency' | 'Offline' | 'OfflineSecondary' | 'Online' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Suspect' | string (ReadOnly): An enumeration of SQL Server Database states
 * **name**: string (ReadOnly): Database name
 * **resultType**: 'DatabaseLevelOutput' (Required): Type of result - database level or task level
 * **sizeMB**: int (ReadOnly): Size of the file in megabytes
@@ -829,7 +829,7 @@
 #### Properties
 * **defaultDatabase**: string (ReadOnly): The default database for the login.
 * **isEnabled**: bool (ReadOnly): The state of the login.
-* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' (ReadOnly): Enum mapping of SMO LoginType.
+* **loginType**: 'AsymmetricKey' | 'Certificate' | 'ExternalGroup' | 'ExternalUser' | 'SqlLogin' | 'WindowsGroup' | 'WindowsUser' | string (ReadOnly): Enum mapping of SMO LoginType.
 * **migrationEligibility**: [MigrationEligibilityInfo](#migrationeligibilityinfo) (ReadOnly): Information about migration eligibility of a server object
 * **name**: string (ReadOnly): Login name.
 * **resultType**: 'LoginLevelOutput' (Required): Type of result - database level or task level
@@ -854,7 +854,7 @@
 ## DatabaseFileInfo
 ### Properties
 * **databaseName**: string: Name of the database
-* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows': An enumeration of SQL Server database file types
+* **fileType**: 'Filestream' | 'Fulltext' | 'Log' | 'NotSupported' | 'Rows' | string: An enumeration of SQL Server database file types
 * **id**: string: Unique identifier for database file
 * **logicalName**: string: Logical name of the file
 * **physicalFullName**: string: Operating-system full path of the file
@@ -1050,7 +1050,7 @@
 ### Properties
 * **boostRUs**: int: The RU limit on a CosmosDB target that collections will be temporarily increased to (if lower) during the initial copy of a migration, from 10,000 to 1,000,000, or 0 to use the default boost (which is generally the maximum), or null to not boost the RUs. This setting has no effect on non-CosmosDB targets.
 * **databases**: [MongoDbMigrationSettingsDatabases](#mongodbmigrationsettingsdatabases) (Required): The databases on the source cluster to migrate to the target. The keys are the names of the databases.
-* **replication**: 'Continuous' | 'Disabled' | 'OneTime': Describes how changes will be replicated from the source to the target. The default is OneTime.
+* **replication**: 'Continuous' | 'Disabled' | 'OneTime' | string: Describes how changes will be replicated from the source to the target. The default is OneTime.
 * **source**: [MongoDbConnectionInfo](#mongodbconnectioninfo) (Required): Describes a connection to a MongoDB data source
 * **target**: [MongoDbConnectionInfo](#mongodbconnectioninfo) (Required): Describes a connection to a MongoDB data source
 * **throttling**: [MongoDbThrottlingSettings](#mongodbthrottlingsettings): Specifies resource limits for the migration
@@ -1101,7 +1101,7 @@
 * **lastReplayTime**: string: The timestamp of the last oplog event replayed, or null if no oplog event has been replayed yet
 * **name**: string: The name of the progress object. For a collection, this is the unqualified collection name. For a database, this is the database name. For the overall migration, this is null.
 * **qualifiedName**: string: The qualified name of the progress object. For a collection, this is the database-qualified name. For a database, this is the database name. For the overall migration, this is null.
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' | string (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
 ### MongoDbCollectionProgress
@@ -1129,7 +1129,7 @@
 * **code**: string: The non-localized, machine-readable code that describes the error or warning
 * **count**: int: The number of times the error or warning has occurred
 * **message**: string: The localized, human-readable message that describes the error or warning
-* **type**: 'Error' | 'ValidationError' | 'Warning': The type of error or warning
+* **type**: 'Error' | 'ValidationError' | 'Warning' | string: The type of error or warning
 
 ## MongoDbDatabaseProgressCollections
 ### Properties
@@ -1148,8 +1148,8 @@
 * **lastReplayTime**: string: The timestamp of the last oplog event replayed, or null if no oplog event has been replayed yet
 * **name**: string: The name of the progress object. For a collection, this is the unqualified collection name. For a database, this is the database name. For the overall migration, this is null.
 * **qualifiedName**: string: The qualified name of the progress object. For a collection, this is the database-qualified name. For a database, this is the database name. For the overall migration, this is null.
-* **resultType**: 'Collection' | 'Database' | 'Migration' (Required): The type of progress object
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
+* **resultType**: 'Collection' | 'Database' | 'Migration' | string (Required): The type of progress object
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' | string (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
 
@@ -1176,8 +1176,8 @@
 * **lastReplayTime**: string: The timestamp of the last oplog event replayed, or null if no oplog event has been replayed yet
 * **name**: string: The name of the progress object. For a collection, this is the unqualified collection name. For a database, this is the database name. For the overall migration, this is null.
 * **qualifiedName**: string: The qualified name of the progress object. For a collection, this is the database-qualified name. For a database, this is the database name. For the overall migration, this is null.
-* **resultType**: 'Collection' | 'Database' | 'Migration' (Required): The type of progress object
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
+* **resultType**: 'Collection' | 'Database' | 'Migration' | string (Required): The type of progress object
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' | string (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
 
@@ -1235,9 +1235,9 @@
 * **objectSummary**: string (ReadOnly): Summary of object results in the migration
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' | string (ReadOnly): Current stage of migration
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 * **statusMessage**: string (ReadOnly): Status message
 
 ### MigrateMySqlAzureDbForMySqlOfflineTaskOutputError
@@ -1259,7 +1259,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' | string (ReadOnly): Current status of migration
 * **statusMessage**: string (ReadOnly): Migration status message
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
@@ -1275,7 +1275,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1345,7 +1345,7 @@
 * **incomingChanges**: int (ReadOnly): Number of incoming changes
 * **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
 * **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' (ReadOnly): Enum of the different state of database level online migration.
+* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' | string (ReadOnly): Enum of the different state of database level online migration.
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
 
@@ -1377,7 +1377,7 @@
 * **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
 * **lastModifiedTime**: string (ReadOnly): Last modified time on target
 * **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
+* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' | string (ReadOnly): Enum of the different state of table level online migration.
 * **tableName**: string (ReadOnly): Name of the table
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
@@ -1451,7 +1451,7 @@
 * **incomingChanges**: int (ReadOnly): Number of incoming changes
 * **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
 * **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' (ReadOnly): Enum of the different state of database level online migration.
+* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' | string (ReadOnly): Enum of the different state of database level online migration.
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
 
@@ -1483,7 +1483,7 @@
 * **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
 * **lastModifiedTime**: string (ReadOnly): Last modified time on target
 * **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
+* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' | string (ReadOnly): Enum of the different state of table level online migration.
 * **tableName**: string (ReadOnly): Name of the table
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
@@ -1549,7 +1549,7 @@
 * **incomingChanges**: int (ReadOnly): Number of incoming changes
 * **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
 * **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' (ReadOnly): Enum of the different state of database level online migration.
+* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' | string (ReadOnly): Enum of the different state of database level online migration.
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
 
@@ -1565,12 +1565,12 @@
 * **endedOn**: string (ReadOnly): Migration end time
 * **resultType**: 'MigrationLevelOutput' (Required): Result type
 * **sourceServer**: string (ReadOnly): Source server name
-* **sourceServerType**: 'Access' | 'DB2' | 'MongoDB' | 'MySQL' | 'MySQLRDS' | 'Oracle' | 'PostgreSQL' | 'PostgreSQLRDS' | 'SQL' | 'SQLRDS' | 'Sybase' (ReadOnly): An enumeration of source type
+* **sourceServerType**: 'Access' | 'DB2' | 'MongoDB' | 'MySQL' | 'MySQLRDS' | 'Oracle' | 'PostgreSQL' | 'PostgreSQLRDS' | 'SQL' | 'SQLRDS' | 'Sybase' | string (ReadOnly): An enumeration of source type
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'ACTION_REQUIRED' | 'COMPLETE' | 'FAILED' | 'PENDING' | 'UNDEFINED' | 'VALIDATING' (ReadOnly): Wrapper for replicate reported migration states.
+* **state**: 'ACTION_REQUIRED' | 'COMPLETE' | 'FAILED' | 'PENDING' | 'UNDEFINED' | 'VALIDATING' | string (ReadOnly): Wrapper for replicate reported migration states.
 * **targetServer**: string (ReadOnly): Target server name
-* **targetServerType**: 'AzureDBForMySql' | 'AzureDBForPostgresSQL' | 'MongoDB' | 'SQLDB' | 'SQLDW' | 'SQLMI' | 'SQLServer' (ReadOnly): An enumeration of target type
+* **targetServerType**: 'AzureDBForMySql' | 'AzureDBForPostgresSQL' | 'MongoDB' | 'SQLDB' | 'SQLDW' | 'SQLMI' | 'SQLServer' | string (ReadOnly): An enumeration of target type
 * **targetServerVersion**: string (ReadOnly): Target server version
 
 ### MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
@@ -1586,7 +1586,7 @@
 * **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
 * **lastModifiedTime**: string (ReadOnly): Last modified time on target
 * **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
+* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' | string (ReadOnly): Enum of the different state of table level online migration.
 * **tableName**: string (ReadOnly): Name of the table
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
@@ -1661,7 +1661,7 @@
 * **incomingChanges**: int (ReadOnly): Number of incoming changes
 * **initializationCompleted**: bool (ReadOnly): Indicates if initial load (full load) has been completed
 * **latency**: int (ReadOnly): CDC apply latency
-* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' (ReadOnly): Enum of the different state of database level online migration.
+* **migrationState**: 'BACKUP_COMPLETED' | 'BACKUP_IN_PROGRESS' | 'CANCELLED' | 'CANCELLING' | 'COMPLETE' | 'COMPLETING' | 'CONFIGURING' | 'FAILED' | 'INITIALIAZING' | 'READY_TO_COMPLETE' | 'RESTORE_COMPLETED' | 'RESTORE_IN_PROGRESS' | 'RUNNING' | 'STARTING' | 'UNDEFINED' | 'VALIDATING' | 'VALIDATION_COMPLETE' | 'VALIDATION_FAILED' | string (ReadOnly): Enum of the different state of database level online migration.
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
 
@@ -1694,7 +1694,7 @@
 * **fullLoadTotalRows**: int (ReadOnly): Number of rows applied in full load
 * **lastModifiedTime**: string (ReadOnly): Last modified time on target
 * **resultType**: 'TableLevelOutput' (Required): Result type
-* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' (ReadOnly): Enum of the different state of table level online migration.
+* **state**: 'BEFORE_LOAD' | 'CANCELED' | 'COMPLETED' | 'ERROR' | 'FAILED' | 'FULL_LOAD' | string (ReadOnly): Enum of the different state of table level online migration.
 * **tableName**: string (ReadOnly): Name of the table
 * **totalChangesApplied**: int (ReadOnly): Total number of applied changes
 
@@ -1704,7 +1704,7 @@
 * **aadDomainName**: string: Azure Active Directory domain name in the format of 'contoso.com' for federated Azure AD or 'contoso.onmicrosoft.com' for managed domain, required if and only if Windows logins are selected
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
 * **backupFileShare**: [FileShare](#fileshare): File share information with Path, Username, and Password.
-* **backupMode**: 'CreateBackup' | 'ExistingBackup': An enumeration of backup modes
+* **backupMode**: 'CreateBackup' | 'ExistingBackup' | string: An enumeration of backup modes
 * **selectedAgentJobs**: string[]: Agent Jobs to migrate.
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **selectedLogins**: string[]: Logins to migrate.
@@ -1738,7 +1738,7 @@
 * **name**: string (ReadOnly): Agent Job name.
 * **resultType**: 'AgentJobLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 
 ### MigrateSqlServerSqlMITaskOutputDatabaseLevel
 #### Properties
@@ -1748,9 +1748,9 @@
 * **message**: string (ReadOnly): Migration progress message
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **sizeMB**: int (ReadOnly): Size of the database in megabytes
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' | string (ReadOnly): Current stage of migration
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 
 ### MigrateSqlServerSqlMITaskOutputError
 #### Properties
@@ -1764,9 +1764,9 @@
 * **loginName**: string (ReadOnly): Login name.
 * **message**: string (ReadOnly): Login migration progress message
 * **resultType**: 'LoginLevelOutput' (Required): Result type
-* **stage**: 'AssignRoleMembership' | 'AssignRoleOwnership' | 'Completed' | 'EstablishObjectPermissions' | 'EstablishServerPermissions' | 'EstablishUserMapping' | 'Initialize' | 'LoginMigration' | 'None' (ReadOnly): Enum of the different stage of login migration.
+* **stage**: 'AssignRoleMembership' | 'AssignRoleOwnership' | 'Completed' | 'EstablishObjectPermissions' | 'EstablishServerPermissions' | 'EstablishUserMapping' | 'Initialize' | 'LoginMigration' | 'None' | string (ReadOnly): Enum of the different stage of login migration.
 * **startedOn**: string (ReadOnly): Login migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 
 ### MigrateSqlServerSqlMITaskOutputMigrationLevel
 #### Properties
@@ -1782,8 +1782,8 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' | string (ReadOnly): Current status of migration
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -1817,7 +1817,7 @@
 * **fullBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly): Information of backup set
 * **isFullBackupRestored**: bool (ReadOnly): Whether full backup has been applied to the target database or not
 * **lastRestoredBackupSetInfo**: [BackupSetInfo](#backupsetinfo) (ReadOnly): Information of backup set
-* **migrationState**: 'CANCELLED' | 'COMPLETED' | 'CUTOVER_START' | 'FAILED' | 'FULL_BACKUP_UPLOAD_START' | 'INITIAL' | 'LOG_SHIPPING_START' | 'POST_CUTOVER_COMPLETE' | 'UNDEFINED' | 'UPLOAD_LOG_FILES_START' (ReadOnly): Database level migration state.
+* **migrationState**: 'CANCELLED' | 'COMPLETED' | 'CUTOVER_START' | 'FAILED' | 'FULL_BACKUP_UPLOAD_START' | 'INITIAL' | 'LOG_SHIPPING_START' | 'POST_CUTOVER_COMPLETE' | 'UNDEFINED' | 'UPLOAD_LOG_FILES_START' | string (ReadOnly): Database level migration state.
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **sourceDatabaseName**: string (ReadOnly): Name of the database
 * **startedOn**: string (ReadOnly): Database migration start time
@@ -1837,7 +1837,7 @@
 * **sourceServerName**: string (ReadOnly): Source server name
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerName**: string (ReadOnly): Target server name
 * **targetServerVersion**: string (ReadOnly): Target server version
@@ -1848,7 +1848,7 @@
 * **backupFinishedDate**: string: Date and time that the backup operation finished
 * **backupSetId**: string: Id for the set of backup files
 * **backupStartDate**: string: Date and time that the backup operation began
-* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog': Enum of the different backup types.
+* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' | string: Enum of the different backup types.
 * **databaseName**: string: Name of the database to which the backup set belongs
 * **firstLsn**: string: First log sequence number of the backup file
 * **isBackupRestored**: bool: Whether the backup set is restored or not
@@ -1860,7 +1860,7 @@
 ### Properties
 * **familySequenceNumber**: int: Sequence number of the backup file in the backup set
 * **fileLocation**: string: Location of the backup file in shared folder
-* **status**: 'Arrived' | 'Cancelled' | 'Queued' | 'Restored' | 'Restoring' | 'Uploaded' | 'Uploading': An enumeration of Status of the log backup file.
+* **status**: 'Arrived' | 'Cancelled' | 'Queued' | 'Restored' | 'Restoring' | 'Uploaded' | 'Uploading' | string: An enumeration of Status of the log backup file.
 
 ## MigrateSqlServerSqlDbTaskInput
 ### Properties
@@ -1903,9 +1903,9 @@
 * **objectSummary**: string (ReadOnly): Summary of object results in the migration
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
-* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' (ReadOnly): Current stage of migration
+* **stage**: 'Backup' | 'Completed' | 'FileCopy' | 'Initialize' | 'None' | 'Restore' | string (ReadOnly): Current stage of migration
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 * **statusMessage**: string (ReadOnly): Status message
 
 ### MigrateSqlServerSqlDbTaskOutputError
@@ -1931,7 +1931,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' | string (ReadOnly): Current status of migration
 * **statusMessage**: string (ReadOnly): Migration status message
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
@@ -1950,7 +1950,7 @@
 * **resultPrefix**: string (ReadOnly): Wildcard string prefix to use for querying all sub-tem results of the item
 * **resultType**: 'TableLevelOutput' (Required): Result type
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 * **statusMessage**: string (ReadOnly): Status message
 
 
@@ -1958,7 +1958,7 @@
 ### Properties
 * **id**: string (ReadOnly): Migration validation result identifier
 * **migrationId**: string (ReadOnly): Migration Identifier
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of the validation
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' | string (ReadOnly): Current status of the validation
 * **summaryResults**: [MigrationValidationResultSummaryResults](#migrationvalidationresultsummaryresults): Validation summary results for each database
 
 ## MigrationValidationResultSummaryResults
@@ -1973,7 +1973,7 @@
 * **migrationId**: string (ReadOnly): Migration Identifier
 * **sourceDatabaseName**: string (ReadOnly): Name of the source database
 * **startedOn**: string (ReadOnly): Validation start time
-* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' (ReadOnly): Current status of the validation
+* **status**: 'Completed' | 'CompletedWithIssues' | 'Default' | 'Failed' | 'InProgress' | 'Initialized' | 'NotStarted' | 'Stopped' | string (ReadOnly): Current status of the validation
 * **targetDatabaseName**: string (ReadOnly): Name of the target database
 
 ## MigrateSsisTaskInput
@@ -1984,9 +1984,9 @@
 
 ## SsisMigrationInfo
 ### Properties
-* **environmentOverwriteOption**: 'Ignore' | 'Overwrite': The overwrite option for SSIS object migration, only ignore and overwrite are supported in DMS now and future may add Reuse option for container object
-* **projectOverwriteOption**: 'Ignore' | 'Overwrite': The overwrite option for SSIS object migration, only ignore and overwrite are supported in DMS now and future may add Reuse option for container object
-* **ssisStoreType**: 'SsisCatalog': An enumeration of supported source SSIS store type in DMS
+* **environmentOverwriteOption**: 'Ignore' | 'Overwrite' | string: The overwrite option for SSIS object migration, only ignore and overwrite are supported in DMS now and future may add Reuse option for container object
+* **projectOverwriteOption**: 'Ignore' | 'Overwrite' | string: The overwrite option for SSIS object migration, only ignore and overwrite are supported in DMS now and future may add Reuse option for container object
+* **ssisStoreType**: 'SsisCatalog' | string: An enumeration of supported source SSIS store type in DMS
 
 ## MigrateSsisTaskOutput
 * **Discriminator**: resultType
@@ -2001,9 +2001,9 @@
 * **resultType**: 'MigrationLevelOutput' (Required): Result type
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
-* **stage**: 'Completed' | 'InProgress' | 'Initialize' | 'None' (ReadOnly): Current stage of SSIS migration
+* **stage**: 'Completed' | 'InProgress' | 'Initialize' | 'None' | string (ReadOnly): Current stage of SSIS migration
 * **startedOn**: string (ReadOnly): Migration start time
-* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' (ReadOnly): Current status of migration
+* **status**: 'Completed' | 'CompletedWithWarnings' | 'Configured' | 'Connecting' | 'Default' | 'Error' | 'Running' | 'SelectLogins' | 'SourceAndTargetSelected' | 'Stopped' | string (ReadOnly): Current status of migration
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -2015,9 +2015,9 @@
 * **message**: string (ReadOnly): Migration progress message
 * **projectName**: string (ReadOnly): Name of the project
 * **resultType**: 'SsisProjectLevelOutput' (Required): Result type
-* **stage**: 'Completed' | 'InProgress' | 'Initialize' | 'None' (ReadOnly): Current stage of SSIS migration
+* **stage**: 'Completed' | 'InProgress' | 'Initialize' | 'None' | string (ReadOnly): Current stage of SSIS migration
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 
 
 ## MigrateSchemaSqlServerSqlDbTaskInput
@@ -2039,7 +2039,7 @@
 ### Properties
 * **fileId**: string: Resource Identifier of a file resource containing the uploaded schema file
 * **fileName**: string: Name of the file resource containing the uploaded schema file
-* **schemaOption**: 'ExtractFromSource' | 'None' | 'UseStorageFile': Option for how schema is extracted and applied to target
+* **schemaOption**: 'ExtractFromSource' | 'None' | 'UseStorageFile' | string: Option for how schema is extracted and applied to target
 
 ## MigrateSchemaSqlServerSqlDbTaskOutput
 * **Discriminator**: resultType
@@ -2056,9 +2056,9 @@
 * **numberOfSuccessfulOperations**: int (ReadOnly): Number of successful operations for this database
 * **resultType**: 'DatabaseLevelOutput' (Required): Result type
 * **schemaErrorResultPrefix**: string (ReadOnly): Prefix string to use for querying schema errors for this database
-* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' (ReadOnly): Current stage of schema migration
+* **stage**: 'CollectingObjects' | 'Completed' | 'CompletedWithWarnings' | 'DeployingSchema' | 'DownloadingScript' | 'Failed' | 'GeneratingScript' | 'NotStarted' | 'UploadingScript' | 'ValidatingInputs' | string (ReadOnly): Current stage of schema migration
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 
 ### MigrateSchemaSqlTaskOutputError
 #### Properties
@@ -2072,7 +2072,7 @@
 * **sourceServerBrandVersion**: string (ReadOnly): Source server brand version
 * **sourceServerVersion**: string (ReadOnly): Source server version
 * **startedOn**: string (ReadOnly): Migration start time
-* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' (ReadOnly): Current state of migration
+* **state**: 'Completed' | 'Failed' | 'InProgress' | 'None' | 'Skipped' | 'Stopped' | 'Warning' | string (ReadOnly): Current state of migration
 * **targetServerBrandVersion**: string (ReadOnly): Target server brand version
 * **targetServerVersion**: string (ReadOnly): Target server version
 
@@ -2131,8 +2131,8 @@
 * **lastReplayTime**: string: The timestamp of the last oplog event replayed, or null if no oplog event has been replayed yet
 * **name**: string: The name of the progress object. For a collection, this is the unqualified collection name. For a database, this is the database name. For the overall migration, this is null.
 * **qualifiedName**: string: The qualified name of the progress object. For a collection, this is the database-qualified name. For a database, this is the database name. For the overall migration, this is null.
-* **resultType**: 'Collection' | 'Database' | 'Migration' (Required): The type of progress object
-* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' (Required)
+* **resultType**: 'Collection' | 'Database' | 'Migration' | string (Required): The type of progress object
+* **state**: 'Canceled' | 'Complete' | 'Copying' | 'Failed' | 'Finalizing' | 'InitialReplay' | 'Initializing' | 'NotStarted' | 'Replaying' | 'Restarting' | 'ValidatingInput' | string (Required)
 * **totalBytes**: int (Required): The total number of document bytes on the source at the beginning of the Copying stage, or -1 if the total size was unknown
 * **totalDocuments**: int (Required): The total number of documents on the source at the beginning of the Copying stage, or -1 if the total count was unknown
 
@@ -2154,7 +2154,7 @@
 ### Properties
 * **backupBlobShare**: [BlobShare](#blobshare) (Required): Blob container storage information.
 * **backupFileShare**: [FileShare](#fileshare): File share information with Path, Username, and Password.
-* **backupMode**: 'CreateBackup' | 'ExistingBackup': An enumeration of backup modes
+* **backupMode**: 'CreateBackup' | 'ExistingBackup' | string: An enumeration of backup modes
 * **selectedDatabases**: [MigrateSqlServerSqlMIDatabaseInput](#migratesqlserversqlmidatabaseinput)[] (Required): Databases to migrate
 * **selectedLogins**: string[]: Logins to migrate
 * **sourceConnectionInfo**: [SqlConnectionInfo](#sqlconnectioninfo) (Required): Information for connecting to SQL database server
@@ -2175,7 +2175,7 @@
 ### Properties
 * **backupFiles**: string[] (ReadOnly): The list of backup files for the current database.
 * **backupFinishDate**: string (ReadOnly): Date and time when the backup operation finished.
-* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' (ReadOnly): Enum of the different backup types.
+* **backupType**: 'Database' | 'DifferentialDatabase' | 'DifferentialFile' | 'DifferentialPartial' | 'File' | 'Partial' | 'TransactionLog' | string (ReadOnly): Enum of the different backup types.
 * **databaseName**: string (ReadOnly): Database name.
 * **familyCount**: int (ReadOnly): Number of files in the backup set.
 * **isCompressed**: bool (ReadOnly): Whether the backup set is compressed

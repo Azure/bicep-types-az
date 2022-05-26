@@ -16,7 +16,7 @@
 * **name**: [ResourceName](#resourcename): Name of the resource provide by the resource Provider. Please use this name property for quotaRequests.
 * **properties**: any: Any object
 * **quotaPeriod**: string (ReadOnly): The quota period over which the usage values are summarized, such as - P1D (Per one day), PT1M (Per one minute), PT1S (Per one second). This parameter is optional because, for some resources like compute, the period doesn’t matter.
-* **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard': The resource types.
+* **resourceType**: 'dedicated' | 'lowPriority' | 'serviceSpecific' | 'shared' | 'standard' | string: The resource types.
 * **unit**: string: The units of the limit, such as - Count, Bytes, etc. Use the unit field provided in the Get quota response.
 
 ## ResourceName

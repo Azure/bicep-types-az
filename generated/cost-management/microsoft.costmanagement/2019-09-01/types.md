@@ -14,22 +14,22 @@
 ### Properties
 * **definition**: [QueryDefinition](#querydefinition) (Required): The definition of a query.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered.
+* **format**: 'Csv' | string: The format of the export being delivered.
 * **schedule**: [ExportSchedule](#exportschedule): The schedule associated with a export.
 
 ## QueryDefinition
 ### Properties
 * **dataset**: [QueryDataset](#querydataset): The definition of data present in the query.
-* **timeframe**: 'Custom' | 'MonthToDate' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
+* **timeframe**: 'Custom' | 'MonthToDate' | 'TheLastMonth' | 'TheLastWeek' | 'TheLastYear' | 'WeekToDate' | 'YearToDate' | string (Required): The time frame for pulling data for the query. If custom, then a specific time period must be provided.
 * **timePeriod**: [QueryTimePeriod](#querytimeperiod): The start and end date for pulling data for the query.
-* **type**: 'Usage' (Required): The type of the query.
+* **type**: 'Usage' | string (Required): The type of the query.
 
 ## QueryDataset
 ### Properties
 * **aggregation**: [QueryDatasetAggregation](#querydatasetaggregation): Dictionary of aggregation expression to use in the query. The key of each item in the dictionary is the alias for the aggregated column. Query can have up to 2 aggregation clauses.
 * **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): The configuration of dataset in the query.
 * **filter**: [QueryFilter](#queryfilter): The filter expression to be used in the export.
-* **granularity**: 'Daily' | 'Hourly': The granularity of rows in the query.
+* **granularity**: 'Daily' | 'Hourly' | string: The granularity of rows in the query.
 * **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 * **sorting**: [QuerySortingConfiguration](#querysortingconfiguration)[]: Array of sorting by columns in query.
 
@@ -40,7 +40,7 @@
 
 ## QueryAggregation
 ### Properties
-* **function**: 'Sum' (Required): The name of the aggregation function to use.
+* **function**: 'Sum' | string (Required): The name of the aggregation function to use.
 * **name**: string (Required): The name of the column to aggregate.
 
 ## QueryDatasetConfiguration
@@ -58,18 +58,18 @@
 ## QueryComparisonExpression
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
-* **operator**: 'In' (Required): The operator to use for comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
 * **values**: string[] (Required): Array of values to use for comparison
 
 ## QueryGrouping
 ### Properties
 * **name**: string (Required): The name of the column to group.
-* **type**: 'Dimension' | 'Tag' (Required): The type of the column in the export.
+* **type**: 'Dimension' | 'Tag' | string (Required): The type of the column in the export.
 
 ## QuerySortingConfiguration
 ### Properties
 * **name**: string: The name of the column to use in sorting.
-* **querySortingDirection**: 'Ascending' | 'Descending': The sorting direction
+* **querySortingDirection**: 'Ascending' | 'Descending' | string: The sorting direction
 
 ## QueryTimePeriod
 ### Properties
@@ -88,9 +88,9 @@
 
 ## ExportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' (Required): The schedule recurrence.
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string (Required): The schedule recurrence.
 * **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
+* **status**: 'Active' | 'Inactive' | string: The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused.
 
 ## ExportRecurrencePeriod
 ### Properties

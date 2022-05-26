@@ -80,7 +80,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The details for accessing the encryption keys in Key Vault.
 * **status**: string (ReadOnly): The current status of the Key Vault mapping.
-* **type**: 'CustomerKey' | 'SystemKey' (Required): The type of key used to encrypt the Account Key.
+* **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
 
 ## ResourceIdentity
 ### Properties
@@ -94,7 +94,7 @@
 ## Endpoint
 ### Properties
 * **endpointUrl**: string: The URL of the endpoint.
-* **type**: 'ClientApi' (Required): The type of the endpoint.
+* **type**: 'ClientApi' | string (Required): The type of the endpoint.
 
 ## StorageAccount
 ### Properties
@@ -106,10 +106,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -119,7 +119,7 @@
 ## AccessPolicyProperties
 ### Properties
 * **authentication**: [AuthenticationBase](#authenticationbase): Base class for access policies authentication methods.
-* **role**: 'Reader': Defines the access level granted by this policy.
+* **role**: 'Reader' | string: Defines the access level granted by this policy.
 
 ## AuthenticationBase
 * **Discriminator**: @type
@@ -147,14 +147,14 @@
 ### EccTokenKey
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.
-* **alg**: 'ES256' | 'ES384' | 'ES512' (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+* **alg**: 'ES256' | 'ES384' | 'ES512' | string (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
 * **x**: string (Required): X coordinate.
 * **y**: string (Required): Y coordinate.
 
 ### RsaTokenKey
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): The discriminator for derived types.
-* **alg**: 'RS256' | 'RS384' | 'RS512' (Required): RSA algorithm to be used: RS256, RS384 or RS512.
+* **alg**: 'RS256' | 'RS384' | 'RS512' | string (Required): RSA algorithm to be used: RS256, RS384 or RS512.
 * **e**: string (Required): RSA public key exponent.
 * **n**: string (Required): RSA public key modulus.
 
@@ -170,7 +170,7 @@
 * **mediaInfo**: [VideoMediaInfo](#videomediainfo) (ReadOnly): Contains information about the video and audio content.
 * **streaming**: [VideoStreaming](#videostreaming) (ReadOnly): Video streaming holds information about video streaming URLs.
 * **title**: string: Optional video title provided by the user. Value can be up to 256 characters long.
-* **type**: 'Archive' (ReadOnly): Type of the video archive. Different archive formats provide different capabilities.
+* **type**: 'Archive' | string (ReadOnly): Type of the video archive. Different archive formats provide different capabilities.
 
 ## VideoFlags
 ### Properties

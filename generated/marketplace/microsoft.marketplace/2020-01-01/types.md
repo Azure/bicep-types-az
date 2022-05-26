@@ -20,7 +20,7 @@
 
 ## PrivateStoreProperties
 ### Properties
-* **availability**: 'disabled' | 'enabled': Indicates private store availability
+* **availability**: 'disabled' | 'enabled' | string: Indicates private store availability
 * **customerTag**: string: Customer tag
 * **eTag**: string: Identifier for purposes of race condition
 * **hasCommercialAssociation**: bool: Indicating whether private store has association with Commercial's Billing Account (through billing account's customer tag retrieved from GSM for a subscription
@@ -52,7 +52,7 @@
 
 ## Plan
 ### Properties
-* **accessibility**: 'PrivateSubscriptionOnLevel' | 'PrivateTenantOnLevel' | 'Public' | 'Unknown': Plan accessibility
+* **accessibility**: 'PrivateSubscriptionOnLevel' | 'PrivateTenantOnLevel' | 'Public' | 'Unknown' | string: Plan accessibility
 * **altStackReference**: string (ReadOnly): Alternative stack type
 * **planDisplayName**: string (ReadOnly): Friendly name for the plan for display in the marketplace
 * **planId**: string (ReadOnly): Text identifier for this plan

@@ -19,19 +19,19 @@
 * **operatorInstanceName**: string: Instance name of the operator - identifying the specific configuration.
 * **operatorNamespace**: string: The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
 * **operatorParams**: string: Any Parameters for the Operator instance in string format.
-* **operatorScope**: 'cluster' | 'namespace': Scope at which the operator will be installed.
-* **operatorType**: 'Flux': Type of the operator
-* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' (ReadOnly): The provisioning state of the resource provider.
+* **operatorScope**: 'cluster' | 'namespace' | string: Scope at which the operator will be installed.
+* **operatorType**: 'Flux' | string: Type of the operator
+* **provisioningState**: 'Accepted' | 'Deleting' | 'Failed' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource provider.
 * **repositoryPublicKey**: string (ReadOnly): Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
 * **repositoryUrl**: string: Url of the SourceControl Repository.
 * **sshKnownHostsContents**: string: Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
 
 ## ComplianceStatus
 ### Properties
-* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' (ReadOnly): The compliance state of the configuration.
+* **complianceState**: 'Compliant' | 'Failed' | 'Installed' | 'Noncompliant' | 'Pending' | string (ReadOnly): The compliance state of the configuration.
 * **lastConfigApplied**: string: Datetime the configuration was last applied.
 * **message**: string: Message from when the configuration was applied.
-* **messageLevel**: 'Error' | 'Information' | 'Warning': Level of the message.
+* **messageLevel**: 'Error' | 'Information' | 'Warning' | string: Level of the message.
 
 ## ConfigurationProtectedSettings
 ### Properties
@@ -47,8 +47,8 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 

@@ -52,7 +52,7 @@
 
 ## BillingProfileProperties
 ### Properties
-* **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' (ReadOnly): Identifies which services and purchases are paid by a billing profile.
+* **billingRelationshipType**: 'CSPPartner' | 'Direct' | 'IndirectCustomer' | 'IndirectPartner' | string (ReadOnly): Identifies which services and purchases are paid by a billing profile.
 * **billTo**: [AddressDetails](#addressdetails): Address details.
 * **currency**: string (ReadOnly): The currency in which the charges for the billing profile are billed.
 * **displayName**: string: The name of the billing profile.
@@ -63,12 +63,12 @@
 * **invoiceEmailOptIn**: bool: Flag controlling whether the invoices for the billing profile are sent through email.
 * **invoiceSections**: [InvoiceSectionsOnExpand](#invoicesectionsonexpand): The invoice sections associated to the billing profile. By default this is not populated, unless it's specified in $expand.
 * **poNumber**: string: The purchase order name that will appear on the invoices generated for the billing profile.
-* **spendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit.
-* **status**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
-* **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
+* **spendingLimit**: 'Off' | 'On' | string (ReadOnly): The billing profile spending limit.
+* **status**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
+* **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
 * **systemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
 * **tags**: [BillingProfilePropertiesTags](#billingprofilepropertiestags): Tags of billing profiles.
-* **targetClouds**: 'USGov' | 'USNat' | 'USSec'[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
+* **targetClouds**: 'USGov' | 'USNat' | 'USSec' | string[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## AddressDetails
 ### Properties
@@ -114,10 +114,10 @@
 ### Properties
 * **displayName**: string: The name of the invoice section.
 * **labels**: [InvoiceSectionPropertiesLabels](#invoicesectionpropertieslabels): Dictionary of metadata associated with the invoice section.
-* **state**: 'Active' | 'Restricted' (ReadOnly): Identifies the state of an invoice section.
+* **state**: 'Active' | 'Restricted' | string (ReadOnly): Identifies the state of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
 * **tags**: [InvoiceSectionPropertiesTags](#invoicesectionpropertiestags): Dictionary of metadata associated with the invoice section. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
-* **targetCloud**: 'USGov' | 'USNat' | 'USSec' (ReadOnly): Possible cloud environments.
+* **targetCloud**: 'USGov' | 'USNat' | 'USSec' | string (ReadOnly): Possible cloud environments.
 
 ## InvoiceSectionPropertiesLabels
 ### Properties
@@ -143,13 +143,13 @@
 
 ## PolicyProperties
 ### Properties
-* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed': The policy that controls whether Azure marketplace purchases are allowed for a billing profile.
-* **reservationPurchases**: 'Allowed' | 'NotAllowed': The policy that controls whether Azure reservation purchases are allowed for a billing profile.
-* **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
+* **marketplacePurchases**: 'AllAllowed' | 'NotAllowed' | 'OnlyFreeAllowed' | string: The policy that controls whether Azure marketplace purchases are allowed for a billing profile.
+* **reservationPurchases**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether Azure reservation purchases are allowed for a billing profile.
+* **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether users with Azure RBAC access to a subscription can view its charges.
 
 ## CustomerPolicyProperties
 ### Properties
-* **viewCharges**: 'Allowed' | 'NotAllowed': The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices.
+* **viewCharges**: 'Allowed' | 'NotAllowed' | string: The policy that controls whether the users in customer's organization can view charges at pay-as-you-go prices.
 
 ## InvoiceSectionListWithCreateSubPermissionResult
 ### Properties
@@ -160,9 +160,9 @@
 ### Properties
 * **billingProfileDisplayName**: string (ReadOnly): The name of the billing profile for the invoice section.
 * **billingProfileId**: string (ReadOnly): The ID of the billing profile for the invoice section.
-* **billingProfileSpendingLimit**: 'Off' | 'On' (ReadOnly): The billing profile spending limit.
-* **billingProfileStatus**: 'Active' | 'Disabled' | 'Warned' (ReadOnly): The status of the billing profile.
-* **billingProfileStatusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' (ReadOnly): Reason for the specified billing profile status.
+* **billingProfileSpendingLimit**: 'Off' | 'On' | string (ReadOnly): The billing profile spending limit.
+* **billingProfileStatus**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
+* **billingProfileStatusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
 * **billingProfileSystemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
 * **enabledAzurePlans**: [AzurePlan](#azureplan)[] (ReadOnly): Enabled azure plans for the associated billing profile.
 * **invoiceSectionDisplayName**: string (ReadOnly): The name of the invoice section.

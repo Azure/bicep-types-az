@@ -37,8 +37,8 @@
 
 ## Condition
 ### Properties
-* **field**: 'AlertContext' | 'AlertRuleId' | 'AlertRuleName' | 'Description' | 'MonitorCondition' | 'MonitorService' | 'Severity' | 'SignalType' | 'TargetResource' | 'TargetResourceGroup' | 'TargetResourceType': Field for a given condition.
-* **operator**: 'Contains' | 'DoesNotContain' | 'Equals' | 'NotEquals': Operator for a given condition.
+* **field**: 'AlertContext' | 'AlertRuleId' | 'AlertRuleName' | 'Description' | 'MonitorCondition' | 'MonitorService' | 'Severity' | 'SignalType' | 'TargetResource' | 'TargetResourceGroup' | 'TargetResourceType' | string: Field for a given condition.
+* **operator**: 'Contains' | 'DoesNotContain' | 'Equals' | 'NotEquals' | string: Operator for a given condition.
 * **values**: string[]: List of values to match for a given condition.
 
 ## Schedule
@@ -65,7 +65,7 @@
 
 ### WeeklyRecurrence
 #### Properties
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required): Specifies the values for weekly recurrence pattern.
+* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): Specifies the values for weekly recurrence pattern.
 * **recurrenceType**: 'Weekly' (Required): Specifies when the recurrence should be applied.
 
 
@@ -73,10 +73,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## ManagedResourceTags
 ### Properties

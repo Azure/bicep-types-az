@@ -46,14 +46,14 @@
 ### Properties
 * **accountId**: string: The Automanage account ARM Resource URI
 * **compliance**: [ConfigurationProfileAssignmentCompliance](#configurationprofileassignmentcompliance): The compliance status for the configuration profile assignment.
-* **configurationProfile**: 'Azure virtual machine best practices – Dev/Test' | 'Azure virtual machine best practices – Production': A value indicating configuration profile.
+* **configurationProfile**: 'Azure virtual machine best practices – Dev/Test' | 'Azure virtual machine best practices – Production' | string: A value indicating configuration profile.
 * **configurationProfilePreferenceId**: string: The configuration profile custom preferences ARM resource URI
-* **provisioningState**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The state of onboarding, which only appears in the response.
+* **provisioningState**: 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The state of onboarding, which only appears in the response.
 * **targetId**: string: The target VM resource URI
 
 ## ConfigurationProfileAssignmentCompliance
 ### Properties
-* **updateStatus**: 'Created' | 'Failed' | 'Succeeded' (ReadOnly): The state of compliance, which only appears in the response.
+* **updateStatus**: 'Created' | 'Failed' | 'Succeeded' | string (ReadOnly): The state of compliance, which only appears in the response.
 
 ## ConfigurationProfilePreferenceProperties
 ### Properties
@@ -62,12 +62,12 @@
 
 ## ConfigurationProfilePreferenceAntiMalware
 ### Properties
-* **enableRealTimeProtection**: 'False' | 'True': Enables or disables Real Time Protection
+* **enableRealTimeProtection**: 'False' | 'True' | string: Enables or disables Real Time Protection
 * **exclusions**: any: Any object
-* **runScheduledScan**: 'False' | 'True': Enables or disables a periodic scan for antimalware
+* **runScheduledScan**: 'False' | 'True' | string: Enables or disables a periodic scan for antimalware
 * **scanDay**: string: Schedule scan settings day
 * **scanTimeInMinutes**: string: Schedule scan settings time
-* **scanType**: 'Full' | 'Quick': Type of scheduled scan
+* **scanType**: 'Full' | 'Quick' | string: Type of scheduled scan
 
 ## ConfigurationProfilePreferenceVmBackup
 ### Properties

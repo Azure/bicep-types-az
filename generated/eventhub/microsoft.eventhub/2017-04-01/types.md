@@ -95,8 +95,8 @@
 ## Sku
 ### Properties
 * **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
-* **name**: 'Basic' | 'Standard' (Required): Name of this SKU.
-* **tier**: 'Basic' | 'Standard': The billing tier of this particular SKU.
+* **name**: 'Basic' | 'Standard' | string (Required): Name of this SKU.
+* **tier**: 'Basic' | 'Standard' | string: The billing tier of this particular SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -105,7 +105,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
 
 ## ArmDisasterRecoveryProperties
 ### Properties
@@ -153,13 +153,13 @@
 
 ## NetworkRuleSetProperties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow' | string: The IP Filter Action
 * **ipMask**: string: IP Mask
 
 ## NWRuleSetVirtualNetworkRules

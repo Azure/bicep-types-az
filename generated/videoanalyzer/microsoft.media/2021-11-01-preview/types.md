@@ -58,7 +58,7 @@
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: 'Batch' | 'Live' (Required): Topology kind.
+* **kind**: 'Batch' | 'Live' | string (Required): Topology kind.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PipelineTopologyProperties](#pipelinetopologyproperties): Describes the properties of a pipeline topology.
 * **sku**: [Sku](#sku) (Required): The SKU details.
@@ -118,8 +118,8 @@
 * **iotHubs**: [IotHub](#iothub)[]: The IoT Hubs for this resource.
 * **networkAccessControl**: [NetworkAccessControl](#networkaccesscontrol): Network access control for video analyzer account.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): Private Endpoint Connections created under Video Analyzer account.
-* **provisioningState**: 'Failed' | 'InProgress' | 'Succeeded' (ReadOnly): Provisioning state of the Video Analyzer account.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for resources under the Video Analyzer account.
+* **provisioningState**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Video Analyzer account.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for resources under the Video Analyzer account.
 * **storageAccounts**: [StorageAccount](#storageaccount)[] (Required): The storage accounts for this resource.
 
 ## AccountEncryption
@@ -127,7 +127,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity): The user assigned managed identity to use when accessing a resource.
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The details for accessing the encryption keys in Key Vault.
 * **status**: string (ReadOnly): The current status of the Key Vault mapping.
-* **type**: 'CustomerKey' | 'SystemKey' (Required): The type of key used to encrypt the Account Key.
+* **type**: 'CustomerKey' | 'SystemKey' | string (Required): The type of key used to encrypt the Account Key.
 
 ## ResourceIdentity
 ### Properties
@@ -141,7 +141,7 @@
 ## Endpoint
 ### Properties
 * **endpointUrl**: string: The URL of the endpoint.
-* **type**: 'ClientApi' (Required): The type of the endpoint.
+* **type**: 'ClientApi' | string (Required): The type of the endpoint.
 
 ## IotHub
 ### Properties
@@ -157,7 +157,7 @@
 
 ## GroupLevelAccessControl
 ### Properties
-* **publicNetworkAccess**: 'Disabled' | 'Enabled': Whether or not public network access is allowed for resources under the Video Analyzer account.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public network access is allowed for resources under the Video Analyzer account.
 
 ## PrivateEndpointConnection
 ### Properties
@@ -171,7 +171,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (Required): A collection of information about the state of the connection between service consumer and provider.
-* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The current provisioning state.
 
 ## PrivateEndpoint
 ### Properties
@@ -181,16 +181,16 @@
 ### Properties
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
-* **status**: 'Approved' | 'Pending' | 'Rejected': The private endpoint connection status.
+* **status**: 'Approved' | 'Pending' | 'Rejected' | string: The private endpoint connection status.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## StorageAccount
 ### Properties
@@ -206,7 +206,7 @@
 ## AccessPolicyProperties
 ### Properties
 * **authentication**: [AuthenticationBase](#authenticationbase): Base class for access policies authentication methods.
-* **role**: 'Reader': Defines the access level granted by this policy.
+* **role**: 'Reader' | string: Defines the access level granted by this policy.
 
 ## AuthenticationBase
 * **Discriminator**: @type
@@ -234,14 +234,14 @@
 ### EccTokenKey
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EccTokenKey' (Required): The discriminator for derived types.
-* **alg**: 'ES256' | 'ES384' | 'ES512' (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+* **alg**: 'ES256' | 'ES384' | 'ES512' | string (Required): Elliptical curve algorithm to be used: ES256, ES384 or ES512.
 * **x**: string (Required): X coordinate.
 * **y**: string (Required): Y coordinate.
 
 ### RsaTokenKey
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.RsaTokenKey' (Required): The discriminator for derived types.
-* **alg**: 'RS256' | 'RS384' | 'RS512' (Required): RSA algorithm to be used: RS256, RS384 or RS512.
+* **alg**: 'RS256' | 'RS384' | 'RS512' | string (Required): RSA algorithm to be used: RS256, RS384 or RS512.
 * **e**: string (Required): RSA public key exponent.
 * **n**: string (Required): RSA public key modulus.
 
@@ -255,7 +255,7 @@
 * **bitrateKbps**: int (Required): Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one 'noisy neighbor' does not affect other live pipelines in your account.
 * **description**: string: An optional description for the pipeline.
 * **parameters**: [ParameterDefinition](#parameterdefinition)[]: List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
-* **state**: 'Activating' | 'Active' | 'Deactivating' | 'Inactive' (ReadOnly): Current state of the pipeline (read-only).
+* **state**: 'Activating' | 'Active' | 'Deactivating' | 'Inactive' | string (ReadOnly): Current state of the pipeline (read-only).
 * **topologyName**: string (Required): The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
 
 ## ParameterDefinition
@@ -269,7 +269,7 @@
 * **error**: [PipelineJobError](#pipelinejoberror) (ReadOnly): Details about the error for a failed pipeline job.
 * **expiration**: string (ReadOnly): The date-time by when this pipeline job will be automatically deleted from your account.
 * **parameters**: [ParameterDefinition](#parameterdefinition)[]: List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
-* **state**: 'Canceled' | 'Completed' | 'Failed' | 'Processing' (ReadOnly): Current state of the pipeline (read-only).
+* **state**: 'Canceled' | 'Completed' | 'Failed' | 'Processing' | string (ReadOnly): Current state of the pipeline (read-only).
 * **topologyName**: string (Required): Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
 
 ## PipelineJobError
@@ -290,7 +290,7 @@
 * **default**: string: The default value for the parameter to be used if the pipeline does not specify a value.
 * **description**: string: Description of the parameter.
 * **name**: string (Required): Name of the parameter.
-* **type**: 'Bool' | 'Double' | 'Int' | 'SecretString' | 'String' (Required): Type of the parameter.
+* **type**: 'Bool' | 'Double' | 'Int' | 'SecretString' | 'String' | string (Required): Type of the parameter.
 
 ## ProcessorNodeBase
 * **Discriminator**: @type
@@ -321,7 +321,7 @@
 ### EncoderSystemPreset
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.EncoderSystemPreset' (Required): The discriminator for derived types.
-* **name**: 'SingleLayer_1080p_H264_AAC' | 'SingleLayer_2160p_H264_AAC' | 'SingleLayer_540p_H264_AAC' | 'SingleLayer_720p_H264_AAC' (Required): Name of the built-in encoding preset.
+* **name**: 'SingleLayer_1080p_H264_AAC' | 'SingleLayer_2160p_H264_AAC' | 'SingleLayer_540p_H264_AAC' | 'SingleLayer_720p_H264_AAC' | string (Required): Name of the built-in encoding preset.
 
 
 ## AudioEncoderBase
@@ -349,7 +349,7 @@
 ## VideoScale
 ### Properties
 * **height**: string: The desired output video height.
-* **mode**: 'Pad' | 'PreserveAspectRatio' | 'Stretch': Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
+* **mode**: 'Pad' | 'PreserveAspectRatio' | 'Stretch' | string: Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
 * **width**: string: The desired output video width.
 
 ## SinkNodeBase
@@ -387,7 +387,7 @@
 #### Properties
 * **@type**: '#Microsoft.VideoAnalyzer.RtspSource' (Required): The discriminator for derived types.
 * **endpoint**: [EndpointBase](#endpointbase) (Required): Base class for endpoints.
-* **transport**: 'Http' | 'Tcp': Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+* **transport**: 'Http' | 'Tcp' | string: Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
 
 ### VideoSource
 #### Properties
@@ -463,8 +463,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Batch_S1' | 'Live_S1' (Required): The SKU name.
-* **tier**: 'Standard' (ReadOnly): The SKU tier.
+* **name**: 'Batch_S1' | 'Live_S1' | string (Required): The SKU name.
+* **tier**: 'Standard' | string (ReadOnly): The SKU tier.
 
 ## VideoProperties
 ### Properties
@@ -474,7 +474,7 @@
 * **flags**: [VideoFlags](#videoflags) (ReadOnly): Video flags contain information about the available video actions and its dynamic properties based on the current video state.
 * **mediaInfo**: [VideoMediaInfo](#videomediainfo): Contains information about the video and audio content.
 * **title**: string: Optional video title provided by the user. Value can be up to 256 characters long.
-* **type**: 'Archive' | 'File' (ReadOnly): Video content type. Different content types are suitable for different applications and scenarios.
+* **type**: 'Archive' | 'File' | string (ReadOnly): Video content type. Different content types are suitable for different applications and scenarios.
 
 ## VideoArchival
 ### Properties

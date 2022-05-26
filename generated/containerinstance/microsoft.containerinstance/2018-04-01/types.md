@@ -17,9 +17,9 @@
 * **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
 * **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
-* **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group. 
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
@@ -72,7 +72,7 @@
 ## ContainerPort
 ### Properties
 * **port**: int (Required): The port number exposed within the container group.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
+* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
 
 ## ResourceRequirements
 ### Properties
@@ -112,12 +112,12 @@
 * **fqdn**: string (ReadOnly): The FQDN for the IP.
 * **ip**: string: The IP exposed to the public internet.
 * **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
-* **type**: 'Public' (Required): Specifies if the IP is exposed to the public internet.
+* **type**: 'Public' | string (Required): Specifies if the IP is exposed to the public internet.
 
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
+* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
 
 ## Volume
 ### Properties

@@ -19,7 +19,7 @@
 ### Properties
 * **apiVersion**: '2021-06-22' (ReadOnly, DeployTimeConstant): The resource api version
 * **credential**: [RunAsCredentialAssociationProperty](#runascredentialassociationproperty): Definition of RunAs credential to use for hybrid worker.
-* **groupType**: 'System' | 'User' (ReadOnly): Type of the HybridWorkerGroup.
+* **groupType**: 'System' | 'User' | string (ReadOnly): Type of the HybridWorkerGroup.
 * **hybridRunbookWorkers**: [HybridRunbookWorkerLegacy](#hybridrunbookworkerlegacy)[] (ReadOnly): Gets or sets the list of hybrid runbook workers.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -70,7 +70,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Automation operations supported by the Automation resource provider.
 * **publicNetworkAccess**: bool: Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
 * **sku**: [Sku](#sku): The account SKU.
-* **state**: 'Ok' | 'Suspended' | 'Unavailable' (ReadOnly): Gets status of account.
+* **state**: 'Ok' | 'Suspended' | 'Unavailable' | string (ReadOnly): Gets status of account.
 
 ## EncryptionProperties
 ### Properties
@@ -115,16 +115,16 @@
 ### Properties
 * **capacity**: int: Gets or sets the SKU capacity.
 * **family**: string: Gets or sets the SKU family.
-* **name**: 'Basic' | 'Free' (Required): Gets or sets the SKU name of the account.
+* **name**: 'Basic' | 'Free' | string (Required): Gets or sets the SKU name of the account.
 
 ## SystemData
 ### Properties
 * **createdAt**: string (ReadOnly): The timestamp of resource creation (UTC).
 * **createdBy**: string (ReadOnly): The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 * **lastModifiedAt**: string (ReadOnly): The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string (ReadOnly): The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' (ReadOnly): The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string (ReadOnly): The type of identity that created the resource.
 
 ## AutomationAccountCreateOrUpdateParametersTags
 ### Properties
@@ -149,7 +149,7 @@
 * **registeredDateTime**: string (ReadOnly): Gets or sets the registration time of the worker machine.
 * **vmResourceId**: string: Azure Resource Manager Id for a virtual machine.
 * **workerName**: string (ReadOnly): Name of the HybridWorker.
-* **workerType**: 'HybridV1' | 'HybridV2' (ReadOnly): Type of the HybridWorker.
+* **workerType**: 'HybridV1' | 'HybridV2' | string (ReadOnly): Type of the HybridWorker.
 
 ## KeyListResult
 ### Properties
@@ -157,7 +157,7 @@
 
 ## Key
 ### Properties
-* **KeyName**: 'Primary' | 'Secondary' (ReadOnly): Automation key name.
-* **Permissions**: 'Full' | 'Read' (ReadOnly): Automation key permissions.
+* **KeyName**: 'Primary' | 'Secondary' | string (ReadOnly): Automation key name.
+* **Permissions**: 'Full' | 'Read' | string (ReadOnly): Automation key permissions.
 * **Value**: string (ReadOnly): Value of the Automation Key used for registration.
 

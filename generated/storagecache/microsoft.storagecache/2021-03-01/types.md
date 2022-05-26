@@ -39,7 +39,7 @@
 * **health**: [CacheHealth](#cachehealth) (ReadOnly): An indication of Cache health. Gives more information about health than just that related to provisioning.
 * **mountAddresses**: string[] (ReadOnly): Array of IP addresses that can be used by clients mounting this Cache.
 * **networkSettings**: [CacheNetworkSettings](#cachenetworksettings): Cache network settings.
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
 * **securitySettings**: [CacheSecuritySettings](#cachesecuritysettings): Cache security settings.
 * **subnet**: string: A fully qualified URL.
 * **upgradeStatus**: [CacheUpgradeStatus](#cacheupgradestatus): Properties describing the software upgrade state of the Cache.
@@ -53,7 +53,7 @@
 ### Properties
 * **cacheNetBiosName**: string (Required): The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
 * **credentials**: [CacheActiveDirectorySettingsCredentials](#cacheactivedirectorysettingscredentials): Active Directory admin credentials used to join the HPC Cache to a domain.
-* **domainJoined**: 'Error' | 'No' | 'Yes' (ReadOnly): True if the HPC Cache is joined to the Active Directory domain.
+* **domainJoined**: 'Error' | 'No' | 'Yes' | string (ReadOnly): True if the HPC Cache is joined to the Active Directory domain.
 * **domainName**: string (Required): The fully qualified domain name of the Active Directory domain controller.
 * **domainNetBiosName**: string (Required): The Active Directory domain's NetBIOS name.
 * **primaryDnsIpAddress**: string (Required): Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
@@ -76,8 +76,8 @@
 * **ldapServer**: string: The fully qualified domain name or IP address of the LDAP server to use.
 * **requireValidCertificate**: bool: Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
 * **userFileURI**: string: The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
-* **usernameDownloaded**: 'Error' | 'No' | 'Yes' (ReadOnly): Indicates whether or not the HPC Cache has performed the username download successfully.
-* **usernameSource**: 'AD' | 'File' | 'LDAP' | 'None': This setting determines how the cache gets username and group names for clients.
+* **usernameDownloaded**: 'Error' | 'No' | 'Yes' | string (ReadOnly): Indicates whether or not the HPC Cache has performed the username download successfully.
+* **usernameSource**: 'AD' | 'File' | 'LDAP' | 'None' | string: This setting determines how the cache gets username and group names for clients.
 
 ## CacheUsernameDownloadSettingsCredentials
 ### Properties
@@ -100,7 +100,7 @@
 ## CacheHealth
 ### Properties
 * **conditions**: [Condition](#condition)[] (ReadOnly): Outstanding conditions that need to be investigated and resolved.
-* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading': List of Cache health states.
+* **state**: 'Degraded' | 'Down' | 'Flushing' | 'Healthy' | 'Stopped' | 'Stopping' | 'Transitioning' | 'Unknown' | 'Upgrading' | string: List of Cache health states.
 * **statusDescription**: string: Describes explanation of state.
 
 ## Condition
@@ -127,12 +127,12 @@
 
 ## NfsAccessRule
 ### Properties
-* **access**: 'no' | 'ro' | 'rw' (Required): Access allowed by this rule.
+* **access**: 'no' | 'ro' | 'rw' | string (Required): Access allowed by this rule.
 * **anonymousGID**: string: GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
 * **anonymousUID**: string: UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
 * **filter**: string: Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
 * **rootSquash**: bool: Map root accesses to anonymousUID and anonymousGID.
-* **scope**: 'default' | 'host' | 'network' (Required): Scope for this rule. The scope and filter determine which clients match the rule.
+* **scope**: 'default' | 'host' | 'network' | string (Required): Scope for this rule. The scope and filter determine which clients match the rule.
 * **submountAccess**: bool: For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
 * **suid**: bool: Allow SUID semantics.
 
@@ -140,7 +140,7 @@
 ### Properties
 * **currentFirmwareVersion**: string (ReadOnly): Version string of the firmware currently installed on this Cache.
 * **firmwareUpdateDeadline**: string (ReadOnly): Time at which the pending firmware update will automatically be installed on the Cache.
-* **firmwareUpdateStatus**: 'available' | 'unavailable' (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
+* **firmwareUpdateStatus**: 'available' | 'unavailable' | string (ReadOnly): True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
 * **lastFirmwareUpdate**: string (ReadOnly): Time of the last successful firmware update.
 * **pendingFirmwareVersion**: string (ReadOnly): When firmwareUpdateAvailable is true, this field holds the version string for the update.
 
@@ -152,10 +152,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## CacheTags
 ### Properties
@@ -168,8 +168,8 @@
 * **clfs**: [ClfsTarget](#clfstarget): Properties pertaining to the ClfsTarget
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of Cache namespace junctions to target for namespace associations.
 * **nfs3**: [Nfs3Target](#nfs3target): Properties pertaining to the Nfs3Target
-* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-* **targetType**: 'blobNfs' | 'clfs' | 'nfs3' | 'unknown' (Required): Type of the Storage Target.
+* **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+* **targetType**: 'blobNfs' | 'clfs' | 'nfs3' | 'unknown' | string (Required): Type of the Storage Target.
 * **unknown**: [UnknownTarget](#unknowntarget): Properties pertaining to the UnknownTarget
 
 ## BlobNfsTarget

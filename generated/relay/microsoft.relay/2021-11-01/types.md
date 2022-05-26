@@ -110,7 +110,7 @@
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[]: List of private endpoint connections.
 * **provisioningState**: string (ReadOnly): Provisioning state of the Namespace.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter': This determines if traffic is allowed over public network. By default it is enabled.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: This determines if traffic is allowed over public network. By default it is enabled.
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
 * **status**: string (ReadOnly): Status of the Namespace.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
@@ -128,7 +128,7 @@
 ### Properties
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): PrivateEndpoint information.
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): ConnectionState information.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating': Provisioning state of the Private Endpoint Connection.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
 
 ## PrivateEndpoint
 ### Properties
@@ -137,21 +137,21 @@
 ## ConnectionState
 ### Properties
 * **description**: string: Description of the connection state.
-* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected': Status of the connection.
+* **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Status of the connection.
 
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## Sku
 ### Properties
-* **name**: 'Standard' (Required): Name of this SKU.
-* **tier**: 'Standard': The tier of this SKU.
+* **name**: 'Standard' | string (Required): Name of this SKU.
+* **tier**: 'Standard' | string: The tier of this SKU.
 
 ## TrackedResourceTags
 ### Properties
@@ -160,7 +160,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
 
 ## HybridConnectionProperties
 ### Properties
@@ -172,12 +172,12 @@
 
 ## NetworkRuleSetProperties
 ### Properties
-* **defaultAction**: 'Allow' | 'Deny': Default Action for Network Rule Set
+* **defaultAction**: 'Allow' | 'Deny' | string: Default Action for Network Rule Set
 * **ipRules**: [NWRuleSetIpRules](#nwrulesetiprules)[]: List of IpRules
 
 ## NWRuleSetIpRules
 ### Properties
-* **action**: 'Allow': The IP Filter Action
+* **action**: 'Allow' | string: The IP Filter Action
 * **ipMask**: string: IP Mask
 
 ## WcfRelayProperties

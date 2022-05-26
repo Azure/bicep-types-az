@@ -82,8 +82,8 @@
 
 ## Sku
 ### Properties
-* **name**: 'Standard' (Required): Name of this Sku
-* **tier**: 'Standard' (Required): The tier of this particular SKU
+* **name**: 'Standard' | string (Required): Name of this Sku
+* **tier**: 'Standard' | string (Required): The tier of this particular SKU
 
 ## TrackedResourceTags
 ### Properties
@@ -92,7 +92,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send'[] (Required): The rights associated with the rule.
+* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
 
 ## HybridConnectionProperties
 ### Properties
@@ -107,7 +107,7 @@
 * **createdAt**: string (ReadOnly): The time the WCFRelay was created.
 * **isDynamic**: bool (ReadOnly): true if the relay is dynamic; otherwise, false.
 * **listenerCount**: int (ReadOnly): The number of listeners for this relay. min : 1 and max:25 supported
-* **relayType**: 'Http' | 'NetTcp': WCFRelay Type.
+* **relayType**: 'Http' | 'NetTcp' | string: WCFRelay Type.
 * **requiresClientAuthorization**: bool: true if client authorization is needed for this relay; otherwise, false.
 * **requiresTransportSecurity**: bool: true if transport security is needed for this relay; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.

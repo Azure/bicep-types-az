@@ -127,7 +127,7 @@
 
 ## MobileNetworkPropertiesFormat
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **publicLandMobileNetworkIdentifier**: [PlmnId](#plmnid) (Required): Public Land Mobile Network (PLMN) ID.
 * **serviceKey**: string (ReadOnly): The mobile network resource identifier
 
@@ -140,10 +140,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties
@@ -153,7 +153,7 @@
 ## DataNetworkPropertiesFormat
 ### Properties
 * **description**: string: An optional description for this data network.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 
 ## TrackedResourceTags
 ### Properties
@@ -163,7 +163,7 @@
 ## ServicePropertiesFormat
 ### Properties
 * **pccRules**: [PccRuleConfiguration](#pccruleconfiguration)[] (Required): The set of PCC Rules that make up this service.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **servicePrecedence**: int (Required): A precedence value that is used to decide between services when identifying the QoS values to use for a particular Sim. A lower value means a higher priority. This value should be unique among all services configured in the Mobile Network.
 * **serviceQosPolicy**: [QosPolicy](#qospolicy): QoS policy
 
@@ -173,7 +173,7 @@
 * **rulePrecedence**: int (Required): A precedence value that is used to decide between PCC Rules when identifying the QoS values to use for a particular Sim. A lower value means a higher priority. This value should be unique among all PCC Rules configured in the Mobile Network.
 * **ruleQosPolicy**: [PccRuleQosPolicy](#pccruleqospolicy): PCC rule QoS policy
 * **serviceDataFlowTemplates**: [ServiceDataFlowTemplate](#servicedataflowtemplate)[] (Required): The set of service data flow templates to use for this PCC Rule.
-* **trafficControl**: 'Blocked' | 'Enabled': Traffic control permission.
+* **trafficControl**: 'Blocked' | 'Enabled' | string: Traffic control permission.
 
 ## PccRuleQosPolicy
 ### Properties
@@ -181,8 +181,8 @@
 * **allocationAndRetentionPriorityLevel**: int: ARP priority level.
 * **guaranteedBitRate**: [Ambr](#ambr): Aggregate Maximum Bit Rate.
 * **maximumBitRate**: [Ambr](#ambr) (Required): Aggregate Maximum Bit Rate.
-* **preemptionCapability**: 'MayPreempt' | 'NotPreempt': Preemption capability.
-* **preemptionVulnerability**: 'NotPreemptable' | 'Preemptable': Preemption vulnerability.
+* **preemptionCapability**: 'MayPreempt' | 'NotPreempt' | string: Preemption capability.
+* **preemptionVulnerability**: 'NotPreemptable' | 'Preemptable' | string: Preemption vulnerability.
 
 ## Ambr
 ### Properties
@@ -191,7 +191,7 @@
 
 ## ServiceDataFlowTemplate
 ### Properties
-* **direction**: 'Bidirectional' | 'Downlink' | 'Uplink' (Required): Service data flow direction.
+* **direction**: 'Bidirectional' | 'Downlink' | 'Uplink' | string (Required): Service data flow direction.
 * **ports**: string[]: The port(s) to which UEs will connect for this flow. You can specify zero or more ports or port ranges. If you specify one or more ports or port ranges then you must specify a value other than `ip` in the `protocol` field. This is an optional setting. If you do not specify it then connections will be allowed on all ports. Port ranges must be specified as <FirstPort>-<LastPort>. For example: [`8080`, `8082-8085`].
 * **protocol**: string[] (Required): A list of the allowed protocol(s) for this flow. If you want this flow to be able to use any protocol within the internet protocol suite, use the value `ip`. If you only want to allow a selection of protocols, you must use the corresponding IANA Assigned Internet Protocol Number for each protocol, as described in https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml. For example, for UDP, you must use 17. If you use the value `ip` then you must leave the field `port` unspecified.
 * **remoteIpList**: string[] (Required): The remote IP address(es) to which UEs will connect for this flow. If you want to allow connections on any IP address, use the value `any`. Otherwise, you must provide each of the remote IP addresses to which Fusion Core will connect for this flow. You must provide each IP address in CIDR notation, including the netmask (for example, 192.0.2.54/24).
@@ -202,8 +202,8 @@
 * **5qi**: int: 5G QoS Identifier priority level.
 * **allocationAndRetentionPriorityLevel**: int: ARP priority level.
 * **maximumBitRate**: [Ambr](#ambr) (Required): Aggregate Maximum Bit Rate.
-* **preemptionCapability**: 'MayPreempt' | 'NotPreempt': Preemption capability.
-* **preemptionVulnerability**: 'NotPreemptable' | 'Preemptable': Preemption vulnerability.
+* **preemptionCapability**: 'MayPreempt' | 'NotPreempt' | string: Preemption capability.
+* **preemptionVulnerability**: 'NotPreemptable' | 'Preemptable' | string: Preemption vulnerability.
 
 ## TrackedResourceTags
 ### Properties
@@ -213,7 +213,7 @@
 ## SimPolicyPropertiesFormat
 ### Properties
 * **defaultSlice**: [SliceResourceId](#sliceresourceid) (Required): Reference to a Slice resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **registrationTimer**: int: Interval for the UE periodic registration update procedure, in seconds.
 * **rfspIndex**: int: RAT/Frequency Selection Priority Index
 * **sliceConfigurations**: [SliceConfiguration](#sliceconfiguration)[] (Required): The allowed slices and the settings to use for them. The list must not contain duplicate items and must contain at least one item.
@@ -232,13 +232,13 @@
 ## DataNetworkConfiguration
 ### Properties
 * **5qi**: int: 5G QoS Identifier priority level.
-* **additionalAllowedSessionTypes**: 'IPv4' | 'IPv6'[]: Allowed session types in addition to the default session type.  Must not duplicate the default session type.
+* **additionalAllowedSessionTypes**: 'IPv4' | 'IPv6' | string[]: Allowed session types in addition to the default session type.  Must not duplicate the default session type.
 * **allocationAndRetentionPriorityLevel**: int: ARP priority level.
 * **allowedServices**: [ServiceResourceId](#serviceresourceid)[] (Required): List of Services that can be used as part of this Sim Policy. The list must not contain duplicate items and must contain at least one item.
 * **dataNetwork**: [DataNetworkResourceId](#datanetworkresourceid) (Required): Reference to a Data Network resource.
-* **defaultSessionType**: 'IPv4' | 'IPv6': PDU session type (IPv4/IPv6).
-* **preemptionCapability**: 'MayPreempt' | 'NotPreempt': Preemption capability.
-* **preemptionVulnerability**: 'NotPreemptable' | 'Preemptable': Preemption vulnerability.
+* **defaultSessionType**: 'IPv4' | 'IPv6' | string: PDU session type (IPv4/IPv6).
+* **preemptionCapability**: 'MayPreempt' | 'NotPreempt' | string: Preemption capability.
+* **preemptionVulnerability**: 'NotPreemptable' | 'Preemptable' | string: Preemption vulnerability.
 * **sessionAmbr**: [Ambr](#ambr) (Required): Aggregate Maximum Bit Rate.
 
 ## ServiceResourceId
@@ -257,7 +257,7 @@
 ## SitePropertiesFormat
 ### Properties
 * **networkFunctions**: [SubResource](#subresource)[]: An array of ids of the network functions deployed on the site, maintained by the user.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 
 ## SubResource
 ### Properties
@@ -271,7 +271,7 @@
 ## SlicePropertiesFormat
 ### Properties
 * **description**: string: An optional description for this network slice.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **snssai**: [Snssai](#snssai) (Required): Single-Network Slice Selection Assistance Information (S-NSSAI).
 
 ## Snssai
@@ -287,10 +287,10 @@
 ## PacketCoreControlPlanePropertiesFormat
 ### Properties
 * **controlPlaneAccessInterface**: [InterfaceProperties](#interfaceproperties) (Required): Interface properties
-* **coreNetworkTechnology**: '5GC' | 'EPC': Core network type.
+* **coreNetworkTechnology**: '5GC' | 'EPC' | string: Core network type.
 * **customLocation**: [CustomLocationResourceId](#customlocationresourceid): Reference to an Azure ARC custom location resource.
 * **mobileNetwork**: [MobileNetworkResourceId](#mobilenetworkresourceid) (Required): Reference to a Mobile Network resource.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **version**: string: The version of the packet core software that is deployed.
 
 ## InterfaceProperties
@@ -315,7 +315,7 @@
 
 ## PacketCoreDataPlanePropertiesFormat
 ### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **userPlaneAccessInterface**: [InterfaceProperties](#interfaceproperties) (Required): Interface properties
 
 ## TrackedResourceTags
@@ -326,7 +326,7 @@
 ## AttachedDataNetworkPropertiesFormat
 ### Properties
 * **naptConfiguration**: [NaptConfiguration](#naptconfiguration): The Network Address and Port Translation settings to use for the attached data network.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **userEquipmentAddressPoolPrefix**: string[]: The user equipment address pool prefixes for the attached data network that are dynamically assigned by the core to UEs when they set up a PDU session.
 At least one of userEquipmentAddressPoolPrefix and userEquipmentStaticAddressPoolPrefix must be defined. If both are defined then they must be the same size.
 * **userEquipmentStaticAddressPoolPrefix**: string[]: The user equipment address pool prefixes for the attached data network that are statically assigned by the core to UEs when they set up a PDU session.
@@ -336,7 +336,7 @@ At least one of userEquipmentAddressPoolPrefix and userEquipmentStaticAddressPoo
 
 ## NaptConfiguration
 ### Properties
-* **enabled**: 'Disabled' | 'Enabled': Whether Network Address and Port Translation is enabled.
+* **enabled**: 'Disabled' | 'Enabled' | string: Whether Network Address and Port Translation is enabled.
 * **pinholeLimits**: int: Maximum number of UDP and TCP pinholes that can be open simultaneously on the core interface.
 * **pinholeTimeouts**: [PinholeTimeouts](#pinholetimeouts): Expiry times of inactive NAPT pinholes, in seconds. All timers must be at least 1 second.
 * **portRange**: [PortRange](#portrange): Range of port numbers to use as translated ports on each translated address.
@@ -372,9 +372,9 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 * **internationalMobileSubscriberIdentity**: string (Required): The International Mobile Subscriber Identity (IMSI) for the sim.
 * **mobileNetwork**: [MobileNetworkResourceId](#mobilenetworkresourceid): Reference to a Mobile Network resource.
 * **operatorKeyCode**: string (WriteOnly): The Opc value for the sim.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' (ReadOnly): The current provisioning state.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The current provisioning state.
 * **simPolicy**: [SimPolicyResourceId](#simpolicyresourceid): Reference to a SIM Policy resource.
-* **simState**: 'Disabled' | 'Enabled' | 'Invalid' (ReadOnly): The state of the sim resource.
+* **simState**: 'Disabled' | 'Enabled' | 'Invalid' | string (ReadOnly): The state of the sim resource.
 * **staticIpConfiguration**: [SimStaticIpProperties](#simstaticipproperties)[]: A list of static IP addresses assigned to this sim. Each address is assigned at a defined network scope, made up of {attached data network, slice}.
 
 ## SimPolicyResourceId

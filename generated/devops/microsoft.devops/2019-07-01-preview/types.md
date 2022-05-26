@@ -29,11 +29,11 @@
 * **defaultBranch**: string (Required): Default branch used to configure Continuous Integration (CI) in the pipeline.
 * **id**: string (Required): Unique immutable identifier of the code repository.
 * **properties**: [CodeRepositoryProperties](#coderepositoryproperties): Repository-specific properties.
-* **repositoryType**: 'gitHub' | 'vstsGit' (Required): Type of code repository.
+* **repositoryType**: 'gitHub' | 'vstsGit' | string (Required): Type of code repository.
 
 ## Authorization
 ### Properties
-* **authorizationType**: 'personalAccessToken' (Required): Type of authorization.
+* **authorizationType**: 'personalAccessToken' | string (Required): Type of authorization.
 * **parameters**: [AuthorizationParameters](#authorizationparameters): Authorization parameters corresponding to the authorization type.
 
 ## AuthorizationParameters

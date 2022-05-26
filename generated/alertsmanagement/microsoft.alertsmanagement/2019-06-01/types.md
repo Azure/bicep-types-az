@@ -18,8 +18,8 @@
 * **detector**: [Detector](#detector) (Required): The detector information. By default this is not populated, unless it's specified in expandDetector
 * **frequency**: string (Required): The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
 * **scope**: string[] (Required): The alert rule resources scope.
-* **severity**: 'Sev0' | 'Sev1' | 'Sev2' | 'Sev3' | 'Sev4' (Required): The alert rule severity.
-* **state**: 'Disabled' | 'Enabled' (Required): The alert rule state.
+* **severity**: 'Sev0' | 'Sev1' | 'Sev2' | 'Sev3' | 'Sev4' | string (Required): The alert rule severity.
+* **state**: 'Disabled' | 'Enabled' | string (Required): The alert rule state.
 * **throttling**: [ThrottlingInformation](#throttlinginformation): Optional throttling information for the alert rule.
 
 ## ActionGroupsInformation

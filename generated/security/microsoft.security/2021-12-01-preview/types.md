@@ -17,7 +17,7 @@
 ## SecurityConnectorProperties
 ### Properties
 * **environmentData**: [EnvironmentData](#environmentdata): The security connector environment data.
-* **environmentName**: 'AWS' | 'Azure' | 'GCP' | 'Github': The multi cloud resource's cloud name.
+* **environmentName**: 'AWS' | 'Azure' | 'GCP' | 'Github' | string: The multi cloud resource's cloud name.
 * **hierarchyIdentifier**: string: The multi cloud resource identifier (account id in case of AWS connector, project number in case of GCP connector).
 * **offerings**: [CloudOffering](#cloudoffering)[]: A collection of offerings for the security connector.
 
@@ -197,7 +197,7 @@
 
 ## DefenderForServersAwsOfferingSubPlan
 ### Properties
-* **type**: 'P1' | 'P2': The available sub plans
+* **type**: 'P1' | 'P2' | string: The available sub plans
 
 ## DefenderForServersAwsOfferingVaAutoProvisioning
 ### Properties
@@ -206,7 +206,7 @@
 
 ## DefenderForServersAwsOfferingVaAutoProvisioningConfiguration
 ### Properties
-* **type**: 'Qualys' | 'TVM': The Vulnerability Assessment solution to be provisioned. Can be either 'TVM' or 'Qualys'
+* **type**: 'Qualys' | 'TVM' | string: The Vulnerability Assessment solution to be provisioned. Can be either 'TVM' or 'Qualys'
 
 ## DefenderForServersGcpOfferingArcAutoProvisioning
 ### Properties
@@ -230,7 +230,7 @@
 
 ## DefenderForServersGcpOfferingSubPlan
 ### Properties
-* **type**: 'P1' | 'P2': The available sub plans
+* **type**: 'P1' | 'P2' | string: The available sub plans
 
 ## DefenderForServersGcpOfferingVaAutoProvisioning
 ### Properties
@@ -239,7 +239,7 @@
 
 ## DefenderForServersGcpOfferingVaAutoProvisioningConfiguration
 ### Properties
-* **type**: 'Qualys' | 'TVM': The Vulnerability Assessment solution to be provisioned. Can be either 'TVM' or 'Qualys'
+* **type**: 'Qualys' | 'TVM' | string: The Vulnerability Assessment solution to be provisioned. Can be either 'TVM' or 'Qualys'
 
 ## InformationProtectionAwsOfferingInformationProtection
 ### Properties
@@ -249,10 +249,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## Tags
 ### Properties

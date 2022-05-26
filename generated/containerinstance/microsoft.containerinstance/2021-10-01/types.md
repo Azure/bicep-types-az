@@ -40,13 +40,13 @@
 * **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]: The init containers for a container group.
 * **instanceView**: [ContainerGroupPropertiesInstanceView](#containergrouppropertiesinstanceview) (ReadOnly): The instance view of the container group. Only valid in response.
 * **ipAddress**: [IpAddress](#ipaddress): IP address for the container group.
-* **osType**: 'Linux' | 'Windows' (Required): The operating system type required by the containers in the container group.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the container group. This only appears in the response.
-* **restartPolicy**: 'Always' | 'Never' | 'OnFailure': Restart policy for all containers within the container group. 
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
 - `Always` Always restart
 - `OnFailure` Restart on failure
 - `Never` Never restart
-* **sku**: 'Dedicated' | 'Standard': The container group SKU.
+* **sku**: 'Dedicated' | 'Standard' | string: The container group SKU.
 * **subnetIds**: [ContainerGroupSubnetId](#containergroupsubnetid)[]: The subnet resource IDs for a container group.
 * **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
@@ -116,7 +116,7 @@
 * **httpHeaders**: [HttpHeader](#httpheader)[]: The HTTP headers.
 * **path**: string: The path to probe.
 * **port**: int (Required): The port number to probe.
-* **scheme**: 'http' | 'https': The scheme.
+* **scheme**: 'http' | 'https' | string: The scheme.
 
 ## HttpHeader
 ### Properties
@@ -126,7 +126,7 @@
 ## ContainerPort
 ### Properties
 * **port**: int (Required): The port number exposed within the container group.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
+* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
 
 ## ResourceRequirements
 ### Properties
@@ -142,7 +142,7 @@
 ## GpuResource
 ### Properties
 * **count**: int (Required): The count of the GPU resource.
-* **sku**: 'K80' | 'P100' | 'V100' (Required): The SKU of the GPU resource.
+* **sku**: 'K80' | 'P100' | 'V100' | string (Required): The SKU of the GPU resource.
 
 ## ResourceRequests
 ### Properties
@@ -162,7 +162,7 @@
 
 ## LogAnalytics
 ### Properties
-* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs': The log type to be used.
+* **logType**: 'ContainerInsights' | 'ContainerInstanceLogs' | string: The log type to be used.
 * **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
 * **workspaceKey**: string (Required): The workspace key for log analytics
@@ -221,16 +221,16 @@
 ## IpAddress
 ### Properties
 * **dnsNameLabel**: string: The Dns name label for the IP.
-* **dnsNameLabelReusePolicy**: 'Noreuse' | 'ResourceGroupReuse' | 'SubscriptionReuse' | 'TenantReuse' | 'Unsecure': The value representing the security enum.
+* **dnsNameLabelReusePolicy**: 'Noreuse' | 'ResourceGroupReuse' | 'SubscriptionReuse' | 'TenantReuse' | 'Unsecure' | string: The value representing the security enum.
 * **fqdn**: string (ReadOnly): The FQDN for the IP.
 * **ip**: string: The IP exposed to the public internet.
 * **ports**: [Port](#port)[] (Required): The list of ports exposed on the container group.
-* **type**: 'Private' | 'Public' (Required): Specifies if the IP is exposed to the public internet or private VNET.
+* **type**: 'Private' | 'Public' | string (Required): Specifies if the IP is exposed to the public internet or private VNET.
 
 ## Port
 ### Properties
 * **port**: int (Required): The port number.
-* **protocol**: 'TCP' | 'UDP': The protocol associated with the port.
+* **protocol**: 'TCP' | 'UDP' | string: The protocol associated with the port.
 
 ## ContainerGroupSubnetId
 ### Properties

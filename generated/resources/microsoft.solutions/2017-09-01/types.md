@@ -87,7 +87,7 @@
 * **managedResourceGroupId**: string (Required): The managed resource group Id.
 * **outputs**: any (ReadOnly): Any object
 * **parameters**: any: Any object
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning status of the managed application.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the managed application.
 * **uiDefinitionUri**: string: The blob URI where the UI definition file is located.
 
 ## ResourceTags

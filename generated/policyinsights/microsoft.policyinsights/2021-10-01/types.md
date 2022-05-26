@@ -28,7 +28,7 @@
 * **policyDefinitionReferenceId**: string: The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
 * **provisioningState**: string (ReadOnly): The status of the remediation.
 * **resourceCount**: int: Determines the max number of resources that can be remediated by the remediation job. If not provided, the default resource count is used.
-* **resourceDiscoveryMode**: 'ExistingNonCompliant' | 'ReEvaluateCompliance': The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+* **resourceDiscoveryMode**: 'ExistingNonCompliant' | 'ReEvaluateCompliance' | string: The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
 * **statusMessage**: string (ReadOnly): The remediation status message. Provides additional details regarding the state of the remediation.
 
 ## RemediationDeploymentSummary
@@ -49,10 +49,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## RemediationDeploymentsListResult
 ### Properties

@@ -20,10 +20,10 @@
 * **createdWithApiVersion**: string (ReadOnly): The api-version used when creating this alert rule
 * **description**: string: The description of the Log Search rule.
 * **displayName**: string: The display name of the alert rule
-* **enabled**: 'false' | 'true': The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+* **enabled**: 'false' | 'true' | string: The flag which indicates whether the Log Search rule is enabled. Value should be true or false
 * **isLegacyLogAnalyticsRule**: bool (ReadOnly): True if alert rule is legacy Log Analytic rule
 * **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in IS08601 format.
-* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' (ReadOnly): Provisioning state of the scheduled query rule
+* **provisioningState**: 'Canceled' | 'Deploying' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the scheduled query rule
 * **schedule**: [Schedule](#schedule): Defines how often to run the search and the time interval.
 * **source**: [Source](#source) (Required): Specifies the log search query.
 
@@ -35,7 +35,7 @@
 #### Properties
 * **aznsAction**: [AzNsActionGroup](#aznsactiongroup): Azure action group
 * **odata.type**: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction' (Required): Specifies the action. Supported values - AlertingAction, LogToMetricAction
-* **severity**: '0' | '1' | '2' | '3' | '4' (Required): Severity Level of Alert
+* **severity**: '0' | '1' | '2' | '3' | '4' | string (Required): Severity Level of Alert
 * **throttlingInMin**: int: time (in minutes) for which Alerts should be throttled or suppressed.
 * **trigger**: [TriggerCondition](#triggercondition) (Required): The condition that results in the Log Search rule.
 
@@ -55,14 +55,14 @@
 ### Properties
 * **metricTrigger**: [LogMetricTrigger](#logmetrictrigger): A log metrics trigger descriptor.
 * **threshold**: int (Required): Result or count threshold based on which rule should be triggered.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): Result Condition Evaluation criteria.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string (Required): Result Condition Evaluation criteria.
 
 ## LogMetricTrigger
 ### Properties
 * **metricColumn**: string: Evaluation of metric on a particular column
-* **metricTriggerType**: 'Consecutive' | 'Total': Metric Trigger Evaluation Type
+* **metricTriggerType**: 'Consecutive' | 'Total' | string: Metric Trigger Evaluation Type
 * **threshold**: int: The threshold of the metric trigger.
-* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': Result Condition Evaluation criteria.
+* **thresholdOperator**: 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | string: Result Condition Evaluation criteria.
 
 ## Criteria
 ### Properties
@@ -72,7 +72,7 @@
 ## Dimension
 ### Properties
 * **name**: string (Required): Name of the dimension
-* **operator**: 'Include' (Required): Operator for dimension values
+* **operator**: 'Include' | string (Required): Operator for dimension values
 * **values**: string[] (Required): List of dimension values
 
 ## Schedule
@@ -85,7 +85,7 @@
 * **authorizedResources**: string[]: List of  Resource referred into query
 * **dataSourceId**: string (Required): The resource uri over which log search query is to be run.
 * **query**: string: Log search query. Required for action type - AlertingAction
-* **queryType**: 'ResultCount': Set value to 'ResultAccount'
+* **queryType**: 'ResultCount' | string: Set value to 'ResultAccount'
 
 ## ResourceTags
 ### Properties

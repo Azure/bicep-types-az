@@ -69,7 +69,7 @@
 ### Properties
 * **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' (Required): The service level of the file system
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
 * **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
 ## ResourceTags
@@ -88,7 +88,7 @@
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
 * **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra': The service level of the file system
+* **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
 * **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
@@ -101,11 +101,11 @@
 
 ## ReplicationObject
 ### Properties
-* **endpointType**: 'dst' | 'src': Indicates whether the local volume is the source or destination for the Volume Replication
+* **endpointType**: 'dst' | 'src' | string: Indicates whether the local volume is the source or destination for the Volume Replication
 * **remoteVolumeRegion**: string: The remote region for the other end of the Volume Replication.
 * **remoteVolumeResourceId**: string (Required): The resource ID of the remote volume.
 * **replicationId**: string: Id
-* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' (Required): Schedule
+* **replicationSchedule**: '_10minutely' | 'daily' | 'hourly' | string (Required): Schedule
 
 ## VolumePropertiesExportPolicy
 ### Properties

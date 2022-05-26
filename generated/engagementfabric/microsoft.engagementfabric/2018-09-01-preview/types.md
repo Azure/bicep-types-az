@@ -68,6 +68,6 @@
 ## KeyDescription
 ### Properties
 * **name**: string (ReadOnly): The name of the key
-* **rank**: 'PrimaryKey' | 'SecondaryKey' (ReadOnly): The rank of the EngagementFabric account key
+* **rank**: 'PrimaryKey' | 'SecondaryKey' | string (ReadOnly): The rank of the EngagementFabric account key
 * **value**: string (ReadOnly): The value of the key
 

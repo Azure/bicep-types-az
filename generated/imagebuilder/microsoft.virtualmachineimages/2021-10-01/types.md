@@ -100,7 +100,7 @@
 * **excludeFromLatest**: bool: Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
 * **galleryImageId**: string (Required): Resource Id of the Shared Image Gallery image
 * **replicationRegions**: string[] (Required): A list of regions that the image will be replicated to
-* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS': Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+* **storageAccountType**: 'Standard_LRS' | 'Standard_ZRS' | string: Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
 * **type**: 'SharedImage' (Required): Type of distribution.
 
 ### ImageTemplateVhdDistributor
@@ -124,7 +124,7 @@
 ## ProvisioningError
 ### Properties
 * **message**: string: Verbose error message about the provisioning failure
-* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType': Error code of the provisioning failure
+* **provisioningErrorCode**: 'BadCustomizerType' | 'BadDistributeType' | 'BadManagedImageSource' | 'BadPIRSource' | 'BadSharedImageDistribute' | 'BadSharedImageVersionSource' | 'BadSourceType' | 'NoCustomizerScript' | 'Other' | 'ServerError' | 'UnsupportedCustomizerType' | string: Error code of the provisioning failure
 
 ## ImageTemplateSource
 * **Discriminator**: type
@@ -173,10 +173,10 @@
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
 * **createdBy**: string: The identity that created the resource.
-* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
-* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User': The type of identity that created the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
 
 ## TrackedResourceTags
 ### Properties

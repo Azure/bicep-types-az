@@ -14,7 +14,7 @@
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of an export.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered. Currently only 'Csv' is supported.
+* **format**: 'Csv' | string: The format of the export being delivered. Currently only 'Csv' is supported.
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
 * **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): Result of listing the execution history of an export.
@@ -23,14 +23,14 @@
 ## ExportDefinition
 ### Properties
 * **dataSet**: [ExportDataset](#exportdataset): The definition for data in the export.
-* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' (Required): The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+* **timeframe**: 'BillingMonthToDate' | 'Custom' | 'MonthToDate' | 'TheLastBillingMonth' | 'TheLastMonth' | 'WeekToDate' | string (Required): The time frame for pulling data for the export. If custom, then a specific time period must be provided.
 * **timePeriod**: [ExportTimePeriod](#exporttimeperiod): The date range for data in the export. This should only be specified with timeFrame set to 'Custom'. The maximum date range is 3 months.
-* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' (Required): The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+* **type**: 'ActualCost' | 'AmortizedCost' | 'Usage' | string (Required): The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
 
 ## ExportDataset
 ### Properties
 * **configuration**: [ExportDatasetConfiguration](#exportdatasetconfiguration): The export dataset configuration. Allows columns to be selected for the export. If not provided then the export will include all available columns.
-* **granularity**: 'Daily': The granularity of rows in the export. Currently only 'Daily' is supported.
+* **granularity**: 'Daily' | string: The granularity of rows in the export. Currently only 'Daily' is supported.
 
 ## ExportDatasetConfiguration
 ### Properties
@@ -68,12 +68,12 @@
 ## ExportExecutionProperties
 ### Properties
 * **error**: [ErrorDetails](#errordetails): The details of the error.
-* **executionType**: 'OnDemand' | 'Scheduled': The type of the export execution.
+* **executionType**: 'OnDemand' | 'Scheduled' | string: The type of the export execution.
 * **fileName**: string: The name of the exported file.
 * **processingEndTime**: string: The time when the export execution finished.
 * **processingStartTime**: string: The time when export was picked up to be executed.
 * **runSettings**: [CommonExportProperties](#commonexportproperties): The common properties of the export.
-* **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout': The last known status of the export execution.
+* **status**: 'Completed' | 'DataNotAvailable' | 'Failed' | 'InProgress' | 'NewDataNotAvailable' | 'Queued' | 'Timeout' | string: The last known status of the export execution.
 * **submittedBy**: string: The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
 * **submittedTime**: string: The time when export was queued to be executed.
 
@@ -86,16 +86,16 @@
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): The definition of an export.
 * **deliveryInfo**: [ExportDeliveryInfo](#exportdeliveryinfo) (Required): The delivery information associated with a export.
-* **format**: 'Csv': The format of the export being delivered. Currently only 'Csv' is supported.
+* **format**: 'Csv' | string: The format of the export being delivered. Currently only 'Csv' is supported.
 * **nextRunTimeEstimate**: string (ReadOnly): If the export has an active schedule, provides an estimate of the next execution time.
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for modern commerce scopes.
 * **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): Result of listing the execution history of an export.
 
 ## ExportSchedule
 ### Properties
-* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly': The schedule recurrence.
+* **recurrence**: 'Annually' | 'Daily' | 'Monthly' | 'Weekly' | string: The schedule recurrence.
 * **recurrencePeriod**: [ExportRecurrencePeriod](#exportrecurrenceperiod): The start and end date for recurrence schedule.
-* **status**: 'Active' | 'Inactive': The status of the export's schedule. If 'Inactive', the export's schedule is paused.
+* **status**: 'Active' | 'Inactive' | string: The status of the export's schedule. If 'Inactive', the export's schedule is paused.
 
 ## ExportRecurrencePeriod
 ### Properties
